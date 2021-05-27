@@ -2,7 +2,7 @@
 """
     Created By: Andres Segura Tinoco
     Created On: May 05, 2020
-    Version: 0.1.0
+    Version: 0.3.0
     Description: Library with utility functions
 """
 

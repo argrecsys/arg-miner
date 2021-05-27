@@ -2,7 +2,7 @@
 """
     Created By: Andres Segura-Tinoco
     Created On: May 22, 2021
-    Version: 0.2.0
+    Version: 0.3.0
     Description: 
 """
 
@@ -38,12 +38,8 @@ def get_linker_list(lang:str='es')->dict:
     
     with open(filepath, mode='r', encoding='utf-8') as file:
         reader = csv.reader(file)
-        connectors = { row[0] : row[1] for row in reader if 'category' not in row[1] }
-        
-        # Sort dictionary by key length 
-        for k in sorted(connectors, key=len, reverse=True):
-            linkers[k] = connectors[k]
-        
+        linkers = { row[0] : row[1] for row in reader if 'category' not in row[1] }        
+    
     return linkers
 
 # Function that labels the proposals
@@ -51,15 +47,21 @@ def label_proposals(db_layer:dl.DataLayer, annotator:an.Annotator)->dict:
     result = {}
     
     proposal = db_layer.get_proposals()
-    print('n proposals:', len(proposal))
+    n = len(proposal)
+    print('n proposals:', n)
     
-    if len(proposal):
-        
+    if n > 0:
+        count_sent_arg = 0
         for key, value in proposal.items():
-            summary = value['summary'].lower()
-            result[key] = annotator.label_text(summary)
-            print(result[key])
-    
+            summary = value['summary'].strip().lower()
+            annotation = annotator.label_text(summary)
+            
+            if len(annotation['linkers']) > 5:
+                result[key] = annotation
+                count_sent_arg  += 1
+        
+        print('total sentences with linkers:', round(count_sent_arg / n, 4))
+        
     return result
 
 # Function that labels the proposal's comments
@@ -67,22 +69,28 @@ def label_comments(db_layer:dl.DataLayer, annotator:an.Annotator, key:int)->dict
     result = {}
     
     comments = db_layer.get_proposal_comments(key)
-    print('n comments:', len(comments))
+    n = len(comments)
+    print('n comments:', n)
     
-    if len(comments):
+    if n > 0:
         
         for key, value in comments.items():
-            summary = value['text'].lower()
-            result[key] = annotator.label_text(summary)
+            summary = value['text'].strip().lower()
+            annotation = annotator.label_text(summary)
+            
+            if len(annotation['linkers']) > 0:
+                result[key] = annotation
     
     return result
 
 # Function that annotates proposals and their comments
-def annotate_proposal(db_layer:dl.DataLayer, annotator:an.Annotator) -> None:
+def annotate_proposals(db_layer:dl.DataLayer, annotator:an.Annotator) -> None:
     
     # Labeling proposals using linkers
     proposal_results = label_proposals(db_layer, annotator)
-    
+    print(proposal_results)
+    return None
+        
     for pid, p_value in proposal_results.items():
         p_linkers = p_value['linker']
         p_categories = p_value['category']
@@ -122,7 +130,7 @@ def main() -> None:
     annotator = an.Annotator(rht_linkers)
     
     # 5. Annotate proposals and their comments
-    annotate_proposal(db_layer, annotator)
+    annotate_proposals(db_layer, annotator)
     
     print(">> END PROGRAM:", datetime.now())
 

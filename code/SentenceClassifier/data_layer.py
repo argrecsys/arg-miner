@@ -2,7 +2,7 @@
 """
     Created By: Andres Segura-Tinoco
     Created On: May 22, 2021
-    Version: 0.1.0
+    Version: 0.3.0
     Description: 
 """
 
@@ -23,10 +23,10 @@ class DataLayer:
         
         query = """
                 SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation
-                  FROM proposals
-                 LIMIT 10;
+                  FROM proposals;
                 """
-                
+                #LIMIT 10;
+        
         data = self.execute_mysql_query(query)
         
         if len(data):
@@ -48,6 +48,8 @@ class DataLayer:
                   FROM proposal_comments
                  WHERE proposalId = {};
                 """
+                #LIMIT 5;
+        
         query = query.format(proposal_id)
         
         data = self.execute_mysql_query(query)
