@@ -2,7 +2,7 @@
 """
     Created By: Andres Segura-Tinoco
     Created On: May 22, 2021
-    Version: 0.3.0
+    Version: 0.4.0
     Description: 
 """
 
@@ -56,7 +56,7 @@ def label_proposals(db_layer:dl.DataLayer, annotator:an.Annotator)->dict:
             summary = value['summary'].strip().lower()
             annotation = annotator.label_text(summary)
             
-            if len(annotation['linkers']) > 5:
+            if len(annotation['linkers']) > 0:
                 result[key] = annotation
                 count_sent_arg  += 1
         
@@ -89,28 +89,25 @@ def annotate_proposals(db_layer:dl.DataLayer, annotator:an.Annotator) -> None:
     # Labeling proposals using linkers
     proposal_results = label_proposals(db_layer, annotator)
     print(proposal_results)
-    return None
         
     for pid, p_value in proposal_results.items():
-        p_linkers = p_value['linker']
-        p_categories = p_value['category']
+        p_linkers = p_value['linkers']
         p_text = p_value['text']
         
         # Proposals with more linkers
         if len(p_linkers) > 0:
-            print('++', pid, p_linkers, p_categories, p_text)
+            print('++', pid, p_text, p_linkers)
             
             # Labeling proposal's comments using linkers
             comment_results = label_comments(db_layer, annotator, pid)
             
             for cid, c_value in comment_results.items():
-                c_linkers = c_value['linker']
-                c_categories = c_value['category']
+                c_linkers = c_value['linkers']
                 c_text = c_value['text']
                 
                 # Proposals with more linkers
                 if len(c_linkers) > 0:
-                    print('  ', cid, c_linkers, c_categories, c_text)    
+                    print('  ', cid, c_text, c_linkers)    
 
 # Start poing of the program
 def main() -> None:

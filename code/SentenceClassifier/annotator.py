@@ -2,7 +2,7 @@
 """
     Created By: Andres Segura-Tinoco
     Created On: May 22, 2021
-    Version: 0.3.0
+    Version: 0.4.0
     Description: 
 """
 
@@ -67,7 +67,8 @@ class Annotator:
                             linker = list(n_gram_list.keys())[l]
                             if linker == self.JOIN_TOKEN.join(tokens[j:(j+k)]):
                                 found_token = True
-                                annotation['linkers'][j] = linker
+                                index = str(i)+'-'+str(j)
+                                annotation['linkers'][index] = linker
                             
                             l += 1
                     
