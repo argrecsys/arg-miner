@@ -19,41 +19,24 @@ class Annotator:
     
     # Create n-grams
     def create_ngrams(self) -> None:        
-        uni_grams = {}
-        bi_grams = {}
-        tri_grams = {}
-        four_grams = {}
-        five_grams = {}
+        n_grams = {}
         
         # Save n-grams list
         for k, v in self.linkers.items():
             n = len(k.split(self.SPLIT_TOKEN))
             n_gram = k.replace(self.SPLIT_TOKEN, self.JOIN_TOKEN)
             
-            if n == 1:
-                uni_grams[n_gram] = v
-            elif n == 2:
-                bi_grams[n_gram] = v
-            elif n == 3:
-                tri_grams[n_gram] = v
-            elif n == 4:
-                four_grams[n_gram] = v
-            elif n == 5:
-                five_grams[n_gram] = v
-            else:
-                print(n, k, v)
-                
-        # Store them
-        n_grams = {}
-        n_grams[1] = uni_grams
-        n_grams[2] = bi_grams
-        n_grams[3] = tri_grams
-        n_grams[4] = four_grams
-        n_grams[5] = five_grams
+            # Store them
+            if n in n_grams:
+                n_grams[n][n_gram] = v
+            else:                
+                gram_list = { n_gram: v }
+                n_grams[n] = gram_list
         
+        # Sort and save it
         self.n_grams = {}
         for k in sorted(n_grams.keys(), reverse=True):
-            self.n_grams[k] = n_grams[k]
+            self.n_grams[k] = n_grams[k]    
     
     # Splits sentences by END_SENTENCE token
     def split_sentences(self, text:str) -> list:
