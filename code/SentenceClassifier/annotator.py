@@ -7,14 +7,27 @@
 """
 
 # Import NLP libraries
+import enum
 import stanza
+import spacy 
+
+# Using enum class create the Language enumeration
+class SplitType(enum.Enum):
+    SIMPLE = 'simple'
+    STANZA = 'stanza'
+    SPACY = 'spacy'
+    
+    def __str__(self):
+        return self.value
 
 # Text annotator class
 class Annotator:
     
     # Default class constructor
     def __init__(self, lang:str, linkers:dict) -> None:
-        self.stanza_pl = stanza.Pipeline(lang)
+        self.nlp_stanza = stanza.Pipeline(lang)
+        self.nlp_spacy = spacy.load("es_core_news_sm")
+        
         self.END_SENTENCE = "."
         self.SPLIT_TOKEN = " "
         self.JOIN_TOKEN = "-"
@@ -43,28 +56,32 @@ class Annotator:
             self.n_grams[k] = n_grams[k]    
     
     # Splits sentences by END_SENTENCE token
-    def split_sentences(self, text:str, simple:bool=False) -> list:
+    def split_sentences(self, text:str, mode:str) -> list:
         sentences = []
         
-        if simple:
+        if mode == SplitType.SIMPLE.value:
             sentences = [sentence.strip() for sentence in text.split(self.END_SENTENCE) if sentence.strip() != '']
-            print(sentences)
-        else:
-            nlp_doc = self.stanza_pl(text)
+            
+        elif mode == SplitType.STANZA.value:
+            nlp_doc = self.nlp_stanza(text)
             sentences = [sentence.text.strip() for sentence in nlp_doc.sentences if sentence.text.strip() != '']
+        elif mode == SplitType.SPACY.value:
+            nlp_doc = self.nlp_spacy(text)
+            sentences = [sentence.text.strip() for sentence in nlp_doc.sents if sentence.text.strip() != '']
         
         return sentences    
     
     # Function that labels text (proposals or comments) from a list of linkers
     def label_text(self, key:str, text:str)->dict:
         annotation = { 'key': key, 'text': text, 'linkers': {} }
+        split_mode = SplitType.STANZA.value
         
         # Get sentences
-        sentences = self.split_sentences(text)
+        sentences = self.split_sentences(text, split_mode)
         
         for i in range(len(sentences)):
             sentence = sentences[i]
-            tokens = sentence.split(self.SPLIT_TOKEN)
+            tokens = sentence.lower().split(self.SPLIT_TOKEN)
             
             j = 0
             while j < len(tokens):
