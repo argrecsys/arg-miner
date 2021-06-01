@@ -6,11 +6,15 @@
     Description: 
 """
 
+# Import NLP libraries
+import stanza
+
 # Text annotator class
 class Annotator:
     
     # Default class constructor
-    def __init__(self, linkers:dict) -> None:
+    def __init__(self, lang:str, linkers:dict) -> None:
+        self.stanza_pl = stanza.Pipeline(lang)
         self.END_SENTENCE = "."
         self.SPLIT_TOKEN = " "
         self.JOIN_TOKEN = "-"
@@ -39,16 +43,24 @@ class Annotator:
             self.n_grams[k] = n_grams[k]    
     
     # Splits sentences by END_SENTENCE token
-    def split_sentences(self, text:str) -> list:
-        sentences = [sentence.strip() for sentence in text.split(self.END_SENTENCE) if sentence.strip() != '']
-        return sentences
+    def split_sentences(self, text:str, simple:bool=False) -> list:
+        sentences = []
+        
+        if simple:
+            sentences = [sentence.strip() for sentence in text.split(self.END_SENTENCE) if sentence.strip() != '']
+            print(sentences)
+        else:
+            nlp_doc = self.stanza_pl(text)
+            sentences = [sentence.text.strip() for sentence in nlp_doc.sentences if sentence.text.strip() != '']
+        
+        return sentences    
     
     # Function that labels text (proposals or comments) from a list of linkers
-    def label_text(self, text:str)->dict:
-        annotation = { 'text': text, 'linkers': {}}
+    def label_text(self, key:str, text:str)->dict:
+        annotation = { 'key': key, 'text': text, 'linkers': {} }
         
         # Get sentences
-        sentences = self.split_sentences(text)            
+        sentences = self.split_sentences(text)
         
         for i in range(len(sentences)):
             sentence = sentences[i]
