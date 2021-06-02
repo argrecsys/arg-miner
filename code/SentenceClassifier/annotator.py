@@ -9,13 +9,15 @@
 # Import NLP libraries
 import enum
 import stanza
-import spacy 
+import spacy
+import nltk.data
 
 # Using enum class create the Language enumeration
 class SplitType(enum.Enum):
     SIMPLE = 'simple'
     STANZA = 'stanza'
     SPACY = 'spacy'
+    NLTK = 'nltk'
     
     def __str__(self):
         return self.value
@@ -27,6 +29,7 @@ class Annotator:
     def __init__(self, lang:str, linkers:dict) -> None:
         self.nlp_stanza = stanza.Pipeline(lang)
         self.nlp_spacy = spacy.load("es_core_news_sm")
+        self.nlp_nltk = nltk.data.load('tokenizers/punkt/spanish.pickle')
         
         self.END_SENTENCE = "."
         self.SPLIT_TOKEN = " "
@@ -65,16 +68,20 @@ class Annotator:
         elif mode == SplitType.STANZA.value:
             nlp_doc = self.nlp_stanza(text)
             sentences = [sentence.text.strip() for sentence in nlp_doc.sentences if sentence.text.strip() != '']
+        
         elif mode == SplitType.SPACY.value:
             nlp_doc = self.nlp_spacy(text)
             sentences = [sentence.text.strip() for sentence in nlp_doc.sents if sentence.text.strip() != '']
+        
+        elif mode == SplitType.NLTK.value:
+            sentences = self.nlp_nltk.tokenize(text)
         
         return sentences    
     
     # Function that labels text (proposals or comments) from a list of linkers
     def label_text(self, key:str, text:str)->dict:
         annotation = { 'key': key, 'text': text, 'linkers': {} }
-        split_mode = SplitType.STANZA.value
+        split_mode = SplitType.SPACY.value
         
         # Get sentences
         sentences = self.split_sentences(text, split_mode)
