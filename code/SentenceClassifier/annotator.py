@@ -27,9 +27,16 @@ class Annotator:
     
     # Default class constructor
     def __init__(self, lang:str, linkers:dict) -> None:
-        self.nlp_stanza = stanza.Pipeline(lang)
-        self.nlp_spacy = spacy.load("es_core_news_sm")
-        self.nlp_nltk = nltk.data.load('tokenizers/punkt/spanish.pickle')
+        
+        # Create models from the language
+        if lang.lower() == 'es':
+            self.nlp_stanza = stanza.Pipeline(lang='es')
+            self.nlp_spacy = spacy.load('es_core_news_sm')
+            self.nlp_nltk = nltk.data.load('tokenizers/punkt/spanish.pickle')
+        else:
+            self.nlp_stanza = stanza.Pipeline(lang='en')
+            self.nlp_spacy = spacy.load('en_core_web_sm')
+            self.nlp_nltk = nltk.data.load('tokenizers/punkt/english.pickle')
         
         self.END_SENTENCE = "."
         self.SPLIT_TOKEN = " "
