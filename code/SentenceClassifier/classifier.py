@@ -53,8 +53,8 @@ def label_proposals(db_layer:dl.DataLayer, annotator:an.Annotator)->dict:
     if n > 0:
         count_sent_arg = 0
         for key, value in proposal.items():
-            summary = value['summary'].strip()
-            annotation = annotator.label_text(key, summary)
+            text = value['summary'].strip()
+            annotation = annotator.label_text(text)
             
             if len(annotation['linkers']) > 0:
                 result[key] = annotation
@@ -75,8 +75,8 @@ def label_comments(db_layer:dl.DataLayer, annotator:an.Annotator, key:int)->dict
     if n > 0:
         
         for key, value in comments.items():
-            summary = value['text'].strip().lower()
-            annotation = annotator.label_text(summary)
+            text = value['text'].strip().lower()
+            annotation = annotator.label_text(text)
             
             if len(annotation['linkers']) > 0:
                 result[key] = annotation

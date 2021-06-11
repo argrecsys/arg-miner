@@ -65,6 +65,30 @@ class Annotator:
         for k in sorted(n_grams.keys(), reverse=True):
             self.n_grams[k] = n_grams[k]    
     
+    # Clean linker target
+    def clean_target(self, raw_target) -> str:
+        target = raw_target
+        
+        # Removing init marks
+        if target[0] == '¡':
+            target = target[1:]
+        if target[0] == '¿':
+            target = target[1:]
+        if target[0] == '(':
+            target = target[1:]
+        
+        # Removing end marks
+        if target[-1] == '!':
+            target = target[:-1]
+        if target[-1] == '?':
+            target = target[:-1]
+        if target[-1] == ')':
+            target = target[:-1]
+        if target[-1] == '.':
+            target = target[:-1]
+        
+        return target
+    
     # Splits sentences by END_SENTENCE token
     def split_sentences(self, text:str, mode:str) -> list:
         sentences = []
@@ -86,16 +110,18 @@ class Annotator:
         return sentences    
     
     # Function that labels text (proposals or comments) from a list of linkers
-    def label_text(self, key:str, text:str)->dict:
-        annotation = { 'key': key, 'text': text, 'linkers': {} }
+    def label_text(self, text:str) -> dict:
+        annotation = { 'text': text, 'linkers': [] }
         split_mode = SplitType.SPACY.value
         
         # Get sentences
         sentences = self.split_sentences(text, split_mode)
         
+        glb_index = 0
         for i in range(len(sentences)):
             sentence = sentences[i]
             tokens = sentence.lower().split(self.SPLIT_TOKEN)
+            print('sentence:', (i+1), ', n tokens:', len(tokens), ', sentence: **' + sentence + '**')
             
             j = 0
             while j < len(tokens):
@@ -108,10 +134,14 @@ class Annotator:
                         
                         while l < len(n_gram_list) and not found_token:
                             linker = list(n_gram_list.keys())[l]
-                            if linker == self.JOIN_TOKEN.join(tokens[j:(j+k)]):
+                            raw_target = self.JOIN_TOKEN.join(tokens[j:(j+k)])
+                            target = self.clean_target(raw_target)
+                            
+                            if linker == target:
                                 found_token = True
-                                index = str(i)+'-'+str(j)
-                                annotation['linkers'][index] = linker
+                                rel_index = str(i)+'-'+str(j)
+                                lnk_data = {'linker': linker, 'rel_index': rel_index, 'glb_index': glb_index}
+                                annotation['linkers'].append(lnk_data)
                             
                             l += 1
                     
@@ -121,9 +151,11 @@ class Annotator:
                     
                 # Update index
                 if found_token:
+                    glb_index += len(raw_target) + len(self.SPLIT_TOKEN)
                     j = j + k
                 else:
-                    j += 1
+                    glb_index += len(tokens[j]) + len(self.SPLIT_TOKEN)
+                    j += 1            
         
+        # Return text annotation
         return annotation
-
