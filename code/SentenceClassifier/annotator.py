@@ -160,3 +160,18 @@ class Annotator:
         
         # Return text annotation
         return annotation
+    
+    # Obtain text phrases by using the linkers to split them
+    def get_text_phrases_by_linkers(self, text, linkers):
+        phrase_list = []
+        
+        ix_prev = 0
+        for link in linkers:
+            lnk = link['linker']
+            g_ix = link['glb_index']
+            phrase = text[ix_prev:g_ix]
+            phrase_list.append(phrase)
+            ix_prev = g_ix + len(lnk)
+        
+        return phrase_list
+        
