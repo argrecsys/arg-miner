@@ -34,6 +34,7 @@ class Annotator:
             self.nlp_spacy = spacy.load('es_core_news_sm')
             self.nlp_nltk = nltk.data.load('tokenizers/punkt/spanish.pickle')
         else:
+            # English by default
             self.nlp_stanza = stanza.Pipeline(lang='en')
             self.nlp_spacy = spacy.load('en_core_web_sm')
             self.nlp_nltk = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -41,6 +42,7 @@ class Annotator:
         self.END_SENTENCE = "."
         self.SPLIT_TOKEN = " "
         self.JOIN_TOKEN = "-"
+        self.split_mode = SplitType.SPACY.value
         self.linkers = linkers
         self.create_ngrams()
     
@@ -112,16 +114,15 @@ class Annotator:
     # Function that labels text (proposals or comments) from a list of linkers
     def label_text(self, text:str) -> dict:
         annotation = { 'text': text, 'linkers': [] }
-        split_mode = SplitType.SPACY.value
         
         # Get sentences
-        sentences = self.split_sentences(text, split_mode)
+        sentences = self.split_sentences(text, self.split_mode)
         
         glb_index = 0
         for i in range(len(sentences)):
             sentence = sentences[i]
             tokens = sentence.lower().split(self.SPLIT_TOKEN)
-            print('sentence:', (i+1), ', n tokens:', len(tokens), ', sentence: **' + sentence + '**')
+            #print('sentence:', (i+1), ', n tokens:', len(tokens), ', sentence: **' + sentence + '**')
             
             j = 0
             while j < len(tokens):
