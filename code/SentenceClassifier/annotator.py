@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
     Created By: Andres Segura-Tinoco
-    Created On: May 22, 2021
-    Version: 0.4.0
+    Created On: June 12, 2021
+    Version: 0.5.0
     Description: 
 """
 
@@ -34,7 +34,7 @@ class Annotator:
             self.nlp_spacy = spacy.load('es_core_news_sm')
             self.nlp_nltk = nltk.data.load('tokenizers/punkt/spanish.pickle')
         else:
-            # English by default
+            # English models by default
             self.nlp_stanza = stanza.Pipeline(lang='en')
             self.nlp_spacy = spacy.load('en_core_web_sm')
             self.nlp_nltk = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -44,52 +44,7 @@ class Annotator:
         self.JOIN_TOKEN = "-"
         self.split_mode = SplitType.SPACY.value
         self.linkers = linkers
-        self.create_ngrams()
-    
-    # Create n-grams
-    def create_ngrams(self) -> None:        
-        n_grams = {}
-        
-        # Save n-grams list
-        for k, v in self.linkers.items():
-            n = len(k.split(self.SPLIT_TOKEN))
-            n_gram = k.replace(self.SPLIT_TOKEN, self.JOIN_TOKEN)
-            
-            # Store them
-            if n in n_grams:
-                n_grams[n][n_gram] = v
-            else:                
-                gram_list = { n_gram: v }
-                n_grams[n] = gram_list
-        
-        # Sort and save it
-        self.n_grams = {}
-        for k in sorted(n_grams.keys(), reverse=True):
-            self.n_grams[k] = n_grams[k]    
-    
-    # Clean linker target
-    def clean_target(self, raw_target) -> str:
-        target = raw_target
-        
-        # Removing init marks
-        if target[0] == '¡':
-            target = target[1:]
-        if target[0] == '¿':
-            target = target[1:]
-        if target[0] == '(':
-            target = target[1:]
-        
-        # Removing end marks
-        if target[-1] == '!':
-            target = target[:-1]
-        if target[-1] == '?':
-            target = target[:-1]
-        if target[-1] == ')':
-            target = target[:-1]
-        if target[-1] == '.':
-            target = target[:-1]
-        
-        return target
+        self.__create_ngrams()
     
     # Splits sentences by END_SENTENCE token
     def split_sentences(self, text:str, mode:str) -> list:
@@ -112,11 +67,12 @@ class Annotator:
         return sentences    
     
     # Function that labels text (proposals or comments) from a list of linkers
-    def label_text(self, text:str) -> dict:
-        annotation = { 'text': text, 'linkers': [] }
+    def label_text(self, ori_text:str) -> dict:
+        corr_text = self.__fix_original_text(ori_text)
+        annotation = { 'original_text': ori_text, 'corrected_text': corr_text, 'linkers': [] }
         
-        # Get sentences
-        sentences = self.split_sentences(text, self.split_mode)
+        # Get sentences from corrected text
+        sentences = self.split_sentences(corr_text, self.split_mode)
         
         glb_index = 0
         for i in range(len(sentences)):
@@ -136,7 +92,7 @@ class Annotator:
                         while l < len(n_gram_list) and not found_token:
                             linker = list(n_gram_list.keys())[l]
                             raw_target = self.JOIN_TOKEN.join(tokens[j:(j+k)])
-                            target = self.clean_target(raw_target)
+                            target = self.__clean_target(raw_target)
                             
                             if linker == target:
                                 found_token = True
@@ -174,4 +130,55 @@ class Annotator:
             ix_prev = g_ix + len(lnk)
         
         return phrase_list
+    
+    # Create n-grams structure of linkers
+    def __create_ngrams(self) -> None:        
+        n_grams = {}
+        
+        # Save n-grams list
+        for k, v in self.linkers.items():
+            n = len(k.split(self.SPLIT_TOKEN))
+            n_gram = k.replace(self.SPLIT_TOKEN, self.JOIN_TOKEN)
+            
+            # Store them
+            if n in n_grams:
+                n_grams[n][n_gram] = v
+            else:                
+                gram_list = { n_gram: v }
+                n_grams[n] = gram_list
+        
+        # Sort and save it
+        self.n_grams = {}
+        for k in sorted(n_grams.keys(), reverse=True):
+            self.n_grams[k] = n_grams[k]    
+    
+    # Clean the target linker by removing the marks on the boundaries
+    def __clean_target(self, raw_target) -> str:
+        new_target = raw_target
+        
+        # Removing init marks
+        if new_target[0] == '¡':
+            new_target = new_target[1:]
+        if new_target[0] == '¿':
+            new_target = new_target[1:]
+        if new_target[0] == '(':
+            new_target = new_target[1:]
+        
+        # Removing end marks
+        if new_target[-1] == '!':
+            new_target = new_target[:-1]
+        if new_target[-1] == '?':
+            new_target = new_target[:-1]
+        if new_target[-1] == ')':
+            new_target = new_target[:-1]
+        if new_target[-1] == '.':
+            new_target = new_target[:-1]
+        
+        return new_target
+    
+    # Fix text to make it more apt to be separated into sentences and identify linkers
+    def __fix_original_text(self, ori_text:str) -> str:
+        corr_text = ori_text
+        # TO-DO
+        return corr_text
         

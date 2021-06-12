@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
     Created By: Andres Segura Tinoco
-    Created On: May 05, 2020
-    Version: 0.3.0
+    Created On: June 12, 2021
+    Version: 0.5.0
     Description: Library with utility functions
 """
 
@@ -31,9 +31,9 @@ def dq_parse_num(n):
     return v
 
 # Data quality function - Clean html text and convert it to plain text
-def dq_clean_html_text(html_text):
+def dq_clean_html_text(html_text, encoding='utf-8'):
     plain_text = html_text.strip().replace(u'\n', u'')
-    return plain_text.encode('ascii', 'ignore').decode("utf-8")
+    return plain_text.encode('ascii', 'ignore').decode(encoding)
 
 # Util function - Read dict from yaml file
 def get_dict_from_yaml(yaml_path):
@@ -46,7 +46,7 @@ def get_dict_from_yaml(yaml_path):
     return result
 
 # Util function - Read CSV file from full filepath
-def read_csv_file(filename, encoding='utf-8-sig', delimiter=','):
+def read_csv_file(filename, encoding='utf-8', delimiter=','):
     data = []
     
     with open(filename, 'r', encoding=encoding) as f:
@@ -57,14 +57,14 @@ def read_csv_file(filename, encoding='utf-8-sig', delimiter=','):
     return data
 
 # Util function - Save data list to CSV file
-def save_data_to_csv(dt, filename, header):
+def save_data_to_csv(dt, filename, header, encoding='utf-8'):
     result = False
 
     # Validating data
     if dt and len(dt):
         
         # Saving data in CSV file
-        with open(filename, 'w', encoding='utf8', newline='') as f:
+        with open(filename, 'w', encoding=encoding, newline='') as f:
             wr = csv.writer(f, delimiter=',')
             wr.writerow(header)
             for row in dt:

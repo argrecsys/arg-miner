@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
     Created By: Andres Segura-Tinoco
-    Created On: May 22, 2021
-    Version: 0.4.0
+    Created On: June 12, 2021
+    Version: 0.5.0
     Description: 
 """
 
