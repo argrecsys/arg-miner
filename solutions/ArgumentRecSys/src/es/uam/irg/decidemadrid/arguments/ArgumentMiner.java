@@ -15,15 +15,14 @@ public class ArgumentMiner {
 
             Map<Integer, DMProposal> proposals = db.selectProposals();
             Map<Integer, DMComment> comments = db.selectComments();
+
             Map<Integer, List<DMCommentTree>> proposalCommentTrees = db.selectCommentTrees();
-            
             for (int proposalId : proposalCommentTrees.keySet()) {
                 System.out.println("********************************");
                 System.out.println("Proposal " + proposalId + " (u" + proposals.get(proposalId).getUserId() + "): " + proposals.get(proposalId).getTitle());
                 System.out.println("Summary:" + proposals.get(proposalId).getSummary());
                 System.out.println("Text:" + proposals.get(proposalId).getText());
                 System.out.println("Comments:");
-                
                 List<DMCommentTree> trees = proposalCommentTrees.get(proposalId);
                 for (DMCommentTree tree : trees) {
                     System.out.print(tree.toString(comments));
