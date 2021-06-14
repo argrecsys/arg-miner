@@ -1,3 +1,4 @@
 *.class
 *.pyc
 db_config.yml
+*.props

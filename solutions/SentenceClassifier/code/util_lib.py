@@ -9,6 +9,9 @@
 # Import util libraries
 import yaml
 import csv
+import os
+import signal
+import subprocess
 
 ############################
 ### Start Util Functions ###
@@ -56,6 +59,17 @@ def read_csv_file(filename, encoding='utf-8', delimiter=','):
             
     return data
 
+# Util function - Save test to plain file
+def save_text_to_file(text, filename, encoding='utf-8'):
+    result = False
+    
+    if text != '':
+        with open(filename, 'w', encoding=encoding) as f:
+            f.write(text)
+            result = True
+    
+    return result
+
 # Util function - Save data list to CSV file
 def save_data_to_csv(dt, filename, header, encoding='utf-8'):
     result = False
@@ -72,6 +86,17 @@ def save_data_to_csv(dt, filename, header, encoding='utf-8'):
             result = True
     
     return result
+
+# OS function - Forced close process by port
+def close_process_by_port(port_id):
+    command = "netstat -ano | findstr " + str(port_id) + ' | findstr LISTENING'
+    c = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr = subprocess.PIPE)
+    stdout, stderr = c.communicate()
+    tokens = stdout.decode().strip().split(' ')
+    if len(tokens) > 1:
+        pid = int(tokens[-1])
+        os.kill(pid, signal.SIGTERM)
+        print('killed process:', pid)
 
 ##########################
 ### End Util Functions ###

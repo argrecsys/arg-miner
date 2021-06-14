@@ -34,7 +34,7 @@ def get_db_credentials():
 def get_linker_list(lang:str='es')->dict:
     linkers = {}
     
-    filepath = "../../data/linkers_{}.csv".format(lang.lower())
+    filepath = "../../../data/linkers_{}.csv".format(lang.lower())
     
     with open(filepath, mode='r', encoding='utf-8') as file:
         reader = csv.reader(file)

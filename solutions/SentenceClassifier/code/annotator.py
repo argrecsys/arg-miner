@@ -156,23 +156,24 @@ class Annotator:
     def __clean_target(self, raw_target) -> str:
         new_target = raw_target
         
-        # Removing init marks
-        if new_target[0] == '¡':
-            new_target = new_target[1:]
-        if new_target[0] == '¿':
-            new_target = new_target[1:]
-        if new_target[0] == '(':
-            new_target = new_target[1:]
-        
-        # Removing end marks
-        if new_target[-1] == '!':
-            new_target = new_target[:-1]
-        if new_target[-1] == '?':
-            new_target = new_target[:-1]
-        if new_target[-1] == ')':
-            new_target = new_target[:-1]
-        if new_target[-1] == '.':
-            new_target = new_target[:-1]
+        if len(new_target) > 1:
+            # Removing init marks
+            if new_target[0] == '¡':
+                new_target = new_target[1:]
+            if new_target[0] == '¿':
+                new_target = new_target[1:]
+            if new_target[0] == '(':
+                new_target = new_target[1:]
+            
+            # Removing end marks
+            if new_target[-1] == '!':
+                new_target = new_target[:-1]
+            if new_target[-1] == '?':
+                new_target = new_target[:-1]
+            if new_target[-1] == ')':
+                new_target = new_target[:-1]
+            if new_target[-1] == '.':
+                new_target = new_target[:-1]
         
         return new_target
     
