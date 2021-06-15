@@ -14,6 +14,7 @@ from stanza.server import CoreNLPClient
 import os
 import signal
 import subprocess
+import util_lib as ul
 
 # Using enum class create the Language enumeration
 class Language(enum.Enum):
@@ -88,82 +89,65 @@ def test_dependency(es_text):
     for sent in es_doc.sentences:
         print(sent.print_dependencies())
 
-# Constituency parse of sentences
-def test_constituency_parse(es_text):
+# Create constituency parse tree (CPT) of sentences
+def test_constituency_parse(es_text, port=9000):
     
-    #properties='spanish', 
     try:
         constituency_parse = ''
         
         # Construct a CoreNLPClient with some basic annotators
-        with CoreNLPClient(annotators=['tokenize','ssplit','pos','lemma','ner', 'parse', 'depparse','coref'], 
-                           memory='2G', endpoint='http://localhost:9000', be_quiet=False) as client:
+        with CoreNLPClient(properties='spanish', annotators=['tokenize', 'ssplit', 'mwt', 'pos', 'lemma', 'ner', 'depparse', 'kbp'], 
+                           memory='2G', endpoint='http://localhost:' + str(port), be_quiet=False) as client:
             # submit the request to the server
             es_doc = client.annotate(es_text)
-    
+            
+            print('---')    
             print('Constituency parse of sentences')
-            print('---')
-            for sentence in es_doc.sentence:
+            for i in range(len(es_doc.sentence)):
+                sentence = es_doc.sentence[i]
+                
                 # get the constituency parse of the current sentence
+                constituency_parse += 'Sentence ' + str(i+1) + ':\n'
                 constituency_parse += str(sentence.parseTree) + '\n'
                 
     except Exception as e:
         constituency_parse = ''
-        print(e)
+        print('Error:', e)
     finally:
-        close_process_by_port(9000)
-        save_text_to_file(str(constituency_parse), '../result/constituency.txt')
+        ul.close_process_by_port(port)
+        ul.save_text_to_file(constituency_parse, '../result/constituency.txt')
 
-# Dependency parse of sentences
-def test_dependency_parse(es_text):
+# Create dependency parse tree (DPT) of sentences
+def test_dependency_parse(es_text, port=9000):
     
-    #properties='spanish', 
     try:
         dependency_parse = ''
         
         # Construct a CoreNLPClient with some basic annotators
-        with CoreNLPClient(annotators=['tokenize','ssplit','pos','lemma','ner', 'parse', 'depparse','coref'], 
-                           memory='2G', endpoint='http://localhost:9000', be_quiet=False) as client:
+        with CoreNLPClient(properties='spanish', annotators=['tokenize', 'ssplit', 'mwt', 'pos', 'lemma', 'ner', 'depparse', 'kbp'], 
+                           memory='2G', endpoint='http://localhost:' + str(port), be_quiet=False) as client:
             # submit the request to the server
             es_doc = client.annotate(es_text)
-    
+
+            print('---')    
             print('Dependency parse of sentences')
-            print('---')
-            for sentence in es_doc.sentence:
+            for i in range(len(es_doc.sentence)):
+                sentence = es_doc.sentence[i]
+                
                 # get the dependency parse of the current sentence
+                dependency_parse += 'Sentence ' + str(i+1) + ':\n'
                 dependency_parse += str(sentence.basicDependencies) + '\n'
                     
     except Exception as e:
         dependency_parse = ''
-        print(e)
+        print('Error:', e)
     finally:
-        close_process_by_port(9000)
-        save_text_to_file(str(dependency_parse), '../result/dependency.txt')
-    
+        ul.close_process_by_port(port)
+        ul.save_text_to_file(dependency_parse, '../result/dependency.txt')
+
 print("=====")
 print("Begin")
 print("=====\n")
-
-def close_process_by_port(port_id):
-    command = "netstat -ano | findstr " + str(port_id) + ' | findstr LISTENING'
-    c = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr = subprocess.PIPE)
-    stdout, stderr = c.communicate()
-    tokens = stdout.decode().strip().split(' ')
-    if len(tokens) > 1:
-        pid = int(tokens[-1])
-        os.kill(pid, signal.SIGTERM)
-        print('killed process:', pid)
-
-# Util function - Save test to plain file
-def save_text_to_file(text, filename, encoding='utf-8'):
-    result = False
-    
-    if text != '':
-        with open(filename, 'w', encoding=encoding) as f:
-            f.write(text)
-            result = True
-    
-    return result
 
 # 1. Variables
 curr_lang = Language.SPANISH
