@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun  2 11:44:46 2021
-
-@author: ansegura
+    Created By: Andres Segura Tinoco
+    Created On: June 18, 2021
+    Version: 0.6.0
+    Description: Unit test for Spanish
 """
 
+# Import custom libraries
 import annotator as an
+import file_layer as fl
+
+# Import libraries
 import enum
-import csv
 import stanza
 import spacy
 from stanza.server import CoreNLPClient
-import os
-import signal
-import subprocess
 import util_lib as ul
 
 # Using enum class create the Language enumeration
@@ -23,18 +24,6 @@ class Language(enum.Enum):
     
     def __str__(self):
         return self.value
-
-# DB function - Get linker list (Spanish or English)
-def get_linker_list(lang:str='es')->dict:
-    linkers = {}
-    
-    filepath = "../../../data/linkers_{}.csv".format(lang.lower())
-    
-    with open(filepath, mode='r', encoding='utf-8') as file:
-        reader = csv.reader(file)
-        linkers = { row[0] : row[1] for row in reader if 'category' not in row[1] }        
-    
-    return linkers
     
 ######################
 # Step 1: Annotation #
@@ -42,8 +31,8 @@ def get_linker_list(lang:str='es')->dict:
 def test_annotation(es_text):
     
     # Create annotator object
-    rht_linkers = get_linker_list(curr_lang.value)
-    annotator = an.Annotator(curr_lang.value, rht_linkers)
+    lexicon = fl.get_lexicon(curr_lang.value)
+    annotator = an.Annotator(curr_lang.value, lexicon)
     
     # Annotate the text
     print("\nAnnotation:")
@@ -158,9 +147,9 @@ print(curr_lang.name, id_text, es_text)
 # 2. Unit test
 test_annotation(es_text)
 test_pos(es_text)
-test_dependency(es_text)
-test_constituency_parse(es_text)
-test_dependency_parse(es_text)
+#test_dependency(es_text)
+#test_constituency_parse(es_text)
+#test_dependency_parse(es_text)
 
 print("\n=====")
 print("End")

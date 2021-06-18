@@ -54,7 +54,7 @@ class Annotator:
         # Create n-grams list
         self.__create_ngrams()
     
-    # Splits sentences by END_SENTENCE token
+    # Splits sentences using NLP models
     def split_sentences(self, text:str) -> list:
         sentences = []
         
@@ -139,6 +139,9 @@ class Annotator:
             phrase = text[ix_prev:g_ix]
             phrase_list.append(phrase)
             ix_prev = g_ix + len(lnk)
+        
+        phrase = text[ix_prev:]
+        phrase_list.append(phrase)
         
         return phrase_list
     
