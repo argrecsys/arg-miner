@@ -1,20 +1,19 @@
 # -*- coding: utf-8 -*-
 """
     Created By: Andres Segura-Tinoco
-    Created On: June 12, 2021
-    Version: 0.5.0
+    Created On: June 18, 2021
+    Version: 0.6.0
     Description: 
 """
 
 # Import custom libraries
-import util_lib as ul
-import data_layer as dl
 import annotator as an
+import data_layer as dl
+import file_layer as fl
 
 # Import libraries
-import csv
-from datetime import datetime
 import enum
+from datetime import datetime
 
 # Using enum class create the Language enumeration
 class Language(enum.Enum):
@@ -23,24 +22,6 @@ class Language(enum.Enum):
     
     def __str__(self):
         return self.value
-
-# DB function - Get database credentials
-def get_db_credentials():
-    yaml_path = 'config\db_config.yml'
-    db_login = ul.get_dict_from_yaml(yaml_path)
-    return db_login
-
-# DB function - Get linker list (Spanish or English)
-def get_linker_list(lang:str='es')->dict:
-    linkers = {}
-    
-    filepath = "../../../data/linkers_{}.csv".format(lang.lower())
-    
-    with open(filepath, mode='r', encoding='utf-8') as file:
-        reader = csv.reader(file)
-        linkers = { row[0] : row[1] for row in reader if 'category' not in row[1] }        
-    
-    return linkers
 
 # Function that labels the proposals
 def label_proposals(db_layer:dl.DataLayer, annotator:an.Annotator)->dict:
@@ -111,30 +92,30 @@ def annotate_proposals(db_layer:dl.DataLayer, annotator:an.Annotator) -> None:
 
 # Start poing of the program
 def main() -> None:
-    print(">> START PROGRAM:", datetime.now())
     lang = Language.SPANISH.value
     
     # 1. Get database credentials
-    db_login = get_db_credentials()
+    db_login = fl.get_db_credentials()
     
     # 2. Create data layer object
     db_layer = dl.DataLayer(db_login)
     
-    # 3. Get rhetorical linker list
-    rht_linkers = get_linker_list(lang)
+    # 3. Get lexicon by language
+    lexicon = fl.get_lexicon(lang)
     
     # 4. Create annotator object
-    annotator = an.Annotator(lang, rht_linkers)
+    annotator = an.Annotator(lang, lexicon)
     
     # 5. Annotate proposals and their comments
     annotate_proposals(db_layer, annotator)
-    
-    print(">> END PROGRAM:", datetime.now())
 
 #####################
-### Start Program ###
+### START PROGRAM ###
 #####################
-main()
+if __name__ == "__main__":
+    print(">> START PROGRAM:", datetime.now())
+    main()
+    print(">> END PROGRAM:", datetime.now())
 #####################
 #### End Program ####
 #####################
