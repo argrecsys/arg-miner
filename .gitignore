@@ -1,4 +1,6 @@
 *.class
 *.pyc
-db_config.yml
 *.props
+*/ArgumentRecSys/nbproject/
+*/ArgumentRecSys/build/
+db_config.yml
