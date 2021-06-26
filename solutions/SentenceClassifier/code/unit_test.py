@@ -90,6 +90,7 @@ def test_dependency(es_text):
 
 # Create constituency parse tree (CPT) of sentences
 def test_constituency_parse(es_text, port=9000):
+    tree = None
     
     try:
         constituency_parse = ''
@@ -107,6 +108,7 @@ def test_constituency_parse(es_text, port=9000):
                 # get the constituency parse of the current sentence
                 constituency_parse += '- Sentence ' + str(i+1) + ':\n'
                 constituency_parse += str(sentence.parseTree) + '\n'
+                tree = sentence.parseTree
                 
     except Exception as e:
         constituency_parse = ''
@@ -114,6 +116,8 @@ def test_constituency_parse(es_text, port=9000):
     finally:
         ul.close_process_by_port(port)
         ul.save_text_to_file(constituency_parse, '../result/constituency.txt')
+    
+    return tree
 
 # Create dependency parse tree (DPT) of sentences
 def test_dependency_parse(es_text, port=9000):
@@ -165,3 +169,13 @@ if __name__ == "__main__":
 ###################
 #### END TESTS ####
 ###################
+
+
+def show_tree(node, d, text):
+    
+    if len(node.child) > 0:
+        for node in node.child:
+            show_tree(node, d + 1, text)
+            if node.value in text:
+                print(node.value , ',', d)
+        
