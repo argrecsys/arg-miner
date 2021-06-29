@@ -4,3 +4,6 @@
 */ArgumentRecSys/nbproject/
 */ArgumentRecSys/build/
 db_config.yml
+/solutions/ArgumentMiner/nbproject/
+/solutions/ArgumentMiner/build/
+*.jar

@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 import edu.stanford.nlp.coref.CorefCoreAnnotations;
-
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.io.*;
 import edu.stanford.nlp.ling.*;

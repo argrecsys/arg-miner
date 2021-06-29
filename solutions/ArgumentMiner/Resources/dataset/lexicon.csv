@@ -1,0 +1,132 @@
+﻿category,sub_category,relation_type,linkers_english,linkers_spanish
+CAUSE,EXPLANATION,support,actually,realmente
+CAUSE,EXPLANATION,support,in actual fact,de hecho
+CAUSE,EXPLANATION,support,in fact,de hecho
+CAUSE,EXPLANATION,support,indeed,por supuesto
+CAUSE,EXPLANATION,support,indeed,en efecto
+CAUSE,REASON,support,as,como
+CAUSE,REASON,support,after all,después de todo
+CAUSE,REASON,support,because,porque
+CAUSE,REASON,support,due to,debido a
+CAUSE,REASON,support,for,por
+CAUSE,REASON,support,given that,dado que
+CAUSE,REASON,support,on the grounds that,con base en que
+CAUSE,REASON,support,since,desde
+CAUSE,HYPOTHETICAL,qualifier,if,si
+CAUSE,HYPOTHETICAL,qualifier,if ever,si alguna vez
+CAUSE,HYPOTHETICAL,qualifier,if so,si es así
+CAUSE,HYPOTHETICAL,qualifier,in case,en caso de
+CAUSE,HYPOTHETICAL,qualifier,in that case,en ese caso
+CAUSE,HYPOTHETICAL,qualifier,let us assume (that),asumamos que
+CAUSE,HYPOTHETICAL,qualifier,on condition that,con la condición de que
+CAUSE,HYPOTHETICAL,qualifier,on the condition,bajo la condición
+CAUSE,HYPOTHETICAL,qualifier,on the assumption (that),asumiendo que
+CAUSE,HYPOTHETICAL,qualifier,provided (that),siempre y cuando
+CAUSE,HYPOTHETICAL,qualifier,providing (that),siempre que
+CAUSE,HYPOTHETICAL,qualifier,suppose (that),suponer que
+CAUSE,HYPOTHETICAL,qualifier,supposing (that),suponiendo eso
+CAUSE,HYPOTHETICAL,qualifier,unless,a no ser que
+CLARIFICATION,RESTATEMENT,support,in other words,en otras palabras
+CLARIFICATION,RESTATEMENT,support,that is,que es
+CLARIFICATION,RESTATEMENT,support,that is to say,es decir
+CLARIFICATION,RESTATEMENT,support,to put it another way,para decirlo de otra manera
+CLARIFICATION,RESTATEMENT,support,put differently,dicho de otra manera
+CLARIFICATION,EXEMPLIFICATION,support,for example,por ejemplo
+CLARIFICATION,EXEMPLIFICATION,support,for instance,por ejemplo
+CLARIFICATION,EXEMPLIFICATION,support,to take an example,para tomar un ejemplo
+CLARIFICATION,SUMMARY,support,in short,en breve
+CLARIFICATION,SUMMARY,support,in sum,en resumidas cuentas
+CLARIFICATION,SUMMARY,support,in sum,en suma
+CLARIFICATION,SUMMARY,support,in summary,en resumen
+CLARIFICATION,SUMMARY,support,summarising,resumiendo
+CLARIFICATION,SUMMARY,support,summarazing,resumiendo
+CLARIFICATION,SUMMARY,support,summing up,resumiendo
+CLARIFICATION,SUMMARY,support,to sum up,para resumir
+CLARIFICATION,SUMMARY,support,to summarise,para resumir
+CLARIFICATION,SUMMARY,support,to summarize,para resumir
+CLARIFICATION,SUMMARY,support,ultimately,finalmente
+CLARIFICATION,CONCLUSION,support,all in all,en definitiva
+CLARIFICATION,CONCLUSION,support,all in all,considerándolo todo
+CLARIFICATION,CONCLUSION,support,essentially then,esencialmente entonces
+CLARIFICATION,CONCLUSION,support,in conclusion,en conclusión
+CLARIFICATION,CONCLUSION,support,to conclude,para concluir
+CLARIFICATION,CONCLUSION,support,all things considered,en general
+CLARIFICATION,CONCLUSION,support,all things considered,todas las cosas consideradas
+ELABORATION,ADDITION,support,furthermore,además
+ELABORATION,ADDITION,support,moreover,es más
+ELABORATION,ADDITION,support,in addition,además
+ELABORATION,ADDITION,support,besides,además
+ELABORATION,ADDITION,support,additionally,adicionalmente
+ELABORATION,ADDITION,support,what is more,qué es más
+ELABORATION,SIMILARITY,support,also,además
+ELABORATION,SIMILARITY,support,as well,también
+ELABORATION,SIMILARITY,support,correspondingly,correspondientemente
+ELABORATION,SIMILARITY,support,in the same way,del mismo modo
+ELABORATION,SIMILARITY,support,likewise,igualmente
+ELABORATION,SIMILARITY,support,similarly,similar
+ELABORATION,SIMILARITY,support,too,también
+ELABORATION,ENUMERATION,support,such as,tal como
+ELABORATION,ENUMERATION,support,like,como
+ELABORATION,COMPARISON,support,as if,como si
+ELABORATION,COMPARISON,support,such as,tal como
+ELABORATION,COMPARISON,support,like,como
+ELABORATION,PRECISION,support,in particular,en particular
+ELABORATION,PRECISION,support,especially,especialmente
+ELABORATION,PRECISION,support,more precisely,más precisamente
+ELABORATION,PRECISION,support,specifically,específicamente
+ELABORATION,PRECISION,support,with,con
+CONTRAST,DIRECT,attack,all the same,de todas formas
+CONTRAST,DIRECT,attack,all the same,todos iguales
+CONTRAST,DIRECT,attack,but,pero
+CONTRAST,DIRECT,attack,even so,aún así
+CONTRAST,DIRECT,attack,however,sin embargo
+CONTRAST,DIRECT,attack,nevertheless,sin embargo
+CONTRAST,DIRECT,attack,nonetheless,sin embargo
+CONTRAST,DIRECT,attack,still,todavía
+CONTRAST,DIRECT,attack,yet,aún
+CONTRAST,OPPOSITION,attack,in contrast,a diferencia de
+CONTRAST,OPPOSITION,attack,by contrast,por el contrario
+CONTRAST,OPPOSITION,attack,compared with,comparado con
+CONTRAST,OPPOSITION,attack,on the contrary,de lo contrario
+CONTRAST,OPPOSITION,attack,at the same time,al mismo tiempo
+CONTRAST,OPPOSITION,attack,then again,luego otra vez
+CONTRAST,CHOICE,support/attack,on one hand,por un lado
+CONTRAST,CHOICE,support/attack,on the one hand,por un lado
+CONTRAST,CHOICE,support/attack,on the other hand,por otra parte
+CONTRAST,CONCESSION,attack,although,aunque
+CONTRAST,CONCESSION,attack,despite (that),a pesar de eso
+CONTRAST,CONCESSION,attack,despite the fact that,a pesar de que
+CONTRAST,CONCESSION,attack,even if,incluso si
+CONTRAST,CONCESSION,attack,even though,aunque
+CONTRAST,CONCESSION,attack,in spite of (that),a pesar de eso
+CONTRAST,CONCESSION,attack,notwithstanding (that),a pesar de
+CONTRAST,CONCESSION,attack,regardless of (that),independientemente de
+CONTRAST,CONCESSION,attack,though,aunque
+CONTRAST,CONCESSION,attack,whereas ,mientras que
+CONTRAST,CONCESSION,attack,while,mientras
+CONSEQUENCE,DIRECT,support,as a consequence,como consecuencia
+CONSEQUENCE,DIRECT,support,as a result,como resultado
+CONSEQUENCE,DIRECT,support,consequently,como consecuencia
+CONSEQUENCE,DIRECT,support,for this reason,por esta razón
+CONSEQUENCE,DIRECT,support,hence,por eso
+CONSEQUENCE,DIRECT,support,it follows that,resulta que
+CONSEQUENCE,DIRECT,support,so,entonces
+CONSEQUENCE,DIRECT,support,so that,así que eso
+CONSEQUENCE,DIRECT,support,then,luego
+CONSEQUENCE,DIRECT,support,therefore ,por lo tanto
+CONSEQUENCE,DIRECT,support,thus,por lo tanto
+CONSEQUENCE,GOAL,support,aimed to,tuvo como objetivo
+CONSEQUENCE,GOAL,support,aiming to,aspirar a
+CONSEQUENCE,GOAL,support,in order to,con el fin de
+CONSEQUENCE,GOAL,support,to,para
+CONSEQUENCE,GOAL,support,that allow,eso permite
+CONSEQUENCE,GOAL,support,that allows,eso permite
+CONSEQUENCE,GOAL,support,which allow,que permiten
+CONSEQUENCE,GOAL,support,which allows,que permite
+CONSEQUENCE,GOAL,support,which let,que le permiten
+CONSEQUENCE,GOAL,support,which entail,que implican
+CONSEQUENCE,ALTERNATIVE,support,otherwise,de lo contrario
+CONSEQUENCE,ALTERNATIVE,support,if not,si no
+CONSEQUENCE,ALTERNATIVE,support,else,demás
+CONSEQUENCE,ALTERNATIVE,support,or,o
+CONSEQUENCE,ALTERNATIVE,support,or else,o sino
