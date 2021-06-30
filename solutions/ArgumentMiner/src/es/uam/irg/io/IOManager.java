@@ -6,14 +6,13 @@
 package es.uam.irg.io;
 
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
 import es.uam.irg.utils.Constants;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,8 +22,14 @@ import java.util.logging.Logger;
  */
 public class IOManager implements Constants {
     
-    public static List<ArgumentLinker> readLinkerTaxonomy(String lang, boolean verbose) {
-        List<ArgumentLinker> linkers = new ArrayList<>();
+    /**
+     * 
+     * @param lang
+     * @param verbose
+     * @return 
+     */
+    public static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
+        ArgumentLinkerList linkers = new ArgumentLinkerList();
         File csvFile;
         int linkerIndex = -1;
         
@@ -56,7 +61,7 @@ public class IOManager implements Constants {
                             subCategory = data[1];
                             relationType = data[2];
                             linker = data[linkerIndex];
-                            linkers.add(new ArgumentLinker(category, subCategory, relationType, linker));
+                            linkers.addLinker(category, subCategory, relationType, linker);
                         }
                     }
                     
@@ -71,10 +76,11 @@ public class IOManager implements Constants {
         }
         
         if (verbose && linkers != null) {
-            System.out.println(">> List of argument linkers:");
-            linkers.forEach(linker -> {
-                System.out.format("Linker -> %s %s %s %s \n", linker.category, linker.subCategory, linker.relationType, linker.linker);
-            });
+            System.out.println(">> List of argument linkers [" + linkers.getSize() + "]:");
+            for (int i = 0; i < linkers.getSize(); i++) {
+                ArgumentLinker linker = linkers.getLinker(i);
+                System.out.format("Linker -> %s \n", linker.getString());
+            }
         }
         
         return linkers;

@@ -16,7 +16,6 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.utils.Constants;
-import es.uam.irg.utils.StringUtils;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -83,15 +82,16 @@ public class ArgumentEngine implements Constants {
     /**
      * 
      * @param key
-     * @param text 
+     * @param text
+     * @param linker 
      */
-    public void annotate(int key, String text) {
+    public void annotate(int key, String text, ArgumentLinker linker) {
         System.out.format("Annotate >> Id: %s, Proposal: %s\n", key, text);
         
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(text);
         pipeline.annotate(annotation);
-
+        
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
         System.out.println("N sentences: " + sentences.size());
         

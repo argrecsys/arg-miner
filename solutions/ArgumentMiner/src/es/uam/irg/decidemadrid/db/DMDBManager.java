@@ -1,12 +1,11 @@
 package es.uam.irg.decidemadrid.db;
 
-import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.db.MySQLDBConnector;
 import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.decidemadrid.entities.DMComment;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
 import java.sql.ResultSet;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class DMDBManager {
@@ -56,7 +55,7 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectCustomProposals(int topN, List<ArgumentLinker> linkers) throws Exception {
+    public Map<Integer, DMProposal> selectCustomProposals(int topN, ArgumentLinkerList linkers) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         
         String query = "SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation " +

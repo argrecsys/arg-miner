@@ -11,16 +11,33 @@ package es.uam.irg.nlp.am.arguments;
  */
 public class ArgumentLinker {
     
+    // Class members
     public String category;
     public String subCategory;
     public String relationType;
     public String linker;
     
+    /**
+     * Class constructor.
+     * 
+     * @param category
+     * @param subCategory
+     * @param relationType
+     * @param linker 
+     */
     public ArgumentLinker(String category, String subCategory, String relationType, String linker) {
         this.category = category;
         this.subCategory = subCategory;
         this.relationType = relationType;
         this.linker = linker;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getString() {
+        return String.format("%s > %s > %s (%s)", this.category, this.subCategory, this.linker, this.relationType);
     }
     
 }

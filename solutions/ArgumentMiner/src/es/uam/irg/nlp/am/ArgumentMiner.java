@@ -10,7 +10,6 @@ import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
 import es.uam.irg.utils.Constants;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,9 +41,10 @@ public class ArgumentMiner implements Constants {
         dbManager = new DMDBManager();
 
         // Get the list of argument linkers
-        List<ArgumentLinker> linkers = readLinkerTaxonomy(language, false);
+        ArgumentLinkerList linkers = readLinkerTaxonomy(language, true);
 
         if (linkers != null) {
+            ArgumentLinker linker = linkers.getLinker("porque");
             
             // Get the list of argumentative proposals
             int maxProposal = 1;
@@ -59,7 +59,7 @@ public class ArgumentMiner implements Constants {
                 for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
                     proposalID = entry.getKey();
                     proposal = entry.getValue(); 
-                    engine.annotate(proposalID, proposal.getSummary());
+                    engine.annotate(proposalID, proposal.getSummary(), linker);
                 }
             }
         }
@@ -72,8 +72,8 @@ public class ArgumentMiner implements Constants {
      * @param verbose
      * @return 
      */
-    private static List<ArgumentLinker> readLinkerTaxonomy(String lang, boolean verbose) {
-        List<ArgumentLinker> linkers = IOManager.readLinkerTaxonomy(lang, verbose);
+    private static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
+        ArgumentLinkerList linkers = IOManager.readLinkerTaxonomy(lang, verbose);
         return linkers;
     }
     
@@ -83,7 +83,7 @@ public class ArgumentMiner implements Constants {
      * @param linkers
      * @return 
      */
-    private static Map<Integer, DMProposal> getArgumentativeProposals(int topN, List<ArgumentLinker> linkers) {
+    private static Map<Integer, DMProposal> getArgumentativeProposals(int topN, ArgumentLinkerList linkers) {
         Map<Integer, DMProposal> proposals = null;
         try {
             proposals = dbManager.selectCustomProposals(topN, linkers);
