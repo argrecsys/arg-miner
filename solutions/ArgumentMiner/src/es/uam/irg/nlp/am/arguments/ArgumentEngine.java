@@ -96,20 +96,31 @@ public class ArgumentEngine implements Constants {
         System.out.println("N sentences: " + sentences.size());
         
         for (int i = 0; i < sentences.size(); i++) {
+            
+            // 1. Get current sentence
             CoreMap sentence = sentences.get(i);
             System.out.format("[%s]: %s \n", (i + 1), sentence.toString());
             
-            System.out.println("Show Constituency Tree:");
+            // 2. Get constituency tree
+            System.out.println("Show constituency tree:");
             Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
             tree.pennPrint(out);
             
-            System.out.println("Show Tree:");
-            showTree(tree);
+            // 3. Get get syntagma list
+            List<String> syntagmaList = getSyntagmaList(tree);
+            System.out.println("Show syntagma list [" + syntagmaList.size() + "]:");
+            for (String syntagma : syntagmaList) {
+                if (syntagma.split(" ")[1].equals(linker.linker)) {
+                    System.out.format("%s [%s] \n", syntagma, linker.getString());
+                }
+                else {
+                    System.out.println(syntagma);
+                }
+            }
             
+            // 4. Check constituents
             Set<Constituent> treeConstituents = tree.constituents(new LabeledScoredConstituentFactory());
             System.out.println("N Constituents: " + treeConstituents.size());
-            
-            // Check constituents
             for (Constituent constituent : treeConstituents) {
                 if (constituent.label() != null && (constituent.label().toString().equals("VP") || constituent.label().toString().equals("NP"))) {
                     System.err.println("found constituent: " + constituent.toString());
@@ -122,19 +133,23 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
-     * @param tree 
+     * @param tree
+     * @return 
      */
-    public void showTree(Tree tree) {
-        String text = showTree(tree, 0);
-        System.out.println(text);
+    public List<String> getSyntagmaList(Tree tree) {
+        List<String> syntagmaList = new ArrayList<>();
+        getSyntagmaList(tree, 0, syntagmaList);
+        return syntagmaList;
     }
     
     /**
      * 
      * @param tree
-     * @param depth 
+     * @param depth
+     * @param syntagmaList
+     * @return 
      */
-    private String showTree(Tree tree, int depth) {
+    private String getSyntagmaList(Tree tree, int depth, List<String> syntagmaList) {
         String text = "";
         
         if (tree.numChildren() == 0) {
@@ -142,10 +157,10 @@ public class ArgumentEngine implements Constants {
         }
         else {
             for (Tree node : tree.children()) {
-                text += showTree(node, depth + 1);
+                text += getSyntagmaList(node, depth + 1, syntagmaList);
             }
             if (text.split(" ").length > 1)
-                System.out.println("[" + tree.label() + "] " + text);
+                syntagmaList.add("[" + tree.label() + "] " + text.trim());
         }
         
         return text;

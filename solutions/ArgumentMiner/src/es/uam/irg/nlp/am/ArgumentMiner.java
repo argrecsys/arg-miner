@@ -41,7 +41,7 @@ public class ArgumentMiner implements Constants {
         dbManager = new DMDBManager();
 
         // Get the list of argument linkers
-        ArgumentLinkerList linkers = readLinkerTaxonomy(language, true);
+        ArgumentLinkerList linkers = readLinkerTaxonomy(language, false);
 
         if (linkers != null) {
             ArgumentLinker linker = linkers.getLinker("porque");
