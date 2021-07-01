@@ -1,0 +1,17 @@
+Show dependency:
+Recientemente - 3 - advmod - mude
+me - 3 - obj - mude
+mude - 0 - root - root
+de - 5 - case - Mostoles
+Mostoles - 3 - obl - mude
+( - 8 - punct - años
+10.762 - 8 - nummod - años
+años - 5 - appos - Mostoles
+ahi - 8 - appos - años
+) - 8 - punct - años
+a - 12 - case - Batan
+Batan - 3 - obj - mude
+y - 15 - cc - cambio
+menudo - 15 - amod - cambio
+cambio - 12 - conj - Batan
+. - 3 - punct - mude
