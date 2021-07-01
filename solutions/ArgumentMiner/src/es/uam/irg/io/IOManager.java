@@ -7,7 +7,7 @@ package es.uam.irg.io;
 
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
-import es.uam.irg.utils.Constants;
+import es.uam.irg.nlp.am.Constants;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,18 +30,17 @@ public class IOManager implements Constants {
      */
     public static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
         ArgumentLinkerList linkers = new ArgumentLinkerList();
-        File csvFile;
         int linkerIndex = -1;
         
-        if ("en".equals(lang))
+        if (LANG_EN.equals(lang))
             linkerIndex = 3;
-        else if ("es".equals(lang))
+        else if (LANG_ES.equals(lang))
             linkerIndex = 4;
         
         if (linkerIndex > -1) {
             try {
                 // Get the file
-                csvFile = new File(TAXONOMY_FILEPATH);
+                File csvFile = new File(TAXONOMY_FILEPATH);
                 
                 // Check if the specified file exists or not
                 if (csvFile.exists()) {
@@ -76,10 +75,9 @@ public class IOManager implements Constants {
         }
         
         if (verbose && linkers != null) {
-            System.out.println(">> List of argument linkers [" + linkers.getSize() + "]:");
+            System.out.println(">> List of argument linkers: " + linkers.getSize());
             for (int i = 0; i < linkers.getSize(); i++) {
-                ArgumentLinker linker = linkers.getLinker(i);
-                System.out.format("Linker -> %s \n", linker.getString());
+                System.out.format("Linker -> %s \n", linkers.getLinker(i).getString());
             }
         }
         

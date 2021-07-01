@@ -13,7 +13,7 @@ import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
-import es.uam.irg.utils.Constants;
+import es.uam.irg.nlp.am.Constants;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +23,7 @@ import java.util.logging.Logger;
  */
 public class ArgumentEngine implements Constants {
     
+    // Class members
     private String language;
     private String nlpPath;
     private PrintWriter out;

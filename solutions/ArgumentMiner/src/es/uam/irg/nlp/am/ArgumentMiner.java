@@ -9,7 +9,6 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
-import es.uam.irg.utils.Constants;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,6 +30,7 @@ public class ArgumentMiner implements Constants {
             language = args[0];
         }
         else {
+            // Spanish by default
             language = LANG_ES;
         }
         
@@ -62,18 +62,8 @@ public class ArgumentMiner implements Constants {
     }
     
     /**
-     * Wrapper function for (IOManager) readLinkerTaxonomy
-     * @param lang
-     * @param verbose
-     * @return 
-     */
-    private static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
-        ArgumentLinkerList linkers = IOManager.readLinkerTaxonomy(lang, verbose);
-        return linkers;
-    }
-    
-    /**
-     * Wrapper function for (DMDBManager) selectNProposals
+     * Wrapper function for (DMDBManager) selectNProposals method.
+     * 
      * @param topN
      * @param linkers
      * @return 
@@ -88,6 +78,17 @@ public class ArgumentMiner implements Constants {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
         return proposals;
+    }
+    
+    /**
+     * Wrapper function for (IOManager) readLinkerTaxonomy method.
+     * 
+     * @param lang
+     * @param verbose
+     * @return
+     */
+    private static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
+        return IOManager.readLinkerTaxonomy(lang, verbose);
     }
     
 }
