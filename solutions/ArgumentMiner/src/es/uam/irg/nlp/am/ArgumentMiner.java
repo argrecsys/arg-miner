@@ -20,9 +20,6 @@ import java.util.logging.Logger;
  */
 public class ArgumentMiner implements Constants {
     
-    public static ArgumentEngine engine;
-    public static DMDBManager dbManager;
-    
     /**
      * @param args the command line arguments
      * @throws java.lang.Exception
@@ -37,17 +34,15 @@ public class ArgumentMiner implements Constants {
             language = LANG_ES;
         }
         
-        engine = new ArgumentEngine(language);
-        dbManager = new DMDBManager();
-
         // Get the list of argument linkers
         ArgumentLinkerList linkers = readLinkerTaxonomy(language, false);
 
-        if (linkers != null) {
+        if (linkers != null && linkers.getSize() > 0) {
+            ArgumentEngine engine = new ArgumentEngine(language);
             ArgumentLinker linker = linkers.getLinker("porque");
             
             // Get the list of argumentative proposals
-            int maxProposal = 1;
+            int maxProposal = 5;
             Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal, linkers);
 
             // Analize argumentative proposals
@@ -86,8 +81,10 @@ public class ArgumentMiner implements Constants {
     private static Map<Integer, DMProposal> getArgumentativeProposals(int topN, ArgumentLinkerList linkers) {
         Map<Integer, DMProposal> proposals = null;
         try {
+            DMDBManager dbManager = new DMDBManager();
             proposals = dbManager.selectCustomProposals(topN, linkers);
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
         return proposals;

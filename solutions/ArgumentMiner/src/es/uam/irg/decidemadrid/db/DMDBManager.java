@@ -37,6 +37,7 @@ public class DMDBManager {
 
         String query = "SELECT * FROM proposals";
         ResultSet rs = this.db.executeSelect(query);
+        
         while (rs != null && rs.next()) {
             int id = rs.getInt("id");
             String title = rs.getString("title");
@@ -66,7 +67,7 @@ public class DMDBManager {
         
         query = "SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation " +
                 "  FROM proposals " +
-                " WHERE id = 23507; ";
+                " WHERE id IN (992, 19615); ";
         ResultSet rs = this.db.executeSelect(query);
         
         while (rs != null && rs.next()) {

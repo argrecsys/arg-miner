@@ -10,8 +10,6 @@ import java.util.*;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.pipeline.*;
-import edu.stanford.nlp.trees.Constituent;
-import edu.stanford.nlp.trees.LabeledScoredConstituentFactory;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
@@ -107,24 +105,14 @@ public class ArgumentEngine implements Constants {
             tree.pennPrint(out);
             
             // 3. Get get syntagma list
-            List<String> syntagmaList = getSyntagmaList(tree);
-            System.out.println("Show syntagma list [" + syntagmaList.size() + "]:");
-            for (String syntagma : syntagmaList) {
-                if (syntagma.split(" ")[1].equals(linker.linker)) {
-                    System.out.format("%s [%s] \n", syntagma, linker.getString());
+            List<Syntagma> syntagmaList = getSyntagmaList(tree);
+            System.out.println("Show syntagma list: " + syntagmaList.size());
+            for (Syntagma syntagma : syntagmaList) {
+                if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+                    System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
                 }
                 else {
-                    System.out.println(syntagma);
-                }
-            }
-            
-            // 4. Check constituents
-            Set<Constituent> treeConstituents = tree.constituents(new LabeledScoredConstituentFactory());
-            System.out.println("N Constituents: " + treeConstituents.size());
-            for (Constituent constituent : treeConstituents) {
-                if (constituent.label() != null && (constituent.label().toString().equals("VP") || constituent.label().toString().equals("NP"))) {
-                    System.err.println("found constituent: " + constituent.toString());
-                    System.err.println(tree.getLeaves().subList(constituent.start(), constituent.end()+1));
+                    System.out.println(syntagma.getString());
                 }
             }
             
@@ -136,8 +124,8 @@ public class ArgumentEngine implements Constants {
      * @param tree
      * @return 
      */
-    public List<String> getSyntagmaList(Tree tree) {
-        List<String> syntagmaList = new ArrayList<>();
+    public List<Syntagma> getSyntagmaList(Tree tree) {
+        List<Syntagma> syntagmaList = new ArrayList<>();
         getSyntagmaList(tree, 0, syntagmaList);
         return syntagmaList;
     }
@@ -149,7 +137,7 @@ public class ArgumentEngine implements Constants {
      * @param syntagmaList
      * @return 
      */
-    private String getSyntagmaList(Tree tree, int depth, List<String> syntagmaList) {
+    private String getSyntagmaList(Tree tree, int depth, List<Syntagma> syntagmaList) {
         String text = "";
         
         if (tree.numChildren() == 0) {
@@ -160,7 +148,7 @@ public class ArgumentEngine implements Constants {
                 text += getSyntagmaList(node, depth + 1, syntagmaList);
             }
             if (text.split(" ").length > 1)
-                syntagmaList.add("[" + tree.label() + "] " + text.trim());
+                syntagmaList.add( new Syntagma(text.trim(), tree.value(), depth));
         }
         
         return text;
