@@ -23,10 +23,10 @@ import java.util.logging.Logger;
  */
 public class ArgumentEngine implements Constants {
     
-    private Properties props;
-    private PrintWriter out;
     private String language;
     private String nlpPath;
+    private PrintWriter out;
+    private Properties props;
     
     /**
      * Class constructor
@@ -38,27 +38,6 @@ public class ArgumentEngine implements Constants {
         this.nlpPath = System.getenv("CORENLP_HOME");
         
         setProperties();
-    }
-    
-    /**
-     * 
-     */
-    private void setProperties() {
-        this.props = new Properties();
-        
-        try {
-            if (language.equals(LANG_EN)) {
-                this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
-            }
-            else if (language.equals(LANG_ES)) {
-                this.props.load(new FileInputStream(nlpPath + "/StanfordCoreNLP-spanish.properties"));    
-            }
-            
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     
     /**
@@ -152,6 +131,27 @@ public class ArgumentEngine implements Constants {
         }
         
         return text;
+    }
+    
+    /**
+     *
+     */
+    private void setProperties() {
+        this.props = new Properties();
+        
+        try {
+            if (language.equals(LANG_EN)) {
+                this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
+            }
+            else if (language.equals(LANG_ES)) {
+                this.props.load(new FileInputStream(nlpPath + "/StanfordCoreNLP-spanish.properties"));
+            }
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

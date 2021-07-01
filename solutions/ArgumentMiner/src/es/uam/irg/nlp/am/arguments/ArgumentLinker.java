@@ -13,9 +13,9 @@ public class ArgumentLinker {
     
     // Class members
     public String category;
-    public String subCategory;
-    public String relationType;
     public String linker;
+    public String relationType;
+    public String subCategory;
     
     /**
      * Class constructor.

@@ -12,9 +12,9 @@ package es.uam.irg.nlp.am.arguments;
 public class Syntagma {
     
     // Class members
-    public String text;
+    public int depth;    
     public String function;
-    public int depth;
+    public String text;
     
     /**
      * Class constructor.
