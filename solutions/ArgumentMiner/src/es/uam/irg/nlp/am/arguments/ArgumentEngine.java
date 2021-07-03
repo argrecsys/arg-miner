@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
@@ -79,22 +80,35 @@ public class ArgumentEngine implements Constants {
             CoreMap sentence = sentences.get(i);
             System.out.format("[%s]: %s \n", (i + 1), sentence.toString());
             
-            // 2. Get constituency tree
+            // 2. Display Parts of Speech
+            CoreDocument document = pipeline.processToCoreDocument(sentence.toString());
+            List<String> verbList = new ArrayList<>();
+            document.tokens().forEach((CoreLabel token) -> {
+                System.out.println(String.format("%s [%s]", token.word(), token.tag()));
+                if (token.tag().equals("VERB")) {
+                    verbList.add(token.word());
+                }
+            });
+            System.out.println(verbList.toString());
+            
+            // 3. Get constituency tree
             System.out.println("Show constituency tree:");
             Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
             tree.pennPrint(out);
             
-            // 3. Get get syntagma list
+            // 4. Get get syntagma list
             List<Syntagma> syntagmaList = getSyntagmaList(tree);
             System.out.println("Show syntagma list: " + syntagmaList.size());
-            for (Syntagma syntagma : syntagmaList) {
+            syntagmaList.forEach((Syntagma syntagma) -> {
                 if (syntagma.text.split(" ")[0].equals(linker.linker)) {
                     System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
                 }
                 else {
                     System.out.println(syntagma.getString());
                 }
-            }
+            });
+
+            // 5. Arguments Mining
             
         }
     }
