@@ -9,7 +9,7 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -49,7 +49,14 @@ public class ArgumentMiner implements Constants {
             
             // Bulk annotation of proposals
             if (proposals != null && proposals.size() > 0) {
-                bulkAnnotation(language, proposals, linkers);
+                Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, linkers);
+                
+                // Show results
+                System.out.println(">> Total proposals: " + proposals.size());
+                System.out.println(">> Total proposals with arguments: " + arguments.size());
+                proposals.keySet().forEach(key -> {
+                    System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
+                });
             }
             else {
                 System.err.println(">> Error: There are no proposals using the indicated linkers.");
@@ -64,27 +71,27 @@ public class ArgumentMiner implements Constants {
      * 
      * @param language
      * @param proposals
-     * @param linkers 
+     * @param linkers
+     * @return 
      */
-    private static void bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerList linkers) {        
+    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerList linkers) {
+        Map<Integer, List<Argument>> arguments = new HashMap<>();
+        
+        // Temporary vars
         ArgumentEngine engine = new ArgumentEngine(language);
-        List<Argument> argList = new ArrayList<>();
         ArgumentLinker linker = linkers.getLinker("porque");
-
-        // Analize argumentative proposals
         int proposalID;
         DMProposal proposal;
         
+        // Analize argumentative proposals
         for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
             proposalID = entry.getKey();
             proposal = entry.getValue(); 
-            Argument currArg = engine.annotate(proposalID, proposal.getSummary(), linker);
-            argList.add(currArg);
+            List<Argument> argList = engine.annotate(proposalID, proposal.getSummary(), linker);
+            arguments.put(proposalID, argList);
         }
         
-        // Show results
-        System.out.println(">> Total proposals: " + proposals.size());
-        System.out.println(">> Total proposals with arguments: " + argList.size());
+        return arguments;
     }
     
     /**

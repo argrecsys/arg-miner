@@ -5,9 +5,6 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import java.io.*;
-import java.util.*;
-
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
@@ -15,6 +12,8 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.nlp.am.Constants;
+import java.io.*;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -48,7 +47,7 @@ public class ArgumentEngine implements Constants {
      * @param text 
      */
     public void analyze(int key, String text) {
-        System.out.format("Aanalyze - Id: %s, Proposal: %s\n", key, text);
+        System.out.format("Task Analyze - Id: %s, Proposal: %s\n", key, text);
         
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(text);
@@ -65,9 +64,9 @@ public class ArgumentEngine implements Constants {
      * @param linker
      * @return 
      */
-    public Argument annotate(int key, String text, ArgumentLinker linker) {
-        System.out.format("Annotate >> Id: %s, Proposal: %s\n", key, text);
-        Argument result = null;
+    public List<Argument> annotate(int key, String text, ArgumentLinker linker) {
+        System.out.format("Task Annotate - Id: %s, Proposal: %s\n", key, text);
+        List<Argument> result = new ArrayList<>();
         
         // NLP objects
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
@@ -112,7 +111,8 @@ public class ArgumentEngine implements Constants {
             });
 
             // 5. Arguments Mining
-            result = new Argument();
+            Argument arg = new Argument();
+            result.add(arg);
         }
         
         return result;

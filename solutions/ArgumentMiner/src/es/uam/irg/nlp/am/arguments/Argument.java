@@ -17,12 +17,14 @@ public class Argument {
     public String mainVerb;
     public String premise;
     public String relationType;
+    private boolean isValid;
     
     /**
      * Empty constructor.
      */
     public Argument() {
         this("", "", "", "");
+        this.isValid = false;
     }
     
     /**
@@ -38,6 +40,7 @@ public class Argument {
         this.claim = claim;
         this.mainVerb = mainVerb;
         this.relationType = relationType;
+        this.isValid = true;
     }
     
     /**
@@ -46,6 +49,14 @@ public class Argument {
      */
     public String getString() {
         return String.format("%s > %s [%s]", this.premise, this.claim, this.relationType);
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public boolean isValid() {
+        return this.isValid;
     }
     
 }
