@@ -84,7 +84,7 @@ public class ArgumentLinkerList {
      *
      * @return
      */
-    public int getSize() {
+    public int size() {
         return this.linkers.size();
     }
 }

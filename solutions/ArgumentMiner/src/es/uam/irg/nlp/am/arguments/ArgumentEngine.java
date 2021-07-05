@@ -48,7 +48,7 @@ public class ArgumentEngine implements Constants {
      * @param text 
      */
     public void analyze(int key, String text) {
-        System.out.format("Aanalyze >> Id: %s, Proposal: %s\n", key, text);
+        System.out.format("Aanalyze - Id: %s, Proposal: %s\n", key, text);
         
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(text);
@@ -62,11 +62,14 @@ public class ArgumentEngine implements Constants {
      * 
      * @param key
      * @param text
-     * @param linker 
+     * @param linker
+     * @return 
      */
-    public void annotate(int key, String text, ArgumentLinker linker) {
+    public Argument annotate(int key, String text, ArgumentLinker linker) {
         System.out.format("Annotate >> Id: %s, Proposal: %s\n", key, text);
+        Argument result = null;
         
+        // NLP objects
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(text);
         pipeline.annotate(annotation);
@@ -109,8 +112,10 @@ public class ArgumentEngine implements Constants {
             });
 
             // 5. Arguments Mining
-            
+            result = new Argument();
         }
+        
+        return result;
     }
     
     /**

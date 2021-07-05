@@ -19,6 +19,14 @@ public class Argument {
     public String relationType;
     
     /**
+     * Empty constructor.
+     */
+    public Argument() {
+        this("", "", "", "");
+    }
+    
+    /**
+     * 
      * 
      * @param premise
      * @param claim

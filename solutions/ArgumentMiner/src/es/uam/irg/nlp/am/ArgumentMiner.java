@@ -9,6 +9,8 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,6 +28,8 @@ public class ArgumentMiner implements Constants {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
         String language;
+        int maxProposal = 5;
+        
         if (args.length > 0) {
             language = args[0];
         }
@@ -33,32 +37,54 @@ public class ArgumentMiner implements Constants {
             // Spanish by default
             language = LANG_ES;
         }
+        System.out.println(">> Language selected: " + language);
         
         // Get the list of argument linkers
-        ArgumentLinkerList linkers = readLinkerTaxonomy(language, false);
+        ArgumentLinkerList linkers = getLinkerTaxonomy(language, false);
 
-        if (linkers != null && linkers.getSize() > 0) {
-            ArgumentEngine engine = new ArgumentEngine(language);
-            ArgumentLinker linker = linkers.getLinker("porque");
+        if (linkers != null && linkers.size() > 0) {
             
             // Get the list of argumentative proposals
-            int maxProposal = 5;
             Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal, linkers);
-
-            // Analize argumentative proposals
-            if (proposals != null) {
-                System.out.println(">> List of custom argumentative proposals:");
-                int proposalID;
-                DMProposal proposal;
-
-                for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
-                    proposalID = entry.getKey();
-                    proposal = entry.getValue(); 
-                    engine.annotate(proposalID, proposal.getSummary(), linker);
-                }
+            
+            // Bulk annotation of proposals
+            if (proposals != null && proposals.size() > 0) {
+                bulkAnnotation(language, proposals, linkers);
+            }
+            else {
+                System.err.println(">> Error: There are no proposals using the indicated linkers.");
             }
         }
+        else {
+            System.err.println(">> Error: The linker taxonomy could not be loaded.");
+        }
+    }
+    
+    /**
+     * 
+     * @param language
+     * @param proposals
+     * @param linkers 
+     */
+    private static void bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerList linkers) {        
+        ArgumentEngine engine = new ArgumentEngine(language);
+        List<Argument> argList = new ArrayList<>();
+        ArgumentLinker linker = linkers.getLinker("porque");
+
+        // Analize argumentative proposals
+        int proposalID;
+        DMProposal proposal;
         
+        for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
+            proposalID = entry.getKey();
+            proposal = entry.getValue(); 
+            Argument currArg = engine.annotate(proposalID, proposal.getSummary(), linker);
+            argList.add(currArg);
+        }
+        
+        // Show results
+        System.out.println(">> Total proposals: " + proposals.size());
+        System.out.println(">> Total proposals with arguments: " + argList.size());
     }
     
     /**
@@ -87,7 +113,7 @@ public class ArgumentMiner implements Constants {
      * @param verbose
      * @return
      */
-    private static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
+    private static ArgumentLinkerList getLinkerTaxonomy(String lang, boolean verbose) {
         return IOManager.readLinkerTaxonomy(lang, verbose);
     }
     

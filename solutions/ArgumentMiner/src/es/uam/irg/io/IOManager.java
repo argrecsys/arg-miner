@@ -5,7 +5,6 @@
  */
 package es.uam.irg.io;
 
-import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
 import es.uam.irg.nlp.am.Constants;
 import java.io.BufferedReader;
@@ -74,9 +73,9 @@ public class IOManager implements Constants {
             }
         }
         
-        if (verbose && linkers != null) {
-            System.out.println(">> List of argument linkers: " + linkers.getSize());
-            for (int i = 0; i < linkers.getSize(); i++) {
+        if (verbose) {
+            System.out.println(">> List of argument linkers: " + linkers.size());
+            for (int i = 0; i < linkers.size(); i++) {
                 System.out.format("Linker -> %s \n", linkers.getLinker(i).getString());
             }
         }
