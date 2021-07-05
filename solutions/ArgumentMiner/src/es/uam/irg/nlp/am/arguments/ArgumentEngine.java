@@ -12,6 +12,7 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.nlp.am.Constants;
+import es.uam.irg.utils.StringUtils;
 import java.io.*;
 import java.util.*;
 import java.util.logging.Level;
@@ -86,12 +87,12 @@ public class ArgumentEngine implements Constants {
             CoreDocument document = pipeline.processToCoreDocument(sentence.toString());
             List<String> verbList = new ArrayList<>();
             document.tokens().forEach((CoreLabel token) -> {
-                System.out.println(String.format("%s [%s]", token.word(), token.tag()));
+                // System.out.println(String.format("%s [%s]", token.word(), token.tag()));
                 if (token.tag().equals("VERB")) {
                     verbList.add(token.word());
                 }
             });
-            System.out.println(verbList.toString());
+            System.out.println("Verb list: " + verbList.toString());
             
             // 3. Get constituency tree
             System.out.println("Show constituency tree:");
@@ -100,19 +101,16 @@ public class ArgumentEngine implements Constants {
             
             // 4. Get get syntagma list
             List<Syntagma> syntagmaList = getSyntagmaList(tree);
-            System.out.println("Show syntagma list: " + syntagmaList.size());
-            syntagmaList.forEach((Syntagma syntagma) -> {
-                if (syntagma.text.split(" ")[0].equals(linker.linker)) {
-                    System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
-                }
-                else {
-                    System.out.println(syntagma.getString());
-                }
-            });
+            System.out.println("Syntagma list: " + syntagmaList.size());
 
             // 5. Arguments Mining
-            Argument arg = new Argument();
-            result.add(arg);
+            Argument arg = getArgument(syntagmaList, verbList, linker);
+            if (arg.isValid()) {
+                result.add(arg);
+            }
+            else {
+                System.out.format("Sentence %s of phrase %s has no argument\n", (i + 1), key);
+            }
         }
         
         return result;
@@ -127,6 +125,64 @@ public class ArgumentEngine implements Constants {
         List<Syntagma> syntagmaList = new ArrayList<>();
         getSyntagmaList(tree, 0, syntagmaList);
         return syntagmaList;
+    }
+    
+    /**
+     * 
+     * @param syntagmaList
+     * @param linker
+     * @return 
+     */
+    private Argument getArgument(List<Syntagma> syntagmaList, List<String> verbList, ArgumentLinker linker) {
+        Argument arg = new Argument();
+        
+        // Temporary variables
+        String premise = null;
+        String claim = null;
+        String mainVerb = null;
+        String relationType = linker.relationType;
+        
+        /*
+            Approach 1
+        */
+        int minDepth = Integer.MAX_VALUE;
+        
+        for (Syntagma syntagma : syntagmaList) {
+            if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+                // System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
+                if (syntagma.depth < minDepth) {
+                    minDepth = syntagma.depth;
+                }
+            }
+        }
+        
+        if (minDepth < Integer.MAX_VALUE) {
+            for (Syntagma syntagma : syntagmaList) {
+                if (syntagma.depth == minDepth) {
+                    if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+                        premise = syntagma.text;
+                    }
+                }
+                else if (syntagma.depth == minDepth - 1 && syntagma.text.contains(premise)) {
+                    claim = syntagma.text.replace(premise, "").trim();
+                }
+            }
+            
+            if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
+                
+                for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
+                    String verb = verbList.get(i);
+                    if (claim.contains(verb)) {
+                        mainVerb = verb;
+                    }
+                }
+                
+                arg = new Argument(premise, claim, mainVerb, relationType);
+                System.out.println(arg.getString());
+            }
+        }
+        
+        return arg;
     }
     
     /**

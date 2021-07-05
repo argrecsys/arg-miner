@@ -201,5 +201,15 @@ public class StringUtils {
         Arrays.fill(buf, ch);
         return new String(buf);
     }
+    
+    /**
+     * 
+     * @param str
+     * @return 
+     */
+    public static boolean isEmpty(String str) {
+        boolean isEmpty = (str == null || str.trim().length() == 0);
+        return isEmpty;
+    }
 
 }

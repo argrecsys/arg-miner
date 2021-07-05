@@ -48,7 +48,7 @@ public class Argument {
      * @return 
      */
     public String getString() {
-        return String.format("%s > %s [%s]", this.premise, this.claim, this.relationType);
+        return String.format("%s > %s [lnk: %s, vrb: %s]", this.claim, this.premise, this.relationType, this.mainVerb);
     }
     
     /**

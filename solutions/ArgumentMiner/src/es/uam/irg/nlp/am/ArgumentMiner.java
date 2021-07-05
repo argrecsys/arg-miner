@@ -27,17 +27,20 @@ public class ArgumentMiner implements Constants {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        String language;
+        System.out.println(">> PROGRAM BEGINS");
+        
+        // Read input parameters
+        String language = LANG_ES;
         int maxProposal = 5;
         
         if (args.length > 0) {
             language = args[0];
+            
+            if (args.length > 1) {
+                maxProposal = Integer.parseInt(args[1]);
+            }
         }
-        else {
-            // Spanish by default
-            language = LANG_ES;
-        }
-        System.out.println(">> Language selected: " + language);
+        System.out.format(">> Language selected: %s, number of proposals to be analyzed: %s\n", language, maxProposal);
         
         // Get the list of argument linkers
         ArgumentLinkerList linkers = getLinkerTaxonomy(language, false);
@@ -57,6 +60,9 @@ public class ArgumentMiner implements Constants {
                 proposals.keySet().forEach(key -> {
                     System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
                 });
+                
+                // Save arguments
+                saveArguments(proposals, arguments);
             }
             else {
                 System.err.println(">> Error: There are no proposals using the indicated linkers.");
@@ -65,6 +71,8 @@ public class ArgumentMiner implements Constants {
         else {
             System.err.println(">> Error: The linker taxonomy could not be loaded.");
         }
+        
+        System.out.println(">> PROGRAM ENDS");
     }
     
     /**
@@ -122,6 +130,16 @@ public class ArgumentMiner implements Constants {
      */
     private static ArgumentLinkerList getLinkerTaxonomy(String lang, boolean verbose) {
         return IOManager.readLinkerTaxonomy(lang, verbose);
+    }
+
+    /**
+     * Saves the arguments in a plain text file.
+     * 
+     * @param proposals
+     * @param arguments 
+     */
+    private static void saveArguments(Map<Integer, DMProposal> proposals, Map<Integer, List<Argument>> arguments) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
 }
