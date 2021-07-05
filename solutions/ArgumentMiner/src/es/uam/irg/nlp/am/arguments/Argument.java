@@ -13,6 +13,8 @@ package es.uam.irg.nlp.am.arguments;
 public class Argument {
     
     // Class members
+    public String sentenceID;
+    public String sentence;
     public String claim;
     public String mainVerb;
     public String premise;
@@ -21,21 +23,28 @@ public class Argument {
     
     /**
      * Empty constructor.
+     * 
+     * @param sentenceID
+     * @param sentence 
      */
-    public Argument() {
-        this("", "", "", "");
+    public Argument(String sentenceID, String sentence) {
+        this(sentenceID, sentence, "", "", "", "");
         this.isValid = false;
     }
     
     /**
+     * Regular constructor.
      * 
-     * 
+     * @param sentenceID
+     * @param sentence
      * @param premise
      * @param claim
      * @param mainVerb
      * @param relationType 
      */
-    public Argument(String premise, String claim, String mainVerb, String relationType) {
+    public Argument(String sentenceID, String sentence, String premise, String claim, String mainVerb, String relationType) {
+        this.sentenceID = sentenceID;
+        this.sentence = sentence;
         this.premise = premise;
         this.claim = claim;
         this.mainVerb = mainVerb;
@@ -48,7 +57,7 @@ public class Argument {
      * @return 
      */
     public String getString() {
-        return String.format("%s > %s [lnk: %s, vrb: %s]", this.claim, this.premise, this.relationType, this.mainVerb);
+        return String.format("[%s] - %s > %s [lnk: %s, vrb: %s]", this.sentenceID, this.claim, this.premise, this.relationType, this.mainVerb);
     }
     
     /**

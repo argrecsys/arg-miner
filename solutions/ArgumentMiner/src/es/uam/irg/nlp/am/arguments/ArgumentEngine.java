@@ -80,8 +80,9 @@ public class ArgumentEngine implements Constants {
         for (int i = 0; i < sentences.size(); i++) {
             
             // 1. Get current sentence
+            String sentenceID = key + "-" + (i + 1);
             CoreMap sentence = sentences.get(i);
-            System.out.format("[%s]: %s \n", (i + 1), sentence.toString());
+            System.out.format("[%s]: %s \n", sentenceID, sentence.toString());
             
             // 2. Display Parts of Speech
             CoreDocument document = pipeline.processToCoreDocument(sentence.toString());
@@ -104,7 +105,7 @@ public class ArgumentEngine implements Constants {
             System.out.println("Syntagma list: " + syntagmaList.size());
 
             // 5. Arguments Mining
-            Argument arg = getArgument(syntagmaList, verbList, linker);
+            Argument arg = getArgument(sentenceID, sentence.toString(), syntagmaList, verbList, linker);
             if (arg.isValid()) {
                 result.add(arg);
             }
@@ -129,12 +130,14 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
+     * @param sentence
      * @param syntagmaList
+     * @param verbList
      * @param linker
      * @return 
      */
-    private Argument getArgument(List<Syntagma> syntagmaList, List<String> verbList, ArgumentLinker linker) {
-        Argument arg = new Argument();
+    private Argument getArgument(String sentenceID, String sentence, List<Syntagma> syntagmaList, List<String> verbList, ArgumentLinker linker) {
+        Argument arg = new Argument(sentenceID, sentence);
         
         // Temporary variables
         String premise = null;
@@ -148,8 +151,8 @@ public class ArgumentEngine implements Constants {
         int minDepth = Integer.MAX_VALUE;
         
         for (Syntagma syntagma : syntagmaList) {
+            // System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
             if (syntagma.text.split(" ")[0].equals(linker.linker)) {
-                // System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
                 if (syntagma.depth < minDepth) {
                     minDepth = syntagma.depth;
                 }
@@ -177,7 +180,7 @@ public class ArgumentEngine implements Constants {
                     }
                 }
                 
-                arg = new Argument(premise, claim, mainVerb, relationType);
+                arg = new Argument(sentenceID, sentence, premise, claim, mainVerb, relationType);
                 System.out.println(arg.getString());
             }
         }

@@ -62,7 +62,7 @@ public class ArgumentMiner implements Constants {
                 });
                 
                 // Save arguments
-                saveArguments(proposals, arguments);
+                saveArguments(arguments);
             }
             else {
                 System.err.println(">> Error: There are no proposals using the indicated linkers.");
@@ -138,8 +138,14 @@ public class ArgumentMiner implements Constants {
      * @param proposals
      * @param arguments 
      */
-    private static void saveArguments(Map<Integer, DMProposal> proposals, Map<Integer, List<Argument>> arguments) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    private static void saveArguments(Map<Integer, List<Argument>> arguments) {
+        
+        if (arguments != null) {
+            
+            for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
+                
+            }
+        }
     }
     
 }
