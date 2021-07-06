@@ -103,7 +103,7 @@ public class ArgumentMiner implements Constants {
         for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
             proposalID = entry.getKey();
             proposal = entry.getValue(); 
-            List<Argument> argList = engine.annotate(proposalID, proposal.getSummary(), linker);
+            List<Argument> argList = engine.annotate(proposalID, proposal.getTitle(), proposal.getSummary(), linker);
             arguments.put(proposalID, argList);
         }
         
@@ -168,6 +168,7 @@ public class ArgumentMiner implements Constants {
                     item.put("premise", arg.premise);
                     item.put("relationType", arg.relationType);
                     item.put("mainVerb", arg.mainVerb);
+                    item.put("entityList", arg.getEntityList().toString());
                     
                     // Store JSON object
                     argList.add(item);

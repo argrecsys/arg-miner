@@ -5,6 +5,10 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Argument class. The premise justifies, gives reasons for or supports the conclusion (claim).
  * 
@@ -13,12 +17,13 @@ package es.uam.irg.nlp.am.arguments;
 public class Argument {
     
     // Class members
-    public String sentenceID;
-    public String sentence;
     public String claim;
     public String mainVerb;
     public String premise;
     public String relationType;
+    public String sentence;
+    public String sentenceID;
+    private List<String> entityList;
     private boolean isValid;
     
     /**
@@ -49,7 +54,26 @@ public class Argument {
         this.claim = claim;
         this.mainVerb = mainVerb;
         this.relationType = relationType;
+        this.entityList = new ArrayList<>();
         this.isValid = true;
+    }
+    
+    /**
+     *
+     * @return 
+     */
+    public List<String> getEntityList() {
+        return this.entityList;
+    }
+    
+    /**
+     *
+     * @param entities 
+     */
+    public void setEntityList(Map<String, String> entities) {
+        for (Map.Entry<String, String> entry : entities.entrySet()) {
+            this.entityList.add(entry.getKey() + ":" + entry.getValue());
+        }
     }
     
     /**

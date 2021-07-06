@@ -65,7 +65,7 @@ public class ArgumentEngine implements Constants {
      * @param linker
      * @return 
      */
-    public List<Argument> annotate(int key, String text, ArgumentLinker linker) {
+    public List<Argument> annotate(int key, String title, String text, ArgumentLinker linker) {
         System.out.format("Task Annotate - Id: %s, Proposal: %s\n", key, text);
         List<Argument> result = new ArrayList<>();
         
@@ -73,6 +73,13 @@ public class ArgumentEngine implements Constants {
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(text);
         pipeline.annotate(annotation);
+        
+        // Get named entity recognition
+        Map<String, String> entities = getNamedEntities(pipeline, title);
+        System.out.println("Show Named Entity Recognition: " + entities.size());
+        for (Map.Entry<String, String> entry : entities.entrySet()) {
+            System.out.println(entry.getKey()+ ": " + entry.getValue());
+        }
         
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
         System.out.println("N sentences: " + sentences.size());
@@ -107,6 +114,7 @@ public class ArgumentEngine implements Constants {
             // 5. Arguments Mining
             Argument arg = getArgument(sentenceID, sentence.toString(), syntagmaList, verbList, linker);
             if (arg.isValid()) {
+                arg.setEntityList(entities);
                 System.out.println(arg.getString());
                 result.add(arg);
             }
@@ -180,6 +188,7 @@ public class ArgumentEngine implements Constants {
             
             if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
                 
+                // Identify main verb
                 for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
                     String verb = verbList.get(i);
                     if (claim.contains(verb)) {
@@ -192,6 +201,27 @@ public class ArgumentEngine implements Constants {
         }
         
         return arg;
+    }
+    
+    /**
+     * Apply Named Entity Recognition.
+     * 
+     * @param pipeline
+     * @param text
+     * @return 
+     */
+    private Map<String, String> getNamedEntities(StanfordCoreNLP pipeline, String text) {
+        Map<String, String> entities = new HashMap<>();
+        List<String>  entityType = Arrays.asList("PERSON", "ORGANIZATION", "LOCATION");
+        CoreDocument document = pipeline.processToCoreDocument(text);
+        
+        for (CoreEntityMention em : document.entityMentions()) {
+            if (entityType.contains(em.entityType())) {
+                entities.put(em.text(), em.entityType());
+            }
+        }
+        
+        return entities;
     }
     
     /**
