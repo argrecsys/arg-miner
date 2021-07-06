@@ -107,6 +107,7 @@ public class ArgumentEngine implements Constants {
             // 5. Arguments Mining
             Argument arg = getArgument(sentenceID, sentence.toString(), syntagmaList, verbList, linker);
             if (arg.isValid()) {
+                System.out.println(arg.getString());
                 result.add(arg);
             }
             else {
@@ -181,7 +182,6 @@ public class ArgumentEngine implements Constants {
                 }
                 
                 arg = new Argument(sentenceID, sentence, premise, claim, mainVerb, relationType);
-                System.out.println(arg.getString());
             }
         }
         

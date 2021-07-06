@@ -11,7 +11,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -83,4 +85,27 @@ public class IOManager implements Constants {
         return linkers;
     }
     
+    /**
+     * 
+     * @param data
+     * @param filepath
+     * @return 
+     */
+    public static boolean saveJsonFile(String data, String filepath) {
+       boolean result = false;
+       
+       FileWriter writer;
+       
+       try {
+           writer = new FileWriter(filepath);
+           writer.write(data);
+           writer.close();
+           result = true;
+           
+       } catch (IOException ex) {
+           Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+       }
+       
+       return result;
+    }
 }

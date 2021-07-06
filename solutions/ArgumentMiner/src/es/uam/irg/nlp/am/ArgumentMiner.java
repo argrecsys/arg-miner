@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -141,10 +143,32 @@ public class ArgumentMiner implements Constants {
     private static void saveArguments(Map<Integer, List<Argument>> arguments) {
         
         if (arguments != null) {
+            JSONArray argList = new JSONArray();
             
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
-                
+                for (Argument arg : entry.getValue()) {
+                    
+                    // Create JSON object
+                    JSONObject item = new JSONObject();
+                    item.put("proposalID", entry.getKey());
+                    item.put("sentenceID", arg.sentenceID);
+                    item.put("sentence", arg.sentence);
+                    item.put("claim", arg.claim);
+                    item.put("premise", arg.premise);
+                    item.put("relationType", arg.relationType);
+                    item.put("mainVerb", arg.mainVerb);
+                    
+                    // Store JSON object
+                    argList.add(item);
+                }
             }
+            
+            // Save JSON file
+            String jsonString = argList.toJSONString();
+            jsonString = jsonString.replace("},", "},\n ");
+            jsonString = jsonString.replace("\":", "\": ");
+            jsonString = jsonString.replace("\",\"", "\", \"");
+            IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
         }
     }
     
