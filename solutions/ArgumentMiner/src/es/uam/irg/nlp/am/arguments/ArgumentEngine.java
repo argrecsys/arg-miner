@@ -153,6 +153,7 @@ public class ArgumentEngine implements Constants {
         String claim = null;
         String mainVerb = null;
         String relationType = linker.relationType;
+        System.out.println("Linker: " + linker.linker);        
         
         /*
             Approach 1: claim + linker + premise
@@ -179,10 +180,8 @@ public class ArgumentEngine implements Constants {
                     }
                 }
                 else if (syntagma.depth == minDepth - 1 && premise != null && syntagma.text.contains(premise)) {
-                    claim = syntagma.text.replace(premise, "").trim();
-                    if (claim.endsWith(".")) {
-                        claim = claim.replace(".", "").trim();
-                    }
+                    int endIx = syntagma.text.indexOf(premise);
+                    claim = syntagma.text.substring(0, endIx).trim();
                 }
             }
             

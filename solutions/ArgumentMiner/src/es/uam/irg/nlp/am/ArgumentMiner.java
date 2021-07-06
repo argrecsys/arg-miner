@@ -33,7 +33,7 @@ public class ArgumentMiner implements Constants {
         
         // Read input parameters
         String language = LANG_ES;
-        int maxProposal = 10;
+        int maxProposal = 100;
         
         if (args.length > 0) {
             language = args[0];

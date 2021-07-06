@@ -35,7 +35,7 @@ public class DMDBManager {
     public Map<Integer, DMComment> selectComments() throws Exception {
         Map<Integer, DMComment> comments = new HashMap<>();
         
-        String query = "SELECT * FROM proposal_comments";
+        String query = "SELECT * FROM proposal_comments;";
         ResultSet rs = this.db.executeSelect(query);
         
         while (rs != null && rs.next()) {
@@ -63,7 +63,7 @@ public class DMDBManager {
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +
-                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671) " +
+                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 10050, 3039, 17171, 20355) " +
                        " LIMIT " + topN + ";";
         ResultSet rs = this.db.executeSelect(query);
         
@@ -88,7 +88,7 @@ public class DMDBManager {
     public Map<Integer, DMProposal> selectProposals() throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
 
-        String query = "SELECT * FROM proposals";
+        String query = "SELECT * FROM proposals;";
         ResultSet rs = this.db.executeSelect(query);
         
         while (rs != null && rs.next()) {
@@ -111,10 +111,15 @@ public class DMDBManager {
     
     public Map<Integer, DMProposal> selectProposals(int topN, ArgumentLinkerList linkers) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
+        String whereCond = "";
+        
+        for (int i=0; i < linkers.size(); i++) {
+            whereCond += (i > 0 ? " OR" : "") + " summary LIKE '%" + linkers.getLinker(i).linker + "%'";
+        }
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
-                       "  FROM proposals " +
-                       " WHERE summary LIKE '%porque%' " +
+                       "  FROM proposals " + 
+                       " WHERE " + whereCond +
                        " ORDER BY LENGTH(summary) " +
                        " LIMIT " + topN + ";";
         ResultSet rs = this.db.executeSelect(query);
