@@ -33,7 +33,7 @@ public class ArgumentMiner implements Constants {
         
         // Read input parameters
         String language = LANG_ES;
-        int maxProposal = 5;
+        int maxProposal = 10;
         
         if (args.length > 0) {
             language = args[0];
@@ -42,42 +42,37 @@ public class ArgumentMiner implements Constants {
                 maxProposal = Integer.parseInt(args[1]);
             }
         }
-        System.out.format(">> Language selected: %s, number of proposals to be analyzed: %s\n", language, maxProposal);
-        
-        // Get the list of argument linkers
-        ArgumentLinkerList linkers = getLinkerTaxonomy(language, false);
+        System.out.format(">> Language selected: %s, max number of proposals to be analyzed: %s\n", language, maxProposal);
 
-        if (linkers != null && linkers.size() > 0) {
-            
-            // Get the list of argumentative proposals
-            Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal, linkers);
+        // Get the list of proposals
+        Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal);
+        
+        // Get linkers in argumentative proposals
+        Map<Integer, ArgumentLinker> argLinkers = getLinkersInProposals(language, proposals);
+        
+        if (argLinkers.size() > 0) {
             
             // Bulk annotation of proposals
-            if (proposals != null && proposals.size() > 0) {
-                Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, linkers);
-                
-                // Show results
-                System.out.println(">> Total proposals: " + proposals.size());
-                System.out.println(">> Total proposals with arguments: " + arguments.size());
-                proposals.keySet().forEach(key -> {
-                    System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
-                });
-                
-                // Save arguments
-                boolean result = saveArguments(arguments, proposals);
-                if (result) {
-                    System.out.println(">> Arguments saved correctly.");
-                }
-                else {
-                    System.err.println(">> An unexpected error occurred while saving the arguments.");
-                }
+            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, argLinkers);
+
+            // Show results
+            System.out.println(">> Total proposals: " + argLinkers.size());
+            System.out.println(">> Total proposals with arguments: " + arguments.size());
+            proposals.keySet().forEach(key -> {
+                System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
+            });
+
+            // Save arguments
+            boolean result = saveArguments(arguments, proposals);
+            if (result) {
+                System.out.println(">> Arguments saved correctly.");
             }
             else {
-                System.err.println(">> Error: There are no proposals using the indicated linkers.");
+                System.err.println(">> An unexpected error occurred while saving the arguments.");
             }
         }
         else {
-            System.err.println(">> Error: The linker taxonomy could not be loaded.");
+            System.err.println(">> Error: No argumentative proposals (with linkers) were found.");
         }
         
         System.out.println(">> PROGRAM ENDS");
@@ -90,19 +85,21 @@ public class ArgumentMiner implements Constants {
      * @param linkers
      * @return 
      */
-    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerList linkers) {
+    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, Map<Integer, ArgumentLinker> argLinkers) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
         
         // Temporary vars
         ArgumentEngine engine = new ArgumentEngine(language);
-        ArgumentLinker linker = linkers.getLinker("porque");
         int proposalID;
+        ArgumentLinker linker;
         DMProposal proposal;
         
         // Analize argumentative proposals
-        for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
+        for (Map.Entry<Integer, ArgumentLinker> entry : argLinkers.entrySet()) {
             proposalID = entry.getKey();
-            proposal = entry.getValue(); 
+            linker = entry.getValue();
+            proposal = proposals.get(proposalID);
+            
             List<Argument> argList = engine.annotate(proposalID, proposal.getTitle(), proposal.getSummary(), linker);
             arguments.put(proposalID, argList);
         }
@@ -117,7 +114,7 @@ public class ArgumentMiner implements Constants {
      * @param linkers
      * @return 
      */
-    private static Map<Integer, DMProposal> getArgumentativeProposals(int topN, ArgumentLinkerList linkers) {
+    private static Map<Integer, DMProposal> getArgumentativeProposals(int topN) {
         Map<Integer, DMProposal> proposals = null;
         try {
             DMDBManager dbManager = new DMDBManager();
@@ -138,6 +135,44 @@ public class ArgumentMiner implements Constants {
      */
     private static ArgumentLinkerList getLinkerTaxonomy(String lang, boolean verbose) {
         return IOManager.readLinkerTaxonomy(lang, verbose);
+    }
+    
+    /**
+     * 
+     * @param language
+     * @param proposals
+     * @return 
+     */
+    private static Map<Integer, ArgumentLinker> getLinkersInProposals(String language, Map<Integer, DMProposal> proposals) {
+        Map<Integer, ArgumentLinker> propLinkers = new HashMap<>();
+        
+        // Get the list of argument linkers
+        ArgumentLinkerList linkers = getLinkerTaxonomy(language, true);
+        
+        if (linkers.size() > 0) {
+            proposals.keySet().forEach(key -> {
+                DMProposal proposal = proposals.get(key);
+                ArgumentLinker linker = null;
+                boolean flag = false;
+                
+                for (int i = 0; i < linkers.size() && !flag; i++) {
+                    linker = linkers.getLinker(i);
+                    if (proposal.getSummary().contains(linker.linker)) {
+                        flag = true;
+                    }
+                }
+                
+                if (flag && linker != null) {
+                    propLinkers.put(key, linker);
+                }
+                else {
+                    System.err.println("Proposal " + key + " has no linkers.");
+                }
+                
+            });
+        }
+        
+        return propLinkers;
     }
 
     /**

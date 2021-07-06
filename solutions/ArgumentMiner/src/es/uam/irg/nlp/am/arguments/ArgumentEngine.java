@@ -119,7 +119,7 @@ public class ArgumentEngine implements Constants {
                 result.add(arg);
             }
             else {
-                System.out.format("Sentence %s of phrase %s has no argument\n", (i + 1), key);
+                System.err.format("Sentence %s of phrase %s has no argument\n", (i + 1), key);
             }
         }
         
