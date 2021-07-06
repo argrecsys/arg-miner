@@ -147,16 +147,19 @@ public class ArgumentEngine implements Constants {
         String relationType = linker.relationType;
         
         /*
-            Approach 1
+            Approach 1: claim + linker + premise
         */
         int minDepth = Integer.MAX_VALUE;
         
         for (Syntagma syntagma : syntagmaList) {
-            // System.out.format("%s - %s \n", syntagma.getString(), linker.getString());
             if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+                System.out.format("%s - %s\n", syntagma.getString(), linker.getString());
                 if (syntagma.depth < minDepth) {
                     minDepth = syntagma.depth;
                 }
+            }
+            else {
+                System.out.format("%s\n", syntagma.getString());
             }
         }
         
@@ -167,8 +170,11 @@ public class ArgumentEngine implements Constants {
                         premise = syntagma.text;
                     }
                 }
-                else if (syntagma.depth == minDepth - 1 && syntagma.text.contains(premise)) {
+                else if (syntagma.depth == minDepth - 1 && premise != null && syntagma.text.contains(premise)) {
                     claim = syntagma.text.replace(premise, "").trim();
+                    if (claim.endsWith(".")) {
+                        claim = claim.replace(".", "").trim();
+                    }
                 }
             }
             

@@ -64,7 +64,13 @@ public class ArgumentMiner implements Constants {
                 });
                 
                 // Save arguments
-                saveArguments(arguments);
+                boolean result = saveArguments(arguments, proposals);
+                if (result) {
+                    System.out.println(">> Arguments saved correctly.");
+                }
+                else {
+                    System.err.println(">> An unexpected error occurred while saving the arguments.");
+                }
             }
             else {
                 System.err.println(">> Error: There are no proposals using the indicated linkers.");
@@ -115,7 +121,7 @@ public class ArgumentMiner implements Constants {
         Map<Integer, DMProposal> proposals = null;
         try {
             DMDBManager dbManager = new DMDBManager();
-            proposals = dbManager.selectCustomProposals(topN, linkers);
+            proposals = dbManager.selectCustomProposals(topN);
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
@@ -137,21 +143,26 @@ public class ArgumentMiner implements Constants {
     /**
      * Saves the arguments in a plain text file.
      * 
+     * @param arguments
      * @param proposals
-     * @param arguments 
+     * @return 
      */
-    private static void saveArguments(Map<Integer, List<Argument>> arguments) {
+    private static boolean saveArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
+        boolean result = false;
         
         if (arguments != null) {
             JSONArray argList = new JSONArray();
             
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
+                DMProposal prop = proposals.get(entry.getKey());
+                
                 for (Argument arg : entry.getValue()) {
                     
                     // Create JSON object
                     JSONObject item = new JSONObject();
                     item.put("proposalID", entry.getKey());
                     item.put("sentenceID", arg.sentenceID);
+                    item.put("majorClaim", prop.getTitle());
                     item.put("sentence", arg.sentence);
                     item.put("claim", arg.claim);
                     item.put("premise", arg.premise);
@@ -168,8 +179,10 @@ public class ArgumentMiner implements Constants {
             jsonString = jsonString.replace("},", "},\n ");
             jsonString = jsonString.replace("\":", "\": ");
             jsonString = jsonString.replace("\",\"", "\", \"");
-            IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
+            result = IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
         }
+        
+        return result;
     }
     
 }

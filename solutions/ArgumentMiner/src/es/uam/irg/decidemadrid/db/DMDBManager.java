@@ -11,12 +11,12 @@ import java.util.Map;
 public class DMDBManager {
     
     // Public constants
-    public static final String DB_SERVER = "localhost";
     public static final String DB_NAME = "decide.madrid_2019_09";
+    public static final String DB_SERVER = "localhost";
     public static final String DB_USERNAME = "root";
     public static final String DB_USERPASSWORD = "Ovs001993";
 
-    public MySQLDBConnector db;
+    private MySQLDBConnector db;
 
     public DMDBManager() throws Exception {
         this(DB_SERVER, DB_NAME, DB_USERNAME, DB_USERPASSWORD);
@@ -30,6 +30,59 @@ public class DMDBManager {
     @Override
     public void finalize() {
         this.db.disconnect();
+    }
+    
+    public Map<Integer, DMComment> selectComments() throws Exception {
+        Map<Integer, DMComment> comments = new HashMap<>();
+        
+        String query = "SELECT * FROM proposal_comments";
+        ResultSet rs = this.db.executeSelect(query);
+        
+        while (rs != null && rs.next()) {
+            int id = rs.getInt("id");
+            int parentId = rs.getInt("parentId");
+            int proposalId = rs.getInt("proposalId");
+            int userId = rs.getInt("userId");
+            String date = rs.getDate("date").toString();
+            String time = rs.getTime("time").toString();
+            String text = rs.getString("text");
+            int votes = rs.getInt("numVotes");
+            int votesUp = rs.getInt("numPositiveVotes");
+            int votesDown = rs.getInt("numNegativeVotes");
+            
+            DMComment comment = new DMComment(id, parentId, proposalId, userId, date, time, text, votes, votesUp, votesDown);
+            comments.put(id, comment);
+        }
+        rs.close();
+        
+        return comments;
+    }
+    
+    public Map<Integer, DMProposal> selectCustomProposals(int topN) throws Exception {
+        Map<Integer, DMProposal> proposals = new HashMap<>();
+        
+        String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
+                       "  FROM proposals " +
+                       " WHERE id IN (17080, 992, 18302, 19615, 7250) " +
+                       " LIMIT " + topN + ";";
+        ResultSet rs = this.db.executeSelect(query);
+        
+        while (rs != null && rs.next()) {
+            int id = rs.getInt("id");
+            String title = rs.getString("title");
+            int userId = rs.getInt("userId");
+            String date = rs.getString("date");
+            String summary = rs.getString("summary");
+            String text = rs.getString("text");
+            int numComments = rs.getInt("numComments");
+            int numSupports = rs.getInt("numSupports");
+
+            DMProposal proposal = new DMProposal(id, title, userId, date, summary, text, numComments, numSupports);
+            proposals.put(id, proposal);
+        }
+        rs.close();
+
+        return proposals;
     }
 
     public Map<Integer, DMProposal> selectProposals() throws Exception {
@@ -56,18 +109,14 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectCustomProposals(int topN, ArgumentLinkerList linkers) throws Exception {
+    public Map<Integer, DMProposal> selectProposals(int topN, ArgumentLinkerList linkers) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         
-        String query = "SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation " +
+        String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +
                        " WHERE summary LIKE '%porque%' " +
                        " ORDER BY LENGTH(summary) " +
                        " LIMIT " + topN + ";";
-        
-        query = "SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation " +
-                "  FROM proposals " +
-                " WHERE id IN (17080, 992, 19615); ";
         ResultSet rs = this.db.executeSelect(query);
         
         while (rs != null && rs.next()) {
@@ -88,30 +137,4 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMComment> selectComments() throws Exception {
-        Map<Integer, DMComment> comments = new HashMap<>();
-
-        String query = "SELECT * FROM proposal_comments";
-        ResultSet rs = this.db.executeSelect(query);
-        
-        while (rs != null && rs.next()) {
-            int id = rs.getInt("id");
-            int parentId = rs.getInt("parentId");
-            int proposalId = rs.getInt("proposalId");
-            int userId = rs.getInt("userId");
-            String date = rs.getDate("date").toString();
-            String time = rs.getTime("time").toString();
-            String text = rs.getString("text");
-            int votes = rs.getInt("numVotes");
-            int votesUp = rs.getInt("numPositiveVotes");
-            int votesDown = rs.getInt("numNegativeVotes");
-
-            DMComment comment = new DMComment(id, parentId, proposalId, userId, date, time, text, votes, votesUp, votesDown);
-            comments.put(id, comment);
-        }
-        rs.close();
-
-        return comments;
-    }
-
 }
