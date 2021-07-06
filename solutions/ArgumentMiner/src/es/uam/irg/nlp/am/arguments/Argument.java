@@ -23,6 +23,7 @@ public class Argument {
     public String relationType;
     public String sentence;
     public String sentenceID;
+    public String approach;
     private List<String> entityList;
     private boolean isValid;
     
@@ -33,7 +34,7 @@ public class Argument {
      * @param sentence 
      */
     public Argument(String sentenceID, String sentence) {
-        this(sentenceID, sentence, "", "", "", "");
+        this(sentenceID, sentence, "", "", "", "", "NONE");
         this.isValid = false;
     }
     
@@ -45,15 +46,17 @@ public class Argument {
      * @param premise
      * @param claim
      * @param mainVerb
-     * @param relationType 
+     * @param relationType
+     * @param approach 
      */
-    public Argument(String sentenceID, String sentence, String premise, String claim, String mainVerb, String relationType) {
+    public Argument(String sentenceID, String sentence, String premise, String claim, String mainVerb, String relationType, String approach) {
         this.sentenceID = sentenceID;
         this.sentence = sentence;
         this.premise = premise;
         this.claim = claim;
         this.mainVerb = mainVerb;
         this.relationType = relationType;
+        this.approach = approach;
         this.entityList = new ArrayList<>();
         this.isValid = true;
     }

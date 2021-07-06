@@ -196,7 +196,7 @@ public class ArgumentEngine implements Constants {
                     }
                 }
                 
-                arg = new Argument(sentenceID, sentence, premise, claim, mainVerb, relationType);
+                arg = new Argument(sentenceID, sentence, premise, claim, mainVerb, relationType, "A1:C+L+P");
             }
         }
         

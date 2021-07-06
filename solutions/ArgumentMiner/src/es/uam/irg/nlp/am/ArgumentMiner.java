@@ -167,6 +167,7 @@ public class ArgumentMiner implements Constants {
                     item.put("claim", arg.claim);
                     item.put("premise", arg.premise);
                     item.put("relationType", arg.relationType);
+                    item.put("approach", arg.approach);
                     item.put("mainVerb", arg.mainVerb);
                     item.put("entityList", arg.getEntityList().toString());
                     
