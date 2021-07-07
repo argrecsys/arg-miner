@@ -3,7 +3,7 @@ package es.uam.irg.decidemadrid.db;
 import es.uam.irg.db.MySQLDBConnector;
 import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.decidemadrid.entities.DMComment;
-import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,7 +63,7 @@ public class DMDBManager {
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +
-                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 10050, 3039, 17171, 20355) " +
+                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 24451, 11402) " +
                        " LIMIT " + topN + ";";
         ResultSet rs = this.db.executeSelect(query);
         
@@ -109,11 +109,11 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectProposals(int topN, ArgumentLinkerList linkers) throws Exception {
+    public Map<Integer, DMProposal> selectProposals(int topN, ArgumentLinkerManager linkers) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         String whereCond = "";
         
-        for (int i=0; i < linkers.size(); i++) {
+        for (int i=0; i < linkers.getNLinkers(); i++) {
             whereCond += (i > 0 ? " OR" : "") + " summary LIKE '%" + linkers.getLinker(i).linker + "%'";
         }
         

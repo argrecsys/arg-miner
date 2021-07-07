@@ -18,7 +18,14 @@ public class ArgumentLinker {
     public String subCategory;
     
     /**
-     * Class constructor.
+     * Empty constructor.
+     */
+    public ArgumentLinker() {
+        this("", "", "", "");
+    }
+    
+    /**
+     * Regular constructor.
      * 
      * @param category
      * @param subCategory

@@ -5,7 +5,7 @@
  */
 package es.uam.irg.io;
 
-import es.uam.irg.nlp.am.arguments.ArgumentLinkerList;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.nlp.am.Constants;
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,8 +28,8 @@ public class IOManager implements Constants {
      * @param verbose
      * @return 
      */
-    public static ArgumentLinkerList readLinkerTaxonomy(String lang, boolean verbose) {
-        ArgumentLinkerList linkers = new ArgumentLinkerList();
+    public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
+        ArgumentLinkerManager linkers = new ArgumentLinkerManager();
         int linkerIndex = -1;
         
         if (LANG_EN.equals(lang))
@@ -76,8 +75,8 @@ public class IOManager implements Constants {
         }
         
         if (verbose) {
-            System.out.println(">> List of argument linkers: " + linkers.size());
-            for (int i = 0; i < linkers.size(); i++) {
+            System.out.println(">> List of argument linkers: " + linkers.getNLinkers());
+            for (int i = 0; i < linkers.getNLinkers(); i++) {
                 System.out.format("Linker -> %s \n", linkers.getLinker(i).getString());
             }
         }

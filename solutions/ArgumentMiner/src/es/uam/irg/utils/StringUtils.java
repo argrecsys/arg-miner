@@ -5,10 +5,8 @@ import java.util.LinkedList;
 
 public class StringUtils {
     
-    // Public contants
-    public static final String EMPTY = "";
-    
     // Private contants
+    private static final String EMPTY = "";
     private static final String PLAIN_ASCII
             = "AaEeIiOoUu" // grave
             + "AaEeIiOoUuYy" // acute
@@ -27,31 +25,44 @@ public class StringUtils {
             + "\u00C5\u00E5" // ring
             + "\u00C7\u00E7" // cedilla
             ;
-
+    
     /**
-     * Converts a non ASCII string to an ASCII string.
      *
-     * @param s - the string which characters are going to be converted
-     *
-     * @return a string which all its characters are ASCII
+     * @param str
+     * @return
      */
-    public static String toASCII(String s) {
-        StringBuffer sb = new StringBuffer();
-        int n = s.length();
-        for (int i = 0; i < n; i++) {
-            char c = s.charAt(i);
-            int pos = UNI_CODE.indexOf(c);
-            if (pos > -1) {
-                sb.append(PLAIN_ASCII.charAt(pos));
-            } else if ((int) c < 256) {
-                sb.append(c);
-            } else {
-                //sb.append("?");
-            }
-        }
-        return sb.toString();
+    public static boolean isEmpty(String str) {
+        boolean isEmpty = (str == null || str.trim().length() == 0);
+        return isEmpty;
     }
-
+    
+    /**
+     * <p>Left pad a String with spaces (' ').</p>
+     *
+     * @param str  the String to pad out, may be null
+     * @param size  the size to pad to
+     * @return left padded String or original String if no padding is necessary, {@code null} if null String input
+     */
+    public static String leftPad(String str, int size) {
+        return leftPad(str, size, ' ');
+    }
+    
+    /**
+     * Left pad a String with spaces (' ').
+     * 
+     *
+     * @param str  the String to pad out, may be null
+     * @param size  the size to pad to
+     * @param padChar  the character to pad with
+     * @return left padded String or original String if no padding is necessary, {@code null} if null String input
+     */
+    public static String leftPad(String str, int size, char padChar) {
+        if (str == null) {
+            return null;
+        }
+        return repeat(padChar, size).concat(str);
+    }
+    
     /**
      * Computes the Levensthein distance between two given strings.
      *
@@ -69,7 +80,7 @@ public class StringUtils {
         char s_i; // ith character of s
         char t_j; // jth character of t
         int cost; // cost
-
+        
         // Step 1    
         n = s.length();
         m = t.length();
@@ -113,7 +124,42 @@ public class StringUtils {
         // Step 7
         return d[n][m];
     }
-
+    
+    /**
+     *
+     * @param json
+     * @return
+     */
+    public static String prettyJSON(String json) {
+        String jsonString = json;
+        jsonString = jsonString.replace("},", "},\n ");
+        jsonString = jsonString.replace("\":", "\": ");
+        jsonString = jsonString.replace("\",\"", "\", \"");
+        return jsonString;
+    }
+    
+    /**
+     * Returns padding using the specified delimiter repeated to a given length.
+     *
+     * @param ch  character to repeat
+     * @param repeat  number of times to repeat char, negative treated as zero
+     * @return String with repeated character
+     * @see #repeat(String, int)
+     */
+    public static String repeat(char ch, int repeat) {
+        if (repeat <= 0) {
+            return EMPTY;
+        }
+        char[] buf = new char[repeat];
+        Arrays.fill(buf, ch);
+        return new String(buf);
+    }
+    
+    /**
+     * 
+     * @param s
+     * @return 
+     */
     public static String splitCamelCaseString(String s) {
         LinkedList<String> tokens = _splitCamelCaseString(s);
         String s2 = "";
@@ -125,30 +171,40 @@ public class StringUtils {
     }
     
     /**
-     * <p>Left pad a String with spaces (' ').</p>
+     * Converts a non ASCII string to an ASCII string.
      *
-     * @param str  the String to pad out, may be null
-     * @param size  the size to pad to
-     * @return left padded String or original String if no padding is necessary, {@code null} if null String input
+     * @param s - the string which characters are going to be converted
+     *
+     * @return a string which all its characters are ASCII
      */
-    public static String leftPad(String str, int size) {
-        return leftPad(str, size, ' ');
+    public static String toASCII(String s) {
+        StringBuffer sb = new StringBuffer();
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            int pos = UNI_CODE.indexOf(c);
+            if (pos > -1) {
+                sb.append(PLAIN_ASCII.charAt(pos));
+            } else if ((int) c < 256) {
+                sb.append(c);
+            } else {
+                //sb.append("?");
+            }
+        }
+        return sb.toString();
     }
     
     /**
-     * Left pad a String with spaces (' ').
-     * 
-     *
-     * @param str  the String to pad out, may be null
-     * @param size  the size to pad to
-     * @param padChar  the character to pad with
-     * @return left padded String or original String if no padding is necessary, {@code null} if null String input
+     * Accept a string, like aCamelString
+     * @param s
+     * @return a list containing strings, in this case, [a, Camel, String]
      */
-    public static String leftPad(String str, int size, char padChar) {
-        if (str == null) {
-            return null;
+    private static LinkedList<String> _splitCamelCaseString(String s) {
+        LinkedList<String> result = new LinkedList<>();
+        for (String w : s.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])")) {
+            result.add(w);
         }
-        return repeat(padChar, size).concat(str);
+        return result;
     }
     
     /**
@@ -172,44 +228,4 @@ public class StringUtils {
         return mi;
     }
     
-    /**
-     * Accept a string, like aCamelString
-     * @param s
-     * @return a list containing strings, in this case, [a, Camel, String]
-     */
-    private static LinkedList<String> _splitCamelCaseString(String s) {
-        LinkedList<String> result = new LinkedList<>();
-        for (String w : s.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])")) {
-            result.add(w);
-        }
-        return result;
-    }
-    
-    /**
-     * Returns padding using the specified delimiter repeated to a given length.
-     *
-     * @param ch  character to repeat
-     * @param repeat  number of times to repeat char, negative treated as zero
-     * @return String with repeated character
-     * @see #repeat(String, int)
-     */
-    public static String repeat(char ch, int repeat) {
-        if (repeat <= 0) {
-            return EMPTY;
-        }
-        char[] buf = new char[repeat];
-        Arrays.fill(buf, ch);
-        return new String(buf);
-    }
-    
-    /**
-     * 
-     * @param str
-     * @return 
-     */
-    public static boolean isEmpty(String str) {
-        boolean isEmpty = (str == null || str.trim().length() == 0);
-        return isEmpty;
-    }
-
 }

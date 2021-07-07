@@ -12,14 +12,14 @@ import java.util.List;
  *
  * @author ansegura
  */
-public class ArgumentLinkerList {
+public class ArgumentLinkerManager {
 
     private List<ArgumentLinker> linkers;
 
     /**
      * Class constructor.
      */
-    public ArgumentLinkerList() {
+    public ArgumentLinkerManager() {
         this.linkers = new LinkedList<>();
     }
 
@@ -84,7 +84,16 @@ public class ArgumentLinkerList {
      *
      * @return
      */
-    public int size() {
+    public int getNLinkers() {
         return this.linkers.size();
     }
+    
+    /**
+     * 
+     * @return 
+     */
+    public boolean isEmpty() {
+        return (getNLinkers() == 0);
+    }
+    
 }

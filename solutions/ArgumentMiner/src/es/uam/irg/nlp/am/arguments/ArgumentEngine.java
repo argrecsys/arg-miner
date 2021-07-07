@@ -26,19 +26,22 @@ public class ArgumentEngine implements Constants {
     
     // Class members
     private String language;
+    private ArgumentLinkerManager lnkManager;
     private String nlpPath;
     private PrintWriter out;
     private Properties props;
     
     /**
-     * Class constructor
-     * @param lang 
+     * Class constructor.
+     * 
+     * @param lang
+     * @param lnkManager 
      */
-    public ArgumentEngine(String lang) {
-        this.out = new PrintWriter(System.out);
+    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager) {
         this.language = lang;
+        this.lnkManager = lnkManager;
         this.nlpPath = System.getenv("CORENLP_HOME");
-        
+        this.out = new PrintWriter(System.out);
         setProperties();
     }
     
@@ -60,66 +63,86 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
-     * @param key
-     * @param text
-     * @param linker
+     * @param docKey
+     * @param docTitle
+     * @param docText
      * @return 
      */
-    public List<Argument> annotate(int key, String title, String text, ArgumentLinker linker) {
-        System.out.format("Task Annotate - Id: %s, Proposal: %s\n", key, text);
+    public List<Argument> annotate(int docKey, String docTitle, String docText) {
+        System.out.format("Task Annotate - Id: %s, Proposal: %s\n", docKey, docText);
         List<Argument> result = new ArrayList<>();
         
-        // NLP objects
+        // 1. Annotate entire document with Stanford CoreNLP
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
-        Annotation annotation = new Annotation(text);
+        Annotation annotation = new Annotation(docText);
         pipeline.annotate(annotation);
         
-        // Get named entity recognition
-        Map<String, String> entities = getNamedEntities(pipeline, title);
+        // 2. Get named entity recognition in document
+        Map<String, String> entities = getNamedEntities(pipeline, docTitle);
         System.out.println("Show Named Entity Recognition: " + entities.size());
         for (Map.Entry<String, String> entry : entities.entrySet()) {
             System.out.println(entry.getKey()+ ": " + entry.getValue());
         }
         
+        // 3. Get sentences from the document
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
         System.out.println("N sentences: " + sentences.size());
         
         for (int i = 0; i < sentences.size(); i++) {
             
-            // 1. Get current sentence
-            String sentenceID = key + "-" + (i + 1);
+            // 4. Get current sentence
+            String sentenceID = docKey + "-" + (i + 1);
             CoreMap sentence = sentences.get(i);
-            System.out.format("[%s]: %s \n", sentenceID, sentence.toString());
+            String sentenceText = sentence.toString();
+            System.out.format("[%s]: %s\n", sentenceID, sentenceText);
             
-            // 2. Display Parts of Speech
-            CoreDocument document = pipeline.processToCoreDocument(sentence.toString());
-            List<String> verbList = new ArrayList<>();
-            document.tokens().forEach((CoreLabel token) -> {
-                // System.out.println(String.format("%s [%s]", token.word(), token.tag()));
-                if (token.tag().equals("VERB")) {
-                    verbList.add(token.word());
-                }
-            });
-            System.out.println("Verb list: " + verbList.toString());
+            // 5. Get main sentence linker
+            ArgumentLinker linker = getSentenceLinker(sentenceText);
             
-            // 3. Get constituency tree
-            System.out.println("Show constituency tree:");
-            Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
-            tree.pennPrint(out);
+            if (linker != null) {
+                System.out.println("Sentence linker: " + linker.getString());
             
-            // 4. Get get syntagma list
-            List<Syntagma> syntagmaList = getSyntagmaList(tree);
-            System.out.println("Syntagma list: " + syntagmaList.size());
+                // 6. Apply parts of speech (POS) to identify list of NOUNs and VERBs
+                CoreDocument document = pipeline.processToCoreDocument(sentenceText);
+                List<String> nounList = new ArrayList<>();
+                List<String> verbList = new ArrayList<>();
 
-            // 5. Arguments Mining
-            Argument arg = getArgument(sentenceID, sentence.toString(), syntagmaList, verbList, linker);
-            if (arg.isValid()) {
-                arg.setEntityList(entities);
-                System.out.println(arg.getString());
-                result.add(arg);
+                document.tokens().forEach((CoreLabel token) -> {
+                    // System.out.println(String.format("%s [%s]", token.word(), token.tag()));
+                    if (token.tag().equals("NOUN")) {
+                        nounList.add(token.word());
+                    }
+                    else if (token.tag().equals("VERB")) {
+                        verbList.add(token.word());
+                    }
+                });
+                System.out.println("Noun list: " + nounList.toString());
+                System.out.println("Verb list: " + verbList.toString());
+
+                // 7. Get constituency tree
+                System.out.println("Calculate constituency tree:");
+                Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
+                tree.pennPrint(out);
+
+                // 8. Get syntagma list
+                List<Syntagma> syntagmaList = getSyntagmaList(tree);
+                System.out.println("Syntagma list: " + syntagmaList.size());
+
+                // 9. Apply arguments mining (AM)
+                Argument arg = getArgument(sentenceID, sentenceText, linker, syntagmaList, verbList);
+                
+                if (arg.isValid()) {
+                    arg.setEntityList(entities);
+                    arg.setNounList(nounList);
+                    System.out.println(arg.getString());
+                    result.add(arg);
+                }
+                else {
+                    System.err.format("Sentence %s of phrase %s has no argument\n", (i + 1), docKey);
+                }
             }
             else {
-                System.err.format("Sentence %s of phrase %s has no argument\n", (i + 1), key);
+                System.err.format("Sentence %s of phrase %s has no linker\n", (i + 1), docKey);
             }
         }
         
@@ -128,36 +151,26 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
-     * @param tree
-     * @return 
-     */
-    public List<Syntagma> getSyntagmaList(Tree tree) {
-        List<Syntagma> syntagmaList = new ArrayList<>();
-        getSyntagmaList(tree, 0, syntagmaList);
-        return syntagmaList;
-    }
-    
-    /**
-     * 
-     * @param sentence
+     * @param sentenceID
+     * @param sentenceText
+     * @param linker
      * @param syntagmaList
      * @param verbList
-     * @param linker
      * @return 
      */
-    private Argument getArgument(String sentenceID, String sentence, List<Syntagma> syntagmaList, List<String> verbList, ArgumentLinker linker) {
-        Argument arg = new Argument(sentenceID, sentence);
+    private Argument getArgument(String sentenceID, String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> verbList) {
+        Argument arg = new Argument(sentenceID, sentenceText);
         
         // Temporary variables
+        String approach;
         String premise = null;
         String claim = null;
         String mainVerb = null;
-        String relationType = linker.relationType;
-        System.out.println("Linker: " + linker.linker);        
         
         /*
             Approach 1: claim + linker + premise
         */
+        approach = "A1:C+L+P";
         int minDepth = Integer.MAX_VALUE;
         
         for (Syntagma syntagma : syntagmaList) {
@@ -195,7 +208,8 @@ public class ArgumentEngine implements Constants {
                     }
                 }
                 
-                arg = new Argument(sentenceID, sentence, premise, claim, mainVerb, relationType, "A1:C+L+P");
+                // Create argument object
+                arg = new Argument(sentenceID, sentenceText, premise, claim, mainVerb, approach, linker);
             }
         }
         
@@ -221,6 +235,35 @@ public class ArgumentEngine implements Constants {
         }
         
         return entities;
+    }
+    
+    /**
+     * 
+     * @param sentenceText
+     * @return 
+     */
+    private ArgumentLinker getSentenceLinker(String sentenceText) {
+        ArgumentLinker linker = null;
+        
+        for (int i = 0; i < lnkManager.getNLinkers(); i++) {
+            linker = lnkManager.getLinker(i);
+            if (sentenceText.contains(linker.linker)) {
+                return linker;
+            }
+        }
+        
+        return null;
+    }
+    
+    /**
+     *
+     * @param tree
+     * @return
+     */
+    private List<Syntagma> getSyntagmaList(Tree tree) {
+        List<Syntagma> syntagmaList = new ArrayList<>();
+        getSyntagmaList(tree, 0, syntagmaList);
+        return syntagmaList;
     }
     
     /**

@@ -9,6 +9,7 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
+import es.uam.irg.utils.StringUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,16 +48,16 @@ public class ArgumentMiner implements Constants {
         // Get the list of proposals
         Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal);
         
-        // Get linkers in argumentative proposals
-        Map<Integer, ArgumentLinker> argLinkers = getLinkersInProposals(language, proposals);
+        // Create linkers manager
+        ArgumentLinkerManager lnkManager = createLinkerManager(language, true);
         
-        if (argLinkers.size() > 0) {
+        if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
             
             // Bulk annotation of proposals
-            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, argLinkers);
+            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager);
 
             // Show results
-            System.out.println(">> Total proposals: " + argLinkers.size());
+            System.out.println(">> Total proposals: " + proposals.size());
             System.out.println(">> Total proposals with arguments: " + arguments.size());
             proposals.keySet().forEach(key -> {
                 System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
@@ -72,7 +73,12 @@ public class ArgumentMiner implements Constants {
             }
         }
         else {
-            System.err.println(">> Error: No argumentative proposals (with linkers) were found.");
+            if (proposals.isEmpty()) {
+                System.err.println(">> Error: There are no argumentative proposals available.");
+            }
+            if (lnkManager.isEmpty()) {
+                System.err.println(">> Error: There are no argumentative linkers available.");
+            }
         }
         
         System.out.println(">> PROGRAM ENDS");
@@ -82,25 +88,23 @@ public class ArgumentMiner implements Constants {
      * 
      * @param language
      * @param proposals
-     * @param linkers
+     * @param lnkManager
      * @return 
      */
-    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, Map<Integer, ArgumentLinker> argLinkers) {
+    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
         
         // Temporary vars
-        ArgumentEngine engine = new ArgumentEngine(language);
+        ArgumentEngine engine = new ArgumentEngine(language, lnkManager);
         int proposalID;
-        ArgumentLinker linker;
         DMProposal proposal;
         
         // Analize argumentative proposals
-        for (Map.Entry<Integer, ArgumentLinker> entry : argLinkers.entrySet()) {
+        for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
             proposalID = entry.getKey();
-            linker = entry.getValue();
-            proposal = proposals.get(proposalID);
+            proposal = entry.getValue();
             
-            List<Argument> argList = engine.annotate(proposalID, proposal.getTitle(), proposal.getSummary(), linker);
+            List<Argument> argList = engine.annotate(proposalID, proposal.getTitle(), proposal.getSummary());
             arguments.put(proposalID, argList);
         }
         
@@ -108,8 +112,19 @@ public class ArgumentMiner implements Constants {
     }
     
     /**
-     * Wrapper function for (DMDBManager) selectNProposals method.
+     * Create the linker manager object.
      * 
+     * @param lang
+     * @param verbose
+     * @return
+     */
+    private static ArgumentLinkerManager createLinkerManager(String lang, boolean verbose) {
+        return IOManager.readLinkerTaxonomy(lang, verbose);
+    }
+    
+    /**
+     * Wrapper function for (DMDBManager) selectNProposals method.
+     *
      * @param topN
      * @param linkers
      * @return 
@@ -126,55 +141,6 @@ public class ArgumentMiner implements Constants {
         return proposals;
     }
     
-    /**
-     * Wrapper function for (IOManager) readLinkerTaxonomy method.
-     * 
-     * @param lang
-     * @param verbose
-     * @return
-     */
-    private static ArgumentLinkerList getLinkerTaxonomy(String lang, boolean verbose) {
-        return IOManager.readLinkerTaxonomy(lang, verbose);
-    }
-    
-    /**
-     * 
-     * @param language
-     * @param proposals
-     * @return 
-     */
-    private static Map<Integer, ArgumentLinker> getLinkersInProposals(String language, Map<Integer, DMProposal> proposals) {
-        Map<Integer, ArgumentLinker> propLinkers = new HashMap<>();
-        
-        // Get the list of argument linkers
-        ArgumentLinkerList linkers = getLinkerTaxonomy(language, true);
-        
-        if (linkers.size() > 0) {
-            proposals.keySet().forEach(key -> {
-                DMProposal proposal = proposals.get(key);
-                ArgumentLinker linker = null;
-                boolean flag = false;
-                
-                for (int i = 0; i < linkers.size() && !flag; i++) {
-                    linker = linkers.getLinker(i);
-                    if (proposal.getSummary().contains(linker.linker)) {
-                        flag = true;
-                    }
-                }
-                
-                if (flag && linker != null) {
-                    propLinkers.put(key, linker);
-                }
-                else {
-                    System.err.println("Proposal " + key + " has no linkers.");
-                }
-                
-            });
-        }
-        
-        return propLinkers;
-    }
-
     /**
      * Saves the arguments in a plain text file.
      * 
@@ -198,13 +164,17 @@ public class ArgumentMiner implements Constants {
                     item.put("proposalID", entry.getKey());
                     item.put("sentenceID", arg.sentenceID);
                     item.put("majorClaim", prop.getTitle());
-                    item.put("sentence", arg.sentence);
+                    item.put("sentence", arg.sentenceText);
                     item.put("claim", arg.claim);
                     item.put("premise", arg.premise);
-                    item.put("relationType", arg.relationType);
-                    item.put("approach", arg.approach);
                     item.put("mainVerb", arg.mainVerb);
+                    item.put("relationType", arg.linker.relationType);
+                    item.put("linker", arg.linker.linker);
+                    item.put("linkerCategory", arg.linker.category);
+                    item.put("linkerSubCategory", arg.linker.subCategory);
                     item.put("entityList", arg.getEntityList().toString());
+                    item.put("nounList", arg.getNounList().toString());
+                    item.put("approach", arg.approach);
                     
                     // Store JSON object
                     argList.add(item);
@@ -212,10 +182,7 @@ public class ArgumentMiner implements Constants {
             }
             
             // Save JSON file
-            String jsonString = argList.toJSONString();
-            jsonString = jsonString.replace("},", "},\n ");
-            jsonString = jsonString.replace("\":", "\": ");
-            jsonString = jsonString.replace("\",\"", "\", \"");
+            String jsonString = StringUtils.prettyJSON(argList.toJSONString());
             result = IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
         }
         

@@ -17,24 +17,25 @@ import java.util.Map;
 public class Argument {
     
     // Class members
+    public String approach;
     public String claim;
     public String mainVerb;
     public String premise;
-    public String relationType;
-    public String sentence;
+    public ArgumentLinker linker;
     public String sentenceID;
-    public String approach;
+    public String sentenceText;
     private List<String> entityList;
     private boolean isValid;
+    private List<String> nounList;
     
     /**
      * Empty constructor.
      * 
      * @param sentenceID
-     * @param sentence 
+     * @param sentenceText 
      */
-    public Argument(String sentenceID, String sentence) {
-        this(sentenceID, sentence, "", "", "", "", "NONE");
+    public Argument(String sentenceID, String sentenceText) {
+        this(sentenceID, sentenceText, "", "", "", "NONE", new ArgumentLinker());
         this.isValid = false;
     }
     
@@ -42,22 +43,23 @@ public class Argument {
      * Regular constructor.
      * 
      * @param sentenceID
-     * @param sentence
+     * @param sentenceText
      * @param premise
      * @param claim
      * @param mainVerb
-     * @param relationType
-     * @param approach 
+     * @param approach
+     * @param linker 
      */
-    public Argument(String sentenceID, String sentence, String premise, String claim, String mainVerb, String relationType, String approach) {
+    public Argument(String sentenceID, String sentenceText, String premise, String claim, String mainVerb, String approach, ArgumentLinker linker) {
         this.sentenceID = sentenceID;
-        this.sentence = sentence;
+        this.sentenceText = sentenceText;
         this.premise = premise;
         this.claim = claim;
         this.mainVerb = mainVerb;
-        this.relationType = relationType;
         this.approach = approach;
+        this.linker = linker;
         this.entityList = new ArrayList<>();
+        this.nounList = new ArrayList<>();
         this.isValid = true;
     }
     
@@ -80,11 +82,27 @@ public class Argument {
     }
     
     /**
+     *
+     * @return
+     */
+    public List<String> getNounList() {
+        return this.nounList;
+    }
+    
+    /**
+     * 
+     * @param nounList 
+     */
+    public void setNounList(List<String> nounList) {
+        this.nounList = nounList;
+    }
+    
+    /**
      * 
      * @return 
      */
     public String getString() {
-        return String.format("[%s] - %s > %s [lnk: %s, vrb: %s]", this.sentenceID, this.claim, this.premise, this.relationType, this.mainVerb);
+        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", this.sentenceID, this.claim, this.premise, this.mainVerb, this.linker.getString());
     }
     
     /**
