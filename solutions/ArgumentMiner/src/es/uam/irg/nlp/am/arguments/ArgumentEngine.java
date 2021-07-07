@@ -27,7 +27,6 @@ public class ArgumentEngine implements Constants {
     // Class members
     private String language;
     private ArgumentLinkerManager lnkManager;
-    private String nlpPath;
     private PrintWriter out;
     private Properties props;
     
@@ -40,7 +39,6 @@ public class ArgumentEngine implements Constants {
     public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager) {
         this.language = lang;
         this.lnkManager = lnkManager;
-        this.nlpPath = System.getenv("CORENLP_HOME");
         this.out = new PrintWriter(System.out);
         setProperties();
     }
@@ -301,7 +299,7 @@ public class ArgumentEngine implements Constants {
                 this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
             }
             else if (language.equals(LANG_ES)) {
-                this.props.load(new FileInputStream(nlpPath + "/StanfordCoreNLP-spanish.properties"));
+                this.props.load(new FileInputStream(Constants.SPANISH_PROPERTIES));
             }
             
         } catch (FileNotFoundException ex) {

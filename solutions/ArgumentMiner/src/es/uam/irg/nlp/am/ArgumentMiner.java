@@ -9,6 +9,7 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
+import es.uam.irg.utils.StringUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -156,6 +157,7 @@ public class ArgumentMiner implements Constants {
                 DMProposal prop = proposals.get(entry.getKey());
                 
                 for (Argument arg : entry.getValue()) {
+                    String majorClaim = StringUtils.cleanTitle(prop.getTitle());
                     
                     // Create JSON linker
                     JSONObject linker = new JSONObject();
@@ -166,7 +168,7 @@ public class ArgumentMiner implements Constants {
                     // Create JSON argument
                     JSONObject item = new JSONObject();
                     item.put("proposalID", entry.getKey());
-                    item.put("majorClaim", prop.getTitle());
+                    item.put("majorClaim", majorClaim);
                     item.put("sentence", arg.sentenceText);
                     item.put("claim", arg.claim);
                     item.put("premise", arg.premise);

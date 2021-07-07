@@ -27,6 +27,18 @@ public class StringUtils {
             ;
     
     /**
+     * 
+     * @param title
+     * @return 
+     */
+    public static String cleanTitle(String title) {
+       String newTitle = title;
+       newTitle = newTitle.replaceAll("\\.+$", "");
+       newTitle = newTitle.replaceAll("\\,+$", "");
+       return newTitle;
+    }
+    
+    /**
      *
      * @param str
      * @return

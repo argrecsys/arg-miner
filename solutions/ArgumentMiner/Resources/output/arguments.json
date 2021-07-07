@@ -1,4 +1,21 @@
 {
+    "8296-1": {
+        "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues la tradicion dice que fue alli donde se encontro",
+        "entityList": "[]",
+        "nounList": "[imagen, torreon, tradicion, alli]",
+        "mainVerb": "Colocar",
+        "claim": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
+        "majorClaim": "Muralla arabe de Madrid",
+        "approach": "A1:C+L+P",
+        "proposalID": 8296
+    },
     "19615-1": {
         "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
         "relationType": "support",
@@ -8,7 +25,7 @@
             "category": "CAUSE"
         },
         "premise": "porque siempre va muy lleno y no te puedes ni mover",
-        "entityList": "[Villaverde:PERSON]",
+        "entityList": "[Villaverde]",
         "nounList": "[autobuses]",
         "mainVerb": "pongan",
         "claim": "Que pongan mas autobuses del 130",
@@ -29,7 +46,7 @@
         "nounList": "[aceras, mesas, sillas]",
         "mainVerb": "caminar",
         "claim": "No se puede caminar por ciertas aceras",
-        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso.",
+        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
         "approach": "A1:C+L+P",
         "proposalID": 18302
     },
@@ -42,7 +59,7 @@
             "category": "CAUSE"
         },
         "premise": "porque las senales pueden ser confusas",
-        "entityList": "[Mejia Lequerica:PERSON]",
+        "entityList": "[Mejia Lequerica]",
         "nounList": "[accidentes, calle, senales]",
         "mainVerb": "producir",
         "claim": "Se pueden producir accidentes en la calle",
@@ -84,6 +101,23 @@
         "approach": "A1:C+L+P",
         "proposalID": 24451
     },
+    "24600-1": {
+        "sentence": "Revisar los pasos de cebra para que esten al nivel de la calzada pues ahora dificultan el paso a sillas de ruedas.",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues ahora dificultan el paso a sillas de ruedas",
+        "entityList": "[]",
+        "nounList": "[pasos, cebra, nivel, calzada, paso, sillas, ruedas]",
+        "mainVerb": "esten",
+        "claim": "para que esten al nivel de la calzada",
+        "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
+        "approach": "A1:C+L+P",
+        "proposalID": 24600
+    },
     "17080-1": {
         "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
         "relationType": "support",
@@ -93,7 +127,7 @@
             "category": "CAUSE"
         },
         "premise": "porque las que hay son insuficientes",
-        "entityList": "[Parque de la Mar Oceana:LOCATION]",
+        "entityList": "[Parque de la Mar Oceana]",
         "nounList": "[papeleras, parque]",
         "claim": "Mas papeleras en el parque",
         "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
@@ -113,7 +147,7 @@
         "nounList": "[precio, transporte]",
         "mainVerb": "baje",
         "claim": "Que baje el precio del transporte",
-        "majorClaim": "transporte publico.",
+        "majorClaim": "transporte publico",
         "approach": "A1:C+L+P",
         "proposalID": 4671
     }

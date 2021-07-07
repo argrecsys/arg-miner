@@ -76,9 +76,7 @@ public class Argument {
      * @param entities 
      */
     public void setEntityList(Map<String, String> entities) {
-        entities.entrySet().forEach(entry -> {
-            this.entityList.add(entry.getKey() + ":" + entry.getValue());
-        });
+        this.entityList.addAll(entities.keySet());
     }
     
     /**
