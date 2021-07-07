@@ -9,14 +9,12 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
-import es.uam.irg.utils.StringUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 
 /**
  *
@@ -152,37 +150,40 @@ public class ArgumentMiner implements Constants {
         boolean result = false;
         
         if (arguments != null) {
-            JSONArray argList = new JSONArray();
+            JSONObject argList = new JSONObject();
             
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
                 DMProposal prop = proposals.get(entry.getKey());
                 
                 for (Argument arg : entry.getValue()) {
                     
-                    // Create JSON object
+                    // Create JSON linker
+                    JSONObject linker = new JSONObject();
+                    linker.put("linker", arg.linker.linker);
+                    linker.put("category", arg.linker.category);
+                    linker.put("subCategory", arg.linker.subCategory);
+                    
+                    // Create JSON argument
                     JSONObject item = new JSONObject();
                     item.put("proposalID", entry.getKey());
-                    item.put("sentenceID", arg.sentenceID);
                     item.put("majorClaim", prop.getTitle());
                     item.put("sentence", arg.sentenceText);
                     item.put("claim", arg.claim);
                     item.put("premise", arg.premise);
                     item.put("mainVerb", arg.mainVerb);
                     item.put("relationType", arg.linker.relationType);
-                    item.put("linker", arg.linker.linker);
-                    item.put("linkerCategory", arg.linker.category);
-                    item.put("linkerSubCategory", arg.linker.subCategory);
+                    item.put("linker", linker);
                     item.put("entityList", arg.getEntityList().toString());
                     item.put("nounList", arg.getNounList().toString());
                     item.put("approach", arg.approach);
                     
                     // Store JSON object
-                    argList.add(item);
+                    argList.put(arg.sentenceID, item);
                 }
             }
             
             // Save JSON file
-            String jsonString = StringUtils.prettyJSON(argList.toJSONString());
+            String jsonString = argList.toString(4);
             result = IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
         }
         

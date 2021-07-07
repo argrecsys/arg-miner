@@ -126,19 +126,6 @@ public class StringUtils {
     }
     
     /**
-     *
-     * @param json
-     * @return
-     */
-    public static String prettyJSON(String json) {
-        String jsonString = json;
-        jsonString = jsonString.replace("},", "},\n ");
-        jsonString = jsonString.replace("\":", "\": ");
-        jsonString = jsonString.replace("\",\"", "\", \"");
-        return jsonString;
-    }
-    
-    /**
      * Returns padding using the specified delimiter repeated to a given length.
      *
      * @param ch  character to repeat

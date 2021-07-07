@@ -1,7 +1,120 @@
-[{"sentence": "Rellenar los alcorques de los arboles porque el hueco ocupa media acera", "relationType": "support", "linker": "porque", "majorClaim": "alcorques arboles", "approach": "A1:C+L+P", "proposalID": 992,"linkerCategory": "CAUSE", "premise": "porque el hueco ocupa media acera", "entityList": "[]", "nounList": "[alcorques, arboles, hueco, acera]", "mainVerb": "Rellenar", "sentenceID": "992-1", "claim": "Rellenar los alcorques de los arboles", "linkerSubCategory": "REASON"},
- {"sentence": "Se pueden producir accidentes en la calle porque las senales pueden ser confusas", "relationType": "support", "linker": "porque", "majorClaim": "Regulacion del trafico calle Mejia Lequerica", "approach": "A1:C+L+P", "proposalID": 7250,"linkerCategory": "CAUSE", "premise": "porque las senales pueden ser confusas", "entityList": "[Mejia Lequerica:PERSON]", "nounList": "[accidentes, calle, senales]", "mainVerb": "producir", "sentenceID": "7250-1", "claim": "Se pueden producir accidentes en la calle", "linkerSubCategory": "REASON"},
- {"sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,", "relationType": "support", "linker": "pues", "majorClaim": "reunificar propuestas repetidas", "approach": "A1:C+L+P", "proposalID": 24451,"linkerCategory": "CAUSE", "premise": "pues al votarse por separado falsea el resultado al ir separadas", "entityList": "[]", "nounList": "[propuestas, separado, resultado]", "mainVerb": "reunificar", "sentenceID": "24451-1", "claim": "reunificar las propuestas repetidas", "linkerSubCategory": "REASON"},
- {"sentence": "Mas papeleras en el parque porque las que hay son insuficientes.", "relationType": "support", "linker": "porque", "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo", "approach": "A1:C+L+P", "proposalID": 17080,"linkerCategory": "CAUSE", "premise": "porque las que hay son insuficientes", "entityList": "[Parque de la Mar Oceana:LOCATION]", "nounList": "[papeleras, parque]", "mainVerb": null,"sentenceID": "17080-1", "claim": "Mas papeleras en el parque", "linkerSubCategory": "REASON"},
- {"sentence": "No se puede caminar por ciertas aceras porque estan llenas de mesas y sillas.", "relationType": "support", "linker": "porque", "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso.", "approach": "A1:C+L+P", "proposalID": 18302,"linkerCategory": "CAUSE", "premise": "porque estan llenas de mesas y sillas", "entityList": "[]", "nounList": "[aceras, mesas, sillas]", "mainVerb": "caminar", "sentenceID": "18302-1", "claim": "No se puede caminar por ciertas aceras", "linkerSubCategory": "REASON"},
- {"sentence": "Que baje el precio del transporte porque es muy caro.", "relationType": "support", "linker": "porque", "majorClaim": "transporte publico.", "approach": "A1:C+L+P", "proposalID": 4671,"linkerCategory": "CAUSE", "premise": "porque es muy caro", "entityList": "[]", "nounList": "[precio, transporte]", "mainVerb": "baje", "sentenceID": "4671-1", "claim": "Que baje el precio del transporte", "linkerSubCategory": "REASON"},
- {"sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover", "relationType": "support", "linker": "porque", "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)", "approach": "A1:C+L+P", "proposalID": 19615,"linkerCategory": "CAUSE", "premise": "porque siempre va muy lleno y no te puedes ni mover", "entityList": "[Villaverde:PERSON]", "nounList": "[autobuses]", "mainVerb": "pongan", "sentenceID": "19615-1", "claim": "Que pongan mas autobuses del 130", "linkerSubCategory": "REASON"}]
+{
+    "19615-1": {
+        "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque siempre va muy lleno y no te puedes ni mover",
+        "entityList": "[Villaverde:PERSON]",
+        "nounList": "[autobuses]",
+        "mainVerb": "pongan",
+        "claim": "Que pongan mas autobuses del 130",
+        "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
+        "approach": "A1:C+L+P",
+        "proposalID": 19615
+    },
+    "18302-1": {
+        "sentence": "No se puede caminar por ciertas aceras porque estan llenas de mesas y sillas.",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque estan llenas de mesas y sillas",
+        "entityList": "[]",
+        "nounList": "[aceras, mesas, sillas]",
+        "mainVerb": "caminar",
+        "claim": "No se puede caminar por ciertas aceras",
+        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso.",
+        "approach": "A1:C+L+P",
+        "proposalID": 18302
+    },
+    "7250-1": {
+        "sentence": "Se pueden producir accidentes en la calle porque las senales pueden ser confusas",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque las senales pueden ser confusas",
+        "entityList": "[Mejia Lequerica:PERSON]",
+        "nounList": "[accidentes, calle, senales]",
+        "mainVerb": "producir",
+        "claim": "Se pueden producir accidentes en la calle",
+        "majorClaim": "Regulacion del trafico calle Mejia Lequerica",
+        "approach": "A1:C+L+P",
+        "proposalID": 7250
+    },
+    "992-1": {
+        "sentence": "Rellenar los alcorques de los arboles porque el hueco ocupa media acera",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque el hueco ocupa media acera",
+        "entityList": "[]",
+        "nounList": "[alcorques, arboles, hueco, acera]",
+        "mainVerb": "Rellenar",
+        "claim": "Rellenar los alcorques de los arboles",
+        "majorClaim": "alcorques arboles",
+        "approach": "A1:C+L+P",
+        "proposalID": 992
+    },
+    "24451-1": {
+        "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues al votarse por separado falsea el resultado al ir separadas",
+        "entityList": "[]",
+        "nounList": "[propuestas, separado, resultado]",
+        "mainVerb": "reunificar",
+        "claim": "reunificar las propuestas repetidas",
+        "majorClaim": "reunificar propuestas repetidas",
+        "approach": "A1:C+L+P",
+        "proposalID": 24451
+    },
+    "17080-1": {
+        "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque las que hay son insuficientes",
+        "entityList": "[Parque de la Mar Oceana:LOCATION]",
+        "nounList": "[papeleras, parque]",
+        "claim": "Mas papeleras en el parque",
+        "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
+        "approach": "A1:C+L+P",
+        "proposalID": 17080
+    },
+    "4671-1": {
+        "sentence": "Que baje el precio del transporte porque es muy caro.",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque es muy caro",
+        "entityList": "[]",
+        "nounList": "[precio, transporte]",
+        "mainVerb": "baje",
+        "claim": "Que baje el precio del transporte",
+        "majorClaim": "transporte publico.",
+        "approach": "A1:C+L+P",
+        "proposalID": 4671
+    }
+}

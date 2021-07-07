@@ -7,3 +7,4 @@ db_config.yml
 /solutions/ArgumentMiner/nbproject/
 /solutions/ArgumentMiner/build/
 *.jar
+/solutions/ArgumentMiner/dist/
