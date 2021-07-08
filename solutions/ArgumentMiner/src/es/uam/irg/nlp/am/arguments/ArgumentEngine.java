@@ -12,6 +12,7 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.nlp.am.Constants;
+import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.io.*;
 import java.util.*;
@@ -172,7 +173,8 @@ public class ArgumentEngine implements Constants {
         int minDepth = Integer.MAX_VALUE;
         
         for (Syntagma syntagma : syntagmaList) {
-            if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+            String nGram = getNGram(syntagma.text, linker.nTokens);
+            if (linker.isEquals(nGram)) {
                 System.out.format("%s - %s\n", syntagma.getString(), linker.getString());
                 if (syntagma.depth < minDepth) {
                     minDepth = syntagma.depth;
@@ -186,7 +188,8 @@ public class ArgumentEngine implements Constants {
         if (minDepth < Integer.MAX_VALUE) {
             for (Syntagma syntagma : syntagmaList) {
                 if (syntagma.depth == minDepth) {
-                    if (syntagma.text.split(" ")[0].equals(linker.linker)) {
+                    String nGram = getNGram(syntagma.text, linker.nTokens);
+                    if (linker.isEquals(nGram)) {
                         premise = syntagma.text;
                     }
                 }
@@ -212,6 +215,33 @@ public class ArgumentEngine implements Constants {
         }
         
         return arg;
+    }
+
+    /**
+     * 
+     * @param tokens
+     * @param nTokens
+     * @return 
+     */
+    private static String getNGram(String text, int nTokens) {
+        String nGram = "";
+        
+        try {
+            String newText = StringUtils.reverse(StringUtils.cleanTitle(StringUtils.reverse(text)));
+            String[] tokens = newText.split(" ");
+            
+            if (tokens.length > 0) {
+                String[] subList = FunctionUtils.getSubArray(tokens, 0, nTokens);
+                nGram = FunctionUtils.arrayToString(subList, Constants.NGRAMS_DELIMITER);
+            }
+            else {
+                nGram = newText;
+            }
+        }
+        catch (Exception ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return nGram;
     }
     
     /**

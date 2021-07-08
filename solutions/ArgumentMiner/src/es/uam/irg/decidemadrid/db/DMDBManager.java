@@ -63,7 +63,7 @@ public class DMDBManager {
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +
-                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 24451, 11402, 24600, 8296) " +
+                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 24451, 11402, 24600, 8296, 16516, 4696, 19803) " +
                        " LIMIT " + topN + ";";
         ResultSet rs = this.db.executeSelect(query);
         

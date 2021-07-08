@@ -5,6 +5,8 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.nlp.am.Constants;
+
 /**
  *
  * @author ansegura
@@ -14,8 +16,10 @@ public class ArgumentLinker {
     // Class members
     public String category;
     public String linker;
+    public int nTokens;
     public String relationType;
     public String subCategory;
+    private String spLinker;
     
     /**
      * Empty constructor.
@@ -37,6 +41,8 @@ public class ArgumentLinker {
         this.subCategory = subCategory;
         this.relationType = relationType;
         this.linker = linker;
+        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+        this.nTokens = linker.split(" ").length;
     }
     
     /**
@@ -44,7 +50,15 @@ public class ArgumentLinker {
      * @return 
      */
     public String getString() {
-        return String.format("%s > %s > %s (%s)", this.category, this.subCategory, this.linker, this.relationType);
+        return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
     }
     
+    /**
+     * 
+     * @param nGram
+     * @return 
+     */
+    public boolean isEquals(String nGram) {
+        return this.spLinker.equals(nGram);
+    }
 }

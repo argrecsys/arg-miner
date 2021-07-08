@@ -1,54 +1,20 @@
 {
-    "8296-1": {
-        "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
+    "16516-1": {
+        "sentence": "Seria cambiar el actual pavimento de la Calle Goya debido a que ya esta viejo y deteriorado.",
         "relationType": "support",
         "linker": {
-            "linker": "pues",
+            "linker": "debido a",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues la tradicion dice que fue alli donde se encontro",
-        "entityList": "[]",
-        "nounList": "[imagen, torreon, tradicion, alli]",
-        "mainVerb": "Colocar",
-        "claim": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
-        "majorClaim": "Muralla arabe de Madrid",
+        "premise": "debido a que ya esta viejo y deteriorado",
+        "entityList": "[Goya]",
+        "nounList": "[pavimento]",
+        "mainVerb": "cambiar",
+        "claim": "Seria cambiar el actual pavimento de la Calle Goya",
+        "majorClaim": "Cambiar el pavimento de la calle Goya",
         "approach": "A1:C+L+P",
-        "proposalID": 8296
-    },
-    "19615-1": {
-        "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
-        "relationType": "support",
-        "linker": {
-            "linker": "porque",
-            "subCategory": "REASON",
-            "category": "CAUSE"
-        },
-        "premise": "porque siempre va muy lleno y no te puedes ni mover",
-        "entityList": "[Villaverde]",
-        "nounList": "[autobuses]",
-        "mainVerb": "pongan",
-        "claim": "Que pongan mas autobuses del 130",
-        "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
-        "approach": "A1:C+L+P",
-        "proposalID": 19615
-    },
-    "18302-1": {
-        "sentence": "No se puede caminar por ciertas aceras porque estan llenas de mesas y sillas.",
-        "relationType": "support",
-        "linker": {
-            "linker": "porque",
-            "subCategory": "REASON",
-            "category": "CAUSE"
-        },
-        "premise": "porque estan llenas de mesas y sillas",
-        "entityList": "[]",
-        "nounList": "[aceras, mesas, sillas]",
-        "mainVerb": "caminar",
-        "claim": "No se puede caminar por ciertas aceras",
-        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
-        "approach": "A1:C+L+P",
-        "proposalID": 18302
+        "proposalID": 16516
     },
     "7250-1": {
         "sentence": "Se pueden producir accidentes en la calle porque las senales pueden ser confusas",
@@ -84,39 +50,22 @@
         "approach": "A1:C+L+P",
         "proposalID": 992
     },
-    "24451-1": {
-        "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",
+    "4696-1": {
+        "sentence": "Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminacion que tienen.",
         "relationType": "support",
         "linker": {
-            "linker": "pues",
+            "linker": "debido a",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues al votarse por separado falsea el resultado al ir separadas",
+        "premise": ", debido a la baja iluminacion que tienen",
         "entityList": "[]",
-        "nounList": "[propuestas, separado, resultado]",
-        "mainVerb": "reunificar",
-        "claim": "reunificar las propuestas repetidas",
-        "majorClaim": "reunificar propuestas repetidas",
+        "nounList": "[peligro, pasos, cebra, baja]",
+        "mainVerb": "vuelto",
+        "claim": "Se ha vuelto un peligro cruzar en algunos pasos de cebra",
+        "majorClaim": "Iluminacion de pasos de cebra",
         "approach": "A1:C+L+P",
-        "proposalID": 24451
-    },
-    "24600-1": {
-        "sentence": "Revisar los pasos de cebra para que esten al nivel de la calzada pues ahora dificultan el paso a sillas de ruedas.",
-        "relationType": "support",
-        "linker": {
-            "linker": "pues",
-            "subCategory": "REASON",
-            "category": "CAUSE"
-        },
-        "premise": "pues ahora dificultan el paso a sillas de ruedas",
-        "entityList": "[]",
-        "nounList": "[pasos, cebra, nivel, calzada, paso, sillas, ruedas]",
-        "mainVerb": "esten",
-        "claim": "para que esten al nivel de la calzada",
-        "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
-        "approach": "A1:C+L+P",
-        "proposalID": 24600
+        "proposalID": 4696
     },
     "17080-1": {
         "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
@@ -150,5 +99,124 @@
         "majorClaim": "transporte publico",
         "approach": "A1:C+L+P",
         "proposalID": 4671
+    },
+    "8296-1": {
+        "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues la tradicion dice que fue alli donde se encontro",
+        "entityList": "[]",
+        "nounList": "[imagen, torreon, tradicion, alli]",
+        "mainVerb": "Colocar",
+        "claim": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
+        "majorClaim": "Muralla arabe de Madrid",
+        "approach": "A1:C+L+P",
+        "proposalID": 8296
+    },
+    "19615-1": {
+        "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque siempre va muy lleno y no te puedes ni mover",
+        "entityList": "[Villaverde]",
+        "nounList": "[autobuses]",
+        "mainVerb": "pongan",
+        "claim": "Que pongan mas autobuses del 130",
+        "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
+        "approach": "A1:C+L+P",
+        "proposalID": 19615
+    },
+    "19803-1": {
+        "sentence": "Proponemos una reforestacion en la M30 debido a que nos han talado toda la zona (como si estuviesemos para perder flora.)",
+        "relationType": "support",
+        "linker": {
+            "linker": "debido a",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "debido a que nos han talado toda la zona ( como si estuviesemos para perder flora . )",
+        "entityList": "[]",
+        "nounList": "[reforestacion, M30, zona, flora]",
+        "mainVerb": "Proponemos",
+        "claim": "Proponemos una reforestacion en la M30",
+        "majorClaim": "REPLANTACION M30",
+        "approach": "A1:C+L+P",
+        "proposalID": 19803
+    },
+    "18302-1": {
+        "sentence": "No se puede caminar por ciertas aceras porque estan llenas de mesas y sillas.",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "porque estan llenas de mesas y sillas",
+        "entityList": "[]",
+        "nounList": "[aceras, mesas, sillas]",
+        "mainVerb": "caminar",
+        "claim": "No se puede caminar por ciertas aceras",
+        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
+        "approach": "A1:C+L+P",
+        "proposalID": 18302
+    },
+    "11402-1": {
+        "sentence": "Que en los colegios se aprenda la reanimacion basica, pues todos deberiamos saber unas maniobras basicas.",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": ", pues todos deberiamos saber unas maniobras basicas",
+        "entityList": "[]",
+        "nounList": "[colegios, reanimacion, maniobras]",
+        "mainVerb": "aprenda",
+        "claim": "Que en los colegios se aprenda la reanimacion basica",
+        "majorClaim": "El tiempo es vital  R.c.p en las escuelas",
+        "approach": "A1:C+L+P",
+        "proposalID": 11402
+    },
+    "24451-1": {
+        "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues al votarse por separado falsea el resultado al ir separadas",
+        "entityList": "[]",
+        "nounList": "[propuestas, separado, resultado]",
+        "mainVerb": "reunificar",
+        "claim": "reunificar las propuestas repetidas",
+        "majorClaim": "reunificar propuestas repetidas",
+        "approach": "A1:C+L+P",
+        "proposalID": 24451
+    },
+    "24600-1": {
+        "sentence": "Revisar los pasos de cebra para que esten al nivel de la calzada pues ahora dificultan el paso a sillas de ruedas.",
+        "relationType": "support",
+        "linker": {
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "pues ahora dificultan el paso a sillas de ruedas",
+        "entityList": "[]",
+        "nounList": "[pasos, cebra, nivel, calzada, paso, sillas, ruedas]",
+        "mainVerb": "esten",
+        "claim": "para que esten al nivel de la calzada",
+        "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
+        "approach": "A1:C+L+P",
+        "proposalID": 24600
     }
 }

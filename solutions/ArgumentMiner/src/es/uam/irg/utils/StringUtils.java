@@ -156,6 +156,19 @@ public class StringUtils {
     
     /**
      * 
+     * @param str
+     * @return 
+     */
+    public static String reverse(String str)
+    { 
+        StringBuilder sb = new StringBuilder();
+        sb.append(str);
+        sb.reverse();
+        return sb.toString();
+    }
+    
+    /**
+     * 
      * @param s
      * @return 
      */
