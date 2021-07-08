@@ -12,6 +12,7 @@ package es.uam.irg.nlp.am;
 public interface Constants {
     
     // Public system constants
+    public static final String DB_SETUP_FILEPATH = "Resources/config/db_setup.yaml";
     public static final String LANG_EN = "en";
     public static final String LANG_ES = "es";
     public static final String OUTPUT_FILEPATH = "Resources/output/arguments.json";

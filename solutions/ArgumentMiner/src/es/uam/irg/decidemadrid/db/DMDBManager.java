@@ -14,8 +14,8 @@ public class DMDBManager {
     public static final String DB_NAME = "decide.madrid_2019_09";
     public static final String DB_SERVER = "localhost";
     public static final String DB_USERNAME = "root";
-    public static final String DB_USERPASSWORD = "Ovs001993";
-
+    public static final String DB_USERPASSWORD = "";
+    
     private MySQLDBConnector db;
 
     public DMDBManager() throws Exception {

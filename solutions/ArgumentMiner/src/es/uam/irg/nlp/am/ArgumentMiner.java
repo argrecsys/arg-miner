@@ -43,9 +43,12 @@ public class ArgumentMiner implements Constants {
             }
         }
         System.out.format(">> Language selected: %s, max number of proposals to be analyzed: %s\n", language, maxProposal);
-
+        
+        // Get database configuration
+        Map<String, Object> dbSetup = getDatabaseConfiguration();
+        
         // Get the list of proposals
-        Map<Integer, DMProposal> proposals = getArgumentativeProposals(maxProposal);
+        Map<Integer, DMProposal> proposals = getArgumentativeProposals(dbSetup, maxProposal);
         
         // Create linkers manager
         ArgumentLinkerManager lnkManager = createLinkerManager(language, true);
@@ -123,21 +126,44 @@ public class ArgumentMiner implements Constants {
     
     /**
      * Wrapper function for (DMDBManager) selectNProposals method.
-     *
+     * 
+     * @param dbSetup
      * @param topN
-     * @param linkers
      * @return 
      */
-    private static Map<Integer, DMProposal> getArgumentativeProposals(int topN) {
+    private static Map<Integer, DMProposal> getArgumentativeProposals(Map<String, Object> dbSetup, int topN) {
         Map<Integer, DMProposal> proposals = null;
+        
         try {
-            DMDBManager dbManager = new DMDBManager();
+            DMDBManager dbManager = null;
+            if (dbSetup != null && dbSetup.size() == 4) {
+                String dbServer = dbSetup.get("db_server").toString();
+                String dbName = dbSetup.get("db_name").toString();
+                String dbUserName = dbSetup.get("db_user_name").toString();
+                String dbUserPwd = dbSetup.get("db_user_pw").toString();
+                
+                dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
+            }
+            else {
+                dbManager = new DMDBManager();
+            }
+            
             proposals = dbManager.selectCustomProposals(topN);
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         return proposals;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    private static Map<String, Object> getDatabaseConfiguration() {
+        Map<String, Object> dbSetup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
+        return dbSetup;
     }
     
     /**

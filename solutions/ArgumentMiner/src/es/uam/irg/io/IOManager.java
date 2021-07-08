@@ -9,12 +9,16 @@ import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.nlp.am.Constants;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.yaml.snakeyaml.Yaml;
 
 /**
  *
@@ -82,6 +86,31 @@ public class IOManager implements Constants {
         }
         
         return linkers;
+    }
+    
+    /**
+     * 
+     * @param filepath
+     * @return 
+     */
+    public static Map<String, Object> readYamlFile(String filepath) {
+        Map<String, Object> data = null;
+        
+        try {
+            // Get the file
+            File yamlFile = new File(filepath);
+
+            // Check if the specified file exists or not
+            if (yamlFile.exists()) {
+                InputStream inputStream = new FileInputStream(yamlFile);
+                Yaml yaml = new Yaml();
+                data = (Map<String, Object>) yaml.load(inputStream);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return data;
     }
     
     /**

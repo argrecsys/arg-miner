@@ -35,7 +35,7 @@ public class StringUtils {
        String newTitle = title;
        newTitle = newTitle.replaceAll("\\.+$", "");
        newTitle = newTitle.replaceAll("\\,+$", "");
-       return newTitle;
+       return newTitle.trim();
     }
     
     /**
