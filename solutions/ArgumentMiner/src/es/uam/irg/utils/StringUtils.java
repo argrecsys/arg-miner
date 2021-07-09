@@ -28,16 +28,15 @@ public class StringUtils {
     
     /**
      * 
-     * @param title
+     * @param text
      * @return 
      */
-    public static String cleanTitle(String title) {
-       String newTitle = title;
-       newTitle = newTitle.replaceAll("\\.+$", "");
-       newTitle = newTitle.replaceAll("\\,+$", "");
-       return newTitle.trim();
+    public static String cleanText(String text) {
+        String newText = rightCleanText(text);
+        newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
+        return newText.trim();
     }
-    
+        
     /**
      *
      * @param str
@@ -238,6 +237,18 @@ public class StringUtils {
         }
 
         return mi;
+    }
+    
+    /**
+     *
+     * @param text
+     * @return
+     */
+    private static String rightCleanText(String text) {
+        String newText = text;
+        newText = newText.replaceAll("\\.+$", "");
+        newText = newText.replaceAll("\\,+$", "");
+        return newText;
     }
     
 }

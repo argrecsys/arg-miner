@@ -4,6 +4,7 @@ import es.uam.irg.db.MySQLDBConnector;
 import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.decidemadrid.entities.DMComment;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
+import es.uam.irg.utils.FunctionUtils;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,10 +61,11 @@ public class DMDBManager {
     
     public Map<Integer, DMProposal> selectCustomProposals(int topN) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
+        Integer[] proposalList = {17080, 992, 18302, 19615, 7250, 4671, 24451, 11402, 24600, 8296, 16516, 4696, 19803, 867, 23248};
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +
-                       " WHERE id IN (17080, 992, 18302, 19615, 7250, 4671, 24451, 11402, 24600, 8296, 16516, 4696, 19803) " +
+                       " WHERE id IN (" + FunctionUtils.arrayToString(proposalList, ",") + ") " +
                        " LIMIT " + topN + ";";
         ResultSet rs = this.db.executeSelect(query);
         

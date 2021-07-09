@@ -50,11 +50,11 @@ public class Argument {
      * @param approach
      * @param linker 
      */
-    public Argument(String sentenceID, String sentenceText, String premise, String claim, String mainVerb, String approach, ArgumentLinker linker) {
+    public Argument(String sentenceID, String sentenceText, String claim, String premise, String mainVerb, String approach, ArgumentLinker linker) {
         this.sentenceID = sentenceID;
         this.sentenceText = sentenceText;
-        this.premise = premise;
         this.claim = claim;
+        this.premise = premise;
         this.mainVerb = mainVerb;
         this.approach = approach;
         this.linker = linker;

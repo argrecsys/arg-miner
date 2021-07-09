@@ -9,7 +9,6 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.*;
-import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.HashMap;
 import java.util.List;
@@ -17,6 +16,13 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONObject;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.UpdateOptions;
+import org.bson.Document;
+import org.bson.conversions.Bson;
 
 /**
  *
@@ -61,13 +67,14 @@ public class ArgumentMiner implements Constants {
 
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
-            System.out.println(">> Total proposals with arguments: " + arguments.size());
+            System.out.println(">> Total arguments in the proposals: " + arguments.size());
             proposals.keySet().forEach(key -> {
                 System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
             });
-
+            
             // Save arguments
-            boolean result = saveArguments(arguments, proposals);
+            boolean result = storeArguments(arguments, proposals);
+            //result = saveArguments(arguments, proposals);
             if (result) {
                 System.out.println(">> Arguments saved correctly.");
             }
@@ -184,7 +191,7 @@ public class ArgumentMiner implements Constants {
                 DMProposal prop = proposals.get(entry.getKey());
                 
                 for (Argument arg : entry.getValue()) {
-                    String majorClaim = StringUtils.cleanTitle(prop.getTitle());
+                    String majorClaim = StringUtils.cleanText(prop.getTitle());
                     
                     // Create JSON linker
                     JSONObject linker = new JSONObject();
@@ -214,6 +221,60 @@ public class ArgumentMiner implements Constants {
             // Save JSON file
             String jsonString = argList.toString(4);
             result = IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
+        }
+        
+        return result;
+    }
+    
+    /**
+     * 
+     * @param arguments
+     * @param proposals
+     * @return 
+     */
+    private static boolean storeArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
+        boolean result = false;
+        
+        if (arguments != null) {
+            try (MongoClient mongoClient = new MongoClient("localhost" , 27017)) {
+                MongoDatabase db = mongoClient.getDatabase("decide_madrid_2019_09");
+                MongoCollection<Document> collAnnotations = db.getCollection("annotations");
+                
+                for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
+                    DMProposal prop = proposals.get(entry.getKey());
+
+                    for (Argument arg : entry.getValue()) {
+                        String majorClaim = StringUtils.cleanText(prop.getTitle());
+                        
+                        Document linker = new Document();
+                        linker.append("linker", arg.linker.linker)
+                               .append("category", arg.linker.category)
+                               .append("subCategory", arg.linker.subCategory);
+                        
+                        Document doc = new Document();
+                        doc.append("argumentID", arg.sentenceID)
+                            .append("proposalID", entry.getKey())
+                            .append("majorClaim", majorClaim)
+                            .append("sentence", arg.sentenceText)
+                            .append("claim", arg.claim)
+                            .append("premise", arg.premise)
+                            .append("mainVerb", arg.mainVerb)
+                            .append("relationType", arg.linker.relationType)
+                            .append("linker", linker)
+                            .append("entityList", arg.getEntityList().toString())
+                            .append("nounList", arg.getNounList().toString())
+                            .append("approach", arg.approach);
+                        
+                        // Upsert document
+                        Bson filter = Filters.eq("argumentID", arg.sentenceID);
+                        Bson update =  new Document("$set", doc);
+                        UpdateOptions options = new UpdateOptions().upsert(true);
+                        collAnnotations.updateOne(filter, update, options);
+                    }
+                }
+                
+                result = true;
+            }
         }
         
         return result;

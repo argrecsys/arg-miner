@@ -210,7 +210,9 @@ public class ArgumentEngine implements Constants {
                 }
                 
                 // Create argument object
-                arg = new Argument(sentenceID, sentenceText, premise, claim, mainVerb, approach, linker);
+                claim = StringUtils.cleanText(claim);
+                premise = StringUtils.cleanText(premise);
+                arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
             }
         }
         
@@ -227,7 +229,7 @@ public class ArgumentEngine implements Constants {
         String nGram = "";
         
         try {
-            String newText = StringUtils.reverse(StringUtils.cleanTitle(StringUtils.reverse(text)));
+            String newText = StringUtils.reverse(StringUtils.cleanText(StringUtils.reverse(text)));
             String[] tokens = newText.split(" ");
             
             if (tokens.length > 0) {

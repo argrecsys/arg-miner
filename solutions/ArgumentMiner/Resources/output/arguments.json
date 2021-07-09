@@ -58,7 +58,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": ", debido a la baja iluminacion que tienen",
+        "premise": "debido a la baja iluminacion que tienen",
         "entityList": "[]",
         "nounList": "[peligro, pasos, cebra, baja]",
         "mainVerb": "vuelto",
@@ -82,6 +82,23 @@
         "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
         "approach": "A1:C+L+P",
         "proposalID": 17080
+    },
+    "23248-1": {
+        "sentence": "En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.",
+        "relationType": "attack",
+        "linker": {
+            "linker": "sin embargo",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": "sin embargo la dotacion policial para el distrito se ha disminuido",
+        "entityList": "[]",
+        "nounList": "[delitos, robo, personas, viviendas, embargo, dotacion, distrito]",
+        "mainVerb": "aumentado",
+        "claim": "En Carabanchel han aumentado los delitos por robo en personas y viviendas",
+        "majorClaim": "MAS POLICIA MUNICIPAL EN LOS BARRIOS FUERA DE LA M-30",
+        "approach": "A1:C+L+P",
+        "proposalID": 23248
     },
     "4671-1": {
         "sentence": "Que baje el precio del transporte porque es muy caro.",
@@ -116,6 +133,22 @@
         "majorClaim": "Muralla arabe de Madrid",
         "approach": "A1:C+L+P",
         "proposalID": 8296
+    },
+    "867-1": {
+        "sentence": "Son dos edificios cargados de historia y patrimonio, y sin embargo permanecen cerrados.",
+        "relationType": "attack",
+        "linker": {
+            "linker": "sin embargo",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": "sin embargo permanecen cerrados",
+        "entityList": "[Villa]",
+        "nounList": "[edificios, historia, patrimonio, embargo]",
+        "claim": "Son dos edificios cargados de historia y patrimonio , y",
+        "majorClaim": "Visita la casa de la Villa y casa de la Panaderia",
+        "approach": "A1:C+L+P",
+        "proposalID": 867
     },
     "19615-1": {
         "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
@@ -176,7 +209,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": ", pues todos deberiamos saber unas maniobras basicas",
+        "premise": "pues todos deberiamos saber unas maniobras basicas",
         "entityList": "[]",
         "nounList": "[colegios, reanimacion, maniobras]",
         "mainVerb": "aprenda",
