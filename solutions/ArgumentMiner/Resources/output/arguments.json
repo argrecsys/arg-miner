@@ -67,22 +67,6 @@
         "approach": "A1:C+L+P",
         "proposalID": 4696
     },
-    "17080-1": {
-        "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
-        "relationType": "support",
-        "linker": {
-            "linker": "porque",
-            "subCategory": "REASON",
-            "category": "CAUSE"
-        },
-        "premise": "porque las que hay son insuficientes",
-        "entityList": "[Parque de la Mar Oceana]",
-        "nounList": "[papeleras, parque]",
-        "claim": "Mas papeleras en el parque",
-        "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
-        "approach": "A1:C+L+P",
-        "proposalID": 17080
-    },
     "23248-1": {
         "sentence": "En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.",
         "relationType": "attack",
@@ -133,22 +117,6 @@
         "majorClaim": "Muralla arabe de Madrid",
         "approach": "A1:C+L+P",
         "proposalID": 8296
-    },
-    "867-1": {
-        "sentence": "Son dos edificios cargados de historia y patrimonio, y sin embargo permanecen cerrados.",
-        "relationType": "attack",
-        "linker": {
-            "linker": "sin embargo",
-            "subCategory": "DIRECT",
-            "category": "CONTRAST"
-        },
-        "premise": "sin embargo permanecen cerrados",
-        "entityList": "[Villa]",
-        "nounList": "[edificios, historia, patrimonio, embargo]",
-        "claim": "Son dos edificios cargados de historia y patrimonio , y",
-        "majorClaim": "Visita la casa de la Villa y casa de la Panaderia",
-        "approach": "A1:C+L+P",
-        "proposalID": 867
     },
     "19615-1": {
         "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
@@ -217,6 +185,23 @@
         "majorClaim": "El tiempo es vital  R.c.p en las escuelas",
         "approach": "A1:C+L+P",
         "proposalID": 11402
+    },
+    "16479-1": {
+        "sentence": "Somos muchos los que vivimos en Valdebebas, a 15 minutos del centro de Madrid y sin embargo no tenemos manera de volver a casa por la noche como no sea en coche.",
+        "relationType": "attack",
+        "linker": {
+            "linker": "sin embargo",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": "sin embargo no tenemos manera de volver a casa por la noche como no sea en coche",
+        "entityList": "[Buho, Valdebebas]",
+        "nounList": "[minutos, centro, embargo, manera, casa, noche, coche]",
+        "mainVerb": "vivimos",
+        "claim": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid y",
+        "majorClaim": "Buho y marquesinas en Valdebebas",
+        "approach": "A1:C+L+P",
+        "proposalID": 16479
     },
     "24451-1": {
         "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",

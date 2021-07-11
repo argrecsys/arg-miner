@@ -178,6 +178,7 @@ public class ArgumentEngine implements Constants {
                 System.out.format("%s - %s\n", syntagma.getString(), linker.getString());
                 if (syntagma.depth < minDepth) {
                     minDepth = syntagma.depth;
+                    premise = syntagma.text;
                 }
             }
             else {
@@ -185,29 +186,23 @@ public class ArgumentEngine implements Constants {
             }
         }
         
-        if (minDepth < Integer.MAX_VALUE) {
+        if (premise != null) {
             for (Syntagma syntagma : syntagmaList) {
-                if (syntagma.depth == minDepth) {
-                    String nGram = getNGram(syntagma.text, linker.nTokens);
-                    if (linker.isEquals(nGram)) {
-                        premise = syntagma.text;
-                    }
-                }
-                else if (syntagma.depth == minDepth - 1 && premise != null && syntagma.text.contains(premise)) {
+                if (syntagma.depth < minDepth && syntagma.text.contains(premise)) {
                     int endIx = syntagma.text.indexOf(premise);
                     claim = syntagma.text.substring(0, endIx).trim();
+                    mainVerb = identifyMainVerb(claim, verbList);
+                    
+                    if (mainVerb != null) {
+                        break;
+                    }
+                    else {
+                        claim = null;
+                    }
                 }
             }
             
             if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
-                
-                // Identify main verb
-                for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
-                    String verb = verbList.get(i);
-                    if (claim.contains(verb)) {
-                        mainVerb = verb;
-                    }
-                }
                 
                 // Create argument object
                 claim = StringUtils.cleanText(claim);
@@ -218,14 +213,14 @@ public class ArgumentEngine implements Constants {
         
         return arg;
     }
-
+    
     /**
-     * 
+     *
      * @param tokens
      * @param nTokens
-     * @return 
+     * @return
      */
-    private static String getNGram(String text, int nTokens) {
+    private String getNGram(String text, int nTokens) {
         String nGram = "";
         
         try {
@@ -318,6 +313,26 @@ public class ArgumentEngine implements Constants {
         }
         
         return text;
+    }
+
+    /**
+     * Identify main verb.
+     * 
+     * @param claim
+     * @param verbList
+     * @return 
+     */
+    private String identifyMainVerb(String claim, List<String> verbList) {
+        String mainVerb = null;
+        
+        for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
+            String verb = verbList.get(i);
+            if (claim.contains(verb)) {
+                mainVerb = verb;
+            }
+        }
+        
+        return mainVerb;
     }
     
     /**

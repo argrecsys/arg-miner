@@ -74,8 +74,8 @@ public class ArgumentMiner implements Constants {
             
             // Save arguments
             boolean result = storeArguments(arguments, proposals);
-            //result = saveArguments(arguments, proposals);
             if (result) {
+                saveArguments(arguments, proposals);
                 System.out.println(">> Arguments saved correctly.");
             }
             else {
