@@ -191,7 +191,7 @@ public class ArgumentMiner implements Constants {
                 DMProposal prop = proposals.get(entry.getKey());
                 
                 for (Argument arg : entry.getValue()) {
-                    String majorClaim = StringUtils.cleanText(prop.getTitle());
+                    String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
                     
                     // Create JSON linker
                     JSONObject linker = new JSONObject();
@@ -244,7 +244,7 @@ public class ArgumentMiner implements Constants {
                     DMProposal prop = proposals.get(entry.getKey());
 
                     for (Argument arg : entry.getValue()) {
-                        String majorClaim = StringUtils.cleanText(prop.getTitle());
+                        String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
                         
                         Document linker = new Document();
                         linker.append("linker", arg.linker.linker)

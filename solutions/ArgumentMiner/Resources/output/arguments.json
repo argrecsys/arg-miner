@@ -7,7 +7,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "debido a que ya esta viejo y deteriorado",
+        "premise": "que ya esta viejo y deteriorado",
         "entityList": "[Goya]",
         "nounList": "[pavimento]",
         "mainVerb": "cambiar",
@@ -24,7 +24,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "porque las senales pueden ser confusas",
+        "premise": "las senales pueden ser confusas",
         "entityList": "[Mejia Lequerica]",
         "nounList": "[accidentes, calle, senales]",
         "mainVerb": "producir",
@@ -41,7 +41,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "porque el hueco ocupa media acera",
+        "premise": "el hueco ocupa media acera",
         "entityList": "[]",
         "nounList": "[alcorques, arboles, hueco, acera]",
         "mainVerb": "Rellenar",
@@ -58,7 +58,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "debido a la baja iluminacion que tienen",
+        "premise": "la baja iluminacion que tienen",
         "entityList": "[]",
         "nounList": "[peligro, pasos, cebra, baja]",
         "mainVerb": "vuelto",
@@ -75,7 +75,7 @@
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "sin embargo la dotacion policial para el distrito se ha disminuido",
+        "premise": "la dotacion policial para el distrito se ha disminuido",
         "entityList": "[]",
         "nounList": "[delitos, robo, personas, viviendas, embargo, dotacion, distrito]",
         "mainVerb": "aumentado",
@@ -92,7 +92,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "porque es muy caro",
+        "premise": "es muy caro",
         "entityList": "[]",
         "nounList": "[precio, transporte]",
         "mainVerb": "baje",
@@ -109,7 +109,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues la tradicion dice que fue alli donde se encontro",
+        "premise": "la tradicion dice que fue alli donde se encontro",
         "entityList": "[]",
         "nounList": "[imagen, torreon, tradicion, alli]",
         "mainVerb": "Colocar",
@@ -126,7 +126,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "porque siempre va muy lleno y no te puedes ni mover",
+        "premise": "siempre va muy lleno y no te puedes ni mover",
         "entityList": "[Villaverde]",
         "nounList": "[autobuses]",
         "mainVerb": "pongan",
@@ -143,7 +143,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "debido a que nos han talado toda la zona ( como si estuviesemos para perder flora . )",
+        "premise": "que nos han talado toda la zona ( como si estuviesemos para perder flora . )",
         "entityList": "[]",
         "nounList": "[reforestacion, M30, zona, flora]",
         "mainVerb": "Proponemos",
@@ -160,7 +160,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "porque estan llenas de mesas y sillas",
+        "premise": "estan llenas de mesas y sillas",
         "entityList": "[]",
         "nounList": "[aceras, mesas, sillas]",
         "mainVerb": "caminar",
@@ -177,7 +177,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues todos deberiamos saber unas maniobras basicas",
+        "premise": "todos deberiamos saber unas maniobras basicas",
         "entityList": "[]",
         "nounList": "[colegios, reanimacion, maniobras]",
         "mainVerb": "aprenda",
@@ -194,11 +194,11 @@
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "sin embargo no tenemos manera de volver a casa por la noche como no sea en coche",
+        "premise": "no tenemos manera de volver a casa por la noche como no sea en coche",
         "entityList": "[Buho, Valdebebas]",
         "nounList": "[minutos, centro, embargo, manera, casa, noche, coche]",
         "mainVerb": "vivimos",
-        "claim": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid y",
+        "claim": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
         "majorClaim": "Buho y marquesinas en Valdebebas",
         "approach": "A1:C+L+P",
         "proposalID": 16479
@@ -211,7 +211,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues al votarse por separado falsea el resultado al ir separadas",
+        "premise": "al votarse por separado falsea el resultado al ir separadas",
         "entityList": "[]",
         "nounList": "[propuestas, separado, resultado]",
         "mainVerb": "reunificar",
@@ -228,7 +228,7 @@
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "pues ahora dificultan el paso a sillas de ruedas",
+        "premise": "ahora dificultan el paso a sillas de ruedas",
         "entityList": "[]",
         "nounList": "[pasos, cebra, nivel, calzada, paso, sillas, ruedas]",
         "mainVerb": "esten",

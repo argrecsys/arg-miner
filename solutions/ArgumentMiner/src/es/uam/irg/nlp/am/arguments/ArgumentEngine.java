@@ -24,6 +24,10 @@ import java.util.logging.Logger;
  * @author ansegura
  */
 public class ArgumentEngine implements Constants {
+
+    // Class constants
+    private static final String CLAIM = "claim";
+    private static final String PREMISE = "premise";
     
     // Class members
     private String language;
@@ -150,6 +154,31 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
+     * @param premise
+     * @param premise0
+     * @param linker
+     * @return 
+     */
+    private String cleanStatement(String statType, String statement, ArgumentLinker linker) {
+        String newStatement = "";
+        
+        if (statType.equals(CLAIM)) {
+            newStatement = StringUtils.cleanText(statement, "one");
+            if (newStatement.endsWith("y") || newStatement.endsWith("o")) {
+                newStatement = newStatement.substring(0, newStatement.length() - 1);
+                newStatement = StringUtils.cleanText(newStatement, "one");
+            }
+        }
+        else if (statType.equals(PREMISE)) {
+            newStatement = StringUtils.cleanText(statement, "both");
+            newStatement = newStatement.replace(linker.linker, "").trim();
+        }
+        
+        return newStatement;
+    }
+    
+    /**
+     * 
      * @param sentenceID
      * @param sentenceText
      * @param linker
@@ -205,8 +234,8 @@ public class ArgumentEngine implements Constants {
             if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
                 
                 // Create argument object
-                claim = StringUtils.cleanText(claim);
-                premise = StringUtils.cleanText(premise);
+                claim = cleanStatement(CLAIM, claim, null);
+                premise = cleanStatement(PREMISE, premise, linker);
                 arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
             }
         }
@@ -224,7 +253,7 @@ public class ArgumentEngine implements Constants {
         String nGram = "";
         
         try {
-            String newText = StringUtils.reverse(StringUtils.cleanText(StringUtils.reverse(text)));
+            String newText = StringUtils.cleanText(text, "both");
             String[] tokens = newText.split(" ");
             
             if (tokens.length > 0) {

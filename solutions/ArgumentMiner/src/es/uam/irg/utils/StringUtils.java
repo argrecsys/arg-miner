@@ -31,9 +31,11 @@ public class StringUtils {
      * @param text
      * @return 
      */
-    public static String cleanText(String text) {
+    public static String cleanText(String text, String direction) {
         String newText = rightCleanText(text);
-        newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
+        if (direction.equals("both")) {
+            newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
+        }
         return newText.trim();
     }
         
@@ -160,8 +162,7 @@ public class StringUtils {
      */
     public static String reverse(String str)
     { 
-        StringBuilder sb = new StringBuilder();
-        sb.append(str);
+        StringBuilder sb = new StringBuilder(str);
         sb.reverse();
         return sb.toString();
     }
