@@ -5,64 +5,62 @@
  */
 package es.uam.irg.nlp.am;
 
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.UpdateOptions;
 import es.uam.irg.decidemadrid.db.DMDBManager;
-import es.uam.irg.decidemadrid.entities.*;
+import es.uam.irg.decidemadrid.db.MongoDbManager;
+import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.io.IOManager;
-import es.uam.irg.nlp.am.arguments.*;
+import es.uam.irg.nlp.am.arguments.Argument;
+import es.uam.irg.nlp.am.arguments.ArgumentEngine;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.utils.StringUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.json.JSONObject;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.UpdateOptions;
-import es.uam.irg.decidemadrid.db.MongoDbManager;
 import org.bson.Document;
 import org.bson.conversions.Bson;
+import org.json.JSONObject;
 
 /**
  *
  * @author ansegura
  */
-public class ArgumentMiner implements Constants {
+public class ArgumentMiner {
+    
+    // Class members
+    private Map<String, Object> dbSetup = getDatabaseConfiguration();
+    private String language;
+    private ArgumentLinkerManager lnkManager;
+    private Map<Integer, DMProposal> proposals;
     
     /**
-     * @param args the command line arguments
-     * @throws java.lang.Exception
+     * Class constructor.
+     * 
+     * @param language
+     * @param maxProposals 
      */
-    public static void main(String[] args) throws Exception {
-        // TODO code application logic here
-        System.out.println(">> PROGRAM BEGINS");
-        
-        // Read input parameters
-        String language = LANG_ES;
-        int maxProposal = 100;
-        
-        if (args.length > 0) {
-            language = args[0];
-            
-            if (args.length > 1) {
-                maxProposal = Integer.parseInt(args[1]);
-            }
-        }
-        System.out.format(">> Language selected: %s, max number of proposals to be analyzed: %s\n", language, maxProposal);
-        
-        // Get database configuration
-        Map<String, Object> dbSetup = getDatabaseConfiguration();
-        
-        // Get the list of proposals
-        Map<Integer, DMProposal> proposals = getArgumentativeProposals(dbSetup, maxProposal);
-        
-        // Create linkers manager
-        ArgumentLinkerManager lnkManager = createLinkerManager(language, true);
+    public ArgumentMiner(String language, int maxProposals) {
+        this.language = language;
+        this.dbSetup = getDatabaseConfiguration();
+        this.proposals = getArgumentativeProposals(dbSetup, maxProposals);
+        this.lnkManager = createLinkerManager(language, true);
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public boolean runProgram() {
+        boolean result = false;
         
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
             
             // Bulk annotation of proposals
             Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager);
-
+            
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
             System.out.println(">> Total arguments in the proposals: " + arguments.size());
@@ -71,7 +69,7 @@ public class ArgumentMiner implements Constants {
             });
             
             // Save arguments
-            boolean result = storeArguments(arguments, proposals);
+            result = storeArguments(arguments, proposals);
             if (result) {
                 saveArguments(arguments, proposals);
                 System.out.println(">> Arguments saved correctly.");
@@ -89,7 +87,7 @@ public class ArgumentMiner implements Constants {
             }
         }
         
-        System.out.println(">> PROGRAM ENDS");
+        return result;
     }
     
     /**
@@ -99,7 +97,7 @@ public class ArgumentMiner implements Constants {
      * @param lnkManager
      * @return 
      */
-    private static Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager) {
+    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
         
         // Temporary vars
@@ -126,7 +124,7 @@ public class ArgumentMiner implements Constants {
      * @param verbose
      * @return
      */
-    private static ArgumentLinkerManager createLinkerManager(String lang, boolean verbose) {
+    private ArgumentLinkerManager createLinkerManager(String lang, boolean verbose) {
         return IOManager.readLinkerTaxonomy(lang, verbose);
     }
     
@@ -137,7 +135,7 @@ public class ArgumentMiner implements Constants {
      * @param topN
      * @return 
      */
-    private static Map<Integer, DMProposal> getArgumentativeProposals(Map<String, Object> dbSetup, int topN) {
+    private Map<Integer, DMProposal> getArgumentativeProposals(Map<String, Object> dbSetup, int topN) {
         Map<Integer, DMProposal> proposals = null;
         
         try {
@@ -167,11 +165,11 @@ public class ArgumentMiner implements Constants {
      * 
      * @return 
      */
-    private static Map<String, Object> getDatabaseConfiguration() {
+    private Map<String, Object> getDatabaseConfiguration() {
         Map<String, Object> dbSetup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
         return dbSetup;
     }
-    
+        
     /**
      * Saves the arguments in a plain text file.
      * 
@@ -179,7 +177,7 @@ public class ArgumentMiner implements Constants {
      * @param proposals
      * @return 
      */
-    private static boolean saveArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
+    private boolean saveArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
         boolean result = false;
         
         if (arguments != null) {
@@ -230,7 +228,7 @@ public class ArgumentMiner implements Constants {
      * @param proposals
      * @return 
      */
-    private static boolean storeArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
+    private boolean storeArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
         boolean result = true;
         
         if (arguments != null) {
