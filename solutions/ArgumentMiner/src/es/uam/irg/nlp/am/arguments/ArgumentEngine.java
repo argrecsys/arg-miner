@@ -200,9 +200,6 @@ public class ArgumentEngine implements Constants {
                 String[] subList = FunctionUtils.getSubArray(tokens, 0, nTokens);
                 nGram = FunctionUtils.arrayToString(subList, Constants.NGRAMS_DELIMITER);
             }
-            else {
-                nGram = newText;
-            }
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
@@ -318,91 +315,109 @@ public class ArgumentEngine implements Constants {
         
         // Temporary variables
         String approach;
-        String sentence = null;
-        String premise = null;
-        String claim = null;
+        String sentence;
+        String premise;
+        String claim;
         String mainVerb = null;
         int minDepth;
         
         /*
-        Approach 1: claim + (linker + premise)
+            Approach 1: claim + linker + premise
         */
-        approach = "A1 -> C+(L+P)";
-        minDepth = Integer.MAX_VALUE;
-        
+        approach = "A1 -> C+L+P";
+        sentence = null;
+        premise = null;
+        claim = null;
+
         for (Syntagma syntagma : syntagmaList) {
-            String nGram = getNGram(syntagma.text, linker.nTokens);
+            System.out.println(syntagma.getString());
             
-            if (!StringUtils.isEmpty(nGram) && linker.isEquals(nGram)) {
-                System.out.format("%s - %s\n", syntagma.getString(), linker.getString());
-                if (syntagma.depth < minDepth) {
-                    minDepth = syntagma.depth;
-                    premise = syntagma.text;
+            if (syntagma.depth == 2) {
+
+                if (claim == null) {
+                    claim = cleanStatement(CLAIM, syntagma.text, null);
+                    mainVerb = identifyMainVerb(claim, verbList);
+                }
+                else if (premise == null) {
+                    premise = cleanStatement(PREMISE, syntagma.text, null);
+                    if (mainVerb == null) {
+                        mainVerb = identifyMainVerb(premise, verbList);
+                    }
                 }
             }
-            else {
-                System.out.format("%s\n", syntagma.getString());
+            else if (syntagma.depth == 1 && premise != null) {
+                sentence = syntagma.text;
+                
+                String tempLinker = sentence.replace(claim, "").replace(premise, "");
+                tempLinker = StringUtils.cleanText(tempLinker, "both");
+                if (tempLinker.equals(linker.linker)) {
+                    arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
+                    break;
+                }
             }
         }
         
-        if (premise != null) {
-            for (Syntagma syntagma : syntagmaList) {
-                if (syntagma.depth < minDepth && syntagma.text.contains(premise)) {
-                    int endIx = syntagma.text.indexOf(premise);
-                    claim = syntagma.text.substring(0, endIx).trim();
-                    mainVerb = identifyMainVerb(claim, verbList);
-                    
-                    if (mainVerb != null) {
-                        break;
-                    }
-                    else {
-                        claim = null;
-                    }
-                }
-            }
-            
-            if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
-                
-                // Create argument object
-                claim = cleanStatement(CLAIM, claim, null);
-                premise = cleanStatement(PREMISE, premise, linker);
-                arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
-            }
-        }
-        else {
+        if (!arg.isValid()) {
             /*
-            Approach 2: claim + linker + premise
+                Approach 2: claim + (linker + premise)
             */
-            approach = "A2 -> C+L+P";
+            approach = "A2 -> C+(L+P)";
             sentence = null;
             premise = null;
             claim = null;
+            minDepth = Integer.MAX_VALUE;
             
             for (Syntagma syntagma : syntagmaList) {
-                
-                if (syntagma.depth == 2) {
-                    
-                    if (claim == null) {
-                        mainVerb = identifyMainVerb(syntagma.text, verbList);
-                        
-                        if (mainVerb != null) {
-                            claim = cleanStatement(CLAIM, syntagma.text, null);
-                        }
+                String nGram = getNGram(syntagma.text, linker.nTokens);
+
+                if (!StringUtils.isEmpty(nGram) && linker.isEquals(nGram)) {
+                    if (syntagma.depth < minDepth) {
+                        minDepth = syntagma.depth;
+                        premise = syntagma.text;
                     }
-                    else if (premise == null) {
-                        premise = cleanStatement(PREMISE, syntagma.text, null);
-                    }
-                }
-                else if (syntagma.depth == 1 && premise != null) {
-                    sentence = syntagma.text;
                 }
             }
             
-            if (sentence != null) {
-                String tempLinker = sentence.replace(claim, "").replace(premise, "");
-                tempLinker = StringUtils.cleanText(tempLinker, "both");
+            if (premise != null) {
                 
-                if (tempLinker.equals(linker.linker)) {
+                if (!verbList.isEmpty()) {
+                    for (Syntagma syntagma : syntagmaList) {
+                        if (syntagma.depth < minDepth && syntagma.text.contains(premise)) {
+                            int endIx = syntagma.text.indexOf(premise);
+                            claim = syntagma.text.substring(0, endIx).trim();
+                            mainVerb = identifyMainVerb(claim, verbList);
+
+                            if (mainVerb != null) {
+                                break;
+                            }
+                            else {
+                                claim = null;
+                            }
+                        }
+                    }
+                }
+                
+                if (claim == null) {
+                    
+                    if (!verbList.isEmpty()) {
+                        mainVerb = identifyMainVerb(premise, verbList);
+                    }
+                    
+                    if (verbList.isEmpty() || mainVerb != null) {
+                        for (Syntagma syntagma : syntagmaList) {
+                            if (syntagma.depth == minDepth && !syntagma.text.equals(premise)) {
+                                claim = syntagma.text;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
+
+                    // Create argument object
+                    claim = cleanStatement(CLAIM, claim, null);
+                    premise = cleanStatement(PREMISE, premise, linker);
                     arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
                 }
             }

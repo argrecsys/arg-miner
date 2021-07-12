@@ -13,7 +13,7 @@
         "mainVerb": "cambiar",
         "claim": "Seria cambiar el actual pavimento de la Calle Goya",
         "majorClaim": "Cambiar el pavimento de la calle Goya",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 16516
     },
     "15707-1": {
@@ -30,7 +30,7 @@
         "mainVerb": "pasa",
         "claim": "El bus 5 pasa por general martinez campos",
         "majorClaim": "Que el bus 5de la EMT que  pare en general Martinez campos",
-        "approach": "A2 -> C+L+P",
+        "approach": "A1 -> C+L+P",
         "proposalID": 15707
     },
     "7250-1": {
@@ -47,7 +47,7 @@
         "mainVerb": "producir",
         "claim": "Se pueden producir accidentes en la calle",
         "majorClaim": "Regulacion del trafico calle Mejia Lequerica",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 7250
     },
     "992-1": {
@@ -64,7 +64,7 @@
         "mainVerb": "Rellenar",
         "claim": "Rellenar los alcorques de los arboles",
         "majorClaim": "alcorques arboles",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 992
     },
     "4696-1": {
@@ -81,8 +81,41 @@
         "mainVerb": "vuelto",
         "claim": "Se ha vuelto un peligro cruzar en algunos pasos de cebra",
         "majorClaim": "Iluminacion de pasos de cebra",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 4696
+    },
+    "17080-1": {
+        "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
+        "relationType": "support",
+        "linker": {
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": "las que hay son insuficientes",
+        "entityList": "[Parque de la Mar Oceana]",
+        "nounList": "[papeleras, parque]",
+        "claim": "Mas papeleras en el parque",
+        "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 17080
+    },
+    "11890-1": {
+        "sentence": "Ya es una ciudad sin justicia pero que no se convierta en una ciudad sin ley!!",
+        "relationType": "attack",
+        "linker": {
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": "que no se convierta en una ciudad sin ley !!",
+        "entityList": "[]",
+        "nounList": "[ciudad, justicia, ciudad, ley, !!]",
+        "mainVerb": "convierta",
+        "claim": "Ya es una ciudad sin justicia",
+        "majorClaim": "Que cuando llamas a la policia que acuda",
+        "approach": "A1 -> C+L+P",
+        "proposalID": 11890
     },
     "23248-1": {
         "sentence": "En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.",
@@ -98,7 +131,7 @@
         "mainVerb": "aumentado",
         "claim": "En Carabanchel han aumentado los delitos por robo en personas y viviendas",
         "majorClaim": "MAS POLICIA MUNICIPAL EN LOS BARRIOS FUERA DE LA M-30",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 23248
     },
     "4671-1": {
@@ -115,7 +148,7 @@
         "mainVerb": "baje",
         "claim": "Que baje el precio del transporte",
         "majorClaim": "transporte publico",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 4671
     },
     "1267-2": {
@@ -132,7 +165,7 @@
         "mainVerb": "van",
         "claim": "Las pymes sostenibles y cooperativas van en ese camino",
         "majorClaim": "Valorar en contratos a Pymes sostenibles y cooperativas",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 1267
     },
     "8296-1": {
@@ -149,8 +182,25 @@
         "mainVerb": "Colocar",
         "claim": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
         "majorClaim": "Muralla arabe de Madrid",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 8296
+    },
+    "867-1": {
+        "sentence": "Son dos edificios cargados de historia y patrimonio, y sin embargo permanecen cerrados.",
+        "relationType": "attack",
+        "linker": {
+            "linker": "sin embargo",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": "permanecen cerrados",
+        "entityList": "[Villa]",
+        "nounList": "[edificios, historia, patrimonio, embargo]",
+        "mainVerb": "permanecen",
+        "claim": "Son dos edificios cargados de historia y patrimonio",
+        "majorClaim": "Visita la casa de la Villa y casa de la Panaderia",
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 867
     },
     "19615-1": {
         "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
@@ -166,7 +216,7 @@
         "mainVerb": "pongan",
         "claim": "Que pongan mas autobuses del 130",
         "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 19615
     },
     "19803-1": {
@@ -183,7 +233,7 @@
         "mainVerb": "Proponemos",
         "claim": "Proponemos una reforestacion en la M30",
         "majorClaim": "REPLANTACION M30",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 19803
     },
     "18302-1": {
@@ -200,7 +250,7 @@
         "mainVerb": "caminar",
         "claim": "No se puede caminar por ciertas aceras",
         "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 18302
     },
     "11402-1": {
@@ -217,7 +267,7 @@
         "mainVerb": "aprenda",
         "claim": "Que en los colegios se aprenda la reanimacion basica",
         "majorClaim": "El tiempo es vital  R.c.p en las escuelas",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 11402
     },
     "18138-1": {
@@ -234,7 +284,7 @@
         "mainVerb": "Llevan",
         "claim": "Llevan ahi anos y no nos damos cuenta",
         "majorClaim": "Eliminar mobiliario tipico de autopistas y otros horrores",
-        "approach": "A2 -> C+L+P",
+        "approach": "A1 -> C+L+P",
         "proposalID": 18138
     },
     "16479-1": {
@@ -251,7 +301,7 @@
         "mainVerb": "vivimos",
         "claim": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
         "majorClaim": "Buho y marquesinas en Valdebebas",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 16479
     },
     "24451-1": {
@@ -268,7 +318,7 @@
         "mainVerb": "reunificar",
         "claim": "reunificar las propuestas repetidas",
         "majorClaim": "reunificar propuestas repetidas",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 24451
     },
     "17524-1": {
@@ -285,7 +335,7 @@
         "mainVerb": "pintan",
         "claim": "En esta calle se pintan las lineas",
         "majorClaim": "Asfaltar la calle Jacinto Verdaguer",
-        "approach": "A2 -> C+L+P",
+        "approach": "A1 -> C+L+P",
         "proposalID": 17524
     },
     "24600-1": {
@@ -302,7 +352,7 @@
         "mainVerb": "esten",
         "claim": "para que esten al nivel de la calzada",
         "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 24600
     },
     "7341-1": {
@@ -319,7 +369,7 @@
         "mainVerb": "Veo",
         "claim": "Veo talar arboles y arbustos",
         "majorClaim": "Que los de parques y jardines repongan lo que cortan",
-        "approach": "A2 -> C+L+P",
+        "approach": "A1 -> C+L+P",
         "proposalID": 7341
     },
     "15538-1": {
@@ -336,7 +386,7 @@
         "mainVerb": "concreta",
         "claim": "El Ayuntamiento no concreta si sera bajada de precios para todos",
         "majorClaim": "Que significa billete  unico para el transporte de Madrid",
-        "approach": "A1 -> C+(L+P)",
+        "approach": "A2 -> C+(L+P)",
         "proposalID": 15538
     }
 }
