@@ -16,11 +16,9 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.JSONObject;
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.UpdateOptions;
+import es.uam.irg.decidemadrid.db.MongoDbManager;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
@@ -233,48 +231,45 @@ public class ArgumentMiner implements Constants {
      * @return 
      */
     private static boolean storeArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
-        boolean result = false;
+        boolean result = true;
         
         if (arguments != null) {
-            try (MongoClient mongoClient = new MongoClient("localhost" , 27017)) {
-                MongoDatabase db = mongoClient.getDatabase("decide_madrid_2019_09");
-                MongoCollection<Document> collAnnotations = db.getCollection("annotations");
-                
-                for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
-                    DMProposal prop = proposals.get(entry.getKey());
+            MongoDbManager manager = new MongoDbManager();
+            String collName = "annotations";
 
-                    for (Argument arg : entry.getValue()) {
-                        String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
-                        
-                        Document linker = new Document();
-                        linker.append("linker", arg.linker.linker)
-                               .append("category", arg.linker.category)
-                               .append("subCategory", arg.linker.subCategory);
-                        
-                        Document doc = new Document();
-                        doc.append("argumentID", arg.sentenceID)
-                            .append("proposalID", entry.getKey())
-                            .append("majorClaim", majorClaim)
-                            .append("sentence", arg.sentenceText)
-                            .append("claim", arg.claim)
-                            .append("premise", arg.premise)
-                            .append("mainVerb", arg.mainVerb)
-                            .append("relationType", arg.linker.relationType)
-                            .append("linker", linker)
-                            .append("entityList", arg.getEntityList().toString())
-                            .append("nounList", arg.getNounList().toString())
-                            .append("approach", arg.approach);
-                        
-                        // Upsert document
-                        Bson filter = Filters.eq("argumentID", arg.sentenceID);
-                        Bson update =  new Document("$set", doc);
-                        UpdateOptions options = new UpdateOptions().upsert(true);
-                        collAnnotations.updateOne(filter, update, options);
-                    }
+            for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
+                DMProposal prop = proposals.get(entry.getKey());
+
+                for (Argument arg : entry.getValue()) {
+                    String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
+
+                    Document linker = new Document();
+                    linker.append("linker", arg.linker.linker)
+                           .append("category", arg.linker.category)
+                           .append("subCategory", arg.linker.subCategory);
+
+                    Document doc = new Document();
+                    doc.append("argumentID", arg.sentenceID)
+                        .append("proposalID", entry.getKey())
+                        .append("majorClaim", majorClaim)
+                        .append("sentence", arg.sentenceText)
+                        .append("claim", arg.claim)
+                        .append("premise", arg.premise)
+                        .append("mainVerb", arg.mainVerb)
+                        .append("relationType", arg.linker.relationType)
+                        .append("linker", linker)
+                        .append("entityList", arg.getEntityList().toString())
+                        .append("nounList", arg.getNounList().toString())
+                        .append("approach", arg.approach);
+
+                    // Upsert document
+                    Bson filter = Filters.eq("argumentID", arg.sentenceID);
+                    result &= manager.upsertDocument(collName, filter, doc, new UpdateOptions().upsert(true));
                 }
-                
-                result = true;
             }
+        }
+        else {
+            result = false;
         }
         
         return result;
