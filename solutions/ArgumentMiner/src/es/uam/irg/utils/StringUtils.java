@@ -261,7 +261,7 @@ public class StringUtils {
      * @return
      */
     private static String rightCleanText(String text) {
-        String newText = text;
+        String newText = text.trim();
         newText = newText.replaceAll("\\.+$", "");
         newText = newText.replaceAll("\\,+$", "");
         return newText;

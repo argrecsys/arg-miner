@@ -2,6 +2,7 @@
 CAUSE,REASON,support,due to,debido a
 CAUSE,REASON,support,because,porque
 CAUSE,REASON,support,since,pues
+CONTRAST,DIRECT,attack,but,pero
 CONTRAST,DIRECT,attack,however,sin embargo
 CONTRAST,OPPOSITION,attack,in contrast,a diferencia de
 CONTRAST,OPPOSITION,attack,by contrast,por el contrario
