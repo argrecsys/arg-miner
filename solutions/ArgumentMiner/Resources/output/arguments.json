@@ -101,6 +101,23 @@
         "approach": "A1:C+L+P",
         "proposalID": 4671
     },
+    "1267-2": {
+        "sentence": "Las pymes sostenibles y cooperativas van en ese camino a diferencia de las grandes empresas.",
+        "relationType": "attack",
+        "linker": {
+            "linker": "a diferencia de",
+            "subCategory": "OPPOSITION",
+            "category": "CONTRAST"
+        },
+        "premise": "las grandes empresas",
+        "entityList": "[Pymes]",
+        "nounList": "[pymes, cooperativas, camino, diferencia, empresas]",
+        "mainVerb": "van",
+        "claim": "Las pymes sostenibles y cooperativas van en ese camino",
+        "majorClaim": "Valorar en contratos a Pymes sostenibles y cooperativas",
+        "approach": "A1:C+L+P",
+        "proposalID": 1267
+    },
     "8296-1": {
         "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
         "relationType": "support",
@@ -236,5 +253,22 @@
         "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
         "approach": "A1:C+L+P",
         "proposalID": 24600
+    },
+    "15538-1": {
+        "sentence": "El Ayuntamiento no concreta si sera bajada de precios para todos o por el contrario subida para las clases mas desprotegidas como pensionistas, estudiantes etc....",
+        "relationType": "attack",
+        "linker": {
+            "linker": "por el contrario",
+            "subCategory": "OPPOSITION",
+            "category": "CONTRAST"
+        },
+        "premise": "subida para las clases mas desprotegidas como pensionistas , estudiantes etc",
+        "entityList": "[]",
+        "nounList": "[bajada, precios, subida, clases, pensionistas, estudiantes]",
+        "mainVerb": "concreta",
+        "claim": "El Ayuntamiento no concreta si sera bajada de precios para todos",
+        "majorClaim": "Que significa billete  unico para el transporte de Madrid",
+        "approach": "A1:C+L+P",
+        "proposalID": 15538
     }
 }

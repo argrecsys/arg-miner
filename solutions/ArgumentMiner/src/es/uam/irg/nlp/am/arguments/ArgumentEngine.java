@@ -161,10 +161,13 @@ public class ArgumentEngine implements Constants {
      */
     private String cleanStatement(String statType, String statement, ArgumentLinker linker) {
         String newStatement = "";
+        String latestToken;
         
         if (statType.equals(CLAIM)) {
             newStatement = StringUtils.cleanText(statement, "one");
-            if (newStatement.endsWith("y") || newStatement.endsWith("o")) {
+            latestToken = StringUtils.getLatestToken(newStatement, " ");
+            
+            if (latestToken.equals("y") || latestToken.equals("o")) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
                 newStatement = StringUtils.cleanText(newStatement, "one");
             }
@@ -203,7 +206,8 @@ public class ArgumentEngine implements Constants {
         
         for (Syntagma syntagma : syntagmaList) {
             String nGram = getNGram(syntagma.text, linker.nTokens);
-            if (linker.isEquals(nGram)) {
+            
+            if (!StringUtils.isEmpty(nGram) && linker.isEquals(nGram)) {
                 System.out.format("%s - %s\n", syntagma.getString(), linker.getString());
                 if (syntagma.depth < minDepth) {
                     minDepth = syntagma.depth;

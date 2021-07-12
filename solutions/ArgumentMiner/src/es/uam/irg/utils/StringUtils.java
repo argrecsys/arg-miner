@@ -38,7 +38,22 @@ public class StringUtils {
         }
         return newText.trim();
     }
-        
+    
+    /**
+     * 
+     * @param str
+     * @param delimiter
+     * @return 
+     */
+    public static String getLatestToken(String str, String delimiter) {
+        String latestToken = "";
+        String[] tokens = str.split(delimiter);
+        if (tokens.length > 0) {
+            latestToken = tokens[tokens.length - 1];
+        }
+        return latestToken;
+    }
+    
     /**
      *
      * @param str

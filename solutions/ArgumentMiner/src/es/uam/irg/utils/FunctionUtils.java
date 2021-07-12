@@ -23,7 +23,7 @@ public class FunctionUtils {
     public static <T> String arrayToString(T[] array, String delimiter) {
         String result = "";
         
-        if (array.length > 0 ) {
+        if (array != null && array.length > 0) {
             StringBuilder sb = new StringBuilder();
             
             for (T item : array) {
@@ -46,13 +46,13 @@ public class FunctionUtils {
      * @throws java.lang.Exception
      */
     public static <T> T[] getSubArray(T[] array, int startIx, int endIndex) throws Exception {
+        T[] newArray = null;
+        
         if (startIx >= 0 && endIndex <= array.length) {
-            T[] newArray = Arrays.copyOfRange(array, startIx, endIndex);
-            return newArray;
+            newArray = Arrays.copyOfRange(array, startIx, endIndex);
         }
-        else {
-            throw new Exception("The array limits are incorrect.");
-        }
+        
+        return newArray;
     }
     
 }
