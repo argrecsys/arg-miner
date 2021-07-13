@@ -27,6 +27,7 @@ public class ArgumentEngine implements Constants {
 
     // Class constants
     private static final String CLAIM = "claim";
+    private static final List<String> ENTITY_TYPE = Arrays.asList("PERSON", "ORGANIZATION", "LOCATION");
     private static final String PREMISE = "premise";
     
     // Class members
@@ -50,14 +51,15 @@ public class ArgumentEngine implements Constants {
     
     /**
      * 
-     * @param key
-     * @param text 
+     * @param docKey
+     * @param docText 
      */
-    public void analyze(int key, String text) {
-        System.out.format("Task Analyze - Id: %s, Proposal: %s\n", key, text);
+    public void analyze(int docKey, String docText) {
+        System.out.format("Task Analyze - Id: %s, Proposal: %s\n", docKey, docText);
         
+        // Annotate entire document with Stanford CoreNLP
         StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
-        Annotation annotation = new Annotation(text);
+        Annotation annotation = new Annotation(docText);
         pipeline.annotate(annotation);
 
         // This prints out the results of sentence analysis to file(s) in good formats
@@ -137,8 +139,8 @@ public class ArgumentEngine implements Constants {
                 if (arg.isValid()) {
                     arg.setEntityList(entities);
                     arg.setNounList(nounList);
-                    System.out.println(arg.getString());
                     result.add(arg);
+                    System.out.println(arg.getString());
                 }
                 else {
                     System.err.format("Sentence %s of phrase %s has no argument\n", (i + 1), docKey);
@@ -216,11 +218,10 @@ public class ArgumentEngine implements Constants {
      */
     private Map<String, String> getNamedEntities(StanfordCoreNLP pipeline, String text) {
         Map<String, String> entities = new HashMap<>();
-        List<String>  entityType = Arrays.asList("PERSON", "ORGANIZATION", "LOCATION");
         CoreDocument document = pipeline.processToCoreDocument(text);
         
         for (CoreEntityMention em : document.entityMentions()) {
-            if (entityType.contains(em.entityType())) {
+            if (ENTITY_TYPE.contains(em.entityType())) {
                 entities.put(em.text(), em.entityType());
             }
         }

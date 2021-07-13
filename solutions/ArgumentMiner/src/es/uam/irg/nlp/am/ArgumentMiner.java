@@ -63,7 +63,7 @@ public class ArgumentMiner {
             
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
-            System.out.println(">> Total arguments in the proposals: " + arguments.size());
+            System.out.println(">> Total arguments in the proposals:");
             proposals.keySet().forEach(key -> {
                 System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
             });
