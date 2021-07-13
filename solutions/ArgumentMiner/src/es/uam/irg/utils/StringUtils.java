@@ -5,7 +5,10 @@ import java.util.LinkedList;
 
 public class StringUtils {
     
-    // Private contants
+    // Class contants
+    public static final String CLEAN_BOTH = "both";
+    public static final String CLEAN_LEFT = "left";
+    public static final String CLEAN_RIGHT = "right";
     private static final String EMPTY = "";
     private static final String PLAIN_ASCII
             = "AaEeIiOoUu" // grave
@@ -29,11 +32,12 @@ public class StringUtils {
     /**
      * 
      * @param text
+     * @param direction
      * @return 
      */
     public static String cleanText(String text, String direction) {
         String newText = rightCleanText(text);
-        if (direction.equals("both")) {
+        if (direction.equals(CLEAN_BOTH)) {
             newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
         }
         return newText.trim();

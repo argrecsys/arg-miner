@@ -41,8 +41,8 @@ public class ArgumentLinker {
         this.subCategory = subCategory;
         this.relationType = relationType;
         this.linker = linker;
-        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
         this.nTokens = linker.split(" ").length;
+        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
     }
     
     /**

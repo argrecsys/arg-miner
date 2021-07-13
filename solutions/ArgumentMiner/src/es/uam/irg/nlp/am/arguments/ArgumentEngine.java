@@ -284,16 +284,16 @@ public class ArgumentEngine implements Constants {
     /**
      * Identify main verb.
      * 
-     * @param claim
+     * @param sentence
      * @param verbList
      * @return 
      */
-    private String identifyMainVerb(String claim, List<String> verbList) {
+    private String identifyMainVerb(String sentence, List<String> verbList) {
         String mainVerb = null;
         
         for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
             String verb = verbList.get(i);
-            if (claim.contains(verb)) {
+            if (sentence.contains(verb)) {
                 mainVerb = verb;
             }
         }
@@ -315,7 +315,6 @@ public class ArgumentEngine implements Constants {
         
         // Temporary variables
         String approach;
-        String sentence;
         String premise;
         String claim;
         String mainVerb = null;
@@ -325,7 +324,6 @@ public class ArgumentEngine implements Constants {
             Approach 1: claim + linker + premise
         */
         approach = "A1 -> C+L+P";
-        sentence = null;
         premise = null;
         claim = null;
 
@@ -346,11 +344,10 @@ public class ArgumentEngine implements Constants {
                 }
             }
             else if (syntagma.depth == 1 && premise != null) {
-                sentence = syntagma.text;
+                String nGram = syntagma.text.replace(claim, "").replace(premise, "");
+                nGram = StringUtils.cleanText(nGram, "both").replace(" ", Constants.NGRAMS_DELIMITER);
                 
-                String tempLinker = sentence.replace(claim, "").replace(premise, "");
-                tempLinker = StringUtils.cleanText(tempLinker, "both");
-                if (tempLinker.equals(linker.linker)) {
+                if (linker.isEquals(nGram)) {
                     arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
                     break;
                 }
@@ -362,7 +359,6 @@ public class ArgumentEngine implements Constants {
                 Approach 2: claim + (linker + premise)
             */
             approach = "A2 -> C+(L+P)";
-            sentence = null;
             premise = null;
             claim = null;
             minDepth = Integer.MAX_VALUE;
@@ -370,7 +366,7 @@ public class ArgumentEngine implements Constants {
             for (Syntagma syntagma : syntagmaList) {
                 String nGram = getNGram(syntagma.text, linker.nTokens);
 
-                if (!StringUtils.isEmpty(nGram) && linker.isEquals(nGram)) {
+                if (linker.isEquals(nGram)) {
                     if (syntagma.depth < minDepth) {
                         minDepth = syntagma.depth;
                         premise = syntagma.text;
