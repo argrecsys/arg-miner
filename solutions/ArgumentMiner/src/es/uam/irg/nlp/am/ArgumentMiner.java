@@ -14,7 +14,7 @@ import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
-import es.uam.irg.utils.StringUtils;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -69,9 +69,9 @@ public class ArgumentMiner {
             });
             
             // Save arguments
-            result = storeArguments(arguments, proposals);
+            result = storeArguments(arguments);
             if (result) {
-                saveArguments(arguments, proposals);
+                saveArguments(arguments);
                 System.out.println(">> Arguments saved correctly.");
             }
             else {
@@ -174,39 +174,26 @@ public class ArgumentMiner {
      * Saves the arguments in a plain text file.
      * 
      * @param arguments
-     * @param proposals
      * @return 
      */
-    private boolean saveArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
+    private boolean saveArguments(Map<Integer, List<Argument>> arguments) {
         boolean result = false;
         
         if (arguments != null) {
             JSONObject argList = new JSONObject();
             
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
-                DMProposal prop = proposals.get(entry.getKey());
-                
                 for (Argument arg : entry.getValue()) {
-                    String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
-                    
-                    // Create JSON linker
-                    JSONObject linker = new JSONObject();
-                    linker.put("linker", arg.linker.linker);
-                    linker.put("category", arg.linker.category);
-                    linker.put("subCategory", arg.linker.subCategory);
                     
                     // Create JSON argument
                     JSONObject item = new JSONObject();
                     item.put("proposalID", entry.getKey());
-                    item.put("majorClaim", majorClaim);
                     item.put("sentence", arg.sentenceText);
-                    item.put("claim", arg.claim);
-                    item.put("premise", arg.premise);
+                    item.put("majorClaim", arg.majorClaim.getJSON());
+                    item.put("claim", arg.claim.getJSON());
+                    item.put("premise", arg.premise.getJSON());
+                    item.put("linker", arg.linker.getJSON());
                     item.put("mainVerb", arg.mainVerb);
-                    item.put("relationType", arg.linker.relationType);
-                    item.put("linker", linker);
-                    item.put("entityList", arg.getEntityList().toString());
-                    item.put("nounList", arg.getNounList().toString());
                     item.put("approach", arg.approach);
                     
                     // Store JSON object
@@ -214,9 +201,8 @@ public class ArgumentMiner {
                 }
             }
             
-            // Save JSON file
-            String jsonString = argList.toString(4);
-            result = IOManager.saveJsonFile(jsonString, Constants.OUTPUT_FILEPATH);
+            // Save JSON files
+            result = IOManager.saveJsonFile(argList.toString(4), Constants.OUTPUT_FILEPATH);
         }
         
         return result;
@@ -228,46 +214,39 @@ public class ArgumentMiner {
      * @param proposals
      * @return 
      */
-    private boolean storeArguments(Map<Integer, List<Argument>> arguments, Map<Integer, DMProposal> proposals) {
-        boolean result = true;
+    private boolean storeArguments(Map<Integer, List<Argument>> arguments) {
+        boolean result = false;
         
         if (arguments != null) {
             MongoDbManager manager = new MongoDbManager();
-            String collName = "annotations";
+            List<Document> argList = new ArrayList<>();
+            List<Bson> argFilter = new ArrayList<>();
 
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
-                DMProposal prop = proposals.get(entry.getKey());
-
                 for (Argument arg : entry.getValue()) {
-                    String majorClaim = StringUtils.cleanText(prop.getTitle(), "one");
-
-                    Document linker = new Document();
-                    linker.append("linker", arg.linker.linker)
-                           .append("category", arg.linker.category)
-                           .append("subCategory", arg.linker.subCategory);
-
+                    
+                    // Create Document argument
                     Document doc = new Document();
                     doc.append("argumentID", arg.sentenceID)
-                        .append("proposalID", entry.getKey())
-                        .append("majorClaim", majorClaim)
-                        .append("sentence", arg.sentenceText)
-                        .append("claim", arg.claim)
-                        .append("premise", arg.premise)
-                        .append("mainVerb", arg.mainVerb)
-                        .append("relationType", arg.linker.relationType)
-                        .append("linker", linker)
-                        .append("entityList", arg.getEntityList().toString())
-                        .append("nounList", arg.getNounList().toString())
-                        .append("approach", arg.approach);
-
-                    // Upsert document
-                    Bson filter = Filters.eq("argumentID", arg.sentenceID);
-                    result &= manager.upsertDocument(collName, filter, doc, new UpdateOptions().upsert(true));
+                       .append("proposalID", entry.getKey())
+                       .append("sentence", arg.sentenceText)
+                       .append("majorClaim", arg.majorClaim.getDocument())
+                       .append("claim", arg.claim.getDocument())
+                       .append("premise", arg.premise.getDocument())
+                       .append("linker", arg.linker.getDocument())
+                       .append("mainVerb", arg.mainVerb)
+                       .append("approach", arg.approach);
+                    
+                    // Store Document object
+                    argList.add(doc);
+                    argFilter.add(Filters.eq("argumentID", arg.sentenceID));
                 }
             }
-        }
-        else {
-            result = false;
+            
+            // Upsert documents
+            if (argList.size() > 0) {
+                result = manager.upsertDocuments("annotations", argList, argFilter, new UpdateOptions().upsert(true));
+            }
         }
         
         return result;

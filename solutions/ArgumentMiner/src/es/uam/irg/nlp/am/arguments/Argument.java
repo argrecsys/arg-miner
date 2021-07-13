@@ -5,10 +5,6 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Argument class. The premise justifies, gives reasons for or supports the conclusion (claim).
  * 
@@ -18,15 +14,14 @@ public class Argument {
     
     // Class members
     public String approach;
-    public String claim;
-    public String mainVerb;
-    public String premise;
+    public Sentence claim;
     public ArgumentLinker linker;
+    public String mainVerb;
+    public Sentence majorClaim;
+    public Sentence premise;
     public String sentenceID;
     public String sentenceText;
-    private List<String> entityList;
     private boolean isValid;
-    private List<String> nounList;
     
     /**
      * Empty constructor.
@@ -35,7 +30,7 @@ public class Argument {
      * @param sentenceText 
      */
     public Argument(String sentenceID, String sentenceText) {
-        this(sentenceID, sentenceText, "", "", "", "NONE", new ArgumentLinker());
+        this(sentenceID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE");
         this.isValid = false;
     }
     
@@ -44,55 +39,29 @@ public class Argument {
      * 
      * @param sentenceID
      * @param sentenceText
-     * @param premise
      * @param claim
+     * @param premise
      * @param mainVerb
-     * @param approach
-     * @param linker 
+     * @param linker
+     * @param approach 
      */
-    public Argument(String sentenceID, String sentenceText, String claim, String premise, String mainVerb, String approach, ArgumentLinker linker) {
+    public Argument(String sentenceID, String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach) {
         this.sentenceID = sentenceID;
         this.sentenceText = sentenceText;
         this.claim = claim;
         this.premise = premise;
         this.mainVerb = mainVerb;
-        this.approach = approach;
         this.linker = linker;
-        this.entityList = new ArrayList<>();
-        this.nounList = new ArrayList<>();
+        this.approach = approach;
         this.isValid = true;
     }
     
     /**
      *
-     * @return 
+     * @param majorClaim
      */
-    public List<String> getEntityList() {
-        return this.entityList;
-    }
-    
-    /**
-     *
-     * @param entities 
-     */
-    public void setEntityList(Map<String, String> entities) {
-        this.entityList.addAll(entities.keySet());
-    }
-    
-    /**
-     *
-     * @return
-     */
-    public List<String> getNounList() {
-        return this.nounList;
-    }
-    
-    /**
-     * 
-     * @param nounList 
-     */
-    public void setNounList(List<String> nounList) {
-        this.nounList = nounList;
+    public void setMajorClaim(Sentence majorClaim) {
+        this.majorClaim = majorClaim;
     }
     
     /**
@@ -100,7 +69,8 @@ public class Argument {
      * @return 
      */
     public String getString() {
-        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", this.sentenceID, this.claim, this.premise, this.mainVerb, this.linker.getString());
+        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", 
+                this.sentenceID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
     }
     
     /**

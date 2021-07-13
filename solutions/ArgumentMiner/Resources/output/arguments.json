@@ -1,425 +1,675 @@
 {
     "16516-1": {
         "sentence": "Seria cambiar el actual pavimento de la Calle Goya debido a que ya esta viejo y deteriorado.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "debido a",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "que ya esta viejo y deteriorado",
-        "entityList": "[Goya]",
-        "nounList": "[pavimento]",
+        "premise": {
+            "entities": "[]",
+            "text": "que ya esta viejo y deteriorado",
+            "nouns": "[]"
+        },
         "mainVerb": "cambiar",
-        "claim": "Seria cambiar el actual pavimento de la Calle Goya",
-        "majorClaim": "Cambiar el pavimento de la calle Goya",
+        "claim": {
+            "entities": "[Calle Goya]",
+            "text": "Seria cambiar el actual pavimento de la Calle Goya",
+            "nouns": "[pavimento]"
+        },
+        "majorClaim": {
+            "entities": "[Goya]",
+            "text": "Cambiar el pavimento de la calle Goya",
+            "nouns": "[pavimento, calle]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 16516
     },
     "992-1": {
         "sentence": "Rellenar los alcorques de los arboles porque el hueco ocupa media acera",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "el hueco ocupa media acera",
-        "entityList": "[]",
-        "nounList": "[alcorques, arboles, hueco, acera]",
+        "premise": {
+            "entities": "[]",
+            "text": "el hueco ocupa media acera",
+            "nouns": "[hueco, acera]"
+        },
         "mainVerb": "Rellenar",
-        "claim": "Rellenar los alcorques de los arboles",
-        "majorClaim": "alcorques arboles",
+        "claim": {
+            "entities": "[]",
+            "text": "Rellenar los alcorques de los arboles",
+            "nouns": "[alcorques, arboles]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "alcorques arboles",
+            "nouns": "[arboles]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 992
     },
     "4696-1": {
         "sentence": "Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminacion que tienen.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "debido a",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "la baja iluminacion que tienen",
-        "entityList": "[]",
-        "nounList": "[peligro, pasos, cebra, baja]",
+        "premise": {
+            "entities": "[]",
+            "text": "la baja iluminacion que tienen",
+            "nouns": "[baja]"
+        },
         "mainVerb": "vuelto",
-        "claim": "Se ha vuelto un peligro cruzar en algunos pasos de cebra",
-        "majorClaim": "Iluminacion de pasos de cebra",
+        "claim": {
+            "entities": "[]",
+            "text": "Se ha vuelto un peligro cruzar en algunos pasos de cebra",
+            "nouns": "[peligro, pasos, cebra]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Iluminacion de pasos de cebra",
+            "nouns": "[pasos, cebra]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4696
     },
     "17080-1": {
         "sentence": "Mas papeleras en el parque porque las que hay son insuficientes.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "las que hay son insuficientes",
-        "entityList": "[Parque de la Mar Oceana]",
-        "nounList": "[papeleras, parque]",
-        "claim": "Mas papeleras en el parque",
-        "majorClaim": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
+        "premise": {
+            "entities": "[]",
+            "text": "las que hay son insuficientes",
+            "nouns": "[]"
+        },
+        "claim": {
+            "entities": "[]",
+            "text": "Mas papeleras en el parque",
+            "nouns": "[papeleras, parque]"
+        },
+        "majorClaim": {
+            "entities": "[Parque de la Mar Oceana]",
+            "text": "Instalar mas papeleras en el Parque de la Mar Oceana de El Pardo",
+            "nouns": "[papeleras]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 17080
     },
     "11890-1": {
         "sentence": "Ya es una ciudad sin justicia pero que no se convierta en una ciudad sin ley!!",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "pero",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "que no se convierta en una ciudad sin ley !!",
-        "entityList": "[]",
-        "nounList": "[ciudad, justicia, ciudad, ley, !!]",
+        "premise": {
+            "entities": "[]",
+            "text": "que no se convierta en una ciudad sin ley !!",
+            "nouns": "[ciudad, ciudad, ley, !!]"
+        },
         "mainVerb": "convierta",
-        "claim": "Ya es una ciudad sin justicia",
-        "majorClaim": "Que cuando llamas a la policia que acuda",
+        "claim": {
+            "entities": "[]",
+            "text": "Ya es una ciudad sin justicia",
+            "nouns": "[ciudad, justicia, ciudad]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Que cuando llamas a la policia que acuda",
+            "nouns": "[llamas, policia]"
+        },
         "approach": "A1 -> C+L+P",
         "proposalID": 11890
     },
     "4671-1": {
         "sentence": "Que baje el precio del transporte porque es muy caro.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "es muy caro",
-        "entityList": "[]",
-        "nounList": "[precio, transporte]",
+        "premise": {
+            "entities": "[]",
+            "text": "es muy caro",
+            "nouns": "[]"
+        },
         "mainVerb": "baje",
-        "claim": "Que baje el precio del transporte",
-        "majorClaim": "transporte publico",
+        "claim": {
+            "entities": "[]",
+            "text": "Que baje el precio del transporte",
+            "nouns": "[precio, transporte]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "transporte publico",
+            "nouns": "[transporte]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4671
     },
     "8296-1": {
         "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "pues",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "la tradicion dice que fue alli donde se encontro",
-        "entityList": "[]",
-        "nounList": "[imagen, torreon, tradicion, alli]",
+        "premise": {
+            "entities": "[]",
+            "text": "la tradicion dice que fue alli donde se encontro",
+            "nouns": "[tradicion, alli]"
+        },
         "mainVerb": "Colocar",
-        "claim": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
-        "majorClaim": "Muralla arabe de Madrid",
+        "claim": {
+            "entities": "[Virgen de la Almudena]",
+            "text": "Colocar la imagen de la Virgen de la Almudena en el torreon 2",
+            "nouns": "[imagen, torreon]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Muralla arabe de Madrid",
+            "nouns": "[Muralla, arabe]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 8296
     },
     "23783-1": {
         "sentence": "Instar a Telefonica a retirar inmediatamente todas las cabinas de Madrid, dado que el servicio de telefonos publicos ya no existe oficialmente.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "dado que",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "el servicio de telefonos publicos ya no existe oficialmente",
-        "entityList": "[]",
-        "nounList": "[cabinas, dado, servicio, telefonos]",
+        "premise": {
+            "entities": "[]",
+            "text": "el servicio de telefonos publicos ya no existe oficialmente",
+            "nouns": "[servicio, telefonos]"
+        },
         "mainVerb": "Instar",
-        "claim": "Instar a Telefonica a retirar inmediatamente todas las cabinas de Madrid",
-        "majorClaim": "Retirada de todas las cabinas telefonicas",
+        "claim": {
+            "entities": "[Telefonica]",
+            "text": "Instar a Telefonica a retirar inmediatamente todas las cabinas de Madrid",
+            "nouns": "[cabinas]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Retirada de todas las cabinas telefonicas",
+            "nouns": "[Retirada, cabinas]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 23783
     },
     "18302-1": {
         "sentence": "No se puede caminar por ciertas aceras porque estan llenas de mesas y sillas.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "estan llenas de mesas y sillas",
-        "entityList": "[]",
-        "nounList": "[aceras, mesas, sillas]",
+        "premise": {
+            "entities": "[]",
+            "text": "estan llenas de mesas y sillas",
+            "nouns": "[mesas, sillas]"
+        },
         "mainVerb": "caminar",
-        "claim": "No se puede caminar por ciertas aceras",
-        "majorClaim": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
+        "claim": {
+            "entities": "[]",
+            "text": "No se puede caminar por ciertas aceras",
+            "nouns": "[aceras]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Impedir las mesas de los restaurantes en las aceras , impidiendo el paso",
+            "nouns": "[mesas, restaurantes, aceras, paso]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 18302
     },
     "11402-1": {
         "sentence": "Que en los colegios se aprenda la reanimacion basica, pues todos deberiamos saber unas maniobras basicas.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "pues",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "todos deberiamos saber unas maniobras basicas",
-        "entityList": "[]",
-        "nounList": "[colegios, reanimacion, maniobras]",
+        "premise": {
+            "entities": "[]",
+            "text": "todos deberiamos saber unas maniobras basicas",
+            "nouns": "[maniobras]"
+        },
         "mainVerb": "aprenda",
-        "claim": "Que en los colegios se aprenda la reanimacion basica",
-        "majorClaim": "El tiempo es vital  R.c.p en las escuelas",
+        "claim": {
+            "entities": "[]",
+            "text": "Que en los colegios se aprenda la reanimacion basica",
+            "nouns": "[colegios, reanimacion]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "El tiempo es vital  R.c.p en las escuelas",
+            "nouns": "[tiempo, escuelas]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 11402
     },
     "18138-1": {
         "sentence": "Llevan ahi anos y no nos damos cuenta, pero son super cutres.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "pero",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "son super cutres",
-        "entityList": "[]",
-        "nounList": "[anos, cuenta, super]",
+        "premise": {
+            "entities": "[]",
+            "text": "son super cutres",
+            "nouns": "[super]"
+        },
         "mainVerb": "Llevan",
-        "claim": "Llevan ahi anos y no nos damos cuenta",
-        "majorClaim": "Eliminar mobiliario tipico de autopistas y otros horrores",
+        "claim": {
+            "entities": "[]",
+            "text": "Llevan ahi anos y no nos damos cuenta",
+            "nouns": "[anos, cuenta]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Eliminar mobiliario tipico de autopistas y otros horrores",
+            "nouns": "[mobiliario, autopistas, horrores]"
+        },
         "approach": "A1 -> C+L+P",
         "proposalID": 18138
     },
     "16479-1": {
         "sentence": "Somos muchos los que vivimos en Valdebebas, a 15 minutos del centro de Madrid y sin embargo no tenemos manera de volver a casa por la noche como no sea en coche.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "sin embargo",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "no tenemos manera de volver a casa por la noche como no sea en coche",
-        "entityList": "[Buho, Valdebebas]",
-        "nounList": "[minutos, centro, embargo, manera, casa, noche, coche]",
+        "premise": {
+            "entities": "[]",
+            "text": "no tenemos manera de volver a casa por la noche como no sea en coche",
+            "nouns": "[manera, casa, noche, coche]"
+        },
         "mainVerb": "vivimos",
-        "claim": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
-        "majorClaim": "Buho y marquesinas en Valdebebas",
+        "claim": {
+            "entities": "[Valdebebas]",
+            "text": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
+            "nouns": "[minutos, centro]"
+        },
+        "majorClaim": {
+            "entities": "[Buho, Valdebebas]",
+            "text": "Buho y marquesinas en Valdebebas",
+            "nouns": "[marquesinas]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 16479
     },
     "24451-1": {
         "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "pues",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "al votarse por separado falsea el resultado al ir separadas",
-        "entityList": "[]",
-        "nounList": "[propuestas, separado, resultado]",
+        "premise": {
+            "entities": "[]",
+            "text": "al votarse por separado falsea el resultado al ir separadas",
+            "nouns": "[separado, resultado]"
+        },
         "mainVerb": "reunificar",
-        "claim": "reunificar las propuestas repetidas",
-        "majorClaim": "reunificar propuestas repetidas",
+        "claim": {
+            "entities": "[]",
+            "text": "reunificar las propuestas repetidas",
+            "nouns": "[propuestas]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "reunificar propuestas repetidas",
+            "nouns": "[propuestas]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 24451
     },
     "24600-1": {
         "sentence": "Revisar los pasos de cebra para que esten al nivel de la calzada pues ahora dificultan el paso a sillas de ruedas.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "pues",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "ahora dificultan el paso a sillas de ruedas",
-        "entityList": "[]",
-        "nounList": "[pasos, cebra, nivel, calzada, paso, sillas, ruedas]",
+        "premise": {
+            "entities": "[]",
+            "text": "ahora dificultan el paso a sillas de ruedas",
+            "nouns": "[paso, sillas, ruedas]"
+        },
         "mainVerb": "esten",
-        "claim": "para que esten al nivel de la calzada",
-        "majorClaim": "Adecuacion de los pasos de cebra para personas con discapacidad",
+        "claim": {
+            "entities": "[]",
+            "text": "para que esten al nivel de la calzada",
+            "nouns": "[nivel, calzada]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Adecuacion de los pasos de cebra para personas con discapacidad",
+            "nouns": "[pasos, cebra, personas, discapacidad]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 24600
     },
     "17524-1": {
         "sentence": "En esta calle se pintan las lineas pero nunca se asfalta y realmente lo necesita.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "pero",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "nunca se asfalta y realmente lo necesita",
-        "entityList": "[Jacinto Verdaguer]",
-        "nounList": "[calle, lineas]",
+        "premise": {
+            "entities": "[]",
+            "text": "nunca se asfalta y realmente lo necesita",
+            "nouns": "[]"
+        },
         "mainVerb": "pintan",
-        "claim": "En esta calle se pintan las lineas",
-        "majorClaim": "Asfaltar la calle Jacinto Verdaguer",
+        "claim": {
+            "entities": "[]",
+            "text": "En esta calle se pintan las lineas",
+            "nouns": "[calle, lineas]"
+        },
+        "majorClaim": {
+            "entities": "[Jacinto Verdaguer]",
+            "text": "Asfaltar la calle Jacinto Verdaguer",
+            "nouns": "[calle]"
+        },
         "approach": "A1 -> C+L+P",
         "proposalID": 17524
     },
     "15538-1": {
         "sentence": "El Ayuntamiento no concreta si sera bajada de precios para todos o por el contrario subida para las clases mas desprotegidas como pensionistas, estudiantes etc....",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "por el contrario",
             "subCategory": "OPPOSITION",
             "category": "CONTRAST"
         },
-        "premise": "subida para las clases mas desprotegidas como pensionistas , estudiantes etc",
-        "entityList": "[]",
-        "nounList": "[bajada, precios, subida, clases, pensionistas, estudiantes]",
+        "premise": {
+            "entities": "[]",
+            "text": "subida para las clases mas desprotegidas como pensionistas , estudiantes etc",
+            "nouns": "[subida, clases, pensionistas, estudiantes]"
+        },
         "mainVerb": "concreta",
-        "claim": "El Ayuntamiento no concreta si sera bajada de precios para todos",
-        "majorClaim": "Que significa billete  unico para el transporte de Madrid",
+        "claim": {
+            "entities": "[Ayuntamiento]",
+            "text": "El Ayuntamiento no concreta si sera bajada de precios para todos",
+            "nouns": "[bajada, precios]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Que significa billete  unico para el transporte de Madrid",
+            "nouns": "[billete, transporte]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 15538
     },
     "15707-1": {
         "sentence": "El bus 5 pasa por general martinez campos pero no para ayi",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "pero",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "no para ayi",
-        "entityList": "[Martinez, EMT]",
-        "nounList": "[bus, general, campos]",
+        "premise": {
+            "entities": "[]",
+            "text": "no para ayi",
+            "nouns": "[]"
+        },
         "mainVerb": "pasa",
-        "claim": "El bus 5 pasa por general martinez campos",
-        "majorClaim": "Que el bus 5de la EMT que  pare en general Martinez campos",
+        "claim": {
+            "entities": "[]",
+            "text": "El bus 5 pasa por general martinez campos",
+            "nouns": "[bus, general, campos]"
+        },
+        "majorClaim": {
+            "entities": "[Martinez, EMT]",
+            "text": "Que el bus 5de la EMT que  pare en general Martinez campos",
+            "nouns": "[bus, general, campos]"
+        },
         "approach": "A1 -> C+L+P",
         "proposalID": 15707
     },
     "7250-1": {
         "sentence": "Se pueden producir accidentes en la calle porque las senales pueden ser confusas",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "las senales pueden ser confusas",
-        "entityList": "[Mejia Lequerica]",
-        "nounList": "[accidentes, calle, senales]",
+        "premise": {
+            "entities": "[]",
+            "text": "las senales pueden ser confusas",
+            "nouns": "[senales]"
+        },
         "mainVerb": "producir",
-        "claim": "Se pueden producir accidentes en la calle",
-        "majorClaim": "Regulacion del trafico calle Mejia Lequerica",
+        "claim": {
+            "entities": "[]",
+            "text": "Se pueden producir accidentes en la calle",
+            "nouns": "[accidentes, calle]"
+        },
+        "majorClaim": {
+            "entities": "[Mejia Lequerica]",
+            "text": "Regulacion del trafico calle Mejia Lequerica",
+            "nouns": "[]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 7250
     },
     "23248-1": {
         "sentence": "En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "sin embargo",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "la dotacion policial para el distrito se ha disminuido",
-        "entityList": "[]",
-        "nounList": "[delitos, robo, personas, viviendas, embargo, dotacion, distrito]",
+        "premise": {
+            "entities": "[]",
+            "text": "la dotacion policial para el distrito se ha disminuido",
+            "nouns": "[dotacion, distrito]"
+        },
         "mainVerb": "aumentado",
-        "claim": "En Carabanchel han aumentado los delitos por robo en personas y viviendas",
-        "majorClaim": "MAS POLICIA MUNICIPAL EN LOS BARRIOS FUERA DE LA M-30",
+        "claim": {
+            "entities": "[Carabanchel]",
+            "text": "En Carabanchel han aumentado los delitos por robo en personas y viviendas",
+            "nouns": "[delitos, robo, personas, viviendas]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "MAS POLICIA MUNICIPAL EN LOS BARRIOS FUERA DE LA M-30",
+            "nouns": "[BARRIOS]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 23248
     },
     "1267-2": {
         "sentence": "Las pymes sostenibles y cooperativas van en ese camino a diferencia de las grandes empresas.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "a diferencia de",
             "subCategory": "OPPOSITION",
             "category": "CONTRAST"
         },
-        "premise": "las grandes empresas",
-        "entityList": "[Pymes]",
-        "nounList": "[pymes, cooperativas, camino, diferencia, empresas]",
+        "premise": {
+            "entities": "[]",
+            "text": "las grandes empresas",
+            "nouns": "[empresas]"
+        },
         "mainVerb": "van",
-        "claim": "Las pymes sostenibles y cooperativas van en ese camino",
-        "majorClaim": "Valorar en contratos a Pymes sostenibles y cooperativas",
+        "claim": {
+            "entities": "[]",
+            "text": "Las pymes sostenibles y cooperativas van en ese camino",
+            "nouns": "[pymes, cooperativas, camino]"
+        },
+        "majorClaim": {
+            "entities": "[Pymes]",
+            "text": "Valorar en contratos a Pymes sostenibles y cooperativas",
+            "nouns": "[contratos, cooperativas]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 1267
     },
     "19615-1": {
         "sentence": "Que pongan mas autobuses del 130 porque siempre va muy lleno y no te puedes ni mover",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "porque",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "siempre va muy lleno y no te puedes ni mover",
-        "entityList": "[Villaverde]",
-        "nounList": "[autobuses]",
+        "premise": {
+            "entities": "[]",
+            "text": "siempre va muy lleno y no te puedes ni mover",
+            "nouns": "[]"
+        },
         "mainVerb": "pongan",
-        "claim": "Que pongan mas autobuses del 130",
-        "majorClaim": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
+        "claim": {
+            "entities": "[]",
+            "text": "Que pongan mas autobuses del 130",
+            "nouns": "[autobuses]"
+        },
+        "majorClaim": {
+            "entities": "[Villaverde]",
+            "text": "Que pongan mas autobuses 130 (Villaverde Alto -Vicalvaro)",
+            "nouns": "[autobuses]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 19615
     },
     "867-1": {
         "sentence": "Son dos edificios cargados de historia y patrimonio, y sin embargo permanecen cerrados.",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "sin embargo",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "permanecen cerrados",
-        "entityList": "[Villa]",
-        "nounList": "[edificios, historia, patrimonio, embargo]",
+        "premise": {
+            "entities": "[]",
+            "text": "permanecen cerrados",
+            "nouns": "[]"
+        },
         "mainVerb": "permanecen",
-        "claim": "Son dos edificios cargados de historia y patrimonio",
-        "majorClaim": "Visita la casa de la Villa y casa de la Panaderia",
+        "claim": {
+            "entities": "[]",
+            "text": "Son dos edificios cargados de historia y patrimonio",
+            "nouns": "[edificios, historia, patrimonio]"
+        },
+        "majorClaim": {
+            "entities": "[Villa]",
+            "text": "Visita la casa de la Villa y casa de la Panaderia",
+            "nouns": "[casa, casa]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 867
     },
     "340-1": {
         "sentence": "Crear un Instituto al menos para nuestros hijos en el barrio de las Tablas, dado que existen muchos colegios, pero no Instituto.",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "dado que",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "existen muchos colegios , pero no Instituto",
-        "entityList": "[]",
-        "nounList": "[hijos, barrio, dado, colegios]",
+        "premise": {
+            "entities": "[]",
+            "text": "existen muchos colegios , pero no Instituto",
+            "nouns": "[colegios]"
+        },
         "mainVerb": "Crear",
-        "claim": "Crear un Instituto al menos para nuestros hijos en el barrio de las Tablas",
-        "majorClaim": "Instituto en el barrio de Las Tablas",
+        "claim": {
+            "entities": "[]",
+            "text": "Crear un Instituto al menos para nuestros hijos en el barrio de las Tablas",
+            "nouns": "[hijos, barrio]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Instituto en el barrio de Las Tablas",
+            "nouns": "[barrio]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 340
     },
     "19803-1": {
         "sentence": "Proponemos una reforestacion en la M30 debido a que nos han talado toda la zona (como si estuviesemos para perder flora.)",
-        "relationType": "support",
         "linker": {
+            "relationType": "support",
             "linker": "debido a",
             "subCategory": "REASON",
             "category": "CAUSE"
         },
-        "premise": "que nos han talado toda la zona ( como si estuviesemos para perder flora . )",
-        "entityList": "[]",
-        "nounList": "[reforestacion, M30, zona, flora]",
+        "premise": {
+            "entities": "[]",
+            "text": "que nos han talado toda la zona ( como si estuviesemos para perder flora . )",
+            "nouns": "[zona, flora]"
+        },
         "mainVerb": "Proponemos",
-        "claim": "Proponemos una reforestacion en la M30",
-        "majorClaim": "REPLANTACION M30",
+        "claim": {
+            "entities": "[]",
+            "text": "Proponemos una reforestacion en la M30",
+            "nouns": "[reforestacion, M30]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "REPLANTACION M30",
+            "nouns": "[]"
+        },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 19803
     },
     "7341-1": {
         "sentence": "Veo talar arboles y arbustos pero no se replantan",
-        "relationType": "attack",
         "linker": {
+            "relationType": "attack",
             "linker": "pero",
             "subCategory": "DIRECT",
             "category": "CONTRAST"
         },
-        "premise": "no se replantan",
-        "entityList": "[]",
-        "nounList": "[arboles, arbustos]",
+        "premise": {
+            "entities": "[]",
+            "text": "no se replantan",
+            "nouns": "[]"
+        },
         "mainVerb": "Veo",
-        "claim": "Veo talar arboles y arbustos",
-        "majorClaim": "Que los de parques y jardines repongan lo que cortan",
+        "claim": {
+            "entities": "[]",
+            "text": "Veo talar arboles y arbustos",
+            "nouns": "[arboles, arbustos]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Que los de parques y jardines repongan lo que cortan",
+            "nouns": "[parques, jardines]"
+        },
         "approach": "A1 -> C+L+P",
         "proposalID": 7341
     }

@@ -9,6 +9,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.UpdateOptions;
+import java.util.List;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
@@ -36,17 +37,17 @@ public class MongoDbManager {
     /**
      * 
      * @param collName
-     * @param filter
      * @param doc
+     * @param filter
      * @param options
      * @return 
      */
-    public boolean upsertDocument(String collName, Bson filter, Document doc, UpdateOptions options) {
+    public boolean upsertDocument(String collName, Document doc, Bson filter, UpdateOptions options) {
         boolean result = false;
         
         try {
             MongoCollection<Document> collAnnotations = db.getCollection(collName);
-            Bson update =  new Document("$set", doc);
+            Bson update = new Document("$set", doc);
             collAnnotations.updateOne(filter, update, options);
             result = true;
         }
@@ -57,4 +58,25 @@ public class MongoDbManager {
         return result;
     }
     
+    /**
+     * 
+     * @param collName
+     * @param docs
+     * @param filters
+     * @param options
+     * @return 
+     */
+    public boolean upsertDocuments(String collName, List<Document> docs, List<Bson> filters, UpdateOptions options) {
+        boolean result = true;
+        
+        if (docs.size() == filters.size()) {
+            for (int i=0; i < docs.size(); i++) {
+                Document doc = docs.get(i);
+                Bson filter = filters.get(i);
+                result &= upsertDocument(collName, doc, filter, options);
+            }
+        }
+        
+        return result;
+    }
 }

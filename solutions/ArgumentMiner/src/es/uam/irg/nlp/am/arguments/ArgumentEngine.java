@@ -82,37 +82,43 @@ public class ArgumentEngine implements Constants {
         Annotation annotation = new Annotation(docText);
         pipeline.annotate(annotation);
         
-        // 2. Get named entity recognition in document
-        Map<String, String> entities = getNamedEntities(pipeline, docTitle);
-        System.out.println("Show Named Entity Recognition: " + entities.size());
-        for (Map.Entry<String, String> entry : entities.entrySet()) {
-            System.out.println(entry.getKey()+ ": " + entry.getValue());
-        }
-        
-        // 3. Get sentences from the document
+        // 2. Get sentences from the document
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
         System.out.println("N sentences: " + sentences.size());
         
+        // 3. Create major claim object
+        Sentence majorClaim = createMajorClaim(pipeline, docTitle);
+        
+        // 4. For each item..
         for (int i = 0; i < sentences.size(); i++) {
             
-            // 4. Get current sentence
+            // 5. Get current sentence
             String sentenceID = docKey + "-" + (i + 1);
             CoreMap sentence = sentences.get(i);
             String sentenceText = sentence.toString();
             System.out.format("[%s]: %s\n", sentenceID, sentenceText);
             
-            // 5. Get main sentence linker
+            // 6. Get main sentence linker
             ArgumentLinker linker = getSentenceLinker(sentenceText);
             
             if (linker != null) {
                 System.out.println("Sentence linker: " + linker.getString());
             
-                // 6. Apply parts of speech (POS) to identify list of NOUNs and VERBs
-                CoreDocument document = pipeline.processToCoreDocument(sentenceText);
+                // 7. Get named entity recognition (NER) in document
+                Map<String, String> entities = getNamedEntities(pipeline, sentenceText);
+                List<String> entityList = new ArrayList<>();
+
+                entities.entrySet().forEach(entry -> {
+                    //System.out.println(entry.getKey() + ": " + entry.getValue());
+                    entityList.add(entry.getKey());
+                });
+                
+                // 8. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
+                List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText);
                 List<String> nounList = new ArrayList<>();
                 List<String> verbList = new ArrayList<>();
 
-                document.tokens().forEach((CoreLabel token) -> {
+                for (CoreLabel token : tokens) {
                     //System.out.println(String.format("%s [%s]", token.word(), token.tag()));
                     if (token.tag().equals("NOUN")) {
                         nounList.add(token.word());
@@ -120,25 +126,25 @@ public class ArgumentEngine implements Constants {
                     else if (token.tag().equals("VERB")) {
                         verbList.add(token.word());
                     }
-                });
+                }
                 System.out.println("Noun list: " + nounList.toString());
                 System.out.println("Verb list: " + verbList.toString());
 
-                // 7. Get constituency tree
+                // 9. Get constituency tree
                 System.out.println("Calculate constituency tree:");
                 Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
                 tree.pennPrint(out);
 
-                // 8. Get syntagma list
+                // 10. Get syntagma list
                 List<Syntagma> syntagmaList = getSyntagmaList(tree);
                 System.out.println("Syntagma list: " + syntagmaList.size());
 
-                // 9. Apply arguments mining (AM)
-                Argument arg = mineArgument(sentenceID, sentenceText, linker, syntagmaList, verbList);
+                // 11. Apply arguments mining (AM)
+                Argument arg = mineArgument(sentenceID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
                 
+                // 12. Save argument
                 if (arg.isValid()) {
-                    arg.setEntityList(entities);
-                    arg.setNounList(nounList);
+                    arg.setMajorClaim(majorClaim);
                     result.add(arg);
                     System.out.println(arg.getString());
                 }
@@ -186,6 +192,61 @@ public class ArgumentEngine implements Constants {
     }
     
     /**
+     * 
+     * @param text
+     * @param nouns
+     * @param entities
+     * @return 
+     */
+    private Sentence createArgumentativeSentence(String text, List<String> nouns, List<String> entities) {
+        
+        List<String> sentNouns = new ArrayList<>();
+        for (String noun : nouns) {
+            if (text.contains(noun)) {
+                sentNouns.add(noun);
+            }
+        }
+        
+        List<String> sentEntities = new ArrayList<>();
+        for (String entity : entities) {
+            if (text.contains(entity)) {
+                sentEntities.add(entity);
+            }
+        }
+        
+        return new Sentence(text, sentNouns, sentEntities);
+    }
+    
+    /**
+     * 
+     * @param pipeline
+     * @param text
+     * @return 
+     */
+    private Sentence createMajorClaim(StanfordCoreNLP pipeline, String text) {
+        
+        text = StringUtils.cleanText(text, "one");
+        
+        // Get nouns (from POS) in document title
+        List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text);
+        List<String> nounList = new ArrayList<>();
+        for (CoreLabel token : tokens) {
+            if (token.tag().equals("NOUN")) {
+                nounList.add(token.word());
+            }
+        }
+
+        // Get named entity recognition (NER) in document title
+        Map<String, String> entities = getNamedEntities(pipeline, text);
+        List<String> entityList = new ArrayList<>();
+        entities.entrySet().forEach(entry -> {
+            entityList.add(entry.getKey());
+        });
+        
+        return new Sentence(text, nounList, entityList);
+    }
+    
+    /**
      *
      * @param tokens
      * @param nTokens
@@ -227,6 +288,17 @@ public class ArgumentEngine implements Constants {
         }
         
         return entities;
+    }
+    
+    /**
+     * 
+     * @param pipeline
+     * @param sentenceText
+     * @return 
+     */
+    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText) {
+        CoreDocument document = pipeline.processToCoreDocument(sentenceText);
+        return document.tokens();
     }
     
     /**
@@ -303,15 +375,17 @@ public class ArgumentEngine implements Constants {
     }
     
     /**
-     *
+     * 
      * @param sentenceID
      * @param sentenceText
      * @param linker
      * @param syntagmaList
+     * @param entityList
+     * @param nounList
      * @param verbList
-     * @return
+     * @return 
      */
-    private Argument mineArgument(String sentenceID, String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> verbList) {
+    private Argument mineArgument(String sentenceID, String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> entityList, List<String> nounList, List<String> verbList) {
         Argument arg = new Argument(sentenceID, sentenceText);
         
         // Temporary variables
@@ -349,7 +423,11 @@ public class ArgumentEngine implements Constants {
                 nGram = StringUtils.cleanText(nGram, "both").replace(" ", Constants.NGRAMS_DELIMITER);
                 
                 if (linker.isEquals(nGram)) {
-                    arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
+                    
+                    // Create argument object
+                    Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
+                    Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
+                    arg = new Argument(sentenceID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
                     break;
                 }
             }
@@ -411,11 +489,13 @@ public class ArgumentEngine implements Constants {
                 }
 
                 if (!StringUtils.isEmpty(premise) && !StringUtils.isEmpty(claim)) {
-
-                    // Create argument object
                     claim = cleanStatement(CLAIM, claim, null);
                     premise = cleanStatement(PREMISE, premise, linker);
-                    arg = new Argument(sentenceID, sentenceText, claim, premise, mainVerb, approach, linker);
+                    
+                    // Create argument object
+                    Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
+                    Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
+                    arg = new Argument(sentenceID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
                 }
             }
         }
