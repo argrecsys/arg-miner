@@ -283,6 +283,7 @@ public class StringUtils {
         String newText = text.trim();
         newText = newText.replaceAll("\\.+$", "");
         newText = newText.replaceAll("\\,+$", "");
+        newText = newText.replaceAll("\\!+$", "");
         return newText;
     }
     

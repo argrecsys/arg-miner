@@ -26,6 +26,33 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 16516
     },
+    "15004-1": {
+        "sentence": "Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos",
+        "linker": {
+            "relationType": "support",
+            "linker": "porque",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos",
+            "nouns": "[transporte, personas, ayi, atascos]"
+        },
+        "mainVerb": "Estaria",
+        "claim": {
+            "entities": "[Moncloa, Alonso Martinez, EMT]",
+            "text": "Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa",
+            "nouns": "[bus]"
+        },
+        "majorClaim": {
+            "entities": "[Moncloa, Alonso Martinez]",
+            "text": "Un bus que vaya de Alonso Martinez a Moncloa",
+            "nouns": "[bus]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 15004
+    },
     "992-1": {
         "sentence": "Rellenar los alcorques de los arboles porque el hueco ocupa media acera",
         "linker": {
@@ -116,8 +143,8 @@
         },
         "premise": {
             "entities": "[]",
-            "text": "que no se convierta en una ciudad sin ley !!",
-            "nouns": "[ciudad, ciudad, ley, !!]"
+            "text": "que no se convierta en una ciudad sin ley",
+            "nouns": "[ciudad, ciudad, ley]"
         },
         "mainVerb": "convierta",
         "claim": {
@@ -159,6 +186,33 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4671
+    },
+    "6600-1": {
+        "sentence": "Saconia esta muy cerca de Plaza de Castilla pero no existe transporte publico entre ambas.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "no existe transporte publico entre ambas",
+            "nouns": "[transporte]"
+        },
+        "mainVerb": "existe",
+        "claim": {
+            "entities": "[Plaza de, Saconia]",
+            "text": "Saconia esta muy cerca de Plaza de Castilla",
+            "nouns": "[]"
+        },
+        "majorClaim": {
+            "entities": "[Saconia Plaza de]",
+            "text": "Transporte Saconia Plaza de Castilla",
+            "nouns": "[]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 6600
     },
     "8296-1": {
         "sentence": "Colocar la imagen de la Virgen de la Almudena en el torreon 2 pues la tradicion dice que fue alli donde se encontro",
@@ -322,6 +376,33 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 16479
     },
+    "8116-1": {
+        "sentence": "La idea es que el abono transportes se renueve automaticamente (obviamente como opcion, pues quiza todo el mundo no quiere).",
+        "linker": {
+            "relationType": "support",
+            "linker": "pues",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "quiza todo el mundo no quiere",
+            "nouns": "[mundo]"
+        },
+        "mainVerb": "renueve",
+        "claim": {
+            "entities": "[]",
+            "text": "que el abono transportes se renueve automaticamente ( obviamente como opcion",
+            "nouns": "[transportes, opcion]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "ABONO TRANSPORTE COMO SUSCRIPCION",
+            "nouns": "[TRANSPORTE]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 8116
+    },
     "24451-1": {
         "sentence": "reunificar las propuestas repetidas pues al votarse por separado falsea el resultado al ir separadas,,",
         "linker": {
@@ -403,6 +484,32 @@
         "approach": "A1 -> C+L+P",
         "proposalID": 17524
     },
+    "17562-1": {
+        "sentence": "El barrio de Saconia (Valdezarza) esta relativamente cerca a la estacion de Chamartin, pero no hay transporte publico que una directamente estos lugares.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "no hay transporte publico que una directamente estos lugares",
+            "nouns": "[transporte, lugares]"
+        },
+        "claim": {
+            "entities": "[Valdezarza, Chamartin, Saconia]",
+            "text": "El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin",
+            "nouns": "[barrio, estacion]"
+        },
+        "majorClaim": {
+            "entities": "[Chamartin]",
+            "text": "Conectar Valdezarza con la estacion de Chamartin",
+            "nouns": "[estacion]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 17562
+    },
     "15538-1": {
         "sentence": "El Ayuntamiento no concreta si sera bajada de precios para todos o por el contrario subida para las clases mas desprotegidas como pensionistas, estudiantes etc....",
         "linker": {
@@ -457,6 +564,33 @@
         "approach": "A1 -> C+L+P",
         "proposalID": 15707
     },
+    "11530-1": {
+        "sentence": "Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte, pero limitando su utilizacion a la red de Metro y Autobus.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[Autobus, Metro]",
+            "text": "limitando su utilizacion a la red de Metro y Autobus",
+            "nouns": "[utilizacion, red]"
+        },
+        "mainVerb": "Crear",
+        "claim": {
+            "entities": "[Metro, Abono Transporte]",
+            "text": "Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte",
+            "nouns": "[Tarjeta, funcionamiento]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Abono Metro Bus  Recargable via app",
+            "nouns": "[app]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 11530
+    },
     "7250-1": {
         "sentence": "Se pueden producir accidentes en la calle porque las senales pueden ser confusas",
         "linker": {
@@ -483,6 +617,33 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 7250
+    },
+    "4107-1": {
+        "sentence": "Existen numerosas discapacidades hoy en dia, pero solo hay 2 opciones para el transporte publico, y para ambas has de tener mas de un 65% de discapacidad reconocida.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "solo hay 2 opciones para el transporte publico , y para ambas has de tener mas de un 65 % de discapacidad reconocida",
+            "nouns": "[opciones, transporte, discapacidad]"
+        },
+        "mainVerb": "Existen",
+        "claim": {
+            "entities": "[]",
+            "text": "Existen numerosas discapacidades hoy en dia",
+            "nouns": "[discapacidades, dia, discapacidad]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Descuentos en transporte para personas con discapacidad",
+            "nouns": "[Descuentos, transporte, personas, discapacidad]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 4107
     },
     "23248-1": {
         "sentence": "En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.",
@@ -619,6 +780,60 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 340
     },
+    "1432-1": {
+        "sentence": "El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli, pero es falso, metro de legazpi queda lejos y los autobuses son nulos.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "es falso , metro de legazpi queda lejos y los autobuses son nulos",
+            "nouns": "[metro, legazpi, autobuses]"
+        },
+        "mainVerb": "creo",
+        "claim": {
+            "entities": "[]",
+            "text": "El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli",
+            "nouns": "[parque, madrid, rio, transporte, alli]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "transporte publico en madrid rio",
+            "nouns": "[transporte, madrid, rio]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 1432
+    },
+    "24693-1": {
+        "sentence": "Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico, pero para ello seria bueno empezar por una bajada de precios y del tiempo de espera!!!!",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "para ello seria bueno empezar por una bajada de precios y del tiempo de espera",
+            "nouns": "[bajada, precios, tiempo, espera]"
+        },
+        "mainVerb": "mirar",
+        "claim": {
+            "entities": "[]",
+            "text": "Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico",
+            "nouns": "[mejora, medio, ambiente, uso, transporte]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "MEJORA DEL TRANSPORTE PUBLICO",
+            "nouns": "[MEJORA, TRANSPORTE]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 24693
+    },
     "19803-1": {
         "sentence": "Proponemos una reforestacion en la M30 debido a que nos han talado toda la zona (como si estuviesemos para perder flora.)",
         "linker": {
@@ -645,6 +860,33 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 19803
+    },
+    "1287-1": {
+        "sentence": "El transporte en Madrid es bueno pero tiene sus defectos.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "pero",
+            "subCategory": "DIRECT",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "tiene sus defectos",
+            "nouns": "[defectos]"
+        },
+        "mainVerb": "tiene",
+        "claim": {
+            "entities": "[]",
+            "text": "El transporte en Madrid es bueno",
+            "nouns": "[transporte]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Autobus circular",
+            "nouns": "[]"
+        },
+        "approach": "A1 -> C+L+P",
+        "proposalID": 1287
     },
     "7341-1": {
         "sentence": "Veo talar arboles y arbustos pero no se replantan",
