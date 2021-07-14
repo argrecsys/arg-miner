@@ -49,13 +49,28 @@ public class StringUtils {
      * @param delimiter
      * @return 
      */
-    public static String getLatestToken(String str, String delimiter) {
-        String latestToken = "";
+    public static String getFirstToken(String str, String delimiter) {
+        String firstToken = "";
         String[] tokens = str.split(delimiter);
         if (tokens.length > 0) {
-            latestToken = tokens[tokens.length - 1];
+            firstToken = tokens[0];
         }
-        return latestToken;
+        return firstToken;
+    }
+    
+    /**
+     * 
+     * @param str
+     * @param delimiter
+     * @return 
+     */
+    public static String getLastToken(String str, String delimiter) {
+        String lastToken = "";
+        String[] tokens = str.split(delimiter);
+        if (tokens.length > 0) {
+            lastToken = tokens[tokens.length - 1];
+        }
+        return lastToken;
     }
     
     /**

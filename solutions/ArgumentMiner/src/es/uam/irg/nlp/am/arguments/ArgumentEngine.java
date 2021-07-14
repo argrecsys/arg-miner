@@ -173,7 +173,7 @@ public class ArgumentEngine implements Constants {
         
         if (statType.equals(CLAIM)) {
             newStatement = StringUtils.cleanText(statement, "one");
-            latestToken = StringUtils.getLatestToken(newStatement, " ");
+            latestToken = StringUtils.getLastToken(newStatement, " ");
             
             if (latestToken.equals("y") || latestToken.equals("o")) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);

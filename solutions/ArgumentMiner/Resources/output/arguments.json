@@ -431,7 +431,7 @@
         "proposalID": 15538
     },
     "15707-1": {
-        "sentence": "El bus 5 pasa por general martinez campos pero no para ayi",
+        "sentence": "El bus 5 pasa por general martinez campos pero no para allí.",
         "linker": {
             "relationType": "attack",
             "linker": "pero",
@@ -440,7 +440,7 @@
         },
         "premise": {
             "entities": "[]",
-            "text": "no para ayi",
+            "text": "no para allí",
             "nouns": "[]"
         },
         "mainVerb": "pasa",

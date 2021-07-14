@@ -5,6 +5,10 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.utils.StringUtils;
+import org.bson.Document;
+import org.json.JSONObject;
+
 /**
  * Argument class. The premise justifies, gives reasons for or supports the conclusion (claim).
  * 
@@ -22,6 +26,7 @@ public class Argument {
     public String sentenceID;
     public String sentenceText;
     private boolean isValid;
+    private int proposalID;
     
     /**
      * Empty constructor.
@@ -31,6 +36,8 @@ public class Argument {
      */
     public Argument(String sentenceID, String sentenceText) {
         this(sentenceID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE");
+        this.proposalID = -1;
+        
         this.isValid = false;
     }
     
@@ -53,7 +60,50 @@ public class Argument {
         this.mainVerb = mainVerb;
         this.linker = linker;
         this.approach = approach;
+        if (!StringUtils.isEmpty(this.sentenceID)) {
+            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
+        }
+        
         this.isValid = true;
+    }
+    
+    /**
+     * Create Document argument.
+     *
+     * @return
+     */
+    public Document getDocument() {
+        Document doc = new Document();
+        doc.append("argumentID", this.sentenceID)
+                .append("proposalID", this.proposalID)
+                .append("sentence", this.sentenceText)
+                .append("majorClaim", this.majorClaim.getDocument())
+                .append("claim", this.claim.getDocument())
+                .append("premise", this.premise.getDocument())
+                .append("linker", this.linker.getDocument())
+                .append("mainVerb", this.mainVerb)
+                .append("approach", this.approach);
+        
+        return doc;
+    }
+    
+    /**
+     * Create JSON argument.
+     *
+     * @return
+     */
+    public JSONObject getJSON() {
+        JSONObject json = new JSONObject();
+        json.put("proposalID", this.proposalID);
+        json.put("sentence", this.sentenceText);
+        json.put("majorClaim",this.majorClaim.getJSON());
+        json.put("claim", this.claim.getJSON());
+        json.put("premise", this.premise.getJSON());
+        json.put("linker", this.linker.getJSON());
+        json.put("mainVerb", this.mainVerb);
+        json.put("approach", this.approach);
+        
+        return json;
     }
     
     /**

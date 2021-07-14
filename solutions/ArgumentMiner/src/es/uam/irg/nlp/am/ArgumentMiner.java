@@ -182,22 +182,10 @@ public class ArgumentMiner {
         if (arguments != null) {
             JSONObject argList = new JSONObject();
             
+            // Store JSON objects
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
                 for (Argument arg : entry.getValue()) {
-                    
-                    // Create JSON argument
-                    JSONObject item = new JSONObject();
-                    item.put("proposalID", entry.getKey());
-                    item.put("sentence", arg.sentenceText);
-                    item.put("majorClaim", arg.majorClaim.getJSON());
-                    item.put("claim", arg.claim.getJSON());
-                    item.put("premise", arg.premise.getJSON());
-                    item.put("linker", arg.linker.getJSON());
-                    item.put("mainVerb", arg.mainVerb);
-                    item.put("approach", arg.approach);
-                    
-                    // Store JSON object
-                    argList.put(arg.sentenceID, item);
+                    argList.put(arg.sentenceID, arg.getJSON());
                 }
             }
             
@@ -218,33 +206,20 @@ public class ArgumentMiner {
         boolean result = false;
         
         if (arguments != null) {
-            MongoDbManager manager = new MongoDbManager();
             List<Document> argList = new ArrayList<>();
             List<Bson> argFilter = new ArrayList<>();
 
+            // Store Document objects
             for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
                 for (Argument arg : entry.getValue()) {
-                    
-                    // Create Document argument
-                    Document doc = new Document();
-                    doc.append("argumentID", arg.sentenceID)
-                       .append("proposalID", entry.getKey())
-                       .append("sentence", arg.sentenceText)
-                       .append("majorClaim", arg.majorClaim.getDocument())
-                       .append("claim", arg.claim.getDocument())
-                       .append("premise", arg.premise.getDocument())
-                       .append("linker", arg.linker.getDocument())
-                       .append("mainVerb", arg.mainVerb)
-                       .append("approach", arg.approach);
-                    
-                    // Store Document object
-                    argList.add(doc);
+                    argList.add(arg.getDocument());
                     argFilter.add(Filters.eq("argumentID", arg.sentenceID));
                 }
             }
             
             // Upsert documents
             if (argList.size() > 0) {
+                MongoDbManager manager = new MongoDbManager();
                 result = manager.upsertDocuments("annotations", argList, argFilter, new UpdateOptions().upsert(true));
             }
         }
