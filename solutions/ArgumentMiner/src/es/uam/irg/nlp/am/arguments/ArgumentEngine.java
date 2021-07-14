@@ -106,15 +106,10 @@ public class ArgumentEngine implements Constants {
             
                 // 7. Get named entity recognition (NER) in document
                 Map<String, String> entities = getNamedEntities(pipeline, sentenceText);
-                List<String> entityList = new ArrayList<>();
-
-                entities.entrySet().forEach(entry -> {
-                    //System.out.println(entry.getKey() + ": " + entry.getValue());
-                    entityList.add(entry.getKey());
-                });
+                List<String> entityList = new ArrayList<>(entities.keySet());
                 
                 // 8. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
-                List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText);
+                List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText, Arrays.asList("NOUN", "VERB"));
                 List<String> nounList = new ArrayList<>();
                 List<String> verbList = new ArrayList<>();
 
@@ -172,16 +167,16 @@ public class ArgumentEngine implements Constants {
         String latestToken;
         
         if (statType.equals(CLAIM)) {
-            newStatement = StringUtils.cleanText(statement, "one");
+            newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_RIGHT);
             latestToken = StringUtils.getLastToken(newStatement, " ");
             
             if (latestToken.equals("y") || latestToken.equals("o")) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
-                newStatement = StringUtils.cleanText(newStatement, "one");
+                newStatement = StringUtils.cleanText(newStatement, StringUtils.CLEAN_RIGHT);
             }
         }
         else if (statType.equals(PREMISE)) {
-            newStatement = StringUtils.cleanText(statement, "both");
+            newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_BOTH);
             
             if (linker != null) {
                 newStatement = newStatement.replace(linker.linker, "").trim();
@@ -224,24 +219,18 @@ public class ArgumentEngine implements Constants {
      * @return 
      */
     private Sentence createMajorClaim(StanfordCoreNLP pipeline, String text) {
-        
-        text = StringUtils.cleanText(text, "one");
+        text = StringUtils.cleanText(text, StringUtils.CLEAN_RIGHT);
         
         // Get nouns (from POS) in document title
-        List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text);
+        List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, Arrays.asList("NOUN"));
         List<String> nounList = new ArrayList<>();
-        for (CoreLabel token : tokens) {
-            if (token.tag().equals("NOUN")) {
-                nounList.add(token.word());
-            }
-        }
+        tokens.forEach(token -> {
+            nounList.add(token.word());
+        });
 
         // Get named entity recognition (NER) in document title
         Map<String, String> entities = getNamedEntities(pipeline, text);
-        List<String> entityList = new ArrayList<>();
-        entities.entrySet().forEach(entry -> {
-            entityList.add(entry.getKey());
-        });
+        List<String> entityList = new ArrayList<>(entities.keySet());
         
         return new Sentence(text, nounList, entityList);
     }
@@ -256,7 +245,7 @@ public class ArgumentEngine implements Constants {
         String nGram = "";
         
         try {
-            String newText = StringUtils.cleanText(text, "both");
+            String newText = StringUtils.cleanText(text, StringUtils.CLEAN_BOTH);
             String[] tokens = newText.split(" ");
             
             if (tokens.length > 0) {
@@ -296,9 +285,23 @@ public class ArgumentEngine implements Constants {
      * @param sentenceText
      * @return 
      */
-    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText) {
+    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText, List<String> labels) {
+        List<CoreLabel> tokens;
         CoreDocument document = pipeline.processToCoreDocument(sentenceText);
-        return document.tokens();
+        
+        if (labels != null) {
+            tokens = new ArrayList<>();
+            for (CoreLabel token : document.tokens()) {
+                if (labels.contains(token.tag())) {
+                    tokens.add(token);
+                }
+            }
+        }
+        else {
+            tokens = new ArrayList<>(document.tokens());
+        }
+        
+        return tokens;
     }
     
     /**
@@ -364,14 +367,14 @@ public class ArgumentEngine implements Constants {
     private String identifyMainVerb(String sentence, List<String> verbList) {
         String mainVerb = null;
         
-        for (int i = 0; i < verbList.size() && mainVerb == null; i++) {
-            String verb = verbList.get(i);
-            if (sentence.contains(verb)) {
-                mainVerb = verb;
+        for (int i = 0; i < verbList.size(); i++) {
+            mainVerb = verbList.get(i);
+            if (sentence.contains(mainVerb)) {
+                return mainVerb;
             }
         }
         
-        return mainVerb;
+        return null;
     }
     
     /**
@@ -420,7 +423,7 @@ public class ArgumentEngine implements Constants {
             }
             else if (syntagma.depth == 1 && premise != null) {
                 String nGram = syntagma.text.replace(claim, "").replace(premise, "");
-                nGram = StringUtils.cleanText(nGram, "both").replace(" ", Constants.NGRAMS_DELIMITER);
+                nGram = StringUtils.cleanText(nGram, StringUtils.CLEAN_BOTH).replace(" ", Constants.NGRAMS_DELIMITER);
                 
                 if (linker.isEquals(nGram)) {
                     

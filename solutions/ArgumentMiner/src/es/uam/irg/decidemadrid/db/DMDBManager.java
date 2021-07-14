@@ -118,7 +118,7 @@ public class DMDBManager {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         String whereCond = "";
         
-        for (int i=0; i < linkers.getNLinkers(); i++) {
+        for (int i = 0; i < linkers.getNLinkers(); i++) {
             whereCond += (i > 0 ? " OR" : "") + " summary LIKE '%" + linkers.getLinker(i).linker + "%'";
         }
         

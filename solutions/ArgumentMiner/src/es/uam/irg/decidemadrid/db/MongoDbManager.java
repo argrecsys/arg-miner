@@ -70,7 +70,7 @@ public class MongoDbManager {
         boolean result = true;
         
         if (docs.size() == filters.size()) {
-            for (int i=0; i < docs.size(); i++) {
+            for (int i = 0; i < docs.size(); i++) {
                 Document doc = docs.get(i);
                 Bson filter = filters.get(i);
                 result &= upsertDocument(collName, doc, filter, options);
