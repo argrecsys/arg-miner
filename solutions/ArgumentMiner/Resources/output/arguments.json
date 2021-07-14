@@ -81,7 +81,7 @@
         "proposalID": 992
     },
     "4696-1": {
-        "sentence": "Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminacion que tienen.",
+        "sentence": "Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminación que tienen.",
         "linker": {
             "relationType": "support",
             "linker": "debido a",
@@ -90,8 +90,8 @@
         },
         "premise": {
             "entities": "[]",
-            "text": "la baja iluminacion que tienen",
-            "nouns": "[baja]"
+            "text": "la baja iluminación que tienen",
+            "nouns": "[baja, iluminación]"
         },
         "mainVerb": "vuelto",
         "claim": {
@@ -101,7 +101,7 @@
         },
         "majorClaim": {
             "entities": "[]",
-            "text": "Iluminacion de pasos de cebra",
+            "text": "Iluminación de pasos de cebra",
             "nouns": "[pasos, cebra]"
         },
         "approach": "A2 -> C+(L+P)",
