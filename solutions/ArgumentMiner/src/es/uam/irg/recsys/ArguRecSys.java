@@ -6,13 +6,24 @@
 package es.uam.irg.recsys;
 
 import es.uam.irg.decidemadrid.db.MongoDbManager;
+import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.bson.Document;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Attr;
+import org.w3c.dom.Element;
+import java.io.File;
 
 /**
  *
@@ -48,7 +59,10 @@ public class ArguRecSys {
             System.out.println(aspects);
             
             // Save arguments
-            result = saveRecommendations(arguments, aspects, minAspectOccur);
+            Map<String, List<Argument>> recommendations = getRecommendations(arguments, aspects, minAspectOccur);
+            System.out.println(">> Total recommended topics: " + recommendations.size());
+            
+            result = saveRecommendations(topic, recommendations);
             if (result) {
                 System.out.println(">> Recommendations saved correctly.");
             }
@@ -85,10 +99,13 @@ public class ArguRecSys {
     private Map<String, Integer> getFreqAspects(List<Argument> arguments) {
         Map<String, Integer> aspects = new HashMap<>();
         List<String> listAspects = new ArrayList<>();
+        Set<String> nouns;
         int count;
         
         for (Argument argument : arguments) {
-            listAspects.addAll(argument.getNounsSet());
+            nouns = argument.getNounsSet();
+            listAspects.addAll(nouns);
+            System.out.println(argument.sentenceID + ": " + nouns.toString());
         }
         
         for (String value : listAspects) {
@@ -106,11 +123,11 @@ public class ArguRecSys {
      * @param minAspectOccur
      * @return 
      */
-    private boolean saveRecommendations(List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
-        boolean result = false;
+    private Map<String, List<Argument>> getRecommendations(List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
+        Map<String, List<Argument>> result = new HashMap<>();
+        Map<String, List<Argument>> recommendations = new HashMap<>();
         
         // Local variables
-        Map<String, List<Argument>> recommendations = new HashMap<>();
         String aspect;
         List<String> argUsed = new ArrayList<>();
         
@@ -133,12 +150,72 @@ public class ArguRecSys {
         
         System.out.println(argUsed);
         for (Map.Entry<String, List<Argument>> recommendation : recommendations.entrySet()) {
-            if (recommendation.getValue().size() > minAspectOccur) {
+            if (recommendation.getValue().size() >= minAspectOccur) {
+                result.put(recommendation.getKey(), recommendation.getValue());
                 System.out.println(recommendation.getKey() + ", " + recommendation.getValue().size());
             }
         }
-        System.out.println(recommendations);
         
         return result;
     }
+
+    /**
+     * 
+     * @param recommendations
+     * @return 
+     */
+    private boolean saveRecommendations(String topic, Map<String, List<Argument>> recommendations) {
+        boolean result = false;
+        
+        try {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            org.w3c.dom.Document doc = dBuilder.newDocument();
+
+            // Toot element
+            Element rootElement = doc.createElement("recommendations");
+            doc.appendChild(rootElement);
+            
+            // Topic element
+            Element nTopic = doc.createElement("topic");
+            Attr attr = doc.createAttribute("value");
+            attr.setValue(topic);
+            nTopic.setAttributeNode(attr);
+            rootElement.appendChild(nTopic);
+            
+            for (Map.Entry<String, List<Argument>> entry : recommendations.entrySet()) {
+                
+                // Topic element
+                Element nAspect = doc.createElement("aspect");
+                Attr nAttr = doc.createAttribute("value");
+                nAttr.setValue(entry.getKey());
+                nAspect.setAttributeNode(nAttr);
+                rootElement.appendChild(nAspect);
+                
+                for (Argument argument : entry.getValue()) {
+                    
+                    // Argument element
+                    Element nArgu = doc.createElement("argument");
+                    Attr attrType = doc.createAttribute("id");
+                    attrType.setValue(argument.sentenceID);
+                    nArgu.setAttributeNode(attrType);
+                    nAspect.appendChild(nArgu);
+                }
+            }
+
+            // Write the content into xml file
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+            StreamResult stream = new StreamResult(new File(Constants.RECOMMENDATIONS_FILEPATH));
+            transformer.transform(source, stream);
+            result = true;
+            
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        
+        return result;
+    }
+    
 }

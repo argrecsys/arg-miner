@@ -808,7 +808,7 @@
         "proposalID": 340
     },
     "1432-1": {
-        "sentence": "El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli, pero es falso, metro de legazpi queda lejos y los autobuses son nulos.",
+        "sentence": "El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí, pero es falso, metro de Legazpi queda lejos y los autobuses son nulos.",
         "linker": {
             "relationType": "attack",
             "linker": "pero",
@@ -816,15 +816,15 @@
             "category": "CONTRAST"
         },
         "premise": {
-            "entities": "[]",
-            "text": "es falso , metro de legazpi queda lejos y los autobuses son nulos",
-            "nouns": "[metro, legazpi, autobuses]"
+            "entities": "[Legazpi]",
+            "text": "es falso , metro de Legazpi queda lejos y los autobuses son nulos",
+            "nouns": "[metro, autobuses]"
         },
-        "mainVerb": "creo",
+        "mainVerb": "creó",
         "claim": {
             "entities": "[]",
-            "text": "El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli",
-            "nouns": "[parque, madrid, rio, transporte, alli]"
+            "text": "El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí",
+            "nouns": "[parque, transporte]"
         },
         "majorClaim": {
             "entities": "[]",

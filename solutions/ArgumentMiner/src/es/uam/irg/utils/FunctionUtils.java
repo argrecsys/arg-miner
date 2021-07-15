@@ -71,23 +71,6 @@ public class FunctionUtils {
     }
     
     /**
-     * 
-     * @param list
-     * @return 
-     */
-    public static List<String> listToLowerCase(List<String> list) {
-        List<String> newList = new ArrayList<>();
-        
-        for (String item : list) {
-            if (item.trim().length() > 0) {
-                newList.add(item.trim().toLowerCase());
-            }
-        }
-        
-        return newList;
-    }
-    
-    /**
      *
      * @param map
      * @return

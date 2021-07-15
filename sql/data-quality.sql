@@ -2,7 +2,12 @@ USE `decide.madrid_2019_09`;
 
 SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation
   FROM proposals
- WHERE id IN (4696, 15004, 15707, 23248);
+ WHERE id IN (1432, 4696, 15004, 15707, 23248);
+
+-- summary: El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli, pero es falso, metro de legazpi queda lejos y los autobuses son nulos.
+UPDATE proposals
+   SET summary = 'El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí, pero es falso, metro de Legazpi queda lejos y los autobuses son nulos.'
+ WHERE id = 1432;
 
 -- title: Iluminacion de pasos de cebra
 -- summary: Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminacion que tienen.

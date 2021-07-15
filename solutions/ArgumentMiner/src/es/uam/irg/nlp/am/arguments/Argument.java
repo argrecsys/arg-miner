@@ -7,7 +7,10 @@ package es.uam.irg.nlp.am.arguments;
 
 import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.bson.Document;
 import org.json.JSONObject;
@@ -143,9 +146,9 @@ public class Argument {
      */
     public Set<String> getNounsSet() {
         Set<String> nouns = new HashSet<>();
-        nouns.addAll(FunctionUtils.listToLowerCase(this.majorClaim.nouns));
-        nouns.addAll(FunctionUtils.listToLowerCase(this.claim.nouns));
-        nouns.addAll(FunctionUtils.listToLowerCase(this.premise.nouns));
+        nouns.addAll(processNouns(this.majorClaim.nouns));
+        nouns.addAll(processNouns(this.claim.nouns));
+        nouns.addAll(processNouns(this.premise.nouns));
         return nouns;
     }
     
@@ -164,6 +167,20 @@ public class Argument {
      */
     public boolean isValid() {
         return this.isValid;
+    }
+
+    private List<String> processNouns(List<String> nouns) {
+        List<String> newList = new ArrayList<>();
+        String noun;
+        
+        for (String item : nouns) {
+            noun = item.trim();
+            if (noun.length() > 0) {
+                newList.add(noun.toLowerCase());
+            }
+        }
+        
+        return newList;
     }
         
 }
