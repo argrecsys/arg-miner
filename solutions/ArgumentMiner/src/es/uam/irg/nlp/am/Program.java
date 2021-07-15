@@ -16,7 +16,7 @@ public class Program {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(">> PROGRAM BEGINS");
+        System.out.println(">> ARGMINER BEGINS");
         
         // Program hyperparameters with default values
         String language = Constants.LANG_ES;
@@ -43,7 +43,7 @@ public class Program {
             System.err.println(">> The Argument Miner engine had an unexpected error.");
         }
         
-        System.out.println(">> PROGRAM ENDS");
+        System.out.println(">> ARGMINER ENDS");
     }
     
 }

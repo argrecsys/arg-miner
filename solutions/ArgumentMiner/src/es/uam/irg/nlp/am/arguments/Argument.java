@@ -68,6 +68,26 @@ public class Argument {
     }
     
     /**
+     * 
+     * @param doc 
+     */
+    public Argument(Document doc) {
+        this.sentenceID = doc.getString("argumentID");
+        this.sentenceText = doc.getString("argumentID");
+        this.majorClaim = new Sentence(doc.get("majorClaim", Document.class));
+        this.claim = new Sentence(doc.get("claim", Document.class));
+        this.premise = new Sentence(doc.get("premise", Document.class));
+        this.mainVerb = doc.getString("mainVerb");
+        this.linker = new ArgumentLinker(doc.get("linker", Document.class));
+        this.approach = doc.getString("approach");
+        if (!StringUtils.isEmpty(this.sentenceID)) {
+            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
+        }
+        
+        this.isValid = true;
+    }
+    
+    /**
      * Create Document argument.
      *
      * @return

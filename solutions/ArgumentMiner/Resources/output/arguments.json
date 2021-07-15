@@ -241,6 +241,33 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 8296
     },
+    "1985-1": {
+        "sentence": "Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte dado que no existe alternativa, solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30.",
+        "linker": {
+            "relationType": "support",
+            "linker": "dado que",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30",
+            "nouns": "[alternativa, bus, taxi]"
+        },
+        "mainVerb": "Incluir",
+        "claim": {
+            "entities": "[]",
+            "text": "Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte",
+            "nouns": "[servicio, autobus, aeropuerto, transporte, bus]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Incluir el Bus nocturno del aeropuerto en el abono",
+            "nouns": "[aeropuerto, abono]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 1985
+    },
     "23783-1": {
         "sentence": "Instar a Telefonica a retirar inmediatamente todas las cabinas de Madrid, dado que el servicio de telefonos publicos ya no existe oficialmente.",
         "linker": {

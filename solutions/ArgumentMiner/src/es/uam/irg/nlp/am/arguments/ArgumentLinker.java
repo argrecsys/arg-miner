@@ -47,6 +47,19 @@ public class ArgumentLinker {
         this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
     }
     
+    /**
+     * 
+     * @param doc 
+     */
+    public ArgumentLinker(Document doc) {
+        this.category = doc.getString("category");
+        this.subCategory = doc.getString("subCategory");
+        this.relationType = doc.getString("relationType");
+        this.linker = doc.getString("linker");
+        this.nTokens = linker.split(" ").length;
+        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+    }
+    
     public Document getDocument() {
         Document doc = new Document();
         doc.append("linker", this.linker)

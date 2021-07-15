@@ -5,6 +5,7 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.List;
 import org.bson.Document;
@@ -15,7 +16,7 @@ import org.json.JSONObject;
  * @author ansegura
  */
 public class Sentence {
-    
+
     public List<String> entities;
     public List<String> nouns;
     public String text;
@@ -28,6 +29,12 @@ public class Sentence {
         this.text = text;
         this.nouns = nouns;
         this.entities = entities;
+    }
+    
+    public Sentence(Document doc) {
+        this.text = doc.getString("text");
+        this.nouns = FunctionUtils.createListFromText(doc.getString("nouns"));
+        this.entities = FunctionUtils.createListFromText(doc.getString("entities"));
     }
     
     public Document getDocument() {
@@ -47,5 +54,5 @@ public class Sentence {
         
         return json;
     }
-    
+        
 }

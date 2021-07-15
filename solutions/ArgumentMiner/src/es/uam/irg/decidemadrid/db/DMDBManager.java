@@ -62,10 +62,10 @@ public class DMDBManager {
     
     public Map<Integer, DMProposal> selectCustomProposals(int topN) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
-        Integer[] proposalList = {340, 867, 992, 1267, 1287, 1432, 4107, 4671, 4696, 6600, 
-                                  7250, 7341, 8116, 8296, 11402, 11530, 11890, 15004, 15538, 15707, 
-                                  16479, 16516, 17080, 17524, 17562, 18138, 18302, 19615, 19803, 23248, 
-                                  23783, 24451, 24600, 24693};
+        Integer[] proposalList = {340, 867, 992, 1267, 1287, 1432, 1985, 4107, 4671, 4696, 
+                                  6600, 7250, 7341, 8116, 8296, 11402, 11530, 11890, 15004, 15538, 
+                                  15707, 16479, 16516, 17080, 17524, 17562, 18138, 18302, 19615, 19803, 
+                                  23248, 23783, 24451, 24600, 24693};
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " +

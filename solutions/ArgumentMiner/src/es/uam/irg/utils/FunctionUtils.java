@@ -5,14 +5,16 @@
  */
 package es.uam.irg.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *
  * @author ansegura
  */
 public class FunctionUtils {
-        
+    
     /**
      *
      * @param <T>
@@ -34,6 +36,16 @@ public class FunctionUtils {
         }
         
         return result;
+    }
+    
+    /**
+     *
+     * @param array
+     * @return
+     */
+    public static List<String> createListFromText(String array) {
+        array = array.replace("[", "").replace("]", "");
+        return new ArrayList<>(Arrays.asList(array.split(",")));
     }
     
     /**
