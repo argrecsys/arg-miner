@@ -7,7 +7,10 @@ package es.uam.irg.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -65,6 +68,40 @@ public class FunctionUtils {
         }
         
         return newArray;
+    }
+    
+    /**
+     * 
+     * @param list
+     * @return 
+     */
+    public static List<String> listToLowerCase(List<String> list) {
+        List<String> newList = new ArrayList<>();
+        
+        for (String item : list) {
+            if (item.trim().length() > 0) {
+                newList.add(item.trim().toLowerCase());
+            }
+        }
+        
+        return newList;
+    }
+    
+    /**
+     *
+     * @param map
+     * @return
+     */
+    public static Map<String, Integer> sortMapByValue(Map<String, Integer> map) {
+        LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+
+        //Use Comparator.reverseOrder() for reverse ordering
+        map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+        
+        return reverseSortedMap;
     }
     
 }

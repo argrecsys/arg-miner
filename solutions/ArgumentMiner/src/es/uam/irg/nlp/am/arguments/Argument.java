@@ -5,7 +5,10 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
+import java.util.HashSet;
+import java.util.Set;
 import org.bson.Document;
 import org.json.JSONObject;
 
@@ -138,6 +141,18 @@ public class Argument {
      * 
      * @return 
      */
+    public Set<String> getNounsSet() {
+        Set<String> nouns = new HashSet<>();
+        nouns.addAll(FunctionUtils.listToLowerCase(this.majorClaim.nouns));
+        nouns.addAll(FunctionUtils.listToLowerCase(this.claim.nouns));
+        nouns.addAll(FunctionUtils.listToLowerCase(this.premise.nouns));
+        return nouns;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
     public String getString() {
         return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", 
                 this.sentenceID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
@@ -150,5 +165,5 @@ public class Argument {
     public boolean isValid() {
         return this.isValid;
     }
-    
+        
 }

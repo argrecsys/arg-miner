@@ -27,7 +27,7 @@
         "proposalID": 16516
     },
     "15004-1": {
-        "sentence": "Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos",
+        "sentence": "Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos",
         "linker": {
             "relationType": "support",
             "linker": "porque",
@@ -36,8 +36,8 @@
         },
         "premise": {
             "entities": "[]",
-            "text": "facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos",
-            "nouns": "[transporte, personas, ayi, atascos]"
+            "text": "facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos",
+            "nouns": "[transporte, personas, atascos]"
         },
         "mainVerb": "Estaria",
         "claim": {

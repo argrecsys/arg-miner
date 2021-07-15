@@ -20,15 +20,20 @@ public class RecSys {
         
         // Program hyperparameters with default values
         String topic = "transporte";
+        int minAspectOccur = 0;
         
         // Read input parameters
         if (args.length > 0) {
             topic = args[0].toLowerCase();
+            
+            if (args.length > 1) {
+                minAspectOccur = Integer.parseInt(args[1]);
+            }
         }
         System.out.format(">> Topic selected: %s\n", topic);
         
         // Run program
-        ArguRecSys recSys = new ArguRecSys(topic);
+        ArguRecSys recSys = new ArguRecSys(topic, minAspectOccur);
         boolean result = recSys.runRecSys();
         
         if (result) {

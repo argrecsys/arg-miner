@@ -17,6 +17,7 @@ public interface Constants {
     public static final String LANG_ES = "es";
     public static final String NGRAMS_DELIMITER = "-";
     public static final String OUTPUT_FILEPATH = "Resources/output/arguments.json";
+    public static final String RECOMMENDATIONS_FILEPATH = "Resources/output/recommendations_{0}.json";
     public static final String SPANISH_PROPERTIES = "Resources/config/StanfordCoreNLP-spanish.properties";
     public static final String TAXONOMY_FILEPATH = "Resources/dataset/lexicon-min.csv";
     

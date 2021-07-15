@@ -2,7 +2,7 @@ USE `decide.madrid_2019_09`;
 
 SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation
   FROM proposals
- WHERE id IN (4696, 15707, 23248);
+ WHERE id IN (4696, 15004, 15707, 23248);
 
 -- title: Iluminacion de pasos de cebra
 -- summary: Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminacion que tienen.
@@ -10,6 +10,11 @@ UPDATE proposals
    SET title = 'Iluminación de pasos de cebra'
      , summary = 'Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminación que tienen.'
  WHERE id = 4696;
+
+-- summary: Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos
+UPDATE proposals
+   SET summary = 'Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos'
+ WHERE id = 15004;
 
 -- summary: El bus 5 pasa por general martinez campos pero no para ayi
 UPDATE proposals
