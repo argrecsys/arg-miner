@@ -24,7 +24,7 @@ public class Program {
         
         // Read input parameters
         if (args.length > 0) {
-            language = args[0];
+            language = args[0].toLowerCase();
             
             if (args.length > 1) {
                 maxProposal = Integer.parseInt(args[1]);

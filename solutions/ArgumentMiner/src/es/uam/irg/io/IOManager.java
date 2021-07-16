@@ -18,6 +18,12 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import org.yaml.snakeyaml.Yaml;
 
 /**
@@ -106,6 +112,7 @@ public class IOManager implements Constants {
                 Yaml yaml = new Yaml();
                 data = (Map<String, Object>) yaml.load(inputStream);
             }
+        
         } catch (FileNotFoundException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -115,25 +122,51 @@ public class IOManager implements Constants {
     
     /**
      * 
-     * @param data
+     * @param source
      * @param filepath
      * @return 
      */
-    public static boolean saveJsonFile(String data, String filepath) {
-       boolean result = false;
-       
-       FileWriter writer;
-       
-       try {
-           writer = new FileWriter(filepath);
-           writer.write(data);
-           writer.close();
-           result = true;
-           
-       } catch (IOException ex) {
-           Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
-       }
-       
-       return result;
+    public static boolean saveDomToXML(DOMSource source, String filepath) {
+        boolean result = false;
+        
+        try {
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            
+            StreamResult stream = new StreamResult(new File(filepath));
+            transformer.transform(source, stream);
+            result = true;
+            
+        } catch (TransformerException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return result;
     }
+    
+    /**
+     *
+     * @param data
+     * @param filepath
+     * @return
+     */
+    public static boolean saveStringToJson(String data, String filepath) {
+        boolean result = false;
+        
+        FileWriter writer;
+        
+        try {
+            writer = new FileWriter(filepath);
+            writer.write(data);
+            writer.close();
+            result = true;
+            
+        } catch (IOException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return result;
+    }
+    
 }

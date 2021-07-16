@@ -6,6 +6,7 @@
 package es.uam.irg.recsys;
 
 import es.uam.irg.decidemadrid.db.MongoDbManager;
+import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.utils.FunctionUtils;
@@ -17,16 +18,10 @@ import java.util.Set;
 import org.bson.Document;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Element;
-import java.io.File;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.TransformerException;
 import org.w3c.dom.DOMException;
 
 /**
@@ -42,6 +37,7 @@ public class ArguRecSys {
      * Class constructor.
      * 
      * @param topic 
+     * @param minAspectOccur 
      */
     public ArguRecSys(String topic, int minAspectOccur) {
         this.topic = topic;
@@ -88,9 +84,9 @@ public class ArguRecSys {
         MongoDbManager manager = new MongoDbManager();
         List<Document> docs = manager.getDocumentsByTopic(this.topic);
         
-        for (Document doc : docs) {
+        docs.forEach(doc -> {
             arguments.add( new Argument(doc));
-        }
+        });
         
         return arguments;
     }
@@ -233,16 +229,11 @@ public class ArguRecSys {
             }
 
             // Write the content into xml file
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
-            StreamResult stream = new StreamResult(new File(filename));
-            transformer.transform(source, stream);
-            result = true;
+            result = IOManager.saveDomToXML(source, filename);
             
-        } catch (ParserConfigurationException | TransformerException | DOMException e) {
-            System.err.println(e.getMessage());
+        } catch (ParserConfigurationException | DOMException ex) {
+            System.err.println(ex.getMessage());
         }
         
         return result;
