@@ -24,6 +24,10 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Element;
 import java.io.File;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.TransformerException;
+import org.w3c.dom.DOMException;
 
 /**
  *
@@ -166,6 +170,7 @@ public class ArguRecSys {
      */
     private boolean saveRecommendations(String topic, Map<String, List<Argument>> recommendations) {
         boolean result = false;
+        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("{}", topic);
         
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -190,7 +195,7 @@ public class ArguRecSys {
                 Attr nAttr = doc.createAttribute("value");
                 nAttr.setValue(entry.getKey());
                 nAspect.setAttributeNode(nAttr);
-                rootElement.appendChild(nAspect);
+                nTopic.appendChild(nAspect);
                 
                 for (Argument argument : entry.getValue()) {
                     
@@ -200,18 +205,43 @@ public class ArguRecSys {
                     attrType.setValue(argument.sentenceID);
                     nArgu.setAttributeNode(attrType);
                     nAspect.appendChild(nArgu);
+                    
+                    Element nClaim = doc.createElement("claim");
+                    nClaim.appendChild(doc.createTextNode(argument.claim.text));
+                    nArgu.appendChild(nClaim);
+                    
+                    Element nLinker = doc.createElement("connector");
+                    nLinker.appendChild(doc.createTextNode(argument.linker.linker));
+                    nArgu.appendChild(nLinker);
+                    
+                    Attr lnkCategory = doc.createAttribute("category");
+                    lnkCategory.setValue(argument.linker.category.toLowerCase());
+                    nLinker.setAttributeNode(lnkCategory);
+                    
+                    Attr lnkSubcategory = doc.createAttribute("subcategory");
+                    lnkSubcategory.setValue(argument.linker.subCategory.toLowerCase());
+                    nLinker.setAttributeNode(lnkSubcategory);
+                    
+                    Attr lnkFunction = doc.createAttribute("function");
+                    lnkFunction.setValue(argument.linker.relationType);
+                    nLinker.setAttributeNode(lnkFunction);
+                    
+                    Element nPremise = doc.createElement("premise");
+                    nPremise.appendChild(doc.createTextNode(argument.premise.text));
+                    nArgu.appendChild(nPremise);
                 }
             }
 
             // Write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
-            StreamResult stream = new StreamResult(new File(Constants.RECOMMENDATIONS_FILEPATH));
+            StreamResult stream = new StreamResult(new File(filename));
             transformer.transform(source, stream);
             result = true;
             
-        } catch (Exception e) {
+        } catch (ParserConfigurationException | TransformerException | DOMException e) {
             System.err.println(e.getMessage());
         }
         
