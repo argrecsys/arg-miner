@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <recommendations>
-    <topic value="transporte">
-        <aspect value="bus">
-            <argument id="15004-1">
-                <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
-                <connector category="cause" function="support" subcategory="reason">porque</connector>
-                <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
-            </argument>
-            <argument id="1985-1">
-                <claim>Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte</claim>
-                <connector category="cause" function="support" subcategory="reason">dado que</connector>
-                <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
-            </argument>
-        </aspect>
-        <aspect value="precio">
-            <argument id="4671-1">
-                <claim>Que baje el precio del transporte</claim>
-                <connector category="cause" function="support" subcategory="reason">porque</connector>
-                <premise>es muy caro</premise>
-            </argument>
-            <argument id="24693-1">
-                <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
-                <connector category="contrast" function="attack" subcategory="direct">pero</connector>
-                <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
-            </argument>
-        </aspect>
-    </topic>
+    <proposals cant="1"/>
+    <topics cant="1">
+        <topic cant="2" value="transporte">
+            <aspect cant="2" value="bus">
+                <argument id="15004-1">
+                    <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
+                </argument>
+                <argument id="1985-1">
+                    <claim>Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte</claim>
+                    <connector category="cause" function="support" subcategory="reason">dado que</connector>
+                    <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
+                </argument>
+            </aspect>
+            <aspect cant="2" value="precio">
+                <argument id="4671-1">
+                    <claim>Que baje el precio del transporte</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>es muy caro</premise>
+                </argument>
+                <argument id="24693-1">
+                    <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
+                </argument>
+            </aspect>
+        </topic>
+    </topics>
 </recommendations>

@@ -167,6 +167,7 @@ public class ArguRecSys {
     private boolean saveRecommendations(String topic, Map<String, List<Argument>> recommendations) {
         boolean result = false;
         String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("{}", topic);
+        Attr attr;
         
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -177,29 +178,52 @@ public class ArguRecSys {
             Element rootElement = doc.createElement("recommendations");
             doc.appendChild(rootElement);
             
+            // Proposals element
+            Element nProposals = doc.createElement("proposals");
+            rootElement.appendChild(nProposals);
+            attr = doc.createAttribute("cant");
+            attr.setValue("1");
+            nProposals.setAttributeNode(attr);
+            
+            // Topics element
+            Element nTopics = doc.createElement("topics");
+            rootElement.appendChild(nTopics);
+            attr = doc.createAttribute("cant");
+            attr.setValue("1");
+            nTopics.setAttributeNode(attr);
+            
             // Topic element
             Element nTopic = doc.createElement("topic");
-            Attr attr = doc.createAttribute("value");
+            nTopics.appendChild(nTopic);
+            attr = doc.createAttribute("value");
             attr.setValue(topic);
             nTopic.setAttributeNode(attr);
-            rootElement.appendChild(nTopic);
+            
+            attr = doc.createAttribute("cant");
+            attr.setValue(""+recommendations.size());
+            nTopic.setAttributeNode(attr);
             
             for (Map.Entry<String, List<Argument>> entry : recommendations.entrySet()) {
                 
                 // Topic element
                 Element nAspect = doc.createElement("aspect");
-                Attr nAttr = doc.createAttribute("value");
-                nAttr.setValue(entry.getKey());
-                nAspect.setAttributeNode(nAttr);
                 nTopic.appendChild(nAspect);
+                
+                attr = doc.createAttribute("value");
+                attr.setValue(entry.getKey());
+                nAspect.setAttributeNode(attr);
+                
+                attr = doc.createAttribute("cant");
+                attr.setValue(""+entry.getValue().size());
+                nAspect.setAttributeNode(attr);
                 
                 for (Argument argument : entry.getValue()) {
                     
                     // Argument element
                     Element nArgu = doc.createElement("argument");
-                    Attr attrType = doc.createAttribute("id");
-                    attrType.setValue(argument.sentenceID);
-                    nArgu.setAttributeNode(attrType);
+                    attr = doc.createAttribute("id");
+                    attr.setValue(argument.sentenceID);
+                    nArgu.setAttributeNode(attr);
                     nAspect.appendChild(nArgu);
                     
                     Element nClaim = doc.createElement("claim");
@@ -210,17 +234,17 @@ public class ArguRecSys {
                     nLinker.appendChild(doc.createTextNode(argument.linker.linker));
                     nArgu.appendChild(nLinker);
                     
-                    Attr lnkCategory = doc.createAttribute("category");
-                    lnkCategory.setValue(argument.linker.category.toLowerCase());
-                    nLinker.setAttributeNode(lnkCategory);
+                    attr = doc.createAttribute("category");
+                    attr.setValue(argument.linker.category.toLowerCase());
+                    nLinker.setAttributeNode(attr);
                     
-                    Attr lnkSubcategory = doc.createAttribute("subcategory");
-                    lnkSubcategory.setValue(argument.linker.subCategory.toLowerCase());
-                    nLinker.setAttributeNode(lnkSubcategory);
+                    attr = doc.createAttribute("subcategory");
+                    attr.setValue(argument.linker.subCategory.toLowerCase());
+                    nLinker.setAttributeNode(attr);
                     
-                    Attr lnkFunction = doc.createAttribute("function");
-                    lnkFunction.setValue(argument.linker.relationType);
-                    nLinker.setAttributeNode(lnkFunction);
+                    attr = doc.createAttribute("function");
+                    attr.setValue(argument.linker.relationType);
+                    nLinker.setAttributeNode(attr);
                     
                     Element nPremise = doc.createElement("premise");
                     nPremise.appendChild(doc.createTextNode(argument.premise.text));
