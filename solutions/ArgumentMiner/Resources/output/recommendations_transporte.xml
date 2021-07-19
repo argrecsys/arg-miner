@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <recommendations>
-    <proposals cant="11">
+    <proposals cant="15">
         <proposal categories="movilidad" date="2015-09-22" districts="barajas,ciudad" id="1985" topics="autobuses nocturnos">Incluir el Bus nocturno del aeropuerto en el abono</proposal>
-        <proposal categories="movilidad" date="2016-02-22" districts="ciudad" id="8116" topics="abono de transportes">ABONO TRANSPORTE COMO SUSCRIPCION</proposal>
-        <proposal categories="derechos sociales,movilidad,sostenibilidad,urbanismo" date="2018-12-02" districts="ciudad" id="24693" topics="derechos humanos,sostenibilidad,transporte publico,urbanismo">MEJORA DEL TRANSPORTE PUBLICO</proposal>
+        <proposal categories="" date="2015-11-03" districts="ciudad,fuencarral-el pardo" id="4065" topics="">Mejorar el acceso a las tablas</proposal>
+        <proposal categories="cultura,educacion" date="2016-06-25" districts="ciudad" id="12003" topics="bibliotecas,centros culturales">Biblioteca publica/ Centro Cultural para la zona de Valderribas</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2018-07-31" districts="ciudad" id="23366" topics="abono de transportes,medio ambiente">Abono transporte quincenal y semanal</proposal>
         <proposal categories="movilidad" date="2015-09-17" districts="arganzuela,barajas,carabanchel,chamartín,ciudad,ciudad lineal,fuencarral-el pardo,moratalaz,puente de vallecas,san blas-canillejas,tetuán,vicálvaro,villaverde" id="1287" topics="autobuses">Autobus circular</proposal>
-        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
         <proposal categories="" date="2015-12-09" districts="chamartín,ciudad,tetuán" id="6600" topics="">Transporte Saconia Plaza de Castilla</proposal>
         <proposal categories="movilidad" date="2016-05-29" districts="ciudad" id="11530" topics="autobuses,metro">Abono Metro Bus  Recargable via app</proposal>
-        <proposal categories="" date="2017-03-14" districts="chamartín,moncloa-aravaca" id="17562" topics="">Conectar Valdezarza con la estacion de Chamartin.</proposal>
         <proposal categories="accesibilidad,asociaciones,derechos sociales" date="2015-11-03" districts="ciudad" id="4107" topics="asociacionismo,derechos humanos,discapacitados">Descuentos en transporte para personas con discapacidad</proposal>
+        <proposal categories="movilidad" date="2016-02-22" districts="ciudad" id="8116" topics="abono de transportes">ABONO TRANSPORTE COMO SUSCRIPCION</proposal>
+        <proposal categories="derechos sociales,movilidad,sostenibilidad,urbanismo" date="2018-12-02" districts="ciudad" id="24693" topics="derechos humanos,sostenibilidad,transporte publico,urbanismo">MEJORA DEL TRANSPORTE PUBLICO</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
+        <proposal categories="" date="2017-03-14" districts="chamartín,moncloa-aravaca" id="17562" topics="">Conectar Valdezarza con la estacion de Chamartin.</proposal>
         <proposal categories="movilidad" date="2016-12-22" districts="ciudad,moncloa-aravaca" id="15004" topics="autobuses">Un bus que vaya de Alonso Martinez a Moncloa</proposal>
+        <proposal categories="equidad e integracion,urbanismo" date="2017-01-24" districts="villaverde" id="15645" topics="igualdad,urbanismo">Mejorar la comunicacion en el barrio de Butarque</proposal>
         <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
     </proposals>
     <topics cant="1">
-        <topic cant="8" value="transporte">
+        <topic cant="11" value="transporte">
             <aspect cant="1" value="red">
                 <argument id="11530-1">
                     <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
@@ -22,28 +26,32 @@
                     <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
                 </argument>
             </aspect>
-            <aspect cant="2" value="bus">
-                <argument id="15004-1">
-                    <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
-                </argument>
+            <aspect cant="1" value="bus">
                 <argument id="1985-1">
                     <claim>Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">dado que</connector>
                     <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
                 </argument>
             </aspect>
-            <aspect cant="2" value="precio">
+            <aspect cant="1" value="zona">
+                <argument id="12003-1">
+                    <claim>Seria necesario crear una biblioteca y centro cultural en Valderribas</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="precio">
                 <argument id="4671-1">
                     <claim>Que baje el precio del transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>es muy caro</premise>
                 </argument>
-                <argument id="24693-1">
-                    <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
+            </aspect>
+            <aspect cant="1" value="barrio">
+                <argument id="17562-1">
+                    <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
-                    <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
+                    <premise>no hay transporte publico que una directamente estos lugares</premise>
                 </argument>
             </aspect>
             <aspect cant="1" value="defectos">
@@ -67,18 +75,40 @@
                     <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="estacion">
-                <argument id="17562-1">
-                    <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
-                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
-                    <premise>no hay transporte publico que una directamente estos lugares</premise>
+            <aspect cant="1" value="abono">
+                <argument id="23366-1">
+                    <claim>Permitir la posibilidad de adquirir abono transporte por quincenas o semanas</claim>
+                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
+                    <premise>proporcionalmente sea algo mas caro que el abono mensual</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="personas">
+            <aspect cant="3" value="personas">
+                <argument id="4065-1">
+                    <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes</premise>
+                </argument>
                 <argument id="4107-1">
                     <claim>Existen numerosas discapacidades hoy en dia</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>solo hay 2 opciones para el transporte publico , y para ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
+                </argument>
+                <argument id="15004-1">
+                    <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
+                </argument>
+            </aspect>
+            <aspect cant="2" value="mejora">
+                <argument id="15645-1">
+                    <claim>una mejora de comunicacion en cuanto a transporte publico / privado , en el barrio de Butarque</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>cada vez hay mas vecinos y menos medios</premise>
+                </argument>
+                <argument id="24693-1">
+                    <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
                 </argument>
             </aspect>
         </topic>

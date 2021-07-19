@@ -2,7 +2,7 @@ USE `decide.madrid_2019_09`;
 
 SELECT id, url, code, title, userId, date, summary, text, numComments, status, numSupports, isAssociation
   FROM proposals
- WHERE id IN (1432, 4696, 15004, 15707, 23248);
+ WHERE id IN (1432, 4696, 7700, 15004, 15707, 23248);
 
 -- summary: El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli, pero es falso, metro de legazpi queda lejos y los autobuses son nulos.
 UPDATE proposals
@@ -15,6 +15,11 @@ UPDATE proposals
    SET title = 'Iluminación de pasos de cebra'
      , summary = 'Se ha vuelto un peligro cruzar en algunos pasos de cebra, debido a la baja iluminación que tienen.'
  WHERE id = 4696;
+
+-- summary: Que vuelva la linea nocturna de transporte publico 'L'. Cubren mejor el servicio y es conocida por todxs ya que siue el mismo recorrido del metro
+UPDATE proposals
+   SET summary = 'Que vuelva la linea nocturna de transporte publico \'L\'. Cubren mejor el servicio y es conocida por todos ya que sigue el mismo recorrido del metro'
+ WHERE id = 7700;
 
 -- summary: Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos
 UPDATE proposals

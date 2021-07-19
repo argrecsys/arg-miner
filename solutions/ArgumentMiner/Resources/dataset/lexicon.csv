@@ -1,5 +1,6 @@
 ﻿category,sub_category,relation_type,linkers_english,linkers_spanish
 CAUSE,REASON,support,due to,debido a
+CAUSE,REASON,support,because of,ya que
 CAUSE,REASON,support,because,porque
 CAUSE,REASON,support,since,pues
 CAUSE,REASON,support,given that,dado que
@@ -7,3 +8,4 @@ CONTRAST,DIRECT,attack,but,pero
 CONTRAST,DIRECT,attack,however,sin embargo
 CONTRAST,OPPOSITION,attack,in contrast,a diferencia de
 CONTRAST,OPPOSITION,attack,by contrast,por el contrario
+CONTRAST,CONCESSION,attack,although,aunque

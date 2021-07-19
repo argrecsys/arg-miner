@@ -26,6 +26,33 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 16516
     },
+    "12003-1": {
+        "sentence": "Seria necesario crear una biblioteca y centro cultural en Valderribas, ya que para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico.",
+        "linker": {
+            "relationType": "support",
+            "linker": "ya que",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[Valdebernardo, Vicalvaro]",
+            "text": "para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico",
+            "nouns": "[transporte]"
+        },
+        "mainVerb": "crear",
+        "claim": {
+            "entities": "[Valderribas]",
+            "text": "Seria necesario crear una biblioteca y centro cultural en Valderribas",
+            "nouns": "[biblioteca, centro]"
+        },
+        "majorClaim": {
+            "entities": "[Valderribas, Centro Cultural]",
+            "text": "Biblioteca publica/ Centro Cultural para la zona de Valderribas",
+            "nouns": "[zona]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 12003
+    },
     "15004-1": {
         "sentence": "Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos",
         "linker": {
@@ -186,6 +213,33 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4671
+    },
+    "23366-1": {
+        "sentence": "Permitir la posibilidad de adquirir abono transporte por quincenas o semanas, aunque proporcionalmente sea algo mas caro que el abono mensual.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "aunque",
+            "subCategory": "CONCESSION",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "proporcionalmente sea algo mas caro que el abono mensual",
+            "nouns": "[abono]"
+        },
+        "mainVerb": "Permitir",
+        "claim": {
+            "entities": "[]",
+            "text": "Permitir la posibilidad de adquirir abono transporte por quincenas o semanas",
+            "nouns": "[posibilidad, transporte, quincenas, semanas, abono]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Abono transporte quincenal y semanal",
+            "nouns": "[transporte]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 23366
     },
     "6600-1": {
         "sentence": "Saconia esta muy cerca de Plaza de Castilla pero no existe transporte publico entre ambas.",
@@ -591,6 +645,59 @@
         "approach": "A1 -> C+L+P",
         "proposalID": 15707
     },
+    "15645-1": {
+        "sentence": "Es necesaria una mejora de comunicacion en cuanto a transporte publico/ privado, en el barrio de Butarque, ya que cada vez hay mas vecinos y menos medios.",
+        "linker": {
+            "relationType": "support",
+            "linker": "ya que",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "cada vez hay mas vecinos y menos medios",
+            "nouns": "[vez, medios]"
+        },
+        "claim": {
+            "entities": "[Butarque]",
+            "text": "una mejora de comunicacion en cuanto a transporte publico / privado , en el barrio de Butarque",
+            "nouns": "[mejora, comunicacion, cuanto, transporte, barrio]"
+        },
+        "majorClaim": {
+            "entities": "[Butarque]",
+            "text": "Mejorar la comunicacion en el barrio de Butarque",
+            "nouns": "[comunicacion, barrio]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 15645
+    },
+    "4065-1": {
+        "sentence": "Mejorar los accesos y el transporte publico de esta zona, ya que esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes.",
+        "linker": {
+            "relationType": "support",
+            "linker": "ya que",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes",
+            "nouns": "[volumen, personas, medios]"
+        },
+        "mainVerb": "Mejorar",
+        "claim": {
+            "entities": "[]",
+            "text": "Mejorar los accesos y el transporte publico de esta zona",
+            "nouns": "[accesos, transporte, zona]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Mejorar el acceso a las tablas",
+            "nouns": "[acceso, tablas]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 4065
+    },
     "11530-1": {
         "sentence": "Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte, pero limitando su utilizacion a la red de Metro y Autobus.",
         "linker": {
@@ -941,5 +1048,32 @@
         },
         "approach": "A1 -> C+L+P",
         "proposalID": 7341
+    },
+    "7700-2": {
+        "sentence": "Cubren mejor el servicio y es conocida por todos ya que sigue el mismo recorrido del metro",
+        "linker": {
+            "relationType": "support",
+            "linker": "ya que",
+            "subCategory": "REASON",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "sigue el mismo recorrido del metro",
+            "nouns": "[recorrido, metro]"
+        },
+        "mainVerb": "Cubren",
+        "claim": {
+            "entities": "[]",
+            "text": "Cubren mejor el servicio y es conocida por todos",
+            "nouns": "[servicio]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Que vuelvan los L nocturnos",
+            "nouns": "[]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 7700
     }
 }
