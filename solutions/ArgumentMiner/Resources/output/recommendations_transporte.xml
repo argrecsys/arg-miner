@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <recommendations>
-    <proposals cant="1"/>
+    <proposals cant="11">
+        <proposal categories="movilidad" date="2015-09-22" districts="barajas,ciudad" id="1985" topics="autobuses nocturnos">Incluir el Bus nocturno del aeropuerto en el abono</proposal>
+        <proposal categories="movilidad" date="2016-02-22" districts="ciudad" id="8116" topics="abono de transportes">ABONO TRANSPORTE COMO SUSCRIPCION</proposal>
+        <proposal categories="derechos sociales,movilidad,sostenibilidad,urbanismo" date="2018-12-02" districts="ciudad" id="24693" topics="derechos humanos,sostenibilidad,transporte publico,urbanismo">MEJORA DEL TRANSPORTE PUBLICO</proposal>
+        <proposal categories="movilidad" date="2015-09-17" districts="arganzuela,barajas,carabanchel,chamartín,ciudad,ciudad lineal,fuencarral-el pardo,moratalaz,puente de vallecas,san blas-canillejas,tetuán,vicálvaro,villaverde" id="1287" topics="autobuses">Autobus circular</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
+        <proposal categories="" date="2015-12-09" districts="chamartín,ciudad,tetuán" id="6600" topics="">Transporte Saconia Plaza de Castilla</proposal>
+        <proposal categories="movilidad" date="2016-05-29" districts="ciudad" id="11530" topics="autobuses,metro">Abono Metro Bus  Recargable via app</proposal>
+        <proposal categories="" date="2017-03-14" districts="chamartín,moncloa-aravaca" id="17562" topics="">Conectar Valdezarza con la estacion de Chamartin.</proposal>
+        <proposal categories="accesibilidad,asociaciones,derechos sociales" date="2015-11-03" districts="ciudad" id="4107" topics="asociacionismo,derechos humanos,discapacitados">Descuentos en transporte para personas con discapacidad</proposal>
+        <proposal categories="movilidad" date="2016-12-22" districts="ciudad,moncloa-aravaca" id="15004" topics="autobuses">Un bus que vaya de Alonso Martinez a Moncloa</proposal>
+        <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
+    </proposals>
     <topics cant="1">
-        <topic cant="2" value="transporte">
+        <topic cant="8" value="transporte">
+            <aspect cant="1" value="red">
+                <argument id="11530-1">
+                    <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
+                </argument>
+            </aspect>
             <aspect cant="2" value="bus">
                 <argument id="15004-1">
                     <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
@@ -25,6 +44,41 @@
                     <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="defectos">
+                <argument id="1287-1">
+                    <claim>El transporte en Madrid es bueno</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>tiene sus defectos</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="opcion">
+                <argument id="8116-1">
+                    <claim>que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
+                    <connector category="cause" function="support" subcategory="reason">pues</connector>
+                    <premise>quiza todo el mundo no quiere</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="rio">
+                <argument id="1432-1">
+                    <claim>El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="estacion">
+                <argument id="17562-1">
+                    <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>no hay transporte publico que una directamente estos lugares</premise>
+                </argument>
+            </aspect>
+            <aspect cant="1" value="personas">
+                <argument id="4107-1">
+                    <claim>Existen numerosas discapacidades hoy en dia</claim>
+                    <connector category="contrast" function="attack" subcategory="direct">pero</connector>
+                    <premise>solo hay 2 opciones para el transporte publico , y para ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
                 </argument>
             </aspect>
         </topic>

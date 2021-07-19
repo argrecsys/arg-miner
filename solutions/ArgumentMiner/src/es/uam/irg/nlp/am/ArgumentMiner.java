@@ -31,7 +31,7 @@ import org.json.JSONObject;
 public class ArgumentMiner {
     
     // Class members
-    private Map<String, Object> dbSetup = getDatabaseConfiguration();
+    private Map<String, Object> dbSetup;
     private String language;
     private ArgumentLinkerManager lnkManager;
     private Map<Integer, DMProposal> proposals;

@@ -5,7 +5,9 @@
  */
 package es.uam.irg.recsys;
 
+import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.db.MongoDbManager;
+import es.uam.irg.decidemadrid.entities.DMProposalSummary;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.am.arguments.Argument;
@@ -15,6 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.bson.Document;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -54,7 +58,9 @@ public class ArguRecSys {
         List<Argument> arguments = getArgumentsByTopic();
         System.out.println(">> Total arguments: " + arguments.size());
         
-        if (!arguments.isEmpty()) {
+        Map<Integer, DMProposalSummary> proposals = getProposalsSummary(arguments);
+        
+        if (!arguments.isEmpty() && !proposals.isEmpty()) {
             Map<String, Integer> aspects = getFreqAspects(arguments);
             System.out.println(aspects);
             
@@ -62,7 +68,7 @@ public class ArguRecSys {
             Map<String, List<Argument>> recommendations = getRecommendations(arguments, aspects, minAspectOccur);
             System.out.println(">> Total recommended topics: " + recommendations.size());
             
-            result = saveRecommendations(topic, recommendations);
+            result = saveRecommendations(topic, proposals, recommendations);
             if (result) {
                 System.out.println(">> Recommendations saved correctly.");
             }
@@ -119,6 +125,38 @@ public class ArguRecSys {
     /**
      * 
      * @param arguments
+     * @return 
+     */
+    private Map<Integer, DMProposalSummary> getProposalsSummary(List<Argument> arguments) {
+        Map<Integer, DMProposalSummary> proposals = null;
+        Map<String, Object> dbSetup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
+        
+        try {
+            DMDBManager dbManager = null;
+            if (dbSetup != null && dbSetup.size() == 4) {
+                String dbServer = dbSetup.get("db_server").toString();
+                String dbName = dbSetup.get("db_name").toString();
+                String dbUserName = dbSetup.get("db_user_name").toString();
+                String dbUserPwd = dbSetup.get("db_user_pw").toString();
+                
+                dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
+            }
+            else {
+                dbManager = new DMDBManager();
+            }
+            
+            proposals = dbManager.selectProposalsSummary(arguments);
+        }
+        catch (Exception ex) {
+            Logger.getLogger(ArguRecSys.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return proposals;
+    }
+    
+    /**
+     * 
+     * @param arguments
      * @param aspects
      * @param minAspectOccur
      * @return 
@@ -158,13 +196,13 @@ public class ArguRecSys {
         
         return result;
     }
-
+    
     /**
      * 
      * @param recommendations
      * @return 
      */
-    private boolean saveRecommendations(String topic, Map<String, List<Argument>> recommendations) {
+    private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
         String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("{}", topic);
         Attr attr;
@@ -182,8 +220,37 @@ public class ArguRecSys {
             Element nProposals = doc.createElement("proposals");
             rootElement.appendChild(nProposals);
             attr = doc.createAttribute("cant");
-            attr.setValue("1");
+            attr.setValue(""+proposals.size());
             nProposals.setAttributeNode(attr);
+            
+            for (Map.Entry<Integer, DMProposalSummary> entry : proposals.entrySet()) {
+                DMProposalSummary proposal = entry.getValue();
+                
+                // Proposal element
+                Element nProposal = doc.createElement("proposal");
+                nProposal.appendChild(doc.createTextNode(proposal.getTitle()));
+                nProposals.appendChild(nProposal);
+                
+                attr = doc.createAttribute("id");
+                attr.setValue(""+proposal.getId());
+                nProposal.setAttributeNode(attr);
+                
+                attr = doc.createAttribute("date");
+                attr.setValue(proposal.getDate());
+                nProposal.setAttributeNode(attr);
+                
+                attr = doc.createAttribute("categories");
+                attr.setValue(proposal.getCategories());
+                nProposal.setAttributeNode(attr);
+                
+                attr = doc.createAttribute("districts");
+                attr.setValue(proposal.getDistricts());
+                nProposal.setAttributeNode(attr);
+                
+                attr = doc.createAttribute("topics");
+                attr.setValue(proposal.getTopics());
+                nProposal.setAttributeNode(attr);
+            }
             
             // Topics element
             Element nTopics = doc.createElement("topics");
