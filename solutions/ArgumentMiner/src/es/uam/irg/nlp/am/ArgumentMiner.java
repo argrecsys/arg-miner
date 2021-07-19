@@ -45,7 +45,7 @@ public class ArgumentMiner {
     public ArgumentMiner(String language, int maxProposals) {
         this.language = language;
         this.dbSetup = getDatabaseConfiguration();
-        this.proposals = getArgumentativeProposals(dbSetup, maxProposals);
+        this.proposals = getArgumentativeProposals(maxProposals);
         this.lnkManager = createLinkerManager(language, true);
     }
     
@@ -131,11 +131,10 @@ public class ArgumentMiner {
     /**
      * Wrapper function for (DMDBManager) selectNProposals method.
      * 
-     * @param dbSetup
      * @param topN
      * @return 
      */
-    private Map<Integer, DMProposal> getArgumentativeProposals(Map<String, Object> dbSetup, int topN) {
+    private Map<Integer, DMProposal> getArgumentativeProposals(int topN) {
         Map<Integer, DMProposal> proposals = null;
         
         try {
@@ -166,8 +165,8 @@ public class ArgumentMiner {
      * @return 
      */
     private Map<String, Object> getDatabaseConfiguration() {
-        Map<String, Object> dbSetup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
-        return dbSetup;
+        Map<String, Object> setup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
+        return setup;
     }
         
     /**

@@ -34,6 +34,8 @@ import org.w3c.dom.DOMException;
  */
 public class ArguRecSys {
     
+    // Class members
+    private Map<String, Object> dbSetup;
     private int minAspectOccur;
     private String topic;
     
@@ -46,6 +48,7 @@ public class ArguRecSys {
     public ArguRecSys(String topic, int minAspectOccur) {
         this.topic = topic;
         this.minAspectOccur = minAspectOccur;
+        this.dbSetup = getDatabaseConfiguration();
     }
     
     /**
@@ -55,9 +58,11 @@ public class ArguRecSys {
     public boolean runRecSys() {
         boolean result = false;
         
+        // Get list of arguments by specific topic
         List<Argument> arguments = getArgumentsByTopic();
         System.out.println(">> Total arguments: " + arguments.size());
         
+        // Get proposals summary for selected arguments
         Map<Integer, DMProposalSummary> proposals = getProposalsSummary(arguments);
         
         if (!arguments.isEmpty() && !proposals.isEmpty()) {
@@ -96,6 +101,15 @@ public class ArguRecSys {
         
         return arguments;
     }
+
+    /**
+     * 
+     * @return 
+     */
+    private Map<String, Object> getDatabaseConfiguration() {
+        Map<String, Object> setup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
+        return setup;
+    }
     
     /**
      * 
@@ -129,7 +143,6 @@ public class ArguRecSys {
      */
     private Map<Integer, DMProposalSummary> getProposalsSummary(List<Argument> arguments) {
         Map<Integer, DMProposalSummary> proposals = null;
-        Map<String, Object> dbSetup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
         
         try {
             DMDBManager dbManager = null;
@@ -212,7 +225,7 @@ public class ArguRecSys {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             org.w3c.dom.Document doc = dBuilder.newDocument();
 
-            // Toot element
+            // Root element
             Element rootElement = doc.createElement("recommendations");
             doc.appendChild(rootElement);
             
@@ -265,7 +278,6 @@ public class ArguRecSys {
             attr = doc.createAttribute("value");
             attr.setValue(topic);
             nTopic.setAttributeNode(attr);
-            
             attr = doc.createAttribute("cant");
             attr.setValue(""+recommendations.size());
             nTopic.setAttributeNode(attr);
