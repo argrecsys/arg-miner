@@ -232,7 +232,7 @@ public class ArguRecSys {
             // Proposals element
             Element nProposals = doc.createElement("proposals");
             rootElement.appendChild(nProposals);
-            attr = doc.createAttribute("cant");
+            attr = doc.createAttribute("quantity");
             attr.setValue(""+proposals.size());
             nProposals.setAttributeNode(attr);
             
@@ -268,7 +268,7 @@ public class ArguRecSys {
             // Topics element
             Element nTopics = doc.createElement("topics");
             rootElement.appendChild(nTopics);
-            attr = doc.createAttribute("cant");
+            attr = doc.createAttribute("quantity");
             attr.setValue("1");
             nTopics.setAttributeNode(attr);
             
@@ -278,7 +278,7 @@ public class ArguRecSys {
             attr = doc.createAttribute("value");
             attr.setValue(topic);
             nTopic.setAttributeNode(attr);
-            attr = doc.createAttribute("cant");
+            attr = doc.createAttribute("quantity");
             attr.setValue(""+recommendations.size());
             nTopic.setAttributeNode(attr);
             
@@ -292,7 +292,7 @@ public class ArguRecSys {
                 attr.setValue(entry.getKey());
                 nAspect.setAttributeNode(attr);
                 
-                attr = doc.createAttribute("cant");
+                attr = doc.createAttribute("quantity");
                 attr.setValue(""+entry.getValue().size());
                 nAspect.setAttributeNode(attr);
                 

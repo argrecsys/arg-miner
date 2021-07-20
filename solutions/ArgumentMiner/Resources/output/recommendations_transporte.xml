@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <recommendations>
-    <proposals cant="15">
+    <proposals quantity="15">
         <proposal categories="movilidad" date="2015-09-22" districts="barajas,ciudad" id="1985" topics="autobuses nocturnos">Incluir el Bus nocturno del aeropuerto en el abono</proposal>
         <proposal categories="" date="2015-11-03" districts="ciudad,fuencarral-el pardo" id="4065" topics="">Mejorar el acceso a las tablas</proposal>
         <proposal categories="cultura,educacion" date="2016-06-25" districts="ciudad" id="12003" topics="bibliotecas,centros culturales">Biblioteca publica/ Centro Cultural para la zona de Valderribas</proposal>
@@ -17,72 +17,72 @@
         <proposal categories="equidad e integracion,urbanismo" date="2017-01-24" districts="villaverde" id="15645" topics="igualdad,urbanismo">Mejorar la comunicacion en el barrio de Butarque</proposal>
         <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
     </proposals>
-    <topics cant="1">
-        <topic cant="11" value="transporte">
-            <aspect cant="1" value="red">
+    <topics quantity="1">
+        <topic quantity="11" value="transporte">
+            <aspect quantity="1" value="red">
                 <argument id="11530-1">
                     <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="bus">
+            <aspect quantity="1" value="bus">
                 <argument id="1985-1">
                     <claim>Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">dado que</connector>
                     <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="zona">
+            <aspect quantity="1" value="zona">
                 <argument id="12003-1">
                     <claim>Seria necesario crear una biblioteca y centro cultural en Valderribas</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="precio">
+            <aspect quantity="1" value="precio">
                 <argument id="4671-1">
                     <claim>Que baje el precio del transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>es muy caro</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="barrio">
+            <aspect quantity="1" value="barrio">
                 <argument id="17562-1">
                     <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>no hay transporte publico que una directamente estos lugares</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="defectos">
+            <aspect quantity="1" value="defectos">
                 <argument id="1287-1">
                     <claim>El transporte en Madrid es bueno</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>tiene sus defectos</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="opcion">
+            <aspect quantity="1" value="opcion">
                 <argument id="8116-1">
                     <claim>que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
                     <connector category="cause" function="support" subcategory="reason">pues</connector>
                     <premise>quiza todo el mundo no quiere</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="rio">
+            <aspect quantity="1" value="rio">
                 <argument id="1432-1">
                     <claim>El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí</claim>
                     <connector category="contrast" function="attack" subcategory="direct">pero</connector>
                     <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
                 </argument>
             </aspect>
-            <aspect cant="1" value="abono">
+            <aspect quantity="1" value="abono">
                 <argument id="23366-1">
                     <claim>Permitir la posibilidad de adquirir abono transporte por quincenas o semanas</claim>
                     <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
                     <premise>proporcionalmente sea algo mas caro que el abono mensual</premise>
                 </argument>
             </aspect>
-            <aspect cant="3" value="personas">
+            <aspect quantity="3" value="personas">
                 <argument id="4065-1">
                     <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
@@ -99,7 +99,7 @@
                     <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
                 </argument>
             </aspect>
-            <aspect cant="2" value="mejora">
+            <aspect quantity="2" value="mejora">
                 <argument id="15645-1">
                     <claim>una mejora de comunicacion en cuanto a transporte publico / privado , en el barrio de Butarque</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
