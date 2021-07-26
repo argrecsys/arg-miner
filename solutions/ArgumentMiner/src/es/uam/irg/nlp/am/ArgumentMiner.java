@@ -35,6 +35,7 @@ public class ArgumentMiner {
     private String language;
     private ArgumentLinkerManager lnkManager;
     private Map<Integer, DMProposal> proposals;
+    private boolean verbose = true;
     
     /**
      * Class constructor.
@@ -45,7 +46,7 @@ public class ArgumentMiner {
     public ArgumentMiner(String language, int maxProposals) {
         this.language = language;
         this.dbSetup = getDatabaseConfiguration();
-        this.lnkManager = createLinkerManager(language, true);
+        this.lnkManager = createLinkerManager(language);
         this.proposals = getArgumentativeProposals(maxProposals);
     }
     
@@ -124,8 +125,8 @@ public class ArgumentMiner {
      * @param verbose
      * @return
      */
-    private ArgumentLinkerManager createLinkerManager(String lang, boolean verbose) {
-        return IOManager.readLinkerTaxonomy(lang, verbose);
+    private ArgumentLinkerManager createLinkerManager(String lang) {
+        return IOManager.readLinkerTaxonomy(lang, this.verbose);
     }
     
     /**
@@ -158,7 +159,10 @@ public class ArgumentMiner {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        System.out.println("N proposals: " + proposals.size());
+        if (this.verbose) {
+            System.out.println(">> Number of proposals: " + proposals.size());
+        }
+        
         return proposals;
     }
     
