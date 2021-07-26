@@ -20,7 +20,7 @@ public class Program {
         
         // Program hyperparameters with default values
         String language = Constants.LANG_ES;
-        int maxProposal = 100;
+        int maxProposal = Integer.MAX_VALUE;
         
         // Read input parameters
         if (args.length > 0) {

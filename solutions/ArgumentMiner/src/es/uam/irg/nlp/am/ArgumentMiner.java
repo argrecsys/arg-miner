@@ -45,8 +45,8 @@ public class ArgumentMiner {
     public ArgumentMiner(String language, int maxProposals) {
         this.language = language;
         this.dbSetup = getDatabaseConfiguration();
-        this.proposals = getArgumentativeProposals(maxProposals);
         this.lnkManager = createLinkerManager(language, true);
+        this.proposals = getArgumentativeProposals(maxProposals);
     }
     
     /**
@@ -151,12 +151,14 @@ public class ArgumentMiner {
                 dbManager = new DMDBManager();
             }
             
-            proposals = dbManager.selectCustomProposals(topN);
+            //proposals = dbManager.selectCustomProposals(topN);
+            proposals = dbManager.selectProposals(topN, this.lnkManager);
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        System.out.println("N proposals: " + proposals.size());
         return proposals;
     }
     

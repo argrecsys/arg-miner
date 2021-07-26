@@ -20,7 +20,7 @@ public class RecSys {
         
         // Program hyperparameters with default values
         String topic = "transporte";
-        int minAspectOccur = 1;
+        int minAspectOccur = 2;
         
         // Read input parameters
         if (args.length > 0) {

@@ -122,7 +122,7 @@ public class DMDBManager {
         String whereCond = "";
         
         for (int i = 0; i < linkers.getNLinkers(); i++) {
-            whereCond += (i > 0 ? " OR" : "") + " summary LIKE '%" + linkers.getLinker(i).linker + "%'";
+            whereCond += (i > 0 ? " OR " : "") + "summary LIKE '% " + linkers.getLinker(i).linker + " %'";
         }
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
