@@ -1,7 +1,0 @@
-Annotation:
-{'original_text':  'Recientemente me mude de Mostoles (10.762 años ahi) a Batan y menudo cambio.', 
- 'corrected_text': 'Recientemente me mude de Mostoles (10.762 años ahi) a Batan y menudo cambio.', 
- 'linkers': [{'linker': 'a', 'rel_index': '0-8', 'glb_index': 52, 'category': 'CONSEQUENCE', 'sub_category': 'GOAL', 'relation_type': 'support'}]}
-
-Phrases:
-['Recientemente me mude de Mostoles (10.762 años ahi) ', ' Batan y menudo cambio.']
