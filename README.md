@@ -6,7 +6,7 @@ This repository contains a simple but efficient implementation of an argument-ba
 - Argument-based Recommender System
 
 ## Resources
-This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="" target="_blank">argrecsys/connectors</a> repository.
+This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="https://github.com/argrecsys/connectors" target="_blank">argrecsys/connectors</a> repository.
 
 ## Author
 - Created by Andrés Segura-Tinoco

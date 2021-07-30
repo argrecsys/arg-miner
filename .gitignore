@@ -1,10 +1,7 @@
+*/ArgumentMiner/nbproject/
+*/ArgumentMiner/build/
+*/ArgumentMiner/dist/
 *.class
-*.pyc
 *.props
-*/ArgumentRecSys/nbproject/
-*/ArgumentRecSys/build/
-db_config.yml
-/solutions/ArgumentMiner/nbproject/
-/solutions/ArgumentMiner/build/
 *.jar
-/solutions/ArgumentMiner/dist/
+db_config.yml
