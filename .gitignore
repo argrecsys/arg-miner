@@ -1,6 +1,6 @@
-*/ArgumentMiner/nbproject/
-*/ArgumentMiner/build/
-*/ArgumentMiner/dist/
+code/ArgumentMiner/nbproject/*
+code/ArgumentMiner/build/*
+code/ArgumentMiner/dist/*
 *.class
 *.props
 *.jar

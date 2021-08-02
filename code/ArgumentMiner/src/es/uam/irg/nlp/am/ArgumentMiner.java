@@ -111,7 +111,7 @@ public class ArgumentMiner {
             proposalID = entry.getKey();
             proposal = entry.getValue();
             
-            List<Argument> argList = engine.annotate(proposalID, proposal.getTitle(), proposal.getSummary());
+            List<Argument> argList = engine.extract(proposalID, proposal.getTitle(), proposal.getSummary());
             arguments.put(proposalID, argList);
         }
         

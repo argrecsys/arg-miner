@@ -73,7 +73,7 @@ public class ArgumentEngine implements Constants {
      * @param docText
      * @return 
      */
-    public List<Argument> annotate(int docKey, String docTitle, String docText) {
+    public List<Argument> extract(int docKey, String docTitle, String docText) {
         System.out.format("Task Annotate - Id: %s, Proposal: %s\n", docKey, docText);
         List<Argument> result = new ArrayList<>();
         
@@ -460,18 +460,14 @@ public class ArgumentEngine implements Constants {
                 
                 if (!verbList.isEmpty()) {
                     for (Syntagma syntagma : syntagmaList) {
-                        if (syntagma.depth < minDepth && syntagma.text.contains(premise)) {
+                        if (syntagma.depth > 0 && syntagma.depth < minDepth && syntagma.text.contains(premise)) {
                             int endIx = syntagma.text.indexOf(premise);
                             claim = syntagma.text.substring(0, endIx).trim();
                             mainVerb = identifyMainVerb(claim, verbList);
-
-                            if (mainVerb != null) {
-                                break;
-                            }
-                            else {
-                                claim = null;
-                            }
                         }
+                    }
+                    if (mainVerb == null) {
+                        claim = null;
                     }
                 }
                 

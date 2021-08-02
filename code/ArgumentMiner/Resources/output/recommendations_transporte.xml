@@ -50,20 +50,8 @@
         <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
     </proposals>
     <topics quantity="1">
-        <topic quantity="9" value="transporte">
-            <aspect quantity="2" value="uso">
-                <argument id="5717-1">
-                    <claim>Se esta casi obligando al uso del transporte publico en la ciudad</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>en EMT no esta permitido la entrada de mascotas</premise>
-                </argument>
-                <argument id="9239-1">
-                    <claim>fomentar el uso del transporte publico pero</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>debo de pagar por aparcar en mi casa</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="3" value="barrio">
+        <topic quantity="8" value="transporte">
+            <aspect quantity="2" value="barrio">
                 <argument id="17562-1">
                     <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -73,11 +61,6 @@
                     <claim>una mejora de comunicacion en cuanto a transporte publico / privado , en el barrio de Butarque</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>cada vez hay mas vecinos y menos medios</premise>
-                </argument>
-                <argument id="4648-1">
-                    <claim>tarda entre 30 -45min en llegar</claim>
-                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
-                    <premise>la casi inexistencia de transporte publico</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="precio">
@@ -92,14 +75,19 @@
                     <premise>no pagar un precio unico para todas las</premise>
                 </argument>
             </aspect>
-            <aspect quantity="4" value="metro">
+            <aspect quantity="5" value="metro">
                 <argument id="20307-1">
                     <claim>Los PAU del Norte Sanchinarro Las Tablas estan mal comunicados por transporte publico</claim>
                     <connector category="cause" function="support" subcategory="reason">debido a</connector>
                     <premise>ineficacia de metro ligero</premise>
                 </argument>
+                <argument id="20146-1">
+                    <claim>Adosar a las marquesinas del Bus y entrada al metro , recoge colillas</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>los fumadores tiene el abito de tirarlas al suelo al tomar el transporte publico</premise>
+                </argument>
                 <argument id="13698-1">
-                    <claim>que se quedan sin transporte publico en sus zonas de residencia</claim>
+                    <claim>Hay muchos usuarios que se quedan sin transporte publico en sus zonas de residencia</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>en muchos lugares solo existe la renfe</premise>
                 </argument>
@@ -109,19 +97,19 @@
                     <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
                 </argument>
                 <argument id="15942-1">
-                    <claim>necesita transporte publico directo ( metro / bus ) para unir las dos zonas</claim>
+                    <claim>Se necesita transporte publico directo ( metro / bus ) para unir las dos zonas</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>es una pena que estando tan cerca se tarde una hora entre ambas , teniendo que coger dos autobuses actualmente</premise>
                 </argument>
             </aspect>
             <aspect quantity="5" value="transportes">
                 <argument id="11250-1">
-                    <claim>, que es gratis hasta los 7 anos de amplie hasta los 16 anos</claim>
+                    <claim>Proponer que el abono transportes infantil , que es gratis hasta los 7 anos de amplie hasta los 16 anos</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>muchos ninos cuando empiezan la ESO</premise>
                 </argument>
                 <argument id="8116-1">
-                    <claim>que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
+                    <claim>La idea es que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
                     <connector category="cause" function="support" subcategory="reason">pues</connector>
                     <premise>quiza todo el mundo no quiere</premise>
                 </argument>
@@ -141,7 +129,7 @@
                     <premise>como traba ponen que se ha de tener cargas familiares , y los que no</premise>
                 </argument>
             </aspect>
-            <aspect quantity="4" value="centro">
+            <aspect quantity="5" value="centro">
                 <argument id="9307-2">
                     <claim>Es imposible coger un transporte publico para ir al centro</claim>
                     <connector category="cause" function="support" subcategory="reason">pues</connector>
@@ -156,6 +144,11 @@
                     <claim>Instalacion de un medio de transporte publico que conecte el centro comercial de Islazul con todos los barrios de Villaverde</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>son muchos los vecinos que acuden a dicho centro</premise>
+                </argument>
+                <argument id="4648-1">
+                    <claim>A pesar de ser una zona que se encuentra a tan solo 2 km de Atocha ( centro de Red de tranpostes ) , se tarda entre 30 -45min en llegar</claim>
+                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
+                    <premise>la casi inexistencia de transporte publico</premise>
                 </argument>
                 <argument id="5213-1">
                     <claim>Se pierde mucho tiempo en viajar de un municipio al centro de la ciudad incluso mas de una hora</claim>
@@ -205,7 +198,7 @@
                     <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
                 </argument>
                 <argument id="25734-1">
-                    <claim>la accesibilidad de los usuarios de la linea de autobus 50 acceder al Metro de Sol</claim>
+                    <claim>Se hace necesaria la accesibilidad de los usuarios de la linea de autobus 50 acceder al Metro de Sol</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>carecemos de este medio de transporte en todo el Barrio de Imperial</premise>
                 </argument>
@@ -217,12 +210,12 @@
                     <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
                 </argument>
                 <argument id="3166-1">
-                    <claim>ha pensado en los jovenes para rebajar el precio de la tarjeta transporte y aumentar la edad para obtener este beneficio</claim>
+                    <claim>Solo se ha pensado en los jovenes para rebajar el precio de la tarjeta transporte y aumentar la edad para obtener este beneficio</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">sin embargo</connector>
                     <premise>nadie ha pensado en adelantar la edad de 65 anos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="personas">
+            <aspect quantity="4" value="personas">
                 <argument id="4065-1">
                     <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
@@ -237,6 +230,11 @@
                     <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
+                </argument>
+                <argument id="23906-1">
+                    <claim>Las personas que tenemos que ir Madrid a trabajar y tenemos un horario de entrada de las 7 de la manana nos vemos obligados a rechazar dicho puesto</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>no tenemos transporte para salir de Parque Co</premise>
                 </argument>
             </aspect>
         </topic>

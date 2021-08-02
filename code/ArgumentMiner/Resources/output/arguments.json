@@ -255,11 +255,11 @@
             "text": "estos son bastante antiguos",
             "nouns": "[]"
         },
-        "mainVerb": "molestan",
+        "mainVerb": "emiten",
         "claim": {
             "entities": "[]",
-            "text": "molestan a los y las vecinas del distrito",
-            "nouns": "[distrito]"
+            "text": "emiten elementos contaminantes que se quedan el la capa de ozono y molestan a los y las vecinas del distrito",
+            "nouns": "[elementos, capa, ozono, distrito]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -308,11 +308,11 @@
             "text": "su ruta afecta a varios colegios",
             "nouns": "[ruta, colegios]"
         },
-        "mainVerb": "tiene",
+        "mainVerb": "Aumentar",
         "claim": {
-            "entities": "[]",
-            "text": "como tiene ahora",
-            "nouns": "[]"
+            "entities": "[EMT]",
+            "text": "Aumentar la frecuencia de autobuses de la linea 116 de la EMT para que tenga una frecuencia de menos de 20 minutos como tiene ahora",
+            "nouns": "[frecuencia, autobuses, linea, frecuencia, minutos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -392,8 +392,8 @@
         "mainVerb": "modifiquen",
         "claim": {
             "entities": "[]",
-            "text": ", que modifiquen los accesos",
-            "nouns": "[accesos]"
+            "text": "Por favor , que modifiquen los accesos",
+            "nouns": "[favor, accesos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -416,11 +416,11 @@
             "text": "sea mas ' divertido ' esperar a los autobuses",
             "nouns": "[autobuses, autobuses]"
         },
-        "mainVerb": "Proponemos",
+        "mainVerb": "Esperar",
         "claim": {
             "entities": "[]",
-            "text": "Proponemos esta idea",
-            "nouns": "[idea]"
+            "text": "Esperar autobuses es algo muy aburrido ... Proponemos esta idea",
+            "nouns": "[autobuses, idea, autobuses]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -497,11 +497,11 @@
             "text": "muchos ninos cuando empiezan la ESO",
             "nouns": "[ninos]"
         },
-        "mainVerb": "amplie",
+        "mainVerb": "Proponer",
         "claim": {
             "entities": "[]",
-            "text": ", que es gratis hasta los 7 anos de amplie hasta los 16 anos",
-            "nouns": "[anos, anos]"
+            "text": "Proponer que el abono transportes infantil , que es gratis hasta los 7 anos de amplie hasta los 16 anos",
+            "nouns": "[transportes, anos, anos, transporte]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -581,8 +581,8 @@
         "mainVerb": "ponemos",
         "claim": {
             "entities": "[]",
-            "text": "ponemos mas dinero en los parkimetros del que necesitamos",
-            "nouns": "[dinero, parkimetros]"
+            "text": "Muchas veces ponemos mas dinero en los parkimetros del que necesitamos",
+            "nouns": "[veces, dinero, parkimetros]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -767,11 +767,11 @@
             "text": "es",
             "nouns": "[]"
         },
-        "mainVerb": "pido",
+        "mainVerb": "cuidado",
         "claim": {
             "entities": "[]",
-            "text": ", lo que pido es menos cesped y mas zonas de juegos y el cambio del suelo",
-            "nouns": "[cesped, cesped, zonas, juegos, cambio, suelo]"
+            "text": "El cesped esta seco y mal cuidado con defecaciones de perros , lo que pido es menos cesped y mas zonas de juegos y el cambio del suelo",
+            "nouns": "[cesped, seco, defecaciones, perros, cesped, zonas, juegos, cambio, suelo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -821,11 +821,11 @@
             "text": "solo hay espacio para una persona en la acera",
             "nouns": "[acera, c, c, espacio, persona, acera]"
         },
-        "mainVerb": "eliminando",
+        "mainVerb": "Ampliar",
         "claim": {
-            "entities": "[]",
-            "text": "eliminando 1 de los 3 carriles de coches por sentido",
-            "nouns": "[c, c, carriles, coches, sentido]"
+            "entities": "[Retama]",
+            "text": "Ampliar la acera peatonal del tunel bajo vias del tren entre c / Retama y c / del cerro negro , eliminando 1 de los 3 carriles de coches por sentido",
+            "nouns": "[acera, tunel, vias, tren, c, c, cerro, carriles, coches, sentido, acera]"
         },
         "majorClaim": {
             "entities": "[Adelfas, Mendez Alvaro]",
@@ -1171,11 +1171,11 @@
             "text": "no las conocen",
             "nouns": "[]"
         },
-        "mainVerb": "ocasionando",
+        "mainVerb": "Poner",
         "claim": {
-            "entities": "[]",
-            "text": "ocasionando verdaderos riesgos de accidentes al pasarse la gente las salidas",
-            "nouns": "[riesgos, accidentes, gente, salidas]"
+            "entities": "[GPS]",
+            "text": "Poner repetidores senal GPS para los navegadores ya que pierden la cobertura en los tuneles y ocasionando verdaderos riesgos de accidentes al pasarse la gente las salidas",
+            "nouns": "[repetidores, navegadores, cobertura, tuneles, riesgos, accidentes, gente, salidas]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -1201,8 +1201,8 @@
         "mainVerb": "disponen",
         "claim": {
             "entities": "[]",
-            "text": "que disponen de un colegio",
-            "nouns": "[colegio]"
+            "text": "Hay pueblos en Madrid con menos habitantes y que disponen de un colegio",
+            "nouns": "[pueblos, habitantes, colegio]"
         },
         "majorClaim": {
             "entities": "[Primaria]",
@@ -1282,8 +1282,8 @@
         "mainVerb": "utilizar",
         "claim": {
             "entities": "[]",
-            "text": "me gustaria que haya multas a las comunidades que utilizaran esto",
-            "nouns": "[multas, comunidades]"
+            "text": "Ya se que es ilegal utilizar el azufre , pero me gustaria que haya multas a las comunidades que utilizaran esto",
+            "nouns": "[azufre, multas, comunidades]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -1309,7 +1309,7 @@
         "mainVerb": "disfrutar",
         "claim": {
             "entities": "[]",
-            "text": "disfrutar andando por Madrid Rio a mayores y ninos",
+            "text": "Actualmente es peligroso disfrutar andando por Madrid Rio a mayores y ninos",
             "nouns": "[ninos]"
         },
         "majorClaim": {
@@ -1413,11 +1413,11 @@
             "text": "en la zona no hay colegios",
             "nouns": "[zona, zona, colegios]"
         },
-        "mainVerb": "creemos",
+        "mainVerb": "desarrollarse",
         "claim": {
             "entities": "[]",
-            "text": "creemos que no es el proyecto mas necesario",
-            "nouns": "[proyecto, proyecto]"
+            "text": "Los vecinos de la zona San Blas donde esta pensado desarrollarse el proyecto ARTEfacto creemos que no es el proyecto mas necesario",
+            "nouns": "[vecinos, zona, proyecto, proyecto, zona]"
         },
         "majorClaim": {
             "entities": "[STOP ARTEfacto San Blas]",
@@ -1629,11 +1629,11 @@
             "text": "solo se admite voto a favor",
             "nouns": "[favor, voto, favor]"
         },
-        "mainVerb": "predominen",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[]",
-            "text": "que predominen inereses particulares de un grupo sobre el colectivo",
-            "nouns": "[inereses, grupo, colectivo]"
+            "text": "Creo que es mas justo que las propuestas sean votadas a favor y en contra evitando que predominen inereses particulares de un grupo sobre el colectivo",
+            "nouns": "[propuestas, favor, contra, inereses, grupo, colectivo, favor]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -1737,11 +1737,11 @@
             "text": "la ley lo ampara",
             "nouns": "[ley]"
         },
-        "mainVerb": "tienen",
+        "mainVerb": "descubierto",
         "claim": {
             "entities": "[]",
-            "text": "encima no tienen riesgo alguno y es muy dificil demostrarlo",
-            "nouns": "[riesgo, demostrarlo]"
+            "text": "ultimamente las mafias han descubierto un nuevo y lucrativo negocio el alquiler o venta de pisos ocupados y encima no tienen riesgo alguno y es muy dificil demostrarlo",
+            "nouns": "[mafias, negocio, alquiler, venta, pisos, riesgo, demostrarlo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -1818,11 +1818,11 @@
             "text": "no existe radar de velocidad",
             "nouns": "[radar, velocidad]"
         },
-        "mainVerb": "circulan",
+        "mainVerb": "llevan",
         "claim": {
             "entities": "[]",
-            "text": ", por el que circulan miles de vehiculos a diario a altas velocidades",
-            "nouns": "[vehiculos, diario, velocidades, velocidad]"
+            "text": "Desde hace ya muchos anos llevan diciendo que retiraran este puente , por el que circulan miles de vehiculos a diario a altas velocidades",
+            "nouns": "[puente, vehiculos, diario, velocidades, velocidad]"
         },
         "majorClaim": {
             "entities": "[Francisco Silvela, Avenida De America]",
@@ -1899,11 +1899,11 @@
             "text": "no se conocen las probabilidades de acierto",
             "nouns": "[probabilidades, acierto]"
         },
-        "mainVerb": "incitan",
+        "mainVerb": "llevan",
         "claim": {
             "entities": "[]",
-            "text": "incitan al engano",
-            "nouns": "[engano]"
+            "text": "Las tragaperras llevan a casos de ludopatia mezclada con el alcohol e incitan al engano",
+            "nouns": "[tragaperras, casos, ludopatia, alcohol, engano]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -2034,11 +2034,11 @@
             "text": "no hay padres o madres que lo puedan recibir",
             "nouns": "[padres, madres]"
         },
-        "mainVerb": "queda",
+        "mainVerb": "preparan",
         "claim": {
             "entities": "[]",
-            "text": "que queda huerfano antes de nacer",
-            "nouns": "[]"
+            "text": "Un Dia comun para la Familia , por aquellos ninos que preparan en su colegio un regalo que queda huerfano antes de nacer",
+            "nouns": "[ninos, colegio, regalo]"
         },
         "majorClaim": {
             "entities": "[Madre]",
@@ -2091,8 +2091,8 @@
         "mainVerb": "ganen",
         "claim": {
             "entities": "[]",
-            "text": "que no solo ganen los concursos publicos los que dan los precios mas bajos",
-            "nouns": "[solo, concursos, precios, precios]"
+            "text": "Mi propuesta es que no solo ganen los concursos publicos los que dan los precios mas bajos",
+            "nouns": "[propuesta, solo, concursos, precios, precios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -2169,11 +2169,11 @@
             "text": "que las bicicletas no tienen un espacio determinado",
             "nouns": "[bicicletas, bicicletas, espacio]"
         },
-        "mainVerb": "pasean",
+        "mainVerb": "conviven",
         "claim": {
-            "entities": "[]",
-            "text": "que pasean",
-            "nouns": "[]"
+            "entities": "[Rio]",
+            "text": "En Madrid Rio conviven bicicletas y peatones , la senalizacion es ambigua y la situacion peligrosa para las familias y ninos que pasean",
+            "nouns": "[bicicletas, peatones, senalizacion, situacion, familias, ninos, bicicletas]"
         },
         "majorClaim": {
             "entities": "[Rio]",
@@ -2196,10 +2196,10 @@
             "text": "son personas puestas a dedo",
             "nouns": "[personas, personas, dedo]"
         },
-        "mainVerb": "tiene",
+        "mainVerb": "Entiendo",
         "claim": {
             "entities": "[]",
-            "text": "que la libre eleccion de personas tiene que ver mas con la politica que con la administracion",
+            "text": "Entiendo que la libre eleccion de personas tiene que ver mas con la politica que con la administracion",
             "nouns": "[eleccion, personas, politica, administracion, personas]"
         },
         "majorClaim": {
@@ -2493,11 +2493,11 @@
             "text": "el / la incivic @ de turno ha rebasado su linea de aparcamiento",
             "nouns": "[aparcamiento, incivic, turno, linea, aparcamiento]"
         },
-        "mainVerb": "cabe",
+        "mainVerb": "cabrea",
         "claim": {
             "entities": "[]",
-            "text": "que no te cabe el coche",
-            "nouns": "[coche]"
+            "text": "Como cabrea estar buscando aparcamiento y cuando por fin parece que lo has encontrado , resulta que no te cabe el coche",
+            "nouns": "[aparcamiento, fin, coche, aparcamiento]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -2574,11 +2574,11 @@
             "text": "las enormes balsas de agua",
             "nouns": "[balsas, agua]"
         },
-        "mainVerb": "utilizar",
+        "mainVerb": "llevaron",
         "claim": {
-            "entities": "[]",
-            "text": "hoy dia 04/04/2016 , a penas se pueden utilizar las pistas que hay bajo el",
-            "nouns": "[dia, penas, pistas]"
+            "entities": "[Pacifico]",
+            "text": "El verano pasado se llevaron a cabo obras en el puente de Pacifico , y hoy dia 04/04/2016 , a penas se pueden utilizar las pistas que hay bajo el",
+            "nouns": "[verano, cabo, obras, puente, dia, penas, pistas]"
         },
         "majorClaim": {
             "entities": "[PACIFICO]",
@@ -2655,10 +2655,10 @@
             "text": "que los comercios no han cuidado los bajos , estan llenos de grafittis y la pintura estropeada",
             "nouns": "[comercios, grafittis, pintura]"
         },
-        "mainVerb": "aprecia",
+        "mainVerb": "rehabilitado",
         "claim": {
-            "entities": "[]",
-            "text": "no se aprecia",
+            "entities": "[Lavapies]",
+            "text": "Casi todo Lavapies esta rehabilitado pero no se aprecia",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -2820,7 +2820,7 @@
         "mainVerb": "instalen",
         "claim": {
             "entities": "[]",
-            "text": "que para los meses de mucho calor se instalen toldos en la zona infantil para crear sombras",
+            "text": "Tambien es importante que para los meses de mucho calor se instalen toldos en la zona infantil para crear sombras",
             "nouns": "[meses, calor, toldos, zona, sombras]"
         },
         "majorClaim": {
@@ -2898,11 +2898,11 @@
             "text": "su elevado coste",
             "nouns": "[coste]"
         },
-        "mainVerb": "ayudadas",
+        "mainVerb": "quedamos",
         "claim": {
             "entities": "[]",
-            "text": "parejas de heterosexuales si pueden ser ayudadas en este caso , ser madres en nuestro caso es casi imposible",
-            "nouns": "[parejas, heterosexuales, caso, madres, caso]"
+            "text": "Hace un tiempo quedamos fuera de la lista por recortes , mientras que parejas de heterosexuales si pueden ser ayudadas en este caso , ser madres en nuestro caso es casi imposible",
+            "nouns": "[tiempo, lista, recortes, parejas, heterosexuales, caso, madres, caso]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -2979,10 +2979,10 @@
             "text": "hay muy pocas",
             "nouns": "[pocas]"
         },
-        "mainVerb": "hacer",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[Chamartin]",
-            "text": "que deberian hacer al menos dos bibliotecas en la zona de Tetuan y Chamartin",
+            "text": "Creo que deberian hacer al menos dos bibliotecas en la zona de Tetuan y Chamartin",
             "nouns": "[bibliotecas, zona]"
         },
         "majorClaim": {
@@ -3114,11 +3114,11 @@
             "text": "el problema de aparcamiento solo es por la noche",
             "nouns": "[problema, aparcamiento, noche]"
         },
-        "mainVerb": "afan",
+        "mainVerb": "Quiero",
         "claim": {
             "entities": "[]",
-            "text": "que es solo afan recaudatorio",
-            "nouns": "[]"
+            "text": "Quiero la retirada de parquimetros en todo el barrio de casa de campo por no ser necesarios y considero que es solo afan recaudatorio",
+            "nouns": "[retirada, parquimetros, barrio, casa, campo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -3333,7 +3333,7 @@
         "mainVerb": "multar",
         "claim": {
             "entities": "[]",
-            "text": "trataria de multar",
+            "text": "Se trataria de multar",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -3384,11 +3384,11 @@
             "text": "los azulejos siguen debajo",
             "nouns": "[azulejos]"
         },
-        "mainVerb": "quitar",
+        "mainVerb": "habria",
         "claim": {
             "entities": "[]",
-            "text": "que quitar los paneles monocromos de metal",
-            "nouns": "[paneles, metal]"
+            "text": "Tan solo habria que quitar los paneles monocromos de metal",
+            "nouns": "[Tan, paneles, metal]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -3441,7 +3441,7 @@
         "mainVerb": "exista",
         "claim": {
             "entities": "[]",
-            "text": "que exista en esta parcela un centro cultural",
+            "text": "Necesario que exista en esta parcela un centro cultural",
             "nouns": "[parcela, centro]"
         },
         "majorClaim": {
@@ -3600,11 +3600,11 @@
             "text": "hay pocos buses o  hace muchas paradas y se tira un",
             "nouns": "[bus, buses, paradas]"
         },
-        "mainVerb": "sabe",
+        "mainVerb": "esperando",
         "claim": {
-            "entities": "[]",
-            "text": "mucho no se sabe si es",
-            "nouns": "[]"
+            "entities": "[Alvarado, Alonso Martinez]",
+            "text": "Hay mucha gente por Alonso Martinez , Alvarado , retiro esperando a que llegue el bus pero siempre tarda mucho no se sabe si es",
+            "nouns": "[gente, retiro, bus]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -3735,10 +3735,10 @@
             "text": "es necesario , en muchas ocasiones",
             "nouns": "[ocasiones]"
         },
-        "mainVerb": "permita",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se permita a todos los profesionales sanitarios de atencion domiciliaria la circulacion por calles de acceso exclusivo a residentes",
+            "text": "Propongo que se permita a todos los profesionales sanitarios de atencion domiciliaria la circulacion por calles de acceso exclusivo a residentes",
             "nouns": "[profesionales, atencion, circulacion, calles, acceso, residentes]"
         },
         "majorClaim": {
@@ -3789,11 +3789,11 @@
             "text": "que pise una hoja de los platanos de paseo del barrio , una de las miles que hay",
             "nouns": "[hoja, platanos, paseo, barrio]"
         },
-        "mainVerb": "tuve",
+        "mainVerb": "vivo",
         "claim": {
             "entities": "[]",
-            "text": ", tuve una caida en la calle",
-            "nouns": "[caida, calle]"
+            "text": "Hola , yo vivo en San blas , y el otro dia , tuve una caida en la calle",
+            "nouns": "[dia, caida, calle]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -3976,11 +3976,11 @@
             "text": "generan mucha basura alrededor",
             "nouns": "[basura]"
         },
-        "mainVerb": "vacien",
+        "mainVerb": "intensifiquen",
         "claim": {
             "entities": "[]",
-            "text": "que se vacien mas a menudo los contenedores de reciclaje",
-            "nouns": "[menudo, contenedores, reciclaje]"
+            "text": "Mi propuesta es que se intensifiquen los efectivos de limpieza en este distrito que esta muy sucio y que se vacien mas a menudo los contenedores de reciclaje",
+            "nouns": "[propuesta, efectivos, limpieza, distrito, menudo, contenedores, reciclaje]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -4194,8 +4194,8 @@
         "mainVerb": "tienen",
         "claim": {
             "entities": "[]",
-            "text": "que no tienen",
-            "nouns": "[]"
+            "text": "La publicidad de la prostitucion en los coches , esta al alcance de la vista de los ninos que no tienen",
+            "nouns": "[publicidad, prostitucion, coches, alcance, vista, ninos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -4221,7 +4221,7 @@
         "mainVerb": "propone",
         "claim": {
             "entities": "[]",
-            "text": "propone la instalacion de pistas publicas y gratuitas de fronton en el barrio de la Almenara ( Tetuan )",
+            "text": "Se propone la instalacion de pistas publicas y gratuitas de fronton en el barrio de la Almenara ( Tetuan )",
             "nouns": "[instalacion, pistas, fronton, barrio]"
         },
         "majorClaim": {
@@ -4272,11 +4272,11 @@
             "text": "solo hay acceso a la piscina",
             "nouns": "[acceso, acceso, piscina]"
         },
-        "mainVerb": "realicen",
+        "mainVerb": "Tener",
         "claim": {
             "entities": "[]",
-            "text": "que se realicen en ellos",
-            "nouns": "[]"
+            "text": "Tener acceso gratuito en los polideportivos municipales para todas las actividades que se realicen en ellos",
+            "nouns": "[acceso, polideportivos, actividades, acceso]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -4302,8 +4302,8 @@
         "mainVerb": "duerme",
         "claim": {
             "entities": "[]",
-            "text": "duerme en la calle",
-            "nouns": "[calle]"
+            "text": "Un 50 % de personas sin hogar duerme en la calle",
+            "nouns": "[personas, hogar, calle]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -4787,8 +4787,8 @@
         "mainVerb": "ampliar",
         "claim": {
             "entities": "[Campo de futbol del Bernabeu]",
-            "text": ", ni para la zona , ampliar el Campo de futbol del Bernabeu ( castellana )",
-            "nouns": "[zona, futbol]"
+            "text": "No me parece correcto para los ciudadanos , ni para la zona , ampliar el Campo de futbol del Bernabeu ( castellana )",
+            "nouns": "[ciudadanos, zona, futbol]"
         },
         "majorClaim": {
             "entities": "[BERNABEU]",
@@ -4946,11 +4946,11 @@
             "text": "hay muchas entradas y salidas de garajes y pasos de peatones",
             "nouns": "[entradas, salidas, garajes, pasos, peatones]"
         },
-        "mainVerb": "hacer",
+        "mainVerb": "algun",
         "claim": {
             "entities": "[]",
-            "text": "para hacer los coches disminuyan su velocidad",
-            "nouns": "[coches, velocidad]"
+            "text": "Es necesario algun elemento en esa calle para hacer los coches disminuyan su velocidad",
+            "nouns": "[elemento, calle, coches, velocidad]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -4976,7 +4976,7 @@
         "mainVerb": "subiese",
         "claim": {
             "entities": "[Minerva]",
-            "text": "que subiese hasta la calle Minerva",
+            "text": "Seria interesante que subiese hasta la calle Minerva",
             "nouns": "[calle]"
         },
         "majorClaim": {
@@ -5002,9 +5002,9 @@
         },
         "mainVerb": "aparcar",
         "claim": {
-            "entities": "[]",
-            "text": "aparcar",
-            "nouns": "[]"
+            "entities": "[Clinico S. Carlos]",
+            "text": "Frente al hospital Clinico S. Carlos siempre hay problemas de aparcar",
+            "nouns": "[Frente, hospital, problemas]"
         },
         "majorClaim": {
             "entities": "[CARLOS MADRID]",
@@ -5189,11 +5189,11 @@
             "text": "este problema no les llega",
             "nouns": "[problema]"
         },
-        "mainVerb": "niegan",
+        "mainVerb": "requiriendo",
         "claim": {
             "entities": "[]",
-            "text": "de cual no se puede por que la mayoria son pisos alquilados y se niegan los propietarios",
-            "nouns": "[mayoria, pisos, propietarios]"
+            "text": "es un barrio de gente anciana requiriendo el ascensor y de cual no se puede por que la mayoria son pisos alquilados y se niegan los propietarios",
+            "nouns": "[barrio, gente, anciana, ascensor, mayoria, pisos, propietarios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -5378,11 +5378,11 @@
             "text": "sean 10 min",
             "nouns": "[min]"
         },
-        "mainVerb": "aparcar",
+        "mainVerb": "Cobrar",
         "claim": {
             "entities": "[]",
-            "text": "aparcar en mis calles",
-            "nouns": "[calle, calles]"
+            "text": "Cobrar por aparcar a aquellos que dejan su coche en la calle eternamente esta bien , Pero decir ... si quieres aparcar en mis calles",
+            "nouns": "[coche, calle, bien, calles]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -5543,8 +5543,8 @@
         "mainVerb": "beber",
         "claim": {
             "entities": "[]",
-            "text": "beber sobre todo para mayores y gente con limitaciones fisicas",
-            "nouns": "[par, gente, limitaciones]"
+            "text": "Las fuentes publicas de agua potable de Madrid son muy incomodas par beber sobre todo para mayores y gente con limitaciones fisicas",
+            "nouns": "[fuentes, agua, par, gente, limitaciones]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -5570,8 +5570,8 @@
         "mainVerb": "utiliza",
         "claim": {
             "entities": "[]",
-            "text": "que la gente utiliza como parking",
-            "nouns": "[gente, parking]"
+            "text": "Al lado del polideportivo hay una explanada que la gente utiliza como parking",
+            "nouns": "[lado, polideportivo, explanada, gente, parking]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -5594,11 +5594,11 @@
             "text": "en la mayor parte de los casos se sanciona a jovenes menores o mayores de edad sin empleo y son sus familias las que tienen que hacer frente a la excesiva cuantia de la misma ( 500/600 ) suponiendo , en muchas ocasiones , una carga dramatica ( esta cuantia ademas aumenta en 500 si se es reincidente )",
             "nouns": "[frente, parte, casos, jovenes, edad, empleo, familias, frente, cuantia, 500/600, ocasiones, carga, cuantia]"
         },
-        "mainVerb": "desvirtua",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se desvirtua la naturaleza de la misma",
-            "nouns": "[naturaleza]"
+            "text": "Propongo dar una opcion a la hora de hacer frente a las sanciones por consumo de alcohol en la via publica por considerar que se desvirtua la naturaleza de la misma",
+            "nouns": "[opcion, hora, frente, sanciones, consumo, alcohol, via, naturaleza, frente]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -5705,8 +5705,8 @@
         "mainVerb": "amplie",
         "claim": {
             "entities": "[Valdebernardo]",
-            "text": "que se amplie el parking que hay delante del polideportivo de Valdebernardo",
-            "nouns": "[parking, polideportivo]"
+            "text": "Hola buenos dias mi propuesta es que se amplie el parking que hay delante del polideportivo de Valdebernardo",
+            "nouns": "[dias, propuesta, parking, polideportivo, dias]"
         },
         "majorClaim": {
             "entities": "[Valdebernardo]",
@@ -5971,11 +5971,11 @@
             "text": "debo de pagar por aparcar en mi casa",
             "nouns": "[casa]"
         },
-        "mainVerb": "fomentar",
+        "mainVerb": "parece",
         "claim": {
             "entities": "[]",
-            "text": "fomentar el uso del transporte publico pero",
-            "nouns": "[uso, uso, transporte]"
+            "text": "Me parece bien regular el uso del coche y fomentar el uso del transporte publico pero",
+            "nouns": "[uso, coche, uso, transporte]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6079,11 +6079,11 @@
             "text": "esten vedados por emergencia o averia",
             "nouns": "[emergencia, averia]"
         },
-        "mainVerb": "carecen",
+        "mainVerb": "Promover",
         "claim": {
             "entities": "[]",
-            "text": ", que carecen de espacio para instalar una rampa de baja pendiente , como alternativa a ascensores o salvaescaleras (",
-            "nouns": "[espacio, rampa, baja, alternativa, ascensores, salvaescaleras]"
+            "text": "Promover la investigacion , el desarrollo , y la aplicacion del Diseno para Todos , para garantizar la accesibilidad de las personas de movilidad reducida , en aquellos edificios , infraestructuras o vehiculos , que carecen de espacio para instalar una rampa de baja pendiente , como alternativa a ascensores o salvaescaleras (",
+            "nouns": "[investigacion, desarrollo, aplicacion, accesibilidad, personas, movilidad, edificios, infraestructuras, vehiculos, espacio, rampa, baja, alternativa, ascensores, salvaescaleras]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6160,11 +6160,11 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "finalizar",
+        "mainVerb": "buscar",
         "claim": {
             "entities": "[]",
-            "text": "finalizar lA LINEA DEL 78 por motivos acusticos y de medio ambiente",
-            "nouns": "[motivos, medio, ambiente]"
+            "text": "buscar un lugar para aparcar al finalizar lA LINEA DEL 78 por motivos acusticos y de medio ambiente",
+            "nouns": "[lugar, motivos, medio, ambiente]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6430,11 +6430,11 @@
             "text": "ha acabado alli",
             "nouns": "[alli]"
         },
-        "mainVerb": "busca",
+        "mainVerb": "sabes",
         "claim": {
             "entities": "[]",
-            "text": "si alguien le busca",
-            "nouns": "[]"
+            "text": "No sabes su nombre , si alguien le busca",
+            "nouns": "[nombre]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6487,7 +6487,7 @@
         "mainVerb": "iluminacion",
         "claim": {
             "entities": "[Avenida del Mediterraneo, Avenida Ciudad de]",
-            "text": "mas iluminacion en las calles entre Avenida Ciudad de Barcelona y Avenida del Mediterraneo",
+            "text": "Es necesario mas iluminacion en las calles entre Avenida Ciudad de Barcelona y Avenida del Mediterraneo",
             "nouns": "[calles, iluminacion, calle]"
         },
         "majorClaim": {
@@ -6511,10 +6511,10 @@
             "text": "aun hay gente muy cerrada en el tema",
             "nouns": "[gente, tema]"
         },
-        "mainVerb": "sancione",
+        "mainVerb": "entender",
         "claim": {
             "entities": "[]",
-            "text": "que se sancione por consumo",
+            "text": "Se podria entender que se sancione por consumo",
             "nouns": "[consumo]"
         },
         "majorClaim": {
@@ -6538,11 +6538,11 @@
             "text": "ha aumentado los robos , urtos y asaltos a mujeres a veces con violacion",
             "nouns": "[robos, urtos, asaltos, mujeres, veces, violacion]"
         },
-        "mainVerb": "aumentase",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que aumentase el numero de policias de Madrid",
-            "nouns": "[numero, policias]"
+            "text": "Mq gustaria que aumentase el numero de policias de Madrid",
+            "nouns": "[Mq, numero, policias]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6592,11 +6592,11 @@
             "text": "lo reduce a un",
             "nouns": "[]"
         },
-        "mainVerb": "entorpezca",
+        "mainVerb": "Proponer",
         "claim": {
             "entities": "[]",
-            "text": "donde no entorpezca el paso de peatones",
-            "nouns": "[paso, peatones]"
+            "text": "Proponer que la salida del metro Puente de Vallecas se cambie a un lugar donde no entorpezca el paso de peatones",
+            "nouns": "[salida, metro, lugar, paso, peatones]"
         },
         "majorClaim": {
             "entities": "[Puente de Vallecas]",
@@ -6727,11 +6727,11 @@
             "text": "todavia sigue habiendo ciertas distancias",
             "nouns": "[tan, distancias]"
         },
-        "mainVerb": "jugar",
+        "mainVerb": "Crear",
         "claim": {
             "entities": "[]",
-            "text": "jugar , tan solo jugar",
-            "nouns": "[tan]"
+            "text": "Crear un servicio y un centro de ocio para personas , ninos con discapacidad para que puedan disfrutar , salir , y jugar , tan solo jugar",
+            "nouns": "[servicio, centro, ocio, personas, ninos, discapacidad, tan]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6757,8 +6757,8 @@
         "mainVerb": "llevan",
         "claim": {
             "entities": "[]",
-            "text": "que llevan hoy dia algunos coches",
-            "nouns": "[dia, coches]"
+            "text": "demasiados decibelios en la musica que llevan hoy dia algunos coches",
+            "nouns": "[decibelios, musica, dia, coches]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -6783,9 +6783,9 @@
         },
         "mainVerb": "aparcar",
         "claim": {
-            "entities": "[]",
-            "text": "aparcar nuestros coches",
-            "nouns": "[coches]"
+            "entities": "[Chueca]",
+            "text": "En la zona de Chueca es imposible aparcar nuestros coches",
+            "nouns": "[zona, coches]"
         },
         "majorClaim": {
             "entities": "[Chueca]",
@@ -6865,8 +6865,8 @@
         "mainVerb": "ir",
         "claim": {
             "entities": "[]",
-            "text": "no puedo ir a la escuela de musica municipal",
-            "nouns": "[escuela, musica]"
+            "text": "Hola a todos , trabajo de tarde y no puedo ir a la escuela de musica municipal",
+            "nouns": "[trabajo, escuela, musica]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -7107,8 +7107,8 @@
         "mainVerb": "quitaron",
         "claim": {
             "entities": "[]",
-            "text": "lo quitaron",
-            "nouns": "[]"
+            "text": "En via carpetana 192 hay un pequeno descampado que era un parque , lo quitaron",
+            "nouns": "[via, pequeno, parque, parque]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -7292,11 +7292,11 @@
             "text": "no se distingue si cruza alguien por los pasos de cebra",
             "nouns": "[pasos, cebra]"
         },
-        "mainVerb": "ir",
+        "mainVerb": "voy",
         "claim": {
             "entities": "[]",
-            "text": "hay que ir con sumo cuidado",
-            "nouns": "[cuidado]"
+            "text": "Por la manana y de noche cuando voy con mi coche hay que ir con sumo cuidado",
+            "nouns": "[manana, noche, coche, cuidado]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -7671,8 +7671,8 @@
         "mainVerb": "detienen",
         "claim": {
             "entities": "[]",
-            "text": "que estos se detienen en cualquier sitio en mitad de la carretera",
-            "nouns": "[sitio, mitad, carretera, sitio]"
+            "text": "La exagerada cantidad de taxis que hay en la capital , y que estos se detienen en cualquier sitio en mitad de la carretera",
+            "nouns": "[cantidad, taxis, capital, sitio, mitad, carretera, sitio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -8099,11 +8099,11 @@
             "text": "es una zona con zona de oficinas , urbanizaciones de viviendas",
             "nouns": "[zona, zona, oficinas, urbanizaciones, viviendas]"
         },
-        "mainVerb": "carece",
+        "mainVerb": "Pido",
         "claim": {
             "entities": "[]",
-            "text": "carece de iluminacion en las zonas publicas , es una calle frecuentada",
-            "nouns": "[publica, calle, iluminacion, zonas, calle, zona, zona]"
+            "text": "Pido al ayuntamiento se dote de luz publica para esta calle , carece de iluminacion en las zonas publicas , es una calle frecuentada",
+            "nouns": "[ayuntamiento, luz, publica, calle, iluminacion, zonas, calle, zona, zona]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -8291,8 +8291,8 @@
         "mainVerb": "aparcar",
         "claim": {
             "entities": "[]",
-            "text": ", por lo que siempre estan llenos y hay que aparcar en la acera",
-            "nouns": "[acera]"
+            "text": "Que haya mas lugares habilitados para aparcar las motos en el centro , hay muy pocos para la cantidad de motos que hay , por lo que siempre estan llenos y hay que aparcar en la acera",
+            "nouns": "[lugares, motos, centro, cantidad, motos, acera]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -8372,7 +8372,7 @@
         "mainVerb": "cursar",
         "claim": {
             "entities": "[]",
-            "text": "en los que los ninos y ninas puedan cursar desde los 3 anos hasta terminar la secundaria",
+            "text": "Colegios publicos y / o concertados LAICOS en los que los ninos y ninas puedan cursar desde los 3 anos hasta terminar la secundaria",
             "nouns": "[ninos, ninas, anos, secundaria, anos]"
         },
         "majorClaim": {
@@ -8477,11 +8477,11 @@
             "text": "las multiples incidencias que se producen a diario",
             "nouns": "[incidencias, diario]"
         },
-        "mainVerb": "acceder",
+        "mainVerb": "Permitir",
         "claim": {
             "entities": "[]",
-            "text": "en calles limitrofes a las APR acceder con el vehiculo a estas zonas",
-            "nouns": "[calles, vehiculo, zonas]"
+            "text": "Permitir a los residentes en calles limitrofes a las APR acceder con el vehiculo a estas zonas",
+            "nouns": "[residentes, calles, vehiculo, zonas]"
         },
         "majorClaim": {
             "entities": "[Acceso Areas Prioridad Residencial]",
@@ -8504,10 +8504,10 @@
             "text": "es un factor que coadyuva a la asfixia economica a muchas pequenas asociaciones",
             "nouns": "[factor, asfixia, asociaciones]"
         },
-        "mainVerb": "rebaje",
+        "mainVerb": "Proponemos",
         "claim": {
             "entities": "[IBI]",
-            "text": "rebaje sustancialmente el IBI que soportan las Entidades sin animo de lucro",
+            "text": "Proponemos que se elimine o rebaje sustancialmente el IBI que soportan las Entidades sin animo de lucro",
             "nouns": "[lucro]"
         },
         "majorClaim": {
@@ -8561,8 +8561,8 @@
         "mainVerb": "cae",
         "claim": {
             "entities": "[]",
-            "text": "que se cae a trozos",
-            "nouns": "[trozos]"
+            "text": "Un teatro viejo y sucio que se cae a trozos",
+            "nouns": "[teatro, trozos]"
         },
         "majorClaim": {
             "entities": "[La Gran Via, Coro de RTVE, de la Musica]",
@@ -8692,11 +8692,11 @@
             "text": "no hay sitio en la calle",
             "nouns": "[sitio, calle]"
         },
-        "mainVerb": "aparca",
+        "mainVerb": "tira",
         "claim": {
             "entities": "[]",
-            "text": "aparca gratuitamente",
-            "nouns": "[]"
+            "text": "Hay terrenos donde la gente tira el coche y aparca gratuitamente",
+            "nouns": "[terrenos, gente, coche]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -8854,11 +8854,11 @@
             "text": "hay una ausencia total de las mismas",
             "nouns": "[ausencia]"
         },
-        "mainVerb": "practicar",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "para practicar deportes de forma gratuita en en la zona de de los alrededores del parque del Retiro",
-            "nouns": "[deportes, forma, zona, alrededores, parque]"
+            "text": "Propongo la construccion de un recinto habilitado para practicar deportes de forma gratuita en en la zona de de los alrededores del parque del Retiro",
+            "nouns": "[construccion, recinto, deportes, forma, zona, alrededores, parque]"
         },
         "majorClaim": {
             "entities": "[ibiza, Deportivas, Campos]",
@@ -8934,11 +8934,11 @@
             "text": "no existe radar de velocidad",
             "nouns": "[radar, velocidad]"
         },
-        "mainVerb": "circulan",
+        "mainVerb": "llevan",
         "claim": {
             "entities": "[]",
-            "text": ", por el que circulan miles de vehiculos a diario a altas velocidades",
-            "nouns": "[vehiculos, diario, velocidades, velocidad]"
+            "text": "Desde hace ya muchos anos llevan diciendo que retiraran este puente , por el que circulan miles de vehiculos a diario a altas velocidades",
+            "nouns": "[puente, vehiculos, diario, velocidades, velocidad]"
         },
         "majorClaim": {
             "entities": "[Francisco Silvela, Avenida De America]",
@@ -9015,11 +9015,11 @@
             "text": "en cierta medida somos residentes",
             "nouns": "[medida]"
         },
-        "mainVerb": "trabajamos",
+        "mainVerb": "contar",
         "claim": {
             "entities": "[]",
-            "text": "donde trabajamos",
-            "nouns": "[]"
+            "text": "Se deberia contar con una tarjeta especial , para poder aparcar alli donde trabajamos",
+            "nouns": "[tarjeta, alli]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -9206,8 +9206,8 @@
         "mainVerb": "usa",
         "claim": {
             "entities": "[]",
-            "text": "que se usa en el Area de Medio Ambiente para que sea respetuoso con la contaminacion acustica",
-            "nouns": "[contaminacion]"
+            "text": "Cambio de vehiculos y todo el material que se usa en el Area de Medio Ambiente para que sea respetuoso con la contaminacion acustica",
+            "nouns": "[vehiculos, material, contaminacion]"
         },
         "majorClaim": {
             "entities": "[Area de Medio Ambiente, Vehiculos]",
@@ -9286,8 +9286,8 @@
         },
         "mainVerb": "lleva",
         "claim": {
-            "entities": "[]",
-            "text": "lleva mas de 10 anos de ejecucion",
+            "entities": "[Area de Rehabiliatacion Integral, Ciudad de]",
+            "text": "El ARI ( Area de Rehabiliatacion Integral ) , de la Ciudad de los Angeles , lleva mas de 10 anos de ejecucion",
             "nouns": "[anos, ejecucion, anos]"
         },
         "majorClaim": {
@@ -9311,10 +9311,10 @@
             "text": "perjudican la salud de los madrilenos",
             "nouns": "[salud, madrilenos]"
         },
-        "mainVerb": "cree",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que el ayuntamiento cree un nuevo impuesto municipal o grave de alguna manera la actividad de las casas de apuestas en nuestra ciudad",
+            "text": "Propongo que el ayuntamiento cree un nuevo impuesto municipal o grave de alguna manera la actividad de las casas de apuestas en nuestra ciudad",
             "nouns": "[ayuntamiento, impuesto, manera, actividad, casas, apuestas, ciudad]"
         },
         "majorClaim": {
@@ -9473,11 +9473,11 @@
             "text": "ha quedado pequeno",
             "nouns": "[pequeno]"
         },
-        "mainVerb": "hecho",
+        "mainVerb": "Hacer",
         "claim": {
             "entities": "[Alcantara]",
-            "text": "igual que el que han hecho en la calle Alcantara para el mismo barrio",
-            "nouns": "[calle, barrio]"
+            "text": "Hacer un nuevo edificio para zona deportiva y aparcamiento para residentes , igual que el que han hecho en la calle Alcantara para el mismo barrio",
+            "nouns": "[edificio, zona, aparcamiento, residentes, calle, barrio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -9554,10 +9554,10 @@
             "text": "es muy alto el n de ciudadanos por Centro",
             "nouns": "[n, ciudadanos]"
         },
-        "mainVerb": "utilizar",
+        "mainVerb": "inscribirse",
         "claim": {
             "entities": "[Centro]",
-            "text": "utilizar los Centros Culturales",
+            "text": "Es dificil inscribirse , participar y utilizar los Centros Culturales",
             "nouns": "[n]"
         },
         "majorClaim": {
@@ -9665,8 +9665,8 @@
         "mainVerb": "tengan",
         "claim": {
             "entities": "[]",
-            "text": "que no tengan que estar en las calles",
-            "nouns": "[calles]"
+            "text": "Creacion de un espacio publico para personas sin techo y sus mascotas para que no tengan que estar en las calles",
+            "nouns": "[espacio, personas, techo, mascotas, calles]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -9773,7 +9773,7 @@
         "mainVerb": "pensado",
         "claim": {
             "entities": "[]",
-            "text": "ha pensado en los jovenes para rebajar el precio de la tarjeta transporte y aumentar la edad para obtener este beneficio",
+            "text": "Solo se ha pensado en los jovenes para rebajar el precio de la tarjeta transporte y aumentar la edad para obtener este beneficio",
             "nouns": "[jovenes, precio, tarjeta, transporte, edad, beneficio, edad]"
         },
         "majorClaim": {
@@ -9851,11 +9851,11 @@
             "text": "su alt",
             "nouns": "[alt]"
         },
-        "mainVerb": "llegan",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que no llegan a la canasta",
-            "nouns": "[canasta]"
+            "text": "Me gustaria que hicieran canchas de baloncesto para nuestros hijos , ya que hay muchisimos ninos aficionados a este deporte que sin embargo no pueden jugar por que no llegan a la canasta",
+            "nouns": "[canchas, baloncesto, hijos, aficionados, deporte, embargo, canasta]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -9878,11 +9878,11 @@
             "text": "a 10 metros hay otro semaforo",
             "nouns": "[metros, semaforo]"
         },
-        "mainVerb": "ambar",
+        "mainVerb": "evitar",
         "claim": {
-            "entities": "[]",
-            "text": "dejar semaforo siempre en ambar",
-            "nouns": "[semaforo]"
+            "entities": "[Arbos]",
+            "text": "Para evitar molestias de ruido , producido por camiones , y demas vehiculos , en calle maestro Arbos numero 5 , propongo dejar semaforo siempre en ambar",
+            "nouns": "[molestias, ruido, camiones, demas, calle, maestro, semaforo]"
         },
         "majorClaim": {
             "entities": "[Arbos]",
@@ -9932,10 +9932,10 @@
             "text": "digan que no tienen animo delucro",
             "nouns": "[delucro]"
         },
-        "mainVerb": "ceda",
+        "mainVerb": "trata",
         "claim": {
             "entities": "[]",
-            "text": "que un suelo publico se ceda a empresas , fundaciones o negocios privados",
+            "text": "Se trata de impedir que un suelo publico se ceda a empresas , fundaciones o negocios privados",
             "nouns": "[suelo, empresas, fundaciones, negocios]"
         },
         "majorClaim": {
@@ -10016,8 +10016,8 @@
         "mainVerb": "estan",
         "claim": {
             "entities": "[]",
-            "text": "estan secos",
-            "nouns": "[]"
+            "text": "Todos los parques , los que estan terminados , sufren un deterioro del mobiliario y estan secos",
+            "nouns": "[parques, deterioro, mobiliario]"
         },
         "majorClaim": {
             "entities": "[La Gavia]",
@@ -10092,11 +10092,11 @@
             "text": "si somos despedidas no tenemos el derecho de cobrar el sudsidio",
             "nouns": "[derecho, sudsidio]"
         },
-        "mainVerb": "fastidia",
+        "mainVerb": "hola",
         "claim": {
             "entities": "[]",
-            "text": "lo que mas me fastidia es que este trabajo es una desonra",
-            "nouns": "[trabajo, trabajo, desonra]"
+            "text": "hola trabajo desde hace muchos anos limpiando casa estoy dada de alta y lo que mas me fastidia es que este trabajo es una desonra",
+            "nouns": "[trabajo, anos, casa, trabajo, desonra]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -10173,11 +10173,11 @@
             "text": "no son comestibles",
             "nouns": "[comestibles]"
         },
-        "mainVerb": "echan",
+        "mainVerb": "ven",
         "claim": {
             "entities": "[]",
-            "text": "otros arboles cuyos frutos se echan a perder",
-            "nouns": "[arboles, frutos]"
+            "text": "En numerosos parques se ven almendros y otros arboles cuyos frutos se echan a perder",
+            "nouns": "[parques, almendros, arboles, frutos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -10604,11 +10604,11 @@
             "text": "dicho general defendio Madrid del golpe de Estado militar contra la Republica",
             "nouns": "[general, general, golpe]"
         },
-        "mainVerb": "seran",
+        "mainVerb": "Conceder",
         "claim": {
-            "entities": "[]",
-            "text": "que seran retiradas a los cargos franquistas",
-            "nouns": "[cargos, franquistas]"
+            "entities": "[Miaja]",
+            "text": "Conceder al general Miaja una de las calles que seran retiradas a los cargos franquistas",
+            "nouns": "[general, calles, cargos, franquistas, general]"
         },
         "majorClaim": {
             "entities": "[Miaja]",
@@ -10634,8 +10634,8 @@
         "mainVerb": "robaron",
         "claim": {
             "entities": "[]",
-            "text": "que nos ' robaron ' con excusa a la crisis economica de 20:00 a 21:00",
-            "nouns": "[excusa, crisis]"
+            "text": "Devolvernos esa hora que nos ' robaron ' con excusa a la crisis economica de 20:00 a 21:00",
+            "nouns": "[hora, excusa, crisis]"
         },
         "majorClaim": {
             "entities": "[Reduccion Horario]",
@@ -10688,7 +10688,7 @@
         "mainVerb": "bajen",
         "claim": {
             "entities": "[]",
-            "text": "que bajen el IVA en la luz , por ser un bien necesario en nuestro dia a dia",
+            "text": "Solicito que bajen el IVA en la luz , por ser un bien necesario en nuestro dia a dia",
             "nouns": "[luz, bien, dia, dia]"
         },
         "majorClaim": {
@@ -10926,11 +10926,11 @@
             "text": "si la sancion estuviera acorde con el poder adquisitivo creo que mejoraria el disuasorio",
             "nouns": "[sancion, poder, disuasorio]"
         },
-        "mainVerb": "disuadir",
+        "mainVerb": "supongo",
         "claim": {
             "entities": "[]",
-            "text": "que es disuadir aparte de recaudar",
-            "nouns": "[]"
+            "text": "El objetivo de las sanciones supongo que es disuadir aparte de recaudar",
+            "nouns": "[objetivo, sanciones, sancion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -11063,7 +11063,7 @@
         "mainVerb": "publica",
         "claim": {
             "entities": "[]",
-            "text": "volver a una gestion enteramente publica de la tramitacion de licencias de actividades economicas",
+            "text": "Es fundamental volver a una gestion enteramente publica de la tramitacion de licencias de actividades economicas",
             "nouns": "[gestion, tramitacion, licencias, actividades]"
         },
         "majorClaim": {
@@ -11171,7 +11171,7 @@
         "mainVerb": "recorriera",
         "claim": {
             "entities": "[Castellana, Chamartin]",
-            "text": "al tiempo ecologico un tranvia que recorriera toda la Castellana , desde Atocha hasta Chamartin , le daria un aire mas chic a la ciudad",
+            "text": "Seria muy bonito y al tiempo ecologico un tranvia que recorriera toda la Castellana , desde Atocha hasta Chamartin , le daria un aire mas chic a la ciudad",
             "nouns": "[tiempo, tranvia, aire, ciudad]"
         },
         "majorClaim": {
@@ -11384,11 +11384,11 @@
             "text": "no los riegan lo suficiente",
             "nouns": "[]"
         },
-        "mainVerb": "secan",
+        "mainVerb": "regar",
         "claim": {
             "entities": "[]",
-            "text": ", muchos se secan",
-            "nouns": "[]"
+            "text": "Se deben regar mucho mas los arboles recien plantados , muchos se secan",
+            "nouns": "[arboles]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -11519,11 +11519,11 @@
             "text": "ello provoca que haya gente que rebusque en la basura y luego se quede esparcida por los alrededores",
             "nouns": "[basura, gente, basura, alrededores]"
         },
-        "mainVerb": "esten",
+        "mainVerb": "Quitar",
         "claim": {
             "entities": "[]",
-            "text": ", que no esten todo el dia",
-            "nouns": "[dia]"
+            "text": "Quitar los cubos de basura de las calles , que no esten todo el dia",
+            "nouns": "[cubos, basura, calles, dia, basura]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -11549,8 +11549,8 @@
         "mainVerb": "incluir",
         "claim": {
             "entities": "[]",
-            "text": "ademas incluir en uno de ellos la casa de campo",
-            "nouns": "[casa, campo]"
+            "text": "El distrito de la Latina es uno de los mas grandes , seria bueno para los ciudadanos dividirlo en 2 , ademas incluir en uno de ellos la casa de campo",
+            "nouns": "[distrito, ciudadanos, casa, campo]"
         },
         "majorClaim": {
             "entities": "[Casa de Campo]",
@@ -11681,11 +11681,11 @@
             "text": "no se ven Cuando aparcas",
             "nouns": "[]"
         },
-        "mainVerb": "aparques",
+        "mainVerb": "Quitar",
         "claim": {
             "entities": "[]",
-            "text": "aparques no te abollen el coche",
-            "nouns": "[coche, coche]"
+            "text": "Quitar pivotes en toda la ciudad , o reemplazarlos para que cuando aparques no te abollen el coche",
+            "nouns": "[pivotes, ciudad, reemplazarlos, coche, coche]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -11708,11 +11708,11 @@
             "text": "los fumadores tiene el abito de tirarlas al suelo al tomar el transporte publico",
             "nouns": "[fumadores, abito, tirarlas, suelo, transporte]"
         },
-        "mainVerb": "recoge",
+        "mainVerb": "Adosar",
         "claim": {
             "entities": "[]",
-            "text": "recoge colillas",
-            "nouns": "[colillas]"
+            "text": "Adosar a las marquesinas del Bus y entrada al metro , recoge colillas",
+            "nouns": "[marquesinas, entrada, metro, colillas]"
         },
         "majorClaim": {
             "entities": "[Metro]",
@@ -11735,11 +11735,11 @@
             "text": "siempre estan muy llenos",
             "nouns": "[]"
         },
-        "mainVerb": "vacien",
+        "mainVerb": "tiene",
         "claim": {
             "entities": "[]",
-            "text": "los que hay se vacien con regularidad",
-            "nouns": "[regularidad]"
+            "text": "La zona centro de Madrid tiene escasos contenedores de reciclaje , propongo que haya mas contenedores de reciclaje y los que hay se vacien con regularidad",
+            "nouns": "[zona, centro, contenedores, reciclaje, contenedores, reciclaje, regularidad]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12035,8 +12035,8 @@
         "mainVerb": "eliminar",
         "claim": {
             "entities": "[]",
-            "text": "que si , ayuda a eliminar la contaminacion , o no",
-            "nouns": "[ayuda, contaminacion]"
+            "text": "De verdad es viable un servicio que si , ayuda a eliminar la contaminacion , o no",
+            "nouns": "[verdad, servicio, ayuda, contaminacion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12059,10 +12059,10 @@
             "text": "para cruzar de un lado al otro de la calle tienes que ir al extremo y volver",
             "nouns": "[lado, calle, extremo]"
         },
-        "mainVerb": "dividen",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que dividen los carriles para poder circular por el barrio de forma fluida",
+            "text": "Propongo abrir las medianas que dividen los carriles para poder circular por el barrio de forma fluida",
             "nouns": "[carriles, barrio, forma]"
         },
         "majorClaim": {
@@ -12089,8 +12089,8 @@
         "mainVerb": "recojan",
         "claim": {
             "entities": "[]",
-            "text": "en la que se recojan todas aquellas partidas no gastadas",
-            "nouns": "[partidas]"
+            "text": "Propuesta de creacion de una cuenta en la que se recojan todas aquellas partidas no gastadas",
+            "nouns": "[Propuesta, creacion, cuenta, partidas]"
         },
         "majorClaim": {
             "entities": "[IBI]",
@@ -12169,8 +12169,8 @@
         "mainVerb": "andar",
         "claim": {
             "entities": "[]",
-            "text": "que el peaton no puede andar de forma optima por las aceras de Madrid porque hay motos aparcadas en las aceras",
-            "nouns": "[peaton, forma, aceras, motos, aceras, motos]"
+            "text": "La situacion en las calles de Madrid es que el peaton no puede andar de forma optima por las aceras de Madrid porque hay motos aparcadas en las aceras",
+            "nouns": "[situacion, calles, peaton, forma, aceras, motos, aceras, motos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12247,10 +12247,10 @@
             "text": "se acumula mucha basura alrededor de las escaleras",
             "nouns": "[escaleras, basura, escaleras]"
         },
-        "mainVerb": "remodelar",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "remodelar las escaleras y llevar una limpieza a fondo y periodica de la zona",
+            "text": "Propongo remodelar las escaleras y llevar una limpieza a fondo y periodica de la zona",
             "nouns": "[escaleras, limpieza, fondo, periodica, zona, escaleras]"
         },
         "majorClaim": {
@@ -12304,8 +12304,8 @@
         "mainVerb": "estan",
         "claim": {
             "entities": "[]",
-            "text": "se lo estan planteando",
-            "nouns": "[]"
+            "text": "En muchas ciudades europeas , incluso Londres , o esta operativo o se lo estan planteando",
+            "nouns": "[ciudades, operativo, ciudad]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12331,8 +12331,8 @@
         "mainVerb": "tiene",
         "claim": {
             "entities": "[Villalba]",
-            "text": "tiene que ir a Villalba para despues cogerse un taxi",
-            "nouns": "[despues, taxi]"
+            "text": "Muchos jovenes y mayores se tiene que ir a Villalba para despues cogerse un taxi",
+            "nouns": "[jovenes, despues, taxi]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12570,10 +12570,10 @@
             "text": "carecemos de este medio de transporte en todo el Barrio de Imperial",
             "nouns": "[medio, transporte]"
         },
-        "mainVerb": "acceder",
+        "mainVerb": "hace",
         "claim": {
             "entities": "[]",
-            "text": "la accesibilidad de los usuarios de la linea de autobus 50 acceder al Metro de Sol",
+            "text": "Se hace necesaria la accesibilidad de los usuarios de la linea de autobus 50 acceder al Metro de Sol",
             "nouns": "[accesibilidad, usuarios, linea, autobus]"
         },
         "majorClaim": {
@@ -12597,11 +12597,11 @@
             "text": "son insuficientes ( se genera suciedad-prob",
             "nouns": "[suciedad-prob]"
         },
-        "mainVerb": "dotar",
+        "mainVerb": "Asfaltar",
         "claim": {
             "entities": "[]",
-            "text": "dotar de nuevos contenedoras",
-            "nouns": "[contenedoras]"
+            "text": "Asfaltar las aceras , poner pasos de cebra , sustituir los contenedores de basura , vidrio y papel y dotar de nuevos contenedoras",
+            "nouns": "[aceras, pasos, cebra, contenedores, basura, vidrio, papel, contenedoras]"
         },
         "majorClaim": {
             "entities": "[Virgen del Pilar]",
@@ -12624,11 +12624,11 @@
             "text": "el mas cercano desde ahi es el del Retiro",
             "nouns": "[ahi]"
         },
-        "mainVerb": "vallar",
+        "mainVerb": "Habilitar",
         "claim": {
-            "entities": "[]",
-            "text": ", aunque sea vallar alguna de las explanadas para poder soltarnos sin correr riesgos",
-            "nouns": "[explanadas, soltarnos, riesgos]"
+            "entities": "[Rio]",
+            "text": "Habilitar una zona para los perros en el parque del Madrid Rio , aunque sea vallar alguna de las explanadas para poder soltarnos sin correr riesgos",
+            "nouns": "[zona, perros, parque, explanadas, soltarnos, riesgos]"
         },
         "majorClaim": {
             "entities": "[Rio]",
@@ -12842,8 +12842,8 @@
         "mainVerb": "cambiar",
         "claim": {
             "entities": "[]",
-            "text": ": Mi propuesta es la siguiente , cambiar los soplahojas por otro metodo",
-            "nouns": "[propuesta, soplahojas, metodo]"
+            "text": "Buenas tardes : Mi propuesta es la siguiente , cambiar los soplahojas por otro metodo",
+            "nouns": "[tardes, propuesta, soplahojas, metodo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -12866,11 +12866,11 @@
             "text": "son elementos de especulacion",
             "nouns": "[elementos, especulacion]"
         },
-        "mainVerb": "importa",
+        "mainVerb": "Aumentar",
         "claim": {
             "entities": "[]",
-            "text": "de grandes corporaciones a las que no les importa tener cientos de pisos vacios",
-            "nouns": "[corporaciones, pisos]"
+            "text": "Aumentar impuestos a locales y viviendas sin uso por mas de una decada procedentes de grandes corporaciones a las que no les importa tener cientos de pisos vacios",
+            "nouns": "[impuestos, locales, viviendas, uso, decada, corporaciones, pisos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13028,11 +13028,11 @@
             "text": "se hace imposible cada manana salir del Ensanche",
             "nouns": "[manana]"
         },
-        "mainVerb": "creen",
+        "mainVerb": "Pedimos",
         "claim": {
-            "entities": "[]",
-            "text": "creen otra de acceso a Madrid",
-            "nouns": "[acceso]"
+            "entities": "[Valdecarros]",
+            "text": "Pedimos que terminen la salida que hay directa a la A3 desde Valdecarros y creen otra de acceso a Madrid",
+            "nouns": "[salida, acceso]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13082,11 +13082,11 @@
             "text": "las bicis se meten por todas partes",
             "nouns": "[bici, bicis, partes]"
         },
-        "mainVerb": "dificulta",
+        "mainVerb": "aumenta",
         "claim": {
             "entities": "[]",
-            "text": "dificulta el paseo de los viandantes",
-            "nouns": "[paseo, viandantes]"
+            "text": "La ausencia de carril bici dentro del retiro aumenta las posibilidades de accidente y dificulta el paseo de los viandantes",
+            "nouns": "[ausencia, carril, bici, retiro, posibilidades, accidente, paseo, viandantes]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13112,8 +13112,8 @@
         "mainVerb": "murio",
         "claim": {
             "entities": "[]",
-            "text": ", bien sea porque murio el arbol plantado",
-            "nouns": "[arbol]"
+            "text": "En Madrid hay cientos de alcorques vacios , bien sea porque murio el arbol plantado",
+            "nouns": "[alcorques, arbol]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13162,11 +13162,11 @@
             "text": "la media de paso entre uno y otro en hora punta es de 8 minutos",
             "nouns": "[media, paso, hora, punta, minutos]"
         },
-        "mainVerb": "hace",
+        "mainVerb": "Necesitamos",
         "claim": {
             "entities": "[]",
-            "text": "ya q hace un recorrido muy transitado y los autobuses van demasiado llenos",
-            "nouns": "[autobuses, recorrido, autobuses]"
+            "text": "Necesitamos mas autobuses los usuarios de la linea ya q hace un recorrido muy transitado y los autobuses van demasiado llenos",
+            "nouns": "[autobuses, usuarios, linea, recorrido, autobuses]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13243,11 +13243,11 @@
             "text": "la zona lo permite",
             "nouns": "[zona]"
         },
-        "mainVerb": "plantearse",
+        "mainVerb": "encuentran",
         "claim": {
-            "entities": "[]",
-            "text": "podria plantearse la union de estas estaciones",
-            "nouns": "[union, estaciones]"
+            "entities": "[Musas]",
+            "text": "Las lineas de las Rosas y las Musas se encuentran muy cerca , y podria plantearse la union de estas estaciones",
+            "nouns": "[lineas, union, estaciones]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13270,11 +13270,11 @@
             "text": "es necesario que un ciudadano denuncie el hecho",
             "nouns": "[ciudadano, hecho]"
         },
-        "mainVerb": "eluden",
+        "mainVerb": "Recaudar",
         "claim": {
             "entities": "[]",
-            "text": "que eluden su pago",
-            "nouns": "[pago]"
+            "text": "Recaudar un impuesto que repercute en propietarios de viviendas con un poder adquisitivo medio-alto y que eluden su pago",
+            "nouns": "[impuesto, propietarios, viviendas, poder, pago]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13434,8 +13434,8 @@
         "mainVerb": "resultado",
         "claim": {
             "entities": "[]",
-            "text": "que alguien ha resultado herido",
-            "nouns": "[]"
+            "text": "Cada vez es mas frecuente escuchar que alguien ha resultado herido",
+            "nouns": "[vez]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13620,11 +13620,11 @@
             "text": "no tengo cita",
             "nouns": "[cita]"
         },
-        "mainVerb": "niegan",
+        "mainVerb": "atendiendo",
         "claim": {
             "entities": "[]",
-            "text": "se niegan a ayudarme",
-            "nouns": "[ayudarme]"
+            "text": "Pese que no estan atendiendo a nadie , se niegan a ayudarme",
+            "nouns": "[Pese, ayudarme]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13782,11 +13782,11 @@
             "text": "el crecimiento de las lineas ha provocado que haya muchas estaciones en el extrarradio cerca en distancia pero muy mal comunicadas",
             "nouns": "[linea, crecimiento, lineas, estaciones, extrarradio, distancia]"
         },
-        "mainVerb": "circular",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "circular",
-            "nouns": "[]"
+            "text": "Propongo la creacion de una nueva linea de metro circular",
+            "nouns": "[creacion, linea, metro]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13839,8 +13839,8 @@
         "mainVerb": "ponen",
         "claim": {
             "entities": "[]",
-            "text": "' inteligentes ' dotados de sensor inductivo que se ponen en verde solo cuando detectan coches y otros vehiculos grandes pero no bicis",
-            "nouns": "[sensor, verde, coches, vehiculos, bicis]"
+            "text": "Retirada de semaforos ' inteligentes ' dotados de sensor inductivo que se ponen en verde solo cuando detectan coches y otros vehiculos grandes pero no bicis",
+            "nouns": "[Retirada, semaforos, sensor, verde, coches, vehiculos, bicis]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -13974,8 +13974,8 @@
         "mainVerb": "uniese",
         "claim": {
             "entities": "[PAUs]",
-            "text": "que uniese estos PAUs",
-            "nouns": "[]"
+            "text": "Seria muy interesante una linea que uniese estos PAUs",
+            "nouns": "[linea]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -14052,11 +14052,11 @@
             "text": "la escasa visibilidad",
             "nouns": "[visibilidad]"
         },
-        "mainVerb": "practicar",
+        "mainVerb": "resulta",
         "claim": {
             "entities": "[]",
-            "text": "practicar bicicleta por las tardes",
-            "nouns": "[bicicleta, tardes]"
+            "text": "En otono e invierno resulta casi imposible practicar bicicleta por las tardes",
+            "nouns": "[otono, invierno, bicicleta, tardes]"
         },
         "majorClaim": {
             "entities": "[Anillo Verde Ciclista]",
@@ -14133,11 +14133,11 @@
             "text": "revitalize al Distrito Latina y todos los ciudadanos",
             "nouns": "[anos, ciudadanos]"
         },
-        "mainVerb": "hace",
+        "mainVerb": "frena",
         "claim": {
             "entities": "[]",
-            "text": "que no se hace algo",
-            "nouns": "[]"
+            "text": "Mas de 30 anos detras de esta propuesta , que o quien lo frena , y por que no se hace algo",
+            "nouns": "[anos, propuesta]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -14352,8 +14352,8 @@
         "mainVerb": "soporta",
         "claim": {
             "entities": "[]",
-            "text": "soporta mucho trafico",
-            "nouns": "[]"
+            "text": "Esta calle soporta mucho trafico",
+            "nouns": "[calle]"
         },
         "majorClaim": {
             "entities": "[MADARIAGA]",
@@ -14403,11 +14403,11 @@
             "text": "todo nos pilla muy lejos",
             "nouns": "[]"
         },
-        "mainVerb": "necesitamos",
+        "mainVerb": "Necesitamos",
         "claim": {
             "entities": "[]",
-            "text": "necesitamos otra linea de autobus",
-            "nouns": "[linea, autobus]"
+            "text": "Necesitamos un barrio mas limpio , las carreteras estan con socavones los coches se nos quedan clavados , necesitamos otra linea de autobus",
+            "nouns": "[barrio, carreteras, socavones, coches, linea, autobus]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -14648,9 +14648,9 @@
         },
         "mainVerb": "regulara",
         "claim": {
-            "entities": "[]",
-            "text": "que se regulara el aparcamiento",
-            "nouns": "[aparcamiento]"
+            "entities": "[JC]",
+            "text": "Soy usuario del parque JC y desearia que se regulara el aparcamiento",
+            "nouns": "[usuario, parque, aparcamiento]"
         },
         "majorClaim": {
             "entities": "[Juan Carlos 1]",
@@ -14727,11 +14727,11 @@
             "text": "ir con el coche por alli es pasar sobre un sinfin de baches y agujeros , ya no digo andando",
             "nouns": "[coche, alli, sinfin, baches, agujeros]"
         },
-        "mainVerb": "creo",
+        "mainVerb": "Vivo",
         "claim": {
             "entities": "[]",
-            "text": "creo necesario el asfaltado de todo el barrio",
-            "nouns": "[asfaltado, barrio]"
+            "text": "Vivo en valdeacederas , y creo necesario el asfaltado de todo el barrio",
+            "nouns": "[valdeacederas, asfaltado, barrio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -14754,11 +14754,11 @@
             "text": "ahora dificultan el paso a sillas de ruedas",
             "nouns": "[paso, sillas, ruedas]"
         },
-        "mainVerb": "esten",
+        "mainVerb": "Revisar",
         "claim": {
             "entities": "[]",
-            "text": "para que esten al nivel de la calzada",
-            "nouns": "[nivel, calzada]"
+            "text": "Revisar los pasos de cebra para que esten al nivel de la calzada",
+            "nouns": "[pasos, cebra, nivel, calzada, paso]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -15024,10 +15024,10 @@
             "text": "es por donde reciben mas luz y sol",
             "nouns": "[luz, sol]"
         },
-        "mainVerb": "inclinan",
+        "mainVerb": "Veo",
         "claim": {
             "entities": "[]",
-            "text": "que todos los arboles de las calles se inclinan hacia la calzada",
+            "text": "Veo que todos los arboles de las calles se inclinan hacia la calzada",
             "nouns": "[arboles, calles, calzada]"
         },
         "majorClaim": {
@@ -15078,11 +15078,11 @@
             "text": "son utilizados constantemente y con mayor afluencia de usuarios",
             "nouns": "[afluencia, usuarios]"
         },
-        "mainVerb": "reparen",
+        "mainVerb": "propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se reparen",
-            "nouns": "[]"
+            "text": "Ante el deterioro paulatino y el poco mantenimiento de estos aparatos , propongo que se reparen",
+            "nouns": "[deterioro, mantenimiento, aparatos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -15159,11 +15159,11 @@
             "text": "ya haya anochecido",
             "nouns": "[]"
         },
-        "mainVerb": "disfrutarlo",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que los ciudadanos puedan disfrutarlo",
-            "nouns": "[ciudadanos]"
+            "text": "Propongo instalar farolas en el camino que recorre el perimetro del Parque Felipe VI para asi poder ampliar el horario y que los ciudadanos puedan disfrutarlo",
+            "nouns": "[farolas, camino, perimetro, poder, horario, ciudadanos]"
         },
         "majorClaim": {
             "entities": "[Iluminar el Parque Felipe VI]",
@@ -15377,9 +15377,9 @@
         },
         "mainVerb": "estan",
         "claim": {
-            "entities": "[]",
-            "text": ", en cual se estan cayendo los arboles",
-            "nouns": "[arboles]"
+            "entities": "[Debod]",
+            "text": "Construccion de una instalacion de escalda junto al desnivel que hay tras el templo de Debod , en cual se estan cayendo los arboles",
+            "nouns": "[instalacion, escalda, desnivel, templo, arboles]"
         },
         "majorClaim": {
             "entities": "[Templo de Debod, Rocodromo]",
@@ -15402,11 +15402,11 @@
             "text": "la suciedad que se acumula",
             "nouns": "[suciedad]"
         },
-        "mainVerb": "encuentran",
+        "mainVerb": "Arreglar",
         "claim": {
             "entities": "[]",
-            "text": "que se encuentran entre los edificios del Barriode Las Aguilas",
-            "nouns": "[edificios]"
+            "text": "Arreglar y limpiar las zonas de arena que se encuentran entre los edificios del Barriode Las Aguilas",
+            "nouns": "[zonas, arena, edificios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -15510,11 +15510,11 @@
             "text": "de noche se hace imposible",
             "nouns": "[noche]"
         },
-        "mainVerb": "pasear",
+        "mainVerb": "Poner",
         "claim": {
             "entities": "[Dehesa de la Villa]",
-            "text": "pasear a los perros por esta zona de la Dehesa de la Villa",
-            "nouns": "[perros, zona]"
+            "text": "Poner alumbrado que se cargue de manera solar , sin coste electrico , para poder salir a correr , caminar o pasear a los perros por esta zona de la Dehesa de la Villa",
+            "nouns": "[alumbrado, manera, coste, perros, zona]"
         },
         "majorClaim": {
             "entities": "[Dehesa de la Villa]",
@@ -15537,11 +15537,11 @@
             "text": "estan",
             "nouns": "[]"
         },
-        "mainVerb": "necesitan",
+        "mainVerb": "mejoradas",
         "claim": {
             "entities": "[]",
-            "text": "lo necesitan",
-            "nouns": "[]"
+            "text": "Estas fachadas fueron mejoradas hace muchisimos anos y lo necesitan",
+            "nouns": "[fachadas, muchisimos]"
         },
         "majorClaim": {
             "entities": "[Francisco Madariaga]",
@@ -15591,11 +15591,11 @@
             "text": "disponen de toda la manzana",
             "nouns": "[manzana]"
         },
-        "mainVerb": "abran",
+        "mainVerb": "camine",
         "claim": {
-            "entities": "[]",
-            "text": "que abran mas accesos",
-            "nouns": "[accesos]"
+            "entities": "[Gran Via]",
+            "text": "Desde que el monstruo del primak abrio sus puertas no hay quien camine por la acera de Gran Via , que dejen de obstaculizar el paso , obligar a que abran mas accesos",
+            "nouns": "[monstruo, primak, puertas, acera, paso, accesos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -15783,8 +15783,8 @@
         "mainVerb": "ven",
         "claim": {
             "entities": "[]",
-            "text": ", en muchas ocasiones , se ven forzados a aparcar su vehiculo lejos del centro",
-            "nouns": "[ocasiones, vehiculo, centro]"
+            "text": "Los estudiantes y trabajadores de centros docentes , en muchas ocasiones , se ven forzados a aparcar su vehiculo lejos del centro",
+            "nouns": "[estudiantes, trabajadores, centros, ocasiones, vehiculo, centro, dia]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -15864,7 +15864,7 @@
         "mainVerb": "propone",
         "claim": {
             "entities": "[Sepulveda, Cuna Verde]",
-            "text": "propone la renovacion del material que existe en el rocodromo situado en la calle Sepulveda en el parque de Cuna Verde",
+            "text": "Se propone la renovacion del material que existe en el rocodromo situado en la calle Sepulveda en el parque de Cuna Verde",
             "nouns": "[renovacion, material, rocodromo, calle, parque]"
         },
         "majorClaim": {
@@ -15888,11 +15888,11 @@
             "text": "ocupan el 50 % de dicha plaza publica",
             "nouns": "[plaza, plaza, plaza]"
         },
-        "mainVerb": "quitar",
+        "mainVerb": "Reponer",
         "claim": {
             "entities": "[]",
-            "text": "quitar terrazas de bares de dicha plaza",
-            "nouns": "[plaza, terrazas, bares, plaza, plaza]"
+            "text": "Reponer los arboles caidos en la zona infantil de la plaza y quitar terrazas de bares de dicha plaza",
+            "nouns": "[arboles, zona, plaza, terrazas, bares, plaza, plaza]"
         },
         "majorClaim": {
             "entities": "[JESUS]",
@@ -16053,8 +16053,8 @@
         "mainVerb": "renueve",
         "claim": {
             "entities": "[]",
-            "text": "que el abono transportes se renueve automaticamente ( obviamente como opcion",
-            "nouns": "[transportes, opcion]"
+            "text": "La idea es que el abono transportes se renueve automaticamente ( obviamente como opcion",
+            "nouns": "[idea, transportes, opcion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -16158,10 +16158,10 @@
             "text": "he podido constatar que por culpa de los sencillo que resulta hacer las propuestas hay ciudadanos que inundan la web con propuestas",
             "nouns": "[ano, culpa, propuestas, ciudadanos, web, propuestas]"
         },
-        "mainVerb": "limitaran",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que se limitaran el numero a 3 al ano",
+            "text": "Me gustaria que se limitaran el numero a 3 al ano",
             "nouns": "[numero, ano]"
         },
         "majorClaim": {
@@ -16320,11 +16320,11 @@
             "text": "la casi inexistencia de transporte publico",
             "nouns": "[inexistencia, transporte]"
         },
-        "mainVerb": "tarda",
+        "mainVerb": "encuentra",
         "claim": {
             "entities": "[]",
-            "text": "tarda entre 30 -45min en llegar",
-            "nouns": "[]"
+            "text": "A pesar de ser una zona que se encuentra a tan solo 2 km de Atocha ( centro de Red de tranpostes ) , se tarda entre 30 -45min en llegar",
+            "nouns": "[pesar, zona, tan, km, centro, tranpostes]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -16401,11 +16401,11 @@
             "text": "no tenemos mas opciones",
             "nouns": "[opciones]"
         },
-        "mainVerb": "pasa",
+        "mainVerb": "refuerza",
         "claim": {
             "entities": "[]",
-            "text": "que pasa con los que usamos el cercanias",
-            "nouns": "[cercanias]"
+            "text": "Cuando se activa el protocolo de contaminacion , hasta ahora unicamente se refuerza los servicios de metro y autobus , pero que pasa con los que usamos el cercanias",
+            "nouns": "[protocolo, contaminacion, servicios, metro, autobus, cercanias]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -16428,11 +16428,11 @@
             "text": "son muchos",
             "nouns": "[]"
         },
-        "mainVerb": "volver",
+        "mainVerb": "llevan",
         "claim": {
             "entities": "[]",
-            "text": "podrian volver a habilitarse",
-            "nouns": "[]"
+            "text": "Son 2 mercados de toda la vida , que llevan anos cerrados y podrian volver a habilitarse",
+            "nouns": "[mercados, vida, anos]"
         },
         "majorClaim": {
             "entities": "[Marianistas Carabanchel]",
@@ -16455,10 +16455,10 @@
             "text": "es un incordio transitar con el vehiculo por la zona",
             "nouns": "[incordio, vehiculo, zona]"
         },
-        "mainVerb": "asfalten",
+        "mainVerb": "propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se asfalten",
+            "text": "Por eso propongo que se asfalten",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -16619,8 +16619,8 @@
         },
         "mainVerb": "tenemos",
         "claim": {
-            "entities": "[]",
-            "text": "cada vez tenemos mas dificil aparcar",
+            "entities": "[Ermita del Santo]",
+            "text": "Manzanares - P Ermita del Santo cada vez tenemos mas dificil aparcar",
             "nouns": "[vez]"
         },
         "majorClaim": {
@@ -16726,8 +16726,8 @@
         },
         "mainVerb": "duplicado",
         "claim": {
-            "entities": "[ITVM]",
-            "text": "es un impuesto duplicado con el ITVM",
+            "entities": "[ITVM, Supresion Estacionamiento Regulado]",
+            "text": "Supresion Estacionamiento Regulado ya que es un impuesto duplicado con el ITVM",
             "nouns": "[impuesto]"
         },
         "majorClaim": {
@@ -16808,8 +16808,8 @@
         "mainVerb": "representan",
         "claim": {
             "entities": "[]",
-            "text": "en la base de los arboles representan un peligro para el viandante",
-            "nouns": "[base, arboles, peligro, viandante]"
+            "text": "Muchisimos alcorques o cajas en la base de los arboles representan un peligro para el viandante",
+            "nouns": "[alcorques, cajas, base, arboles, peligro, viandante]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -16859,11 +16859,11 @@
             "text": "tienes que dar mucha vuelta",
             "nouns": "[vuelta]"
         },
-        "mainVerb": "permita",
+        "mainVerb": "bici",
         "claim": {
-            "entities": "[Ciudad Lineal]",
-            "text": ", que permita poder conectar Hortaleza y Ciudad Lineal o por lo menos una mejor comunicacion por metro",
-            "nouns": "[comunicacion, metro, metro]"
+            "entities": "[Ciudad Lineal, Arturo Soria]",
+            "text": "Carril bici por la calle Arturo Soria , que permita poder conectar Hortaleza y Ciudad Lineal o por lo menos una mejor comunicacion por metro",
+            "nouns": "[calle, comunicacion, metro, metro]"
         },
         "majorClaim": {
             "entities": "[Carriles Bici, Ciudad lineal, Hortaleza]",
@@ -17077,7 +17077,7 @@
         "mainVerb": "q",
         "claim": {
             "entities": "[]",
-            "text": "q las han puesto nuevas seria aconsejable q terminasen el trabajo",
+            "text": "Ya q las han puesto nuevas seria aconsejable q terminasen el trabajo",
             "nouns": "[q, trabajo]"
         },
         "majorClaim": {
@@ -17128,11 +17128,11 @@
             "text": "no tienen un hogar",
             "nouns": "[hogar]"
         },
-        "mainVerb": "piden",
+        "mainVerb": "Propongo",
         "claim": {
-            "entities": "[]",
-            "text": "que piden tirados en el suelo de nuestra ciudad y a los que duermen en la calle",
-            "nouns": "[suelo, ciudad, calle]"
+            "entities": "[Ayuntamiento]",
+            "text": "Propongo que el Ayuntamiento atienda a los mendigos que piden tirados en el suelo de nuestra ciudad y a los que duermen en la calle",
+            "nouns": "[mendigos, suelo, ciudad, calle]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -17209,11 +17209,11 @@
             "text": "si coge al abono correspondiente a la zona le quitan la tarjeta azul",
             "nouns": "[abono, zona, tarjeta]"
         },
-        "mainVerb": "tiene",
+        "mainVerb": "trabaja",
         "claim": {
             "entities": "[]",
-            "text": "tiene que gastarse mas dinero",
-            "nouns": "[dinero]"
+            "text": "Si una persona discapacitada que trabaja fuera de Madrid tiene que gastarse mas dinero",
+            "nouns": "[persona, dinero]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -17452,11 +17452,11 @@
             "text": "ensucian tanto",
             "nouns": "[]"
         },
-        "mainVerb": "deja",
+        "mainVerb": "Crear",
         "claim": {
             "entities": "[]",
-            "text": "que se deja en los buzones de comunidade de propietarios y en los coches",
-            "nouns": "[buzones, comunidade, propietarios, coches]"
+            "text": "Crear un impuesto a la publicidad que se reparte por las calles y que se deja en los buzones de comunidade de propietarios y en los coches",
+            "nouns": "[impuesto, publicidad, calles, buzones, comunidade, propietarios, coches]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -17482,8 +17482,8 @@
         "mainVerb": "tenido",
         "claim": {
             "entities": "[]",
-            "text": "siempre he tenido que estar luchado contra la precariedad",
-            "nouns": "[precariedad]"
+            "text": "Soy un profesional liberal y siempre he tenido que estar luchado contra la precariedad",
+            "nouns": "[profesional, precariedad, profesion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -17560,10 +17560,10 @@
             "text": "no hay comercios",
             "nouns": "[comercios]"
         },
-        "mainVerb": "convertir",
+        "mainVerb": "propone",
         "claim": {
             "entities": "[]",
-            "text": "convertir en zona verde las del lado derecho junto a viviendas",
+            "text": "Se propone convertir en zona verde las del lado derecho junto a viviendas",
             "nouns": "[zona, lado, viviendas]"
         },
         "majorClaim": {
@@ -17698,8 +17698,8 @@
         "mainVerb": "hacemos",
         "claim": {
             "entities": "[]",
-            "text": "si hacemos",
-            "nouns": "[]"
+            "text": "Es un rincon bonito , pero podria ser mas si hacemos",
+            "nouns": "[rincon]"
         },
         "majorClaim": {
             "entities": "[Plaza de]",
@@ -17722,10 +17722,10 @@
             "text": "se pasan muchas horas en ellos",
             "nouns": "[horas]"
         },
-        "mainVerb": "beber",
+        "mainVerb": "Considero",
         "claim": {
             "entities": "[]",
-            "text": "que haya fuentes para poder beber en los parques",
+            "text": "Considero necesario que haya fuentes para poder beber en los parques",
             "nouns": "[fuentes, parques]"
         },
         "majorClaim": {
@@ -17749,10 +17749,10 @@
             "text": "las opciones para cruzar a esa altura son limitadas",
             "nouns": "[altura, opciones, altura]"
         },
-        "mainVerb": "poner",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "poner un semaforo y paso de peatones a la altura de Paseo de la Castellana 201",
+            "text": "Propongo poner un semaforo y paso de peatones a la altura de Paseo de la Castellana 201",
             "nouns": "[semaforo, paso, peatones, altura, altura]"
         },
         "majorClaim": {
@@ -17965,11 +17965,11 @@
             "text": "hay muy pocas y los residentes no pueden aparcar",
             "nouns": "[residentes, residentes]"
         },
-        "mainVerb": "aparquen",
+        "mainVerb": "Poner",
         "claim": {
             "entities": "[]",
-            "text": "que aparquen los residentes",
-            "nouns": "[residentes, residentes]"
+            "text": "Poner mas calles de zona verde para que aparquen los residentes",
+            "nouns": "[calles, zona, residentes, residentes]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -18559,10 +18559,10 @@
             "text": "se abren las bolsas y se tira la basura por el suelo",
             "nouns": "[basura, suelo, basura, bolsas, basura, suelo]"
         },
-        "mainVerb": "acabe",
+        "mainVerb": "evitar",
         "claim": {
             "entities": "[]",
-            "text": "que la basura de los contenedores acabe por el suelo porque no cabe tanta basura de comercios y ciudadanos",
+            "text": "Para evitar que la basura de los contenedores acabe por el suelo porque no cabe tanta basura de comercios y ciudadanos",
             "nouns": "[basura, contenedores, suelo, basura, comercios, ciudadanos, basura, suelo]"
         },
         "majorClaim": {
@@ -18670,8 +18670,8 @@
         "mainVerb": "existen",
         "claim": {
             "entities": "[]",
-            "text": "a las que existen",
-            "nouns": "[]"
+            "text": "Instalacion de una o dos marquesinas mas a las que existen",
+            "nouns": "[marquesinas]"
         },
         "majorClaim": {
             "entities": "[MARQUESINA LINEAS]",
@@ -18775,11 +18775,11 @@
             "text": "en todo el paseo no hay ningun sitio preparado para ello",
             "nouns": "[paseo, paseo, sitio]"
         },
-        "mainVerb": "preparar",
+        "mainVerb": "colocar",
         "claim": {
             "entities": "[]",
-            "text": "preparar servicios urinarios para hombres y mujeres",
-            "nouns": "[servicios, hombres, mujeres]"
+            "text": "colocar aparatos de deporte en el lateral del paseo de la virgen del puerto y preparar servicios urinarios para hombres y mujeres",
+            "nouns": "[aparatos, deporte, lateral, paseo, puerto, servicios, hombres, mujeres, paseo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -18805,8 +18805,8 @@
         "mainVerb": "aparcar",
         "claim": {
             "entities": "[]",
-            "text": "aparcar",
-            "nouns": "[]"
+            "text": "Hay ciertas horas que a los vecinos nos es imposible aparcar",
+            "nouns": "[horas, vecinos]"
         },
         "majorClaim": {
             "entities": "[Alameda de Osuna]",
@@ -18856,11 +18856,11 @@
             "text": "el unico bus que actualmente pasa es el 73 y hay muchos usuarios que no tienen posibilidades",
             "nouns": "[bus, unico, bus, usuarios, posibilidades]"
         },
-        "mainVerb": "subiendo",
+        "mainVerb": "Incorporar",
         "claim": {
             "entities": "[Mar de, Carretera de Canillas]",
-            "text": "desde Mar de Cristal , subiendo por Carretera de Canillas",
-            "nouns": "[]"
+            "text": "Incorporar una linea de bus municipal desde Mar de Cristal , subiendo por Carretera de Canillas",
+            "nouns": "[linea, bus, bus]"
         },
         "majorClaim": {
             "entities": "[Canillas -Hosp Ramon]",
@@ -18939,9 +18939,9 @@
         },
         "mainVerb": "construir",
         "claim": {
-            "entities": "[]",
-            "text": "en el que se podria construir un Parking de Residentes",
-            "nouns": "[Residentes]"
+            "entities": "[Ibis]",
+            "text": "Al lado del nuevo hotel Ibis hay una zona de aparcamiento junto a un pequeno parque en el que se podria construir un Parking de Residentes",
+            "nouns": "[lado, hotel, zona, aparcamiento, parque, Residentes]"
         },
         "majorClaim": {
             "entities": "[Parking Residentes Vallecas]",
@@ -18991,11 +18991,11 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "resultar",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[]",
-            "text": "que puede resultar dificil encontrar informacion en Internet",
-            "nouns": "[informacion]"
+            "text": "Creo que existe mucha desinformacion sobre este tema y que puede resultar dificil encontrar informacion en Internet",
+            "nouns": "[desinformacion, tema, informacion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -19018,11 +19018,11 @@
             "text": "hay mucha gente que se dirige a estos puntos",
             "nouns": "[gente, puntos]"
         },
-        "mainVerb": "comunicase",
+        "mainVerb": "tenemos",
         "claim": {
-            "entities": "[Cajal, Ramon, Fuencarral]",
-            "text": "que comunicase con estaciones como Fuencarral o Ramon y Cajal",
-            "nouns": "[estacion, estaciones]"
+            "entities": "[Canillejas, Cajal, Ramon, Fuencarral]",
+            "text": "Ya que en Canillejas tenemos vias no creen que estaria bien poder contar una estacion que comunicase con estaciones como Fuencarral o Ramon y Cajal",
+            "nouns": "[vias, estacion, estaciones]"
         },
         "majorClaim": {
             "entities": "[Canillejas]",
@@ -19074,7 +19074,7 @@
         "mainVerb": "vivimos",
         "claim": {
             "entities": "[Valdebebas]",
-            "text": "los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
+            "text": "Somos muchos los que vivimos en Valdebebas , a 15 minutos del centro de Madrid",
             "nouns": "[minutos, centro]"
         },
         "majorClaim": {
@@ -19179,10 +19179,10 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "dispensen",
+        "mainVerb": "Quedan",
         "claim": {
             "entities": "[]",
-            "text": "que dispensen dinero sin comision",
+            "text": "Quedan exentos aquellos que dispensen dinero sin comision",
             "nouns": "[dinero, comision]"
         },
         "majorClaim": {
@@ -19209,8 +19209,8 @@
         "mainVerb": "aparca",
         "claim": {
             "entities": "[]",
-            "text": "donde todo el mundo aparca en pasos de peatones y en cualquier parte",
-            "nouns": "[mundo, pasos, peatones, parte]"
+            "text": "El barrio de las tables es una ciudad sin ley donde todo el mundo aparca en pasos de peatones y en cualquier parte",
+            "nouns": "[barrio, tables, ciudad, ley, mundo, pasos, peatones, parte, barrio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -19341,11 +19341,11 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "poner",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[Moratalaz]",
-            "text": "poner un mercadillo en Moratalaz",
-            "nouns": "[mercadillo]"
+            "text": "Me gustaria que se buscara un lugar para poner un mercadillo en Moratalaz",
+            "nouns": "[lugar, mercadillo]"
         },
         "majorClaim": {
             "entities": "[MORATALAZ]",
@@ -19502,11 +19502,11 @@
             "text": "no hay cambio de zona tarifaria ( es zona A )",
             "nouns": "[cambio, zona, zona, cambio]"
         },
-        "mainVerb": "tienen",
+        "mainVerb": "Quitar",
         "claim": {
             "entities": "[]",
-            "text": "no tienen ninguna utilidad",
-            "nouns": "[utilidad]"
+            "text": "Quitar las barreras o como minimo abrir los tornos en Tres Olivos , no tienen ninguna utilidad",
+            "nouns": "[barreras, tornos, utilidad]"
         },
         "majorClaim": {
             "entities": "[Metro, Olivos Linea]",
@@ -19529,11 +19529,11 @@
             "text": "cuando hacen ruido en casa estan perjudicando , a veces gravemente , la salud y la calidad de vida de sus vecinos",
             "nouns": "[ruido, casa, veces, salud, calidad, vida, vecinos]"
         },
-        "mainVerb": "tengan",
+        "mainVerb": "Concienciar",
         "claim": {
             "entities": "[]",
-            "text": ", que tengan empatia",
-            "nouns": "[empatia]"
+            "text": "Concienciar a los ciudadanos de que no viven solos , que tengan empatia",
+            "nouns": "[ciudadanos, empatia]"
         },
         "majorClaim": {
             "entities": "[Ponte]",
@@ -19583,10 +19583,10 @@
             "text": "hasta el momento solo permanecen abiertas los sabados por la manana durante el fin de semana",
             "nouns": "[sabados, momento, sabados, manana, fin, semana]"
         },
-        "mainVerb": "abrieran",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que abrieran las bibliotecas municipales los sabados por la tarde y los domingos",
+            "text": "Me gustaria que abrieran las bibliotecas municipales los sabados por la tarde y los domingos",
             "nouns": "[bibliotecas, sabados, tarde, domingos, sabados]"
         },
         "majorClaim": {
@@ -19745,11 +19745,11 @@
             "text": "es PPP",
             "nouns": "[]"
         },
-        "mainVerb": "soltarlo",
+        "mainVerb": "Tienes",
         "claim": {
             "entities": "[]",
-            "text": "no puedes soltarlo",
-            "nouns": "[]"
+            "text": "Tienes perro y no puedes soltarlo",
+            "nouns": "[perro, perro]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -19772,10 +19772,10 @@
             "text": "la escasa participacion ciudadana",
             "nouns": "[participacion]"
         },
-        "mainVerb": "olvide",
+        "mainVerb": "Esperemos",
         "claim": {
             "entities": "[Usera, Ayuntamiento de Madrid]",
-            "text": "que el Ayuntamiento de Madrid no se olvide de Usera",
+            "text": "Esperemos que el Ayuntamiento de Madrid no se olvide de Usera",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -19799,11 +19799,11 @@
             "text": "se llama asi",
             "nouns": "[asi]"
         },
-        "mainVerb": "da",
+        "mainVerb": "preguntado",
         "claim": {
             "entities": "[]",
-            "text": "quien es el personaje que da nombre a nuestra calle",
-            "nouns": "[personaje, nombre, calle]"
+            "text": "Muchas veces nos hemos preguntado quien es el personaje que da nombre a nuestra calle",
+            "nouns": "[veces, personaje, nombre, calle]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -19960,11 +19960,11 @@
             "text": "el titular del coche , comprado hace 5 anos",
             "nouns": "[coche, titular, coche, anos]"
         },
-        "mainVerb": "tener",
+        "mainVerb": "mudado",
         "claim": {
             "entities": "[]",
-            "text": "ya que no puedo tener la tarjeta de residente S.E.R",
-            "nouns": "[tarjeta, residente]"
+            "text": "Me he mudado a Madrid y no puedo utilizar mi coche ya que no puedo tener la tarjeta de residente S.E.R",
+            "nouns": "[coche, tarjeta, residente, coche]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -20041,11 +20041,11 @@
             "text": "no hay buses circulando",
             "nouns": "[buses]"
         },
-        "mainVerb": "vuelven",
+        "mainVerb": "viene",
         "claim": {
-            "entities": "[]",
-            "text": "despues se vuelven a las tantas de la noche en taxi",
-            "nouns": "[despues, noche, taxi]"
+            "entities": "[Villanueva de lacanada, Lorenzo del Escorial]",
+            "text": "Mucha gente viene desde valdemorillo , Villaviciosa , Villanueva de lacanada , san Lorenzo del Escorial y despues se vuelven a las tantas de la noche en taxi",
+            "nouns": "[gente, valdemorillo, despues, noche, taxi]"
         },
         "majorClaim": {
             "entities": "[EMT]",
@@ -20203,11 +20203,11 @@
             "text": "no hay accesos peatonales",
             "nouns": "[accesos]"
         },
-        "mainVerb": "andando",
+        "mainVerb": "acceder",
         "claim": {
-            "entities": "[]",
-            "text": "andando",
-            "nouns": "[]"
+            "entities": "[Mendez Alvaro, Los Metales]",
+            "text": "Desde el barrio de Los Metales no se puede acceder a Mendez Alvaro andando",
+            "nouns": "[barrio]"
         },
         "majorClaim": {
             "entities": "[Mendez Alvaro]",
@@ -20310,10 +20310,10 @@
             "text": "el valor catastral de estos inmuebles esta excesivamente valorado por encima de los precios de mercado",
             "nouns": "[valor, inmuebles, precios, mercado]"
         },
-        "mainVerb": "baje",
+        "mainVerb": "Pide",
         "claim": {
             "entities": "[IBI]",
-            "text": "que el IBI de locales y negocios , baje al igual que el IBI de viviendas",
+            "text": "Se Pide que el IBI de locales y negocios , baje al igual que el IBI de viviendas",
             "nouns": "[locales, negocios, viviendas]"
         },
         "majorClaim": {
@@ -20526,9 +20526,9 @@
         },
         "mainVerb": "aparcar",
         "claim": {
-            "entities": "[]",
-            "text": "aparcar",
-            "nouns": "[]"
+            "entities": "[Hortaleza]",
+            "text": "En la zona de San Lorenzo en Hortaleza en dias de diario es imposible aparcar",
+            "nouns": "[zona, dias, diario, zona]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -20659,10 +20659,10 @@
             "text": "es por la manana cuando dedicamos todo el tiempo a buscar trabajo",
             "nouns": "[manana, tiempo, trabajo]"
         },
-        "mainVerb": "ampliarse",
+        "mainVerb": "Considero",
         "claim": {
             "entities": "[]",
-            "text": "que ese horario deberia ampliarse",
+            "text": "Considero que ese horario deberia ampliarse",
             "nouns": "[horario]"
         },
         "majorClaim": {
@@ -21227,7 +21227,7 @@
         "mainVerb": "propone",
         "claim": {
             "entities": "[]",
-            "text": "propone arreglar los parques y aceras de El Barrio Del Pozo del tio Raimundo",
+            "text": "Se propone arreglar los parques y aceras de El Barrio Del Pozo del tio Raimundo",
             "nouns": "[parques, aceras]"
         },
         "majorClaim": {
@@ -21466,11 +21466,11 @@
             "text": "necesitamos poder tener lineas de movilidad y comunicacion",
             "nouns": "[linea, lineas, movilidad, comunicacion]"
         },
-        "mainVerb": "pedimos",
+        "mainVerb": "seremos",
         "claim": {
-            "entities": "[Canaveral]",
-            "text": "que pedimos la ampliacion de la linea 7 de metro hasta el Canaveral",
-            "nouns": "[ampliacion, linea, metro]"
+            "entities": "[Canaveral, El Canaveral]",
+            "text": "En 2021 seremos unos 15000 vecinos en El Canaveral por lo que pedimos la ampliacion de la linea 7 de metro hasta el Canaveral",
+            "nouns": "[2021, vecinos, ampliacion, linea, metro]"
         },
         "majorClaim": {
             "entities": "[Canaveral]",
@@ -21547,10 +21547,10 @@
             "text": "agravan el problema de contaminacion que sufrimos los habitantes de Madrid",
             "nouns": "[problema, contaminacion, habitantes]"
         },
-        "mainVerb": "dar",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que dejen de dar vueltas por el centro de Madrid esta cantidad de autobuses turisticos ' Madrid City Tour '",
+            "text": "Propongo que dejen de dar vueltas por el centro de Madrid esta cantidad de autobuses turisticos ' Madrid City Tour '",
             "nouns": "[vueltas, centro, cantidad, autobuses]"
         },
         "majorClaim": {
@@ -21574,10 +21574,10 @@
             "text": "el titulo es bastante claro",
             "nouns": "[titulo]"
         },
-        "mainVerb": "hace",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[]",
-            "text": "que no hace falta un resumen",
+            "text": "Creo que no hace falta un resumen",
             "nouns": "[falta, resumen]"
         },
         "majorClaim": {
@@ -21655,11 +21655,11 @@
             "text": "son muy hondos",
             "nouns": "[]"
         },
-        "mainVerb": "impiden",
+        "mainVerb": "Necesitamos",
         "claim": {
             "entities": "[]",
-            "text": "impiden la circulacion",
-            "nouns": "[circulacion]"
+            "text": "Necesitamos que ese espacio se amplie y se habilite mejor para que la gente podamos circular , sobre todo rellenando los cubos bajo arbol que se llenan de agua y barro e impiden la circulacion",
+            "nouns": "[espacio, gente, cubos, arbol, agua, barro, circulacion]"
         },
         "majorClaim": {
             "entities": "[ARGANZUELA]",
@@ -21736,10 +21736,10 @@
             "text": "esta contaminando la ciudad de forma innecesaria , si la temperatura exterior es templada y no de frio",
             "nouns": "[contaminando, ciudad, forma, temperatura, frio]"
         },
-        "mainVerb": "tengan",
+        "mainVerb": "Evitar",
         "claim": {
             "entities": "[Comunidades de Vecinos]",
-            "text": "que Comunidades de Vecinos tengan la calefaccion central encendida por sistema",
+            "text": "Evitar que Comunidades de Vecinos tengan la calefaccion central encendida por sistema",
             "nouns": "[calefaccion, sistema]"
         },
         "majorClaim": {
@@ -21846,8 +21846,8 @@
         "mainVerb": "quiera",
         "claim": {
             "entities": "[]",
-            "text": "su perro defeque donde quiera",
-            "nouns": "[perro, defeque]"
+            "text": "Hasta las narices de ver a la gente dejar que su perro defeque donde quiera",
+            "nouns": "[narices, gente, perro, defeque]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -21924,11 +21924,11 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "existen",
+        "mainVerb": "apoyar",
         "claim": {
             "entities": "[Latina]",
-            "text": ": Centro , Latina , que existen",
-            "nouns": "[]"
+            "text": "Mejor apoyar propuestas si se puede filtrar por distrito : Centro , Latina , que existen",
+            "nouns": "[propuestas, distrito, distrito]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22247,10 +22247,10 @@
             "text": "en breve entrara la linea de la EMT",
             "nouns": "[linea]"
         },
-        "mainVerb": "llegue",
+        "mainVerb": "Necesitamos",
         "claim": {
             "entities": "[]",
-            "text": "que llegue el autobus a las viviendas de la calle maquinilla y la guarderia",
+            "text": "Necesitamos que llegue el autobus a las viviendas de la calle maquinilla y la guarderia",
             "nouns": "[autobus, viviendas, calle, guarderia, viviendas]"
         },
         "majorClaim": {
@@ -22277,8 +22277,8 @@
         "mainVerb": "siga",
         "claim": {
             "entities": "[]",
-            "text": "que siga pudiendo hacerlo en ambas",
-            "nouns": "[hacerlo]"
+            "text": "La gente que no sea residente , que siga pudiendo hacerlo en ambas",
+            "nouns": "[gente, hacerlo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22436,10 +22436,10 @@
             "text": "el espacio ya existe",
             "nouns": "[espacio]"
         },
-        "mainVerb": "cree",
+        "mainVerb": "Necesitamos",
         "claim": {
             "entities": "[]",
-            "text": "que se cree uno",
+            "text": "Necesitamos que se cree uno",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -22517,11 +22517,11 @@
             "text": "emiten gases en un sitio concreto que otros inhalan",
             "nouns": "[gases, sitio]"
         },
-        "mainVerb": "apagar",
+        "mainVerb": "Concienciar",
         "claim": {
             "entities": "[]",
-            "text": "que deben apagar el motor cuando estan estacionados",
-            "nouns": "[motor]"
+            "text": "Concienciar a todos conductores ( motos , turismos , taxis , furgonetas ... ) de que deben apagar el motor cuando estan estacionados",
+            "nouns": "[conductores, motos, turismos, taxis, furgonetas, motor]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22598,11 +22598,11 @@
             "text": "con las olas de calor que ha habido los animales tambien se deshidratan",
             "nouns": "[olas, calor, tambien]"
         },
-        "mainVerb": "bebiesen",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que bebiesen los perros",
-            "nouns": "[perros]"
+            "text": "Me gustaria que en el parque de ronda del sur pusiesen mas papeleras y alguna fuente para que bebiesen los perros",
+            "nouns": "[parque, ronda, sur, papeleras, fuente, perros]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22682,8 +22682,8 @@
         "mainVerb": "tener",
         "claim": {
             "entities": "[]",
-            "text": ", familias numerosas , discapacitados y los menores de 26 anos , los desempleados deberian tener un precio menor , o una ayuda",
-            "nouns": "[familias, anos, desempleados, precio, ayuda]"
+            "text": "Al igual que los jubilados , familias numerosas , discapacitados y los menores de 26 anos , los desempleados deberian tener un precio menor , o una ayuda",
+            "nouns": "[jubilados, familias, anos, desempleados, precio, ayuda]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22733,11 +22733,11 @@
             "text": "permitiria una estacion intermedia en Valdecarros",
             "nouns": "[estacion]"
         },
-        "mainVerb": "usan",
+        "mainVerb": "unieran",
         "claim": {
             "entities": "[]",
-            "text": ", no solo por la gran cantidad de personas que usan esa linea , tal vez la mas larga , sino",
-            "nouns": "[solo, cantidad, personas, linea, tal, vez]"
+            "text": "Seria muy beneficioso que se unieran amas lineas , no solo por la gran cantidad de personas que usan esa linea , tal vez la mas larga , sino",
+            "nouns": "[amas, solo, cantidad, personas, linea, tal, vez]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22763,8 +22763,8 @@
         "mainVerb": "unifiquen",
         "claim": {
             "entities": "[]",
-            "text": "que se unifiquen los dos tipos de plazas verdes y azules del S.E.R",
-            "nouns": "[tipos, plazas]"
+            "text": "Mi propuesta es que se unifiquen los dos tipos de plazas verdes y azules del S.E.R",
+            "nouns": "[propuesta, tipos, plazas]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22787,10 +22787,10 @@
             "text": "somos mayoria los que respetamos su cultura y su idioma",
             "nouns": "[cultura, idioma]"
         },
-        "mainVerb": "sigamos",
+        "mainVerb": "Demostrar",
         "claim": {
-            "entities": "[]",
-            "text": "que sigamos juntos",
+            "entities": "[Cataluna, Madrid]",
+            "text": "Demostrar a Cataluna que Madrid quiere que sigamos juntos",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -22868,11 +22868,11 @@
             "text": "no hay pena de muerte",
             "nouns": "[pena, muerte]"
         },
-        "mainVerb": "entren",
+        "mainVerb": "roben",
         "claim": {
             "entities": "[]",
-            "text": "que entren a una casa ajena deberia estar penado con cadena perpetua",
-            "nouns": "[casa, cadena, pena]"
+            "text": "Cansado ya de que nos roben los delincuentes y no les pase nada , si ya por el hecho de que entren a una casa ajena deberia estar penado con cadena perpetua",
+            "nouns": "[delincuentes, hecho, casa, cadena, pena]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -22975,10 +22975,10 @@
             "text": "como muchos de los vecinos que vivimos en ella , tenemos que sufrir la entrada de camiones maxiva y la estrechez de la acera en el lado izquierdo impide poder andar",
             "nouns": "[vecinos, entrada, camiones, estrechez, acera, lado]"
         },
-        "mainVerb": "peatonalizada",
+        "mainVerb": "Deberia",
         "claim": {
             "entities": "[]",
-            "text": "ser peatonalizada",
+            "text": "Deberia ser peatonalizada",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -23083,11 +23083,11 @@
             "text": "dificultan la vida y movilidad de los ciudadanos",
             "nouns": "[vida, movilidad, ciudadanos]"
         },
-        "mainVerb": "reduzca",
+        "mainVerb": "Considero",
         "claim": {
             "entities": "[]",
-            "text": "que se reduzca el numero de manzanas de viviendas de los barrios consolidados",
-            "nouns": "[numero, manzanas, viviendas, barrios]"
+            "text": "Considero una medida positiva para Madrid el que se reduzca el numero de manzanas de viviendas de los barrios consolidados",
+            "nouns": "[medida, numero, manzanas, viviendas, barrios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -23110,11 +23110,11 @@
             "text": "hay deficit",
             "nouns": "[deficit]"
         },
-        "mainVerb": "gana",
+        "mainVerb": "salga",
         "claim": {
             "entities": "[]",
-            "text": "se gana en agentes en la calle",
-            "nouns": "[agentes, calle]"
+            "text": "Que policia municipal salga a patrullar a las calles , que para eso estan , y sea seguridad privada la que este , sale mas barato y con igual servicio y se gana en agentes en la calle",
+            "nouns": "[policia, calles, seguridad, servicio, agentes, calle]"
         },
         "majorClaim": {
             "entities": "[Vigilantes de Seguridad]",
@@ -23218,11 +23218,11 @@
             "text": "no trabajo en el Ayuntamiento",
             "nouns": "[]"
         },
-        "mainVerb": "tengo",
+        "mainVerb": "analizar",
         "claim": {
             "entities": "[]",
-            "text": "no tengo datos concretos",
-            "nouns": "[datos]"
+            "text": "no es dificil , hay que analizar a fondo la situacion actual y no tengo datos concretos",
+            "nouns": "[fondo, situacion, datos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -23245,11 +23245,11 @@
             "text": "es un empalme con la Avda. de la Albufera",
             "nouns": "[empalme]"
         },
-        "mainVerb": "pasa",
+        "mainVerb": "Ruego",
         "claim": {
-            "entities": "[EMT]",
-            "text": "pasa la linea 57 de la EMT y bastante trafico pesado y turismos",
-            "nouns": "[linea, turismos]"
+            "entities": "[Carlos Martin Alvarez, EMT]",
+            "text": "Ruego que se asfalte la calle Carlos Martin Alvarez desde el n. 1 , pasa la linea 57 de la EMT y bastante trafico pesado y turismos",
+            "nouns": "[calle, linea, turismos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -23329,7 +23329,7 @@
         "mainVerb": "favorecer",
         "claim": {
             "entities": "[]",
-            "text": "favorecer el deporte",
+            "text": "Para favorecer el deporte",
             "nouns": "[deporte]"
         },
         "majorClaim": {
@@ -23517,7 +23517,7 @@
         "mainVerb": "necesita",
         "claim": {
             "entities": "[]",
-            "text": "necesita transporte publico directo ( metro / bus ) para unir las dos zonas",
+            "text": "Se necesita transporte publico directo ( metro / bus ) para unir las dos zonas",
             "nouns": "[transporte, metro, bus, zonas]"
         },
         "majorClaim": {
@@ -23622,11 +23622,11 @@
             "text": "pueden estar trabajando para mantenerla pero no poder estar con ellas",
             "nouns": "[mantenerla]"
         },
-        "mainVerb": "dar",
+        "mainVerb": "necesitan",
         "claim": {
             "entities": "[]",
-            "text": "que a veces sus familiares no le pueden dar bien por medios economicos o tiempo",
-            "nouns": "[veces, familiares, medios, tiempo]"
+            "text": "Personas mayores necesitan unas atenciones que a veces sus familiares no le pueden dar bien por medios economicos o tiempo",
+            "nouns": "[Personas, atenciones, veces, familiares, medios, tiempo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -23733,8 +23733,8 @@
         "mainVerb": "asume",
         "claim": {
             "entities": "[]",
-            "text": "asume un riesgo poniendo en peligro su vida",
-            "nouns": "[riesgo, peligro, vida]"
+            "text": "El ciclista asume un riesgo poniendo en peligro su vida",
+            "nouns": "[ciclista, riesgo, peligro, vida]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -23918,11 +23918,11 @@
             "text": "no entrar como terminales de autobuses o edificios del gobierno Ayto",
             "nouns": "[terminales, autobuses, edificios, gobierno]"
         },
-        "mainVerb": "tienen",
+        "mainVerb": "ver",
         "claim": {
             "entities": "[]",
-            "text": "que no tienen",
-            "nouns": "[]"
+            "text": "Que a nuestros perros se les deje ver como apestosos y se les permita la entrada a lugares publicos en los que no tienen",
+            "nouns": "[perros, entrada, lugares]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -24002,8 +24002,8 @@
         "mainVerb": "ningun",
         "claim": {
             "entities": "[]",
-            "text": "no se encuentra ningun lugar de ocio para adolescentes y jovenes , por eso propongo la construccion de unas pistas de skate",
-            "nouns": "[lugar, ocio, adolescentes, jovenes, construccion, pistas, skate]"
+            "text": "En el parque de cuna verde no se encuentra ningun lugar de ocio para adolescentes y jovenes , por eso propongo la construccion de unas pistas de skate",
+            "nouns": "[parque, cuna, lugar, ocio, adolescentes, jovenes, construccion, pistas, skate]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -24080,11 +24080,11 @@
             "text": "constantemente hay maquinaria y personal",
             "nouns": "[maquinaria, personal]"
         },
-        "mainVerb": "estan",
+        "mainVerb": "deteriorado",
         "claim": {
-            "entities": "[]",
-            "text": ", que sin ser turisticos estan muy limpios",
-            "nouns": "[]"
+            "entities": "[Barrio, Norte]",
+            "text": "Un Barrio deteriorado y degradado por la suciedad , solicito al igual que en barrios de la zona Norte , que sin ser turisticos estan muy limpios",
+            "nouns": "[suciedad, barrios, zona]"
         },
         "majorClaim": {
             "entities": "[Carabanchel]",
@@ -24218,8 +24218,8 @@
         "mainVerb": "pasar",
         "claim": {
             "entities": "[]",
-            "text": "que solo pueda pasar un coche cada vez que se abre",
-            "nouns": "[coche, vez]"
+            "text": "Un semaforo mal coordinado con los de la calle Gran via de hortaleza que hace que solo pueda pasar un coche cada vez que se abre",
+            "nouns": "[semaforo, calle, via, hortaleza, coche, vez]"
         },
         "majorClaim": {
             "entities": "[Estibaliz]",
@@ -24484,11 +24484,11 @@
             "text": "no existe en el BOE",
             "nouns": "[]"
         },
-        "mainVerb": "prohibe",
+        "mainVerb": "tengo",
         "claim": {
-            "entities": "[]",
-            "text": "en Espana me prohibe la ley embalsamar",
-            "nouns": "[ley]"
+            "entities": "[Espanola]",
+            "text": "Desde 2008 tengo titulacion Francesa y Espanola pero en Espana me prohibe la ley embalsamar",
+            "nouns": "[2008, titulacion, ley]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -24538,10 +24538,10 @@
             "text": "han sufrido muchos accidentes por deteriodo de las aceras y carreteras , de todo el barrio orcasur",
             "nouns": "[aceras, accidentes, deteriodo, aceras, carreteras, barrio]"
         },
-        "mainVerb": "arregle",
+        "mainVerb": "Queremos",
         "claim": {
             "entities": "[]",
-            "text": "que nos arregle las aceras de las calles",
+            "text": "Queremos que nos arregle las aceras de las calles",
             "nouns": "[aceras, calles, aceras]"
         },
         "majorClaim": {
@@ -24619,11 +24619,11 @@
             "text": "no hay ningun organismo regulador , actividad muy lucrativa y mucho dinero negro",
             "nouns": "[organismo, actividad, dinero]"
         },
-        "mainVerb": "desproporcionados",
+        "mainVerb": "sabemos",
         "claim": {
             "entities": "[]",
-            "text": "desproporcionados",
-            "nouns": "[]"
+            "text": "Todos sabemos que los temas dentales y protesicos dentales SON MUY CAROS , UN LUJO y desproporcionados",
+            "nouns": "[temas, LUJO]"
         },
         "majorClaim": {
             "entities": "[Ayuntamiento de Madrid]",
@@ -25078,11 +25078,11 @@
             "text": "no tenemos arboles",
             "nouns": "[arboles, arboles]"
         },
-        "mainVerb": "pagamos",
+        "mainVerb": "tiene",
         "claim": {
-            "entities": "[]",
-            "text": ", en esta zona pagamos mas IBI que nadie",
-            "nouns": "[zona]"
+            "entities": "[Teseo de la Quinta de los Molinos]",
+            "text": "La calle Teseo de la Quinta de los Molinos no tiene arboles , en esta zona pagamos mas IBI que nadie",
+            "nouns": "[calle, arboles, zona, arboles]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25105,11 +25105,11 @@
             "text": "en la mayor parte de los casos se sanciona a jovenes menores o mayores de edad sin empleo y son sus familias las que tienen que hacer frente a la excesiva cuantia de la misma ( 500/600 ) suponiendo , en muchas ocasiones , una carga dramatica ( esta cuantia ademas aumenta en 500 si se es reincidente )",
             "nouns": "[frente, parte, casos, jovenes, edad, empleo, familias, frente, cuantia, 500/600, ocasiones, carga, cuantia]"
         },
-        "mainVerb": "desvirtua",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se desvirtua la naturaleza de la misma",
-            "nouns": "[naturaleza]"
+            "text": "Propongo dar una opcion a la hora de hacer frente a las sanciones por consumo de alcohol en la via publica por considerar que se desvirtua la naturaleza de la misma",
+            "nouns": "[opcion, hora, frente, sanciones, consumo, alcohol, via, naturaleza, frente]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25159,11 +25159,11 @@
             "text": "generara",
             "nouns": "[]"
         },
-        "mainVerb": "subir",
+        "mainVerb": "obliga",
         "claim": {
             "entities": "[]",
-            "text": "a subir salarialmente el sueldo a los espanoles al menos un 3 % , mejorara de forma indirecta la salud de la economia",
-            "nouns": "[sueldo, espanoles, forma, salud, economia]"
+            "text": "Si se obliga a las empresas , a subir salarialmente el sueldo a los espanoles al menos un 3 % , mejorara de forma indirecta la salud de la economia",
+            "nouns": "[empresas, sueldo, espanoles, forma, salud, economia]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25458,8 +25458,8 @@
         "mainVerb": "perder",
         "claim": {
             "entities": "[]",
-            "text": "no perder toda la manana",
-            "nouns": "[manana]"
+            "text": "En ciertos centros de salud es imposible no perder toda la manana",
+            "nouns": "[centros, salud, manana]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25482,11 +25482,11 @@
             "text": "es imposible aparcar",
             "nouns": "[]"
         },
-        "mainVerb": "adaptar",
+        "mainVerb": "Existe",
         "claim": {
-            "entities": "[]",
-            "text": "que con muy poco dinero se podria adaptar para aparcar , por favor estudien esto",
-            "nouns": "[dinero, favor]"
+            "entities": "[Castrillo de Aza, Puentelarra]",
+            "text": "Existe una gran parcela al final de las calles de Puentelarra y Castrillo de Aza que con muy poco dinero se podria adaptar para aparcar , por favor estudien esto",
+            "nouns": "[parcela, final, calles, dinero, favor]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25562,11 +25562,11 @@
             "text": "no hay o para el eroski",
             "nouns": "[eroski]"
         },
-        "mainVerb": "coger",
+        "mainVerb": "van",
         "claim": {
             "entities": "[]",
-            "text": "no hay posibilidad de coger bus",
-            "nouns": "[posibilidad, bus]"
+            "text": "Muchos ninos van al otro lado de la via a estudiar y no hay posibilidad de coger bus",
+            "nouns": "[ninos, lado, via, posibilidad, bus]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -25697,11 +25697,11 @@
             "text": "este el aire acondicionado puesto",
             "nouns": "[aire, acondicionado, puesto]"
         },
-        "mainVerb": "preocupen",
+        "mainVerb": "estemos",
         "claim": {
             "entities": "[]",
-            "text": "que los conductores se preocupen",
-            "nouns": "[conductores]"
+            "text": "Que estemos en verano los que quedamos tenemos el mismo horario y como bien sabeis estamos en Madrid a 40 grados que los conductores se preocupen",
+            "nouns": "[verano, horario, grados, conductores]"
         },
         "majorClaim": {
             "entities": "[Renfe]",
@@ -25967,11 +25967,11 @@
             "text": "no hay",
             "nouns": "[]"
         },
-        "mainVerb": "pasar",
+        "mainVerb": "circular",
         "claim": {
-            "entities": "[]",
-            "text": "poder pasar",
-            "nouns": "[]"
+            "entities": "[cristina]",
+            "text": "Actualmente casi no se puede circular en ambos sentidos en la calle isla cristina y se forman atascos para poder pasar",
+            "nouns": "[sentidos, calle, isla, atascos]"
         },
         "majorClaim": {
             "entities": "[Isla Cristina]",
@@ -25997,7 +25997,7 @@
         "mainVerb": "poniendolo",
         "claim": {
             "entities": "[]",
-            "text": "si poniendolo por aqui se lleva a cabo",
+            "text": "a ver si poniendolo por aqui se lleva a cabo",
             "nouns": "[aqui, cabo]"
         },
         "majorClaim": {
@@ -26048,11 +26048,11 @@
             "text": "q no caduquen esos viajes",
             "nouns": "[q, viajes]"
         },
-        "mainVerb": "tramporte",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "tramporte el dia 15",
-            "nouns": "[dia]"
+            "text": "A parte de la propuesta del billete unico , me gustaria anadir que tambien se eliminara la fecha de caducidad , ej , si yo cargo mi bono de tramporte el dia 15",
+            "nouns": "[parte, propuesta, billete, tambien, fecha, caducidad, ej, cargo, dia, q]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -26155,11 +26155,11 @@
             "text": "hay una ausencia total de las mismas",
             "nouns": "[ausencia]"
         },
-        "mainVerb": "practicar",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "para practicar deportes de forma gratuita en en la zona de de los alrededores del parque del Retiro",
-            "nouns": "[deportes, forma, zona, alrededores, parque]"
+            "text": "Propongo la construccion de un recinto habilitado para practicar deportes de forma gratuita en en la zona de de los alrededores del parque del Retiro",
+            "nouns": "[construccion, recinto, deportes, forma, zona, alrededores, parque]"
         },
         "majorClaim": {
             "entities": "[ibiza, Deportivas, Campos]",
@@ -26211,9 +26211,9 @@
         },
         "mainVerb": "eliminar",
         "claim": {
-            "entities": "[]",
-            "text": "eliminar los nombres de las calles con personas relacionadas con el franquismo",
-            "nouns": "[nombres, calles, personas, franquismo]"
+            "entities": "[Carmena]",
+            "text": "Al igual que el plan de la senora Carmena para eliminar los nombres de las calles con personas relacionadas con el franquismo",
+            "nouns": "[plan, senora, nombres, calles, personas, franquismo]"
         },
         "majorClaim": {
             "entities": "[Avenida Pablo Iglesias]",
@@ -26426,7 +26426,7 @@
         "mainVerb": "estan",
         "claim": {
             "entities": "[]",
-            "text": "estan llenos en una semana",
+            "text": "algunos estan llenos en una semana",
             "nouns": "[estan, semana]"
         },
         "majorClaim": {
@@ -26534,8 +26534,8 @@
         "mainVerb": "afectan",
         "claim": {
             "entities": "[]",
-            "text": "que afectan a un % muy pequeno de ciudadanos",
-            "nouns": "[ciudadanos]"
+            "text": "Hay propuestas que afectan a un % muy pequeno de ciudadanos",
+            "nouns": "[propuestas, ciudadanos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -26585,11 +26585,11 @@
             "text": "apenas hay luz",
             "nouns": "[luz]"
         },
-        "mainVerb": "hace",
+        "mainVerb": "bajan",
         "claim": {
             "entities": "[]",
-            "text": "en cuanto se hace de noche da panico bajar por estas calles",
-            "nouns": "[calles, c, cuanto, noche, panico, calles]"
+            "text": "Estas calles bajan desde la c / alcala y en cuanto se hace de noche da panico bajar por estas calles",
+            "nouns": "[calles, c, alcala, cuanto, noche, panico, calles]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -26746,11 +26746,11 @@
             "text": "esta en malas condiciones , que pongan otro en su lugar",
             "nouns": "[condiciones, lugar]"
         },
-        "mainVerb": "talen",
+        "mainVerb": "Pido",
         "claim": {
-            "entities": "[]",
-            "text": ", cuando talen un arbol",
-            "nouns": "[arbol]"
+            "entities": "[Ayuntamiento]",
+            "text": "Pido al Ayuntamiento que por favor , cuando talen un arbol",
+            "nouns": "[favor, arbol]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -26880,10 +26880,10 @@
             "text": "afean y desmerecen nuestros barrios ademas de ser un cumulo de infecciones",
             "nouns": "[barrios, cumulo, infecciones]"
         },
-        "mainVerb": "mantener",
+        "mainVerb": "Crear",
         "claim": {
-            "entities": "[]",
-            "text": "a los propietarios de mantener limpios sus locales cerrados",
+            "entities": "[Obligatoriedad]",
+            "text": "Crear la Obligatoriedad a los propietarios de mantener limpios sus locales cerrados",
             "nouns": "[propietarios, locales]"
         },
         "majorClaim": {
@@ -26907,10 +26907,10 @@
             "text": "te intimidan y casi te obligan a darles dinero",
             "nouns": "[darles, dinero]"
         },
-        "mainVerb": "eliminen",
+        "mainVerb": "Pido",
         "claim": {
             "entities": "[]",
-            "text": "que se eliminen",
+            "text": "Pido que se eliminen",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -26960,10 +26960,10 @@
             "text": "muchas personas mayores no tienen vehiculo y tienen que viajar con sus mascotas",
             "nouns": "[personas, vehiculo, mascotas]"
         },
-        "mainVerb": "viajar",
+        "mainVerb": "Permitir",
         "claim": {
             "entities": "[]",
-            "text": "que los perros de menos de 7 kilos puedan viajar en la cabina en los autobuses de linea",
+            "text": "Permitir que los perros de menos de 7 kilos puedan viajar en la cabina en los autobuses de linea",
             "nouns": "[perros, kilos, cabina, autobuses, linea]"
         },
         "majorClaim": {
@@ -27148,11 +27148,11 @@
             "text": "obtenemos muy buenos resultados",
             "nouns": "[resultados]"
         },
-        "mainVerb": "preparar",
+        "mainVerb": "Construir",
         "claim": {
             "entities": "[]",
-            "text": "poder preparar bien a los futuros patinadores",
-            "nouns": "[patinadores]"
+            "text": "Construir una pista de patinaje sobre hielo , para poder preparar bien a los futuros patinadores",
+            "nouns": "[pista, patinaje, hielo, patinadores]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -27202,10 +27202,10 @@
             "text": "acontecimientos como el Rastro o los partidos del Calderon",
             "nouns": "[acontecimientos, partidos]"
         },
-        "mainVerb": "aparcar",
+        "mainVerb": "vivimos",
         "claim": {
-            "entities": "[]",
-            "text": "no poder aparcar en el barrio",
+            "entities": "[Arganzuela]",
+            "text": "Los que vivimos en Arganzuela estamos hartos de no poder aparcar en el barrio",
             "nouns": "[barrio]"
         },
         "majorClaim": {
@@ -27310,11 +27310,11 @@
             "text": "siempre se le denomina Villaverde o Usera",
             "nouns": "[]"
         },
-        "mainVerb": "aparece",
+        "mainVerb": "extrano",
         "claim": {
             "entities": "[]",
-            "text": "que nunca aparece en las noticias",
-            "nouns": "[noticias]"
+            "text": "La Ciudad de los Angeles , ese ente extrano que nunca aparece en las noticias",
+            "nouns": "[ente, noticias]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -27340,7 +27340,7 @@
         "mainVerb": "finalizacion",
         "claim": {
             "entities": "[]",
-            "text": "no finalizacion de esta calle en la rotonda cercana acarrea un atasco monumental",
+            "text": "La no finalizacion de esta calle en la rotonda cercana acarrea un atasco monumental",
             "nouns": "[calle, rotonda, atasco]"
         },
         "majorClaim": {
@@ -27418,10 +27418,10 @@
             "text": "posiblemente ni siquiera haya tantos vecinos",
             "nouns": "[siquiera, vecinos]"
         },
-        "mainVerb": "necesiten",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que para las propuestas de ' Decide Madrid ' en barrios pequenos , como el Poblado Dirigido de Orcasitas , no se necesiten 27.662 apoyos",
+            "text": "Propongo que para las propuestas de ' Decide Madrid ' en barrios pequenos , como el Poblado Dirigido de Orcasitas , no se necesiten 27.662 apoyos",
             "nouns": "[propuestas, barrios, apoyos]"
         },
         "majorClaim": {
@@ -27499,10 +27499,10 @@
             "text": "la gran mayoria de las veces los coches no paran y es casi imposible cruzar",
             "nouns": "[mayoria, veces, coches]"
         },
-        "mainVerb": "retiren",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que retiren el continuo intermitente",
+            "text": "Propongo que retiren el continuo intermitente",
             "nouns": "[]"
         },
         "majorClaim": {
@@ -27526,11 +27526,11 @@
             "text": "es una zona que crece en establecimiento de oficinas y locales comerciales",
             "nouns": "[zona, zona, establecimiento, oficinas, locales]"
         },
-        "mainVerb": "saliendo",
+        "mainVerb": "existe",
         "claim": {
             "entities": "[Moncloa, Norte]",
-            "text": "que , saliendo de la zona de Moncloa , vaya hacia el Norte y es necesaria",
-            "nouns": "[zona, zona]"
+            "text": "No existe ninguna linea de metro o bus que , saliendo de la zona de Moncloa , vaya hacia el Norte y es necesaria",
+            "nouns": "[linea, metro, bus, zona, zona]"
         },
         "majorClaim": {
             "entities": "[Moncloa-Cuatro Torres Business Area]",
@@ -27715,11 +27715,11 @@
             "text": "siempre estan abarrotados",
             "nouns": "[]"
         },
-        "mainVerb": "usar",
+        "mainVerb": "sigue",
         "claim": {
-            "entities": "[]",
-            "text": "( no se pueden usar",
-            "nouns": "[]"
+            "entities": "[Correos, Santa Eugenia]",
+            "text": "Santa Eugenia sigue sin disponer de servicios tan fundamentales como una oficina de Correos o la recogida eficiente de contenedores de reciclaje ( no se pueden usar",
+            "nouns": "[servicios, oficina, recogida, contenedores, reciclaje]"
         },
         "majorClaim": {
             "entities": "[Santa Eugenia]",
@@ -27823,11 +27823,11 @@
             "text": "esta abandonado por parte de las autoridades",
             "nouns": "[parte, autoridades]"
         },
-        "mainVerb": "plantar",
+        "mainVerb": "Regar",
         "claim": {
             "entities": "[Carabanchel]",
-            "text": "plantar arboles ... en el parque de la cuna verde , zona Carabanchel y latina",
-            "nouns": "[arboles, parque, cuna, zona]"
+            "text": "Regar , limpiar , instalar mobiliario juego , plantar arboles ... en el parque de la cuna verde , zona Carabanchel y latina",
+            "nouns": "[mobiliario, juego, arboles, parque, cuna, zona]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -27904,11 +27904,11 @@
             "text": "la acumulacion de vehiculos venidos del exterior de la zona",
             "nouns": "[acumulacion, vehiculos, exterior, zona]"
         },
-        "mainVerb": "aparcar",
+        "mainVerb": "Crear",
         "claim": {
             "entities": "[]",
-            "text": ", pues es imposible aparcar por las mananas",
-            "nouns": "[mananas]"
+            "text": "Crear zonas de aparcamiento para residentes , pues es imposible aparcar por las mananas",
+            "nouns": "[zonas, aparcamiento, residentes, mananas, zona]"
         },
         "majorClaim": {
             "entities": "[Garcia Noblejas]",
@@ -27931,11 +27931,11 @@
             "text": "mi horario asi lo exige y tengo que utilizar el coche particular",
             "nouns": "[horario, coche]"
         },
-        "mainVerb": "usarla",
+        "mainVerb": "comienza",
         "claim": {
             "entities": "[]",
-            "text": "no pudiendo usarla para ir a trabajar",
-            "nouns": "[]"
+            "text": "Esta linea comienza su recorrido muy tarde , no pudiendo usarla para ir a trabajar",
+            "nouns": "[linea, recorrido]"
         },
         "majorClaim": {
             "entities": "[EMT]",
@@ -28014,9 +28014,9 @@
         },
         "mainVerb": "tienen",
         "claim": {
-            "entities": "[Renfe]",
-            "text": "en las que los trabajadores de Renfe tienen que aparcar las motos en la acera",
-            "nouns": "[trabajadores, motos, acera]"
+            "entities": "[Museo del Ferrocarril, Renfe]",
+            "text": "En los alrededores del Museo del Ferrocarril hay una zona en las que los trabajadores de Renfe tienen que aparcar las motos en la acera",
+            "nouns": "[alrededores, zona, trabajadores, motos, acera]"
         },
         "majorClaim": {
             "entities": "[Museo del Ferrocarril]",
@@ -28200,11 +28200,11 @@
             "text": "estan muy sucias y malolientes",
             "nouns": "[]"
         },
-        "mainVerb": "ponen",
+        "mainVerb": "Obligar",
         "claim": {
             "entities": "[]",
-            "text": "donde ponen sus terrazas",
-            "nouns": "[terrazas]"
+            "text": "Obligar a los duenos de los bares , la limpieza de sus entradas y lugares donde ponen sus terrazas",
+            "nouns": "[duenos, bares, limpieza, entradas, lugares, terrazas]"
         },
         "majorClaim": {
             "entities": "[Bares del Barrio]",
@@ -28338,7 +28338,7 @@
         "mainVerb": "permita",
         "claim": {
             "entities": "[]",
-            "text": "que se permita canjear los bonos multiusos",
+            "text": "Solicito que se permita canjear los bonos multiusos",
             "nouns": "[bonos]"
         },
         "majorClaim": {
@@ -28389,10 +28389,10 @@
             "text": "de otra forma nos tenemos que trasladar a Sanchinarro u Hortaleza",
             "nouns": "[forma]"
         },
-        "mainVerb": "permitir",
+        "mainVerb": "Crear",
         "claim": {
             "entities": "[]",
-            "text": "permitir el acceso a las bibliotecas de los centros de mayores del barrio",
+            "text": "Crear una biblioteca o bien permitir el acceso a las bibliotecas de los centros de mayores del barrio",
             "nouns": "[biblioteca, acceso, bibliotecas, centros, barrio]"
         },
         "majorClaim": {
@@ -28419,8 +28419,8 @@
         "mainVerb": "impidiendo",
         "claim": {
             "entities": "[]",
-            "text": "impidiendo a los viandantes circular bien",
-            "nouns": "[viandantes]"
+            "text": "En este pequeno espacio hay mas de 26 motos en las aceras impidiendo a los viandantes circular bien",
+            "nouns": "[pequeno, espacio, motos, aceras, viandantes, aceras, espacio]"
         },
         "majorClaim": {
             "entities": "[Ramon, C. Montesa]",
@@ -28446,8 +28446,8 @@
         "mainVerb": "modifique",
         "claim": {
             "entities": "[Rascon]",
-            "text": "que se modifique las aceras de la calle Rascon 28019",
-            "nouns": "[aceras, calle]"
+            "text": "Mi propuesta o reclamo es que se modifique las aceras de la calle Rascon 28019",
+            "nouns": "[propuesta, reclamo, aceras, calle]"
         },
         "majorClaim": {
             "entities": "[Peatonalizar]",
@@ -28524,10 +28524,10 @@
             "text": "esta financiera junto con banco Santander nos vendio un producto impagable y queremos juicio y castigo",
             "nouns": "[banco, producto, juicio, castigo]"
         },
-        "mainVerb": "eche",
+        "mainVerb": "luchando",
         "claim": {
-            "entities": "[]",
-            "text": "que se nos eche una mano",
+            "entities": "[UCI]",
+            "text": "Estamos luchando contra la financiera UCI y necesitamos que se nos eche una mano",
             "nouns": "[mano]"
         },
         "majorClaim": {
@@ -28607,9 +28607,9 @@
         },
         "mainVerb": "gastas",
         "claim": {
-            "entities": "[]",
-            "text": "no gastas todo",
-            "nouns": "[]"
+            "entities": "[SER]",
+            "text": "Cuando hechas dinero en una maquina de SER y no gastas todo",
+            "nouns": "[dinero, maquina, dinero]"
         },
         "majorClaim": {
             "entities": "[SER]",
@@ -28767,10 +28767,10 @@
             "text": "la distancia fisica entre el barrio y el hospital es de unos 100 m. y ahora hay que dar una vuelta de varios kms",
             "nouns": "[distancia, barrio, hospital, vuelta, kms]"
         },
-        "mainVerb": "crear",
+        "mainVerb": "Entiendo",
         "claim": {
             "entities": "[]",
-            "text": "que es necerasio crear este paso bajo las vias del tren",
+            "text": "Entiendo que es necerasio crear este paso bajo las vias del tren",
             "nouns": "[necerasio, paso, vias, tren]"
         },
         "majorClaim": {
@@ -28794,11 +28794,11 @@
             "text": "existen rutas alternativas y no es utilizada por la EMT",
             "nouns": "[rutas]"
         },
-        "mainVerb": "moleste",
+        "mainVerb": "Eliminar",
         "claim": {
-            "entities": "[]",
-            "text": "que moleste",
-            "nouns": "[]"
+            "entities": "[Pablo]",
+            "text": "Eliminar la parte de la calle Hermanos de Pablo que parte el polideportivo de la concepcion en dos , al trafico no creo que moleste",
+            "nouns": "[parte, calle, polideportivo, concepcion, trafico]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -28824,7 +28824,7 @@
         "mainVerb": "estan",
         "claim": {
             "entities": "[]",
-            "text": "estan llenos en una semana",
+            "text": "algunos estan llenos en una semana",
             "nouns": "[estan, semana]"
         },
         "majorClaim": {
@@ -28956,11 +28956,11 @@
             "text": "no existen cerca contenedores de plastico",
             "nouns": "[contenedores, plastico]"
         },
-        "mainVerb": "acumulan",
+        "mainVerb": "tirar",
         "claim": {
             "entities": "[]",
-            "text": "cuando se nos acumulan",
-            "nouns": "[]"
+            "text": "no podemos tirar los plasticos cuando se nos acumulan",
+            "nouns": "[plasticos, plastico]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29091,11 +29091,11 @@
             "text": "no tienen las mismas fechas de examenes",
             "nouns": "[examenes, fechas, examenes]"
         },
-        "mainVerb": "dificulta",
+        "mainVerb": "permacen",
         "claim": {
             "entities": "[]",
-            "text": "que dificulta a los estudiantes no universitarios",
-            "nouns": "[estudiantes]"
+            "text": "Excepto en epoca de examenes , las salas de estudio de las bibliotecas de rivas permacen cerradas , lo que dificulta a los estudiantes no universitarios",
+            "nouns": "[epoca, examenes, salas, estudio, bibliotecas, rivas, estudiantes, examenes]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29118,11 +29118,11 @@
             "text": "los mercadillos son caros",
             "nouns": "[mercadillos]"
         },
-        "mainVerb": "vender",
+        "mainVerb": "elaborando",
         "claim": {
             "entities": "[]",
-            "text": "no los pueden vender",
-            "nouns": "[]"
+            "text": "Muchas personas estan elaborando productos artesanos en sus domicilios , pero no los pueden vender",
+            "nouns": "[personas, productos, domicilios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29199,11 +29199,11 @@
             "text": "asi no hay necesidad de tanta limpieza",
             "nouns": "[necesidad, limpieza]"
         },
-        "mainVerb": "manchar",
+        "mainVerb": "concienciar",
         "claim": {
             "entities": "[]",
-            "text": "no manchar , ( ensuciar )",
-            "nouns": "[]"
+            "text": "concienciar educar a los ciudadanos , a ser civicos , no manchar , ( ensuciar )",
+            "nouns": "[ciudadanos, civicos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29361,11 +29361,11 @@
             "text": "es lo que molesta no",
             "nouns": "[]"
         },
-        "mainVerb": "controlar",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": ", como se hacia antes , musica y si el problema es el ruido , se puede controlar con aparatos que miden el nivel de decibelios",
-            "nouns": "[problema, ruido, aparatos, nivel, decibelios]"
+            "text": "Propongo dejar tocar en la zona centro , como se hacia antes , musica y si el problema es el ruido , se puede controlar con aparatos que miden el nivel de decibelios",
+            "nouns": "[zona, centro, problema, ruido, aparatos, nivel, decibelios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29496,11 +29496,11 @@
             "text": "cerrarlo , ponemos un parque para muchas",
             "nouns": "[parque]"
         },
-        "mainVerb": "teniendo",
+        "mainVerb": "Falta",
         "claim": {
             "entities": "[]",
-            "text": "entonces teniendo lago grande",
-            "nouns": "[lago]"
+            "text": "Falta el mar en Madrid , entonces teniendo lago grande",
+            "nouns": "[mar, lago]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -29739,11 +29739,11 @@
             "text": "no es zona de parquimetro",
             "nouns": "[zona, parquimetro]"
         },
-        "mainVerb": "aprovecha",
+        "mainVerb": "Aparcar",
         "claim": {
-            "entities": "[]",
-            "text": "todo el mundo se aprovecha",
-            "nouns": "[mundo]"
+            "entities": "[Islas Cies, Fermin Caballero]",
+            "text": "Aparcar en las calles Fermin Caballero e Islas Cies es imposible , todo el mundo se aprovecha",
+            "nouns": "[calles, mundo]"
         },
         "majorClaim": {
             "entities": "[Islas Cies, Fermin Caballero]",
@@ -30012,8 +30012,8 @@
         "mainVerb": "aparquemos",
         "claim": {
             "entities": "[]",
-            "text": "que aparquemos los residentes del barrio de Tetuan",
-            "nouns": "[residentes, barrio]"
+            "text": "Cada vez hay menos sitio para que aparquemos los residentes del barrio de Tetuan",
+            "nouns": "[vez, sitio, residentes, barrio]"
         },
         "majorClaim": {
             "entities": "[SER, Valdeacederas]",
@@ -30090,11 +30090,11 @@
             "text": "saben que no existe sancion",
             "nouns": "[sancion]"
         },
-        "mainVerb": "respetan",
+        "mainVerb": "Sancionar",
         "claim": {
             "entities": "[]",
-            "text": "que no respetan las plazas de discacitados",
-            "nouns": "[plazas, discacitados]"
+            "text": "Sancionar a aquellas personas que no respetan las plazas de discacitados",
+            "nouns": "[personas, plazas, discacitados]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -30147,7 +30147,7 @@
         "mainVerb": "cumpla",
         "claim": {
             "entities": "[Pan Bendito]",
-            "text": "el personal de limpieza , jardineria y policia municipal cumpla tambien con su deber para con los habitantes de Pan Bendito",
+            "text": "que el personal de limpieza , jardineria y policia municipal cumpla tambien con su deber para con los habitantes de Pan Bendito",
             "nouns": "[personal, limpieza, policia, tambien, deber, habitantes]"
         },
         "majorClaim": {
@@ -30225,11 +30225,11 @@
             "text": "no se respeta",
             "nouns": "[]"
         },
-        "mainVerb": "aprox",
+        "mainVerb": "expresa",
         "claim": {
             "entities": "[]",
-            "text": ", aprox 80 dependiendo del tipo de vehiculo",
-            "nouns": "[tipo, vehiculo]"
+            "text": "La normativa expresa que no se pueden sobrepasar ciertos decibelios para los vehiculos de motor , aprox 80 dependiendo del tipo de vehiculo",
+            "nouns": "[normativa, decibelios, vehiculos, motor, tipo, vehiculo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -30252,10 +30252,10 @@
             "text": "hay muchos colectivos diferentes en el barrio",
             "nouns": "[colectivos, barrio]"
         },
-        "mainVerb": "enviar",
+        "mainVerb": "Seria",
         "claim": {
             "entities": "[]",
-            "text": "enviar agentes sociales o publicidad para educar en la convivencia",
+            "text": "Seria posible enviar agentes sociales o publicidad para educar en la convivencia",
             "nouns": "[agentes, publicidad, convivencia]"
         },
         "majorClaim": {
@@ -30306,10 +30306,10 @@
             "text": "paga igual de comunidad",
             "nouns": "[comunidad]"
         },
-        "mainVerb": "tengan",
+        "mainVerb": "Evitar",
         "claim": {
             "entities": "[]",
-            "text": "que viviendas vacias por larga temporada tengan la calefaccion central encendida",
+            "text": "Evitar que viviendas vacias por larga temporada tengan la calefaccion central encendida",
             "nouns": "[viviendas, temporada, calefaccion]"
         },
         "majorClaim": {
@@ -30333,11 +30333,11 @@
             "text": "al poco de instalarlos desaparece",
             "nouns": "[instalarlos]"
         },
-        "mainVerb": "roban",
+        "mainVerb": "puesto",
         "claim": {
             "entities": "[]",
-            "text": "que los roban",
-            "nouns": "[]"
+            "text": "Se han puesto espejos para mejorar la visibilidad pero no ayudan y parece que los roban",
+            "nouns": "[espejos, visibilidad]"
         },
         "majorClaim": {
             "entities": "[Arzobispo Morcillo]",
@@ -30360,10 +30360,10 @@
             "text": "divide el barrio en dos",
             "nouns": "[barrio]"
         },
-        "mainVerb": "soterrara",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[Mendez Alvaro]",
-            "text": "que se soterrara la via de la red de ceramicas que pasa por Mendez Alvaro y la avenida del planetario",
+            "text": "Me gustaria que se soterrara la via de la red de ceramicas que pasa por Mendez Alvaro y la avenida del planetario",
             "nouns": "[via, red, ceramicas, avenida, planetario]"
         },
         "majorClaim": {
@@ -30387,10 +30387,10 @@
             "text": "no es un estamento elegido democraticamente ni tampoco presenta una labor social de gran utilidad",
             "nouns": "[estamento, labor, utilidad]"
         },
-        "mainVerb": "manejar",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[Iglesia]",
-            "text": "en pleno siglo XXI la Iglesia no puede manejar datos privados de los madrilenos",
+            "text": "Creo que en pleno siglo XXI la Iglesia no puede manejar datos privados de los madrilenos",
             "nouns": "[siglo, XXI, datos, madrilenos]"
         },
         "majorClaim": {
@@ -30417,8 +30417,8 @@
         "mainVerb": "castigando",
         "claim": {
             "entities": "[]",
-            "text": "se esta castigando duramente al pequeno comercio",
-            "nouns": "[pequeno, comercio]"
+            "text": "Debido a la apertura en la comunidad de Madrid de los comercios en domingos y festivos , se esta castigando duramente al pequeno comercio",
+            "nouns": "[apertura, comunidad, comercios, domingos, pequeno, comercio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -30576,11 +30576,11 @@
             "text": "esta lleno de cuestas",
             "nouns": "[lleno, cuestas]"
         },
-        "mainVerb": "vendria",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[]",
-            "text": "que nos vendria bien",
-            "nouns": "[]"
+            "text": "Creo que es de las pocas zonas cercanas al centro de Madrid que carece de una parada de BiciMad , yo soy vecino de la zona y creo que nos vendria bien",
+            "nouns": "[zonas, centro, parada, zona]"
         },
         "majorClaim": {
             "entities": "[Villa]",
@@ -31171,8 +31171,8 @@
         "mainVerb": "desplazarse",
         "claim": {
             "entities": "[]",
-            "text": ", que podria desplazarse en bicicleta si hubiera estacion de BiciMad",
-            "nouns": "[bicicleta]"
+            "text": "Es una zona de gran afluencia juvenil y deportista , que podria desplazarse en bicicleta si hubiera estacion de BiciMad",
+            "nouns": "[zona, afluencia, deportista, bicicleta]"
         },
         "majorClaim": {
             "entities": "[Paque Martin Luther King, Polideportivo Adelfas]",
@@ -31249,11 +31249,11 @@
             "text": "en la espera se generan basuras y colillas",
             "nouns": "[espera, basuras, colillas]"
         },
-        "mainVerb": "aprovecho",
+        "mainVerb": "entiendo",
         "claim": {
             "entities": "[]",
-            "text": "no se aprovecho para incluir en ellas una papelera / cenicero",
-            "nouns": "[papelera, cenicero]"
+            "text": "No entiendo como al cambiar hace un ano todas las marquesinas de paradas de bus , no se aprovecho para incluir en ellas una papelera / cenicero",
+            "nouns": "[ano, marquesinas, paradas, bus, papelera, cenicero]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -31276,11 +31276,11 @@
             "text": "empleen mucho dinero",
             "nouns": "[dinero]"
         },
-        "mainVerb": "asi",
+        "mainVerb": "pone",
         "claim": {
             "entities": "[]",
-            "text": "asi nunca estara Madrid limpio",
-            "nouns": "[]"
+            "text": "Si ni se pone una pequena multa , 1 euro , la gente deja la basura donde quiere y asi nunca estara Madrid limpio",
+            "nouns": "[multa, euro, gente, basura]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -31329,11 +31329,11 @@
             "text": "recuerda bastante a",
             "nouns": "[]"
         },
-        "mainVerb": "cambiase",
+        "mainVerb": "gustaria",
         "claim": {
-            "entities": "[PP]",
-            "text": "que nuestro ayuntamiento cambiase el color PP de los autobuses asi como de nuestro emblema",
-            "nouns": "[ayuntamiento, color, autobuses, emblema]"
+            "entities": "[PP, Soy Angel, EMT]",
+            "text": "Soy Angel conductor de la EMT y me gustaria que nuestro ayuntamiento cambiase el color PP de los autobuses asi como de nuestro emblema",
+            "nouns": "[conductor, ayuntamiento, color, autobuses, emblema]"
         },
         "majorClaim": {
             "entities": "[EMT]",
@@ -31409,10 +31409,10 @@
             "text": "esta en peligro de extincion",
             "nouns": "[peligro, extincion]"
         },
-        "mainVerb": "existieran",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que existieran talleres escuela de tapiceria artesana",
+            "text": "me gustaria que existieran talleres escuela de tapiceria artesana",
             "nouns": "[talleres, escuela, tapiceria]"
         },
         "majorClaim": {
@@ -31598,10 +31598,10 @@
             "text": "mucha gente no la conoce",
             "nouns": "[gente]"
         },
-        "mainVerb": "relanzar",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[Decide]",
-            "text": "que se deberia relanzar la campana de Madrid Decide",
+            "text": "Creo que se deberia relanzar la campana de Madrid Decide",
             "nouns": "[campana]"
         },
         "majorClaim": {
@@ -31705,11 +31705,11 @@
             "text": "para ir de un extremo a otro de la ciudad , hay que ir hasta Cibeles obligatoriamente",
             "nouns": "[extremo, ciudad]"
         },
-        "mainVerb": "circular",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": ", que tenga el mismo itinerario que el circular diurno",
-            "nouns": "[itinerario, circular]"
+            "text": "Propongo la idea de crear un bus nocturno circular , que tenga el mismo itinerario que el circular diurno",
+            "nouns": "[idea, bus, itinerario, circular]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -31759,10 +31759,10 @@
             "text": "es inhumano",
             "nouns": "[]"
         },
-        "mainVerb": "limpiasen",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que al menos limpiasen la estacion",
+            "text": "Me gustaria que al menos limpiasen la estacion",
             "nouns": "[estacion]"
         },
         "majorClaim": {
@@ -31921,11 +31921,11 @@
             "text": "no esten asociados en el imaginario popular",
             "nouns": "[asociados]"
         },
-        "mainVerb": "unan",
+        "mainVerb": "trata",
         "claim": {
             "entities": "[]",
-            "text": ", que unan zonas o barrios cercanos",
-            "nouns": "[zonas, barrios]"
+            "text": "Se trata de crear una red de paseos bonitos , interesantes y accesibles a todos , que unan zonas o barrios cercanos",
+            "nouns": "[red, paseos, zonas, barrios]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -31975,11 +31975,11 @@
             "text": "quitan plazas y son inoperantes e incomodos",
             "nouns": "[plazas, plazas]"
         },
-        "mainVerb": "sustituir",
+        "mainVerb": "Crear",
         "claim": {
             "entities": "[]",
-            "text": "sustituir los contenedores de basuras",
-            "nouns": "[contenedores, basuras]"
+            "text": "Crear plazas de aparcamiento y sustituir los contenedores de basuras",
+            "nouns": "[plazas, aparcamiento, contenedores, basuras, plazas]"
         },
         "majorClaim": {
             "entities": "[Poblado Dirigido de Orcasitas]",
@@ -32032,8 +32032,8 @@
         "mainVerb": "usar",
         "claim": {
             "entities": "[]",
-            "text": "usar el vehiculo privado",
-            "nouns": "[vehiculo]"
+            "text": "A veces es necesario usar el vehiculo privado",
+            "nouns": "[veces, vehiculo]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32083,11 +32083,11 @@
             "text": "se colocaron frente a los arboles",
             "nouns": "[frente, arboles]"
         },
-        "mainVerb": "estan",
+        "mainVerb": "tiene",
         "claim": {
             "entities": "[]",
-            "text": "que en verano todos estan al sol",
-            "nouns": "[verano, sol]"
+            "text": "El parque de los tilos tiene muchisimos bancos para sentarse y descansar , pero resulta que en verano todos estan al sol",
+            "nouns": "[parque, tilos, bancos, sentarse, verano, sol]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32218,10 +32218,10 @@
             "text": "hay mucha inseguridad , robos y trapicheo y apenas hay coches",
             "nouns": "[inseguridad, robos, trapicheo, coches]"
         },
-        "mainVerb": "halla",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "halla mas policia municipal en arganzuela",
+            "text": "Propongo que halla mas policia municipal en arganzuela",
             "nouns": "[policia, arganzuela]"
         },
         "majorClaim": {
@@ -32460,10 +32460,10 @@
             "text": "hay mucha cosas que no funcionan debidamente",
             "nouns": "[cosas]"
         },
-        "mainVerb": "existiera",
+        "mainVerb": "Quisiera",
         "claim": {
             "entities": "[Lavapies]",
-            "text": "que existiera , un seguimiento de plagas de chinches , en Lavapies existen",
+            "text": "Quisiera que existiera , un seguimiento de plagas de chinches , en Lavapies existen",
             "nouns": "[seguimiento, plagas, chinches]"
         },
         "majorClaim": {
@@ -32541,11 +32541,11 @@
             "text": "el gobierno da ayudas a las empresas por contratar ciudadanos extranjeros",
             "nouns": "[ciudadanos, gobierno, ayudas, empresas, ciudadanos]"
         },
-        "mainVerb": "vulneran",
+        "mainVerb": "cuenten",
         "claim": {
             "entities": "[]",
-            "text": ", como se vulneran los derechos como ciudadanos de madrilenos y espanoles",
-            "nouns": "[derechos, ciudadanos, madrilenos, espanoles, ciudadanos]"
+            "text": "Estoy harto de ver y que me cuenten , como se vulneran los derechos como ciudadanos de madrilenos y espanoles",
+            "nouns": "[ver, derechos, ciudadanos, madrilenos, espanoles, ciudadanos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32624,8 +32624,8 @@
         "mainVerb": "hacer",
         "claim": {
             "entities": "[]",
-            "text": "no se puede hacer uso de la piscina ni salas",
-            "nouns": "[uso, piscina, salas]"
+            "text": "Debido a las jornadas laborales no se puede hacer uso de la piscina ni salas",
+            "nouns": "[jornadas, uso, piscina, salas, jornada]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32678,8 +32678,8 @@
         "mainVerb": "tenemos",
         "claim": {
             "entities": "[Villaverde, Junta Munipal]",
-            "text": "que no tenemos Junta Munipal de Villaverde",
-            "nouns": "[]"
+            "text": "Parque para perros que no tenemos Junta Munipal de Villaverde",
+            "nouns": "[perros]"
         },
         "majorClaim": {
             "entities": "[Junta Munipal Villaverde]",
@@ -32702,10 +32702,10 @@
             "text": "las papeleras con la afluencia de personas se llenan rapidamente",
             "nouns": "[papeleras, afluencia, personas]"
         },
-        "mainVerb": "poner",
+        "mainVerb": "Creo",
         "claim": {
             "entities": "[Plaza]",
-            "text": "poner un contenedor en la Plaza del dos de Mayo",
+            "text": "Creo que seria muy util poner un contenedor en la Plaza del dos de Mayo",
             "nouns": "[contenedor, Mayo]"
         },
         "majorClaim": {
@@ -32810,11 +32810,11 @@
             "text": "salen muy caras",
             "nouns": "[caras]"
         },
-        "mainVerb": "tienen",
+        "mainVerb": "pone",
         "claim": {
             "entities": "[]",
-            "text": ", ya que tampoco tienen dinero para pagarse unas cervezas en los locales",
-            "nouns": "[dinero, dinero, cervezas, locales]"
+            "text": "Las multas que pone el ayuntamiento de Madrid por beber en la calle son abusivas , deberian que pedirles otras cosas como trabajo sociales , ya que ellos no tienen dinero para pagarlas , las tienen que pagar los padres y algunos son lo que ganan en un mes , deberian de considerarlo , ya que tampoco tienen dinero para pagarse unas cervezas en los locales",
+            "nouns": "[multas, ayuntamiento, calle, pedirles, cosas, trabajo, dinero, pagarlas, padres, mes, considerarlo, dinero, cervezas, locales]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32865,8 +32865,8 @@
         },
         "mainVerb": "perder",
         "claim": {
-            "entities": "[]",
-            "text": "tan sucio podria perder muchos turistas",
+            "entities": "[Madrid]",
+            "text": "Siento Madrid tan sucio podria perder muchos turistas",
             "nouns": "[turistas]"
         },
         "majorClaim": {
@@ -32944,11 +32944,11 @@
             "text": "su altura algo superior a la calzada e inferior a la acera",
             "nouns": "[altura, calzada, acera]"
         },
-        "mainVerb": "manteniendo",
+        "mainVerb": "crear",
         "claim": {
             "entities": "[]",
-            "text": "manteniendo una separacion fisica",
-            "nouns": "[separacion]"
+            "text": "La idea es crear un carril bici que sea seguro tanto para los ciclistas como para los peatones , manteniendo una separacion fisica",
+            "nouns": "[idea, carril, bici, ciclistas, peatones, separacion]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -32974,8 +32974,8 @@
         "mainVerb": "existe",
         "claim": {
             "entities": "[]",
-            "text": "en esa zona no existe ninguno y hay un gran problema de aparcamiento para residentes",
-            "nouns": "[residentes, zona, problema, aparcamiento, residentes, zona]"
+            "text": "Creacion de un parking de residentes en la C / Belice o aledanos , en esa zona no existe ninguno y hay un gran problema de aparcamiento para residentes",
+            "nouns": "[parking, residentes, C, aledanos, zona, problema, aparcamiento, residentes, zona]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -33025,10 +33025,10 @@
             "text": "",
             "nouns": "[]"
         },
-        "mainVerb": "aplicar",
+        "mainVerb": "necesita",
         "claim": {
             "entities": "[]",
-            "text": "aplicar esta medida en comunidades de vecinos y negocios",
+            "text": "Se necesita urgentemente aplicar esta medida en comunidades de vecinos y negocios",
             "nouns": "[medida, comunidades, vecinos, negocios]"
         },
         "majorClaim": {
@@ -33052,11 +33052,11 @@
             "text": "algunas dan en la cabeza",
             "nouns": "[cabeza]"
         },
-        "mainVerb": "podar",
+        "mainVerb": "Deberian",
         "claim": {
             "entities": "[]",
-            "text": "podar un poco mas arriba",
-            "nouns": "[]"
+            "text": "Deberian podar los arboles como antano , con hacha , pero bueno como no hay remedio , por favor intentar podar las ramas bajas y podar un poco mas arriba",
+            "nouns": "[arboles, antano, hacha, remedio, favor, ramas]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -33079,10 +33079,10 @@
             "text": "en el barrio no hay y / o construir pistas de baloncesto para nin@s",
             "nouns": "[pista, baloncesto, barrio, pistas, baloncesto, nin@s]"
         },
-        "mainVerb": "poniendo",
+        "mainVerb": "Aprovechar",
         "claim": {
             "entities": "[]",
-            "text": "la pista de futbol poniendo canastas de baloncesto bajas",
+            "text": "Aprovechar mas la pista de futbol poniendo canastas de baloncesto bajas",
             "nouns": "[pista, futbol, canastas, baloncesto, baloncesto]"
         },
         "majorClaim": {
@@ -33186,11 +33186,11 @@
             "text": "llevan bolsitas xa disimular",
             "nouns": "[bolsitas]"
         },
-        "mainVerb": "pisar",
+        "mainVerb": "dando",
         "claim": {
-            "entities": "[]",
-            "text": "literalmente x las aceras para no pisar las cacas q sus amados amos no recogen",
-            "nouns": "[q, aceras, cacas, amos]"
+            "entities": "[Soria]",
+            "text": "Soria hay q ir dando saltos literalmente x las aceras para no pisar las cacas q sus amados amos no recogen",
+            "nouns": "[q, saltos, aceras, cacas, amos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -33240,10 +33240,10 @@
             "text": "es un barrio muy necesitado",
             "nouns": "[barrio, barrio]"
         },
-        "mainVerb": "crearan",
+        "mainVerb": "gustaria",
         "claim": {
             "entities": "[]",
-            "text": "que crearan un centro de dia en la zona de la avenida de la aviacion para todas las personas ancianas del barrio",
+            "text": "Me gustaria que crearan un centro de dia en la zona de la avenida de la aviacion para todas las personas ancianas del barrio",
             "nouns": "[centro, dia, zona, avenida, aviacion, personas, ancianas, barrio, barrio]"
         },
         "majorClaim": {
@@ -33267,11 +33267,11 @@
             "text": "de su nombre o su titular",
             "nouns": "[nombre, nombre, titular]"
         },
-        "mainVerb": "incluyan",
+        "mainVerb": "Poner",
         "claim": {
             "entities": "[]",
-            "text": "que estos rotulos incluyan alguna indicacion del",
-            "nouns": "[rotulos, indicacion]"
+            "text": "Poner carteles con el nombre de cada calle en todas las esquinas , cruces y acometidas de otras calles , y ademas que estos rotulos incluyan alguna indicacion del",
+            "nouns": "[carteles, nombre, calle, esquinas, cruces, acometidas, calles, ademas, rotulos, indicacion, nombre]"
         },
         "majorClaim": {
             "entities": "[Rotulacion]",
@@ -33428,11 +33428,11 @@
             "text": "no hay por donde cruzar",
             "nouns": "[]"
         },
-        "mainVerb": "tenemos",
+        "mainVerb": "usamos",
         "claim": {
             "entities": "[]",
-            "text": "tenemos que ir por la calzada con los coches",
-            "nouns": "[calzada, coches]"
+            "text": "Las personas que usamos silla de ruedas , tenemos que ir por la calzada con los coches",
+            "nouns": "[personas, silla, ruedas, calzada, coches]"
         },
         "majorClaim": {
             "entities": "[Entrevias]",
@@ -33511,8 +33511,8 @@
         },
         "mainVerb": "imposibilitan",
         "claim": {
-            "entities": "[]",
-            "text": "que imposibilitan el paso de los peatones",
+            "entities": "[Augusto Figueroa]",
+            "text": "Concretamente los situados en Augusto Figueroa 27 que imposibilitan el paso de los peatones",
             "nouns": "[paso, peatones]"
         },
         "majorClaim": {
@@ -33723,10 +33723,10 @@
             "text": "los vecinos que vivimos en la zona de enfrente de las cocheras de la emt tenemos el metro demasiado lejos y pocos autobuses",
             "nouns": "[vecinos, zona, enfrente, cocheras, emt, metro, autobuses]"
         },
-        "mainVerb": "amplie",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[Bicimad]",
-            "text": "que se amplie la red de Bicimad a andantes",
+            "text": "Propongo que se amplie la red de Bicimad a andantes",
             "nouns": "[red]"
         },
         "majorClaim": {
@@ -33806,9 +33806,9 @@
         },
         "mainVerb": "regulara",
         "claim": {
-            "entities": "[]",
-            "text": "que se regulara el aparcamiento",
-            "nouns": "[aparcamiento]"
+            "entities": "[JC]",
+            "text": "Soy usuario del parque JC y desearia que se regulara el aparcamiento",
+            "nouns": "[usuario, parque, aparcamiento]"
         },
         "majorClaim": {
             "entities": "[Juan Carlos 1]",
@@ -34073,10 +34073,10 @@
             "text": "no tenemos buena comunicacion de buhos si que hay 3 pero que pase por toda la calle Hermanos garcia noblejas no hay por favor apoyar",
             "nouns": "[comunicacion, buhos, calle, favor]"
         },
-        "mainVerb": "apoyara",
+        "mainVerb": "Quisiera",
         "claim": {
             "entities": "[]",
-            "text": "que se apoyara esta propuesta",
+            "text": "Quisiera que se apoyara esta propuesta",
             "nouns": "[propuesta]"
         },
         "majorClaim": {
@@ -34262,11 +34262,11 @@
             "text": "los sabados y domingos hay que que trabaja y se desplaza en esos dias",
             "nouns": "[domingos, sabados, domingos, dias]"
         },
-        "mainVerb": "volver",
+        "mainVerb": "Resuvolver",
         "claim": {
             "entities": "[]",
-            "text": "volver horario anterior",
-            "nouns": "[horario]"
+            "text": "Resuvolver a poner linea 83 domingos y festivos y volver horario anterior",
+            "nouns": "[linea, domingos, horario, domingos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -34316,11 +34316,11 @@
             "text": "no tenemos transporte para salir de Parque Co",
             "nouns": "[transporte, Co]"
         },
-        "mainVerb": "vemos",
+        "mainVerb": "tenemos",
         "claim": {
             "entities": "[]",
-            "text": "un horario de entrada de las 7 de la manana nos vemos obligados a rechazar dicho puesto",
-            "nouns": "[horario, entrada, manana, puesto]"
+            "text": "Las personas que tenemos que ir Madrid a trabajar y tenemos un horario de entrada de las 7 de la manana nos vemos obligados a rechazar dicho puesto",
+            "nouns": "[personas, horario, entrada, manana, puesto]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -34346,8 +34346,8 @@
         "mainVerb": "quedan",
         "claim": {
             "entities": "[]",
-            "text": "que se quedan sin transporte publico en sus zonas de residencia",
-            "nouns": "[transporte, zonas, residencia]"
+            "text": "Hay muchos usuarios que se quedan sin transporte publico en sus zonas de residencia",
+            "nouns": "[usuarios, transporte, zonas, residencia]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -34639,11 +34639,11 @@
             "text": "esta intransitable",
             "nouns": "[]"
         },
-        "mainVerb": "hace",
+        "mainVerb": "Arreglar",
         "claim": {
             "entities": "[]",
-            "text": "hace falta arreglar esos socabones y asfaltarla",
-            "nouns": "[socabones, falta, socabones, asfaltarla]"
+            "text": "Arreglar la calle Tenerife , esta llena de socabones , es muy peligroso andar por ella , hace falta arreglar esos socabones y asfaltarla",
+            "nouns": "[calle, socabones, falta, socabones, asfaltarla]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -34723,8 +34723,8 @@
         "mainVerb": "tienen",
         "claim": {
             "entities": "[]",
-            "text": "tienen que estar fuera del casco urbano",
-            "nouns": "[casco]"
+            "text": "Los huertos en los pueblos tienen que estar fuera del casco urbano",
+            "nouns": "[huertos, pueblos, casco]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -35312,11 +35312,11 @@
             "text": "son vehiculos ecologicos",
             "nouns": "[vehiculos, vehiculos]"
         },
-        "mainVerb": "aparcar",
+        "mainVerb": "entrar",
         "claim": {
             "entities": "[]",
-            "text": "aparcar",
-            "nouns": "[]"
+            "text": "los vehiculos hibridos deben entrar en el Madrid con contaminacion alta y aparcar",
+            "nouns": "[vehiculos, contaminacion, vehiculos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -35689,11 +35689,11 @@
             "text": "la cercania con centros comerciales",
             "nouns": "[cercania, centros]"
         },
-        "mainVerb": "circulan",
+        "mainVerb": "mejorar",
         "claim": {
             "entities": "[]",
-            "text": "que circulan por ahi",
-            "nouns": "[ahi]"
+            "text": "Es necesario mejorar este cruce ya que se formas colas enormes debido al gran numero de vehiculos que circulan por ahi",
+            "nouns": "[cruce, colas, numero, vehiculos, ahi]"
         },
         "majorClaim": {
             "entities": "[Campezo, Deyanira]",
@@ -35797,10 +35797,10 @@
             "text": "es un caos tardan muchisimo de un autobus a otro sobre todo la linea 34 incluso aveces llevan tal descontrol que vienen tres seguidos",
             "nouns": "[caos, autobus, linea, descontrol]"
         },
-        "mainVerb": "mejoren",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que se mejoren estas lineas de autobuses",
+            "text": "Propongo que se mejoren estas lineas de autobuses",
             "nouns": "[lineas, autobuses, autobus, linea]"
         },
         "majorClaim": {
@@ -36122,9 +36122,9 @@
         },
         "mainVerb": "propone",
         "claim": {
-            "entities": "[]",
-            "text": "propone que la suscripcion al servicio sea gratuita",
-            "nouns": "[servicio, suscripcion, servicio]"
+            "entities": "[BICIMAD]",
+            "text": "Debido al pesimo servicio que ha prestado la empresa BICIMAD , se propone que la suscripcion al servicio sea gratuita",
+            "nouns": "[pesimo, servicio, empresa, suscripcion, servicio]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -36150,8 +36150,8 @@
         "mainVerb": "podria",
         "claim": {
             "entities": "[Europolis de las Rozas, Rozas]",
-            "text": "cuando podria tambien parar en el poligono Europolis de las Rozas",
-            "nouns": "[tambien, poligono]"
+            "text": "El 661 para en el Burgo centro de las Rozas cuando podria tambien parar en el poligono Europolis de las Rozas",
+            "nouns": "[centro, tambien, poligono]"
         },
         "majorClaim": {
             "entities": "[del Escorial]",
@@ -36174,11 +36174,11 @@
             "text": "no dispones de metro y renfe",
             "nouns": "[metro, renfe]"
         },
-        "mainVerb": "asi",
+        "mainVerb": "ampliar",
         "claim": {
-            "entities": "[]",
-            "text": "asi mayor fluided al barrio",
-            "nouns": "[fluided, barrio]"
+            "entities": "[Los Rosales]",
+            "text": "Seria conveniente y necesario ampliar la linea 123 hasta Los Rosales junto al bus 85 y asi mayor fluided al barrio",
+            "nouns": "[linea, bus, fluided, barrio]"
         },
         "majorClaim": {
             "entities": "[Butarque-Los Rosales]",
@@ -36255,11 +36255,11 @@
             "text": "no proponemos una auditoria a los gobiernos salientes , de forma que sea del color que sea , se pueda saber si nos van robado o no",
             "nouns": "[auditoria, gobiernos, forma, color]"
         },
-        "mainVerb": "decia",
+        "mainVerb": "Hablando",
         "claim": {
-            "entities": "[]",
-            "text": "me decia",
-            "nouns": "[]"
+            "entities": "[Asun]",
+            "text": "Hablando con mi amiga Asun me decia",
+            "nouns": "[amiga]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -36312,7 +36312,7 @@
         "mainVerb": "construya",
         "claim": {
             "entities": "[]",
-            "text": "que en estas parcelas se construya una escuela municipal de musica y un polideportivo",
+            "text": "Necesario que en estas parcelas se construya una escuela municipal de musica y un polideportivo",
             "nouns": "[parcelas, escuela, musica, polideportivo]"
         },
         "majorClaim": {
@@ -36420,8 +36420,8 @@
         "mainVerb": "respeta",
         "claim": {
             "entities": "[]",
-            "text": "no se respeta en muchos ambitos",
-            "nouns": "[ambitos]"
+            "text": "La religion catolica , mayoritaria en Espana , no se respeta en muchos ambitos",
+            "nouns": "[religion, ambitos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -36446,9 +36446,9 @@
         },
         "mainVerb": "disuadir",
         "claim": {
-            "entities": "[]",
-            "text": ": disuadir a conductores de ir a gran velocidad",
-            "nouns": "[conductores, velocidad]"
+            "entities": "[Moratalaz, Ciudad Encantada]",
+            "text": "Instalacion de badenes en C / Jose Bergamin y de la Ciudad Encantada ( Moratalaz ) Objeto : disuadir a conductores de ir a gran velocidad",
+            "nouns": "[badenes, C, conductores, velocidad]"
         },
         "majorClaim": {
             "entities": "[Ciudad Encantada, Calles Jose Bergamin, Badenes]",
@@ -36606,11 +36606,11 @@
             "text": "lleva 6 meses sin retirar los kilos de basura acumulados por indigente",
             "nouns": "[n, meses, kilos, basura, indigente]"
         },
-        "mainVerb": "proceda",
+        "mainVerb": "Solicito",
         "claim": {
             "entities": "[Andres Borrego]",
-            "text": "que el servicio de limpieza proceda a la limpieza de la calle Andres Borrego n 19",
-            "nouns": "[servicio, limpieza, limpieza, calle, n]"
+            "text": "Solicito el apoyo de la ciudadania para que el servicio de limpieza proceda a la limpieza de la calle Andres Borrego n 19",
+            "nouns": "[apoyo, ciudadania, servicio, limpieza, limpieza, calle, n]"
         },
         "majorClaim": {
             "entities": "[Andres Borrego]",
@@ -36636,8 +36636,8 @@
         "mainVerb": "pedir",
         "claim": {
             "entities": "[SER]",
-            "text": "pedir ayuda para los trabajadores del SER",
-            "nouns": "[ayuda, trabajadores]"
+            "text": "Esta propuesta es para pedir ayuda para los trabajadores del SER",
+            "nouns": "[propuesta, ayuda, trabajadores, propuesta]"
         },
         "majorClaim": {
             "entities": "[SER]",
@@ -36741,11 +36741,11 @@
             "text": "aun hay mucha gente que no lo hace , con medidas positivas e incentivadoras",
             "nouns": "[gente, medidas]"
         },
-        "mainVerb": "reciclemos",
+        "mainVerb": "Propongo",
         "claim": {
             "entities": "[]",
-            "text": "que reciclemos adecuadamente los residuos",
-            "nouns": "[residuos]"
+            "text": "Propongo reforzar la concienciacion de todos los madrilenos para que reciclemos adecuadamente los residuos",
+            "nouns": "[concienciacion, madrilenos, residuos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -36930,10 +36930,10 @@
             "text": "se han anadido semaforos que lo que hacen es justo lo contrario",
             "nouns": "[semaforos, contrario]"
         },
-        "mainVerb": "rotondas",
+        "mainVerb": "Existen",
         "claim": {
             "entities": "[PAUS]",
-            "text": "sobre todo en los nuevos PAUS rotondas construidas para facilitar la fluidez del trafico",
+            "text": "Existen en Madrid sobre todo en los nuevos PAUS rotondas construidas para facilitar la fluidez del trafico",
             "nouns": "[fluidez, trafico]"
         },
         "majorClaim": {
@@ -36960,8 +36960,8 @@
         "mainVerb": "tenemos",
         "claim": {
             "entities": "[]",
-            "text": "no tenemos donde tirarlos",
-            "nouns": "[tirarlos]"
+            "text": "Cuando tenemos residuos de tamano mayor , no tenemos donde tirarlos",
+            "nouns": "[residuos, tamano, tirarlos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -37014,8 +37014,8 @@
         "mainVerb": "forman",
         "claim": {
             "entities": "[]",
-            "text": "se forman atascos interminables solamente",
-            "nouns": "[atascos]"
+            "text": "El semaforo de mitad del puente de Segovia esta mal soncronizado y se forman atascos interminables solamente",
+            "nouns": "[semaforo, mitad, puente, mal, atascos]"
         },
         "majorClaim": {
             "entities": "[]",
@@ -37122,8 +37122,8 @@
         "mainVerb": "reunen",
         "claim": {
             "entities": "[]",
-            "text": "donde se reunen los jovenes los fines de semana",
-            "nouns": "[jovenes, fines, semana]"
+            "text": "Colocacion de papeleras mas grandes , sobre todo en las zonas mas turisticas y donde se reunen los jovenes los fines de semana",
+            "nouns": "[papeleras, zonas, jovenes, fines, semana]"
         },
         "majorClaim": {
             "entities": "[]",
