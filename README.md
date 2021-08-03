@@ -14,7 +14,7 @@ This project uses the two-level taxonomy of argument relations and the set of li
 - Updated on Jul 30, 2021
 
 ## License
-This project is licensed under the terms of the <a href="https://github.com/ansegura7/argu-based-recsys/blob/main/LICENSE">Apache License 2.0</a>.
+This project is licensed under the terms of the <a href="https://github.com/ansegura7/arg-miner/blob/main/LICENSE">Apache License 2.0</a>.
 
 ## Acknowledgements
 This work was supported by the Spanish Ministry of Science and Innovation (PID2019-108965GB-I00).
