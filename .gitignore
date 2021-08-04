@@ -1,5 +1,6 @@
-code/ArgumentMiner/nbproject/*
+code/ArgumentMiner/build/classes/*
 code/ArgumentMiner/build/*
+code/ArgumentMiner/nbproject/*
 code/ArgumentMiner/dist/*
 *.class
 *.props
