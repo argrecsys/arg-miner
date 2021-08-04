@@ -8,10 +8,11 @@ This repository contains a simple but efficient implementation of an argument-ba
 ## Resources
 This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="https://github.com/argrecsys/connectors" target="_blank">argrecsys/connectors</a> repository.
 
-## Author
-- Created by Andrés Segura-Tinoco
-- Created on Apr 10, 2021
-- Updated on Aug 04, 2021
+## Authors
+Created on Apr 10, 2021  
+Created by:
+- <a href="https://github.com/ansegura7" target="_blank">Andrés Segura-Tinoco</a>
+- Created by <a href="http://arantxa.ii.uam.es/~cantador/" target="_blank">Iv&aacute;n Cantador</a>
 
 ## License
 This project is licensed under the terms of the <a href="https://github.com/ansegura7/arg-miner/blob/main/LICENSE">Apache License 2.0</a>.
