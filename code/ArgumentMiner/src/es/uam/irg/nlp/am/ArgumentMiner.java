@@ -195,7 +195,7 @@ public class ArgumentMiner {
             }
             
             // Save JSON files
-            result = IOManager.saveStringToJson(argList.toString(4), Constants.OUTPUT_FILEPATH);
+            result = IOManager.saveStringToJson(argList.toString(4), Constants.ARGUMENTS_FILEPATH);
         }
         
         return result;
