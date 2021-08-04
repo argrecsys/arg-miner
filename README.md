@@ -12,7 +12,7 @@ This project uses the two-level taxonomy of argument relations and the set of li
 Created on Apr 10, 2021  
 Created by:
 - <a href="https://github.com/ansegura7" target="_blank">Andrés Segura-Tinoco</a>
-- Created by <a href="http://arantxa.ii.uam.es/~cantador/" target="_blank">Iv&aacute;n Cantador</a>
+- <a href="http://arantxa.ii.uam.es/~cantador/" target="_blank">Iv&aacute;n Cantador</a>
 
 ## License
 This project is licensed under the terms of the <a href="https://github.com/ansegura7/arg-miner/blob/main/LICENSE">Apache License 2.0</a>.
