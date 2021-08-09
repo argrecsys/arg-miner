@@ -7,6 +7,7 @@ package es.uam.irg.io;
 
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.nlp.am.Constants;
+import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,6 +16,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -84,10 +86,25 @@ public class IOManager implements Constants {
             }
         }
         
-        if (verbose) {
-            System.out.println(">> List of argument linkers: " + linkers.getNLinkers());
-            for (int i = 0; i < linkers.getNLinkers(); i++) {
-                System.out.format("Linker -> %s \n", linkers.getLinker(i).getString());
+        if (verbose) {            
+            System.out.println(">> Taxonomy:");
+            Map<String, Map<String, List<ArgumentLinker>>> taxonomy = linkers.getTaxonomy();
+            taxonomy.entrySet().forEach(entry -> {
+                System.out.println(entry.getKey());
+                for (Map.Entry<String, List<ArgumentLinker>> subentry : entry.getValue().entrySet()) {
+                    System.out.println("  " + subentry.getKey());
+                    List<ArgumentLinker> items = subentry.getValue();
+
+                    for (int i = 0; i < items.size(); i++) {
+                        System.out.println("    " + items.get(i).linker);
+                    }
+                }
+            });
+            
+            List<ArgumentLinker> lexicon = linkers.getLexicon(true);
+            System.out.println(">> Lexicon: " + lexicon.size());
+            for (int i = 0; i < lexicon.size(); i++) {
+                System.out.format("Linker -> %s \n", lexicon.get(i).getString());
             }
         }
         

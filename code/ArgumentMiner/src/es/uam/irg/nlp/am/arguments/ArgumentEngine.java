@@ -32,7 +32,7 @@ public class ArgumentEngine implements Constants {
     
     // Class members
     private String language;
-    private ArgumentLinkerManager lnkManager;
+    private List<ArgumentLinker> lexicon;
     private PrintWriter out;
     private Properties props;
     
@@ -40,11 +40,11 @@ public class ArgumentEngine implements Constants {
      * Class constructor.
      * 
      * @param lang
-     * @param lnkManager 
+     * @param lnkManager
      */
     public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager) {
         this.language = lang;
-        this.lnkManager = lnkManager;
+        this.lexicon = lnkManager.getLexicon(false);
         this.out = new PrintWriter(System.out);
         setProperties();
     }
@@ -312,8 +312,8 @@ public class ArgumentEngine implements Constants {
     private ArgumentLinker getSentenceLinker(String sentenceText) {
         ArgumentLinker linker = null;
         
-        for (int i = 0; i < lnkManager.getNLinkers(); i++) {
-            linker = lnkManager.getLinker(i);
+        for (int i = 0; i < this.lexicon.size(); i++) {
+            linker = lexicon.get(i);
             if (sentenceText.contains(linker.linker)) {
                 return linker;
             }

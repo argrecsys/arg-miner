@@ -5,22 +5,26 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author ansegura
  */
 public class ArgumentLinkerManager {
-
-    private List<ArgumentLinker> linkers;
+    
+    private Map<String, Map<String, List<ArgumentLinker>>> taxonomy;
 
     /**
      * Class constructor.
      */
     public ArgumentLinkerManager() {
-        this.linkers = new LinkedList<>();
+        this.taxonomy = new HashMap<>();
     }
 
     /**
@@ -29,7 +33,26 @@ public class ArgumentLinkerManager {
      * @param linker
      */
     public void addLinker(ArgumentLinker linker) {
-        this.linkers.add(linker);
+        
+        Map<String, List<ArgumentLinker>> subcategory;
+        if (this.taxonomy.containsKey(linker.category)) {
+            subcategory = this.taxonomy.get(linker.category);
+        }
+        else {
+            subcategory = new HashMap<>();
+            this.taxonomy.put(linker.category, subcategory);
+        }
+        
+        List<ArgumentLinker> linkers;
+        if (subcategory.containsKey(linker.subCategory)) {
+            linkers = subcategory.get(linker.subCategory);
+        }
+        else {
+            linkers = new ArrayList<>();
+            subcategory.put(linker.subCategory, linkers);
+        }
+        
+        linkers.add(linker);
     }
 
     /**
@@ -44,48 +67,44 @@ public class ArgumentLinkerManager {
         ArgumentLinker linker = new ArgumentLinker(category, subCategory, relationType, linkerText);
         this.addLinker(linker);
     }
-
+    
     /**
-     * Search linker by index.
-     *
-     * @param index
-     * @return
+     * 
+     * @return 
      */
-    public ArgumentLinker getLinker(int index) {
-        ArgumentLinker linker = null;
-
-        if (index >= 0 && index < this.linkers.size()) {
-            linker = this.linkers.get(index);
-        }
-
-        return linker;
-    }
-
-    /**
-     * Search linker by name.
-     *
-     * @param linkerText
-     * @return
-     */
-    public ArgumentLinker getLinker(String linkerText) {
-        ArgumentLinker linker = null;
-
-        for (int i = 0; i < this.linkers.size() && linker == null; i++) {
-            ArgumentLinker currLinker = this.linkers.get(i);
-            if (linkerText.equals(currLinker.linker)) {
-                linker = currLinker;
+    public List<ArgumentLinker> getLexicon(boolean sorted) {
+        List<ArgumentLinker> lexicon = new ArrayList<>();
+        
+        this.taxonomy.entrySet().forEach(entry -> {
+            for (Map.Entry<String, List<ArgumentLinker>> subentry : entry.getValue().entrySet()) {
+                List<ArgumentLinker> items = subentry.getValue();
+                
+                for (int i = 0; i < items.size(); i++) {
+                    ArgumentLinker currLinker = items.get(i);
+                    lexicon.add(currLinker);
+                }
             }
+        });
+        
+        // Sort list
+        if (sorted) {
+            Collections.sort(lexicon, new Comparator<ArgumentLinker>() {
+                @Override
+                public int compare(ArgumentLinker o1, ArgumentLinker o2) {
+                    return o2.linker.length() - o1.linker.length();
+                }
+            });
         }
-
-        return linker;
+        
+        return lexicon;
     }
-
+    
     /**
      *
      * @return
      */
-    public int getNLinkers() {
-        return this.linkers.size();
+    public Map<String, Map<String, List<ArgumentLinker>>> getTaxonomy() {
+        return this.taxonomy;
     }
     
     /**
@@ -93,7 +112,7 @@ public class ArgumentLinkerManager {
      * @return 
      */
     public boolean isEmpty() {
-        return (getNLinkers() == 0);
+        return (this.taxonomy.isEmpty());
     }
     
 }

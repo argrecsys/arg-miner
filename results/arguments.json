@@ -5068,6 +5068,33 @@
         "approach": "A1 -> C+L+P",
         "proposalID": 24598
     },
+    "21764-1": {
+        "sentence": "Elegir otro hospital aunque no te pertenece por opciones quirurgicas y pero puedas acceder como hospital de referencia sin llegar ser el que pertenece de tu zona",
+        "linker": {
+            "relationType": "attack",
+            "linker": "aunque",
+            "subCategory": "CONCESSION",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "no te pertenece por opciones quirurgicas y pero puedas acceder como hospital de referencia sin llegar ser el que pertenece de tu zona",
+            "nouns": "[hospital, opciones, hospital, referencia, zona]"
+        },
+        "mainVerb": "Elegir",
+        "claim": {
+            "entities": "[]",
+            "text": "Elegir otro hospital",
+            "nouns": "[hospital, hospital]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "elegir hospital aunque no sea al que pertenece",
+            "nouns": "[hospital]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 21764
+    },
     "10394-1": {
         "sentence": "La calle Mendez Alvaro debe hacerse de doble sentido para los ciclistas desde la Estacion de Atocha, pues obliga a un peligroso rodeo por las calles Santa Maria de la Cabeza o Paseo Delicias.",
         "linker": {
@@ -11629,7 +11656,7 @@
         },
         "mainVerb": "mejorar",
         "claim": {
-            "entities": "[Fernandez Ladreda, La Cabeza, Rio, Santa Maria]",
+            "entities": "[Fernandez Ladreda, La Cabeza, Rio]",
             "text": "Mi propuesta seria mejorar el paseo de Santa Maria de La Cabeza desde plaza de Fernandez Ladreda hasta Madrid Rio",
             "nouns": "[propuesta, paseo]"
         },
@@ -25873,6 +25900,33 @@
         "approach": "A2 -> C+(L+P)",
         "proposalID": 10407
     },
+    "10780-1": {
+        "sentence": "A todos nos toca por naturaleza, aunque tambien por otros motivos no deseados, pero lo cierto es que a nuestras familias, amigos, companeros, vecinos,etc, etc. tenemos que llorarles.",
+        "linker": {
+            "relationType": "attack",
+            "linker": "aunque",
+            "subCategory": "CONCESSION",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "tambien por otros motivos no deseados , pero lo cierto es que a nuestras familias , amigos , companeros , vecinos , etc , etc. tenemos que llorarles",
+            "nouns": "[tambien, motivos, familias, amigos, companeros, vecinos, etc., llorarles]"
+        },
+        "mainVerb": "toca",
+        "claim": {
+            "entities": "[]",
+            "text": "A todos nos toca por naturaleza",
+            "nouns": "[naturaleza]"
+        },
+        "majorClaim": {
+            "entities": "[]",
+            "text": "todos tenemos derecho a llorar a nuestro seres queridos",
+            "nouns": "[derecho, seres]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 10780
+    },
     "15078-1": {
         "sentence": "Actualmente existen muchas lineas de autobuses, pero creo que se deberia dar una vuelta a la organizacion y la distribucion de las mismas.",
         "linker": {
@@ -27323,6 +27377,33 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 17923
+    },
+    "24455-1": {
+        "sentence": "Se que existen puntos donde se puede pillar la wifi gratis del Ayuntamiento, pero hay que estar atenta en el propio aparato, y aunque te ponga que estas conectada a esa red, en la practica no",
+        "linker": {
+            "relationType": "attack",
+            "linker": "aunque",
+            "subCategory": "CONCESSION",
+            "category": "CONTRAST"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "te ponga que estas conectada a esa red , en la practica no",
+            "nouns": "[red]"
+        },
+        "mainVerb": "existen",
+        "claim": {
+            "entities": "[wifi, Ayuntamiento]",
+            "text": "Se que existen puntos donde se puede pillar la wifi gratis del Ayuntamiento , pero hay que estar atenta en el propio aparato",
+            "nouns": "[puntos, wifi, aparato]"
+        },
+        "majorClaim": {
+            "entities": "[Wifi]",
+            "text": "Wifi y puntos de recarga moviles gratuitos",
+            "nouns": "[puntos, recarga]"
+        },
+        "approach": "A2 -> C+(L+P)",
+        "proposalID": 24455
     },
     "26204-1": {
         "sentence": "La no finalizacion de esta calle en la rotonda cercana acarrea un atasco monumental debido a la gran vuelta que hay que dar",

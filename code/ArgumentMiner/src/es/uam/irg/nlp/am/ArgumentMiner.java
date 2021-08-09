@@ -153,7 +153,7 @@ public class ArgumentMiner {
             }
             
             //proposals = dbManager.selectCustomProposals(topN);
-            proposals = dbManager.selectProposals(topN, this.lnkManager);
+            proposals = dbManager.selectProposals(topN, this.lnkManager.getLexicon(false));
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);

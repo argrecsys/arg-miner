@@ -5,6 +5,7 @@ import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.decidemadrid.entities.DMComment;
 import es.uam.irg.decidemadrid.entities.DMProposalSummary;
 import es.uam.irg.nlp.am.arguments.Argument;
+import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.utils.FunctionUtils;
 import java.sql.ResultSet;
@@ -117,12 +118,12 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectProposals(int topN, ArgumentLinkerManager linkers) throws Exception {
+    public Map<Integer, DMProposal> selectProposals(int topN, List<ArgumentLinker> lexicon) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         String whereCond = "";
         
-        for (int i = 0; i < linkers.getNLinkers(); i++) {
-            whereCond += (i > 0 ? " OR " : "") + "summary LIKE '% " + linkers.getLinker(i).linker + " %'";
+        for (int i = 0; i < lexicon.size(); i++) {
+            whereCond += (i > 0 ? " OR " : "") + "summary LIKE '% " + lexicon.get(i).linker + " %'";
         }
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
