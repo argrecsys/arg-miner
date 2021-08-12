@@ -14,6 +14,7 @@ import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
+import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,9 +32,10 @@ import org.json.JSONObject;
 public class ArgumentMiner {
     
     // Class members
-    private Map<String, Object> dbSetup;
     private String language;
     private ArgumentLinkerManager lnkManager;
+    private Map<String, Object> mdbSetup;
+    private Map<String, Object> msqlSetup;
     private Map<Integer, DMProposal> proposals;
     private boolean verbose = true;
     
@@ -45,7 +47,8 @@ public class ArgumentMiner {
      */
     public ArgumentMiner(String language, int maxProposals) {
         this.language = language;
-        this.dbSetup = getDatabaseConfiguration();
+        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
+        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
         this.proposals = getArgumentativeProposals(maxProposals);
     }
@@ -140,11 +143,11 @@ public class ArgumentMiner {
         
         try {
             DMDBManager dbManager = null;
-            if (dbSetup != null && dbSetup.size() == 4) {
-                String dbServer = dbSetup.get("db_server").toString();
-                String dbName = dbSetup.get("db_name").toString();
-                String dbUserName = dbSetup.get("db_user_name").toString();
-                String dbUserPwd = dbSetup.get("db_user_pw").toString();
+            if (msqlSetup != null && msqlSetup.size() == 4) {
+                String dbServer = msqlSetup.get("db_server").toString();
+                String dbName = msqlSetup.get("db_name").toString();
+                String dbUserName = msqlSetup.get("db_user_name").toString();
+                String dbUserPwd = msqlSetup.get("db_user_pw").toString();
                 
                 dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
             }
@@ -154,25 +157,16 @@ public class ArgumentMiner {
             
             //proposals = dbManager.selectCustomProposals(topN);
             proposals = dbManager.selectProposals(topN, this.lnkManager.getLexicon(false));
+            
+            if (this.verbose) {
+                System.out.println(">> Number of proposals: " + proposals.size());
+            }
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        if (this.verbose) {
-            System.out.println(">> Number of proposals: " + proposals.size());
-        }
-        
         return proposals;
-    }
-    
-    /**
-     * 
-     * @return 
-     */
-    private Map<String, Object> getDatabaseConfiguration() {
-        Map<String, Object> setup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
-        return setup;
     }
         
     /**
@@ -188,11 +182,11 @@ public class ArgumentMiner {
             JSONObject argList = new JSONObject();
             
             // Store JSON objects
-            for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
-                for (Argument arg : entry.getValue()) {
+            arguments.entrySet().forEach(entry -> {
+                entry.getValue().forEach(arg -> {
                     argList.put(arg.sentenceID, arg.getJSON());
-                }
-            }
+                });
+            });
             
             // Save JSON files
             result = IOManager.saveStringToJson(argList.toString(4), Constants.ARGUMENTS_FILEPATH);
@@ -215,17 +209,28 @@ public class ArgumentMiner {
             List<Bson> argFilter = new ArrayList<>();
 
             // Store Document objects
-            for (Map.Entry<Integer, List<Argument>> entry : arguments.entrySet()) {
+            arguments.entrySet().forEach(entry -> {
                 for (Argument arg : entry.getValue()) {
                     argList.add(arg.getDocument());
                     argFilter.add(Filters.eq("argumentID", arg.sentenceID));
                 }
-            }
+            });
             
             // Upsert documents
             if (argList.size() > 0) {
-                MongoDbManager manager = new MongoDbManager();
-                result = manager.upsertDocuments("annotations", argList, argFilter, new UpdateOptions().upsert(true));
+                MongoDbManager dbManager = null;
+                if (mdbSetup != null && mdbSetup.size() == 3) {
+                    String dbServer = mdbSetup.get("db_server").toString();
+                    int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
+                    String dbName = mdbSetup.get("db_name").toString();
+
+                    dbManager = new MongoDbManager(dbServer, dbPort, dbName);
+                }
+                else {
+                    dbManager = new MongoDbManager();
+                }
+                
+                result = dbManager.upsertDocuments("annotations", argList, argFilter, new UpdateOptions().upsert(true));
             }
         }
         

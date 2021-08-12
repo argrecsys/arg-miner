@@ -35,8 +35,9 @@ import org.w3c.dom.DOMException;
 public class ArguRecSys {
     
     // Class members
-    private Map<String, Object> dbSetup;
+    private Map<String, Object> mdbSetup;
     private int minAspectOccur;
+    private Map<String, Object> msqlSetup;
     private String topic;
     
     /**
@@ -48,7 +49,8 @@ public class ArguRecSys {
     public ArguRecSys(String topic, int minAspectOccur) {
         this.topic = topic;
         this.minAspectOccur = minAspectOccur;
-        this.dbSetup = getDatabaseConfiguration();
+        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
+        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
     }
     
     /**
@@ -92,23 +94,25 @@ public class ArguRecSys {
     private List<Argument> getArgumentsByTopic() {
         List<Argument> arguments = new ArrayList<>();
         
-        MongoDbManager manager = new MongoDbManager();
-        List<Document> docs = manager.getDocumentsByTopic(this.topic);
+        MongoDbManager dbManager = null;
+        if (mdbSetup != null && mdbSetup.size() == 3) {
+            String dbServer = mdbSetup.get("db_server").toString();
+            int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
+            String dbName = mdbSetup.get("db_name").toString();
+
+            dbManager = new MongoDbManager(dbServer, dbPort, dbName);
+        }
+        else {
+            dbManager = new MongoDbManager();
+        }
+        
+        List<Document> docs = dbManager.getDocumentsByTopic(this.topic);
         
         docs.forEach(doc -> {
             arguments.add( new Argument(doc));
         });
         
         return arguments;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    private Map<String, Object> getDatabaseConfiguration() {
-        Map<String, Object> setup = IOManager.readYamlFile(Constants.DB_SETUP_FILEPATH);
-        return setup;
     }
     
     /**
@@ -146,11 +150,11 @@ public class ArguRecSys {
         
         try {
             DMDBManager dbManager = null;
-            if (dbSetup != null && dbSetup.size() == 4) {
-                String dbServer = dbSetup.get("db_server").toString();
-                String dbName = dbSetup.get("db_name").toString();
-                String dbUserName = dbSetup.get("db_user_name").toString();
-                String dbUserPwd = dbSetup.get("db_user_pw").toString();
+            if (msqlSetup != null && msqlSetup.size() == 4) {
+                String dbServer = msqlSetup.get("db_server").toString();
+                String dbName = msqlSetup.get("db_name").toString();
+                String dbUserName = msqlSetup.get("db_user_name").toString();
+                String dbUserPwd = msqlSetup.get("db_user_pw").toString();
                 
                 dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
             }

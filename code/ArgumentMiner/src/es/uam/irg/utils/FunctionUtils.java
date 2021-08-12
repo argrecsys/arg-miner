@@ -5,6 +5,8 @@
  */
 package es.uam.irg.utils;
 
+import es.uam.irg.io.IOManager;
+import es.uam.irg.nlp.am.Constants;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -49,6 +51,24 @@ public class FunctionUtils {
     public static List<String> createListFromText(String array) {
         array = array.replace("[", "").replace("]", "");
         return new ArrayList<>(Arrays.asList(array.split(",")));
+    }
+    
+    /**
+     * 
+     * @param dbType
+     * @return 
+     */
+    public static Map<String, Object> getDatabaseConfiguration(String dbType) {
+        Map<String, Object> setup = null;
+        
+        if (dbType.equals(Constants.MYSQL_DB)) {
+            setup = IOManager.readYamlFile(Constants.MSQL_SETUP_FILEPATH);
+        }
+        else if (dbType.equals(Constants.MONGO_DB)) {
+            setup = IOManager.readYamlFile(Constants.MDB_SETUP_FILEPATH);
+        }
+        
+        return setup;
     }
     
     /**

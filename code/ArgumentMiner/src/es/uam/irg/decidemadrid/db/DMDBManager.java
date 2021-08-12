@@ -21,6 +21,7 @@ public class DMDBManager {
     public static final String DB_USERNAME = "root";
     public static final String DB_USERPASSWORD = "";
     
+    // Private connector object
     private MySQLDBConnector db;
 
     public DMDBManager() throws Exception {

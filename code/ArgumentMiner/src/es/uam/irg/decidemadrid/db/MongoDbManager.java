@@ -21,6 +21,12 @@ import org.bson.conversions.Bson;
  */
 public class MongoDbManager {
     
+    // Public constants
+    public static final String DB_NAME = "decide_madrid_2019_09";
+    public static final int DB_PORT = 27017; 
+    public static final String DB_SERVER = "localhost";
+    
+    // Private connector object
     private MongoDatabase db;
     private MongoClient mongoClient;
     
@@ -28,7 +34,7 @@ public class MongoDbManager {
      * Manager constructor.
      */
     public MongoDbManager() {
-        this("localhost" , 27017, "decide_madrid_2019_09");
+        this(DB_SERVER , DB_PORT, DB_NAME);
     }
     
     /**
@@ -46,6 +52,28 @@ public class MongoDbManager {
             this.mongoClient = null;
             this.db = null;
         }
+    }
+    /**
+     *
+     * @param topic
+     * @return
+     */
+    public List<Document> getDocumentsByTopic(String topic) {
+        List<Document> docs = new ArrayList<>();
+        
+        try {
+            String collName = "annotations";
+            MongoCollection<Document> collection = db.getCollection(collName);
+            
+            for (Document doc : collection.find(Filters.text(topic))) {
+                docs.add(doc);
+            }
+        }
+        catch (Exception ex) {
+            System.err.println("MongoDB error: " + ex.getMessage());
+        }
+        
+        return docs;
     }
     
     /**
@@ -92,29 +120,6 @@ public class MongoDbManager {
         }
         
         return result;
-    }
-    
-    /**
-     * 
-     * @param topic
-     * @return 
-     */
-    public List<Document> getDocumentsByTopic(String topic) {
-        List<Document> docs = new ArrayList<>();
-        
-        try {
-            String collName = "annotations";
-            MongoCollection<Document> collection = db.getCollection(collName);
-            
-            for (Document doc : collection.find(Filters.text(topic))) {
-                docs.add(doc);
-            }
-        }
-        catch (Exception ex) {
-            System.err.println("MongoDB error: " + ex.getMessage());
-        }
-        
-        return docs;
     }
     
 }
