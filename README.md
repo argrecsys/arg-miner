@@ -2,9 +2,10 @@
 ![version](https://img.shields.io/badge/version-0.4-blue)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
-This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates ofan e-participation platform. 
+This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 
 
 ## Solutions
+This system is made up of 2 major modules, which are:
 - Argument Miner
 - Argument-based Recommender System
 
