@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-0.5-blue)
-![last-update](https://img.shields.io/badge/last_update-08/19/2021-orange)
+![last-update](https://img.shields.io/badge/last_update-08/23/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 
@@ -111,6 +111,15 @@ Example in XML format of recommendations of citizen proposals and arguments abou
     </topics>
 </recommendations>
 ```
+
+## Dependencies
+The implemented solutions depend on or make use of the following libraries and .jar files:
+- JDK 16
+- Stanford CoreNLP 4.2.2
+- MySQL Connector 8.0.22
+- MongoDB Java Driver 3.4.3
+- Snake YAML 1.9
+- JSON Java 20210307
 
 ## Authors
 Created on Apr 10, 2021  
