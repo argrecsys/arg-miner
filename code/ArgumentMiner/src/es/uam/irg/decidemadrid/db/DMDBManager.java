@@ -2,11 +2,9 @@ package es.uam.irg.decidemadrid.db;
 
 import es.uam.irg.db.MySQLDBConnector;
 import es.uam.irg.decidemadrid.entities.DMProposal;
-import es.uam.irg.decidemadrid.entities.DMComment;
 import es.uam.irg.decidemadrid.entities.DMProposalSummary;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
-import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.utils.FunctionUtils;
 import java.sql.ResultSet;
 import java.util.HashMap;
@@ -36,32 +34,6 @@ public class DMDBManager {
     @Override
     public void finalize() {
         this.db.disconnect();
-    }
-    
-    public Map<Integer, DMComment> selectComments() throws Exception {
-        Map<Integer, DMComment> comments = new HashMap<>();
-        
-        String query = "SELECT * FROM proposal_comments;";
-        ResultSet rs = this.db.executeSelect(query);
-        
-        while (rs != null && rs.next()) {
-            int id = rs.getInt("id");
-            int parentId = rs.getInt("parentId");
-            int proposalId = rs.getInt("proposalId");
-            int userId = rs.getInt("userId");
-            String date = rs.getDate("date").toString();
-            String time = rs.getTime("time").toString();
-            String text = rs.getString("text");
-            int votes = rs.getInt("numVotes");
-            int votesUp = rs.getInt("numPositiveVotes");
-            int votesDown = rs.getInt("numNegativeVotes");
-            
-            DMComment comment = new DMComment(id, parentId, proposalId, userId, date, time, text, votes, votesUp, votesDown);
-            comments.put(id, comment);
-        }
-        rs.close();
-        
-        return comments;
     }
     
     public Map<Integer, DMProposal> selectCustomProposals(int topN) throws Exception {
