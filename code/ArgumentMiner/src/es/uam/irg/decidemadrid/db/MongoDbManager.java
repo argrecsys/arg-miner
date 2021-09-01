@@ -53,6 +53,7 @@ public class MongoDbManager {
             this.db = null;
         }
     }
+    
     /**
      *
      * @param topic

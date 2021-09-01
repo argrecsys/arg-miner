@@ -5,10 +5,8 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

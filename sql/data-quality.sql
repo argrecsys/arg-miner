@@ -21,6 +21,11 @@ UPDATE proposals
    SET summary = 'Que vuelva la linea nocturna de transporte publico \'L\'. Cubren mejor el servicio y es conocida por todos ya que sigue el mismo recorrido del metro'
  WHERE id = 7700;
 
+-- summary: - Se entiende el motivo de los badenes , pero hay alternativas como Radar de tramo , mas vigilancia en ciertos lugares o incluso radar movil. Deberia ser ilegal poner obstaculos en la via.
+UPDATE proposals
+   SET summary = 'Se entiende el motivo de los badenes, pero hay alternativas como Radar de tramo, mas vigilancia en ciertos lugares o incluso radar movil. Deberia ser ilegal poner obstaculos en la via.'
+ WHERE id = 11088;
+
 -- summary: Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia ayi y se formaria menos atascos
 UPDATE proposals
    SET summary = 'Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa porque facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos'

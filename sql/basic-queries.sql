@@ -10,7 +10,7 @@ SELECT id, date, LENGTH(summary) AS 'length', title, summary, text, numComments,
 -- Search by ID
 SELECT id, title, summary, numComments
   FROM proposals
- WHERE id IN (867, 11890, 17080)
+ WHERE id IN (867, 11088, 11890, 17080)
  ORDER BY id;
 
 -- Search by topic and linker
