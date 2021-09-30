@@ -1,9 +1,11 @@
 # Extraction and use of arguments in Recommender Systems
-![version](https://img.shields.io/badge/version-0.5-blue)
-![last-update](https://img.shields.io/badge/last_update-08/23/2021-orange)
+![version](https://img.shields.io/badge/version-1.0.0-blue)
+![last-update](https://img.shields.io/badge/last_update-09/30/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 
+
+Paper presented at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021.
 
 ## Solutions
 This system is made up of 2 major modules, which are:
