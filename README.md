@@ -7,6 +7,8 @@ This repository contains a simple but efficient implementation of an argument-ba
 
 Paper presented at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021.
 
+Paper and presentation slides <a href="https://github.com/argrecsys/arg-miner/tree/main/paper">here</a>.
+
 ## Solutions
 This system is made up of 2 major modules, which are:
 - Argument Miner
