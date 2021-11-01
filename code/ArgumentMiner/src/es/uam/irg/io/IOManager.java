@@ -42,48 +42,41 @@ public class IOManager implements Constants {
      */
     public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();
-        int linkerIndex = -1;
+        String lexiconFilepath = LEXICON_FILEPATH.replace("{}", lang);
         
-        if (LANG_EN.equals(lang))
-            linkerIndex = 3;
-        else if (LANG_ES.equals(lang))
-            linkerIndex = 4;
-        
-        if (linkerIndex > -1) {
-            try {
-                // Get the file
-                File csvFile = new File(TAXONOMY_FILEPATH);
-                
-                // Check if the specified file exists or not
-                if (csvFile.exists()) {
-                    BufferedReader reader = new BufferedReader( new FileReader(csvFile));
-                    String row;
-                    String category;
-                    String subCategory;
-                    String relationType;
-                    String linker;
-                    
-                    reader.readLine();
-                    while ((row = reader.readLine()) != null) {
-                        String[] data = row.split(",");
+        try {
+            // Get the file
+            File csvFile = new File(lexiconFilepath);
 
-                        if (data.length == 5) {
-                            category = data[0];
-                            subCategory = data[1];
-                            relationType = data[2];
-                            linker = data[linkerIndex];
-                            linkers.addLinker(category, subCategory, relationType, linker);
-                        }
+            // Check if the specified file exists or not
+            if (csvFile.exists()) {
+                BufferedReader reader = new BufferedReader( new FileReader(csvFile));
+                String row;
+                String category;
+                String subCategory;
+                String relationType;
+                String linker;
+
+                reader.readLine();
+                while ((row = reader.readLine()) != null) {
+                    String[] data = row.split(",");
+
+                    if (data.length == 6) {
+                        category = data[2];
+                        subCategory = data[3];
+                        relationType = data[4];
+                        linker = data[5];
+                        linkers.addLinker(category, subCategory, relationType, linker);
                     }
-                    
-                    reader.close();
                 }
 
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+                reader.close();
             }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         if (verbose) {            
