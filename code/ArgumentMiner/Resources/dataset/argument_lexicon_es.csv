@@ -832,48 +832,52 @@ category_id,sub_category_id,category,sub_category,relation_type,linker
 9,1,EXPLANATION,RESTATEMENT,support,dicho con otras palabras
 9,2,EXPLANATION,RESTATEMENT,support,dicho con otros términos
 9,3,EXPLANATION,RESTATEMENT,support,dicho de otra forma
-9,4,EXPLANATION,RESTATEMENT,support,dicho de otra manera dicho de otro modo
-9,5,EXPLANATION,RESTATEMENT,support,dicho en otras palabras
-9,6,EXPLANATION,RESTATEMENT,support,dicho en otros términos
-9,7,EXPLANATION,RESTATEMENT,support,diciéndolo con otras palabras
-9,8,EXPLANATION,RESTATEMENT,support,diciéndolo con otros términos
-9,9,EXPLANATION,RESTATEMENT,support,diciéndolo de otra forma
-9,10,EXPLANATION,RESTATEMENT,support,diciéndolo de otra manera
-9,11,EXPLANATION,RESTATEMENT,support,diciéndolo de otro modo
-9,12,EXPLANATION,RESTATEMENT,support,diciéndolo en otras palabras
-9,13,EXPLANATION,RESTATEMENT,support,diciéndolo en otros términos
-9,14,EXPLANATION,RESTATEMENT,support,en otras palabras
-9,15,EXPLANATION,RESTATEMENT,support,en otros términos
-9,16,EXPLANATION,RESTATEMENT,support,es decir
-9,17,EXPLANATION,RESTATEMENT,support,esto es
-9,18,EXPLANATION,RESTATEMENT,support,expresado con otros términos
-9,19,EXPLANATION,RESTATEMENT,support,expresado de otra forma
-9,20,EXPLANATION,RESTATEMENT,support,expresado de otra manera
-9,21,EXPLANATION,RESTATEMENT,support,expresado de otro modo expresado con otras palabras
-9,22,EXPLANATION,RESTATEMENT,support,expresado en otras palabras
-9,23,EXPLANATION,RESTATEMENT,support,expresándolo con otras palabras
-9,24,EXPLANATION,RESTATEMENT,support,expresándolo con otros términos
-9,25,EXPLANATION,RESTATEMENT,support,expresándolo de otra forma
-9,26,EXPLANATION,RESTATEMENT,support,expresándolo de otra manera
-9,27,EXPLANATION,RESTATEMENT,support,expresándolo de otro modo
-9,28,EXPLANATION,RESTATEMENT,support,expresándolo en otras palabras
-9,29,EXPLANATION,RESTATEMENT,support,expresándolo en otros términos
-9,30,EXPLANATION,RESTATEMENT,support,mejor dicho
-9,31,EXPLANATION,RESTATEMENT,support,o lo que es lo mismo
-9,32,EXPLANATION,RESTATEMENT,support,o sea
-9,33,EXPLANATION,RESTATEMENT,support,por decirlo con otras palabras
-9,34,EXPLANATION,RESTATEMENT,support,por decirlo con otros términos
-9,35,EXPLANATION,RESTATEMENT,support,por decirlo de otra forma
-9,36,EXPLANATION,RESTATEMENT,support,por decirlo de otra manera
-9,37,EXPLANATION,RESTATEMENT,support,por decirlo de otro modo
-9,38,EXPLANATION,RESTATEMENT,support,por decirlo en otras palabras
-9,39,EXPLANATION,RESTATEMENT,support,por decirlo en otros términos
-9,40,EXPLANATION,RESTATEMENT,support,por expresarlo con otros términos
-9,41,EXPLANATION,RESTATEMENT,support,por expresarlo de otra forma
-9,42,EXPLANATION,RESTATEMENT,support,por expresarlo de otra manera
-9,43,EXPLANATION,RESTATEMENT,support,por expresarlo de otro modo por expresarlo con otras palabras
-9,44,EXPLANATION,RESTATEMENT,support,por expresarlo en otras palabras
-9,45,EXPLANATION,RESTATEMENT,support,por expresarlo en otros términos
+9,4,EXPLANATION,RESTATEMENT,support,dicho de otra manera
+9,5,EXPLANATION,RESTATEMENT,support,dicho de otro modo
+9,6,EXPLANATION,RESTATEMENT,support,dicho en otras palabras
+9,7,EXPLANATION,RESTATEMENT,support,dicho en otros términos
+9,8,EXPLANATION,RESTATEMENT,support,diciéndolo con otras palabras
+9,9,EXPLANATION,RESTATEMENT,support,diciéndolo con otros términos
+9,10,EXPLANATION,RESTATEMENT,support,diciéndolo de otra forma
+9,11,EXPLANATION,RESTATEMENT,support,diciéndolo de otra manera
+9,12,EXPLANATION,RESTATEMENT,support,diciéndolo de otro modo
+9,13,EXPLANATION,RESTATEMENT,support,diciéndolo en otras palabras
+9,14,EXPLANATION,RESTATEMENT,support,diciéndolo en otros términos
+9,15,EXPLANATION,RESTATEMENT,support,en otras palabras
+9,16,EXPLANATION,RESTATEMENT,support,en otros términos
+9,17,EXPLANATION,RESTATEMENT,support,es decir
+9,18,EXPLANATION,RESTATEMENT,support,esto es
+9,19,EXPLANATION,RESTATEMENT,support,expresado con otras palabras
+9,20,EXPLANATION,RESTATEMENT,support,expresado con otros términos
+9,21,EXPLANATION,RESTATEMENT,support,expresado de otra forma
+9,22,EXPLANATION,RESTATEMENT,support,expresado de otra manera
+9,23,EXPLANATION,RESTATEMENT,support,expresado de otro modo
+9,24,EXPLANATION,RESTATEMENT,support,expresado en otras palabras
+9,25,EXPLANATION,RESTATEMENT,support,expresado en otros términos
+9,26,EXPLANATION,RESTATEMENT,support,expresándolo con otras palabras
+9,27,EXPLANATION,RESTATEMENT,support,expresándolo con otros términos
+9,28,EXPLANATION,RESTATEMENT,support,expresándolo de otra forma
+9,29,EXPLANATION,RESTATEMENT,support,expresándolo de otra manera
+9,30,EXPLANATION,RESTATEMENT,support,expresándolo de otro modo
+9,31,EXPLANATION,RESTATEMENT,support,expresándolo en otras palabras
+9,32,EXPLANATION,RESTATEMENT,support,expresándolo en otros términos
+9,33,EXPLANATION,RESTATEMENT,support,mejor dicho
+9,34,EXPLANATION,RESTATEMENT,support,o lo que es lo mismo
+9,35,EXPLANATION,RESTATEMENT,support,o sea
+9,36,EXPLANATION,RESTATEMENT,support,por decirlo con otras palabras
+9,37,EXPLANATION,RESTATEMENT,support,por decirlo con otros términos
+9,38,EXPLANATION,RESTATEMENT,support,por decirlo de otra forma
+9,39,EXPLANATION,RESTATEMENT,support,por decirlo de otra manera
+9,40,EXPLANATION,RESTATEMENT,support,por decirlo de otro modo
+9,41,EXPLANATION,RESTATEMENT,support,por decirlo en otras palabras
+9,42,EXPLANATION,RESTATEMENT,support,por decirlo en otros términos
+9,43,EXPLANATION,RESTATEMENT,support,por expresarlo con otras palabras
+9,44,EXPLANATION,RESTATEMENT,support,por expresarlo con otros términos
+9,45,EXPLANATION,RESTATEMENT,support,por expresarlo de otra forma
+9,46,EXPLANATION,RESTATEMENT,support,por expresarlo de otra manera
+9,47,EXPLANATION,RESTATEMENT,support,por expresarlo de otro modo
+9,48,EXPLANATION,RESTATEMENT,support,por expresarlo en otras palabras
+9,49,EXPLANATION,RESTATEMENT,support,por expresarlo en otros términos
 10,1,EXPLANATION,EXEMPLIFICATION,support,como ejemplo
 10,2,EXPLANATION,EXEMPLIFICATION,support,como ejemplo de
 10,3,EXPLANATION,EXEMPLIFICATION,support,como ejemplo de la
