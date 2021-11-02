@@ -1,168 +1,251 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <recommendations>
-    <proposals quantity="48">
-        <proposal categories="movilidad" date="2015-09-22" districts="barajas,ciudad" id="1985" topics="autobuses nocturnos">Incluir el Bus nocturno del aeropuerto en el abono</proposal>
-        <proposal categories="derechos sociales,movilidad" date="2016-10-05" districts="ciudad" id="13698" topics="derechos humanos,medios de transporte,metro,trenes">Ampliar horario renfe como el metro</proposal>
-        <proposal categories="derechos sociales,movilidad,salud y sanidad" date="2015-11-02" districts="ciudad,ciudad lineal" id="3843" topics="autobuses,derechos humanos,hospitales,transporte publico">Transporte Publico (EMT) del Ambulatorio al Hospital</proposal>
-        <proposal categories="movilidad" date="2017-12-20" districts="ciudad" id="20419" topics="autobuses,trenes">Billetes de tren y autobus gratis para ninos hasta 12 anos</proposal>
-        <proposal categories="" date="2016-05-07" districts="ciudad" id="11204" topics="">Todos iguales</proposal>
-        <proposal categories="empleo,movilidad" date="2018-11-25" districts="ciudad" id="24453" topics="abono de transportes,desempleo">abono transporte adultos parados sin cargas familiares</proposal>
+    <proposals quantity="219">
+        <proposal categories="deportes,medio ambiente,movilidad" date="2015-09-18" districts="ciudad,villa de vallecas" id="1537" topics="bicimad,carriles bici,ciclismo,medio ambiente">Carril Bici Madrid-Rivas</proposal>
+        <proposal categories="movilidad" date="2019-01-29" districts="puente de vallecas,vicálvaro,villa de vallecas" id="26115" topics="transporte publico">Transporte publico Ensanche de Vallecas-Vicalvaro o Valdebernardo</proposal>
+        <proposal categories="economia,movilidad" date="2016-02-26" districts="ciudad" id="8708" topics="actividad economica,trenes">Abono renfe mensual varios usos</proposal>
         <proposal categories="economia,movilidad,sostenibilidad" date="2015-10-16" districts="ciudad" id="3078" topics="actividad economica,atascos,autobuses,sostenibilidad">Nuevas lineas de Autobus para quitar atascos (M-30, M-40)</proposal>
-        <proposal categories="" date="2017-02-08" districts="san blas-canillejas" id="15942" topics="">Conexion Las Musas con C.C. Plenilunio en Rejas</proposal>
-        <proposal categories="medio ambiente,movilidad" date="2018-07-31" districts="ciudad" id="23366" topics="abono de transportes,medio ambiente">Abono transporte quincenal y semanal</proposal>
-        <proposal categories="movilidad" date="2019-01-17" districts="arganzuela,centro" id="25734" topics="autobuses,transporte publico">Reinstalacion de la parada del autobus 50 en calle Carretas-Sol</proposal>
-        <proposal categories="movilidad" date="2015-09-17" districts="arganzuela,barajas,carabanchel,chamartín,ciudad,ciudad lineal,fuencarral-el pardo,moratalaz,puente de vallecas,san blas-canillejas,tetuán,vicálvaro,villaverde" id="1287" topics="autobuses">Autobus circular</proposal>
-        <proposal categories="" date="2015-12-09" districts="chamartín,ciudad,tetuán" id="6600" topics="">Transporte Saconia Plaza de Castilla</proposal>
-        <proposal categories="movilidad" date="2016-05-29" districts="ciudad" id="11530" topics="autobuses,metro">Abono Metro Bus  Recargable via app</proposal>
+        <proposal categories="" date="2019-01-16" districts="fuencarral-el pardo" id="25606" topics="">AMPLIACION LINEA 124 HASTA PEDRO RICO/JULIO PALACIOS</proposal>
+        <proposal categories="" date="2017-01-19" districts="villa de vallecas" id="15368" topics="">Kundas</proposal>
         <proposal categories="accesibilidad,asociaciones,derechos sociales" date="2015-11-03" districts="ciudad" id="4107" topics="asociacionismo,derechos humanos,discapacitados">Descuentos en transporte para personas con discapacidad</proposal>
-        <proposal categories="movilidad,sostenibilidad" date="2018-06-12" districts="fuencarral-el pardo" id="22859" topics="autobuses,sostenibilidad">Autobus que comunique Pitis con Tres Olivos</proposal>
-        <proposal categories="" date="2015-11-03" districts="ciudad" id="4045" topics="">Economizar</proposal>
-        <proposal categories="movilidad" date="2015-10-07" districts="ciudad" id="2769" topics="abono de transportes">Que el Abono de transporte dure un Mes</proposal>
-        <proposal categories="movilidad" date="2016-02-02" districts="ciudad" id="7633" topics="autobuses,metro,transporte publico">Prohibir musica a traves de dispositivos sin auriculares en Transporte Publico</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2018-12-13" districts="ciudad" id="25101" topics="autobuses,medio ambiente">En dias de alta contaminacion poner mas autobuses</proposal>
         <proposal categories="medio ambiente,movilidad" date="2016-02-26" districts="ciudad" id="8721" topics="autobuses,medio ambiente">Autobuses Express conectando Norte-Sur-Este-Oeste</proposal>
-        <proposal categories="movilidad,urbanismo" date="2017-12-10" districts="ciudad,fuencarral-el pardo,tetuán" id="20307" topics="autobuses,caminos">Autobuses urbanos que conecten Sanchinarro y Las Tablas con Cuatro Caminos</proposal>
-        <proposal categories="animales,medio ambiente,movilidad" date="2015-11-18" districts="ciudad" id="5717" topics="mascotas,medio ambiente,transporte publico">Permitir mascotas en transporte publico</proposal>
-        <proposal categories="movilidad" date="2015-11-12" districts="barajas,ciudad,fuencarral-el pardo,hortaleza" id="5334" topics="autobuses">Alargar recorrido lineas EMT de Sanchinarro hasta Valdebebas-Carcavas</proposal>
+        <proposal categories="movilidad" date="2015-11-26" districts="ciudad" id="6163" topics="vehiculos">Racionalizar el uso del vehiculo privado para ir y venir del trabajo.</proposal>
         <proposal categories="" date="2016-03-12" districts="ciudad" id="9239" topics="">Eliminar SER para los residentes en su distrito.</proposal>
-        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
-        <proposal categories="" date="2017-03-14" districts="chamartín,moncloa-aravaca" id="17562" topics="">Conectar Valdezarza con la estacion de Chamartin.</proposal>
+        <proposal categories="movilidad" date="2017-02-17" districts="ciudad" id="16412" topics="aparcamiento regulado">Parquimetros  en todos los distritos de Madrid gratuito para los madrilenos</proposal>
+        <proposal categories="deportes,movilidad" date="2015-09-17" districts="ciudad,puente de vallecas" id="1053" topics="bicimad,ciclismo">Utilizacion gratuita de BiciMAD</proposal>
+        <proposal categories="accesibilidad,derechos sociales,equidad e integracion" date="2015-09-16" districts="ciudad" id="548" topics="derechos humanos,discapacitados,igualdad">Gratuidad en el transporte para los discapacitados</proposal>
+        <proposal categories="movilidad" date="2018-11-29" districts="hortaleza" id="24615" topics="aparcamientos,trenes">Hacer aparcamientos en cercanias Fuente de la Mora y Fuencarral</proposal>
+        <proposal categories="movilidad" date="2015-11-04" districts="arganzuela,centro,ciudad" id="4648" topics="transporte publico">Mas transporte publico en barrio de los puertos (arganzuela)</proposal>
+        <proposal categories="" date="2017-11-02" districts="ciudad" id="20014" topics="">Medidas disuasorias para el transporte privado</proposal>
+        <proposal categories="deportes,movilidad" date="2017-12-25" districts="latina" id="20526" topics="autobuses,baile,transporte publico">Transporte publico Linea 139: parada de autobus en Calle Danza</proposal>
+        <proposal categories="medio ambiente,sostenibilidad" date="2015-12-14" districts="ciudad" id="6704" topics="medio ambiente,sostenibilidad">Informar y concienciar al ciudadano sobre tirar objetos al suelo .</proposal>
+        <proposal categories="movilidad" date="2015-11-05" districts="carabanchel,ciudad" id="4658" topics="transporte publico">Transporte publico zona La Peseta (barrio de Buenavista)</proposal>
+        <proposal categories="movilidad" date="2016-01-13" districts="ciudad" id="7221" topics="transporte publico">reduccion del precio del transporte publico los dias de alerta por contaminacion</proposal>
+        <proposal categories="movilidad" date="2015-11-03" districts="ciudad,fuencarral-el pardo" id="4155" topics="autobuses">Linea de autobus desde intercambiador Avda  America a Las Tablas</proposal>
+        <proposal categories="movilidad" date="2016-11-20" districts="vicálvaro" id="14398" topics="trenes">renfe</proposal>
+        <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
+        <proposal categories="equidad e integracion,movilidad" date="2016-12-14" districts="ciudad" id="14912" topics="bicimad,inclusion social">Inclusion del Servicio de Bicimad en el Abono Tansporte</proposal>
+        <proposal categories="" date="2017-02-08" districts="san blas-canillejas" id="15942" topics="">Conexion Las Musas con C.C. Plenilunio en Rejas</proposal>
+        <proposal categories="" date="2017-03-24" districts="ciudad" id="17995" topics="">Crear una tasa por circular por el interior de la M30</proposal>
+        <proposal categories="movilidad,urbanismo" date="2017-03-24" districts="ciudad" id="17997" topics="autobuses,calzada,carril bus">Asfaltar y conservar lisos los carriles bus, para comodidad de los usuarios.</proposal>
+        <proposal categories="ayuntamiento y administracion publica,medio ambiente,transparencia" date="2016-04-19" districts="ciudad" id="10832" topics="funcion publica,gobierno abierto,medio ambiente">ELIMINACION DE ZONA APARCAMIENTO EXCLUSIVO FUNCIONARIOS EN MADRID</proposal>
+        <proposal categories="derechos sociales,economia,tercera edad" date="2017-03-24" districts="ciudad" id="18002" topics="actividad economica,derechos humanos,tercera edad">Tarjeta de transporte a precio reducido para la tercera edad</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2015-09-16" districts="ciudad" id="597" topics="autobuses,metro,sostenibilidad,transporte publico,vehiculos">Un dia a la semana gratis al transporte publico</proposal>
+        <proposal categories="animales,medio ambiente,movilidad" date="2015-11-18" districts="ciudad" id="5717" topics="mascotas,medio ambiente,transporte publico">Permitir mascotas en transporte publico</proposal>
         <proposal categories="movilidad" date="2016-03-15" districts="arganzuela,centro,latina" id="9307" topics="autobuses">Una  linea bus con cabecera  en la calle Segovia con el Puente de Segovia</proposal>
-        <proposal categories="medio ambiente,sostenibilidad" date="2015-09-20" districts="ciudad" id="1692" topics="medio ambiente,sostenibilidad">Billete de transporte combinado</proposal>
-        <proposal categories="movilidad" date="2016-12-22" districts="ciudad,moncloa-aravaca" id="15004" topics="autobuses">Un bus que vaya de Alonso Martinez a Moncloa</proposal>
+        <proposal categories="movilidad,urbanismo" date="2018-11-19" districts="ciudad" id="24156" topics="bicimad,bienes publicos,edificios">Construir aparcabicis en edificios publicos</proposal>
         <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2015-11-11" districts="ciudad,puente de vallecas" id="5213" topics="medio ambiente,sostenibilidad,transporte publico">Mas transporte publico en municipios de madrid</proposal>
-        <proposal categories="equidad e integracion,urbanismo" date="2017-01-24" districts="villaverde" id="15645" topics="igualdad,urbanismo">Mejorar la comunicacion en el barrio de Butarque</proposal>
+        <proposal categories="movilidad,tercera edad" date="2015-11-18" districts="ciudad" id="5725" topics="abono de transportes,jubilacion">Abono transporte espos@s pensionistas</proposal>
         <proposal categories="movilidad" date="2017-03-24" districts="fuencarral-el pardo" id="18013" topics="autobuses">Union por autobus de la zona Fuentelareina con Montecarmelo</proposal>
         <proposal categories="movilidad" date="2015-10-19" districts="ciudad" id="3166" topics="abono de transportes">adelantar antes de los 65 anos  el precio rebajado de la tarjeta transporte</proposal>
-        <proposal categories="" date="2015-11-03" districts="ciudad,fuencarral-el pardo" id="4065" topics="">Mejorar el acceso a las tablas</proposal>
-        <proposal categories="medio ambiente,movilidad,urbanismo" date="2018-11-03" districts="ciudad" id="23906" topics="transporte publico,urbanismo,zonas verdes">Transporte publico parque Coimbra de Mostoles</proposal>
-        <proposal categories="cultura,educacion" date="2016-06-25" districts="ciudad" id="12003" topics="bibliotecas,centros culturales">Biblioteca publica/ Centro Cultural para la zona de Valderribas</proposal>
-        <proposal categories="derechos sociales,economia,movilidad,tercera edad" date="2015-09-15" districts="ciudad" id="168" topics="actividad economica,derechos humanos,jubilacion,transporte publico">Transporte publico gratis a jubilados</proposal>
-        <proposal categories="movilidad" date="2015-11-04" districts="arganzuela,centro,ciudad" id="4648" topics="transporte publico">Mas transporte publico en barrio de los puertos (arganzuela)</proposal>
-        <proposal categories="educacion,sostenibilidad,urbanismo" date="2017-02-11" districts="ciudad" id="16040" topics="sostenibilidad,universidades,urbanismo">Existencia de mas lineas a la UCM.</proposal>
-        <proposal categories="economia,medio ambiente,sostenibilidad,urbanismo" date="2016-11-04" districts="ciudad" id="14189" topics="actividad economica,electricidad,medio ambiente,sostenibilidad,urbanismo">OBLIGATORIEDAD DE PUNTOS DE RECARGA ELECTRICA EN GASOLINERAS DE MADRID</proposal>
+        <proposal categories="movilidad" date="2018-02-05" districts="vicálvaro" id="21086" topics="transporte publico">Accesibilidad en transporte publico El Canaveral.</proposal>
+        <proposal categories="equidad e integracion,movilidad,tercera edad,transparencia" date="2016-04-20" districts="ciudad" id="10847" topics="abono de transportes,gobierno abierto,igualdad,jubilacion,tercera edad">Tarjeta transporte para conyuges pensionistas mayores 65 anos</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2017-05-24" districts="ciudad" id="18528" topics="calefaccion,medio ambiente,sostenibilidad,transporte publico">Aire acondicionado en transporte publico</proposal>
+        <proposal categories="" date="2016-09-02" districts="puente de vallecas" id="13413" topics="">transporte zona pena labra</proposal>
+        <proposal categories="movilidad" date="2015-11-18" districts="ciudad" id="5737" topics="autobuses nocturnos,metro">METRO BUHO</proposal>
         <proposal categories="sostenibilidad" date="2017-02-09" districts="usera,villaverde" id="15981" topics="sostenibilidad">Conexion CC Islazul con barrio Villaverde-Usera</proposal>
-        <proposal categories="movilidad,urbanismo" date="2016-05-11" districts="ciudad" id="11250" topics="abono de transportes,urbanismo">Abono transportes</proposal>
-        <proposal categories="justicia,medio ambiente,movilidad,sostenibilidad" date="2017-11-10" districts="ciudad" id="20146" topics="autobuses,ley anti tabaco,medio ambiente,metro,sostenibilidad">Recogida de colillas en las paradas de Bus y Entradas a Metro</proposal>
-        <proposal categories="movilidad" date="2016-02-22" districts="ciudad" id="8116" topics="abono de transportes">ABONO TRANSPORTE COMO SUSCRIPCION</proposal>
-        <proposal categories="accesibilidad,derechos sociales,movilidad" date="2015-11-06" districts="ciudad" id="4853" topics="abono de transportes,derechos humanos,discapacitados,trenes">Tarjeta transporte para discapacitados que incluya tren cercanias.</proposal>
+        <proposal categories="movilidad" date="2019-02-12" districts="latina" id="26222" topics="trenes">Accesibilidad en Renfe Las Aguilas</proposal>
         <proposal categories="derechos sociales,movilidad,sostenibilidad,urbanismo" date="2018-12-02" districts="ciudad" id="24693" topics="derechos humanos,sostenibilidad,transporte publico,urbanismo">MEJORA DEL TRANSPORTE PUBLICO</proposal>
+        <proposal categories="movilidad" date="2016-03-16" districts="carabanchel,ciudad,latina,moratalaz,puente de vallecas,villa de vallecas" id="9335" topics="autobuses,transporte publico">Mejora de la conexion este-oeste en transporte publico</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2016-07-05" districts="ciudad" id="12407" topics="sostenibilidad,transporte publico">Fomentar el uso del telefono movil para reducir el uso del papel .</proposal>
+        <proposal categories="movilidad" date="2015-09-24" districts="ciudad" id="2170" topics="abono de transportes">Renovacion del abono transporte online</proposal>
+        <proposal categories="movilidad" date="2017-07-18" districts="ciudad" id="19068" topics="vehiculos">Tasa por entrar con coche privado en la almendra central de Madrid</proposal>
+        <proposal categories="movilidad" date="2016-04-15" districts="moratalaz,puente de vallecas" id="10371" topics="autobuses">Una linea de bus que una Avda de la Albufera con Moratalaz</proposal>
+        <proposal categories="movilidad,sostenibilidad,urbanismo" date="2016-05-23" districts="ciudad" id="11397" topics="autobuses,peatonalizacion,sostenibilidad,tranvia y metro ligero,urbanismo">Peatonalizacion calle Segovia y sustituir sus autobuses por un tranvia</proposal>
+        <proposal categories="movilidad" date="2019-01-17" districts="arganzuela,centro" id="25734" topics="autobuses,transporte publico">Reinstalacion de la parada del autobus 50 en calle Carretas-Sol</proposal>
+        <proposal categories="" date="2018-11-20" districts="barajas" id="24202" topics="">Expedicion billetes Transporte desde Salas Recogida Maletas Aeropuerto</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2017-03-04" districts="ciudad" id="17035" topics="abono de transportes,medio ambiente">Abono transportes ninos</proposal>
+        <proposal categories="economia,movilidad" date="2017-07-22" districts="ciudad" id="19084" topics="emprendimiento,taxis">Suelta la licencia VTC (no de taxi) a los autonomos particulares</proposal>
+        <proposal categories="movilidad" date="2018-12-20" districts="ciudad" id="25228" topics="transporte publico">Prioridad al transporte publico sobre nuevas formas de transporte individual</proposal>
+        <proposal categories="movilidad" date="2015-10-20" districts="ciudad,fuencarral-el pardo,hortaleza" id="3215" topics="transporte publico">Mejorar transporte publico en Sanchinarro</proposal>
+        <proposal categories="economia" date="2018-06-28" districts="ciudad" id="23184" topics="actividad economica">Mayor variedad bonos/tickets trasnporte Madrid</proposal>
+        <proposal categories="educacion,equidad e integracion" date="2018-02-11" districts="ciudad" id="21143" topics="educacion infantil,igualdad,institutos">Subvencionar el transporte escolar de CEIPS e IES para salidas extraescolares</proposal>
+        <proposal categories="" date="2017-03-14" districts="chamartín,moncloa-aravaca" id="17562" topics="">Conectar Valdezarza con la estacion de Chamartin.</proposal>
+        <proposal categories="medio ambiente,sostenibilidad" date="2015-09-20" districts="ciudad" id="1692" topics="medio ambiente,sostenibilidad">Billete de transporte combinado</proposal>
+        <proposal categories="movilidad" date="2016-12-22" districts="ciudad,moncloa-aravaca" id="15004" topics="autobuses">Un bus que vaya de Alonso Martinez a Moncloa</proposal>
+        <proposal categories="deportes,justicia,medio ambiente,sostenibilidad" date="2016-02-11" districts="ciudad" id="7845" topics="ciclismo,deportes,medio ambiente,regulacion,sostenibilidad">Regulacion bici</proposal>
+        <proposal categories="medio ambiente,sostenibilidad,urbanismo" date="2018-05-21" districts="ciudad" id="22694" topics="medio ambiente,sostenibilidad,urbanismo">Estimular y subvencionar la transicion energetica de Madrid</proposal>
+        <proposal categories="derechos sociales,familia e infancia,medio ambiente,sostenibilidad,urbanismo" date="2018-12-04" districts="ciudad" id="24742" topics="derechos humanos,infancia,medio ambiente,sostenibilidad,urbanismo">Aumento del intervalo de edad para el transporte gratuito infantil</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2019-01-19" districts="villa de vallecas" id="25766" topics="aparcamientos,medio ambiente,sostenibilidad,trenes">Parking disuasorio cercanias Santa Eugenia</proposal>
+        <proposal categories="derechos sociales,economia,movilidad,tercera edad" date="2015-09-15" districts="ciudad" id="168" topics="actividad economica,derechos humanos,jubilacion,transporte publico">Transporte publico gratis a jubilados</proposal>
+        <proposal categories="educacion,sostenibilidad,urbanismo" date="2017-02-11" districts="ciudad" id="16040" topics="sostenibilidad,universidades,urbanismo">Existencia de mas lineas a la UCM.</proposal>
+        <proposal categories="movilidad" date="2016-07-26" districts="centro,fuencarral-el pardo" id="12969" topics="autobuses">Ampliar las lineas autobuses de Montecarmelo y Las Tablas HASTA MADRID CENTRO</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad" date="2018-10-24" districts="ciudad" id="23726" topics="abono de transportes,bicimad,deportes,medio ambiente">Descuentos a usuarios del abono transporte recargado para usar Bicimad</proposal>
+        <proposal categories="economia,movilidad" date="2015-11-04" districts="ciudad" id="4271" topics="abono de transportes,emprendimiento,medios de transporte">REBAJAR IMPORTE ABONO TRANSPORTE A TRABAJADORES AUTONOMOS</proposal>
+        <proposal categories="justicia,medio ambiente,movilidad,sostenibilidad" date="2017-11-10" districts="ciudad" id="20146" topics="autobuses,ley anti tabaco,medio ambiente,metro,sostenibilidad">Recogida de colillas en las paradas de Bus y Entradas a Metro</proposal>
+        <proposal categories="movilidad" date="2015-10-21" districts="ciudad" id="3251" topics="transporte publico">transporte publico para todos</proposal>
+        <proposal categories="movilidad" date="2016-07-26" districts="ciudad" id="12981" topics="vehiculos">Restringir el trafico de vehiculos privados en Gran Via en domingos y festivos</proposal>
+        <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad,sostenibilidad,urbanismo" date="2017-11-11" districts="ciudad" id="20149" topics="asociacionismo,autobuses,calles y aceras,derechos humanos,medio ambiente,sostenibilidad">Publicidad postes aceras, paradas autobuses</proposal>
+        <proposal categories="justicia,movilidad" date="2019-06-01" districts="ciudad" id="26806" topics="ley anti tabaco,vehiculos">Prohibir fumar dentro de los coches y en los estadios</proposal>
+        <proposal categories="economia,medio ambiente" date="2015-10-21" districts="ciudad" id="3257" topics="actividad economica,medio ambiente">Mejorar el trafico dentro de la almendra central de Madrid</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad,sostenibilidad" date="2015-10-21" districts="ciudad" id="3265" topics="abono de transportes,bicimad,ciclismo,medio ambiente,sostenibilidad">BiciMAD gratis para las personas con abono transporte</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2017-03-15" districts="ciudad,fuencarral-el pardo" id="17604" topics="autobuses,medio ambiente">MAS LINEAS EMT EN SANCHINARRO</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2016-02-14" districts="ciudad" id="7879" topics="medio ambiente,transporte publico">Mas flujo de transporte publico los fines de semana y festivos</proposal>
+        <proposal categories="delicuencia,salud y sanidad" date="2016-07-10" districts="ciudad" id="12487" topics="hospitales,multas">MULTAS DE TRAFICO EN LOS ALEDANOS DEL HOSPITAL CLINICO SAN CARLOS DE MADRID</proposal>
+        <proposal categories="movilidad,urbanismo" date="2019-02-26" districts="ciudad" id="26311" topics="aparcamientos,urbanismo">APARCAMIENTOS DISUASORIOS</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-10-07" districts="barajas,ciudad,fuencarral-el pardo" id="2766" topics="autobuses,carril bus,medio ambiente">Carril-bus en los accesos a Madrid</proposal>
+        <proposal categories="medio ambiente,sostenibilidad" date="2017-10-13" districts="ciudad" id="19664" topics="medio ambiente,sostenibilidad">Desatasca Madrid</proposal>
+        <proposal categories="movilidad" date="2015-10-07" districts="ciudad" id="2769" topics="abono de transportes">Que el Abono de transporte dure un Mes</proposal>
+        <proposal categories="movilidad" date="2015-11-12" districts="barajas,ciudad,fuencarral-el pardo,hortaleza" id="5334" topics="autobuses">Alargar recorrido lineas EMT de Sanchinarro hasta Valdebebas-Carcavas</proposal>
+        <proposal categories="movilidad" date="2018-12-23" districts="ciudad" id="25305" topics="metro,movilidad y medio ambiente">Recuperacion como publico  del aparcamiento inferior al metro de Miguel Hernanez</proposal>
+        <proposal categories="deportes,medio ambiente,sostenibilidad" date="2016-02-23" districts="ciudad" id="8410" topics="ciclismo,deportes,medio ambiente,sostenibilidad">Red de almacenamiento seguro para bicicletas privadas</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2015-09-26" districts="centro,ciudad" id="2269" topics="medio ambiente,sostenibilidad,vehiculos">Cerrar el centro de Madrid a vehiculos privados.</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2018-12-23" districts="ciudad" id="25312" topics="medio ambiente,sostenibilidad,transporte publico">Bonos de transporte publico para todo el mundo a 20</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-11-12" districts="ciudad" id="5347" topics="abono de transportes,medio ambiente,vehiculos">Circulacion vehiculos segun matricula pero tarjeta transporte gratis a afectados</proposal>
+        <proposal categories="cultura,educacion" date="2016-06-25" districts="ciudad" id="12003" topics="bibliotecas,centros culturales">Biblioteca publica/ Centro Cultural para la zona de Valderribas</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2016-04-23" districts="centro,ciudad" id="10981" topics="autobuses,medio ambiente,metro,transporte publico">PROHIBIR TRAFICO CENTRO MADRID EN NAVIDAD</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2015-12-25" districts="ciudad" id="6890" topics="autobuses,sostenibilidad,transporte publico">Transporte publico durante las noches del 24 y 31 de diciembre</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad,sostenibilidad" date="2015-09-17" districts="ciudad" id="1259" topics="carriles bici,ciclismo,deportes,medio ambiente,sostenibilidad">Carriles bici por toda la ciudad</proposal>
+        <proposal categories="deportes,movilidad" date="2018-03-06" districts="hortaleza" id="21743" topics="autobuses,deportes">Mejora de la linea 153 de la EMT</proposal>
+        <proposal categories="transparencia" date="2016-04-18" districts="ciudad" id="10480" topics="gobierno abierto">Trabajo en el sur</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2018-10-25" districts="chamartín,chamberí,fuencarral-el pardo,moncloa-aravaca,salamanca,tetuán" id="23795" topics="autobuses,medio ambiente,sostenibilidad">Crear una linea de autobuses entre Puerta de Hierro y el Paseo de la Castellana</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2016-04-24" districts="ciudad" id="10996" topics="medio ambiente,sostenibilidad,transporte publico">Abonos mensuales de 20 Para todos los usuarios del transporte publico</proposal>
+        <proposal categories="accesibilidad,derechos sociales,movilidad" date="2015-11-06" districts="ciudad" id="4853" topics="abono de transportes,derechos humanos,discapacitados,trenes">Tarjeta transporte para discapacitados que incluya tren cercanias.</proposal>
+        <proposal categories="movilidad" date="2016-02-17" districts="ciudad" id="7926" topics="metro">Estaciones de metro adaptadas</proposal>
+        <proposal categories="ayuntamiento y administracion publica,derechos sociales,economia,medio ambiente,movilidad" date="2017-11-21" districts="ciudad" id="20214" topics="actividad economica,ayuntamiento,derechos humanos,empresas,medio ambiente,transporte publico">ACUERDO ENTRE EMPRESAS PRIVADAS, RED DE TRANSPORTE PUBLICO Y AYUNTAMIENTO</proposal>
+        <proposal categories="movilidad,urbanismo" date="2019-03-04" districts="puente de vallecas,villa de vallecas" id="26358" topics="aparcamiento regulado,aparcamientos,diseño urbano">Remodelacion Bajos del PUENTE de VALLECAS</proposal>
+        <proposal categories="educacion,medio ambiente,sostenibilidad" date="2016-04-03" districts="ciudad" id="9976" topics="educacion infantil,medio ambiente,sostenibilidad">Mas transporte escolar para reducir trafico</proposal>
+        <proposal categories="medio ambiente" date="2015-09-27" districts="ciudad" id="2306" topics="contaminacion atmosferica">Restringir trafico rodado durante picos de contaminacion</proposal>
+        <proposal categories="derechos sociales,movilidad,salud y sanidad" date="2015-11-02" districts="ciudad,ciudad lineal" id="3843" topics="autobuses,derechos humanos,hospitales,transporte publico">Transporte Publico (EMT) del Ambulatorio al Hospital</proposal>
+        <proposal categories="movilidad" date="2015-09-17" districts="arganzuela,barajas,carabanchel,chamartín,ciudad,ciudad lineal,fuencarral-el pardo,moratalaz,puente de vallecas,san blas-canillejas,tetuán,vicálvaro,villaverde" id="1287" topics="autobuses">Autobus circular</proposal>
+        <proposal categories="" date="2016-02-23" districts="ciudad" id="8458" topics="">2 linea circular de transporte que recorra la periferia de Madrid</proposal>
+        <proposal categories="movilidad" date="2016-05-29" districts="ciudad" id="11530" topics="autobuses,metro">Abono Metro Bus  Recargable via app</proposal>
+        <proposal categories="movilidad,ocio y entretenimiento" date="2017-01-09" districts="ciudad" id="15117" topics="cines,transporte publico">Visibilidad del transporte publico en el cine rodado en Madrid</proposal>
+        <proposal categories="ayuntamiento y administracion publica,delicuencia,deportes,economia,medio ambiente,movilidad,sostenibilidad,transparencia" date="2015-10-09" districts="ciudad" id="2836" topics="actividad economica,bicimad,carriles bici,ciclismo,corrupcion,empresas,ingresos,medio ambiente,servicios publicos,sostenibilidad,transparencia">Que BiCI-MADRID sea una empresa municipal y no una empresa privada</proposal>
+        <proposal categories="movilidad" date="2016-06-26" districts="ciudad" id="12058" topics="transporte publico">Abaratar el transporte publico</proposal>
+        <proposal categories="medio ambiente,sostenibilidad" date="2015-12-28" districts="ciudad,san blas-canillejas" id="6940" topics="medio ambiente,sostenibilidad">Mejora de la movilidad en poligono las mercedes</proposal>
+        <proposal categories="accesibilidad,derechos sociales,equidad e integracion,movilidad" date="2016-04-25" districts="ciudad" id="11036" topics="abono de transportes,derechos humanos,discapacitados,igualdad">Abono transporte para discapacitados a partir del 33% en Madrid</proposal>
+        <proposal categories="educacion,movilidad" date="2015-09-16" districts="ciudad" id="797" topics="abono de transportes,educacion infantil">abono transporte para nin@s en periodo escolar obligatorio</proposal>
+        <proposal categories="movilidad" date="2015-11-03" districts="barajas,ciudad,hortaleza" id="3869" topics="transporte publico">Mas transporte publico y servicios basicos en valdebebas.</proposal>
+        <proposal categories="equidad e integracion,urbanismo" date="2017-01-24" districts="villaverde" id="15645" topics="igualdad,urbanismo">Mejorar la comunicacion en el barrio de Butarque</proposal>
+        <proposal categories="movilidad" date="2015-10-09" districts="ciudad" id="2847" topics="abono de transportes,transporte publico">Tarjeta azul de tranporte</proposal>
+        <proposal categories="deportes,educacion,medio ambiente,sostenibilidad" date="2016-03-25" districts="ciudad" id="9513" topics="ciclismo,colegios,deportes,medio ambiente,sostenibilidad">Aparcamiento para bicis en las puertas de los colegios</proposal>
+        <proposal categories="deportes,jovenes,medio ambiente,urbanismo" date="2016-03-03" districts="ciudad" id="9002" topics="ciclismo,deportes,juventud,medio ambiente,urbanismo">INCLUIR EL SERVICIO DE BICI EN EL BONO JOVEN DE TRANSPORTE</proposal>
+        <proposal categories="economia,movilidad,sostenibilidad" date="2015-09-28" districts="ciudad" id="2353" topics="actividad economica,autobuses,metro,sostenibilidad">Metro-bus familiar de 10 viajes a menor precio</proposal>
+        <proposal categories="deportes,movilidad,participacion ciudadana,urbanismo" date="2018-12-28" districts="latina" id="25393" topics="autobuses,baile,emponderamiento de la ciudadania,transporte publico,urbanismo">Propuesta: Transporte publico Linea 139: parada de autobus en Calle Danza</proposal>
+        <proposal categories="deportes" date="2016-03-25" districts="salamanca" id="9522" topics="deportes,natacion">Piscina municipal de verano en Barrio de Salamanca</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2018-02-21" districts="ciudad" id="21306" topics="movilidad y medio ambiente,sostenibilidad">TRANSPORTE SOSTENIBLE EN ENTREGA DE PEDIDOS A DOMICILIO</proposal>
+        <proposal categories="economia,medio ambiente,sostenibilidad" date="2015-09-28" districts="centro,ciudad,retiro" id="2367" topics="actividad economica,contenedores,sostenibilidad">Soterrar el Paseo del Prado</proposal>
+        <proposal categories="animales,movilidad" date="2015-11-03" districts="ciudad" id="3904" topics="mascotas,transporte publico">Movilidad de animales domesticos en transporte publico.</proposal>
+        <proposal categories="movilidad" date="2015-11-04" districts="ciudad,moratalaz,vicálvaro" id="4416" topics="transporte publico">Mejora del  transporte publico en Moratalaz y Valdebernardo.Crear linea express</proposal>
+        <proposal categories="movilidad" date="2018-12-30" districts="ciudad,moncloa-aravaca" id="25408" topics="transporte publico,trenes">Parada de tren de cercanias en Puente de los Franceses</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad,sostenibilidad" date="2016-03-03" districts="ciudad" id="9026" topics="autobuses,ciclismo,medio ambiente,sostenibilidad">Portabicicletas en el morro de los autobuses publicos para poder dejar la bici.</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad,sostenibilidad" date="2016-06-27" districts="" id="12099" topics="bicimad,ciclismo,medio ambiente,sostenibilidad,zonas verdes">Creacion estacion de Bicis(BICIMAD) en Juan Esplandiu, entrada al Parque de Roma</proposal>
+        <proposal categories="familia e infancia,movilidad" date="2016-01-29" districts="ciudad" id="7494" topics="abono de transportes,infancia">Abono transporte menores de 35 anos</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2018-07-31" districts="ciudad" id="23366" topics="abono de transportes,medio ambiente">Abono transporte quincenal y semanal</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2018-06-12" districts="fuencarral-el pardo" id="22859" topics="autobuses,sostenibilidad">Autobus que comunique Pitis con Tres Olivos</proposal>
+        <proposal categories="ayuntamiento y administracion publica" date="2015-09-16" districts="chamberí,ciudad" id="845" topics="funcion publica">aparcamiento para  ciudadanos, no para  funcionarios</proposal>
+        <proposal categories="economia,medio ambiente,movilidad" date="2015-11-03" districts="ciudad" id="3919" topics="actividad economica,medio ambiente,transporte publico">Fomento del transporte publico</proposal>
+        <proposal categories="movilidad,urbanismo" date="2017-12-10" districts="ciudad,fuencarral-el pardo,tetuán" id="20307" topics="autobuses,caminos">Autobuses urbanos que conecten Sanchinarro y Las Tablas con Cuatro Caminos</proposal>
+        <proposal categories="medio ambiente,ocio y entretenimiento" date="2015-10-25" districts="ciudad,latina,moncloa-aravaca" id="3414" topics="medio ambiente,zoo">AMPLIACION DEL TELEFERICO</proposal>
+        <proposal categories="movilidad" date="2017-03-08" districts="ciudad,fuencarral-el pardo" id="17239" topics="trenes">Ampliar T-61  su servicio de l-d y acondicionamiento del tunel sur a Fuencarral</proposal>
+        <proposal categories="derechos sociales,empleo,movilidad" date="2017-03-08" districts="ciudad" id="17242" topics="abono de transportes,derechos humanos,desempleo">Reduccion del 50% en el Abono Transporte para desempleados</proposal>
+        <proposal categories="medio ambiente,movilidad,urbanismo" date="2016-03-05" districts="ciudad" id="9051" topics="aparcamientos,calzada,medio ambiente,metro,urbanismo">Asfaltar,manteniendo acceso gratuito parking disuasorio metro Aviacion Espanola</proposal>
+        <proposal categories="derechos sociales,movilidad" date="2017-01-17" districts="ciudad" id="15196" topics="autobuses,derechos humanos,metro">Transporte gratuito</proposal>
+        <proposal categories="medio ambiente,movilidad,transparencia" date="2019-01-03" districts="ciudad" id="25437" topics="medio ambiente,transparencia,transporte publico">Aplicacion movil transporte publico</proposal>
+        <proposal categories="medio ambiente,movilidad,urbanismo" date="2017-12-12" districts="chamartín,fuencarral-el pardo" id="20321" topics="autobuses,carril bus,medio ambiente,urbanismo">Crear un carril Bus VAO de Chamartin a Las Tablas</proposal>
+        <proposal categories="medio ambiente,movilidad,urbanismo" date="2018-11-03" districts="ciudad" id="23906" topics="transporte publico,urbanismo,zonas verdes">Transporte publico parque Coimbra de Mostoles</proposal>
+        <proposal categories="" date="2016-03-05" districts="ciudad" id="9060" topics="">Precio sencillo transporte unico</proposal>
+        <proposal categories="movilidad" date="2018-04-10" districts="chamartín,ciudad,fuencarral-el pardo" id="22375" topics="autobuses,carril bus">Crear un carril bus Vao de Chamartin a las tablas</proposal>
+        <proposal categories="movilidad,participacion ciudadana" date="2016-08-06" districts="ciudad" id="13163" topics="emponderamiento de la ciudadania,metro,presupuestos participativos">Aceptar propuestas para Metro en 'Madrid Decide'</proposal>
+        <proposal categories="economia,medio ambiente,sostenibilidad,urbanismo" date="2016-11-04" districts="ciudad" id="14189" topics="actividad economica,electricidad,medio ambiente,sostenibilidad,urbanismo">OBLIGATORIEDAD DE PUNTOS DE RECARGA ELECTRICA EN GASOLINERAS DE MADRID</proposal>
+        <proposal categories="movilidad" date="2017-01-17" districts="ciudad,san blas-canillejas" id="15220" topics="autobuses,metro">Crear linea de autobus o metro que una el barrio de Canillejas  y H.Ramon yCajal</proposal>
+        <proposal categories="economia,medio ambiente,sostenibilidad" date="2017-06-15" districts="ciudad" id="18804" topics="actividad economica,medio ambiente,sostenibilidad">Pasaporte sostenible</proposal>
+        <proposal categories="economia,medio ambiente,movilidad,seguridad y emergencias,sostenibilidad" date="2016-08-07" districts="ciudad" id="13176" topics="actividad economica,carga y descarga,centros comerciales,emergencias,medio ambiente,sostenibilidad">Horario nocturno de carga y descarga y reposicion en grandes almacenes y mercado</proposal>
+        <proposal categories="asociaciones,deportes,medio ambiente" date="2016-02-24" districts="ciudad" id="8575" topics="asociacionismo,deportes,medio ambiente,patinetes">Dia del patin de Madrid || Friday night skate || Sunday Stroll</proposal>
+        <proposal categories="accesibilidad" date="2016-03-28" districts="ciudad" id="9600" topics="movilidad reducida">Mejorar los medios de informacion para personas con diversidad funcional</proposal>
+        <proposal categories="" date="2016-01-31" districts="ciudad" id="7553" topics="">Bono Transporte por usos</proposal>
+        <proposal categories="economia,movilidad" date="2016-02-22" districts="fuencarral-el pardo" id="8065" topics="actividad economica,limites de velocidad,metro">Incrementar la velocidad del metro Linea 10 entre Tres Olivos y Las Tablas</proposal>
+        <proposal categories="economia,medio ambiente,movilidad" date="2016-05-01" districts="ciudad" id="11138" topics="actividad economica,medio ambiente,transporte publico">Ampliar la zona A de transporte publico en la perimetro de la Comunidad de Madri</proposal>
+        <proposal categories="derechos sociales,movilidad" date="2016-10-05" districts="ciudad" id="13698" topics="derechos humanos,medios de transporte,metro,trenes">Ampliar horario renfe como el metro</proposal>
+        <proposal categories="animales,movilidad" date="2015-09-15" districts="ciudad" id="387" topics="mascotas,transporte publico">Puedan viajar mascotas en transporte publico</proposal>
+        <proposal categories="deportes,movilidad" date="2017-03-01" districts="ciudad" id="16772" topics="ciclismo,transporte publico">SOPORTE BICICLETAS EN TRANSPORTE PUBLICO</proposal>
+        <proposal categories="empleo,movilidad" date="2018-11-25" districts="ciudad" id="24453" topics="abono de transportes,desempleo">abono transporte adultos parados sin cargas familiares</proposal>
+        <proposal categories="medio ambiente,movilidad,urbanismo" date="2018-11-07" districts="ciudad" id="23945" topics="medio ambiente,trenes,urbanismo">Ampliar la red de transporte de cercanias con lineas circulares</proposal>
+        <proposal categories="deportes,derechos sociales,economia,medio ambiente,movilidad" date="2015-09-22" districts="ciudad" id="1930" topics="actividad economica,bicimad,deportes,derechos humanos,medio ambiente">BiciMad Gratuito</proposal>
+        <proposal categories="movilidad" date="2016-03-28" districts="ciudad" id="9610" topics="aparcamientos,trenes">Ampliacion plazas parking en las estaciones de Tren de Cercanias</proposal>
+        <proposal categories="familia e infancia,medio ambiente,movilidad,sostenibilidad,urbanismo" date="2018-06-13" districts="ciudad" id="22923" topics="infancia,medio ambiente,sostenibilidad,transporte publico,urbanismo">Transporte publico gratuito para menores de 14 anos</proposal>
+        <proposal categories="familia e infancia,movilidad" date="2015-09-16" districts="ciudad" id="912" topics="infancia,transporte publico">Transporte publico gratuito para menores 16 anos</proposal>
+        <proposal categories="derechos sociales,tercera edad" date="2015-10-12" districts="ciudad" id="2960" topics="derechos humanos,jubilacion">bono transporte jubilados</proposal>
+        <proposal categories="movilidad" date="2015-09-16" districts="ciudad,san blas-canillejas" id="913" topics="transporte publico">Transporte publico en Las Rejas</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad,transparencia" date="2016-02-22" districts="ciudad" id="8082" topics="atascos,gobierno abierto,medio ambiente,sostenibilidad,transporte publico">Mejora transporte publico para evitar atascos innecesarios  y contaminacion</proposal>
+        <proposal categories="movilidad" date="2015-09-16" districts="ciudad" id="917" topics="abono de transportes">ABONO TRANSPORTES barato solo para salarios bajos.</proposal>
+        <proposal categories="movilidad" date="2015-11-03" districts="ciudad,puente de vallecas" id="3989" topics="abono de transportes">Precio Unico Abono Transportes sin limite para toda la Comunidad de Madrid</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
+        <proposal categories="movilidad" date="2018-03-16" districts="ciudad" id="21914" topics="autobuses,transporte publico">Maquinas para recargar la tarjeta de transporte en las paradas de bus</proposal>
+        <proposal categories="economia,equidad e integracion,movilidad" date="2017-10-21" districts="ciudad" id="19868" topics="actividad economica,autobuses,igualdad,metro">EMT y Metro acepten pagar con monedas desde 1 centimo (maquinas contadoras)</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad" date="2019-01-27" districts="ciudad" id="26015" topics="ciclismo,deportes,medio ambiente,transporte publico">TRANSPORTE PUBLICO GRATUITO PARA CICLISTAS</proposal>
+        <proposal categories="derechos sociales,equidad e integracion,movilidad,sostenibilidad,transparencia" date="2018-04-17" districts="ciudad" id="22434" topics="abono de transportes,derechos humanos,igualdad,sostenibilidad,transparencia">Abono transporte para jubilaciones anticipadas.</proposal>
+        <proposal categories="movilidad" date="2015-10-13" districts="ciudad" id="2979" topics="aparcamientos">Creacion calles prioritarias evitar aparcamiento en doble fila</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad,urbanismo" date="2016-10-08" districts="ciudad" id="13732" topics="aparcamiento regulado,medio ambiente,sostenibilidad,urbanismo">Paquete de medidas para paliar los efectos negativos del 'Gran APR' en 2018</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2017-01-18" districts="vicálvaro" id="15269" topics="autobuses,medio ambiente,sostenibilidad">Amliar Lineas de EMT hasta c/ Minerva (Valderribas-nuevo Vicalvaro)</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2019-07-08" districts="ciudad" id="27046" topics="medio ambiente,transporte publico">Aumentar el transporte publico</proposal>
+        <proposal categories="movilidad" date="2016-04-10" districts="barajas,hortaleza" id="10152" topics="autobuses,lineas de metro">valdebebas ampliar lineas de metro y autobuses  nocturno</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2015-10-13" districts="ciudad" id="2987" topics="autobuses,sostenibilidad,taxis,transporte publico">Prioridad de paso para autobuses, taxis.</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2016-02-22" districts="ciudad" id="8108" topics="medio ambiente,trenes">Ampliar horarios de tren cercanias</proposal>
+        <proposal categories="medio ambiente,movilidad,sostenibilidad" date="2015-12-08" districts="ciudad" id="6578" topics="aparcamientos,medio ambiente,metro,sostenibilidad">Construir parking cerca de las entradas de metro de acceso al centro</proposal>
+        <proposal categories="empleo,movilidad" date="2015-11-04" districts="ciudad" id="4531" topics="abono de transportes,desempleo">Ampliar abono transporte tarifa plana a parados</proposal>
+        <proposal categories="movilidad" date="2016-02-22" districts="ciudad" id="8116" topics="abono de transportes">ABONO TRANSPORTE COMO SUSCRIPCION</proposal>
+        <proposal categories="movilidad" date="2018-11-11" districts="arganzuela,carabanchel,usera" id="23988" topics="metro,transporte publico">Unir plaza eliptica con Atocha con una parada de metro entre mediase</proposal>
+        <proposal categories="economia,equidad e integracion,movilidad" date="2015-11-04" districts="ciudad" id="4539" topics="actividad economica,igualdad,trenes">Se debe ampliar el Transporte Azul a RENFE Y toda Madrid?</proposal>
         <proposal categories="" date="2015-11-15" districts="ciudad" id="5564" topics="">Madrid sin contaminacion</proposal>
+        <proposal categories="movilidad" date="2019-01-28" districts="puente de vallecas" id="26044" topics="aparcamientos">Parking disuasorio en estacion de Entrevias</proposal>
+        <proposal categories="derechos sociales,medio ambiente,movilidad,sostenibilidad,urbanismo" date="2016-02-25" districts="villa de vallecas" id="8637" topics="derechos humanos,medio ambiente,sostenibilidad,trenes,urbanismo">Hacer parkins en cercanias de Sta.Eugenia/Sierra de Guadalupe ampliar frecuencia</proposal>
+        <proposal categories="movilidad" date="2015-09-22" districts="barajas,ciudad" id="1985" topics="autobuses nocturnos">Incluir el Bus nocturno del aeropuerto en el abono</proposal>
+        <proposal categories="movilidad" date="2017-12-20" districts="ciudad" id="20419" topics="autobuses,trenes">Billetes de tren y autobus gratis para ninos hasta 12 anos</proposal>
+        <proposal categories="accesibilidad,asociaciones,derechos sociales,economia,sostenibilidad,tercera edad,transparencia" date="2015-09-22" districts="arganzuela,barajas,carabanchel,chamartín,chamberí,ciudad,ciudad lineal,fuencarral-el pardo,hortaleza,latina,moncloa-aravaca,moratalaz,puente de vallecas,san blas-canillejas,tetuán,usera,vicálvaro,villa de vallecas,villaverde" id="1988" topics="actividad economica,asociacionismo,derechos humanos,discapacitados,sostenibilidad,tercera edad,transparencia">personas con discapacidad igual a abono de tercera edad</proposal>
+        <proposal categories="" date="2016-05-07" districts="ciudad" id="11204" topics="">Todos iguales</proposal>
+        <proposal categories="movilidad" date="2017-06-23" districts="ciudad" id="18886" topics="limites de velocidad">Reducir  velocidad maxima en interior de M-30 en 10 km para transporte privado</proposal>
+        <proposal categories="derechos sociales,empleo,movilidad" date="2017-03-01" districts="ciudad" id="16839" topics="abono de transportes,derechos humanos,desempleo">Abono transporte gratuito para hijos de desempleados</proposal>
+        <proposal categories="" date="2015-12-09" districts="chamartín,ciudad,tetuán" id="6600" topics="">Transporte Saconia Plaza de Castilla</proposal>
+        <proposal categories="" date="2015-11-03" districts="ciudad" id="4045" topics="">Economizar</proposal>
+        <proposal categories="derechos sociales" date="2017-03-21" districts="ciudad" id="17872" topics="derechos humanos">Campana para respetar los asientos reservados</proposal>
+        <proposal categories="movilidad" date="2016-02-02" districts="ciudad" id="7633" topics="autobuses,metro,transporte publico">Prohibir musica a traves de dispositivos sin auriculares en Transporte Publico</proposal>
+        <proposal categories="" date="2019-01-12" districts="ciudad" id="25553" topics="">Abolir las restrictiones de circulacion en la M30</proposal>
+        <proposal categories="salud y sanidad" date="2017-01-19" districts="san blas-canillejas" id="15318" topics="hospitales">Centro de salud en el barrio de El  Salvador</proposal>
+        <proposal categories="movilidad" date="2018-03-17" districts="ciudad,moratalaz" id="21978" topics="bicimad">Extender BiciMad al barrio de Moratalaz</proposal>
+        <proposal categories="sostenibilidad" date="2018-03-17" districts="ciudad,moratalaz" id="21980" topics="car sharing">Extender Car2go al barrio de Moratalaz</proposal>
+        <proposal categories="deportes,medio ambiente,movilidad,transparencia" date="2016-04-19" districts="ciudad" id="10717" topics="ciclismo,gobierno abierto,medio ambiente,transporte publico">Fomentar el Transporte publico, bicicleta y motocicleta</proposal>
+        <proposal categories="movilidad,tercera edad" date="2017-01-19" districts="ciudad" id="15325" topics="abono de transportes,jubilacion,tercera edad">abono transporte para jubilados a partir de 60 anos igual al de mayores de 65</proposal>
+        <proposal categories="" date="2015-11-03" districts="ciudad,fuencarral-el pardo" id="4065" topics="">Mejorar el acceso a las tablas</proposal>
+        <proposal categories="derechos sociales" date="2016-03-29" districts="ciudad" id="9706" topics="derechos humanos">TRANSPORTE GRATIS DURANTE LA EDUCACION OBLIGATORIA</proposal>
+        <proposal categories="civismo" date="2017-02-03" districts="ciudad" id="15856" topics="convivencia">campana para mejorar la convivencia y el concepto de lo comun en los transporte</proposal>
+        <proposal categories="animales,movilidad" date="2015-11-25" districts="ciudad" id="6129" topics="areas caninas,autobuses,mascotas,metro,perros,transporte publico">Por un Madrid Dogfriendly!</proposal>
+        <proposal categories="derechos sociales,economia,medio ambiente,movilidad,sostenibilidad" date="2016-02-26" districts="ciudad" id="8690" topics="actividad economica,derechos humanos,medio ambiente,sostenibilidad,transporte publico">Transporte publico gratis para ninos hasta al menos 15 anos</proposal>
+        <proposal categories="movilidad,urbanismo" date="2016-05-11" districts="ciudad" id="11250" topics="abono de transportes,urbanismo">Abono transportes</proposal>
+        <proposal categories="movilidad" date="2017-03-02" districts="ciudad" id="16886" topics="abono de transportes">Abono transporte para adulto mas asequible</proposal>
+        <proposal categories="movilidad" date="2015-10-01" districts="ciudad" id="2553" topics="autobuses">Paradas de autobus del sXXI</proposal>
+        <proposal categories="movilidad" date="2016-04-12" districts="ciudad" id="10234" topics="aparcamientos">Cinturon de aparcamientos publicos alrededor de la capital.</proposal>
+        <proposal categories="movilidad,sostenibilidad" date="2015-09-15" districts="arganzuela,ciudad" id="508" topics="sostenibilidad,taxis">Crear un bono de viajes en taxi</proposal>
+        <proposal categories="economia,medio ambiente,movilidad,sostenibilidad,urbanismo" date="2018-11-28" districts="ciudad" id="24573" topics="actividad economica,medio ambiente,peajes,sostenibilidad,urbanismo,vehiculos">COBRAR UN PEAJE DE ACCESO A MADRID CAPITAL A TODOS AQUELLOS COCHES NO CENSADOS</proposal>
         <proposal categories="movilidad" date="2015-11-03" districts="ciudad,puente de vallecas,san blas-canillejas,villa de vallecas" id="4095" topics="autobuses">Linea EMT autobus San Blas-Vallecas</proposal>
-        <proposal categories="asociaciones,derechos sociales,medio ambiente,movilidad" date="2015-11-05" districts="ciudad,san blas-canillejas" id="4671" topics="asociacionismo,derechos humanos,medio ambiente,transporte publico">transporte publico.</proposal>
     </proposals>
     <topics quantity="1">
-        <topic quantity="8" value="transporte">
-            <aspect quantity="2" value="barrio">
-                <argument id="17562-1">
-                    <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no hay transporte publico que una directamente estos lugares</premise>
+        <topic quantity="26" value="transporte">
+            <aspect quantity="4" value="movilidad">
+                <argument id="4531-1">
+                    <claim>Los parados deberian tener transporte reducido</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ayudar a su movilidad en su busqueda de trabajo</premise>
                 </argument>
-                <argument id="15645-1">
-                    <claim>una mejora de comunicacion en cuanto a transporte publico / privado , en el barrio de Butarque</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>cada vez hay mas vecinos y menos medios</premise>
+                <argument id="13732-1">
+                    <claim>El futuro gran APR va a traer muchos efectos negativos de movilidad</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>no se potencia el transporte publico</premise>
                 </argument>
-            </aspect>
-            <aspect quantity="2" value="precio">
-                <argument id="4671-1">
-                    <claim>Que baje el precio del transporte</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>es muy caro</premise>
+                <argument id="8082-1">
+                    <claim>a los lugares de trabajo a traves del transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar la movilidad de los ciudadanos</premise>
                 </argument>
-                <argument id="11204-1">
-                    <claim>utilizamos el transporte publico cada dia , cada mes</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>no pagar un precio unico para todas las</premise>
+                <argument id="16772-1">
+                    <claim>Como continuidad a las medidas de mejora en movilidad que se estan desarrollando en la ciudad , se propone la instalacion de soportes</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el transporte de bicicletas particulares en</premise>
                 </argument>
             </aspect>
-            <aspect quantity="5" value="metro">
-                <argument id="20307-1">
-                    <claim>Los PAU del Norte Sanchinarro Las Tablas estan mal comunicados por transporte publico</claim>
-                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
-                    <premise>ineficacia de metro ligero</premise>
-                </argument>
-                <argument id="20146-1">
-                    <claim>Adosar a las marquesinas del Bus y entrada al metro , recoge colillas</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>los fumadores tiene el abito de tirarlas al suelo al tomar el transporte publico</premise>
-                </argument>
-                <argument id="13698-1">
-                    <claim>Hay muchos usuarios que se quedan sin transporte publico en sus zonas de residencia</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>en muchos lugares solo existe la renfe</premise>
-                </argument>
-                <argument id="1432-1">
-                    <claim>El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
-                </argument>
-                <argument id="15942-1">
-                    <claim>Se necesita transporte publico directo ( metro / bus ) para unir las dos zonas</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>es una pena que estando tan cerca se tarde una hora entre ambas , teniendo que coger dos autobuses actualmente</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="5" value="transportes">
-                <argument id="11250-1">
-                    <claim>Proponer que el abono transportes infantil , que es gratis hasta los 7 anos de amplie hasta los 16 anos</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>muchos ninos cuando empiezan la ESO</premise>
-                </argument>
-                <argument id="8116-1">
-                    <claim>La idea es que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
-                    <connector category="cause" function="support" subcategory="reason">pues</connector>
-                    <premise>quiza todo el mundo no quiere</premise>
-                </argument>
-                <argument id="2769-1">
-                    <claim>El Abono de transportes de Madrid dura 30 dias</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no todos los meses tienen 30 dias , hay varios meses que tienen 31</premise>
-                </argument>
-                <argument id="1692-2">
-                    <claim>Muy a menudo los transportes publicos han de combinarse</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>no hacer como en otras ciudades donde si tomas un medio a continuacion de otro solo pagas uno</premise>
-                </argument>
-                <argument id="24453-1">
-                    <claim>Los requisitos para obtener la reduccion del abono transportes para parados de larga duracion no es facil de conseguir</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>como traba ponen que se ha de tener cargas familiares , y los que no</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="5" value="centro">
-                <argument id="9307-2">
-                    <claim>Es imposible coger un transporte publico para ir al centro</claim>
-                    <connector category="cause" function="support" subcategory="reason">pues</connector>
-                    <premise>no paran por ir</premise>
-                </argument>
-                <argument id="12003-1">
-                    <claim>Seria necesario crear una biblioteca y centro cultural en Valderribas</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico</premise>
-                </argument>
-                <argument id="15981-1">
-                    <claim>Instalacion de un medio de transporte publico que conecte el centro comercial de Islazul con todos los barrios de Villaverde</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>son muchos los vecinos que acuden a dicho centro</premise>
-                </argument>
-                <argument id="4648-1">
-                    <claim>A pesar de ser una zona que se encuentra a tan solo 2 km de Atocha ( centro de Red de tranpostes ) , se tarda entre 30 -45min en llegar</claim>
-                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
-                    <premise>la casi inexistencia de transporte publico</premise>
-                </argument>
-                <argument id="5213-1">
-                    <claim>Se pierde mucho tiempo en viajar de un municipio al centro de la ciudad incluso mas de una hora</claim>
-                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise/>
-                </argument>
-            </aspect>
-            <aspect quantity="9" value="autobus">
-                <argument id="4853-1">
-                    <claim>Que la tarjeta de abono transporte para discapacitados incluya ademas de autobus y metro el transporte en tren cercanias , igual que el resto de tarjetas abono</claim>
-                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
-                    <premise>tenga que ser algo mas cara</premise>
-                </argument>
+            <aspect quantity="8" value="autobus">
                 <argument id="20419-1">
                     <claim>Me gustaria que el transporte fuese gratis para ninos de hasta 15 anos</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
@@ -173,20 +256,15 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>su conexion es nefasta en transporte publico</premise>
                 </argument>
-                <argument id="18013-1">
-                    <claim>Son 2 zonas que estan cerca</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no estan unidas por ningun tipo de transporte publico a lo largo de la Avenida de Arroyofresno</premise>
+                <argument id="21914-1">
+                    <claim>Poner maquinas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>cargar la tarjeta de transporte en todas las das de autobus , como existen en tantas ciudades europeas</premise>
                 </argument>
                 <argument id="22859-2">
                     <claim>Esta a menos de 10 minutos en coche</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no hay medio de transporte publico lo que causa un gran atasco por las mananas</premise>
-                </argument>
-                <argument id="7633-1">
-                    <claim>Todos los usuarios de Transporte Publico hemos viajado en un vagon , autobus o asiento , cerca de personas con recursos para un telefono inteligente</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no para los auriculares</premise>
                 </argument>
                 <argument id="5334-1">
                     <claim>Alargar el recorrido de las lineas de autobus de la EMT de Sanchinarro a los nuevos desarrollos Valdebebas-Carcacavas</claim>
@@ -203,44 +281,913 @@
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>carecemos de este medio de transporte en todo el Barrio de Imperial</premise>
                 </argument>
+                <argument id="2553-1">
+                    <claim>Que todas las paradas de autobus tengan letreros de cuanto tiempo falta para que pase el proximo autobus , de forma que se tenga mas informacion para decidir</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>espera o busca un</premise>
+                </argument>
             </aspect>
-            <aspect quantity="2" value="tarjeta">
-                <argument id="11530-1">
-                    <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
+            <aspect quantity="2" value="usuarios">
+                <argument id="23726-1">
+                    <claim>con el</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>bicimad</premise>
+                </argument>
+                <argument id="10996-1">
+                    <claim>Abono mesual a 20</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>todos los Usuarios de transporte publico de Comunidad de Madrid</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="aparcamiento">
+                <argument id="845-3">
+                    <claim>transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>todos</premise>
+                </argument>
+                <argument id="25766-1">
+                    <claim>Aumentar el area y numero de plazas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>aparcamiento</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="3" value="linea">
+                <argument id="25606-1">
+                    <claim>de esta linea</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>optimizar</premise>
+                </argument>
+                <argument id="25437-1">
+                    <claim>Aplicacion para el movil tipo ( ten + movil )</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>toda la linea de transporte publico</premise>
+                </argument>
+                <argument id="26115-1">
+                    <claim>Queria proponer un transporte publico rapido y eficaz del Ensanche de Vallecas hasta Vicalvaro o Valdebernardo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>comunicar con linea 9 y poder tener mas opciones a la linea 1</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="25" value="uso">
+                <argument id="14912-1">
+                    <claim>Ampliar la cobertura del Abono Transporte al servicio de Bicimad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el uso del transporte publico</premise>
+                </argument>
+                <argument id="9002-1">
+                    <claim>Deberia incluirse en el bono transporte joven 20X20 el servicio de bicicleta</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>, muchos jovenes darian uso a un transporte publico ecologico y deportivo</premise>
+                </argument>
+                <argument id="7553-1">
+                    <claim>Creo que incentivaria mas el uso del transporte publico</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>el Bono Transporte tuviese la opcion de comprar 50 viajes por un periodo de 3 meses</premise>
+                </argument>
+                <argument id="6163-1">
+                    <claim>Actuar sobre la jornada laboral y obligar a las grandes empresas a facilitar un transporte colectivo a sus empleados</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ir y venir del trabajo , junto con medidas sobre el transporte publico</premise>
+                </argument>
+                <argument id="7494-2">
+                    <claim>Impulsa uso transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ir a trabajar</premise>
+                </argument>
+                <argument id="12407-1">
+                    <claim>Propongo usar el telefono movil para pagar el aparcamiento y el transporte publico</claim>
+                    <connector category="explanation" function="support" subcategory="exemplification">por ejemplo</connector>
+                    <premise/>
+                </argument>
+                <argument id="21306-1">
+                    <claim>Se propone que se imponga el uso de transporte sostenible</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>las empresas que repartan paqueteria a domicilio</premise>
+                </argument>
+                <argument id="3257-1">
+                    <claim>La idea es incentivar el uso del transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los trabajadores que acuden a diario desde otros municipios de la periferia</premise>
+                </argument>
+                <argument id="5717-1">
+                    <claim>Se esta casi obligando al uso del transporte publico en la ciudad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
+                    <premise>en EMT no esta permitido la entrada de mascotas</premise>
+                </argument>
+                <argument id="18804-1">
+                    <claim>del pasaporte sostenible</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el uso de bicicletas y vehiculos electricos municipales como medio de transporte individual preferido</premise>
+                </argument>
+                <argument id="9239-1">
+                    <claim>Me parece bien regular el uso del coche y fomentar el uso del transporte publico pero</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>debo de pagar por aparcar en mi casa</premise>
+                </argument>
+                <argument id="9513-1">
+                    <claim>Poner aparcamiento de bicicletas en las puertas de los colegios e institutos</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el uso de este medio de transporte entre l@s chic@s</premise>
+                </argument>
+                <argument id="8410-1">
+                    <claim>Establecer aparcamientos seguros</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>bicicletas privadas en los principales accesos a la red de metro / cercanias  evitar sustracciones y fomentar el uso de este medio de transporte</premise>
+                </argument>
+                <argument id="26311-1">
+                    <claim>De coste reducido y vigilado en las entradas a Madrid con transporte publico hacia el centro tambien a precio reducido ( bono especial )</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>disuadir uso de vehiculo particular en la ciudad</premise>
+                </argument>
+                <argument id="8575-1">
+                    <claim>En muchas ciudades de Europa y del mundo se celebran eventos semanales / mensuales / anuales</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>promover el uso de los patines como medio de transporte ecologico , respetuoso y viable</premise>
+                </argument>
+                <argument id="7845-1">
+                    <claim>Regulacion y medios realistas y viables</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que sea seguro y practico el uso de la bici como medio de transporte privado</premise>
+                </argument>
+                <argument id="23795-1">
+                    <claim>La zona esta muy mal comunicada con el centro de Madrid por transporte publico y la creacion de esta linea ayudaria mucho a reducir el uso de coche particular</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>desplazarse</premise>
+                </argument>
+                <argument id="9610-1">
+                    <claim>Una de las estrategias para fomentar el uso del transporte publico es ofrecer un numero suficiente de plazas de aparcamiento gratuitas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>poder dejar el coche y usar el cercanias</premise>
+                </argument>
+                <argument id="24573-1">
+                    <claim>Para fomentar el uso del transporte publico y mejorar la calidad del aire , propongo cobrar un peaje de acceso a Madrid Capital</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>todos aquellos que deseen acceder con sus vehiculos privados</premise>
+                </argument>
+                <argument id="15117-1">
+                    <claim>Dada la necesidad de reducir el uso del coche privado</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">considerando</connector>
+                    <premise>que esta muy promocionada la compra de coche , veo necesario promocionar el uso del transporte publico como algo atractivo</premise>
+                </argument>
+                <argument id="26015-1">
+                    <claim>Acordar con EMT , Cercanias o bien Metro , el transporte gratuito en Madrid a los ciudadanos que accedan con una bicicleta</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el uso de esta y salvaguardar las</premise>
+                </argument>
+                <argument id="10717-1">
+                    <claim>Apoyo y fomento al transporte publico : subvencion abono , aumento de flotas para mejorar la frecuencia Adecuar la ciudad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar uso de la bicicleta ( carril bici real ... ) Fomentar el uso de mo</premise>
+                </argument>
+                <argument id="24693-1">
+                    <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico , pero</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
+                </argument>
+                <argument id="27046-1">
+                    <claim>Respecto a Madrid central habra que aumentar el uso del transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que la gente se pueda desplazar al centro y la periferia</premise>
+                </argument>
+                <argument id="2353-1">
+                    <claim>Es dificil fomentar el uso del transporte publico</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>a una familia de 4 miembros que quiera ir al centro le resulta mas caro hacerlo en bus o metro que utilizando un vehiculo particular y parking</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="18" value="zona">
+                <argument id="15269-1">
+                    <claim>Es una zona con mucha poblacion infantil y adolescente</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>queremos evitar mas transporte privado hay que facilitarles el transporte publico</premise>
+                </argument>
+                <argument id="13413-3">
+                    <claim>Crear un medio de transporte en esta zona</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar el desplazamiento</premise>
+                </argument>
+                <argument id="3904-1">
+                    <claim>Habilitar una zona en el transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que animales domesticos viajen acompanados de sus duenos</premise>
+                </argument>
+                <argument id="3215-3">
+                    <claim>muy escaso</claim>
+                    <connector category="explanation" function="support" subcategory="exemplification">como por ejemplo</connector>
+                    <premise>, la zona del hospital Sanitas</premise>
+                </argument>
+                <argument id="18013-1">
+                    <claim>Son 2 zonas que estan cerca</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no estan unidas por ningun tipo de transporte publico a lo largo de la Avenida de Arroyofresno</premise>
+                </argument>
+                <argument id="12003-1">
+                    <claim>Seria necesario crear una biblioteca y centro cultural en Valderribas</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico</premise>
+                </argument>
+                <argument id="12099-1">
+                    <claim>de Bicis ( Bicimad )</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>mejorar la movilidad en la zona</premise>
+                </argument>
+                <argument id="22375-1">
+                    <claim>Creacion de carriles Bus Vao</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>mejorar el acceso a la zona</premise>
+                </argument>
+                <argument id="20321-1">
+                    <claim>Creacion de carriles Bus VAO</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>mejorar el acceso a la zona</premise>
+                </argument>
+                <argument id="4065-1">
+                    <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes</premise>
+                </argument>
+                <argument id="6940-1">
+                    <claim>de transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>albergar toda la zona Comercial del poligono de las mercedes</premise>
+                </argument>
+                <argument id="11138-1">
+                    <claim>La mayoria estamos trabajando en las zonas alrededor de la comunidad de Madrid , quieremos ampliar la perimetro de la zona A</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>poder utilizar el transporte publico y bajar la contaminacion</premise>
+                </argument>
+                <argument id="25393-1">
+                    <claim>Nueva parada en la calle Danza para permitir a los ciudadanos moverse por esa zona , en la cual no se ofrece cobertura de servicio publico de transportes</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
+                    <premise>los nuevos supermercados y viviendas</premise>
+                </argument>
+                <argument id="20526-1">
+                    <claim>Nueva parada en la calle Danza para permitir a los ciudadanos moverse por esa zona , en la cual no se ofrece cobertura de servicio publico de transportes</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
+                    <premise>los nuevos supermercados y viviendas</premise>
+                </argument>
+                <argument id="10480-1">
+                    <claim>Facilitemos espacios en los distritos del sur</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que las multinacionales se establezcan en esta zona y no perdamos tanto tiempo en ir al norte y perder tiempo en transporte y conciliacion familiar</premise>
+                </argument>
+                <argument id="4648-1">
+                    <claim>A pesar de ser una zona que se encuentra a tan solo 2 km de Atocha ( centro de Red de tranpostes ) , se tarda entre 30 -45min en llegar</claim>
+                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
+                    <premise>la casi inexistencia de transporte publico</premise>
+                </argument>
+                <argument id="1988-1">
+                    <claim>Hola , se tenemos la opcion de la tarjeta azul pero solo vale</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>la zona A</premise>
+                </argument>
+                <argument id="2847-1">
+                    <claim>La tarjeta azul de transporte , tendria que ser valida</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>cercanias Renfe y  las zonas B1</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="9" value="precio">
+                <argument id="4671-1">
+                    <claim>Que baje el precio del transporte</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>es muy caro</premise>
+                </argument>
+                <argument id="2960-1">
+                    <claim>Mismo precio bono transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>todos los jubilados</premise>
+                </argument>
+                <argument id="18002-1">
+                    <claim>Utilizar la tarjeta de transporte recargable ( tipo la Barik de Bilbao )</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>la tercera edad a precio reducido</premise>
+                </argument>
+                <argument id="11204-1">
+                    <claim>utilizamos el transporte publico cada dia , cada mes</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>no pagar un precio unico para todas las</premise>
+                </argument>
+                <argument id="9060-1">
+                    <claim>Volver a implantar un precio de billete sencillo unico y universal , valido</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>cualquier trayecto y cualquier tipo de transporte</premise>
+                </argument>
+                <argument id="7221-1">
+                    <claim>Para que</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>utilizar el transporte publico los dias de mayor contaminacion atmosferica</premise>
+                </argument>
+                <argument id="16886-1">
+                    <claim>Reducir el precio de la tarjeta de abono de transporte para adulto en todas las zonas entre un 30-35 %</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que sea mas asequible y no pagar practicamente el triple que el abono joven</premise>
                 </argument>
                 <argument id="3166-1">
                     <claim>Solo se ha pensado en los jovenes para rebajar el precio de la tarjeta transporte y aumentar la edad para obtener este beneficio</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">sin embargo</connector>
                     <premise>nadie ha pensado en adelantar la edad de 65 anos</premise>
                 </argument>
+                <argument id="10847-1">
+                    <claim>Los pensionistas mayores de 65 anos tenemos una tarjeta de transporte con un precio de 12,30 euros pero</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>nuestra pareja tiene una edad inferior a 65 anos</premise>
+                </argument>
             </aspect>
-            <aspect quantity="5" value="personas">
-                <argument id="4065-1">
-                    <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
+            <aspect quantity="8" value="coche">
+                <argument id="597-1">
+                    <claim>Se deben de crear soluciones efectivas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que los madrilenos NO usen a diario el coche en trayectos cortos donde se puede usar el transporte publico , facilitar el acceso a utilizar el transporte</premise>
+                </argument>
+                <argument id="19068-2">
+                    <claim>El dinero recaudado serviria</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>mejorar transporte pbco</premise>
+                </argument>
+                <argument id="8108-1">
+                    <claim>mas transporte publico</claim>
+                    <connector category="cause" function="support" subcategory="reason">de acuerdo con</connector>
+                    <premise>usar poco o nada el coche</premise>
+                </argument>
+                <argument id="26044-1">
+                    <claim>Crear un aparcamiento junto a la estacion de Entrevias</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>animar a dejar el coche y coger el</premise>
+                </argument>
+                <argument id="25101-1">
+                    <claim>En dias de alta contaminacion tiene que haber mas autobuses</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que la gente que utiliza el coche pueda utilizar el</premise>
+                </argument>
+                <argument id="9976-1">
+                    <claim>Formar una buena red de transporte escolar</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que los padres no tuvieran que ir en coche todos los dias a todos los colegios de Madrid</premise>
+                </argument>
+                <argument id="20214-1">
+                    <claim>Que empresas privadas , red de transporte publico y ayuntamiento se pongan de acuerdo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar al trabajador su llegada al trabajo cuando se impida utilizar el coche por alta contaminacion</premise>
+                </argument>
+                <argument id="25553-1">
+                    <claim>la restriccion dentro de Madrid</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el transporte publico donde esta bien comunic , pero la M30 es lugar de paso  muchos desplazamientos que solo se pueden hacer con coche</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="cercanias">
+                <argument id="24202-1">
+                    <claim>Instalacion de maquinas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>sacar billetes de transporte metropolitano / cercanias en las salas de recogida de maletas en las Terminales del aeropuerto</premise>
+                </argument>
+                <argument id="25408-1">
+                    <claim>Crear una parada de tren de cercanias en el Puente de los Franceses</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>permitir el transporte de pasajeros desde la Clinica Moncloa y los colegios mayores hasta la estacion de Principe Pio</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="9" value="centro">
+                <argument id="9307-2">
+                    <claim>Es imposible coger un transporte publico para ir al centro</claim>
+                    <connector category="cause" function="support" subcategory="reason">pues</connector>
+                    <premise>no paran por ir</premise>
+                </argument>
+                <argument id="3869-1">
+                    <claim>El barrio de valdebebas carece de servicios basicos</claim>
+                    <connector category="explanation" function="support" subcategory="exemplification">tales como</connector>
+                    <premise>colegios , centro de salud , transporte , etc</premise>
+                </argument>
+                <argument id="24615-1">
+                    <claim>Si tenemos que ir al centro de Madrid en transporte publico mejoren los aparcamientos y construyan nuevos</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>poder desplazarnos</premise>
+                </argument>
+                <argument id="2269-1">
+                    <claim>Cerrar el centro de Madrid a vehiculos privados solo permitiendo transportes publicos y los que tengan permiso de minusvalia , carga de mercancias , emergencias , obras , etc</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>peatonalizar las calles</premise>
+                </argument>
+                <argument id="8458-1">
+                    <claim>Permitiria descongestionar el transporte publico actual en el centro evitando a millones de personas desplazarse hasta el centro</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>conectar con otra linea que le lleve a otro punto de la periferia</premise>
+                </argument>
+                <argument id="15981-1">
+                    <claim>Instalacion de un medio de transporte publico que conecte el centro comercial de Islazul con todos los barrios de Villaverde</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes</premise>
+                    <premise>son muchos los vecinos que acuden a dicho centro</premise>
+                </argument>
+                <argument id="4416-1">
+                    <claim>En el barrio de Moratalaz y el barrio de Valdebernardo , el transporte publico no se encuentra disenado</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>llegar de manera rapida al centro de la ciudad</premise>
+                </argument>
+                <argument id="9335-1">
+                    <claim>Ampliar algunas de las lineas de autobuses de la EMT ya existentes</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que crucen la ciudad de este a oeste pasando por el centro de Madrid  facilitar la movilidad en transporte publico</premise>
+                </argument>
+                <argument id="5213-1">
+                    <claim>Se pierde mucho tiempo en viajar de un municipio al centro de la ciudad incluso mas de una hora</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise/>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="tarjeta">
+                <argument id="5347-2">
+                    <claim>Los que se ven afectados tendrian derecho a tarjeta de transporte publico gratis</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los dias que se le impida la circulacion</premise>
+                </argument>
+                <argument id="11530-1">
+                    <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="medio">
+                <argument id="19664-1">
+                    <claim>Responsabilizar a las empresas de ofrecer un medio de transporte colectivo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>reducir los desplazamientos al trabajo en vehiculos particulares de escasa ocupacion</premise>
+                </argument>
+                <argument id="1259-1">
+                    <claim>Creo que es necesario ampliar los kilometros de carriles bici existentes en la ciudad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que las bicicleta se convierta en un medio de transporte alternativo real</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="10" value="barrio">
+                <argument id="21086-1">
+                    <claim>Lineas de nueva creacion EMT - Empresa Municipal de Transportes de Madrid</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el barrio El Canaveral ( Vicalvaro )</premise>
+                </argument>
+                <argument id="17562-1">
+                    <claim>El barrio de Saconia ( Valdezarza ) esta relativamente cerca a la estacion de Chamartin</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no hay transporte publico que una directamente estos lugares</premise>
+                </argument>
+                <argument id="16412-1">
+                    <claim>en mi barrio aparcan cada dia mas y mas coches de Poblaciones limitrofes</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>luego coger el transporte publico  ir a sus lugares de trabajo</premise>
+                </argument>
+                <argument id="15645-1">
+                    <claim>de comunicacion</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">en cuanto a</connector>
+                    <premise>transporte publico / privado</premise>
+                </argument>
+                <argument id="4155-1">
+                    <claim>Me gustaria que desde el intercambiador de Avda America hubiese un autobus directo a Las Tablas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar el acceso al barrio en transporte publico y reducir los atascos</premise>
+                </argument>
+                <argument id="15318-1">
+                    <claim>transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el Barrio de El Salvador y alrededores</premise>
+                </argument>
+                <argument id="21980-1">
+                    <claim>Ahora este servicio se queda al entrar en Moratalaz viniendo desde el barrio de la Estrella , y creo que seria una buena alternativa de transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el barrio</premise>
+                </argument>
+                <argument id="21978-1">
+                    <claim>Ahora este servicio se queda al entrar en Moratalaz viniendo desde el barrio de la Estrella , y creo que seria una buena alternativa de transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el barrio</premise>
+                </argument>
+                <argument id="21743-1">
+                    <claim>La linea 153 de la EMT , une el Distrito de Hortaleza con el barrio de Las Rosas , es el transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el Estadio Metropolitano</premise>
+                </argument>
+                <argument id="17239-1">
+                    <claim>Las Tablas es un Hormiguero en el que quedas atrapado de Lunes a Viernes y el Transporte del T-61 solo se piensa</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los trabajadores q vienen no  los que salen del barrio todo el ano</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="servicio">
+                <argument id="10981-2">
+                    <claim>De que sirve</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>disponemos de un servicio de transporte publico estupendo</premise>
+                </argument>
+                <argument id="16040-1">
+                    <claim>Ya hay disponibles lineas que conectan las distintas facultades de la UCM con barrios</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>hay muchos que no tienen este servicio , dejando a alumnos y profesores sin un transporte eficiente</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="abono">
+                <argument id="23366-1">
+                    <claim>Permitir la posibilidad de adquirir abono transporte por quincenas o semanas</claim>
+                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
+                    <premise>proporcionalmente sea algo mas caro que el abono mensual</premise>
+                </argument>
+                <argument id="797-1">
+                    <claim>Hasta ahora existe un abono transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>jovenes</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="12" value="personas">
+                <argument id="3265-1">
+                    <claim>Ya que estan implicados de una forma u otra tanto la EMT como el Consorcio de Transporte de Madrid pienso que deberia ser gratis</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los que tenemos el abono transporte</premise>
+                </argument>
+                <argument id="548-1">
+                    <claim>En otros paises existe la gratuidad en el transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>las personas discapacitadas</premise>
+                </argument>
+                <argument id="9600-1">
+                    <claim>Estimo importante , mejorar los medios de informacion que se llevan acabo en el transporte publico</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
+                    <premise>senalizaciones o informaciones a personas con diversidad funcional</premise>
+                </argument>
+                <argument id="26222-1">
+                    <claim>Habilitar escaleras mecanicas y / o ascensor en la Renfe de Las Aguilas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que las personas con movilidad reducida puedan utilizar este medio de transporte</premise>
+                </argument>
+                <argument id="5725-1">
+                    <claim>Propongo que a las esposas de menos de 65 anos se les facilite el abono transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>personas mayores de 65 anos que lo tengan ya sus espos</premise>
+                </argument>
+                <argument id="7633-1">
+                    <claim>Todos los usuarios de Transporte Publico hemos viajado en un vagon , autobus o asiento , cerca de personas con recursos para un telefono inteligente</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no para los auriculares</premise>
                 </argument>
                 <argument id="4107-1">
-                    <claim>Existen numerosas discapacidades hoy en dia</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>solo hay 2 opciones para el transporte publico , y para ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
+                    <claim>Existen numerosas discapacidades hoy en dia , pero solo hay 2 opciones para el transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
                 </argument>
                 <argument id="15004-1">
                     <claim>Estaria bien que hubiese un bus de la EMT de Alonso Martinez a Moncloa</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>facilitaria el transporte a las personas que necesitan ir hacia allí y se formaria menos atascos</premise>
                 </argument>
+                <argument id="1537-1">
+                    <claim>Pedir a los ayuntamientos de Madrid y Rivas la creacion de un carril bici</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el desplazamiento seguro de las personas que se movilizan diariamente en este medio de transporte ecologico</premise>
+                </argument>
                 <argument id="4045-1">
                     <claim>Buenas tardes , mi propuesta es para que tambien se baje la tarifa del transporte publico de las personas mayores de 26</claim>
                     <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
                     <premise>estemos trabajando algunos , el sueldo es pequeno y hay mas gastos</premise>
                 </argument>
+                <argument id="9026-1">
+                    <claim>Poner un gancho que sostenga las bicicletas en la parte frontal de los autobuses publicos</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que las personas que utilicen el transporte publico y la bici , puedan dejarla de forma segura y comoda</premise>
+                </argument>
                 <argument id="23906-1">
                     <claim>Las personas que tenemos que ir Madrid a trabajar y tenemos un horario de entrada de las 7 de la manana nos vemos obligados a rechazar dicho puesto</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>no tenemos transporte para salir de Parque Co</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="3" value="edad">
+                <argument id="24742-1">
+                    <claim>Se trata de ampliar el intervalo de edad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>utilizar el transporte publico de manera gratuita</premise>
+                </argument>
+                <argument id="9706-1">
+                    <claim>crear un transporte publico gratuito</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los menores en edad escolar obligatoria</premise>
+                </argument>
+                <argument id="3989-1">
+                    <claim>Abono Transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>moverse por toda la Comunidad de Madrid ,  los ciudadanos comprendidos entre la edad de 30 a 60 anos</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="vehiculos">
+                <argument id="10234-1">
+                    <claim>de aparcamientos</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>limitar la entrada de vehiculos</premise>
+                </argument>
+                <argument id="26358-1">
+                    <claim>Reformar los bajos del puente de vallecas , poner puntos de carga para vehiculos electricos y poner estaciones de Bicimad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>fomentar el transporte sostenible</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="6" value="autobuses">
+                <argument id="12969-2">
+                    <claim>Y teniendo que pagar dos billetes (</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">en caso de</connector>
+                    <premise/>
+                </argument>
+                <argument id="11397-1">
+                    <claim>La calle Segovia podria incorporarse al casco historico peatonalizado , dada la densidad de peatones que existen</claim>
+                    <connector category="explanation" function="support" subcategory="exemplification">por ejemplo</connector>
+                    <premise/>
+                </argument>
+                <argument id="3843-1">
+                    <claim>Serian necesarios autobuses publicos que fueran del ambulatorio al hospital</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>el transporte privado es muy costoso y muchos ciudadanos no se lo pueden permitir con sus pensiones</premise>
+                </argument>
+                <argument id="387-1">
+                    <claim>Que nuestras mascotas , , perros sobre todo , pueda viajar en transporte publico sin limitaciones</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">salvo</connector>
+                    <premise>las que se estipulen como que el animal tenga entrenamiento o un numero determido en autobuses</premise>
+                </argument>
+                <argument id="2987-1">
+                    <claim>Dar prioridad de paso a los autobuses y taxis que se encuentran atascados en los carriles bus</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>optimizar y fomentar el transporte publico y reducir los tiempos de los trayectos de los mismos</premise>
+                </argument>
+                <argument id="3251-1">
+                    <claim>Los vecinos de Aravaca tenemos poco transporte publico y encima nos piden el B1 desde Moncloa</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>subir a los autobuses de LLorente</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="4" value="trafico">
+                <argument id="12981-2">
+                    <claim>El transporte publico y residentes</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>podrian acceder</premise>
+                </argument>
+                <argument id="2979-1">
+                    <claim>Creacion calles prioritarias donde control sobre aparcamiento en doble fila sea mas vigilado y controlado</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>incrementar fluidez del trafico privado y transporte publico</premise>
+                </argument>
+                <argument id="23945-1">
+                    <claim>Ampliar la red de transporte de cercanias con lineas circulares</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>descargar el trafico de las carreteras que rodean Madrid ( M30 , M40 , M45 y M50 ) y contaminar menos</premise>
+                </argument>
+                <argument id="12487-5">
+                    <claim>Lo digo por que el pasado dia 6 de Julio , deje a mis padres mayores en la puerta L del hospital ( no estan nada agiles</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que vayan en transporte publico</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="23" value="metro">
+                <argument id="8637-1">
+                    <claim>Fomentar el transporte publico , descongestionar el centro de Madrid , ademas para el cierre de linea 1 de metro , se pueda estacionar el vehiculo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>usar otro transporte debiendo ampliar su frecuencia</premise>
+                </argument>
+                <argument id="4853-1">
+                    <claim>Que la tarjeta de abono transporte para discapacitados incluya ademas de autobus y metro el transporte en tren cercanias , igual que el resto de tarjetas abono</claim>
+                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
+                    <premise>tenga que ser algo mas cara</premise>
+                </argument>
+                <argument id="4658-2">
+                    <claim>, especialmente metro</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">en cuanto a</connector>
+                    <premise>transporte publico</premise>
+                </argument>
+                <argument id="10152-1">
+                    <claim>Presento esta propuesta</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
+                    <premise>la necesidad de comunicar valdebebas con mas medios de transportes publicos</premise>
+                </argument>
+                <argument id="913-1">
+                    <claim>del servicio de transporte publico - autobus y metro -</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el barrio de las Rejas</premise>
+                </argument>
+                <argument id="7926-1">
+                    <claim>Madrid y su transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>personas con movilidad reducida</premise>
+                </argument>
+                <argument id="15368-1">
+                    <claim>Dar solucion a las kundas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>el transporte de drogadictos que tiene lugar en metro Sierra de Guadalupe</premise>
+                </argument>
+                <argument id="20307-1">
+                    <claim>Los PAU del Norte Sanchinarro Las Tablas estan mal comunicados por transporte publico</claim>
+                    <connector category="cause" function="support" subcategory="reason">debido a</connector>
+                    <premise>ineficacia de metro ligero</premise>
+                </argument>
+                <argument id="9051-1">
+                    <claim>El parking disuasorio de aviacion espanola debe ser asfaltado</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>facilitar el acceso a Madrid en medio de transporte publico</premise>
+                </argument>
+                <argument id="23988-1">
+                    <claim>Es necesario mejorar el transporte publico</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>sacar mas coches del centro</premise>
+                </argument>
+                <argument id="25305-1">
+                    <claim>Este aparcamiento era publico y disuasorio para no entrar con coche a Madrid Propongo su recuperacion</claim>
+                    <connector category="explanation" function="support" subcategory="exemplification">tal como</connector>
+                    <premise>era inicialmente Favoreceria la utilizacion del transporte publico</premise>
+                </argument>
+                <argument id="20146-1">
+                    <claim>Adosar a las marquesinas del Bus y entrada al metro , recoge colillas</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>los fumadores tiene el abito de tirarlas al suelo al tomar el transporte publico</premise>
+                </argument>
+                <argument id="13698-1">
+                    <claim>Hay muchos usuarios que se quedan sin transporte publico en sus zonas de residencia porque en muchos lugares solo existe la renfe y no pueden volver</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">salvo</connector>
+                    <premise>buho</premise>
+                </argument>
+                <argument id="15196-1">
+                    <claim>Transporte gratuito ( metro y autobus )</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>todas y todos</premise>
+                </argument>
+                <argument id="1432-1">
+                    <claim>El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
+                </argument>
+                <argument id="6578-1">
+                    <claim>Contruir grandes parking gratuitos o de precios razonables , cercanos a las entradas de metro fuera de la m-30</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>propiciar el acceso a al transporte publico en el centro de Madrid</premise>
+                </argument>
+                <argument id="19868-1">
+                    <claim>Que se permita pagar los autobuses y el metro con monedas desde 1 centimo a traves de maquinas contadoras y que tambien se puedan usar</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>recargar las distintas tarjetas de transporte</premise>
+                </argument>
+                <argument id="15220-1">
+                    <claim>Una hora se tarda desde la peineta hasta el Ramon y Cajal por la mala comunicacion Del transporte publico</claim>
+                    <connector category="explanation" function="support" subcategory="restatement">esto es</connector>
+                    <premise>mas sangrante tratandose de personas mayores y sin coche</premise>
+                </argument>
+                <argument id="13163-1">
+                    <claim>Que cada ciudadano pueda proponer y aceptar propuestas sobre el transporte publico</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">en este caso</connector>
+                    <premise>el Metro de Madrid y una vez se pudiera llevar a cabo el Ayuntamiento traslade las propuestas</premise>
+                </argument>
+                <argument id="8065-1">
+                    <claim>La empresa de Metro debera realizar las medidas tecnicas necesarias</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que el tren entre las estaciones de Tres Olivos y las Tablas pueda circular a una velocidad adecuada del medio de transporte</premise>
+                </argument>
+                <argument id="8708-1">
+                    <claim>Algunos usuarios de transporte publico solo usamos renfe , al ser solo de dos usos diarios no me sirve para nada y tengo que comprar el de metro que vale 55</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">frente a</connector>
+                    <premise>los 29 de Renfe</premise>
+                </argument>
+                <argument id="15942-1">
+                    <claim>Se necesita transporte publico directo ( metro / bus ) para unir las dos zonas</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>es una pena que estando tan cerca se tarde una hora entre ambas , teniendo que coger dos autobuses actualmente</premise>
+                </argument>
+                <argument id="5737-1">
+                    <claim>Que vuelvan los Metro-buho</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que la gente que sale los fin de semana por la noche tengan mas medios de transporte  llegar a casa y no tengan que esperar mas de 20 min en la da por el Buho</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="4" value="contaminacion">
+                <argument id="5564-1">
+                    <claim>A veces es necesario usar el vehiculo privado</claim>
+                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
+                    <premise>nos gustaria utilizar mas el transporte publico</premise>
+                </argument>
+                <argument id="2306-2">
+                    <claim>pares e impares</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>conductores</premise>
+                </argument>
+                <argument id="6890-1">
+                    <claim>Recuperar y reforzar el transporte publico de las noches del 24 y 31 de diciembre</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>evitar contaminacion y accidentes</premise>
+                </argument>
+                <argument id="18886-1">
+                    <claim>Reducir 10 km la velocidad maxima en interior de la M-30 , con controles de velocidad</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>reducir la contaminacion , aumentar la eficacia transporte publico , reducir vulnerabilidad ciclista</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="13" value="transportes">
+                <argument id="3919-1">
+                    <claim>Reducir el costo de los diferentes billetes de transporte , ampliar el horario de los diferentes servicios de transportes</claim>
+                    <connector category="consequence" function="support" subcategory="result">por tanto</connector>
+                    <premise>aumentaria el numero de usuarios</premise>
+                </argument>
+                <argument id="11250-1">
+                    <claim>Proponer que el abono transportes infantil , que es gratis hasta los 7 anos de amplie hasta los 16 anos</claim>
+                    <connector category="cause" function="support" subcategory="reason">ya que</connector>
+                    <premise>muchos ninos cuando empiezan la ESO</premise>
+                </argument>
+                <argument id="15856-1">
+                    <claim>Habria que hacer una campana</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>mejorar la convivencia y el concepto de lo comun en los transportes publicos</premise>
+                </argument>
+                <argument id="8116-1">
+                    <claim>La idea es que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
+                    <connector category="cause" function="support" subcategory="reason">pues</connector>
+                    <premise>quiza todo el mundo no quiere</premise>
+                </argument>
+                <argument id="17035-1">
+                    <claim>Propongo un abono transportes</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ninos</premise>
+                </argument>
+                <argument id="2769-1">
+                    <claim>El Abono de transportes de Madrid dura 30 dias</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no todos los meses tienen 30 dias , hay varios meses que tienen 31</premise>
+                </argument>
+                <argument id="508-1">
+                    <claim>Al igual que el resto de transportes tienen una tarifa que ' premia ' con mejores precios a los usuarios habituales , deberia exixtir</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los de taxi</premise>
+                </argument>
+                <argument id="1692-2">
+                    <claim>Muy a menudo los transportes publicos han de combinarse porque no hacer como en otras ciudades donde</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>tomas un medio a continuacion de otro</premise>
+                </argument>
+                <argument id="20149-1">
+                    <claim>Porfavor retiren ya mala publicidad delas calles ; postes aceras , paradas de transportes publicos</claim>
+                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
+                    <premise>ponen usen para buenos fines ; como concienciar , educar</premise>
+                </argument>
+                <argument id="2836-1">
+                    <claim>Municipalizar el servicio de alquiler de bicicletas electricas de Madrid ( ' bici-madrid ' ) convirtiendolo en un servicio publico mas , de transportes , y no en un negocio privado de alquiler</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>turistas</premise>
+                </argument>
+                <argument id="10371-1">
+                    <claim>Creo necesario una linea de bus que vaya por Sierra Toledana</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>unir dos barrios tan concurridos como Vallecas y Moratalaz No hay ningun medio de transportes  este recorrido tan necesario</premise>
+                </argument>
+                <argument id="917-1">
+                    <claim>Los descuentos en el Abono Transportes son por EDAD , sin mirar la capacidad economica del beneficiario , ejemplo : ABONO tercera edad , 13 , gane el jubilado 500 o gane 2000</claim>
+                    <connector category="explanation" function="support" subcategory="restatement">esto es</connector>
+                    <premise>INADMISIBLE</premise>
+                </argument>
+                <argument id="24453-1">
+                    <claim>Los requisitos para obtener la reduccion del abono transportes para parados de larga duracion no es facil de conseguir</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>como traba ponen que se ha de tener cargas familiares , y los que no</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="5" value="anos">
+                <argument id="8690-1">
+                    <claim>ciudades europeas</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>los ninos</premise>
+                </argument>
+                <argument id="22923-1">
+                    <claim>El transporte publico deberia fomentarse</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que las familias con ninos puedan utilizarlo</premise>
+                </argument>
+                <argument id="912-2">
+                    <claim>Si queremos incentivar a nuestros hijos a usar el transporte publico deberia ser gratis</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ellos</premise>
+                </argument>
+                <argument id="15325-1">
+                    <claim>a partir de 60 anos</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>jubilados</premise>
+                </argument>
+                <argument id="22434-1">
+                    <claim>Que un jubilado menor de 65 anos ( jubilacion anticipada ) , tenga derecho al abono transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>la edad de 65 anos ( jubilacion ordinaria )</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="3" value="carriles">
+                <argument id="2766-1">
+                    <claim>Crear calzadas o carriles reservados</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>transporte publico en los accesos a Madrid por carretera , que son competencia municipal</premise>
+                </argument>
+                <argument id="25228-1">
+                    <claim>carriles bici</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>entorpecer la circulacion del transporte publico</premise>
+                </argument>
+                <argument id="2367-1">
+                    <claim>Soterrar el Paseo del Prado</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>disponer de un verdadero paseo de los Museos dejando unicamente 2 carriles  el transporte publico ( buses , taxis y motos ) y creacion de un</premise>
                 </argument>
             </aspect>
         </topic>
