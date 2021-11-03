@@ -39,6 +39,7 @@ manifest.mf
 .DS_Store
 
 ##############################
-## Others
+## Python
 ##############################
 db_config.yml
+analysis/.ipynb_checkpoints/*
