@@ -126,44 +126,47 @@ public class DMDBManager {
     
     public Map<Integer, DMProposalSummary> selectProposalsSummary(List<Argument> arguments) throws Exception {
         Map<Integer, DMProposalSummary> proposals = new HashMap<>();
-        Argument argument;
-        String proposalID;
-        String whereCond = "";
         
-        for (int i = 0; i < arguments.size(); i++) {
-            argument = arguments.get(i);
-            proposalID = argument.sentenceID.split("-")[0];
-            whereCond += (i > 0 ? ", " : "") + proposalID;
-        }
-        System.out.println("Id list: " + whereCond);
-        
-        String query = "SELECT p.id, p.date, p.title, " +
-                       "       IFNULL(GROUP_CONCAT(DISTINCT pc.category), '') AS categories, " +
-                       "       IFNULL(GROUP_CONCAT(DISTINCT pd.district), '') AS districts, " +
-                       "       IFNULL(GROUP_CONCAT(DISTINCT pt.topic), '') AS topic " +
-                       "  FROM proposals AS p " +
-                       "  LEFT OUTER JOIN " +
-                       "       proposal_categories AS pc ON p.id = pc.id " +
-                       "  LEFT OUTER JOIN " +
-                       "       proposal_locations AS pd ON p.id = pd.id " +
-                       "  LEFT OUTER JOIN " +
-                       "       proposal_topics AS pt ON p.id = pt.id " +
-                       " WHERE p.id IN (" + whereCond + ")" +
-                       " GROUP BY p.id, p.date, p.title;";
-        ResultSet rs = this.db.executeSelect(query);
-        
-        while (rs != null && rs.next()) {
-            int id = rs.getInt("id");
-            String title = rs.getString("title");
-            String date = rs.getString("date");
-            String categories = rs.getString("categories").toLowerCase();
-            String districts = rs.getString("districts").toLowerCase();
-            String topics = rs.getString("topic").toLowerCase();
+        if (arguments.size() > 0) {
+            Argument argument;
+            String proposalID;
+            String whereCond = "";
 
-            DMProposalSummary proposal = new DMProposalSummary(id, title, date, categories, districts, topics);
-            proposals.put(id, proposal);
+            for (int i = 0; i < arguments.size(); i++) {
+                argument = arguments.get(i);
+                proposalID = argument.sentenceID.split("-")[0];
+                whereCond += (i > 0 ? ", " : "") + proposalID;
+            }
+            System.out.println("Id list: " + whereCond);
+
+            String query = "SELECT p.id, p.date, p.title, " +
+                           "       IFNULL(GROUP_CONCAT(DISTINCT pc.category), '') AS categories, " +
+                           "       IFNULL(GROUP_CONCAT(DISTINCT pd.district), '') AS districts, " +
+                           "       IFNULL(GROUP_CONCAT(DISTINCT pt.topic), '') AS topic " +
+                           "  FROM proposals AS p " +
+                           "  LEFT OUTER JOIN " +
+                           "       proposal_categories AS pc ON p.id = pc.id " +
+                           "  LEFT OUTER JOIN " +
+                           "       proposal_locations AS pd ON p.id = pd.id " +
+                           "  LEFT OUTER JOIN " +
+                           "       proposal_topics AS pt ON p.id = pt.id " +
+                           " WHERE p.id IN (" + whereCond + ")" +
+                           " GROUP BY p.id, p.date, p.title;";
+            ResultSet rs = this.db.executeSelect(query);
+            
+            while (rs != null && rs.next()) {
+                int id = rs.getInt("id");
+                String title = rs.getString("title");
+                String date = rs.getString("date");
+                String categories = rs.getString("categories").toLowerCase();
+                String districts = rs.getString("districts").toLowerCase();
+                String topics = rs.getString("topic").toLowerCase();
+
+                DMProposalSummary proposal = new DMProposalSummary(id, title, date, categories, districts, topics);
+                proposals.put(id, proposal);
+            }
+            rs.close();
         }
-        rs.close();
         
         return proposals;
     }
