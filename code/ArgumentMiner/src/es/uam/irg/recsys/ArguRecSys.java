@@ -66,6 +66,7 @@ public class ArguRecSys {
         
         // Get proposals summary for selected arguments
         Map<Integer, DMProposalSummary> proposals = getProposalsSummary(arguments);
+        System.out.println(">> Total proposals: " + proposals.size());
         
         if (!arguments.isEmpty() && !proposals.isEmpty()) {
             Map<String, Integer> aspects = getFreqAspects(arguments);
@@ -75,7 +76,7 @@ public class ArguRecSys {
             Map<String, List<Argument>> recommendations = getRecommendations(arguments, aspects, minAspectOccur);
             System.out.println(">> Total recommended topics: " + recommendations.size());
             
-            result = saveRecommendations(topic, proposals, recommendations);
+            result = saveRecommendations(this.topic, proposals, recommendations);
             if (result) {
                 System.out.println(">> Recommendations saved correctly.");
             }
@@ -133,10 +134,10 @@ public class ArguRecSys {
         }
         
         for (String value : listAspects) {
-            count = aspects.containsKey(value) ? aspects.get(value) : 0;
+            count = aspects.getOrDefault(value, 0);
             aspects.put(value, count + 1);
         }
-        
+                
         return FunctionUtils.sortMapByValue(aspects);
     }
     
@@ -193,7 +194,7 @@ public class ArguRecSys {
                 for (Argument argument : arguments) {
                     if (!argUsed.contains(argument.sentenceID)) {
                         if (argument.getNounsSet().contains(aspect)) {
-                            List<Argument> arguList = recommendations.containsKey(aspect) ? recommendations.get(aspect) : new ArrayList<>();
+                            List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
                             arguList.add(argument);
                             recommendations.put(aspect, arguList);
                             argUsed.add(argument.sentenceID);
