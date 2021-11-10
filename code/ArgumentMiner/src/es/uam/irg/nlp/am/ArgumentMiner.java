@@ -17,6 +17,7 @@ import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -37,6 +38,7 @@ public class ArgumentMiner {
     private Map<String, Object> mdbSetup;
     private Map<String, Object> msqlSetup;
     private Map<Integer, DMProposal> proposals;
+    private HashSet<String> stopwords;
     private boolean verbose = true;
     
     /**
@@ -51,6 +53,7 @@ public class ArgumentMiner {
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
         this.proposals = getArgumentativeProposals(maxProposals);
+        this.stopwords = getStopwordList(language);
     }
     
     /**
@@ -125,7 +128,6 @@ public class ArgumentMiner {
      * Create the linker manager object.
      * 
      * @param lang
-     * @param verbose
      * @return
      */
     private ArgumentLinkerManager createLinkerManager(String lang) {
@@ -168,7 +170,17 @@ public class ArgumentMiner {
         
         return proposals;
     }
-        
+    
+    /**
+     * 
+     * @param language
+     * @return 
+     */
+    private HashSet<String> getStopwordList(String lang) {
+        return IOManager.readStopwordList(lang, this.verbose);
+    }
+    
+    
     /**
      * Saves the arguments in a plain text file.
      * 
