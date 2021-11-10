@@ -11,11 +11,11 @@ import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -72,9 +72,7 @@ public class IOManager implements Constants {
 
                 reader.close();
             }
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+            
         } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -106,6 +104,43 @@ public class IOManager implements Constants {
     
     /**
      * 
+     * @param lang
+     * @return 
+     */
+    public static HashSet<String> readStopwordList(String lang, boolean verbose) {
+        HashSet<String> stopwords = new HashSet<>();
+        String language = (lang.equals(LANG_EN) ? "english" : "spanish");
+        String stopwordsFilepath = STOPWORDS_FILEPATH.replace("{}", language);
+        
+        try {
+            // Get the file
+            File txtFile = new File(stopwordsFilepath);
+
+            // Check if the specified file exists or not
+            if (txtFile.exists()) {
+                BufferedReader reader = new BufferedReader( new FileReader(txtFile));
+                String word;
+
+                while ((word = reader.readLine()) != null) {
+                    stopwords.add(word);
+                }
+
+                reader.close();
+            }
+            
+        } catch (IOException ex) {
+            Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if (verbose) {            
+            System.out.println(">> Stopwords: " + stopwords.size());
+        }
+        
+        return stopwords;
+    }
+    
+    /**
+     * 
      * @param filepath
      * @return 
      */
@@ -123,7 +158,7 @@ public class IOManager implements Constants {
                 data = (Map<String, Object>) yaml.load(inputStream);
             }
         
-        } catch (FileNotFoundException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         
