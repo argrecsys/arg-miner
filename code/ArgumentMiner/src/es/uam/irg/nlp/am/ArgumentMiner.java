@@ -33,6 +33,7 @@ import org.json.JSONObject;
 public class ArgumentMiner {
     
     // Class members
+    private boolean annotateComments;
     private String language;
     private ArgumentLinkerManager lnkManager;
     private Map<String, Object> mdbSetup;
@@ -44,15 +45,17 @@ public class ArgumentMiner {
     /**
      * Class constructor.
      * 
-     * @param language
-     * @param maxProposals 
+     * @param language 
+     * @param annotateComments 
+     * @param customProposalID 
      */
-    public ArgumentMiner(String language, int maxProposals) {
+    public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalID) {
         this.language = language;
+        this.annotateComments = annotateComments;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
-        this.proposals = getArgumentativeProposals(maxProposals);
+        this.proposals = getArgumentativeProposals(customProposalID);
         this.stopwords = getStopwordList(language);
     }
     
@@ -140,7 +143,7 @@ public class ArgumentMiner {
      * @param topN
      * @return 
      */
-    private Map<Integer, DMProposal> getArgumentativeProposals(int topN) {
+    private Map<Integer, DMProposal> getArgumentativeProposals(Integer[] customProposalID) {
         Map<Integer, DMProposal> proposals = null;
         
         try {
@@ -157,8 +160,12 @@ public class ArgumentMiner {
                 dbManager = new DMDBManager();
             }
             
-            //proposals = dbManager.selectCustomProposals(topN);
-            proposals = dbManager.selectProposals(topN, this.lnkManager.getLexicon(false));
+            if (customProposalID.length > 0) {
+                proposals = dbManager.selectProposals(customProposalID);
+            }
+            else {
+                proposals = dbManager.selectProposals(this.lnkManager.getLexicon(false));
+            }
             
             if (this.verbose) {
                 System.out.println(">> Number of proposals: " + proposals.size());

@@ -36,37 +36,6 @@ public class DMDBManager {
         this.db.disconnect();
     }
     
-    public Map<Integer, DMProposal> selectCustomProposals(int topN) throws Exception {
-        Map<Integer, DMProposal> proposals = new HashMap<>();
-        Integer[] proposalList = {340, 867, 992, 1267, 1287, 1432, 1985, 4065, 4107, 4671, 
-                                  4696, 6600, 7250, 7341, 7700, 8116, 8296, 11402, 11530, 11890, 
-                                  12003, 15004, 15538, 15645, 15707, 16479, 16516, 17080, 17524, 17562, 
-                                  18138, 18302, 19615, 19803, 23248, 23366, 23783, 24451, 24600, 24693};
-        
-        String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
-                       "  FROM proposals " +
-                       " WHERE id IN (" + FunctionUtils.arrayToString(proposalList, ",") + ") " +
-                       " LIMIT " + topN + ";";
-        ResultSet rs = this.db.executeSelect(query);
-        
-        while (rs != null && rs.next()) {
-            int id = rs.getInt("id");
-            String title = rs.getString("title");
-            int userId = rs.getInt("userId");
-            String date = rs.getString("date");
-            String summary = rs.getString("summary");
-            String text = rs.getString("text");
-            int numComments = rs.getInt("numComments");
-            int numSupports = rs.getInt("numSupports");
-
-            DMProposal proposal = new DMProposal(id, title, userId, date, summary, text, numComments, numSupports);
-            proposals.put(id, proposal);
-        }
-        rs.close();
-
-        return proposals;
-    }
-
     public Map<Integer, DMProposal> selectProposals() throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
 
@@ -91,7 +60,33 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectProposals(int topN, List<ArgumentLinker> lexicon) throws Exception {
+    public Map<Integer, DMProposal> selectProposals(Integer[] proposalList) throws Exception {
+        Map<Integer, DMProposal> proposals = new HashMap<>();
+        
+        String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
+                       "  FROM proposals " +
+                       " WHERE id IN (" + FunctionUtils.arrayToString(proposalList, ",") + ");";
+        ResultSet rs = this.db.executeSelect(query);
+        
+        while (rs != null && rs.next()) {
+            int id = rs.getInt("id");
+            String title = rs.getString("title");
+            int userId = rs.getInt("userId");
+            String date = rs.getString("date");
+            String summary = rs.getString("summary");
+            String text = rs.getString("text");
+            int numComments = rs.getInt("numComments");
+            int numSupports = rs.getInt("numSupports");
+
+            DMProposal proposal = new DMProposal(id, title, userId, date, summary, text, numComments, numSupports);
+            proposals.put(id, proposal);
+        }
+        rs.close();
+
+        return proposals;
+    }
+    
+    public Map<Integer, DMProposal> selectProposals(List<ArgumentLinker> lexicon) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         String whereCond = "";
         
@@ -102,8 +97,7 @@ public class DMDBManager {
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
                        "  FROM proposals " + 
                        " WHERE " + whereCond +
-                       " ORDER BY LENGTH(summary) " +
-                       " LIMIT " + topN + ";";
+                       " ORDER BY LENGTH(summary);";
         ResultSet rs = this.db.executeSelect(query);
         
         while (rs != null && rs.next()) {
