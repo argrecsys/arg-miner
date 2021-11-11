@@ -27,7 +27,8 @@ public class ArgumentEngine implements Constants {
 
     // Class constants
     private static final String CLAIM = "claim";
-    private static final List<String> ENTITY_TYPE = Arrays.asList("PERSON", "ORGANIZATION", "LOCATION");
+    private static final HashSet<String> ENTITY_TYPE = new HashSet(
+            Arrays.asList("PERSON", "LOCATION", "ORGANIZATION", "MISC", "CITY", "STATE_OR_PROVINCE", "COUNTRY", "TITLE"));
     private static final String PREMISE = "premise";
     
     // Class members
@@ -35,16 +36,19 @@ public class ArgumentEngine implements Constants {
     private List<ArgumentLinker> lexicon;
     private PrintWriter out;
     private Properties props;
-    
+    private HashSet<String> stopwords;
+            
     /**
      * Class constructor.
      * 
      * @param lang
      * @param lnkManager
+     * @param stopwords
      */
-    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager) {
+    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager, HashSet<String> stopwords) {
         this.language = lang;
         this.lexicon = lnkManager.getLexicon(false);
+        this.stopwords = stopwords;
         this.out = new PrintWriter(System.out);
         setProperties();
     }
@@ -114,9 +118,10 @@ public class ArgumentEngine implements Constants {
                 List<String> verbList = new ArrayList<>();
 
                 for (CoreLabel token : tokens) {
-                    //System.out.println(String.format("%s [%s]", token.word(), token.tag()));
                     if (token.tag().equals("NOUN")) {
-                        nounList.add(token.word());
+                        if (!stopwords.contains(token.word())) {
+                            nounList.add(token.word());
+                        }
                     }
                     else if (token.tag().equals("VERB")) {
                         verbList.add(token.word());
@@ -272,7 +277,9 @@ public class ArgumentEngine implements Constants {
         
         for (CoreEntityMention em : document.entityMentions()) {
             if (ENTITY_TYPE.contains(em.entityType())) {
-                entities.put(em.text(), em.entityType());
+                if (!this.stopwords.contains(em.text().toLowerCase()) || em.entityType().equals("ORGANIZATION") || (em.entityType().equals("MISC") && em.text().length() > 2) ) {
+                    entities.put(em.text(), em.entityType());
+                }
             }
         }
         
