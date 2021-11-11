@@ -66,7 +66,7 @@ public class ArgumentMiner {
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
             
             // Bulk annotation of proposals
-            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager);
+            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager, stopwords);
             
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
@@ -104,11 +104,11 @@ public class ArgumentMiner {
      * @param lnkManager
      * @return 
      */
-    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager) {
+    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager, HashSet<String> stopwords) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
         
         // Temporary vars
-        ArgumentEngine engine = new ArgumentEngine(language, lnkManager);
+        ArgumentEngine engine = new ArgumentEngine(language, lnkManager, stopwords);
         int proposalID;
         DMProposal proposal;
         
