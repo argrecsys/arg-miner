@@ -5,6 +5,8 @@
  */
 package es.uam.irg.nlp.am;
 
+import java.util.Arrays;
+
 /**
  *
  * @author ansegura
@@ -20,20 +22,28 @@ public class Program {
         
         // Program hyperparameters with default values
         String language = Constants.LANG_ES;
-        int maxProposal = Integer.MAX_VALUE;
+        boolean annotateComments = false;
+        Integer[] customProposalID = new Integer[0];
         
         // Read input parameters
-        if (args.length > 0) {
-            language = args[0].toLowerCase();
-            
-            if (args.length > 1) {
-                maxProposal = Integer.parseInt(args[1]);
+        System.out.println(">> N args: " + args.length);
+        for (int i=0; i < args.length; i++) {
+            switch(i) {
+                case 0 -> language = args[i].toLowerCase();
+                case 1 -> annotateComments = Boolean.parseBoolean(args[i]);
+                case 2 -> {
+                    String[] ids = args[i].split(",");
+                    customProposalID = new Integer[ids.length];
+                    for (int j=0; j < ids.length; j++) {
+                        customProposalID[j] = Integer.parseInt(ids[j]);
+                    }
+                }
             }
         }
-        System.out.format(">> Language selected: %s, max number of proposals to be analyzed: %s\n", language, maxProposal);
+        System.out.format("   Selected language: %s, annotate comments? %s, customized proposals: %s\n", language, annotateComments, Arrays.toString(customProposalID));
         
         // Run program
-        ArgumentMiner miner = new ArgumentMiner(language, maxProposal);
+        ArgumentMiner miner = new ArgumentMiner(language, annotateComments, customProposalID);
         boolean result = miner.runProgram();
         
         if (result) {
