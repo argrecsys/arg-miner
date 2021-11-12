@@ -1,5 +1,6 @@
 package es.uam.irg.utils;
 
+import java.text.Normalizer;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -170,6 +171,17 @@ public class StringUtils {
 
         // Step 7
         return d[n][m];
+    }
+    
+    /**
+     * 
+     * @param s
+     * @return 
+     */
+    public static String unaccent(String s) {
+        return Normalizer
+                .normalize(s, Normalizer.Form.NFD)
+                .replaceAll("[^\\p{ASCII}]", "");
     }
     
     /**

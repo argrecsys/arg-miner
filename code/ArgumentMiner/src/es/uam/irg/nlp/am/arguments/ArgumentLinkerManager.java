@@ -5,6 +5,7 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -18,6 +19,7 @@ import java.util.Map;
  */
 public class ArgumentLinkerManager {
     
+    private final static boolean DUPLICATE_CLEAN_LINKER = true;
     private Map<String, Map<String, List<ArgumentLinker>>> taxonomy;
 
     /**
@@ -26,35 +28,7 @@ public class ArgumentLinkerManager {
     public ArgumentLinkerManager() {
         this.taxonomy = new HashMap<>();
     }
-
-    /**
-     * Add linker by object.
-     *
-     * @param linker
-     */
-    public void addLinker(ArgumentLinker linker) {
-        
-        Map<String, List<ArgumentLinker>> subcategory;
-        if (this.taxonomy.containsKey(linker.category)) {
-            subcategory = this.taxonomy.get(linker.category);
-        }
-        else {
-            subcategory = new HashMap<>();
-            this.taxonomy.put(linker.category, subcategory);
-        }
-        
-        List<ArgumentLinker> linkers;
-        if (subcategory.containsKey(linker.subCategory)) {
-            linkers = subcategory.get(linker.subCategory);
-        }
-        else {
-            linkers = new ArrayList<>();
-            subcategory.put(linker.subCategory, linkers);
-        }
-        
-        linkers.add(linker);
-    }
-
+    
     /**
      * Add item by parameters.
      *
@@ -66,10 +40,19 @@ public class ArgumentLinkerManager {
     public void addLinker(String category, String subCategory, String relationType, String linkerText) {
         ArgumentLinker linker = new ArgumentLinker(category, subCategory, relationType, linkerText);
         this.addLinker(linker);
+        
+        if (DUPLICATE_CLEAN_LINKER) {
+            String cleanLinker = StringUtils.unaccent(linker.linker);
+            if (!linker.linker.equals(cleanLinker)) {
+                ArgumentLinker newLinker = new ArgumentLinker(category, subCategory, relationType, cleanLinker);
+                this.addLinker(newLinker);
+            }
+        }
     }
     
     /**
      * 
+     * @param sorted
      * @return 
      */
     public List<ArgumentLinker> getLexicon(boolean sorted) {
@@ -113,6 +96,34 @@ public class ArgumentLinkerManager {
      */
     public boolean isEmpty() {
         return (this.taxonomy.isEmpty());
+    }
+    
+    /**
+     * Add linker by object.
+     *
+     * @param linker
+     */
+    private void addLinker(ArgumentLinker linker) {
+        
+        Map<String, List<ArgumentLinker>> subcategory;
+        if (this.taxonomy.containsKey(linker.category)) {
+            subcategory = this.taxonomy.get(linker.category);
+        }
+        else {
+            subcategory = new HashMap<>();
+            this.taxonomy.put(linker.category, subcategory);
+        }
+        
+        List<ArgumentLinker> linkers;
+        if (subcategory.containsKey(linker.subCategory)) {
+            linkers = subcategory.get(linker.subCategory);
+        }
+        else {
+            linkers = new ArrayList<>();
+            subcategory.put(linker.subCategory, linkers);
+        }
+        
+        linkers.add(linker);
     }
     
 }
