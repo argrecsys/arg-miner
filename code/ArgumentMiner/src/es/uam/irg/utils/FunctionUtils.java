@@ -98,7 +98,7 @@ public class FunctionUtils {
     public static Map<String, Integer> sortMapByValue(Map<String, Integer> map) {
         LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
 
-        //Use Comparator.reverseOrder() for reverse ordering
+        // Use Comparator.reverseOrder() for reverse ordering
         map.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
