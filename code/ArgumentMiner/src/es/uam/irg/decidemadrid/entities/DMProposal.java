@@ -13,7 +13,7 @@ public class DMProposal {
     private String text;
     private int numComments;
     private int numSupports;
-
+    
     public DMProposal(int id, String title, int userId, String date, String summary, String text, int numComments, int numSupports) {
         this.id = id;
         this.title = title;

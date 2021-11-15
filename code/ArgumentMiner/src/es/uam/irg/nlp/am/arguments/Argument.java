@@ -29,17 +29,23 @@ public class Argument {
     public Sentence premise;
     public String sentenceID;
     public String sentenceText;
+    private int commentID;
     private boolean isValid;
+    private int parentID;
     private int proposalID;
+    private int userID;
     
     /**
      * Empty constructor.
      * 
      * @param sentenceID
+     * @param userID
+     * @param commentID
+     * @param parentID
      * @param sentenceText 
      */
-    public Argument(String sentenceID, String sentenceText) {
-        this(sentenceID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE");
+    public Argument(String sentenceID, int userID, int commentID, int parentID, String sentenceText) {
+        this(sentenceID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE");
         this.proposalID = -1;
         
         this.isValid = false;
@@ -49,6 +55,9 @@ public class Argument {
      * Regular constructor.
      * 
      * @param sentenceID
+     * @param userID
+     * @param commentID
+     * @param parentID
      * @param sentenceText
      * @param claim
      * @param premise
@@ -56,8 +65,12 @@ public class Argument {
      * @param linker
      * @param approach 
      */
-    public Argument(String sentenceID, String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach) {
+    public Argument(String sentenceID, int userID, int commentID, int parentID, 
+            String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach) {
         this.sentenceID = sentenceID;
+        this.userID = userID;
+        this.commentID = commentID;
+        this.parentID = parentID;
         this.sentenceText = sentenceText;
         this.claim = claim;
         this.premise = premise;
@@ -77,6 +90,9 @@ public class Argument {
      */
     public Argument(Document doc) {
         this.sentenceID = doc.getString("argumentID");
+        this.userID = (int)doc.get("userID");
+        this.commentID = (int)doc.get("commentID");
+        this.parentID = (int)doc.get("parentID");
         this.sentenceText = doc.getString("argumentID");
         this.majorClaim = new Sentence(doc.get("majorClaim", Document.class));
         this.claim = new Sentence(doc.get("claim", Document.class));
@@ -100,12 +116,15 @@ public class Argument {
         Document doc = new Document();
         doc.append("argumentID", this.sentenceID)
                 .append("proposalID", this.proposalID)
+                .append("userID", this.userID)
+                .append("commentID", this.commentID)
+                .append("parentID", this.parentID)
                 .append("sentence", this.sentenceText)
                 .append("majorClaim", this.majorClaim.getDocument())
                 .append("claim", this.claim.getDocument())
                 .append("premise", this.premise.getDocument())
-                .append("linker", this.linker.getDocument())
                 .append("mainVerb", this.mainVerb)
+                .append("linker", this.linker.getDocument())
                 .append("approach", this.approach);
         
         return doc;
@@ -119,12 +138,15 @@ public class Argument {
     public JSONObject getJSON() {
         JSONObject json = new JSONObject();
         json.put("proposalID", this.proposalID);
+        json.put("userID", this.userID);
+        json.put("commentID", this.commentID);
+        json.put("parentID", this.parentID);
         json.put("sentence", this.sentenceText);
         json.put("majorClaim",this.majorClaim.getJSON());
         json.put("claim", this.claim.getJSON());
         json.put("premise", this.premise.getJSON());
-        json.put("linker", this.linker.getJSON());
         json.put("mainVerb", this.mainVerb);
+        json.put("linker", this.linker.getJSON());
         json.put("approach", this.approach);
         
         return json;

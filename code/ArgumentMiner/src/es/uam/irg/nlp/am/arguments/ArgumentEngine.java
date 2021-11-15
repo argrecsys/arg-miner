@@ -73,11 +73,14 @@ public class ArgumentEngine implements Constants {
     /**
      * 
      * @param docKey
+     * @param userID
+     * @param commentID
+     * @param parentID
      * @param docTitle
      * @param docText
      * @return 
      */
-    public List<Argument> extract(int docKey, String docTitle, String docText) {
+    public List<Argument> extract(int docKey, int userID, int commentID, int parentID, String docTitle, String docText) {
         System.out.format("Task Annotate - Id: %s, Proposal: %s\n", docKey, docText);
         List<Argument> result = new ArrayList<>();
         
@@ -140,7 +143,7 @@ public class ArgumentEngine implements Constants {
                 System.out.println("Syntagma list: " + syntagmaList.size());
 
                 // 11. Apply arguments mining (AM)
-                Argument arg = mineArgument(sentenceID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
+                Argument arg = mineArgument(sentenceID, userID, commentID, commentID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
                 
                 // 12. Save argument
                 if (arg.isValid()) {
@@ -387,6 +390,9 @@ public class ArgumentEngine implements Constants {
     /**
      * 
      * @param sentenceID
+     * @param userID
+     * @param commentID
+     * @param parentID
      * @param sentenceText
      * @param linker
      * @param syntagmaList
@@ -395,8 +401,9 @@ public class ArgumentEngine implements Constants {
      * @param verbList
      * @return 
      */
-    private Argument mineArgument(String sentenceID, String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> entityList, List<String> nounList, List<String> verbList) {
-        Argument arg = new Argument(sentenceID, sentenceText);
+    private Argument mineArgument(String sentenceID, int userID, int commentID, int parentID, 
+            String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> entityList, List<String> nounList, List<String> verbList) {
+        Argument arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText);
         
         // Temporary variables
         String approach;
@@ -437,7 +444,7 @@ public class ArgumentEngine implements Constants {
                     // Create argument object
                     Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                     Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                    arg = new Argument(sentenceID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
+                    arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
                     break;
                 }
             }
@@ -501,7 +508,7 @@ public class ArgumentEngine implements Constants {
                     // Create argument object
                     Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                     Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                    arg = new Argument(sentenceID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
+                    arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, approach);
                 }
             }
         }
