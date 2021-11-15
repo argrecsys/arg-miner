@@ -197,843 +197,843 @@
     <topics quantity="1">
         <topic quantity="24" value="transporte">
             <aspect quantity="4" value="movilidad">
-                <argument id="4531-1">
+                <argument commentid="-1" id="4531-1" parentid="-1" userid="40907">
                     <claim>Los parados deberian tener transporte reducido</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ayudar a su movilidad en su busqueda de trabajo</premise>
                 </argument>
-                <argument id="13732-1">
+                <argument commentid="-1" id="13732-1" parentid="-1" userid="30982">
                     <claim>El futuro gran APR va a traer muchos efectos negativos de movilidad</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>no se potencia el transporte publico</premise>
                 </argument>
-                <argument id="8082-1">
+                <argument commentid="-1" id="8082-1" parentid="-1" userid="88178">
                     <claim>a los lugares de trabajo a traves del transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar la movilidad de los ciudadanos</premise>
                 </argument>
-                <argument id="16772-1">
+                <argument commentid="-1" id="16772-1" parentid="-1" userid="105874">
                     <claim>Como continuidad a las medidas de mejora en movilidad que se estan desarrollando en la ciudad , se propone la instalacion de soportes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el transporte de bicicletas particulares en</premise>
                 </argument>
             </aspect>
             <aspect quantity="9" value="barrio">
-                <argument id="21086-1">
+                <argument commentid="-1" id="21086-1" parentid="-1" userid="23180">
                     <claim>Lineas de nueva creacion EMT - Empresa Municipal de Transportes de Madrid</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el barrio El Canaveral ( Vicalvaro )</premise>
                 </argument>
-                <argument id="16412-1">
+                <argument commentid="-1" id="16412-1" parentid="-1" userid="120954">
                     <claim>en mi barrio aparcan cada dia mas y mas coches de Poblaciones limitrofes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>luego coger el transporte publico  ir a sus lugares de trabajo</premise>
                 </argument>
-                <argument id="15645-1">
+                <argument commentid="-1" id="15645-1" parentid="-1" userid="70955">
                     <claim>de comunicacion</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">en cuanto a</connector>
                     <premise>transporte publico / privado</premise>
                 </argument>
-                <argument id="4155-1">
+                <argument commentid="-1" id="4155-1" parentid="-1" userid="39138">
                     <claim>Me gustaria que desde el intercambiador de Avda America hubiese un autobus directo a Las Tablas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar el acceso al barrio en transporte publico y reducir los atascos</premise>
                 </argument>
-                <argument id="15318-1">
+                <argument commentid="-1" id="15318-1" parentid="-1" userid="207713">
                     <claim>transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el Barrio de El Salvador y alrededores</premise>
                 </argument>
-                <argument id="21980-1">
+                <argument commentid="-1" id="21980-1" parentid="-1" userid="130713">
                     <claim>Ahora este servicio se queda al entrar en Moratalaz viniendo desde el barrio de la Estrella , y creo que seria una buena alternativa de transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el barrio</premise>
                 </argument>
-                <argument id="21978-1">
+                <argument commentid="-1" id="21978-1" parentid="-1" userid="130713">
                     <claim>Ahora este servicio se queda al entrar en Moratalaz viniendo desde el barrio de la Estrella , y creo que seria una buena alternativa de transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el barrio</premise>
                 </argument>
-                <argument id="21743-1">
+                <argument commentid="-1" id="21743-1" parentid="-1" userid="217992">
                     <claim>La linea 153 de la EMT , une el Distrito de Hortaleza con el barrio de Las Rosas , es el transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el Estadio Metropolitano</premise>
                 </argument>
-                <argument id="17239-1">
+                <argument commentid="-1" id="17239-1" parentid="-1" userid="97051">
                     <claim>Las Tablas es un Hormiguero en el que quedas atrapado de Lunes a Viernes y el Transporte del T-61 solo se piensa</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los trabajadores q vienen no  los que salen del barrio todo el ano</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="servicio">
-                <argument id="10981-2">
+                <argument commentid="-1" id="10981-2" parentid="-1" userid="141291">
                     <claim>De que sirve</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>disponemos de un servicio de transporte publico estupendo</premise>
                 </argument>
-                <argument id="1985-1">
+                <argument commentid="-1" id="1985-1" parentid="-1" userid="647">
                     <claim>Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">dado que</connector>
                     <premise>no existe alternativa , solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="autobus">
-                <argument id="21914-1">
+                <argument commentid="-1" id="21914-1" parentid="-1" userid="276505">
                     <claim>Poner maquinas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>cargar la tarjeta de transporte en todas las das de autobus , como existen en tantas ciudades europeas</premise>
                 </argument>
-                <argument id="2553-1">
+                <argument commentid="-1" id="2553-1" parentid="-1" userid="21961">
                     <claim>Que todas las paradas de autobus tengan letreros de cuanto tiempo falta para que pase el proximo autobus , de forma que se tenga mas informacion para decidir</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>espera o busca un</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="usuarios">
-                <argument id="23726-1">
+                <argument commentid="-1" id="23726-1" parentid="-1" userid="11506">
                     <claim>con el</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>bicimad</premise>
                 </argument>
-                <argument id="10996-1">
+                <argument commentid="-1" id="10996-1" parentid="-1" userid="133074">
                     <claim>Abono mesual a 20</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos los Usuarios de transporte publico de Comunidad de Madrid</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="aparcamiento">
-                <argument id="845-3">
+                <argument commentid="-1" id="845-3" parentid="-1" userid="14831">
                     <claim>transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos</premise>
                 </argument>
-                <argument id="25766-1">
+                <argument commentid="-1" id="25766-1" parentid="-1" userid="139086">
                     <claim>Aumentar el area y numero de plazas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>aparcamiento</premise>
                 </argument>
             </aspect>
             <aspect quantity="6" value="personas">
-                <argument id="3265-1">
+                <argument commentid="-1" id="3265-1" parentid="-1" userid="7051">
                     <claim>Ya que estan implicados de una forma u otra tanto la EMT como el Consorcio de Transporte de Madrid pienso que deberia ser gratis</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los que tenemos el abono transporte</premise>
                 </argument>
-                <argument id="548-1">
+                <argument commentid="-1" id="548-1" parentid="-1" userid="12978">
                     <claim>En otros paises existe la gratuidad en el transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>las personas discapacitadas</premise>
                 </argument>
-                <argument id="9600-1">
+                <argument commentid="-1" id="9600-1" parentid="-1" userid="105844">
                     <claim>Estimo importante , mejorar los medios de informacion que se llevan acabo en el transporte publico</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
                     <premise>senalizaciones o informaciones a personas con diversidad funcional</premise>
                 </argument>
-                <argument id="5725-1">
+                <argument commentid="-1" id="5725-1" parentid="-1" userid="54606">
                     <claim>Propongo que a las esposas de menos de 65 anos se les facilite el abono transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>personas mayores de 65 anos que lo tengan ya sus espos</premise>
                 </argument>
-                <argument id="4107-1">
+                <argument commentid="-1" id="4107-1" parentid="-1" userid="38799">
                     <claim>Existen numerosas discapacidades hoy en dia , pero solo hay 2 opciones para el transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
                 </argument>
-                <argument id="9026-1">
+                <argument commentid="-1" id="9026-1" parentid="-1" userid="71165">
                     <claim>Poner un gancho que sostenga las bicicletas en la parte frontal de los autobuses publicos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las personas que utilicen el transporte publico y la bici , puedan dejarla de forma segura y comoda</premise>
                 </argument>
             </aspect>
             <aspect quantity="8" value="edad">
-                <argument id="24742-1">
+                <argument commentid="-1" id="24742-1" parentid="-1" userid="227417">
                     <claim>Se trata de ampliar el intervalo de edad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>utilizar el transporte publico de manera gratuita</premise>
                 </argument>
-                <argument id="9706-1">
+                <argument commentid="-1" id="9706-1" parentid="-1" userid="53723">
                     <claim>crear un transporte publico gratuito</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los menores en edad escolar obligatoria</premise>
                 </argument>
-                <argument id="18002-1">
+                <argument commentid="-1" id="18002-1" parentid="-1" userid="137940">
                     <claim>Utilizar la tarjeta de transporte recargable ( tipo la Barik de Bilbao )</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la tercera edad a precio reducido</premise>
                 </argument>
-                <argument id="16301-1">
+                <argument commentid="-1" id="16301-1" parentid="-1" userid="269941">
                     <claim>Crear distintos tipos de Abono transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">segun</connector>
                     <premise>las rentas de cada persona</premise>
                 </argument>
-                <argument id="22434-1">
+                <argument commentid="-1" id="22434-1" parentid="-1" userid="548636">
                     <claim>Que un jubilado menor de 65 anos ( jubilacion anticipada ) , tenga derecho al abono transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la edad de 65 anos ( jubilacion ordinaria )</premise>
                 </argument>
-                <argument id="3989-1">
+                <argument commentid="-1" id="3989-1" parentid="-1" userid="38610">
                     <claim>Abono Transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>moverse por toda la Comunidad de Madrid ,  los ciudadanos comprendidos entre la edad de 30 a 60 anos</premise>
                 </argument>
-                <argument id="5785-1">
+                <argument commentid="-1" id="5785-1" parentid="-1" userid="55293">
                     <claim>Un nuevo abono de transporte realmente barato como el nuevo abono joven , pero al que pueda acceder todo el mundo sin discriminacion</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">con la condicion de</connector>
                     <premise>que no se use en hora punta</premise>
                 </argument>
-                <argument id="10847-1">
+                <argument commentid="-1" id="10847-1" parentid="-1" userid="54606">
                     <claim>Los pensionistas mayores de 65 anos tenemos una tarjeta de transporte con un precio de 12,30 euros pero</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>nuestra pareja tiene una edad inferior a 65 anos</premise>
                 </argument>
             </aspect>
             <aspect quantity="3" value="linea">
-                <argument id="25606-1">
+                <argument commentid="-1" id="25606-1" parentid="-1" userid="595227">
                     <claim>de esta linea</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>optimizar</premise>
                 </argument>
-                <argument id="25437-1">
+                <argument commentid="-1" id="25437-1" parentid="-1" userid="28866">
                     <claim>Aplicacion para el movil tipo ( ten + movil )</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>toda la linea de transporte publico</premise>
                 </argument>
-                <argument id="26115-1">
+                <argument commentid="-1" id="26115-1" parentid="-1" userid="578401">
                     <claim>Queria proponer un transporte publico rapido y eficaz del Ensanche de Vallecas hasta Vicalvaro o Valdebernardo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>comunicar con linea 9 y poder tener mas opciones a la linea 1</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="vehiculos">
-                <argument id="10234-1">
+                <argument commentid="-1" id="10234-1" parentid="-1" userid="127892">
                     <claim>de aparcamientos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>limitar la entrada de vehiculos</premise>
                 </argument>
-                <argument id="26358-1">
+                <argument commentid="-1" id="26358-1" parentid="-1" userid="14720">
                     <claim>Reformar los bajos del puente de vallecas , poner puntos de carga para vehiculos electricos y poner estaciones de Bicimad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el transporte sostenible</premise>
                 </argument>
             </aspect>
             <aspect quantity="5" value="autobuses">
-                <argument id="12969-2">
+                <argument commentid="-1" id="12969-2" parentid="-1" userid="176489">
                     <claim>Y teniendo que pagar dos billetes (</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">en caso de</connector>
                     <premise/>
                 </argument>
-                <argument id="11397-1">
+                <argument commentid="-1" id="11397-1" parentid="-1" userid="70917">
                     <claim>La calle Segovia podria incorporarse al casco historico peatonalizado , dada la densidad de peatones que existen</claim>
                     <connector category="explanation" function="support" subcategory="exemplification">por ejemplo</connector>
                     <premise/>
                 </argument>
-                <argument id="387-1">
+                <argument commentid="-1" id="387-1" parentid="-1" userid="11587">
                     <claim>Que nuestras mascotas , , perros sobre todo , pueda viajar en transporte publico sin limitaciones</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">salvo</connector>
                     <premise>las que se estipulen como que el animal tenga entrenamiento o un numero determido en autobuses</premise>
                 </argument>
-                <argument id="2987-1">
+                <argument commentid="-1" id="2987-1" parentid="-1" userid="1756">
                     <claim>Dar prioridad de paso a los autobuses y taxis que se encuentran atascados en los carriles bus</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>optimizar y fomentar el transporte publico y reducir los tiempos de los trayectos de los mismos</premise>
                 </argument>
-                <argument id="3251-1">
+                <argument commentid="-1" id="3251-1" parentid="-1" userid="35083">
                     <claim>Los vecinos de Aravaca tenemos poco transporte publico y encima nos piden el B1 desde Moncloa</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>subir a los autobuses de LLorente</premise>
                 </argument>
             </aspect>
             <aspect quantity="24" value="uso">
-                <argument id="14912-1">
+                <argument commentid="-1" id="14912-1" parentid="-1" userid="14548">
                     <claim>Ampliar la cobertura del Abono Transporte al servicio de Bicimad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el uso del transporte publico</premise>
                 </argument>
-                <argument id="9002-1">
+                <argument commentid="-1" id="9002-1" parentid="-1" userid="82963">
                     <claim>Deberia incluirse en el bono transporte joven 20X20 el servicio de bicicleta</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>, muchos jovenes darian uso a un transporte publico ecologico y deportivo</premise>
                 </argument>
-                <argument id="7553-1">
+                <argument commentid="-1" id="7553-1" parentid="-1" userid="72064">
                     <claim>Creo que incentivaria mas el uso del transporte publico</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>el Bono Transporte tuviese la opcion de comprar 50 viajes por un periodo de 3 meses</premise>
                 </argument>
-                <argument id="6163-1">
+                <argument commentid="-1" id="6163-1" parentid="-1" userid="41720">
                     <claim>Actuar sobre la jornada laboral y obligar a las grandes empresas a facilitar un transporte colectivo a sus empleados</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ir y venir del trabajo , junto con medidas sobre el transporte publico</premise>
                 </argument>
-                <argument id="7494-2">
+                <argument commentid="-1" id="7494-2" parentid="-1" userid="1202">
                     <claim>Impulsa uso transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ir a trabajar</premise>
                 </argument>
-                <argument id="12407-1">
+                <argument commentid="-1" id="12407-1" parentid="-1" userid="172783">
                     <claim>Propongo usar el telefono movil para pagar el aparcamiento y el transporte publico</claim>
                     <connector category="explanation" function="support" subcategory="exemplification">por ejemplo</connector>
                     <premise/>
                 </argument>
-                <argument id="21306-1">
+                <argument commentid="-1" id="21306-1" parentid="-1" userid="505226">
                     <claim>Se propone que se imponga el uso de transporte sostenible</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>las empresas que repartan paqueteria a domicilio</premise>
                 </argument>
-                <argument id="3257-1">
+                <argument commentid="-1" id="3257-1" parentid="-1" userid="35106">
                     <claim>La idea es incentivar el uso del transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los trabajadores que acuden a diario desde otros municipios de la periferia</premise>
                 </argument>
-                <argument id="18804-1">
+                <argument commentid="-1" id="18804-1" parentid="-1" userid="55924">
                     <claim>del pasaporte sostenible</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el uso de bicicletas y vehiculos electricos municipales como medio de transporte individual preferido</premise>
                 </argument>
-                <argument id="9239-1">
+                <argument commentid="-1" id="9239-1" parentid="-1" userid="103288">
                     <claim>Me parece bien regular el uso del coche y fomentar el uso del transporte publico pero</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>debo de pagar por aparcar en mi casa</premise>
                 </argument>
-                <argument id="9513-1">
+                <argument commentid="-1" id="9513-1" parentid="-1" userid="105325">
                     <claim>Poner aparcamiento de bicicletas en las puertas de los colegios e institutos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el uso de este medio de transporte entre l@s chic@s</premise>
                 </argument>
-                <argument id="8410-1">
+                <argument commentid="-1" id="8410-1" parentid="-1" userid="25317">
                     <claim>Establecer aparcamientos seguros</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>bicicletas privadas en los principales accesos a la red de metro / cercanias  evitar sustracciones y fomentar el uso de este medio de transporte</premise>
                 </argument>
-                <argument id="26311-1">
+                <argument commentid="-1" id="26311-1" parentid="-1" userid="85825">
                     <claim>De coste reducido y vigilado en las entradas a Madrid con transporte publico hacia el centro tambien a precio reducido ( bono especial )</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>disuadir uso de vehiculo particular en la ciudad</premise>
                 </argument>
-                <argument id="8575-1">
+                <argument commentid="-1" id="8575-1" parentid="-1" userid="6281">
                     <claim>En muchas ciudades de Europa y del mundo se celebran eventos semanales / mensuales / anuales</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>promover el uso de los patines como medio de transporte ecologico , respetuoso y viable</premise>
                 </argument>
-                <argument id="7845-1">
+                <argument commentid="-1" id="7845-1" parentid="-1" userid="47119">
                     <claim>Regulacion y medios realistas y viables</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que sea seguro y practico el uso de la bici como medio de transporte privado</premise>
                 </argument>
-                <argument id="23795-1">
+                <argument commentid="-1" id="23795-1" parentid="-1" userid="475953">
                     <claim>La zona esta muy mal comunicada con el centro de Madrid por transporte publico y la creacion de esta linea ayudaria mucho a reducir el uso de coche particular</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>desplazarse</premise>
                 </argument>
-                <argument id="9610-1">
+                <argument commentid="-1" id="9610-1" parentid="-1" userid="24895">
                     <claim>Una de las estrategias para fomentar el uso del transporte publico es ofrecer un numero suficiente de plazas de aparcamiento gratuitas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder dejar el coche y usar el cercanias</premise>
                 </argument>
-                <argument id="24573-1">
+                <argument commentid="-1" id="24573-1" parentid="-1" userid="68931">
                     <claim>Para fomentar el uso del transporte publico y mejorar la calidad del aire , propongo cobrar un peaje de acceso a Madrid Capital</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos aquellos que deseen acceder con sus vehiculos privados</premise>
                 </argument>
-                <argument id="15117-1">
+                <argument commentid="-1" id="15117-1" parentid="-1" userid="1951">
                     <claim>Dada la necesidad de reducir el uso del coche privado</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">considerando</connector>
                     <premise>que esta muy promocionada la compra de coche , veo necesario promocionar el uso del transporte publico como algo atractivo</premise>
                 </argument>
-                <argument id="26015-1">
+                <argument commentid="-1" id="26015-1" parentid="-1" userid="65055">
                     <claim>Acordar con EMT , Cercanias o bien Metro , el transporte gratuito en Madrid a los ciudadanos que accedan con una bicicleta</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el uso de esta y salvaguardar las</premise>
                 </argument>
-                <argument id="24693-1">
+                <argument commentid="-1" id="24693-1" parentid="-1" userid="598419">
                     <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico , pero</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
                 </argument>
-                <argument id="10717-1">
+                <argument commentid="-1" id="10717-1" parentid="-1" userid="20742">
                     <claim>Apoyo y fomento al transporte publico : subvencion abono , aumento de flotas para mejorar la frecuencia Adecuar la ciudad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar uso de la bicicleta ( carril bici real ... ) Fomentar el uso de mo</premise>
                 </argument>
-                <argument id="27046-1">
+                <argument commentid="-1" id="27046-1" parentid="-1" userid="142317">
                     <claim>Respecto a Madrid central habra que aumentar el uso del transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que la gente se pueda desplazar al centro y la periferia</premise>
                 </argument>
-                <argument id="2353-1">
+                <argument commentid="-1" id="2353-1" parentid="-1" userid="11069">
                     <claim>Es dificil fomentar el uso del transporte publico</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>a una familia de 4 miembros que quiera ir al centro le resulta mas caro hacerlo en bus o metro que utilizando un vehiculo particular y parking</premise>
                 </argument>
             </aspect>
             <aspect quantity="4" value="trafico">
-                <argument id="12981-2">
+                <argument commentid="-1" id="12981-2" parentid="-1" userid="176789">
                     <claim>El transporte publico y residentes</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>podrian acceder</premise>
                 </argument>
-                <argument id="2979-1">
+                <argument commentid="-1" id="2979-1" parentid="-1" userid="10261">
                     <claim>Creacion calles prioritarias donde control sobre aparcamiento en doble fila sea mas vigilado y controlado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>incrementar fluidez del trafico privado y transporte publico</premise>
                 </argument>
-                <argument id="23945-1">
+                <argument commentid="-1" id="23945-1" parentid="-1" userid="592432">
                     <claim>Ampliar la red de transporte de cercanias con lineas circulares</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>descargar el trafico de las carreteras que rodean Madrid ( M30 , M40 , M45 y M50 ) y contaminar menos</premise>
                 </argument>
-                <argument id="12487-5">
+                <argument commentid="-1" id="12487-5" parentid="-1" userid="8775">
                     <claim>Lo digo por que el pasado dia 6 de Julio , deje a mis padres mayores en la puerta L del hospital ( no estan nada agiles</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que vayan en transporte publico</premise>
                 </argument>
             </aspect>
             <aspect quantity="16" value="zona">
-                <argument id="15269-1">
+                <argument commentid="-1" id="15269-1" parentid="-1" userid="204870">
                     <claim>Es una zona con mucha poblacion infantil y adolescente</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>queremos evitar mas transporte privado hay que facilitarles el transporte publico</premise>
                 </argument>
-                <argument id="13413-3">
+                <argument commentid="-1" id="13413-3" parentid="-1" userid="179286">
                     <claim>Crear un medio de transporte en esta zona</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar el desplazamiento</premise>
                 </argument>
-                <argument id="3904-1">
+                <argument commentid="-1" id="3904-1" parentid="-1" userid="38284">
                     <claim>Habilitar una zona en el transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que animales domesticos viajen acompanados de sus duenos</premise>
                 </argument>
-                <argument id="3215-3">
+                <argument commentid="-1" id="3215-3" parentid="-1" userid="34934">
                     <claim>muy escaso</claim>
                     <connector category="explanation" function="support" subcategory="exemplification">como por ejemplo</connector>
                     <premise>, la zona del hospital Sanitas</premise>
                 </argument>
-                <argument id="12003-1">
+                <argument commentid="-1" id="12003-1" parentid="-1" userid="163657">
                     <claim>Seria necesario crear una biblioteca y centro cultural en Valderribas</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>para acudir a las de Valdebernardo o Vicalvaro tenemos que usar transporte publico</premise>
                 </argument>
-                <argument id="12099-1">
+                <argument commentid="-1" id="12099-1" parentid="-1" userid="165261">
                     <claim>de Bicis ( Bicimad )</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar la movilidad en la zona</premise>
                 </argument>
-                <argument id="22375-1">
+                <argument commentid="-1" id="22375-1" parentid="-1" userid="142317">
                     <claim>Creacion de carriles Bus Vao</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar el acceso a la zona</premise>
                 </argument>
-                <argument id="20321-1">
+                <argument commentid="-1" id="20321-1" parentid="-1" userid="511982">
                     <claim>Creacion de carriles Bus VAO</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar el acceso a la zona</premise>
                 </argument>
-                <argument id="4065-1">
+                <argument commentid="-1" id="4065-1" parentid="-1" userid="38890">
                     <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes</premise>
                 </argument>
-                <argument id="6940-1">
+                <argument commentid="-1" id="6940-1" parentid="-1" userid="40354">
                     <claim>de transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>albergar toda la zona Comercial del poligono de las mercedes</premise>
                 </argument>
-                <argument id="11138-1">
+                <argument commentid="-1" id="11138-1" parentid="-1" userid="74976">
                     <claim>La mayoria estamos trabajando en las zonas alrededor de la comunidad de Madrid , quieremos ampliar la perimetro de la zona A</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder utilizar el transporte publico y bajar la contaminacion</premise>
                 </argument>
-                <argument id="25393-1">
+                <argument commentid="-1" id="25393-1" parentid="-1" userid="244600">
                     <claim>Nueva parada en la calle Danza para permitir a los ciudadanos moverse por esa zona , en la cual no se ofrece cobertura de servicio publico de transportes</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
                     <premise>los nuevos supermercados y viviendas</premise>
                 </argument>
-                <argument id="20526-1">
+                <argument commentid="-1" id="20526-1" parentid="-1" userid="244600">
                     <claim>Nueva parada en la calle Danza para permitir a los ciudadanos moverse por esa zona , en la cual no se ofrece cobertura de servicio publico de transportes</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
                     <premise>los nuevos supermercados y viviendas</premise>
                 </argument>
-                <argument id="10480-1">
+                <argument commentid="-1" id="10480-1" parentid="-1" userid="801">
                     <claim>Facilitemos espacios en los distritos del sur</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las multinacionales se establezcan en esta zona y no perdamos tanto tiempo en ir al norte y perder tiempo en transporte y conciliacion familiar</premise>
                 </argument>
-                <argument id="1988-1">
+                <argument commentid="-1" id="1988-1" parentid="-1" userid="12078">
                     <claim>Hola , se tenemos la opcion de la tarjeta azul pero solo vale</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la zona A</premise>
                 </argument>
-                <argument id="2847-1">
+                <argument commentid="-1" id="2847-1" parentid="-1" userid="33483">
                     <claim>La tarjeta azul de transporte , tendria que ser valida</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>cercanias Renfe y  las zonas B1</premise>
                 </argument>
             </aspect>
             <aspect quantity="6" value="precio">
-                <argument id="4671-1">
+                <argument commentid="-1" id="4671-1" parentid="-1" userid="42229">
                     <claim>Que baje el precio del transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>es muy caro</premise>
                 </argument>
-                <argument id="2960-1">
+                <argument commentid="-1" id="2960-1" parentid="-1" userid="33792">
                     <claim>Mismo precio bono transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos los jubilados</premise>
                 </argument>
-                <argument id="11204-1">
+                <argument commentid="-1" id="11204-1" parentid="-1" userid="149532">
                     <claim>utilizamos el transporte publico cada dia , cada mes</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>no pagar un precio unico para todas las</premise>
                 </argument>
-                <argument id="9060-1">
+                <argument commentid="-1" id="9060-1" parentid="-1" userid="100189">
                     <claim>Volver a implantar un precio de billete sencillo unico y universal , valido</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>cualquier trayecto y cualquier tipo de transporte</premise>
                 </argument>
-                <argument id="7221-1">
+                <argument commentid="-1" id="7221-1" parentid="-1" userid="9247">
                     <claim>Para que</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>utilizar el transporte publico los dias de mayor contaminacion atmosferica</premise>
                 </argument>
-                <argument id="16886-1">
+                <argument commentid="-1" id="16886-1" parentid="-1" userid="206991">
                     <claim>Reducir el precio de la tarjeta de abono de transporte para adulto en todas las zonas entre un 30-35 %</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que sea mas asequible y no pagar practicamente el triple que el abono joven</premise>
                 </argument>
             </aspect>
             <aspect quantity="8" value="coche">
-                <argument id="597-1">
+                <argument commentid="-1" id="597-1" parentid="-1" userid="13295">
                     <claim>Se deben de crear soluciones efectivas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los madrilenos NO usen a diario el coche en trayectos cortos donde se puede usar el transporte publico , facilitar el acceso a utilizar el transporte</premise>
                 </argument>
-                <argument id="19068-2">
+                <argument commentid="-1" id="19068-2" parentid="-1" userid="225248">
                     <claim>El dinero recaudado serviria</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar transporte pbco</premise>
                 </argument>
-                <argument id="8108-1">
+                <argument commentid="-1" id="8108-1" parentid="-1" userid="88502">
                     <claim>mas transporte publico</claim>
                     <connector category="cause" function="support" subcategory="reason">de acuerdo con</connector>
                     <premise>usar poco o nada el coche</premise>
                 </argument>
-                <argument id="26044-1">
+                <argument commentid="-1" id="26044-1" parentid="-1" userid="11739">
                     <claim>Crear un aparcamiento junto a la estacion de Entrevias</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>animar a dejar el coche y coger el</premise>
                 </argument>
-                <argument id="25101-1">
+                <argument commentid="-1" id="25101-1" parentid="-1" userid="142317">
                     <claim>En dias de alta contaminacion tiene que haber mas autobuses</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que la gente que utiliza el coche pueda utilizar el</premise>
                 </argument>
-                <argument id="9976-1">
+                <argument commentid="-1" id="9976-1" parentid="-1" userid="39741">
                     <claim>Formar una buena red de transporte escolar</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los padres no tuvieran que ir en coche todos los dias a todos los colegios de Madrid</premise>
                 </argument>
-                <argument id="20214-1">
+                <argument commentid="-1" id="20214-1" parentid="-1" userid="55168">
                     <claim>Que empresas privadas , red de transporte publico y ayuntamiento se pongan de acuerdo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar al trabajador su llegada al trabajo cuando se impida utilizar el coche por alta contaminacion</premise>
                 </argument>
-                <argument id="25553-1">
+                <argument commentid="-1" id="25553-1" parentid="-1" userid="51881">
                     <claim>la restriccion dentro de Madrid</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el transporte publico donde esta bien comunic , pero la M30 es lugar de paso  muchos desplazamientos que solo se pueden hacer con coche</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="cercanias">
-                <argument id="24202-1">
+                <argument commentid="-1" id="24202-1" parentid="-1" userid="219091">
                     <claim>Instalacion de maquinas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>sacar billetes de transporte metropolitano / cercanias en las salas de recogida de maletas en las Terminales del aeropuerto</premise>
                 </argument>
-                <argument id="25408-1">
+                <argument commentid="-1" id="25408-1" parentid="-1" userid="201467">
                     <claim>Crear una parada de tren de cercanias en el Puente de los Franceses</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>permitir el transporte de pasajeros desde la Clinica Moncloa y los colegios mayores hasta la estacion de Principe Pio</premise>
                 </argument>
             </aspect>
             <aspect quantity="19" value="metro">
-                <argument id="8637-1">
+                <argument commentid="-1" id="8637-1" parentid="-1" userid="41018">
                     <claim>Fomentar el transporte publico , descongestionar el centro de Madrid , ademas para el cierre de linea 1 de metro , se pueda estacionar el vehiculo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>usar otro transporte debiendo ampliar su frecuencia</premise>
                 </argument>
-                <argument id="4658-2">
+                <argument commentid="-1" id="4658-2" parentid="-1" userid="9550">
                     <claim>, especialmente metro</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">en cuanto a</connector>
                     <premise>transporte publico</premise>
                 </argument>
-                <argument id="10152-1">
+                <argument commentid="-1" id="10152-1" parentid="-1" userid="125169">
                     <claim>Presento esta propuesta</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">ante</connector>
                     <premise>la necesidad de comunicar valdebebas con mas medios de transportes publicos</premise>
                 </argument>
-                <argument id="913-1">
+                <argument commentid="-1" id="913-1" parentid="-1" userid="15306">
                     <claim>del servicio de transporte publico - autobus y metro -</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el barrio de las Rejas</premise>
                 </argument>
-                <argument id="7926-1">
+                <argument commentid="-1" id="7926-1" parentid="-1" userid="71770">
                     <claim>Madrid y su transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>personas con movilidad reducida</premise>
                 </argument>
-                <argument id="15368-1">
+                <argument commentid="-1" id="15368-1" parentid="-1" userid="66264">
                     <claim>Dar solucion a las kundas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el transporte de drogadictos que tiene lugar en metro Sierra de Guadalupe</premise>
                 </argument>
-                <argument id="20307-1">
+                <argument commentid="-1" id="20307-1" parentid="-1" userid="510958">
                     <claim>Los PAU del Norte Sanchinarro Las Tablas estan mal comunicados por transporte publico</claim>
                     <connector category="cause" function="support" subcategory="reason">debido a</connector>
                     <premise>ineficacia de metro ligero</premise>
                 </argument>
-                <argument id="9051-1">
+                <argument commentid="-1" id="9051-1" parentid="-1" userid="37498">
                     <claim>El parking disuasorio de aviacion espanola debe ser asfaltado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar el acceso a Madrid en medio de transporte publico</premise>
                 </argument>
-                <argument id="23988-1">
+                <argument commentid="-1" id="23988-1" parentid="-1" userid="6751">
                     <claim>Es necesario mejorar el transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>sacar mas coches del centro</premise>
                 </argument>
-                <argument id="25305-1">
+                <argument commentid="-1" id="25305-1" parentid="-1" userid="210569">
                     <claim>Este aparcamiento era publico y disuasorio para no entrar con coche a Madrid Propongo su recuperacion</claim>
                     <connector category="explanation" function="support" subcategory="exemplification">tal como</connector>
                     <premise>era inicialmente Favoreceria la utilizacion del transporte publico</premise>
                 </argument>
-                <argument id="13698-1">
+                <argument commentid="-1" id="13698-1" parentid="-1" userid="181071">
                     <claim>Hay muchos usuarios que se quedan sin transporte publico en sus zonas de residencia porque en muchos lugares solo existe la renfe y no pueden volver</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">salvo</connector>
                     <premise>buho</premise>
                 </argument>
-                <argument id="15196-1">
+                <argument commentid="-1" id="15196-1" parentid="-1" userid="200503">
                     <claim>Transporte gratuito ( metro y autobus )</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todas y todos</premise>
                 </argument>
-                <argument id="6578-1">
+                <argument commentid="-1" id="6578-1" parentid="-1" userid="5255">
                     <claim>Contruir grandes parking gratuitos o de precios razonables , cercanos a las entradas de metro fuera de la m-30</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>propiciar el acceso a al transporte publico en el centro de Madrid</premise>
                 </argument>
-                <argument id="19868-1">
+                <argument commentid="-1" id="19868-1" parentid="-1" userid="499103">
                     <claim>Que se permita pagar los autobuses y el metro con monedas desde 1 centimo a traves de maquinas contadoras y que tambien se puedan usar</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>recargar las distintas tarjetas de transporte</premise>
                 </argument>
-                <argument id="15220-1">
+                <argument commentid="-1" id="15220-1" parentid="-1" userid="201936">
                     <claim>Una hora se tarda desde la peineta hasta el Ramon y Cajal por la mala comunicacion Del transporte publico</claim>
                     <connector category="explanation" function="support" subcategory="restatement">esto es</connector>
                     <premise>mas sangrante tratandose de personas mayores y sin coche</premise>
                 </argument>
-                <argument id="13163-1">
+                <argument commentid="-1" id="13163-1" parentid="-1" userid="33588">
                     <claim>Que cada ciudadano pueda proponer y aceptar propuestas sobre el transporte publico</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">en este caso</connector>
                     <premise>el Metro de Madrid y una vez se pudiera llevar a cabo el Ayuntamiento traslade las propuestas</premise>
                 </argument>
-                <argument id="8065-1">
+                <argument commentid="-1" id="8065-1" parentid="-1" userid="88085">
                     <claim>La empresa de Metro debera realizar las medidas tecnicas necesarias</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que el tren entre las estaciones de Tres Olivos y las Tablas pueda circular a una velocidad adecuada del medio de transporte</premise>
                 </argument>
-                <argument id="8708-1">
+                <argument commentid="-1" id="8708-1" parentid="-1" userid="83172">
                     <claim>Algunos usuarios de transporte publico solo usamos renfe , al ser solo de dos usos diarios no me sirve para nada y tengo que comprar el de metro que vale 55</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">frente a</connector>
                     <premise>los 29 de Renfe</premise>
                 </argument>
-                <argument id="5737-1">
+                <argument commentid="-1" id="5737-1" parentid="-1" userid="55068">
                     <claim>Que vuelvan los Metro-buho</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que la gente que sale los fin de semana por la noche tengan mas medios de transporte  llegar a casa y no tengan que esperar mas de 20 min en la da por el Buho</premise>
                 </argument>
             </aspect>
             <aspect quantity="3" value="contaminacion">
-                <argument id="2306-2">
+                <argument commentid="-1" id="2306-2" parentid="-1" userid="30573">
                     <claim>pares e impares</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>conductores</premise>
                 </argument>
-                <argument id="6890-1">
+                <argument commentid="-1" id="6890-1" parentid="-1" userid="63380">
                     <claim>Recuperar y reforzar el transporte publico de las noches del 24 y 31 de diciembre</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar contaminacion y accidentes</premise>
                 </argument>
-                <argument id="18886-1">
+                <argument commentid="-1" id="18886-1" parentid="-1" userid="242234">
                     <claim>Reducir 10 km la velocidad maxima en interior de la M-30 , con controles de velocidad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>reducir la contaminacion , aumentar la eficacia transporte publico , reducir vulnerabilidad ciclista</premise>
                 </argument>
             </aspect>
             <aspect quantity="11" value="transportes">
-                <argument id="3919-1">
+                <argument commentid="-1" id="3919-1" parentid="-1" userid="38271">
                     <claim>Reducir el costo de los diferentes billetes de transporte , ampliar el horario de los diferentes servicios de transportes</claim>
                     <connector category="consequence" function="support" subcategory="result">por tanto</connector>
                     <premise>aumentaria el numero de usuarios</premise>
                 </argument>
-                <argument id="11250-1">
+                <argument commentid="-1" id="11250-1" parentid="-1" userid="150740">
                     <claim>Proponer que el abono transportes infantil , que es gratis hasta los 7 anos de amplie hasta los 16 anos</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>muchos ninos cuando empiezan la ESO</premise>
                 </argument>
-                <argument id="15856-1">
+                <argument commentid="-1" id="15856-1" parentid="-1" userid="202390">
                     <claim>Habria que hacer una campana</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar la convivencia y el concepto de lo comun en los transportes publicos</premise>
                 </argument>
-                <argument id="8116-1">
+                <argument commentid="-1" id="8116-1" parentid="-1" userid="88639">
                     <claim>La idea es que el abono transportes se renueve automaticamente ( obviamente como opcion</claim>
                     <connector category="cause" function="support" subcategory="reason">pues</connector>
                     <premise>quiza todo el mundo no quiere</premise>
                 </argument>
-                <argument id="17035-1">
+                <argument commentid="-1" id="17035-1" parentid="-1" userid="422822">
                     <claim>Propongo un abono transportes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ninos</premise>
                 </argument>
-                <argument id="508-1">
+                <argument commentid="-1" id="508-1" parentid="-1" userid="11537">
                     <claim>Al igual que el resto de transportes tienen una tarifa que ' premia ' con mejores precios a los usuarios habituales , deberia exixtir</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los de taxi</premise>
                 </argument>
-                <argument id="1692-2">
+                <argument commentid="-1" id="1692-2" parentid="-1" userid="24511">
                     <claim>Muy a menudo los transportes publicos han de combinarse porque no hacer como en otras ciudades donde</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>tomas un medio a continuacion de otro</premise>
                 </argument>
-                <argument id="20149-1">
+                <argument commentid="-1" id="20149-1" parentid="-1" userid="458922">
                     <claim>Porfavor retiren ya mala publicidad delas calles ; postes aceras , paradas de transportes publicos</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>ponen usen para buenos fines ; como concienciar , educar</premise>
                 </argument>
-                <argument id="2836-1">
+                <argument commentid="-1" id="2836-1" parentid="-1" userid="2166">
                     <claim>Municipalizar el servicio de alquiler de bicicletas electricas de Madrid ( ' bici-madrid ' ) convirtiendolo en un servicio publico mas , de transportes , y no en un negocio privado de alquiler</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>turistas</premise>
                 </argument>
-                <argument id="10371-1">
+                <argument commentid="-1" id="10371-1" parentid="-1" userid="58149">
                     <claim>Creo necesario una linea de bus que vaya por Sierra Toledana</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>unir dos barrios tan concurridos como Vallecas y Moratalaz No hay ningun medio de transportes  este recorrido tan necesario</premise>
                 </argument>
-                <argument id="917-1">
+                <argument commentid="-1" id="917-1" parentid="-1" userid="15331">
                     <claim>Los descuentos en el Abono Transportes son por EDAD , sin mirar la capacidad economica del beneficiario , ejemplo : ABONO tercera edad , 13 , gane el jubilado 500 o gane 2000</claim>
                     <connector category="explanation" function="support" subcategory="restatement">esto es</connector>
                     <premise>INADMISIBLE</premise>
                 </argument>
             </aspect>
             <aspect quantity="8" value="centro">
-                <argument id="3869-1">
+                <argument commentid="-1" id="3869-1" parentid="-1" userid="5742">
                     <claim>El barrio de valdebebas carece de servicios basicos</claim>
                     <connector category="explanation" function="support" subcategory="exemplification">tales como</connector>
                     <premise>colegios , centro de salud , transporte , etc</premise>
                 </argument>
-                <argument id="24615-1">
+                <argument commentid="-1" id="24615-1" parentid="-1" userid="531519">
                     <claim>Si tenemos que ir al centro de Madrid en transporte publico mejoren los aparcamientos y construyan nuevos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder desplazarnos</premise>
                 </argument>
-                <argument id="2269-1">
+                <argument commentid="-1" id="2269-1" parentid="-1" userid="8573">
                     <claim>Cerrar el centro de Madrid a vehiculos privados solo permitiendo transportes publicos y los que tengan permiso de minusvalia , carga de mercancias , emergencias , obras , etc</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>peatonalizar las calles</premise>
                 </argument>
-                <argument id="15981-1">
+                <argument commentid="-1" id="15981-1" parentid="-1" userid="146622">
                     <claim>Instalacion de un medio de transporte publico que conecte el centro comercial de Islazul con todos los barrios de Villaverde</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>son muchos los vecinos que acuden a dicho centro</premise>
                 </argument>
-                <argument id="8458-1">
+                <argument commentid="-1" id="8458-1" parentid="-1" userid="91892">
                     <claim>Permitiria descongestionar el transporte publico actual en el centro evitando a millones de personas desplazarse hasta el centro</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>conectar con otra linea que le lleve a otro punto de la periferia</premise>
                 </argument>
-                <argument id="4416-1">
+                <argument commentid="-1" id="4416-1" parentid="-1" userid="33435">
                     <claim>En el barrio de Moratalaz y el barrio de Valdebernardo , el transporte publico no se encuentra disenado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>llegar de manera rapida al centro de la ciudad</premise>
                 </argument>
-                <argument id="9335-1">
+                <argument commentid="-1" id="9335-1" parentid="-1" userid="9478">
                     <claim>Ampliar algunas de las lineas de autobuses de la EMT ya existentes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que crucen la ciudad de este a oeste pasando por el centro de Madrid  facilitar la movilidad en transporte publico</premise>
                 </argument>
-                <argument id="5213-1">
+                <argument commentid="-1" id="5213-1" parentid="-1" userid="51236">
                     <claim>Se pierde mucho tiempo en viajar de un municipio al centro de la ciudad incluso mas de una hora</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise/>
                 </argument>
             </aspect>
             <aspect quantity="5" value="anos">
-                <argument id="20419-1">
+                <argument commentid="-1" id="20419-1" parentid="-1" userid="434438">
                     <claim>Me gustaria que el transporte fuese gratis para ninos de hasta 15 anos</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>tienen que ir acompanados de un adulto el gasto en transporte es muy alto para un adulto y un nino</premise>
                 </argument>
-                <argument id="8690-1">
+                <argument commentid="-1" id="8690-1" parentid="-1" userid="94644">
                     <claim>ciudades europeas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los ninos</premise>
                 </argument>
-                <argument id="22923-1">
+                <argument commentid="-1" id="22923-1" parentid="-1" userid="472369">
                     <claim>El transporte publico deberia fomentarse</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las familias con ninos puedan utilizarlo</premise>
                 </argument>
-                <argument id="912-2">
+                <argument commentid="-1" id="912-2" parentid="-1" userid="15318">
                     <claim>Si queremos incentivar a nuestros hijos a usar el transporte publico deberia ser gratis</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ellos</premise>
                 </argument>
-                <argument id="15325-1">
+                <argument commentid="-1" id="15325-1" parentid="-1" userid="208312">
                     <claim>a partir de 60 anos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>jubilados</premise>
                 </argument>
             </aspect>
             <aspect quantity="4" value="medio">
-                <argument id="19664-1">
+                <argument commentid="-1" id="19664-1" parentid="-1" userid="447546">
                     <claim>Responsabilizar a las empresas de ofrecer un medio de transporte colectivo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>reducir los desplazamientos al trabajo en vehiculos particulares de escasa ocupacion</premise>
                 </argument>
-                <argument id="26222-1">
+                <argument commentid="-1" id="26222-1" parentid="-1" userid="638440">
                     <claim>Habilitar escaleras mecanicas y / o ascensor en la Renfe de Las Aguilas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las personas con movilidad reducida puedan utilizar este medio de transporte</premise>
                 </argument>
-                <argument id="1259-1">
+                <argument commentid="-1" id="1259-1" parentid="-1" userid="19667">
                     <claim>Creo que es necesario ampliar los kilometros de carriles bici existentes en la ciudad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las bicicleta se convierta en un medio de transporte alternativo real</premise>
                 </argument>
-                <argument id="1537-1">
+                <argument commentid="-1" id="1537-1" parentid="-1" userid="6351">
                     <claim>Pedir a los ayuntamientos de Madrid y Rivas la creacion de un carril bici</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el desplazamiento seguro de las personas que se movilizan diariamente en este medio de transporte ecologico</premise>
                 </argument>
             </aspect>
             <aspect quantity="4" value="carriles">
-                <argument id="17997-2">
+                <argument commentid="-1" id="17997-2" parentid="-1" userid="100731">
                     <claim>Ayudaria mucho a un transporte mas comodo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el usuario</premise>
                 </argument>
-                <argument id="2766-1">
+                <argument commentid="-1" id="2766-1" parentid="-1" userid="7354">
                     <claim>Crear calzadas o carriles reservados</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>transporte publico en los accesos a Madrid por carretera , que son competencia municipal</premise>
                 </argument>
-                <argument id="25228-1">
+                <argument commentid="-1" id="25228-1" parentid="-1" userid="598479">
                     <claim>carriles bici</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>entorpecer la circulacion del transporte publico</premise>
                 </argument>
-                <argument id="2367-1">
+                <argument commentid="-1" id="2367-1" parentid="-1" userid="11353">
                     <claim>Soterrar el Paseo del Prado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>disponer de un verdadero paseo de los Museos dejando unicamente 2 carriles  el transporte publico ( buses , taxis y motos ) y creacion de un</premise>

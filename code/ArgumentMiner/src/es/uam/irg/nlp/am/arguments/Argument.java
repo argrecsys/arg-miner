@@ -23,17 +23,17 @@ public class Argument {
     // Class members
     public String approach;
     public Sentence claim;
+    public int commentID;
     public ArgumentLinker linker;
     public String mainVerb;
     public Sentence majorClaim;
+    public int parentID;
     public Sentence premise;
     public String sentenceID;
     public String sentenceText;
-    private int commentID;
+    public int userID;
     private boolean isValid;
-    private int parentID;
     private int proposalID;
-    private int userID;
     
     /**
      * Empty constructor.
