@@ -303,10 +303,19 @@ public class ArguRecSys {
                 
                 for (Argument argument : entry.getValue()) {
                     
-                    // Argument element
+                    // Argument element and its properties
                     Element nArgu = doc.createElement("argument");
                     attr = doc.createAttribute("id");
                     attr.setValue(argument.sentenceID);
+                    nArgu.setAttributeNode(attr);
+                    attr = doc.createAttribute("userid");
+                    attr.setValue(""+argument.userID);
+                    nArgu.setAttributeNode(attr);
+                    attr = doc.createAttribute("parentid");
+                    attr.setValue(""+argument.parentID);
+                    nArgu.setAttributeNode(attr);
+                    attr = doc.createAttribute("commentid");
+                    attr.setValue(""+argument.commentID);
                     nArgu.setAttributeNode(attr);
                     nAspect.appendChild(nArgu);
                     
