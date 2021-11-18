@@ -40,3 +40,8 @@ UPDATE proposals
 UPDATE proposals
    SET summary = 'En Carabanchel han aumentado los delitos por robo en personas y viviendas, sin embargo la dotacion policial para el distrito se ha disminuido.'
  WHERE id = 23248;
+ 
+-- text: -No es un problema solo de la Chopera, es del Puente Segovia, Virgen del Puerto,Ermita del Santo. Melancolicos. Muchos barrios entorno al Manzanares precemos autenticas islas en cuanto a transporte publico, o nos traen metro cosa que dudo o adecuan de una santa vez el transporte de autobuses de la EMT. Apoyo la propuesta.
+UPDATE proposal_comments
+   SET text = 'No es un problema solo de la Chopera, es del Puente Segovia, Virgen del Puerto,Ermita del Santo. Melancolicos. Muchos barrios entorno al Manzanares precemos autenticas islas en cuanto a transporte publico, o nos traen metro cosa que dudo o adecuan de una santa vez el transporte de autobuses de la EMT. Apoyo la propuesta.'
+ WHERE id = 22184;   

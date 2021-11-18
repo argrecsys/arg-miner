@@ -9,6 +9,7 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.UpdateOptions;
 import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.db.MongoDbManager;
+import es.uam.irg.decidemadrid.entities.DMComment;
 import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.Argument;
@@ -33,11 +34,11 @@ import org.json.JSONObject;
 public class ArgumentMiner {
     
     // Class members
-    private boolean annotateComments;
     private String language;
     private ArgumentLinkerManager lnkManager;
     private Map<String, Object> mdbSetup;
     private Map<String, Object> msqlSetup;
+    private Map<Integer, DMComment> proposalComments;
     private Map<Integer, DMProposal> proposals;
     private HashSet<String> stopwords;
     private boolean verbose = true;
@@ -47,16 +48,17 @@ public class ArgumentMiner {
      * 
      * @param language 
      * @param annotateComments 
-     * @param customProposalID 
+     * @param customProposalIds 
      */
-    public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalID) {
+    public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalIds) {
         this.language = language;
-        this.annotateComments = annotateComments;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
-        this.proposals = getArgumentativeProposals(customProposalID);
         this.stopwords = getStopwordList(language);
+        
+        // Read argumentative proposals and their comments
+        getArgumentativeProposals(customProposalIds, annotateComments);
     }
     
     /**
@@ -113,15 +115,36 @@ public class ArgumentMiner {
         // Temporary vars
         ArgumentEngine engine = new ArgumentEngine(language, lnkManager, stopwords);
         int proposalID;
+        int commentID;
         DMProposal proposal;
+        DMComment comment;
         
-        // Analize argumentative proposals
+        // 1. Analize argumentative proposals
+        System.out.println("Proposals annotation");
         for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
             proposalID = entry.getKey();
             proposal = entry.getValue();
             
             List<Argument> argList = engine.extract(proposalID, proposal.getUserId(), -1, -1, proposal.getTitle(), proposal.getSummary());
             arguments.put(proposalID, argList);
+        }
+        
+        // 2. Analize argumentative comments
+        System.out.println("Comments annotation");
+        for (Map.Entry<Integer, DMComment> entry : proposalComments.entrySet()) {
+            commentID = entry.getKey();
+            comment = entry.getValue();
+            proposalID = comment.getProposalId();
+            
+            List<Argument> argList = engine.extract(proposalID, comment.getUserId(), commentID, comment.getParentId(), "", comment.getText());
+            if (arguments.containsKey(proposalID)) {
+                if (argList.size() > 0) {
+                    arguments.get(proposalID).addAll(argList);
+                }
+            }
+            else {
+                System.err.println(">> Error: Comments should always be associated with a proposal.");
+            }
         }
         
         return arguments;
@@ -138,13 +161,14 @@ public class ArgumentMiner {
     }
     
     /**
-     * Wrapper function for (DMDBManager) selectNProposals method.
+     * Read argumentative proposals and their comments.
      * 
      * @param topN
      * @return 
      */
-    private Map<Integer, DMProposal> getArgumentativeProposals(Integer[] customProposalID) {
-        Map<Integer, DMProposal> proposals = null;
+    private void getArgumentativeProposals(Integer[] customProposalIds, boolean annotateComments) {
+        proposals = new HashMap<>();
+        proposalComments = new HashMap<>();
         
         try {
             DMDBManager dbManager = null;
@@ -160,22 +184,34 @@ public class ArgumentMiner {
                 dbManager = new DMDBManager();
             }
             
-            if (customProposalID.length > 0) {
-                proposals = dbManager.selectProposals(customProposalID);
+            if (customProposalIds.length > 0) {
+                proposals = dbManager.selectProposals(customProposalIds);
             }
             else {
                 proposals = dbManager.selectProposals(this.lnkManager.getLexicon(false));
+                
+                if (annotateComments) {
+                    customProposalIds = new Integer[proposals.size()];
+                    
+                    int i = 0;
+                    for (Integer key : proposals.keySet()) {
+                        customProposalIds[i++] = key;
+                    }
+                }
+            }
+            
+            if (annotateComments) {
+                proposalComments = dbManager.selectComments(customProposalIds);
             }
             
             if (this.verbose) {
                 System.out.println(">> Number of proposals: " + proposals.size());
+                System.out.println("   Number of comments: " + proposalComments.size());
             }
         }
         catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        return proposals;
     }
     
     /**

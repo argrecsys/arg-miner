@@ -22,7 +22,7 @@ public class Program {
         
         // Program hyperparameters with default values
         String language = Constants.LANG_ES;
-        boolean annotateComments = false;
+        boolean annotateComments = true;
         Integer[] customProposalID = new Integer[0];
         
         // Read input parameters

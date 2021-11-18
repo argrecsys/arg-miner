@@ -9,7 +9,6 @@
         <proposal categories="" date="2019-01-16" districts="fuencarral-el pardo" id="25606" topics="">AMPLIACION LINEA 124 HASTA PEDRO RICO/JULIO PALACIOS</proposal>
         <proposal categories="" date="2017-01-19" districts="villa de vallecas" id="15368" topics="">Kundas</proposal>
         <proposal categories="" date="2016-02-23" districts="ciudad" id="8458" topics="">2 linea circular de transporte que recorra la periferia de Madrid</proposal>
-        <proposal categories="accesibilidad,asociaciones,derechos sociales" date="2015-11-03" districts="ciudad" id="4107" topics="asociacionismo,derechos humanos,discapacitados">Descuentos en transporte para personas con discapacidad</proposal>
         <proposal categories="movilidad,ocio y entretenimiento" date="2017-01-09" districts="ciudad" id="15117" topics="cines,transporte publico">Visibilidad del transporte publico en el cine rodado en Madrid</proposal>
         <proposal categories="medio ambiente,movilidad" date="2018-12-13" districts="ciudad" id="25101" topics="autobuses,medio ambiente">En dias de alta contaminacion poner mas autobuses</proposal>
         <proposal categories="movilidad" date="2015-11-26" districts="ciudad" id="6163" topics="vehiculos">Racionalizar el uso del vehiculo privado para ir y venir del trabajo.</proposal>
@@ -112,6 +111,7 @@
         <proposal categories="movilidad" date="2015-09-16" districts="ciudad" id="917" topics="abono de transportes">ABONO TRANSPORTES barato solo para salarios bajos.</proposal>
         <proposal categories="movilidad" date="2015-11-03" districts="ciudad,puente de vallecas" id="3989" topics="abono de transportes">Precio Unico Abono Transportes sin limite para toda la Comunidad de Madrid</proposal>
         <proposal categories="educacion,equidad e integracion" date="2018-02-11" districts="ciudad" id="21143" topics="educacion infantil,igualdad,institutos">Subvencionar el transporte escolar de CEIPS e IES para salidas extraescolares</proposal>
+        <proposal categories="medio ambiente,movilidad" date="2015-09-18" districts="arganzuela,ciudad" id="1432" topics="medio ambiente,transporte publico">transporte publico en madrid rio</proposal>
         <proposal categories="equidad e integracion,movilidad" date="2015-11-18" districts="ciudad" id="5785" topics="abono de transportes,atascos,discriminacion">Abono de transporte barato sin discriminacion por edad o estado laboral</proposal>
         <proposal categories="movilidad" date="2018-03-16" districts="ciudad" id="21914" topics="autobuses,transporte publico">Maquinas para recargar la tarjeta de transporte en las paradas de bus</proposal>
         <proposal categories="medio ambiente,sostenibilidad" date="2015-09-20" districts="ciudad" id="1692" topics="medio ambiente,sostenibilidad">Billete de transporte combinado</proposal>
@@ -313,7 +313,7 @@
                     <premise>aparcamiento</premise>
                 </argument>
             </aspect>
-            <aspect quantity="6" value="personas">
+            <aspect quantity="5" value="personas">
                 <argument commentid="-1" id="3265-1" parentid="-1" userid="7051">
                     <claim>Ya que estan implicados de una forma u otra tanto la EMT como el Consorcio de Transporte de Madrid pienso que deberia ser gratis</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
@@ -333,11 +333,6 @@
                     <claim>Propongo que a las esposas de menos de 65 anos se les facilite el abono transporte</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>personas mayores de 65 anos que lo tengan ya sus espos</premise>
-                </argument>
-                <argument commentid="-1" id="4107-1" parentid="-1" userid="38799">
-                    <claim>Existen numerosas discapacidades hoy en dia , pero solo hay 2 opciones para el transporte publico</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>ambas has de tener mas de un 65 % de discapacidad reconocida</premise>
                 </argument>
                 <argument commentid="-1" id="9026-1" parentid="-1" userid="71165">
                     <claim>Poner un gancho que sostenga las bicicletas en la parte frontal de los autobuses publicos</claim>
