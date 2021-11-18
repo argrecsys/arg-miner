@@ -143,7 +143,7 @@ public class ArgumentEngine implements Constants {
                 System.out.println("Syntagma list: " + syntagmaList.size());
 
                 // 11. Apply arguments mining (AM)
-                Argument arg = mineArgument(sentenceID, userID, commentID, commentID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
+                Argument arg = mineArgument(sentenceID, userID, commentID, parentID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
                 
                 // 12. Save argument
                 if (arg.isValid()) {

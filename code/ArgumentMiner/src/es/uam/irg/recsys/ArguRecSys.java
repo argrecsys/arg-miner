@@ -14,6 +14,7 @@ import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -61,7 +62,7 @@ public class ArguRecSys {
         boolean result = false;
         
         // Get list of arguments by specific topic
-        List<Argument> arguments = getArgumentsByTopic();
+        List<Argument> arguments = getArgumentsByTopic(this.topic);
         System.out.println(">> Total arguments: " + arguments.size());
         
         // Get proposals summary for selected arguments
@@ -73,7 +74,7 @@ public class ArguRecSys {
             System.out.println(aspects);
             
             // Save arguments
-            Map<String, List<Argument>> recommendations = getRecommendations(arguments, aspects, minAspectOccur);
+            Map<String, List<Argument>> recommendations = getRecommendations(this.topic, arguments, aspects, this.minAspectOccur);
             System.out.println(">> Total recommended topics: " + recommendations.size());
             
             result = saveRecommendations(this.topic, proposals, recommendations);
@@ -90,9 +91,10 @@ public class ArguRecSys {
     
     /**
      * 
+     * @param topic
      * @return 
      */
-    private List<Argument> getArgumentsByTopic() {
+    private List<Argument> getArgumentsByTopic(String topic) {
         List<Argument> arguments = new ArrayList<>();
         
         MongoDbManager dbManager = null;
@@ -107,7 +109,7 @@ public class ArguRecSys {
             dbManager = new MongoDbManager();
         }
         
-        List<Document> docs = dbManager.getDocumentsByTopic(this.topic);
+        List<Document> docs = dbManager.getDocumentsByTopic(topic);
         
         docs.forEach(doc -> {
             arguments.add( new Argument(doc));
@@ -174,18 +176,19 @@ public class ArguRecSys {
     
     /**
      * 
+     * @param topic
      * @param arguments
      * @param aspects
      * @param minAspectOccur
      * @return 
      */
-    private Map<String, List<Argument>> getRecommendations(List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
+    private Map<String, List<Argument>> getRecommendations(String topic, List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
         Map<String, List<Argument>> result = new HashMap<>();
         Map<String, List<Argument>> recommendations = new HashMap<>();
         
         // Local variables
         String aspect;
-        List<String> argUsed = new ArrayList<>();
+        Set<String> argUsed = new HashSet<>();
         
         for (Map.Entry<String, Integer> entry : aspects.entrySet()) {
             aspect = entry.getKey();
@@ -302,46 +305,10 @@ public class ArguRecSys {
                 nAspect.setAttributeNode(attr);
                 
                 for (Argument argument : entry.getValue()) {
-                    
-                    // Argument element and its properties
-                    Element nArgu = doc.createElement("argument");
-                    attr = doc.createAttribute("id");
-                    attr.setValue(argument.sentenceID);
-                    nArgu.setAttributeNode(attr);
-                    attr = doc.createAttribute("userid");
-                    attr.setValue(""+argument.userID);
-                    nArgu.setAttributeNode(attr);
-                    attr = doc.createAttribute("parentid");
-                    attr.setValue(""+argument.parentID);
-                    nArgu.setAttributeNode(attr);
-                    attr = doc.createAttribute("commentid");
-                    attr.setValue(""+argument.commentID);
-                    nArgu.setAttributeNode(attr);
-                    nAspect.appendChild(nArgu);
-                    
-                    Element nClaim = doc.createElement("claim");
-                    nClaim.appendChild(doc.createTextNode(argument.claim.text));
-                    nArgu.appendChild(nClaim);
-                    
-                    Element nLinker = doc.createElement("connector");
-                    nLinker.appendChild(doc.createTextNode(argument.linker.linker));
-                    nArgu.appendChild(nLinker);
-                    
-                    attr = doc.createAttribute("category");
-                    attr.setValue(argument.linker.category.toLowerCase());
-                    nLinker.setAttributeNode(attr);
-                    
-                    attr = doc.createAttribute("subcategory");
-                    attr.setValue(argument.linker.subCategory.toLowerCase());
-                    nLinker.setAttributeNode(attr);
-                    
-                    attr = doc.createAttribute("function");
-                    attr.setValue(argument.linker.relationType);
-                    nLinker.setAttributeNode(attr);
-                    
-                    Element nPremise = doc.createElement("premise");
-                    nPremise.appendChild(doc.createTextNode(argument.premise.text));
-                    nArgu.appendChild(nPremise);
+                    if (argument.commentID > -1) {
+                        Element nArgu = createRecommendationElement(doc, argument);
+                        nAspect.appendChild(nArgu);
+                    }
                 }
             }
 
@@ -356,4 +323,54 @@ public class ArguRecSys {
         return result;
     }
     
+    /**
+     * Creates and argument element and its properties.
+     * 
+     * @param doc
+     * @param argument
+     * @return 
+     */
+    private Element createRecommendationElement(org.w3c.dom.Document doc, Argument argument) {
+        Element nArgu = doc.createElement("argument");
+        
+        // Argument element and its properties
+        Attr attr = doc.createAttribute("id");
+        attr.setValue(argument.sentenceID);
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("userid");
+        attr.setValue(""+argument.userID);
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("parentid");
+        attr.setValue(""+argument.parentID);
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("commentid");
+        attr.setValue(""+argument.commentID);
+        nArgu.setAttributeNode(attr);
+
+        Element nClaim = doc.createElement("claim");
+        nClaim.appendChild(doc.createTextNode(argument.claim.text));
+        nArgu.appendChild(nClaim);
+
+        Element nLinker = doc.createElement("connector");
+        nLinker.appendChild(doc.createTextNode(argument.linker.linker));
+        nArgu.appendChild(nLinker);
+
+        attr = doc.createAttribute("category");
+        attr.setValue(argument.linker.category.toLowerCase());
+        nLinker.setAttributeNode(attr);
+
+        attr = doc.createAttribute("subcategory");
+        attr.setValue(argument.linker.subCategory.toLowerCase());
+        nLinker.setAttributeNode(attr);
+
+        attr = doc.createAttribute("function");
+        attr.setValue(argument.linker.relationType);
+        nLinker.setAttributeNode(attr);
+
+        Element nPremise = doc.createElement("premise");
+        nPremise.appendChild(doc.createTextNode(argument.premise.text));
+        nArgu.appendChild(nPremise);
+        
+        return nArgu;
+    }
 }
