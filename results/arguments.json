@@ -57,7 +57,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4671,
-        "parentID": 39033
+        "parentID": -1
     },
     "992-1": {
         "sentence": "Rellenar los alcorques de los arboles porque el hueco ocupa media acera",
@@ -117,7 +117,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 4107,
-        "parentID": 85030
+        "parentID": -1
     },
     "4671-1": {
         "sentence": "Que baje el precio del transporte porque es muy caro.",
@@ -177,7 +177,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 867,
-        "parentID": 91066
+        "parentID": -1
     },
     "1985-2": {
         "sentence": "Es muy logico que si ya pagas un abono transporte no tengas que pagar mas transporte publico al usar algun servicio en concreto.",
@@ -207,7 +207,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 1985,
-        "parentID": 25547
+        "parentID": -1
     },
     "340-4": {
         "sentence": "Por una ensenanza publica de calidad de todos y para todos.",
@@ -237,7 +237,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 340,
-        "parentID": 31383
+        "parentID": -1
     },
     "1985-1": {
         "sentence": "Incluir el servicio nocturno de autobus lanzadera del aeropuerto en el abono transporte dado que no existe alternativa, solo el bus que cuesta 5 y el taxi que cuesta por lo menos 30.",
@@ -297,7 +297,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 867,
-        "parentID": 91066
+        "parentID": -1
     },
     "340-2": {
         "sentence": "No tenemos instituto, y eso seria la prioridad, pero tambien deberian ampliarse las dotaciones de ensenanza infantil y primaria, ya que los vecinos que queremos acceder a la ensenanza publica nos vemos obligados a llevar a nuestros hijos a otros barrios porque en el nuestro no hay plazas suficientes.",
@@ -327,7 +327,7 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 340,
-        "parentID": 31383
+        "parentID": -1
     },
     "340-1": {
         "sentence": "Crear un Instituto al menos para nuestros hijos en el barrio de las Tablas, dado que existen muchos colegios, pero no Instituto.",
@@ -387,6 +387,6 @@
         },
         "approach": "A2 -> C+(L+P)",
         "proposalID": 1432,
-        "parentID": 22184
+        "parentID": -1
     }
 }
