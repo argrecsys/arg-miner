@@ -1,8 +1,7 @@
 package es.uam.irg.decidemadrid.db;
 
 import es.uam.irg.db.MySQLDBConnector;
-import es.uam.irg.decidemadrid.entities.DMProposal;
-import es.uam.irg.decidemadrid.entities.DMProposalSummary;
+import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.utils.FunctionUtils;
@@ -36,6 +35,62 @@ public class DMDBManager {
         this.db.disconnect();
     }
     
+    public Map<Integer, DMComment> selectComments() throws Exception {
+        Map<Integer, DMComment> comments = new HashMap<>();
+
+        String query = "SELECT * FROM proposal_comments;";
+        ResultSet rs = this.db.executeSelect(query);
+        
+        while (rs != null && rs.next()) {
+            int id = rs.getInt("id");
+            int parentId = rs.getInt("parentId");
+            int proposalId = rs.getInt("proposalId");
+            int userId = rs.getInt("userId");
+            String date = rs.getDate("date").toString();
+            String time = rs.getTime("time").toString();
+            String text = rs.getString("text");
+            int votes = rs.getInt("numVotes");
+            int votesUp = rs.getInt("numPositiveVotes");
+            int votesDown = rs.getInt("numNegativeVotes");
+
+            DMComment comment = new DMComment(id, parentId, proposalId, userId, date, time, text, votes, votesUp, votesDown);
+            comments.put(id, comment);
+        }
+        rs.close();
+
+        return comments;
+    }
+    
+    public Map<Integer, DMComment> selectComments(Integer[] proposalIds) throws Exception {
+        Map<Integer, DMComment> comments = new HashMap<>();
+        
+        if (proposalIds.length > 0) {
+            String query = "SELECT id, parentId, proposalId, userId, date, time, text, numVotes, numPositiveVotes, numNegativeVotes " +
+                           "  FROM proposal_comments " +
+                           " WHERE proposalId IN (" + FunctionUtils.arrayToString(proposalIds, ",") + ");";
+            ResultSet rs = this.db.executeSelect(query);
+
+            while (rs != null && rs.next()) {
+                int id = rs.getInt("id");
+                int parentId = rs.getInt("parentId");
+                int proposalId = rs.getInt("proposalId");
+                int userId = rs.getInt("userId");
+                String date = rs.getDate("date").toString();
+                String time = rs.getTime("time").toString();
+                String text = rs.getString("text");
+                int votes = rs.getInt("numVotes");
+                int votesUp = rs.getInt("numPositiveVotes");
+                int votesDown = rs.getInt("numNegativeVotes");
+
+                DMComment comment = new DMComment(id, parentId, proposalId, userId, date, time, text, votes, votesUp, votesDown);
+                comments.put(id, comment);
+            }
+            rs.close();
+        }
+
+        return comments;
+    }
+    
     public Map<Integer, DMProposal> selectProposals() throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
 
@@ -60,28 +115,30 @@ public class DMDBManager {
         return proposals;
     }
     
-    public Map<Integer, DMProposal> selectProposals(Integer[] proposalList) throws Exception {
+    public Map<Integer, DMProposal> selectProposals(Integer[] proposalIds) throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
         
-        String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
-                       "  FROM proposals " +
-                       " WHERE id IN (" + FunctionUtils.arrayToString(proposalList, ",") + ");";
-        ResultSet rs = this.db.executeSelect(query);
-        
-        while (rs != null && rs.next()) {
-            int id = rs.getInt("id");
-            String title = rs.getString("title");
-            int userId = rs.getInt("userId");
-            String date = rs.getString("date");
-            String summary = rs.getString("summary");
-            String text = rs.getString("text");
-            int numComments = rs.getInt("numComments");
-            int numSupports = rs.getInt("numSupports");
+        if (proposalIds.length > 0) {
+            String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +
+                           "  FROM proposals " +
+                           " WHERE id IN (" + FunctionUtils.arrayToString(proposalIds, ",") + ");";
+            ResultSet rs = this.db.executeSelect(query);
 
-            DMProposal proposal = new DMProposal(id, title, userId, date, summary, text, numComments, numSupports);
-            proposals.put(id, proposal);
+            while (rs != null && rs.next()) {
+                int id = rs.getInt("id");
+                String title = rs.getString("title");
+                int userId = rs.getInt("userId");
+                String date = rs.getString("date");
+                String summary = rs.getString("summary");
+                String text = rs.getString("text");
+                int numComments = rs.getInt("numComments");
+                int numSupports = rs.getInt("numSupports");
+
+                DMProposal proposal = new DMProposal(id, title, userId, date, summary, text, numComments, numSupports);
+                proposals.put(id, proposal);
+            }
+            rs.close();
         }
-        rs.close();
 
         return proposals;
     }

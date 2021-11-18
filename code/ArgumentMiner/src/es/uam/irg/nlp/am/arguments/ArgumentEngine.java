@@ -228,17 +228,21 @@ public class ArgumentEngine implements Constants {
      */
     private Sentence createMajorClaim(StanfordCoreNLP pipeline, String text) {
         text = StringUtils.cleanText(text, StringUtils.CLEAN_RIGHT);
-        
-        // Get nouns (from POS) in document title
-        List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, Arrays.asList("NOUN"));
         List<String> nounList = new ArrayList<>();
-        tokens.forEach(token -> {
-            nounList.add(token.word());
-        });
+        List<String> entityList = new ArrayList<>();
+        
+        if (text.length() > 0) {
+            
+            // Get nouns (from POS) in document title
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, Arrays.asList("NOUN"));
+            tokens.forEach(token -> {
+                nounList.add(token.word());
+            });
 
-        // Get named entity recognition (NER) in document title
-        Map<String, String> entities = getNamedEntities(pipeline, text);
-        List<String> entityList = new ArrayList<>(entities.keySet());
+            // Get named entity recognition (NER) in document title
+            Map<String, String> entities = getNamedEntities(pipeline, text);
+            entityList.addAll(entities.keySet());
+        }
         
         return new Sentence(text, nounList, entityList);
     }
