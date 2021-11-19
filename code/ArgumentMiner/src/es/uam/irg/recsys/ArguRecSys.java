@@ -305,7 +305,7 @@ public class ArguRecSys {
                 nAspect.setAttributeNode(attr);
                 
                 for (Argument argument : entry.getValue()) {
-                    if (argument.commentID > -1) {
+                    if (argument.commentID >= -1) {
                         Element nArgu = createRecommendationElement(doc, argument);
                         nAspect.appendChild(nArgu);
                     }
