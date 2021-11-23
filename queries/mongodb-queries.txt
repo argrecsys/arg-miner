@@ -1,0 +1,2 @@
+{$and: [{"proposalID": 23219}, {"commentID": -1}]}
+{$and: [{"proposalID": 23219}, {"commentID": {$gt: -1}}]}
