@@ -278,14 +278,15 @@ public class ArgumentMiner {
                     String dbServer = mdbSetup.get("db_server").toString();
                     int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
                     String dbName = mdbSetup.get("db_name").toString();
+                    String collName = mdbSetup.get("db_collection").toString();
 
-                    dbManager = new MongoDbManager(dbServer, dbPort, dbName);
+                    dbManager = new MongoDbManager(dbServer, dbPort, dbName, collName);
                 }
                 else {
                     dbManager = new MongoDbManager();
                 }
                 
-                result = dbManager.upsertDocuments("annotations", argList, argFilter, new UpdateOptions().upsert(true));
+                result = dbManager.upsertDocuments(argList, argFilter, new UpdateOptions().upsert(true));
             }
         }
         

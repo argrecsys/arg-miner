@@ -25,16 +25,18 @@ public class MongoDbManager {
     public static final String DB_NAME = "decide_madrid_2019_09";
     public static final int DB_PORT = 27017; 
     public static final String DB_SERVER = "localhost";
+    public static final String DB_COLLECTION = "annotations";
     
     // Private connector object
     private MongoDatabase db;
     private MongoClient mongoClient;
+    private String collName;
     
     /**
      * Manager constructor.
      */
     public MongoDbManager() {
-        this(DB_SERVER , DB_PORT, DB_NAME);
+        this(DB_SERVER , DB_PORT, DB_NAME, DB_COLLECTION);
     }
     
     /**
@@ -42,15 +44,18 @@ public class MongoDbManager {
      * @param client
      * @param port
      * @param database 
+     * @param collection 
      */
-    public MongoDbManager(String client, int port, String database) {
+    public MongoDbManager(String client, int port, String database, String collection) {
         try {
             this.mongoClient = new MongoClient(client , port);
             this.db = mongoClient.getDatabase(database);
+            this.collName = collection;
         }
         catch (Exception ex) {
             this.mongoClient = null;
             this.db = null;
+            this.collName = null;
         }
     }
     
@@ -63,7 +68,6 @@ public class MongoDbManager {
         List<Document> docs = new ArrayList<>();
         
         try {
-            String collName = "annotations";
             MongoCollection<Document> collection = db.getCollection(collName);
             
             for (Document doc : collection.find(Filters.text(topic))) {
@@ -79,13 +83,12 @@ public class MongoDbManager {
     
     /**
      * 
-     * @param collName
      * @param doc
      * @param filter
      * @param options
      * @return 
      */
-    public boolean upsertDocument(String collName, Document doc, Bson filter, UpdateOptions options) {
+    public boolean upsertDocument(Document doc, Bson filter, UpdateOptions options) {
         boolean result = false;
         
         try {
@@ -103,20 +106,19 @@ public class MongoDbManager {
     
     /**
      * 
-     * @param collName
      * @param docs
      * @param filters
      * @param options
      * @return 
      */
-    public boolean upsertDocuments(String collName, List<Document> docs, List<Bson> filters, UpdateOptions options) {
+    public boolean upsertDocuments(List<Document> docs, List<Bson> filters, UpdateOptions options) {
         boolean result = true;
         
         if (docs.size() == filters.size()) {
             for (int i = 0; i < docs.size(); i++) {
                 Document doc = docs.get(i);
                 Bson filter = filters.get(i);
-                result &= upsertDocument(collName, doc, filter, options);
+                result &= upsertDocument(doc, filter, options);
             }
         }
         
