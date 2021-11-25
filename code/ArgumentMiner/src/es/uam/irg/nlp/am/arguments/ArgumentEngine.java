@@ -82,7 +82,7 @@ public class ArgumentEngine implements Constants {
      * @return 
      */
     public List<Argument> extract(int docKey, int userID, int commentID, int parentID, String docTitle, String docText) {
-        System.out.format("Task Annotate - Id: %s, Proposal: %s\n", docKey, docText);
+        System.out.format("Task Annotate - Id: %s, Comment Id: %s, Proposal: %s\n", docKey, commentID, docText);
         List<Argument> result = new ArrayList<>();
         
         // 1. Annotate entire document with Stanford CoreNLP
@@ -101,7 +101,7 @@ public class ArgumentEngine implements Constants {
         for (int i = 0; i < sentences.size(); i++) {
             
             // 5. Get current sentence
-            String sentenceID = docKey + "-" + (i + 1);
+            String sentenceID = docKey + (commentID > -1? "-" + commentID : "") + "-" + (i + 1);
             CoreMap sentence = sentences.get(i);
             String sentenceText = sentence.toString();
             System.out.format("[%s]: %s\n", sentenceID, sentenceText);
