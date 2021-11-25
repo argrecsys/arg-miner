@@ -18,6 +18,7 @@ import java.io.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -105,11 +106,15 @@ public class ArgumentEngine implements Constants {
             String sentenceText = sentence.toString();
             System.out.format("[%s]: %s\n", sentenceID, sentenceText);
             
-            // 6. Get main sentence linker
-            ArgumentLinker linker = getSentenceLinker(sentenceText);
+            // 6. Get candidate linker list
+            List<ArgumentLinker> candLinkers = getSentenceLinkers(sentenceText);
             
-            if (linker != null) {
-                System.out.println("Sentence linker: " + linker.getString());
+            if (candLinkers.size() > 0) {
+                String candLinkersStr = "";
+                for (ArgumentLinker cand : candLinkers) {
+                    candLinkersStr += ("".equals(candLinkersStr) ? "" : ",") + cand.linker;
+                }
+                System.out.println("Sentence linkers [" + candLinkers.size() + "]: " + candLinkersStr);
             
                 // 7. Get named entity recognition (NER) in document
                 Map<String, String> entities = getNamedEntities(pipeline, sentenceText);
@@ -143,7 +148,7 @@ public class ArgumentEngine implements Constants {
                 System.out.println("Syntagma list: " + syntagmaList.size());
 
                 // 11. Apply arguments mining (AM)
-                Argument arg = mineArgument(sentenceID, userID, commentID, parentID, sentenceText, linker, syntagmaList, entityList, nounList, verbList);
+                Argument arg = mineArgument(sentenceID, userID, commentID, parentID, sentenceText, candLinkers, syntagmaList, entityList, nounList, verbList);
                 
                 // 12. Save argument
                 if (arg.isValid()) {
@@ -248,20 +253,30 @@ public class ArgumentEngine implements Constants {
     }
     
     /**
-     *
-     * @param tokens
+     * 
+     * @param text
      * @param nTokens
-     * @return
+     * @return 
      */
     private String getNGram(String text, int nTokens) {
+        String newText = StringUtils.cleanText(text, StringUtils.CLEAN_BOTH);
+        String[] tokens = newText.split(" ");
+        return getNGram(tokens, 0, nTokens);
+    }
+    
+    /**
+     * 
+     * @param tokens
+     * @param init
+     * @param nTokens
+     * @return 
+     */
+    private String getNGram(String[] tokens, int init, int nTokens) {
         String nGram = "";
         
         try {
-            String newText = StringUtils.cleanText(text, StringUtils.CLEAN_BOTH);
-            String[] tokens = newText.split(" ");
-            
             if (tokens.length > 0) {
-                String[] subList = FunctionUtils.getSubArray(tokens, 0, nTokens);
+                String[] subList = FunctionUtils.getSubArray(tokens, init, init + nTokens);
                 nGram = FunctionUtils.arrayToString(subList, Constants.NGRAMS_DELIMITER);
             }
         }
@@ -326,14 +341,61 @@ public class ArgumentEngine implements Constants {
     private ArgumentLinker getSentenceLinker(String sentenceText) {
         ArgumentLinker linker = null;
         
-        for (int i = 0; i < this.lexicon.size(); i++) {
-            linker = lexicon.get(i);
-            if (sentenceText.contains(linker.linker)) {
-                return linker;
+        if (!StringUtils.isEmpty(sentenceText)) {
+            String newText = StringUtils.cleanText(sentenceText, StringUtils.CLEAN_BOTH).toLowerCase();
+            String[] tokens = newText.split(" ");
+            
+            for (int i = 0; i < this.lexicon.size(); i++) {
+                linker = lexicon.get(i);
+                
+                for (int j = 0; j <= tokens.length - linker.nTokens; j++) {
+                    String nGram = getNGram(tokens, j, linker.nTokens);
+
+                    if (linker.isEquals(nGram)) {
+                        return linker;
+                    }
+                }
             }
         }
         
         return null;
+    }
+    
+    /**
+     * 
+     * @param sentenceText
+     * @param lexicon
+     * @return 
+     */
+    private List<ArgumentLinker> getSentenceLinkers(String sentenceText) {
+        List<ArgumentLinker> linkers = new ArrayList<>();
+        
+        if (!StringUtils.isEmpty(sentenceText)) {
+            String newText = StringUtils.cleanText(sentenceText, StringUtils.CLEAN_BOTH).toLowerCase();
+            String[] tokens = newText.split(" ");
+            
+            int i = 0;
+            while (i < tokens.length) {
+                ArgumentLinker linker = null;
+                boolean found = false;
+                
+                for (int j = 0; j < this.lexicon.size() && !found; j++) {
+                    linker = this.lexicon.get(j);
+                    String nGram = getNGram(tokens, i, linker.nTokens);
+                    found = linker.isEquals(nGram);
+                }
+                
+                if (found) {
+                    linkers.add(linker);
+                    i = i + linker.nTokens;
+                }
+                else {
+                    i++;
+                }
+            }
+        }
+        
+        return linkers;
     }
     
     /**
@@ -398,7 +460,7 @@ public class ArgumentEngine implements Constants {
      * @param commentID
      * @param parentID
      * @param sentenceText
-     * @param linker
+     * @param candLinkers
      * @param syntagmaList
      * @param entityList
      * @param nounList
@@ -406,11 +468,12 @@ public class ArgumentEngine implements Constants {
      * @return 
      */
     private Argument mineArgument(String sentenceID, int userID, int commentID, int parentID, 
-            String sentenceText, ArgumentLinker linker, List<Syntagma> syntagmaList, List<String> entityList, List<String> nounList, List<String> verbList) {
+                                  String sentenceText, List<ArgumentLinker> candLinkers, List<Syntagma> syntagmaList, List<String> entityList, List<String> nounList, List<String> verbList) {
         Argument arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText);
         
         // Temporary variables
         String approach;
+        ArgumentLinker linker;
         String premise;
         String claim;
         String mainVerb = null;
@@ -420,6 +483,7 @@ public class ArgumentEngine implements Constants {
             Approach 1: claim + linker + premise
         */
         approach = "A1 -> C+L+P";
+        linker = null;
         premise = null;
         claim = null;
 
@@ -442,9 +506,9 @@ public class ArgumentEngine implements Constants {
             else if (syntagma.depth == 1 && premise != null) {
                 String nGram = syntagma.text.replace(claim, "").replace(premise, "");
                 nGram = StringUtils.cleanText(nGram, StringUtils.CLEAN_BOTH).replace(" ", Constants.NGRAMS_DELIMITER);
+                linker = findCandidateLinker(candLinkers, nGram);
                 
-                if (linker.isEquals(nGram)) {
-                    
+                if (linker != null) {
                     // Create argument object
                     Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                     Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
@@ -464,17 +528,20 @@ public class ArgumentEngine implements Constants {
             minDepth = Integer.MAX_VALUE;
             
             for (Syntagma syntagma : syntagmaList) {
-                String nGram = getNGram(syntagma.text, linker.nTokens);
-
-                if (linker.isEquals(nGram)) {
-                    if (syntagma.depth < minDepth) {
-                        minDepth = syntagma.depth;
-                        premise = syntagma.text;
+                for (ArgumentLinker cand : candLinkers) {
+                    String nGram = getNGram(syntagma.text, cand.nTokens);
+                    
+                    if (cand.isEquals(nGram)) {
+                        if (syntagma.depth < minDepth) {
+                            minDepth = syntagma.depth;
+                            premise = syntagma.text;
+                            linker = cand;
+                        }
                     }
                 }
             }
             
-            if (premise != null) {
+            if (premise != null && linker != null) {
                 
                 if (!verbList.isEmpty()) {
                     for (Syntagma syntagma : syntagmaList) {
@@ -518,6 +585,21 @@ public class ArgumentEngine implements Constants {
         }
         
         return arg;
+    }
+    
+    /**
+     * 
+     * @param linkers
+     * @param word
+     * @return 
+     */
+    private ArgumentLinker findCandidateLinker(List<ArgumentLinker> linkers, String word) {
+        for (ArgumentLinker cand : linkers) {
+            if (cand.isEquals(word)) {
+                return cand;
+            }
+        }
+        return null;
     }
     
     /**

@@ -102,8 +102,9 @@ public class ArguRecSys {
             String dbServer = mdbSetup.get("db_server").toString();
             int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
             String dbName = mdbSetup.get("db_name").toString();
-
-            dbManager = new MongoDbManager(dbServer, dbPort, dbName);
+            String collName = mdbSetup.get("db_collection").toString();
+            
+            dbManager = new MongoDbManager(dbServer, dbPort, dbName, collName);
         }
         else {
             dbManager = new MongoDbManager();
