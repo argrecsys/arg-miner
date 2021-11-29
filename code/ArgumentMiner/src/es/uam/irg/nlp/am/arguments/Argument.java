@@ -34,6 +34,7 @@ public class Argument {
     public int userID;
     private boolean isValid;
     private int proposalID;
+    private String syntacticTree;
     
     /**
      * Empty constructor.
@@ -45,7 +46,7 @@ public class Argument {
      * @param sentenceText 
      */
     public Argument(String sentenceID, int userID, int commentID, int parentID, String sentenceText) {
-        this(sentenceID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE");
+        this(sentenceID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE", "");
         this.proposalID = -1;
         
         this.isValid = false;
@@ -63,10 +64,11 @@ public class Argument {
      * @param premise
      * @param mainVerb
      * @param linker
-     * @param approach 
+     * @param approach
+     * @param syntacticTree 
      */
     public Argument(String sentenceID, int userID, int commentID, int parentID, 
-            String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach) {
+            String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
         this.sentenceID = sentenceID;
         this.userID = userID;
         this.commentID = commentID;
@@ -77,6 +79,8 @@ public class Argument {
         this.mainVerb = mainVerb;
         this.linker = linker;
         this.approach = approach;
+        this.syntacticTree = syntacticTree;
+        
         if (!StringUtils.isEmpty(this.sentenceID)) {
             this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
         }
@@ -100,6 +104,8 @@ public class Argument {
         this.mainVerb = doc.getString("mainVerb");
         this.linker = new ArgumentLinker(doc.get("linker", Document.class));
         this.approach = doc.getString("approach");
+        this.syntacticTree = doc.getString("syntacticTree");
+        
         if (!StringUtils.isEmpty(this.sentenceID)) {
             this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
         }
@@ -125,7 +131,8 @@ public class Argument {
                 .append("premise", this.premise.getDocument())
                 .append("mainVerb", this.mainVerb)
                 .append("linker", this.linker.getDocument())
-                .append("approach", this.approach);
+                .append("approach", this.approach)
+                .append("syntacticTree", this.syntacticTree);
         
         return doc;
     }
@@ -148,6 +155,7 @@ public class Argument {
         json.put("mainVerb", this.mainVerb);
         json.put("linker", this.linker.getJSON());
         json.put("approach", this.approach);
+        json.put("syntacticTree", this.syntacticTree);
         
         return json;
     }
@@ -185,6 +193,14 @@ public class Argument {
      * 
      * @return 
      */
+    public String getSyntacticTree() {
+        return this.syntacticTree;
+    }
+    
+    /**
+     *
+     * @return
+     */
     public boolean isValid() {
         return this.isValid;
     }
@@ -202,5 +218,6 @@ public class Argument {
         
         return newList;
     }
-        
+    
+    
 }

@@ -410,7 +410,7 @@ public class ArgumentEngine implements Constants {
                                 // Create argument object
                                 Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                                 Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                                arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern);
+                                arg = new Argument(sentenceID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription);
                                 break;
                             }
 

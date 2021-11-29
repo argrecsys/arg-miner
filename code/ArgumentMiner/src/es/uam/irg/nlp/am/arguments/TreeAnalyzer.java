@@ -6,7 +6,6 @@
 package es.uam.irg.nlp.am.arguments;
 
 import es.uam.irg.nlp.am.Constants;
-import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebankNode;
 import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.List;
