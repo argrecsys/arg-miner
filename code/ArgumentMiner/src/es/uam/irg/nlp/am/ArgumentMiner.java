@@ -239,7 +239,7 @@ public class ArgumentMiner {
             // Store JSON objects
             arguments.entrySet().forEach(entry -> {
                 entry.getValue().forEach(arg -> {
-                    argList.put(arg.sentenceID, arg.getJSON());
+                    argList.put(arg.sentenceID, arg.getJSON(false));
                 });
             });
             

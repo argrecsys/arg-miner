@@ -140,9 +140,10 @@ public class Argument {
     /**
      * Create JSON argument.
      *
+     * @param withSyntTree
      * @return
      */
-    public JSONObject getJSON() {
+    public JSONObject getJSON(boolean withSyntTree) {
         JSONObject json = new JSONObject();
         json.put("proposalID", this.proposalID);
         json.put("userID", this.userID);
@@ -155,7 +156,9 @@ public class Argument {
         json.put("mainVerb", this.mainVerb);
         json.put("linker", this.linker.getJSON());
         json.put("approach", this.approach);
-        json.put("syntacticTree", this.syntacticTree);
+        if (withSyntTree) {
+            json.put("syntacticTree", this.syntacticTree);
+        }
         
         return json;
     }
