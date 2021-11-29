@@ -173,6 +173,7 @@ public class SyntacticallyAnalyzedSentence {
         }
     }
 
+    @Override
     public String toString() {
         return this.getSentence();
     }

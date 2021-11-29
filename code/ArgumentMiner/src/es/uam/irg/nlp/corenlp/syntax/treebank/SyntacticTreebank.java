@@ -261,6 +261,7 @@ public class SyntacticTreebank {
         this.removeNode(node.getId());
     }
 
+    @Override
     public String toString() {
         try {
             if (this.getNumNodes() > 0) {
@@ -275,7 +276,7 @@ public class SyntacticTreebank {
     private String _toString(int nodeId) throws Exception {
         SyntacticTreebankNode node = this.getNode(nodeId);
         int nodeLevel = node.getLevel();
-        int nodeType = node.getType();
+        // int nodeType = node.getType();
         String nodeTag = node.getTag();
         String nodeWord = node.getWord();
 
