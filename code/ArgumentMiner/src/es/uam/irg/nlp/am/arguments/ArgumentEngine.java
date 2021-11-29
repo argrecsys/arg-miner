@@ -186,7 +186,7 @@ public class ArgumentEngine implements Constants {
             newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_BOTH);
 
             if (linker != null) {
-                newStatement = newStatement.replace(linker.linker, "").trim();
+                newStatement = newStatement.replaceFirst(linker.linker, "").trim();
             }
         }
 
@@ -400,7 +400,7 @@ public class ArgumentEngine implements Constants {
                             if (!StringUtils.isEmpty(claim) && !StringUtils.isEmpty(premise)) {
                                 claim = cleanStatement(CLAIM, claim, null);
                                 premise = cleanStatement(PREMISE, premise, linker);
-
+                                
                                 // identify main verb
                                 String mainVerb = identifyMainVerb(claim, verbList);
                                 if (mainVerb == null) {
