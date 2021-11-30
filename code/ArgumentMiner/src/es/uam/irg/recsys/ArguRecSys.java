@@ -133,7 +133,7 @@ public class ArguRecSys {
         for (Argument argument : arguments) {
             nouns = argument.getNounsSet();
             listAspects.addAll(nouns);
-            System.out.println(argument.sentenceID + ": " + nouns.toString());
+            System.out.println(argument.getId() + ": " + nouns.toString());
         }
         
         for (String value : listAspects) {
@@ -196,12 +196,12 @@ public class ArguRecSys {
 
             if (!aspect.equals(this.topic)) {
                 for (Argument argument : arguments) {
-                    if (!argUsed.contains(argument.sentenceID)) {
+                    if (!argUsed.contains(argument.getId())) {
                         if (argument.getNounsSet().contains(aspect)) {
                             List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
                             arguList.add(argument);
                             recommendations.put(aspect, arguList);
-                            argUsed.add(argument.sentenceID);
+                            argUsed.add(argument.getId());
                         }
                     }
                 }
@@ -336,7 +336,7 @@ public class ArguRecSys {
         
         // Argument element and its properties
         Attr attr = doc.createAttribute("id");
-        attr.setValue(argument.sentenceID);
+        attr.setValue(argument.getId());
         nArgu.setAttributeNode(attr);
         attr = doc.createAttribute("userid");
         attr.setValue(""+argument.userID);

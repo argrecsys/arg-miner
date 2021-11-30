@@ -29,9 +29,9 @@ public class Argument {
     public Sentence majorClaim;
     public int parentID;
     public Sentence premise;
-    public String sentenceID;
     public String sentenceText;
     public int userID;
+    private String argumentID;
     private boolean isValid;
     private int proposalID;
     private String syntacticTree;
@@ -39,14 +39,14 @@ public class Argument {
     /**
      * Empty constructor.
      * 
-     * @param sentenceID
+     * @param argumentID
      * @param userID
      * @param commentID
      * @param parentID
      * @param sentenceText 
      */
-    public Argument(String sentenceID, int userID, int commentID, int parentID, String sentenceText) {
-        this(sentenceID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE", "");
+    public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText) {
+        this(argumentID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE", "");
         this.proposalID = -1;
         
         this.isValid = false;
@@ -55,7 +55,7 @@ public class Argument {
     /**
      * Regular constructor.
      * 
-     * @param sentenceID
+     * @param argumentID
      * @param userID
      * @param commentID
      * @param parentID
@@ -67,9 +67,9 @@ public class Argument {
      * @param approach
      * @param syntacticTree 
      */
-    public Argument(String sentenceID, int userID, int commentID, int parentID, 
+    public Argument(String argumentID, int userID, int commentID, int parentID, 
             String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
-        this.sentenceID = sentenceID;
+        this.argumentID = argumentID;
         this.userID = userID;
         this.commentID = commentID;
         this.parentID = parentID;
@@ -81,8 +81,8 @@ public class Argument {
         this.approach = approach;
         this.syntacticTree = syntacticTree;
         
-        if (!StringUtils.isEmpty(this.sentenceID)) {
-            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
+        if (!StringUtils.isEmpty(this.argumentID)) {
+            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
         }
         
         this.isValid = true;
@@ -93,7 +93,7 @@ public class Argument {
      * @param doc 
      */
     public Argument(Document doc) {
-        this.sentenceID = doc.getString("argumentID");
+        this.argumentID = doc.getString("argumentID");
         this.userID = (int)doc.get("userID");
         this.commentID = (int)doc.get("commentID");
         this.parentID = (int)doc.get("parentID");
@@ -106,13 +106,13 @@ public class Argument {
         this.approach = doc.getString("approach");
         this.syntacticTree = doc.getString("syntacticTree");
         
-        if (!StringUtils.isEmpty(this.sentenceID)) {
-            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.sentenceID, "-"));
+        if (!StringUtils.isEmpty(this.argumentID)) {
+            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
         }
         
         this.isValid = true;
     }
-    
+        
     /**
      * Create Document argument.
      *
@@ -120,7 +120,7 @@ public class Argument {
      */
     public Document getDocument() {
         Document doc = new Document();
-        doc.append("argumentID", this.sentenceID)
+        doc.append("argumentID", this.argumentID)
                 .append("proposalID", this.proposalID)
                 .append("userID", this.userID)
                 .append("commentID", this.commentID)
@@ -138,11 +138,20 @@ public class Argument {
     }
     
     /**
-     * Create JSON argument.
      *
      * @return
      */
-    public JSONObject getJSON() {
+    public String getId() {
+        return this.argumentID;
+    }
+    
+    /**
+     * Create JSON argument.
+     *
+     * @param withSyntTree
+     * @return
+     */
+    public JSONObject getJSON(boolean withSyntTree) {
         JSONObject json = new JSONObject();
         json.put("proposalID", this.proposalID);
         json.put("userID", this.userID);
@@ -155,7 +164,9 @@ public class Argument {
         json.put("mainVerb", this.mainVerb);
         json.put("linker", this.linker.getJSON());
         json.put("approach", this.approach);
-        json.put("syntacticTree", this.syntacticTree);
+        if (withSyntTree) {
+            json.put("syntacticTree", this.syntacticTree);
+        }
         
         return json;
     }
@@ -186,7 +197,7 @@ public class Argument {
      */
     public String getString() {
         return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", 
-                this.sentenceID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
+                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
     }
     
     /**

@@ -15,6 +15,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -33,24 +34,26 @@ import org.yaml.snakeyaml.Yaml;
  * @author ansegura
  */
 public class IOManager implements Constants {
-    
+
+    private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("y", "o", "ni"));
+
     /**
-     * 
+     *
      * @param lang
      * @param verbose
-     * @return 
+     * @return
      */
     public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();
         String lexiconFilepath = LEXICON_FILEPATH.replace("{}", lang);
-        
+
         try {
             // Get the file
             File csvFile = new File(lexiconFilepath);
 
             // Check if the specified file exists or not
             if (csvFile.exists()) {
-                BufferedReader reader = new BufferedReader( new FileReader(csvFile));
+                BufferedReader reader = new BufferedReader(new FileReader(csvFile));
                 String row;
                 String category;
                 String subCategory;
@@ -66,18 +69,20 @@ public class IOManager implements Constants {
                         subCategory = data[3];
                         relationType = data[4];
                         linker = data[5];
-                        linkers.addLinker(category, subCategory, relationType, linker);
+                        if (!INVALID_LINKERS.contains(linker)) {
+                            linkers.addLinker(category, subCategory, relationType, linker);
+                        }
                     }
                 }
 
                 reader.close();
             }
-            
+
         } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        if (verbose) {            
+
+        if (verbose) {
             System.out.println(">> Taxonomy:");
             Map<String, Map<String, List<ArgumentLinker>>> taxonomy = linkers.getTaxonomy();
             taxonomy.entrySet().forEach(entry -> {
@@ -91,34 +96,34 @@ public class IOManager implements Constants {
                     }
                 }
             });
-            
+
             List<ArgumentLinker> lexicon = linkers.getLexicon(true);
             System.out.println(">> Lexicon: " + lexicon.size());
             for (int i = 0; i < lexicon.size(); i++) {
                 System.out.format("Linker -> %s \n", lexicon.get(i).getString());
             }
         }
-        
+
         return linkers;
     }
-    
+
     /**
-     * 
+     *
      * @param lang
-     * @return 
+     * @return
      */
     public static HashSet<String> readStopwordList(String lang, boolean verbose) {
         HashSet<String> stopwords = new HashSet<>();
         String language = (lang.equals(LANG_EN) ? "english" : "spanish");
         String stopwordsFilepath = STOPWORDS_FILEPATH.replace("{}", language);
-        
+
         try {
             // Get the file
             File txtFile = new File(stopwordsFilepath);
 
             // Check if the specified file exists or not
             if (txtFile.exists()) {
-                BufferedReader reader = new BufferedReader( new FileReader(txtFile));
+                BufferedReader reader = new BufferedReader(new FileReader(txtFile));
                 String word;
 
                 while ((word = reader.readLine()) != null) {
@@ -127,26 +132,26 @@ public class IOManager implements Constants {
 
                 reader.close();
             }
-            
+
         } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        if (verbose) {            
+
+        if (verbose) {
             System.out.println(">> Stopwords: " + stopwords.size());
         }
-        
+
         return stopwords;
     }
-    
+
     /**
-     * 
+     *
      * @param filepath
-     * @return 
+     * @return
      */
     public static Map<String, Object> readYamlFile(String filepath) {
         Map<String, Object> data = null;
-        
+
         try {
             // Get the file
             File yamlFile = new File(filepath);
@@ -157,39 +162,39 @@ public class IOManager implements Constants {
                 Yaml yaml = new Yaml();
                 data = (Map<String, Object>) yaml.load(inputStream);
             }
-        
+
         } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return data;
     }
-    
+
     /**
-     * 
+     *
      * @param source
      * @param filepath
-     * @return 
+     * @return
      */
     public static boolean saveDomToXML(DOMSource source, String filepath) {
         boolean result = false;
-        
+
         try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            
+
             StreamResult stream = new StreamResult(new File(filepath));
             transformer.transform(source, stream);
             result = true;
-            
+
         } catch (TransformerException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return result;
     }
-    
+
     /**
      *
      * @param data
@@ -198,20 +203,20 @@ public class IOManager implements Constants {
      */
     public static boolean saveStringToJson(String data, String filepath) {
         boolean result = false;
-        
+
         FileWriter writer;
-        
+
         try {
             writer = new FileWriter(filepath);
             writer.write(data);
             writer.close();
             result = true;
-            
+
         } catch (IOException ex) {
             Logger.getLogger(IOManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return result;
     }
-    
+
 }

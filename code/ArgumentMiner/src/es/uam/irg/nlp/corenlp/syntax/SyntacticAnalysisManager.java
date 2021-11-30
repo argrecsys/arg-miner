@@ -16,7 +16,40 @@ import java.util.logging.Logger;
  * @author Usuario
  */
 public class SyntacticAnalysisManager {
-    
+
+    public static boolean checkArgumentPattern(String sentPattern) {
+
+        if (sentPattern.startsWith("[grup.verb]-[sn]-[S-LNK]")) {
+            return true;
+        } else if (sentPattern.startsWith("[S]-[conj-LNK]-[S]")) {
+            return true;
+        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S-LNK]")) {
+            return true;
+        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S-LNK]")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     *
+     * @param tree
+     * @param lnkNode
+     * @return
+     */
+    public static String getLinkerNodeText(SyntacticTreebank tree, SyntacticTreebankNode lnkNode) {
+        String text = null;
+
+        if (lnkNode.getType() == SyntacticTreebankNode.NODE_WORD) {
+            text = lnkNode.getWord();
+        } else if (lnkNode.getTag().equals("conj")) { // to-do add prep tag
+            text = getTreeText(tree, lnkNode);;
+        }
+
+        return text;
+    }
+
     /**
      *
      * @param tree
@@ -24,7 +57,7 @@ public class SyntacticAnalysisManager {
      * @param level
      * @return
      */
-    public static SyntacticTreebankNode getLinkerParent(SyntacticTreebank tree, SyntacticTreebankNode lnkNode, int level) {
+    public static SyntacticTreebankNode getLinkerParentNode(SyntacticTreebank tree, SyntacticTreebankNode lnkNode, int level) {
         SyntacticTreebankNode parent = null;
 
         try {
@@ -43,36 +76,42 @@ public class SyntacticAnalysisManager {
 
         return parent;
     }
-    
+
     /**
-     * 
+     *
      * @param tree
      * @param node
-     * @return 
+     * @return
      */
     public static String getTreeText(SyntacticTreebank tree, SyntacticTreebankNode node) {
-        String text = ""; 
+        String text = "";
         try {
-            text = getTreeFullText(tree, node);
+            text = getTreeInnerText(tree, node);
         } catch (Exception ex) {
             Logger.getLogger(SyntacticAnalysisManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return text.trim();
     }
-    
-    private static String getTreeFullText(SyntacticTreebank tree, SyntacticTreebankNode node) throws Exception {
+
+    /**
+     *
+     * @param tree
+     * @param node
+     * @return
+     * @throws Exception
+     */
+    private static String getTreeInnerText(SyntacticTreebank tree, SyntacticTreebankNode node) throws Exception {
         String text = "";
-        
+
         if (node.getType() == 2) {
             text = node.getWord() + " ";
-        }
-        else {
+        } else {
             for (int nodeId : tree.getChildrenIdsOf(node)) {
-                text += getTreeFullText(tree, tree.getNode(nodeId));
+                text += getTreeInnerText(tree, tree.getNode(nodeId));
             }
         }
-        
+
         return text;
     }
-    
+
 }
