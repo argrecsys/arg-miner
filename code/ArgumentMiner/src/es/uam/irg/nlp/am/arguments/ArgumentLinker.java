@@ -14,7 +14,7 @@ import org.json.JSONObject;
  * @author ansegura
  */
 public class ArgumentLinker {
-    
+
     // Class members
     public String category;
     public String linker;
@@ -22,21 +22,21 @@ public class ArgumentLinker {
     public String relationType;
     public String subCategory;
     private String spLinker;
-    
+
     /**
      * Empty constructor.
      */
     public ArgumentLinker() {
         this("", "", "", "");
     }
-    
+
     /**
      * Regular constructor.
-     * 
+     *
      * @param category
      * @param subCategory
      * @param relationType
-     * @param linker 
+     * @param linker
      */
     public ArgumentLinker(String category, String subCategory, String relationType, String linker) {
         this.category = category;
@@ -46,10 +46,10 @@ public class ArgumentLinker {
         this.nTokens = linker.split(" ").length;
         this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
     }
-    
+
     /**
-     * 
-     * @param doc 
+     *
+     * @param doc
      */
     public ArgumentLinker(Document doc) {
         this.category = doc.getString("category");
@@ -59,42 +59,59 @@ public class ArgumentLinker {
         this.nTokens = linker.split(" ").length;
         this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
     }
+
+    /**
+     *
+     * @param lnk
+     * @return
+     */
+    public boolean equals(ArgumentLinker lnk) {
+        return this.linker.equals(lnk.linker);
+    }
     
+    /**
+     * 
+     * @return 
+     */
     public Document getDocument() {
         Document doc = new Document();
         doc.append("linker", this.linker)
-           .append("category", this.category)
-           .append("subCategory", this.subCategory)
-           .append("relationType", this.relationType);
-        
+                .append("category", this.category)
+                .append("subCategory", this.subCategory)
+                .append("relationType", this.relationType);
+
         return doc;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public JSONObject getJSON() {
         JSONObject json = new JSONObject();
         json.put("linker", this.linker);
         json.put("category", this.category);
         json.put("subCategory", this.subCategory);
         json.put("relationType", this.relationType);
-        
+
         return json;
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public String getString() {
         return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
     }
-    
+
     /**
-     * 
+     *
      * @param nGram
-     * @return 
+     * @return
      */
     public boolean isEquals(String nGram) {
         return this.spLinker.equals(nGram);
     }
-    
+
 }

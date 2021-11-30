@@ -35,7 +35,7 @@ import org.yaml.snakeyaml.Yaml;
  */
 public class IOManager implements Constants {
 
-    private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("y", "o", "ni"));
+    private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
 
     /**
      *
