@@ -5,6 +5,7 @@ import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.utils.FunctionUtils;
+import es.uam.irg.utils.StringUtils;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.List;
@@ -185,7 +186,7 @@ public class DMDBManager {
 
             for (int i = 0; i < arguments.size(); i++) {
                 argument = arguments.get(i);
-                proposalID = argument.sentenceID.split("-")[0];
+                proposalID = StringUtils.getFirstToken(argument.getId(), "-");
                 whereCond += (i > 0 ? ", " : "") + proposalID;
             }
             System.out.println("Id list: " + whereCond);

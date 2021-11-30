@@ -239,7 +239,7 @@ public class ArgumentMiner {
             // Store JSON objects
             arguments.entrySet().forEach(entry -> {
                 entry.getValue().forEach(arg -> {
-                    argList.put(arg.sentenceID, arg.getJSON(false));
+                    argList.put(arg.getId(), arg.getJSON(false));
                 });
             });
             
@@ -267,7 +267,7 @@ public class ArgumentMiner {
             arguments.entrySet().forEach(entry -> {
                 for (Argument arg : entry.getValue()) {
                     argList.add(arg.getDocument());
-                    argFilter.add(Filters.eq("argumentID", arg.sentenceID));
+                    argFilter.add(Filters.eq("argumentID", arg.getId()));
                 }
             });
             
