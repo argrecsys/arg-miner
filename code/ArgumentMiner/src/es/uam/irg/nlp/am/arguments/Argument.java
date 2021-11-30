@@ -14,12 +14,13 @@ import org.bson.Document;
 import org.json.JSONObject;
 
 /**
- * Argument class. The premise justifies, gives reasons for or supports the conclusion (claim).
- * 
+ * Argument class. The premise justifies, gives reasons for or supports the
+ * conclusion (claim).
+ *
  * @author ansegura
  */
 public class Argument {
-    
+
     // Class members
     public String approach;
     public Sentence claim;
@@ -35,26 +36,26 @@ public class Argument {
     private boolean isValid;
     private int proposalID;
     private String syntacticTree;
-    
+
     /**
      * Empty constructor.
-     * 
+     *
      * @param argumentID
      * @param userID
      * @param commentID
      * @param parentID
-     * @param sentenceText 
+     * @param sentenceText
      */
     public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText) {
         this(argumentID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE", "");
         this.proposalID = -1;
-        
+
         this.isValid = false;
     }
-    
+
     /**
      * Regular constructor.
-     * 
+     *
      * @param argumentID
      * @param userID
      * @param commentID
@@ -65,9 +66,9 @@ public class Argument {
      * @param mainVerb
      * @param linker
      * @param approach
-     * @param syntacticTree 
+     * @param syntacticTree
      */
-    public Argument(String argumentID, int userID, int commentID, int parentID, 
+    public Argument(String argumentID, int userID, int commentID, int parentID,
             String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
         this.argumentID = argumentID;
         this.userID = userID;
@@ -80,23 +81,23 @@ public class Argument {
         this.linker = linker;
         this.approach = approach;
         this.syntacticTree = syntacticTree;
-        
+
         if (!StringUtils.isEmpty(this.argumentID)) {
             this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
         }
-        
+
         this.isValid = true;
     }
-    
+
     /**
-     * 
-     * @param doc 
+     *
+     * @param doc
      */
     public Argument(Document doc) {
         this.argumentID = doc.getString("argumentID");
-        this.userID = (int)doc.get("userID");
-        this.commentID = (int)doc.get("commentID");
-        this.parentID = (int)doc.get("parentID");
+        this.userID = (int) doc.get("userID");
+        this.commentID = (int) doc.get("commentID");
+        this.parentID = (int) doc.get("parentID");
         this.sentenceText = doc.getString("argumentID");
         this.majorClaim = new Sentence(doc.get("majorClaim", Document.class));
         this.claim = new Sentence(doc.get("claim", Document.class));
@@ -105,14 +106,23 @@ public class Argument {
         this.linker = new ArgumentLinker(doc.get("linker", Document.class));
         this.approach = doc.getString("approach");
         this.syntacticTree = doc.getString("syntacticTree");
-        
+
         if (!StringUtils.isEmpty(this.argumentID)) {
             this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
         }
-        
+
         this.isValid = true;
     }
-        
+
+    /**
+     *
+     * @param arg
+     * @return
+     */
+    public boolean equals(Argument arg) {
+        return (this.claim.equals(arg.claim) && this.premise.equals(arg.premise) && this.linker.equals(arg.linker));
+    }
+
     /**
      * Create Document argument.
      *
@@ -133,10 +143,10 @@ public class Argument {
                 .append("linker", this.linker.getDocument())
                 .append("approach", this.approach)
                 .append("syntacticTree", this.syntacticTree);
-        
+
         return doc;
     }
-    
+
     /**
      *
      * @return
@@ -144,7 +154,7 @@ public class Argument {
     public String getId() {
         return this.argumentID;
     }
-    
+
     /**
      * Create JSON argument.
      *
@@ -158,7 +168,7 @@ public class Argument {
         json.put("commentID", this.commentID);
         json.put("parentID", this.parentID);
         json.put("sentence", this.sentenceText);
-        json.put("majorClaim",this.majorClaim.getJSON());
+        json.put("majorClaim", this.majorClaim.getJSON());
         json.put("claim", this.claim.getJSON());
         json.put("premise", this.premise.getJSON());
         json.put("mainVerb", this.mainVerb);
@@ -167,10 +177,10 @@ public class Argument {
         if (withSyntTree) {
             json.put("syntacticTree", this.syntacticTree);
         }
-        
+
         return json;
     }
-    
+
     /**
      *
      * @param majorClaim
@@ -178,10 +188,10 @@ public class Argument {
     public void setMajorClaim(Sentence majorClaim) {
         this.majorClaim = majorClaim;
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Set<String> getNounsSet() {
         Set<String> nouns = new HashSet<>();
@@ -190,24 +200,24 @@ public class Argument {
         nouns.addAll(processNouns(this.premise.nouns));
         return nouns;
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public String getString() {
-        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]", 
+        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
                 this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public String getSyntacticTree() {
         return this.syntacticTree;
     }
-    
+
     /**
      *
      * @return
@@ -219,16 +229,15 @@ public class Argument {
     private List<String> processNouns(List<String> nouns) {
         List<String> newList = new ArrayList<>();
         String noun;
-        
+
         for (String item : nouns) {
             noun = item.trim();
             if (noun.length() > 0) {
                 newList.add(noun.toLowerCase());
             }
         }
-        
+
         return newList;
     }
-    
-    
+
 }

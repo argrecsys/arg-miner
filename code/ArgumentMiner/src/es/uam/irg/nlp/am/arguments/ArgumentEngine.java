@@ -10,6 +10,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
+import edu.stanford.nlp.util.ArraySet;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticAnalysisManager;
@@ -119,7 +120,7 @@ public class ArgumentEngine implements Constants {
             List<String> nounList = new ArrayList<>();
             List<String> verbList = new ArrayList<>();
 
-            for (CoreLabel token : tokens) {
+            tokens.forEach(token -> {
                 if (token.tag().equals("NOUN")) {
                     if (!stopwords.contains(token.word())) {
                         nounList.add(token.word());
@@ -127,7 +128,7 @@ public class ArgumentEngine implements Constants {
                 } else if (token.tag().equals("VERB")) {
                     verbList.add(token.word());
                 }
-            }
+            });
             System.out.println("Noun list: " + nounList.toString());
             System.out.println("Verb list: " + verbList.toString());
 
@@ -141,11 +142,11 @@ public class ArgumentEngine implements Constants {
 
             // 10. Save arguments
             if (arguments.size() > 0) {
-                for (Argument arg : arguments) {
+                arguments.forEach(arg -> {
                     arg.setMajorClaim(majorClaim);
                     result.add(arg);
                     System.out.println(arg.getString());
-                }
+                });
 
             } else {
                 System.err.format("Sentence %s of phrase %s has no argument\n", (i + 1), docKey);
@@ -321,6 +322,7 @@ public class ArgumentEngine implements Constants {
     private List<Argument> mineArgument(String sentenceID, int userID, int commentID, int parentID, String sentenceText,
             Tree tree, List<String> entityList, List<String> nounList, List<String> verbList) {
         List<Argument> arguments = new ArrayList<>();
+        Set<String> patterns = new ArraySet<>();
 
         try {
             // Creating syntactic treebank
@@ -345,40 +347,28 @@ public class ArgumentEngine implements Constants {
                     ArgumentLinker linker = ta.checkNodeText(lnkText);
 
                     if (linker != null) {
-                        System.out.println(" - Linker: " + linker.getString());
                         parent = SyntacticAnalysisManager.getLinkerParentNode(analyzedTree, currNode, 3);
+                        System.out.println(" - Linker: " + linker.getString());
                         System.out.println(" - Parent: " + parent.toString());
 
                         // Create sentence pattern
-                        List<Integer> sentNodes = new ArrayList<>();
-                        String sentPattern = "";
-                        String lnkTag;
+                        String sentPattern = SyntacticAnalysisManager.createSentencePattern(analyzedTree, parent, currNode);
 
-                        for (Integer childId : analyzedTree.getChildrenIdsOf(parent)) {
-                            SyntacticTreebankNode child = analyzedTree.getNode(childId);
-                            sentNodes.add(child.getId());
-                            if (child.getId() == analyzedTree.getParentIdOf(currNode.getId())
-                                    || child.getId() == analyzedTree.getParentIdOf(analyzedTree.getParentIdOf(currNode.getId()))) {
-                                lnkTag = "-LNK";
-                            } else {
-                                lnkTag = "";
-                            }
-                            sentPattern += (sentPattern.equals("") ? "" : "-") + "[" + child.getTag() + lnkTag + "]";
-                            System.out.println("   " + child.toString());
-                        }
-
+                        // If the argument pattern is valid...
                         System.out.println(" - Pattern: " + sentPattern);
-                        if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern)) {
+                        if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern) && !patterns.contains(sentPattern)) {
                             System.out.println(" + Valid pattern!");
+                            patterns.add(sentPattern);
 
-                            // Reconstructing sentences
+                            // Reconstructing sentences (claim and premise)
                             String claim = "";
                             String premise = "";
 
-                            for (Integer childId : sentNodes) {
+                            for (Integer childId : analyzedTree.getChildrenIdsOf(parent)) {
                                 SyntacticTreebankNode child = analyzedTree.getNode(childId);
-                                String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
+                                System.out.println("   " + child.toString());
 
+                                String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
                                 if (!"".equals(premise) || currText.startsWith(linker.linker)) {
                                     premise += currText + " ";
                                 } else {
@@ -401,8 +391,7 @@ public class ArgumentEngine implements Constants {
                                 String argumentID = sentenceID + "-" + (arguments.size() + 1);
                                 Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                                 Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                                Argument arg = new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription);
-                                arguments.add(arg);
+                                arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
                             }
 
                         } else {

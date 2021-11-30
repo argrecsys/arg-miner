@@ -17,19 +17,54 @@ import java.util.logging.Logger;
  */
 public class SyntacticAnalysisManager {
 
-    public static boolean checkArgumentPattern(String sentPattern) {
-
-        if (sentPattern.startsWith("[grup.verb]-[sn]-[S-LNK]")) {
+    /**
+     *
+     * @param pattern
+     * @return
+     */
+    public static boolean checkArgumentPattern(String pattern) {
+        String sentPattern = pattern.substring(pattern.indexOf('-') + 1);
+        
+        if (sentPattern.startsWith("[grup.verb]-[sn]-[S_LNK]")) {
             return true;
-        } else if (sentPattern.startsWith("[S]-[conj-LNK]-[S]")) {
+        } else if (sentPattern.startsWith("[S]-[conj_LNK]-[S]")) {
             return true;
-        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S-LNK]")) {
+        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S_LNK]")) {
             return true;
-        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S-LNK]")) {
+        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S_LNK]")) {
             return true;
         }
 
         return false;
+    }
+
+    /**
+     *
+     * @param tree
+     * @param parent
+     * @param currNode
+     * @return
+     */
+    public static String createSentencePattern(SyntacticTreebank tree, SyntacticTreebankNode parent, SyntacticTreebankNode currNode) {
+        String sentPattern = "[" + (parent.getLevel() + 1) + "]";
+        String lnkTag;
+
+        try {
+            for (Integer childId : tree.getChildrenIdsOf(parent)) {
+                SyntacticTreebankNode child = tree.getNode(childId);
+                if (child.getId() == tree.getParentIdOf(currNode.getId())
+                        || child.getId() == tree.getParentIdOf(tree.getParentIdOf(currNode.getId()))) {
+                    lnkTag = "_LNK";
+                } else {
+                    lnkTag = "";
+                }
+                sentPattern += "-[" + child.getTag() + lnkTag + "]";
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return sentPattern;
     }
 
     /**
