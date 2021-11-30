@@ -896,6 +896,36 @@
         "proposalID": 24300,
         "parentID": -1
     },
+    "315-1-1": {
+        "sentence": "Existe un vacio legal absoluto para quienes tienen que asumir la responsabilidad de cuidar de sus mayores y la reincorporacion al mercado es dificil o imposible sin rampas de reincorporacion.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "quienes tienen que asumir la responsabilidad de cuidar de sus mayores y la reincorporacion al mercado es dificil o imposible sin rampas de reincorporacion",
+            "nouns": "[responsabilidad, reincorporacion, mercado, rampas, reincorporacion]"
+        },
+        "mainVerb": "Existe",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Existe un vacio legal absoluto",
+            "nouns": "[vacio]"
+        },
+        "userID": 2841,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Gente que cuida de gente",
+            "nouns": "[Gente, gente]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 315,
+        "parentID": -1
+    },
     "17509-1-1": {
         "sentence": "En la ciudad universitaria y distrito de aravaca hay muchos arboles que nos dan sombra en verano, pero al ser tan grandes sus ramas se parten y caen en la calzada, en medio de las aceras de acceso",
         "linker": {
@@ -1043,6 +1073,36 @@
         },
         "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
         "proposalID": 18179,
+        "parentID": -1
+    },
+    "15940-2-1": {
+        "sentence": "Habilitar zonas del parque para instalar modulos portatiles como heladeria, cafeteria, churreria, comida...",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "instalar modulos portatiles como heladeria , cafeteria , churreria , comida",
+            "nouns": "[modulos, heladeria, comida]"
+        },
+        "mainVerb": "Habilitar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Habilitar zonas del parque",
+            "nouns": "[zonas, parque]"
+        },
+        "userID": 235933,
+        "majorClaim": {
+            "entities": "[Las Cruces, Parque de]",
+            "text": "Zonas de ocio en el Parque de Las Cruces",
+            "nouns": "[ocio]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 15940,
         "parentID": -1
     },
     "3898-1-1": {
@@ -1313,6 +1373,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 16392,
+        "parentID": -1
+    },
+    "9017-1-1": {
+        "sentence": "Ampliar el precio del abono transporte para mayores de 65 anos a todos los pensionistas independientemente de su edad.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "mayores de 65 anos a todos los pensionistas independientemente de su edad",
+            "nouns": "[anos, pensionistas, edad]"
+        },
+        "mainVerb": "Ampliar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Ampliar el precio del abono transporte",
+            "nouns": "[precio, transporte]"
+        },
+        "userID": 99542,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Aplicar precio abono transporte mayores de 65 anos a todos los pensionistas",
+            "nouns": "[precio, transporte, anos, pensionistas]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 9017,
         "parentID": -1
     },
     "3327-1-1": {
@@ -2600,6 +2690,36 @@
         "proposalID": 10633,
         "parentID": -1
     },
+    "371-1-1": {
+        "sentence": "el mobiliario urbano de madrid debe ser simplificado en cuanto a numero y unificado esteticamente para ofrecer una imagen cuidada de la ciudad y mas agradable para ciudadano y turista",
+        "linker": {
+            "relationType": "qualifier",
+            "linker": "en cuanto a",
+            "subCategory": "CONDITION",
+            "category": "CAUSE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "numero y unificado esteticamente para ofrecer una imagen cuidada de la ciudad y mas agradable para ciudadano y turista",
+            "nouns": "[numero, imagen, ciudad, ciudadano, turista]"
+        },
+        "mainVerb": "simplificado",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "el mobiliario urbano de madrid debe ser simplificado",
+            "nouns": "[mobiliario, madrid]"
+        },
+        "userID": 9870,
+        "majorClaim": {
+            "entities": "[Modelo, Madrid]",
+            "text": "Modelo de mobiliario urbano unico para el centro de Madrid",
+            "nouns": "[mobiliario, centro]"
+        },
+        "approach": "[1]-[sn]-[grup.verb]-[S_LNK]-[grup.nom]-[grup.nom]",
+        "proposalID": 371,
+        "parentID": -1
+    },
     "18798-1-1": {
         "sentence": "La calle de Juan Bautista de Toledo, han sido arreglada las aceras - pero no muy bien-.",
         "linker": {
@@ -3347,6 +3467,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[s.a]",
         "proposalID": 10559,
+        "parentID": -1
+    },
+    "4539-1-1": {
+        "sentence": "Ampliar el Transporte Azul de Transporte para Mayores y Discapacitados para que puedan tambien ser usados en toda la Comunidad de Madrid y Renfe.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[Comunidad de, Madrid, Renfe]",
+            "text": "que puedan tambien ser usados en toda la Comunidad de Madrid y Renfe",
+            "nouns": "[tambien]"
+        },
+        "mainVerb": "Ampliar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[Transporte Azul de Transporte para Mayores y Discapacitados]",
+            "text": "Ampliar el Transporte Azul de Transporte para Mayores y Discapacitados",
+            "nouns": "[]"
+        },
+        "userID": 40316,
+        "majorClaim": {
+            "entities": "[Madrid, RENFE, Transporte Azul]",
+            "text": "Se debe ampliar el Transporte Azul a RENFE Y toda Madrid?",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 4539,
         "parentID": -1
     },
     "25446-1-1": {
@@ -4426,6 +4576,36 @@
         "proposalID": 1438,
         "parentID": -1
     },
+    "20809-1-1": {
+        "sentence": "Construir un Centro de Especialidades para el barrio de Vicalvaro que con las personas que viven y el aumento de inmigrantes no es normal que nos tengamos que desplazar a Moratalaz.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[Vicalvaro, Moratalaz]",
+            "text": "el barrio de Vicalvaro que con las personas que viven y el aumento de inmigrantes no es normal que nos tengamos que desplazar a Moratalaz",
+            "nouns": "[barrio, personas, aumento, inmigrantes]"
+        },
+        "mainVerb": "Construir",
+        "commentID": -1,
+        "claim": {
+            "entities": "[Centro de Especialidades]",
+            "text": "Construir un Centro de Especialidades",
+            "nouns": "[]"
+        },
+        "userID": 515050,
+        "majorClaim": {
+            "entities": "[Centro de Especialidades]",
+            "text": "Construir un Centro de Especialidades",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 20809,
+        "parentID": -1
+    },
     "13967-6-1": {
         "sentence": "Me pregunto si el Ayuntamiento puede hacer algo para conservar esos azulejos.",
         "linker": {
@@ -4695,6 +4875,36 @@
         "proposalID": 4932,
         "parentID": -1
     },
+    "24880-1-1": {
+        "sentence": "Acondicionar ese espacio para que puedan celebrarse actuaciones y ensayos musicales, magia, danza, cuentacuentos, tireres y teatro para grupos de nuestro barrio.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "que puedan celebrarse actuaciones y ensayos musicales , magia , danza , cuentacuentos , tireres y teatro para grupos de nuestro barrio",
+            "nouns": "[actuaciones, ensayos, magia, danza, cuentacuentos, tireres, teatro, grupos, barrio]"
+        },
+        "mainVerb": "Acondicionar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Acondicionar ese espacio",
+            "nouns": "[espacio]"
+        },
+        "userID": 236557,
+        "majorClaim": {
+            "entities": "[Moratalaz]",
+            "text": "Rehabilitacion anfiteatro biblioteca Moratalaz",
+            "nouns": "[biblioteca]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 24880,
+        "parentID": -1
+    },
     "14855-1-1": {
         "sentence": "Llevamos mas de 35 anos en lucha para que asfalten la Plaza de la Sardineta, barrio de Valverde, distrito de Fuencarral-El Pardo, y evitar que siga siendo un estercolero infestado de heces de perro.",
         "linker": {
@@ -4785,6 +4995,36 @@
         "proposalID": 15922,
         "parentID": -1
     },
+    "12444-1-1": {
+        "sentence": "Crear una base de datos de ayudas audiovisuales para que ninos, jovenes, adultos y mayores no tengan que decir eso de 'yo es que lo de internet no me va'.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "que ninos , jovenes , adultos y mayores no tengan que decir eso de yo es que lo de internet no me va",
+            "nouns": "[ninos, jovenes, adultos, internet]"
+        },
+        "mainVerb": "Crear",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Crear una base de datos de ayudas audiovisuales",
+            "nouns": "[base, datos, ayudas]"
+        },
+        "userID": 173085,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Formacion accesible en tecnologia de uso personal para todas las edades",
+            "nouns": "[tecnologia, uso, edades]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 12444,
+        "parentID": -1
+    },
     "15397-1-1": {
         "sentence": "Muchos jovenes y ninos desean hacer deporte,una actividad sana , jugando a deportes como el futbol o el baloncesto, pero como deben pagar por dos porterias o canastas eliminan esta actividad",
         "linker": {
@@ -4843,6 +5083,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 19574,
+        "parentID": -1
+    },
+    "21677-1-1": {
+        "sentence": "Enviar inspecciones del Ayuntamiento para comprobar si se cumple la Ley de Accesibilidad en los edificios para las personas con discapacidad, ancianos, etc.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[Ley de Accesibilidad]",
+            "text": "comprobar si se cumple la Ley de Accesibilidad en los edificios para las personas con discapacidad , ancianos , etc.",
+            "nouns": "[edificios, personas, discapacidad, ancianos, etc.]"
+        },
+        "mainVerb": "Enviar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[Ayuntamiento]",
+            "text": "Enviar inspecciones del Ayuntamiento",
+            "nouns": "[inspecciones]"
+        },
+        "userID": 7276,
+        "majorClaim": {
+            "entities": "[Ley de Accesibilidad, Comunidades]",
+            "text": "Obligar a las Comunidades de vecinos a cumplir la Ley de Accesibilidad",
+            "nouns": "[vecinos]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 21677,
         "parentID": -1
     },
     "16290-1-1": {
@@ -5235,6 +5505,36 @@
         "proposalID": 15977,
         "parentID": -1
     },
+    "14425-1-1": {
+        "sentence": "Abrir una discoteca municipal para 2.000 personas, solo musica electronica, abierta 24h 7 dias a la semana y convertirla en un referente mundial de volumen y musica moderna.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "2.000 personas , solo musica electronica , abierta 24h 7 dias a la semana y convertirla en un referente mundial de volumen y musica moderna",
+            "nouns": "[personas, musica, dias, semana, convertirla, referente, volumen, musica]"
+        },
+        "mainVerb": "Abrir",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Abrir una discoteca municipal",
+            "nouns": "[discoteca]"
+        },
+        "userID": 187610,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "DISCOTECA ELECTRONICA MUNICIPAL",
+            "nouns": "[DISCOTECA]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 14425,
+        "parentID": -1
+    },
     "1937-1-1": {
         "sentence": "Creo ya existe Ordenanza, pero los duenos llevan impunemente los perros sueltos y/o sin bozal, ya que no se aplica habitualmente el castigo.",
         "linker": {
@@ -5445,6 +5745,36 @@
         "proposalID": 8769,
         "parentID": -1
     },
+    "18645-1-1": {
+        "sentence": "Implantar una tasa turistica para ser pagada por las viviendas de uso turistico asi como por los usuarios de hoteles.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "ser pagada por las viviendas de uso turistico asi como por los usuarios de hoteles",
+            "nouns": "[viviendas, uso, usuarios, hoteles]"
+        },
+        "mainVerb": "Implantar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Implantar una tasa turistica",
+            "nouns": "[tasa]"
+        },
+        "userID": 78102,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Tasa turistica para las viviendas de uso turistico",
+            "nouns": "[Tasa, viviendas, uso]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 18645,
+        "parentID": -1
+    },
     "2223-1-1": {
         "sentence": "Donar medula salva vidas, pero no existe difusion suficiente y para la gente la donacion de medula es una gran desconocida.",
         "linker": {
@@ -5503,6 +5833,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 5104,
+        "parentID": -1
+    },
+    "17178-2-1": {
+        "sentence": "Ganariamos tranquilidad para nosotros, nuestros perros y los conductores de las calles aledanas.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "nosotros , nuestros perros y los conductores de las calles aledanas",
+            "nouns": "[perros, conductores, calles]"
+        },
+        "mainVerb": "Ganariamos",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Ganariamos tranquilidad",
+            "nouns": "[tranquilidad]"
+        },
+        "userID": 210406,
+        "majorClaim": {
+            "entities": "[Calle Santurce, Calle Emilio Ferrari]",
+            "text": "Zona canina en parque Calle Emilio Ferrari con Calle Santurce",
+            "nouns": "[parque]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 17178,
         "parentID": -1
     },
     "1988-1-1": {
@@ -8350,6 +8710,36 @@
         "proposalID": 8396,
         "parentID": -1
     },
+    "3499-1-1": {
+        "sentence": "Aprobar las 115 plazas solicitadas para samur pc d tecnico en emergencias ya q ha dia d hoy hay un deficit brutal d personal?",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "samur pc d tecnico en emergencias ya q ha dia d hoy hay un deficit brutal d personal ?",
+            "nouns": "[d, emergencias, d, deficit, d]"
+        },
+        "mainVerb": "Aprobar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Aprobar las 115 plazas solicitadas",
+            "nouns": "[plazas, d, d, d]"
+        },
+        "userID": 35928,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "SAMUR PC",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 3499,
+        "parentID": -1
+    },
     "8802-1-1": {
         "sentence": "Muchas veces los ninos no tienen donde jugar al futbol o a otros deportes en sus barrios , mientras las instalaciones deportivas de sus colegios estan cerradas.",
         "linker": {
@@ -8438,6 +8828,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 5092,
+        "parentID": -1
+    },
+    "16446-1-1": {
+        "sentence": "Destinar el solar del mercado de Bami para hacer un centro publico, biblioteca o sala de estudio, que hace mucha falta en el barrio",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "hacer un centro publico , biblioteca o sala de estudio , que hace mucha falta en el barrio",
+            "nouns": "[centro, biblioteca, sala, estudio, falta, barrio]"
+        },
+        "mainVerb": "Destinar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[Bami]",
+            "text": "Destinar el solar del mercado de Bami",
+            "nouns": "[solar, mercado]"
+        },
+        "userID": 40733,
+        "majorClaim": {
+            "entities": "[Plaza de Bami]",
+            "text": "Biblioteca municipal en Plaza de Bami",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]",
+        "proposalID": 16446,
         "parentID": -1
     },
     "18314-1-1": {
@@ -8648,6 +9068,36 @@
         },
         "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
         "proposalID": 18868,
+        "parentID": -1
+    },
+    "14063-1-1": {
+        "sentence": "Queremos la Nave de Terneras para que una o dos veces al mes, los domingos al mediodia, podamos bailar ritmos latinos con luz del sol, un lugar amplio y con suelo liso.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "que una o dos veces al mes , los domingos al mediodia , podamos bailar ritmos latinos con luz del sol , un lugar amplio y con suelo liso",
+            "nouns": "[veces, mes, domingos, mediodia, ritmos, luz, sol, lugar, suelo]"
+        },
+        "mainVerb": "Queremos",
+        "commentID": -1,
+        "claim": {
+            "entities": "[Nave de Terneras]",
+            "text": "Queremos la Nave de Terneras",
+            "nouns": "[]"
+        },
+        "userID": 185540,
+        "majorClaim": {
+            "entities": "[Nave de Terneras]",
+            "text": "Baila los domingos durante el dia en Nave de Terneras",
+            "nouns": "[domingos, dia]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 14063,
         "parentID": -1
     },
     "11355-1-1": {
@@ -9246,6 +9696,36 @@
         },
         "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
         "proposalID": 24165,
+        "parentID": -1
+    },
+    "9723-1-1": {
+        "sentence": "Recuperar los espacios publico (parques, colegios,centros culturales...) como espacios que gestionados por las asociaciones de cada barrio, puedan ofrecer una oferta alternativa para el ocio.",
+        "linker": {
+            "relationType": "support",
+            "linker": "como",
+            "subCategory": "SIMILARITY",
+            "category": "ELABORATION"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "espacios que gestionados por las asociaciones de cada barrio , puedan ofrecer una oferta alternativa para el ocio",
+            "nouns": "[espacios, espacios, asociaciones, barrio, oferta, ocio]"
+        },
+        "mainVerb": "Recuperar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Recuperar los espacios publico -LRB- parques , colegios , centros culturales ... -RRB-",
+            "nouns": "[espacios, parques, colegios, centros, espacios]"
+        },
+        "userID": 106651,
+        "majorClaim": {
+            "entities": "[Plan de Ocio Infantil, Juvenil]",
+            "text": "Plan de Ocio Infantil y Juvenil",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 9723,
         "parentID": -1
     },
     "7790-1-1": {
@@ -9938,6 +10418,36 @@
         "proposalID": 2710,
         "parentID": -1
     },
+    "4931-1-1": {
+        "sentence": "Crear una bolsa de empleo para estudiantes universitarios EFECTIVA para facilitarles su insercion laboral.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "estudiantes universitarios EFECTIVA para facilitarles su insercion laboral",
+            "nouns": "[estudiantes, insercion]"
+        },
+        "mainVerb": "Crear",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Crear una bolsa de empleo",
+            "nouns": "[bolsa, empleo]"
+        },
+        "userID": 4513,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Bolsa de empleo para universitarios EFECTIVA",
+            "nouns": "[empleo, universitarios]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 4931,
+        "parentID": -1
+    },
     "19-1-1": {
         "sentence": "El centro turistico y comercial de Madrid esta solo a 700 metros de la Casa de Campo y de Madrid Rio, pero las conexiones a el son terribles.",
         "linker": {
@@ -9965,6 +10475,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 19,
+        "parentID": -1
+    },
+    "3089-1-1": {
+        "sentence": "Recuperar algunas plazas para los peatones soterrando el trafico por ejemplo en plaza Manuel Becerra",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[Manuel Becerra]",
+            "text": "los peatones soterrando el trafico por ejemplo en plaza Manuel Becerra",
+            "nouns": "[peatones, trafico, ejemplo, plaza]"
+        },
+        "mainVerb": "Recuperar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Recuperar algunas plazas",
+            "nouns": "[plazas, plaza]"
+        },
+        "userID": 23775,
+        "majorClaim": {
+            "entities": "[Plaza de Manuel Becerra]",
+            "text": "soterrar el trafico en la Plaza de Manuel Becerra",
+            "nouns": "[trafico]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]",
+        "proposalID": 3089,
         "parentID": -1
     },
     "15945-1-1": {
@@ -10687,6 +11227,66 @@
         "proposalID": 7299,
         "parentID": -1
     },
+    "12018-1-1": {
+        "sentence": "Incorporar medicina alternativa como complemento a las terapias tradicionales en la sanidad publica madrilena",
+        "linker": {
+            "relationType": "support",
+            "linker": "como",
+            "subCategory": "SIMILARITY",
+            "category": "ELABORATION"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "complemento a las terapias tradicionales en la sanidad publica madrilena",
+            "nouns": "[complemento, terapias, sanidad, madrilena]"
+        },
+        "mainVerb": "Incorporar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Incorporar medicina alternativa",
+            "nouns": "[medicina]"
+        },
+        "userID": 164048,
+        "majorClaim": {
+            "entities": "[Acupuntura]",
+            "text": "Acupuntura y medicina alternativa en la sanidad publica madrilena",
+            "nouns": "[medicina, sanidad, madrilena]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]",
+        "proposalID": 12018,
+        "parentID": -1
+    },
+    "25480-1-1": {
+        "sentence": "Recuperar las zonas inertes para crear aparcamientos en las calles y evitar dobles filas, aparcamientos en esquinas o lugares que perjudiquen la visibilidad o el libre paso de peatones.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "crear aparcamientos en las calles y evitar dobles filas , aparcamientos en esquinas o lugares que perjudiquen la visibilidad o el libre paso de peatones",
+            "nouns": "[aparcamientos, calles, filas, aparcamientos, esquinas, lugares, visibilidad, paso, peatones]"
+        },
+        "mainVerb": "Recuperar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Recuperar las zonas inertes",
+            "nouns": "[zonas]"
+        },
+        "userID": 189444,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Crear aparcamientos en las calles",
+            "nouns": "[aparcamientos, calles]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 25480,
+        "parentID": -1
+    },
     "4133-1-1": {
         "sentence": "Me parece genial el uso de bicicletas y motos, pero no deberian circular por las aceras.",
         "linker": {
@@ -10865,6 +11465,36 @@
         },
         "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
         "proposalID": 3258,
+        "parentID": -1
+    },
+    "1931-1-1": {
+        "sentence": "Desarrollar un programa municipal de asesoramiento a la hosteleria para que puedan adaptar algunos de sus platos para celiacos.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "que puedan adaptar algunos de sus platos para celiacos",
+            "nouns": "[platos, celiacos]"
+        },
+        "mainVerb": "Desarrollar",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Desarrollar un programa municipal de asesoramiento a la hosteleria",
+            "nouns": "[programa, asesoramiento, hosteleria]"
+        },
+        "userID": 26918,
+        "majorClaim": {
+            "entities": "[Restaurantes Sin Gluten]",
+            "text": "Red de Restaurantes Sin Gluten",
+            "nouns": "[]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[PUNCT]",
+        "proposalID": 1931,
         "parentID": -1
     },
     "1656-1-1": {
@@ -12395,6 +13025,36 @@
         "proposalID": 3078,
         "parentID": -1
     },
+    "5264-1-1": {
+        "sentence": "Crear lineas de autobuses para conectar mas rapidamente toda esta zona con el centro, pero no con Atocha, que ya lo esta, sino con Sol.",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[Atocha]",
+            "text": "conectar mas rapidamente toda esta zona con el centro , pero no con Atocha , que ya lo esta , sino con Sol",
+            "nouns": "[zona, centro]"
+        },
+        "mainVerb": "Crear",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Crear lineas de autobuses",
+            "nouns": "[lineas, autobuses]"
+        },
+        "userID": 16447,
+        "majorClaim": {
+            "entities": "[Sol, Pza Eliptica]",
+            "text": "Mas autobuses desde zona de Pza Eliptica pero a Sol",
+            "nouns": "[autobuses, zona]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]-[conj]-[S]-[PUNCT]",
+        "proposalID": 5264,
+        "parentID": -1
+    },
     "5318-1-1": {
         "sentence": "En la actualidad se sabe cuantos apoyan una propuesta pero no se sabe cuantos se oponen y la rechazan.",
         "linker": {
@@ -12513,6 +13173,36 @@
         },
         "approach": "[1]-[S]-[conj_LNK]-[S]-[PUNCT]",
         "proposalID": 18920,
+        "parentID": -1
+    },
+    "8514-1-1": {
+        "sentence": "Crear empleo publico para tener una calidad mejor de vida en todas las instituciones de la comunidad de madrid creando oposiciones",
+        "linker": {
+            "relationType": "support",
+            "linker": "para",
+            "subCategory": "GOAL",
+            "category": "CONSEQUENCE"
+        },
+        "premise": {
+            "entities": "[]",
+            "text": "tener una calidad mejor de vida en todas las instituciones de la comunidad de madrid creando oposiciones",
+            "nouns": "[calidad, vida, instituciones, comunidad, madrid, oposiciones]"
+        },
+        "mainVerb": "Crear",
+        "commentID": -1,
+        "claim": {
+            "entities": "[]",
+            "text": "Crear empleo publico",
+            "nouns": "[empleo]"
+        },
+        "userID": 83928,
+        "majorClaim": {
+            "entities": "[]",
+            "text": "Creacion de nuevos puestos de trabajo para la administracion publIca",
+            "nouns": "[puestos, trabajo, administracion]"
+        },
+        "approach": "[1]-[grup.verb]-[sn]-[S_LNK]",
+        "proposalID": 8514,
         "parentID": -1
     },
     "13027-1-1": {
