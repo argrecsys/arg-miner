@@ -393,6 +393,10 @@ public class ArgumentEngine implements Constants {
                                 Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
                                 arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
                             }
+                            else {
+                                
+                                System.out.println(" - Error extracting claim and/or premise!");
+                            }
 
                         } else {
                             System.out.println(" - Invalid pattern!");
@@ -410,7 +414,8 @@ public class ArgumentEngine implements Constants {
         } catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
+        // System.out.println("Arguments number: " + arguments.size());
         return arguments;
     }
 
