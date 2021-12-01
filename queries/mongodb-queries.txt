@@ -1,2 +1,3 @@
 {$and: [{"proposalID": 23219}, {"commentID": {$eq: -1}}]}
 {$and: [{"proposalID": 23219}, {"commentID": {$gt: -1}}]}
+{$or: [{"proposalID": 965}, {"commentID": {$in: [86315, 84225, 60031]}}]}
