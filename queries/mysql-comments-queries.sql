@@ -6,9 +6,14 @@ SELECT proposalId, COUNT(*) AS "count"
  WHERE proposalId IN (5, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20)
  GROUP BY proposalId
  ORDER BY count DESC, proposalId;
- 
+
 -- Search comments by proposalsId
 SELECT id, proposalId, parentId, userId, text
   FROM proposal_comments
- WHERE proposalId IN (19) AND id IN (49275)
+ WHERE id IN (30718)
  ORDER BY proposalId, parentId;
+
+-- Search comments by content
+SELECT *
+  FROM proposal_comments
+ WHERE (text LIKE '% tambien %') OR (text LIKE '%, tambien %') OR (text LIKE '%...tambien %');

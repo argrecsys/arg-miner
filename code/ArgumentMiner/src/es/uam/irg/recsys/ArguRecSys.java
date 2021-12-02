@@ -98,7 +98,7 @@ public class ArguRecSys {
         List<Argument> arguments = new ArrayList<>();
         
         MongoDbManager dbManager = null;
-        if (mdbSetup != null && mdbSetup.size() == 3) {
+        if (mdbSetup != null && mdbSetup.size() == 4) {
             String dbServer = mdbSetup.get("db_server").toString();
             int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
             String dbName = mdbSetup.get("db_name").toString();

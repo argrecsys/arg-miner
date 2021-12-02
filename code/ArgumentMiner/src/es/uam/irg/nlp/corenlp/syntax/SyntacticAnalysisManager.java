@@ -24,8 +24,8 @@ public class SyntacticAnalysisManager {
      */
     public static boolean checkArgumentPattern(String pattern) {
         String sentPattern = pattern.substring(pattern.indexOf('-') + 1);
-
-        if (sentPattern.startsWith("[grup.verb]-[sn]-[S_LNK]")) {
+        
+        if (sentPattern.startsWith("[grup.verb]-[sn]-[S_LNK]") || sentPattern.startsWith("[grup.verb]-[sn]-[sp_LNK]")) {
             return true;
         } else if (sentPattern.startsWith("[S]-[conj_LNK]-[S]")) {
             return true;
@@ -80,10 +80,20 @@ public class SyntacticAnalysisManager {
             text = lnkNode.getWord();
 
         } else if (lnkNode.getTag().equals("conj") || lnkNode.getTag().equals("prep")) {
-            text = getTreeText(tree, lnkNode);;
+            text = getTreeText(tree, lnkNode);
         }
 
         return text;
+    }
+
+    /**
+     *
+     * @param tree
+     * @param lnkNode
+     * @return
+     */
+    public static SyntacticTreebankNode getLinkerParentNode(SyntacticTreebank tree, SyntacticTreebankNode lnkNode) {
+        return getLinkerParentNode(tree, lnkNode, 3);
     }
 
     /**
