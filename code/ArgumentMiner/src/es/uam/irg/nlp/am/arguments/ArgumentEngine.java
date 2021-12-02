@@ -341,67 +341,65 @@ public class ArgumentEngine implements Constants {
 
             while (!queue.isEmpty()) {
                 currNode = queue.remove();
+                
+                // Checking if the text has or starts with a linker
                 lnkText = SyntacticAnalysisManager.getLinkerNodeText(treebank, currNode);
+                ArgumentLinker linker = ta.textHasLinker(lnkText);
 
-                if (lnkText != null) {
-                    ArgumentLinker linker = ta.checkNodeText(lnkText);
+                if (linker != null) {
+                    parent = SyntacticAnalysisManager.getLinkerParentNode(analyzedTree, currNode);
+                    System.out.println(" - Linker: " + linker.getString());
+                    System.out.println("   " + currNode.toString());
+                    System.out.println(" - Parent: " + parent.toString());
 
-                    if (linker != null) {
-                        parent = SyntacticAnalysisManager.getLinkerParentNode(analyzedTree, currNode, 3);
-                        System.out.println(" - Linker: " + linker.getString());
-                        System.out.println(" - Parent: " + parent.toString());
+                    // Create sentence pattern
+                    String sentPattern = SyntacticAnalysisManager.createSentencePattern(analyzedTree, parent, currNode);
 
-                        // Create sentence pattern
-                        String sentPattern = SyntacticAnalysisManager.createSentencePattern(analyzedTree, parent, currNode);
+                    // If the argument pattern is valid...
+                    System.out.println(" - Pattern: " + sentPattern);
+                    if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern) && !patterns.contains(sentPattern)) {
+                        System.out.println(" + Valid pattern!");
+                        patterns.add(sentPattern);
 
-                        // If the argument pattern is valid...
-                        System.out.println(" - Pattern: " + sentPattern);
-                        if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern) && !patterns.contains(sentPattern)) {
-                            System.out.println(" + Valid pattern!");
-                            patterns.add(sentPattern);
+                        // Reconstructing sentences (claim and premise)
+                        String claim = "";
+                        String premise = "";
 
-                            // Reconstructing sentences (claim and premise)
-                            String claim = "";
-                            String premise = "";
+                        for (Integer childId : analyzedTree.getChildrenIdsOf(parent)) {
+                            SyntacticTreebankNode child = analyzedTree.getNode(childId);
+                            System.out.println("   " + child.toString());
 
-                            for (Integer childId : analyzedTree.getChildrenIdsOf(parent)) {
-                                SyntacticTreebankNode child = analyzedTree.getNode(childId);
-                                System.out.println("   " + child.toString());
-
-                                String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
-                                if (!"".equals(premise) || currText.startsWith(linker.linker)) {
-                                    premise += currText + " ";
-                                } else {
-                                    claim += currText + " ";
-                                }
+                            String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
+                            if (!"".equals(premise) || currText.startsWith(linker.linker)) {
+                                premise += currText + " ";
+                            } else {
+                                claim += currText + " ";
                             }
-
-                            // Creating new argument
-                            if (!StringUtils.isEmpty(claim) && !StringUtils.isEmpty(premise)) {
-                                claim = cleanStatement(CLAIM, claim, null);
-                                premise = cleanStatement(PREMISE, premise, linker);
-
-                                // identify main verb
-                                String mainVerb = identifyMainVerb(claim, verbList);
-                                if (mainVerb == null) {
-                                    mainVerb = identifyMainVerb(premise, verbList);
-                                }
-
-                                // Create argument object
-                                String argumentID = sentenceID + "-" + (arguments.size() + 1);
-                                Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
-                                Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                                arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
-                            }
-                            else {
-                                
-                                System.out.println(" - Error extracting claim and/or premise!");
-                            }
-
-                        } else {
-                            System.out.println(" - Invalid pattern!");
                         }
 
+                        // Creating new argument
+                        if (!StringUtils.isEmpty(claim) && !StringUtils.isEmpty(premise)) {
+                            claim = cleanStatement(CLAIM, claim, null);
+                            premise = cleanStatement(PREMISE, premise, linker);
+
+                            // identify main verb
+                            String mainVerb = identifyMainVerb(claim, verbList);
+                            if (mainVerb == null) {
+                                mainVerb = identifyMainVerb(premise, verbList);
+                            }
+
+                            // Create argument object
+                            String argumentID = sentenceID + "-" + (arguments.size() + 1);
+                            Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
+                            Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
+                            arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
+                        } else {
+
+                            System.out.println(" - Error extracting claim and/or premise!");
+                        }
+
+                    } else {
+                        System.out.println(" - Invalid pattern!");
                     }
                 }
 
@@ -414,7 +412,7 @@ public class ArgumentEngine implements Constants {
         } catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         // System.out.println("Arguments number: " + arguments.size());
         return arguments;
     }
