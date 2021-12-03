@@ -70,7 +70,7 @@ public class DMDBManager {
                            "  FROM proposal_comments " +
                            " WHERE proposalId IN (" + FunctionUtils.arrayToString(proposalIds, ",") + ");";
             ResultSet rs = this.db.executeSelect(query);
-
+            
             while (rs != null && rs.next()) {
                 int id = rs.getInt("id");
                 int parentId = rs.getInt("parentId");
@@ -149,7 +149,7 @@ public class DMDBManager {
         String whereCond = "";
         
         for (int i = 0; i < lexicon.size(); i++) {
-            whereCond += (i > 0 ? " OR " : "") + "summary LIKE '% " + lexicon.get(i).linker + " %'";
+            whereCond += (i > 0 ? " OR " : "") + "(summary LIKE '% " + lexicon.get(i).linker + " %' OR summary LIKE '%," + lexicon.get(i).linker + " %' OR summary LIKE '%..." + lexicon.get(i).linker + " %')";
         }
         
         String query = "SELECT id, title, userId, date, summary, text, numComments, numSupports " +

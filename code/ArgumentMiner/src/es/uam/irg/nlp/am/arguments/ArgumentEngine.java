@@ -138,7 +138,7 @@ public class ArgumentEngine implements Constants {
             tree.pennPrint(out);
 
             // 9. Apply arguments mining (AM)
-            List<Argument> arguments = mineArgument(sentenceID, userID, commentID, parentID, sentenceText, tree, entityList, nounList, verbList);
+            List<Argument> arguments = mineArguments(sentenceID, userID, commentID, parentID, sentenceText, tree, entityList, nounList, verbList);
 
             // 10. Save arguments
             if (arguments.size() > 0) {
@@ -307,6 +307,8 @@ public class ArgumentEngine implements Constants {
     }
 
     /**
+     * Extracts arguments in the form of claim+linker+premise from textual
+     * content.
      *
      * @param sentenceID
      * @param userID
@@ -319,7 +321,7 @@ public class ArgumentEngine implements Constants {
      * @param verbList
      * @return
      */
-    private List<Argument> mineArgument(String sentenceID, int userID, int commentID, int parentID, String sentenceText,
+    private List<Argument> mineArguments(String sentenceID, int userID, int commentID, int parentID, String sentenceText,
             Tree tree, List<String> entityList, List<String> nounList, List<String> verbList) {
         List<Argument> arguments = new ArrayList<>();
         Set<String> patterns = new ArraySet<>();
@@ -341,7 +343,7 @@ public class ArgumentEngine implements Constants {
 
             while (!queue.isEmpty()) {
                 currNode = queue.remove();
-                
+
                 // Checking if the text has or starts with a linker
                 lnkText = SyntacticAnalysisManager.getLinkerNodeText(treebank, currNode);
                 ArgumentLinker linker = ta.textHasLinker(lnkText);

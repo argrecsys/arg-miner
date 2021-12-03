@@ -8,6 +8,9 @@ package es.uam.irg.nlp.corenlp.syntax;
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebankNode;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,6 +20,23 @@ import java.util.logging.Logger;
  */
 public class SyntacticAnalysisManager {
 
+    // List of valid argument patterns
+    private final static List<String> argPatterns = new ArrayList<>(Arrays.asList(
+            "[grup.verb]-[sn]-[S_LNK]",
+            "[neg]-[grup.verb]-[sn]-[S_LNK]",
+            "[grup.verb]-[sn]-[sp_LNK]",
+            "[neg]-[grup.verb]-[sn]-[sp_LNK]",
+            "[S]-[conj_LNK]-[S]",
+            "[sn]-[grup.verb]-[S_LNK]",
+            "[sn]-[neg]-[grup.verb]-[S_LNK]",
+            "[sn]-[grup.verb]-[sp_LNK]",
+            "[sn]-[neg]-[grup.verb]-[sp_LNK]",
+            "[sp]-[grup.verb]-[sn]-[S_LNK]",
+            "[sp]-[neg]-[grup.verb]-[sn]-[S_LNK]",
+            "[sp]-[grup.verb]-[sn]-[sp_LNK]",
+            "[sp]-[neg]-[grup.verb]-[sn]-[sp_LNK]"
+    ));
+
     /**
      *
      * @param pattern
@@ -25,14 +45,10 @@ public class SyntacticAnalysisManager {
     public static boolean checkArgumentPattern(String pattern) {
         String sentPattern = pattern.substring(pattern.indexOf('-') + 1);
 
-        if (sentPattern.startsWith("[grup.verb]-[sn]-[S_LNK]") || sentPattern.startsWith("[grup.verb]-[sn]-[sp_LNK]")) {
-            return true;
-        } else if (sentPattern.startsWith("[S]-[conj_LNK]-[S]")) {
-            return true;
-        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S_LNK]")) {
-            return true;
-        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S_LNK]")) {
-            return true;
+        for (String argPattern : argPatterns) {
+            if (sentPattern.startsWith(argPattern)) {
+                return true;
+            }
         }
 
         return false;
