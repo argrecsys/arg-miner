@@ -36,6 +36,7 @@ import org.yaml.snakeyaml.Yaml;
 public class IOManager implements Constants {
 
     private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
+    private static final HashSet<String> VALID_LINKERS = new HashSet();
 
     /**
      *
@@ -69,7 +70,9 @@ public class IOManager implements Constants {
                         subCategory = data[3];
                         relationType = data[4];
                         linker = data[5];
-                        if (!INVALID_LINKERS.contains(linker)) {
+
+                        // If the linker is a valid one and also not invalid... then add it
+                        if ((VALID_LINKERS.isEmpty() || VALID_LINKERS.contains(linker)) && (!INVALID_LINKERS.contains(linker))) {
                             linkers.addLinker(category, subCategory, relationType, linker);
                         }
                     }

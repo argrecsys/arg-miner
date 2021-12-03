@@ -26,7 +26,7 @@ public class Program {
         Integer[] customProposalID = new Integer[0];
 
         // Read input parameters
-        System.out.println(">> N args: " + args.length);
+        System.out.println(">> N params: " + args.length);
         for (int i = 0; i < args.length; i++) {
             switch (i) {
                 case 0 ->
