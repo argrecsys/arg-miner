@@ -29,9 +29,9 @@ public class SyntacticAnalysisManager {
             return true;
         } else if (sentPattern.startsWith("[S]-[conj_LNK]-[S]")) {
             return true;
-        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S_LNK]")) {
+        } else if (sentPattern.startsWith("[sn]-[grup.verb]-[S_LNK]") || sentPattern.startsWith("[sn]-[grup.verb]-[sp_LNK]")) {
             return true;
-        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S_LNK]")) {
+        } else if (sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[S_LNK]") || sentPattern.startsWith("[sp]-[grup.verb]-[sn]-[sp_LNK]")) {
             return true;
         }
 
