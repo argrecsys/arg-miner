@@ -14,6 +14,7 @@ import es.uam.irg.decidemadrid.entities.DMProposal;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
+import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
@@ -168,6 +169,7 @@ public class ArgumentMiner {
         proposalComments = new HashMap<>();
 
         try {
+            // Connecting to databse
             DMDBManager dbManager = null;
             if (msqlSetup != null && msqlSetup.size() == 4) {
                 String dbServer = msqlSetup.get("db_server").toString();
@@ -180,25 +182,26 @@ public class ArgumentMiner {
                 dbManager = new DMDBManager();
             }
 
+            // Get lexicon
+            List<ArgumentLinker> lexicon = this.lnkManager.getLexicon(false);
+
+            // Get proposals with linkers
             if (customProposalIds.length > 0) {
                 proposals = dbManager.selectProposals(customProposalIds);
             } else {
-                proposals = dbManager.selectProposals(this.lnkManager.getLexicon(false));
+                proposals = dbManager.selectProposals(lexicon);
+            }
 
-                if (annotateComments) {
-                    customProposalIds = new Integer[proposals.size()];
-
-                    int i = 0;
-                    for (Integer key : proposals.keySet()) {
-                        customProposalIds[i++] = key;
-                    }
+            // Get proposal comments with linkers
+            if (annotateComments) {
+                if (customProposalIds.length > 0) {
+                    proposalComments = dbManager.selectComments(customProposalIds);
+                } else {
+                    proposalComments = dbManager.selectComments(lexicon);
                 }
             }
 
-            if (annotateComments) {
-                proposalComments = dbManager.selectComments(customProposalIds);
-            }
-
+            // Show results
             if (this.verbose) {
                 System.out.println(">> Number of proposals: " + proposals.size());
                 System.out.println("   Number of comments: " + proposalComments.size());
