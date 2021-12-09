@@ -17,33 +17,34 @@ public class RecSys {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println(">> RECSYS BEGINS");
-        
+
         // Program hyperparameters with default values
         String topic = "transporte";
         int minAspectOccur = 1;
-        
+
         // Read input parameters
-        if (args.length > 0) {
-            topic = args[0].toLowerCase();
-            
-            if (args.length > 1) {
-                minAspectOccur = Integer.parseInt(args[1]);
+        System.out.println(">> N params: " + args.length);
+        for (int i = 0; i < args.length; i++) {
+            switch (i) {
+                case 0 ->
+                    topic = args[i].toLowerCase();
+                case 1 ->
+                    minAspectOccur = Integer.parseInt(args[i]);
             }
         }
-        System.out.format(">> Topic selected: %s\n", topic);
-        
+        System.out.format("   Topic selected: %s, minimum occurrences per aspect: %s\n", topic, minAspectOccur);
+
         // Run program
         ArguRecSys recSys = new ArguRecSys(topic, minAspectOccur);
         boolean result = recSys.runRecSys();
-        
+
         if (result) {
             System.out.println(">> The Argument-based RecSys was executed correctly.");
-        }
-        else {
+        } else {
             System.err.println(">> The Argument-based RecSys had an unexpected error.");
         }
-        
+
         System.out.println(">> RECSYS ENDS");
     }
-    
+
 }
