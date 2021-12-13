@@ -8,8 +8,10 @@ import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.sql.ResultSet;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DMDBManager {
 
@@ -216,14 +218,17 @@ public class DMDBManager {
         Map<Integer, DMProposalSummary> proposals = new HashMap<>();
 
         if (arguments.size() > 0) {
-            Argument argument;
-            String proposalID;
+            Set<Integer> setIds = new HashSet();
+            int proposalID;
             String whereCond = "";
 
-            for (int i = 0; i < arguments.size(); i++) {
-                argument = arguments.get(i);
-                proposalID = StringUtils.getFirstToken(argument.getId(), "-");
-                whereCond += (i > 0 ? ", " : "") + proposalID;
+            for (Argument argument : arguments) {
+                proposalID = argument.getProposalId();
+
+                if (!setIds.contains(proposalID)) {
+                    setIds.add(proposalID);
+                    whereCond += (whereCond.equals("") ? "" : ", ") + proposalID;
+                }
             }
 
             String query = "SELECT p.id, p.date, p.title, "

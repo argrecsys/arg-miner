@@ -5,12 +5,16 @@
  */
 package es.uam.irg.recsys;
 
+import java.util.Arrays;
+
 /**
  *
  * @author ansegura
  */
 public class RecSys {
 
+    public static final String NO_TOPIC = "-";
+    
     /**
      * @param args the command line arguments
      */
@@ -19,23 +23,34 @@ public class RecSys {
         System.out.println(">> RECSYS BEGINS");
 
         // Program hyperparameters with default values
-        String topic = "transporte";
         int minAspectOccur = 1;
+        String topic = NO_TOPIC;
+        Integer[] customProposalID = new Integer[0];
 
         // Read input parameters
         System.out.println(">> N params: " + args.length);
         for (int i = 0; i < args.length; i++) {
             switch (i) {
                 case 0 ->
-                    topic = args[i].toLowerCase();
-                case 1 ->
                     minAspectOccur = Integer.parseInt(args[i]);
+                case 1 -> {
+                    if (!args[i].equals(NO_TOPIC)) {
+                        topic = args[i].toLowerCase();
+                    }
+                }
+                case 2 -> {
+                    String[] ids = args[i].split(",");
+                    customProposalID = new Integer[ids.length];
+                    for (int j = 0; j < ids.length; j++) {
+                        customProposalID[j] = Integer.parseInt(ids[j]);
+                    }
+                }
             }
         }
-        System.out.format("   Topic selected: %s, minimum occurrences per aspect: %s\n", topic, minAspectOccur);
+        System.out.format("   Minimum occurrences per aspect: %s, topic selected: %s, customized proposals: %s\n", minAspectOccur, topic, Arrays.toString(customProposalID));
 
         // Run program
-        ArguRecSys recSys = new ArguRecSys(topic, minAspectOccur);
+        ArguRecSys recSys = new ArguRecSys(minAspectOccur, topic, customProposalID);
         boolean result = recSys.runRecSys();
 
         if (result) {
