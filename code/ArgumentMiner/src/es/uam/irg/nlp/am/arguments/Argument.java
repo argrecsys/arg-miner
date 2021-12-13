@@ -205,6 +205,14 @@ public class Argument {
      *
      * @return
      */
+    public int getProposalId() {
+        return this.proposalID;
+    }
+
+    /**
+     *
+     * @return
+     */
     public String getString() {
         return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
                 this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());

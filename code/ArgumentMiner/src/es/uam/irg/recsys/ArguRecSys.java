@@ -11,6 +11,7 @@ import es.uam.irg.decidemadrid.entities.DMProposalSummary;
 import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.am.arguments.Argument;
+import static es.uam.irg.recsys.RecSys.NO_TOPIC;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,124 +35,126 @@ import org.w3c.dom.DOMException;
  * @author ansegura
  */
 public class ArguRecSys {
-    
+
     // Class members
     private Map<String, Object> mdbSetup;
     private int minAspectOccur;
     private Map<String, Object> msqlSetup;
     private String topic;
-    
+    private Integer[] customProposalIds;
+
     /**
      * Class constructor.
-     * 
-     * @param topic 
-     * @param minAspectOccur 
+     *
+     * @param minAspectOccur
+     * @param topic
+     * @param customProposalIds
      */
-    public ArguRecSys(String topic, int minAspectOccur) {
-        this.topic = topic;
+    public ArguRecSys(int minAspectOccur, String topic, Integer[] customProposalIds) {
         this.minAspectOccur = minAspectOccur;
+        this.topic = topic;
+        this.customProposalIds = customProposalIds;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public boolean runRecSys() {
         boolean result = false;
-        
+
         // Get list of arguments by specific topic
-        List<Argument> arguments = getArgumentsByTopic(this.topic);
+        List<Argument> arguments = getArgumentsByFilter(this.topic, this.customProposalIds);
         System.out.println(">> Total arguments: " + arguments.size());
-        
+
         // Get proposals summary for selected arguments
         Map<Integer, DMProposalSummary> proposals = getProposalsSummary(arguments);
         System.out.println(">> Total proposals: " + proposals.size());
-        
+
         if (!arguments.isEmpty() && !proposals.isEmpty()) {
             Map<String, Integer> aspects = getFreqAspects(arguments);
             System.out.println(aspects);
-            
+
             // Save arguments
-            Map<String, List<Argument>> recommendations = getRecommendations(this.topic, arguments, aspects, this.minAspectOccur);
+            Map<String, List<Argument>> recommendations = getRecommendations(arguments, aspects, this.minAspectOccur);
             System.out.println(">> Total recommended topics: " + recommendations.size());
-            
+
             result = saveRecommendations(this.topic, proposals, recommendations);
             if (result) {
                 System.out.println(">> Recommendations saved correctly.");
-            }
-            else {
+            } else {
                 System.err.println(">> An unexpected error occurred while saving the recommendations.");
             }
         }
-        
+
         return result;
     }
-    
+
     /**
-     * 
+     *
      * @param topic
-     * @return 
+     * @param customProposalIds
+     * @return
      */
-    private List<Argument> getArgumentsByTopic(String topic) {
+    private List<Argument> getArgumentsByFilter(String topic, Integer[] customProposalIds) {
         List<Argument> arguments = new ArrayList<>();
-        
+
         MongoDbManager dbManager = null;
         if (mdbSetup != null && mdbSetup.size() == 4) {
             String dbServer = mdbSetup.get("db_server").toString();
             int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
             String dbName = mdbSetup.get("db_name").toString();
             String collName = mdbSetup.get("db_collection").toString();
-            
+
             dbManager = new MongoDbManager(dbServer, dbPort, dbName, collName);
-        }
-        else {
+        } else {
             dbManager = new MongoDbManager();
         }
-        
-        List<Document> docs = dbManager.getDocumentsByTopic(topic);
-        
+
+        List<Document> docs = dbManager.getDocumentsByFilter(topic, customProposalIds);
+
         docs.forEach(doc -> {
-            arguments.add( new Argument(doc));
+            arguments.add(new Argument(doc));
         });
-        
+
         return arguments;
     }
-    
+
     /**
-     * 
+     *
      * @param arguments
-     * @return 
+     * @return
      */
     private Map<String, Integer> getFreqAspects(List<Argument> arguments) {
         Map<String, Integer> aspects = new HashMap<>();
         List<String> listAspects = new ArrayList<>();
         Set<String> nouns;
         int count;
-        
+
         for (Argument argument : arguments) {
             nouns = argument.getNounsSet();
             listAspects.addAll(nouns);
             System.out.println(argument.getId() + ": " + nouns.toString());
         }
-        
+
         for (String value : listAspects) {
             count = aspects.getOrDefault(value, 0);
             aspects.put(value, count + 1);
         }
-                
+
         return FunctionUtils.sortMapByValue(aspects);
     }
-    
+
     /**
-     * 
+     *
      * @param arguments
-     * @return 
+     * @return
      */
     private Map<Integer, DMProposalSummary> getProposalsSummary(List<Argument> arguments) {
         Map<Integer, DMProposalSummary> proposals = null;
-        
+
         try {
             DMDBManager dbManager = null;
             if (msqlSetup != null && msqlSetup.size() == 4) {
@@ -159,38 +162,36 @@ public class ArguRecSys {
                 String dbName = msqlSetup.get("db_name").toString();
                 String dbUserName = msqlSetup.get("db_user_name").toString();
                 String dbUserPwd = msqlSetup.get("db_user_pw").toString();
-                
+
                 dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
-            }
-            else {
+            } else {
                 dbManager = new DMDBManager();
             }
-            
+
             proposals = dbManager.selectProposalsSummary(arguments);
-        }
-        catch (Exception ex) {
+
+        } catch (Exception ex) {
             Logger.getLogger(ArguRecSys.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return proposals;
     }
-    
+
     /**
-     * 
-     * @param topic
+     *
      * @param arguments
      * @param aspects
      * @param minAspectOccur
-     * @return 
+     * @return
      */
-    private Map<String, List<Argument>> getRecommendations(String topic, List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
+    private Map<String, List<Argument>> getRecommendations(List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
         Map<String, List<Argument>> result = new HashMap<>();
         Map<String, List<Argument>> recommendations = new HashMap<>();
-        
+
         // Local variables
         String aspect;
         Set<String> argUsed = new HashSet<>();
-        
+
         for (Map.Entry<String, Integer> entry : aspects.entrySet()) {
             aspect = entry.getKey();
 
@@ -207,7 +208,7 @@ public class ArguRecSys {
                 }
             }
         }
-        
+
         System.out.println(argUsed);
         for (Map.Entry<String, List<Argument>> recommendation : recommendations.entrySet()) {
             if (recommendation.getValue().size() >= minAspectOccur) {
@@ -215,20 +216,22 @@ public class ArguRecSys {
                 System.out.println(recommendation.getKey() + ", " + recommendation.getValue().size());
             }
         }
-        
+
         return result;
     }
-    
+
     /**
      * 
+     * @param topic
+     * @param proposals
      * @param recommendations
      * @return 
      */
     private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
-        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("{}", topic);
+        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("_{}", (topic.equals(NO_TOPIC) ? "" : "_" + topic));
         Attr attr;
-        
+
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -237,50 +240,50 @@ public class ArguRecSys {
             // Root element
             Element rootElement = doc.createElement("recommendations");
             doc.appendChild(rootElement);
-            
+
             // Proposals element
             Element nProposals = doc.createElement("proposals");
             rootElement.appendChild(nProposals);
             attr = doc.createAttribute("quantity");
-            attr.setValue(""+proposals.size());
+            attr.setValue("" + proposals.size());
             nProposals.setAttributeNode(attr);
-            
+
             for (Map.Entry<Integer, DMProposalSummary> entry : proposals.entrySet()) {
                 DMProposalSummary proposal = entry.getValue();
-                
+
                 // Proposal element
                 Element nProposal = doc.createElement("proposal");
                 nProposal.appendChild(doc.createTextNode(proposal.getTitle()));
                 nProposals.appendChild(nProposal);
-                
+
                 attr = doc.createAttribute("id");
-                attr.setValue(""+proposal.getId());
+                attr.setValue("" + proposal.getId());
                 nProposal.setAttributeNode(attr);
-                
+
                 attr = doc.createAttribute("date");
                 attr.setValue(proposal.getDate());
                 nProposal.setAttributeNode(attr);
-                
+
                 attr = doc.createAttribute("categories");
                 attr.setValue(proposal.getCategories());
                 nProposal.setAttributeNode(attr);
-                
+
                 attr = doc.createAttribute("districts");
                 attr.setValue(proposal.getDistricts());
                 nProposal.setAttributeNode(attr);
-                
+
                 attr = doc.createAttribute("topics");
                 attr.setValue(proposal.getTopics());
                 nProposal.setAttributeNode(attr);
             }
-            
+
             // Topics element
             Element nTopics = doc.createElement("topics");
             rootElement.appendChild(nTopics);
             attr = doc.createAttribute("quantity");
             attr.setValue("1");
             nTopics.setAttributeNode(attr);
-            
+
             // Topic element
             Element nTopic = doc.createElement("topic");
             nTopics.appendChild(nTopic);
@@ -288,23 +291,23 @@ public class ArguRecSys {
             attr.setValue(topic);
             nTopic.setAttributeNode(attr);
             attr = doc.createAttribute("quantity");
-            attr.setValue(""+recommendations.size());
+            attr.setValue("" + recommendations.size());
             nTopic.setAttributeNode(attr);
-            
+
             for (Map.Entry<String, List<Argument>> entry : recommendations.entrySet()) {
-                
+
                 // Topic element
                 Element nAspect = doc.createElement("aspect");
                 nTopic.appendChild(nAspect);
-                
+
                 attr = doc.createAttribute("value");
                 attr.setValue(entry.getKey());
                 nAspect.setAttributeNode(attr);
-                
+
                 attr = doc.createAttribute("quantity");
-                attr.setValue(""+entry.getValue().size());
+                attr.setValue("" + entry.getValue().size());
                 nAspect.setAttributeNode(attr);
-                
+
                 for (Argument argument : entry.getValue()) {
                     if (argument.commentID >= -1) {
                         Element nArgu = createRecommendationElement(doc, argument);
@@ -316,36 +319,36 @@ public class ArguRecSys {
             // Write the content into xml file
             DOMSource source = new DOMSource(doc);
             result = IOManager.saveDomToXML(source, filename);
-            
+
         } catch (ParserConfigurationException | DOMException ex) {
             System.err.println(ex.getMessage());
         }
-        
+
         return result;
     }
-    
+
     /**
      * Creates and argument element and its properties.
-     * 
+     *
      * @param doc
      * @param argument
-     * @return 
+     * @return
      */
     private Element createRecommendationElement(org.w3c.dom.Document doc, Argument argument) {
         Element nArgu = doc.createElement("argument");
-        
+
         // Argument element and its properties
         Attr attr = doc.createAttribute("id");
         attr.setValue(argument.getId());
         nArgu.setAttributeNode(attr);
         attr = doc.createAttribute("userid");
-        attr.setValue(""+argument.userID);
+        attr.setValue("" + argument.userID);
         nArgu.setAttributeNode(attr);
         attr = doc.createAttribute("parentid");
-        attr.setValue(""+argument.parentID);
+        attr.setValue("" + argument.parentID);
         nArgu.setAttributeNode(attr);
         attr = doc.createAttribute("commentid");
-        attr.setValue(""+argument.commentID);
+        attr.setValue("" + argument.commentID);
         nArgu.setAttributeNode(attr);
 
         Element nClaim = doc.createElement("claim");
@@ -371,7 +374,7 @@ public class ArguRecSys {
         Element nPremise = doc.createElement("premise");
         nPremise.appendChild(doc.createTextNode(argument.premise.text));
         nArgu.appendChild(nPremise);
-        
+
         return nArgu;
     }
 }
