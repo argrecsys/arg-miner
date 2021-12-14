@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-1.2.0-blue)
-![last-update](https://img.shields.io/badge/last_update-11/30/2021-orange)
+![last-update](https://img.shields.io/badge/last_update-12/14/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 

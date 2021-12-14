@@ -83,7 +83,7 @@
         <proposal categories="derechos sociales,economia,educacion" date="2016-04-30" districts="ciudad" id="11134" topics="actividad economica,colegios,derechos humanos">COLEGIOS PUBLICOS Y CONCERTADOS ABIERTOS EN JULIO Y SEPTIEMBRE ACT.LUDICAS</proposal>
     </proposals>
     <topics quantity="1">
-        <topic quantity="274" value="-">
+        <topic quantity="275" value="-">
             <aspect quantity="1" value="sitio">
                 <argument commentid="186456" id="24954-186456-2-2" parentid="-1" userid="601766">
                     <claim>habria sitio</claim>
@@ -947,6 +947,13 @@
                     <premise>me parece bien siempre y cuando estuviese bien regulado : - Bozal y correa obligatorio</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="gobierno">
+                <argument commentid="151714" id="19914-151714-2-1" parentid="150773" userid="180009">
+                    <claim>Yo pense q con este nuevo equipo de gobierno eso cambiaria</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>veo q son como todos</premise>
+                </argument>
+            </aspect>
             <aspect quantity="14" value="vida">
                 <argument commentid="84661" id="417-84661-1-1" parentid="-1" userid="18234">
                     <claim>Me pregunto cada dia mas</claim>
@@ -1385,23 +1392,6 @@
                     <claim>Las ONG y las asociaciones privadas -LRB- clubes de futbol , sindicatos , confesiones religiosas , asociaciones culturales ... -RRB- son muy respetables</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no son instituciones publicas , sino privadas</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="3" value="q">
-                <argument commentid="38496" id="4293-38496-2-1" parentid="38488" userid="40112">
-                    <claim>lo digo</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>q lo he visto , desde primera hora de la manana</premise>
-                </argument>
-                <argument commentid="151714" id="19914-151714-1-1" parentid="150773" userid="180009">
-                    <claim>Se ha trabajado desde q se supo q se ponia ahi</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no se consiguio nada</premise>
-                </argument>
-                <argument commentid="151714" id="19914-151714-2-1" parentid="150773" userid="180009">
-                    <claim>Yo pense q con este nuevo equipo de gobierno eso cambiaria</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>veo q son como todos</premise>
                 </argument>
             </aspect>
             <aspect quantity="4" value="impuesto">
@@ -3702,7 +3692,12 @@
                     <premise>pedir bolsas gratuitas</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="ahi">
+            <aspect quantity="2" value="ahi">
+                <argument commentid="151714" id="19914-151714-1-1" parentid="150773" userid="180009">
+                    <claim>Se ha trabajado desde q se supo q se ponia ahi</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no se consiguio nada</premise>
+                </argument>
                 <argument commentid="181511" id="20389-181511-8-1" parentid="151201" userid="22713">
                     <claim>Que la gestion es mejorable no lo dudo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -4855,6 +4850,13 @@
                     <claim>les llame</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>quejarme y me devolvieron el importe</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="manana">
+                <argument commentid="38496" id="4293-38496-2-1" parentid="38488" userid="40112">
+                    <claim>lo digo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">por</connector>
+                    <premise>q lo he visto , desde primera hora de la manana</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="ansiedad">

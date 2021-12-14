@@ -139,9 +139,14 @@ public class ArguRecSys {
             System.out.println(argument.getId() + ": " + nouns.toString());
         }
 
+        System.out.println("Invalid aspects:");
         for (String value : listAspects) {
-            count = aspects.getOrDefault(value, 0);
-            aspects.put(value, count + 1);
+            if (value.length() > 2) {
+                count = aspects.getOrDefault(value, 0);
+                aspects.put(value, count + 1);
+            } else {
+                System.out.println("- " + value);
+            }
         }
 
         return FunctionUtils.sortMapByValue(aspects);
@@ -221,11 +226,11 @@ public class ArguRecSys {
     }
 
     /**
-     * 
+     *
      * @param topic
      * @param proposals
      * @param recommendations
-     * @return 
+     * @return
      */
     private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
