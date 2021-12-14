@@ -83,7 +83,7 @@
         <proposal categories="derechos sociales,economia,educacion" date="2016-04-30" districts="ciudad" id="11134" topics="actividad economica,colegios,derechos humanos">COLEGIOS PUBLICOS Y CONCERTADOS ABIERTOS EN JULIO Y SEPTIEMBRE ACT.LUDICAS</proposal>
     </proposals>
     <topics quantity="1">
-        <topic quantity="275" value="-">
+        <topic quantity="284" value="-">
             <aspect quantity="1" value="sitio">
                 <argument commentid="186456" id="24954-186456-2-2" parentid="-1" userid="601766">
                     <claim>habria sitio</claim>
@@ -119,7 +119,7 @@
                     <premise>que nadie que no quiera tenga que aguantarla</premise>
                 </argument>
             </aspect>
-            <aspect quantity="6" value="fin">
+            <aspect quantity="7" value="fin">
                 <argument commentid="18895" id="72-18895-2-1" parentid="17886" userid="13565">
                     <claim>Entiendo lo que dices</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -144,6 +144,11 @@
                     <claim>Eso es</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>si ahora se propone que las personas que se apunten a polideportivos municipales tienen que tener derecho a utilizar las instalaciones de gimnasios privados ... En fin , como dicen algunos , la envidia es el deporte nacional</premise>
+                </argument>
+                <argument commentid="141881" id="19170-141881-1-1" parentid="141845" userid="315455">
+                    <claim>Si</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>creo que el tema de las operaciones debe ser accesible y gratuito , mire , no puede ser que tengan que esperar hasta los 50 anos para operarse , y yo propongo lo de las operaciones cuanto antes por que creo que es mejor , esta claro que puede haber muchos condicionantes , como medicos -LRB- no se le puede poner un trabuco a un nino de 6 anos , ni unas tetas de Yola a una nina -RRB- , pudiera ser que los medicos indicasen que deben cumplir una cierta edad para operarse , tambien estan los padres , muchos se opondran a que los ninos se operen ... en fin , muchos impedimentos , pero yo pienso que debe ser algo accesible y que cuanto antes se haga mejor para que las personas se desarrollen correctamente</premise>
                 </argument>
                 <argument commentid="175777" id="23219-175777-5-1" parentid="175760" userid="72965">
                     <claim>Un afluente k transcurre</claim>
@@ -208,7 +213,7 @@
                     <premise>buscar mas apoyos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="54" value="gente">
+            <aspect quantity="60" value="gente">
                 <argument commentid="83301" id="7-83301-1-1" parentid="-1" userid="2182">
                     <claim>Si limpiar limpian al menos en mi barrio Usera</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -229,10 +234,25 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>la gente que quda cuando se acaba el transito de trabajo no la cambia</premise>
                 </argument>
+                <argument commentid="35406" id="507-35406-2-1" parentid="34789" userid="312">
+                    <claim>Esta claro que si la zona mejora el nivel de vida subira pegado a esa zona</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien se mejorara el nivel economico de la gente , mejorando la prosperidad de los negocios de la zona y se mejorara la cantidad de trabajo</premise>
+                </argument>
                 <argument commentid="31081" id="615-31081-2-1" parentid="31074" userid="7250">
                     <claim>Yo me preocupo de llevar luces todo el dia para ser visto</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay gente que no lleva ni un mal chaleco reflectante</premise>
+                </argument>
+                <argument commentid="74853" id="629-74853-1-1" parentid="55734" userid="5739">
+                    <claim>Coincido basicamente con tu comentario</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>hay que entender que hay profesionales del coche como los taxistas que no tienen donde hacer sus necesidades o la gente que tiene una edad y la prostata a reventar tambien tiene derecho a salir de casa y un urinario publico facilitaria las cosas y tambien para los indigentes que no estan en la calle por gusto , en cuanto al trato pues habria que vigilarlo muy de cerca para que este en condiciones</premise>
+                </argument>
+                <argument commentid="19379" id="629-19379-1-1" parentid="-1" userid="14892">
+                    <claim>Estoy de acuerdo con sancionar a los incivicos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien creo que toda la gente que recibe una ayuda social , deberia contribuir y colaborar para mantener las ciudades limpias</premise>
                 </argument>
                 <argument commentid="20102" id="629-20102-1-1" parentid="-1" userid="599">
                     <claim>Deberia sancionar a la gente que ensucia la ciudad</claim>
@@ -253,6 +273,11 @@
                     <claim>Una multinacional panadera no puede comprar todo el pan de Espana y venderlo a dos o tres euros la barra , cosa que le saldria muy rentable</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>fastidiaria a bastante gente</premise>
+                </argument>
+                <argument commentid="35332" id="965-35332-4-1" parentid="-1" userid="35975">
+                    <claim>NO APOYAR o VOTO EN CONTRA</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que tambien se contabilice que hay gente que no esta de acuerdo con las mociones presentadas</premise>
                 </argument>
                 <argument commentid="36351" id="965-36351-5-1" parentid="34979" userid="21223">
                     <claim>usen sus inmuebles</claim>
@@ -344,6 +369,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>se llama Iglesia</premise>
                 </argument>
+                <argument commentid="56297" id="7488-56297-1-1" parentid="54065" userid="75434">
+                    <claim>Continuacion del comentario anterior : Lo que no se puede pretender es matar la vida nocturna de una capital que genera tantos ingresos y que ademas tambien atrae al turismo ... una discoteca con menos de 100 db es una discoteca muerta porque se oiria mas el murmullo de la gente que la musica , las discotecas necesitan un volumen para funcionar ... eso si , estoy de acuerdo en que esten correctamente insonorizadas</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>me preocupa la gente que pone denuncias al mas minimo ruido ... senores , para el silencio y tranquilidad total por las noches existe el campo , no creo que una capital sea el lugar adecuado para eso</premise>
+                </argument>
                 <argument commentid="60175" id="8253-60175-7-1" parentid="-1" userid="91520">
                     <claim>La sala de estudios de la que hablo es centrica y eso que no es de las peores ;</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -363,6 +393,11 @@
                     <claim>Los primeros son taxistas piratas , que van a donde el cliente quiera con tal de ganar dinero ;</claim>
                     <connector category="contrast" function="support/attack" subcategory="comparison">mientras</connector>
                     <premise>que los segundos son gente que tiene que viajar de todos modos y , en lugar de ir solos desperdiciando cuatro asientos vacios en el coche , aprovechan para llevar a otras personas y dividirse los gastos</premise>
+                </argument>
+                <argument commentid="116873" id="15711-116873-1-1" parentid="115636" userid="5349">
+                    <claim>Votemos tambien</claim>
+                    <connector category="consequence" function="support" subcategory="goal">por</connector>
+                    <premise>tener un unico distrito para los PAUs del Norte , quizas gestionados por gente con nuestros mismos problemas nos vaya mejor</premise>
                 </argument>
                 <argument commentid="151107" id="19024-151107-2-1" parentid="-1" userid="186350">
                     <claim>A lo mejor en su bloque si limpian los cubos</claim>
@@ -487,6 +522,13 @@
                     <premise>no comparto que el funcionamiento de la pagina no lo permita</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="carril-bici">
+                <argument commentid="33149" id="1419-33149-3-1" parentid="33000" userid="2499">
+                    <claim>Siempre habra energumenos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>estos tambien los encontraras en el Carril-bici donde son potencialmente mas peligrosos</premise>
+                </argument>
+            </aspect>
             <aspect quantity="1" value="espacio">
                 <argument commentid="195383" id="23219-195383-1-1" parentid="-1" userid="5169">
                     <claim>Entiendo que se quiera un espacio para practicar deporte</claim>
@@ -549,7 +591,7 @@
                     <premise>que siga siendo un parque</premise>
                 </argument>
             </aspect>
-            <aspect quantity="27" value="personas">
+            <aspect quantity="29" value="personas">
                 <argument commentid="79889" id="965-79889-1-1" parentid="79801" userid="4639">
                     <claim>Varias personas de las que han opinado , y yo misma , hemos explicado tantas veces</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
@@ -559,6 +601,11 @@
                     <claim>Creo que las religiones tienen un lado bueno y un lado malo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>eso depende de las personas , no de las ideas o ideologias , pero esto es una sociedad en la que todos pagamos impuestos para tener un servicio publico , por tanto creo que la iglesia debe pagar este impuesto , no como forma de venganza por no haberlo pagado antes , sino porque ademas de lo divino esta lo terrenal y en lo terrenal debemos pagar todos</premise>
+                </argument>
+                <argument commentid="85238" id="1085-85238-4-1" parentid="83924" userid="156739">
+                    <claim>Los duenos de perros tambien los pagamos , tantos o mas como los millones de parados que si pagan algun IVA de algo que puedan permitirse comprar es , en muchos casos , gracias a las ayudas que reciben de mis impuestos que pago cada vez que le compro algo a mi perrilla , por ejemplo , impuestos de los cuales sale , ya que lo mencionas , la atencion medica para todas esas personas y servicios tales como bomberos , policia , limpieza , y bueno , en general todos los servicios de los que disponemos los ciudadanos o incluso los ilegales o como se les llame ahora , y eso cuando no hay que darles ropa y comida -LRB- y hasta cobijo tambien ... -RRB- y y ojo , que no estoy diciendo que se quiten dichas ayudas ni nada de eso</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>lo que sobran en el mundo son humanos y cada vez van a sobrar mas , asi que la mayoria de esos crios lo unico que seran cuando crezcan seran una carga para la</premise>
                 </argument>
                 <argument commentid="39537" id="1419-39537-2-1" parentid="-1" userid="48159">
                     <claim>Muchisimas personas intentamos desplazarnos en bicicleta por la ciudad</claim>
@@ -649,6 +696,11 @@
                     <claim>Desgraciadamente Av. de Machupichu queda fuera de San Blas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>junto a la Junta de Distrito existen espacios edificables disponibles , proximos al Metro , junto al anillo ciclista -LRB- que es coherente con el espacio lanzadera de uso de la bicicleta que se propone en el dossier http://www.madrid.es/UnidadesDescentralizadas/UDCMedios/noticias/2017/02Febrero/07Martes/Notasprensa/ARTEfactos/ficheros/Arte%20factos.pdf -RRB- , contando lineas de transporte publico -LRB- metro y autobus de la EMT , fomentando las funciones de uso comedor comunitario -RRB- y cerca de la policia municipal -LRB- factor de gran importancia en caso de personas beneficiarias de las viviendas pertenecientes a grupos especialmente vulnerables como es el caso de la violencia de genero -RRB-</premise>
+                </argument>
+                <argument commentid="142105" id="19170-142105-1-1" parentid="142079" userid="315455">
+                    <claim>Eso es verdad , como tener y mantener unos dientes para comer</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>la prioridad de esas personas es ser lo que tienen que ser , por tanto es una prioridad tambien , no se , creo que lo es , ya se que hay que priorizar , pero es que hay tantos desconchones ... y bueno creo que si naces transexual , pues SI es una prioridad</premise>
                 </argument>
                 <argument commentid="142870" id="19170-142870-4-1" parentid="142853" userid="315455">
                     <claim>Lo que planteo es</claim>
@@ -900,7 +952,7 @@
                     <premise>hacer sombra en verano y los malditos grafiteros lo tienen todo pintado</premise>
                 </argument>
             </aspect>
-            <aspect quantity="9" value="perro">
+            <aspect quantity="11" value="perro">
                 <argument commentid="21411" id="1085-21411-15-1" parentid="-1" userid="10481">
                     <claim>Yo seguire</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
@@ -911,10 +963,20 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ser multado ... como se realizaria el control del que ya esta censado su ADN</premise>
                 </argument>
+                <argument commentid="38166" id="1085-38166-1-1" parentid="-1" userid="40881">
+                    <claim>Empiezo por decir que no tengo perro</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>los respeto porque algunos en verdad te pueden procesar mas carino que algunos humanos , pero tambien reconozco que no es lo mismo la suciedad de una colilla en el suelo , o un papel , que tampoco es justificable a las cacas o pises de un animal , esto es mucho mas insalubre y puede ocasionar enfermedades</premise>
+                </argument>
                 <argument commentid="47500" id="1085-47500-3-1" parentid="31850" userid="60172">
                     <claim>Yo recojo la mierda de mi perro</claim>
                     <connector category="contrast" function="support/attack" subcategory="comparison">mientras</connector>
                     <premise>sorteo cascaras de melon en jardines q tiran desde las ventanas , raspas de pescao , cabezas de gambas</premise>
+                </argument>
+                <argument commentid="74910" id="2121-74910-3-1" parentid="34475" userid="48123">
+                    <claim>Es probable que a ti te moleste el que los demas tengan perro</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>yo cuando hago la declaracion de la renta pongo la X , cosa que como dice el dicho haz el bien y no mires a quien</premise>
                 </argument>
                 <argument commentid="34475" id="2121-34475-2-1" parentid="-1" userid="5829">
                     <claim>El que tiene un perro es</claim>
@@ -954,7 +1016,7 @@
                     <premise>veo q son como todos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="14" value="vida">
+            <aspect quantity="15" value="vida">
                 <argument commentid="84661" id="417-84661-1-1" parentid="-1" userid="18234">
                     <claim>Me pregunto cada dia mas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
@@ -1025,6 +1087,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>muy facil lo tiene que tener todo para proponer aun mas medidas cuando ya son excesivas , injustas y desproporcionadas</premise>
                 </argument>
+                <argument commentid="196439" id="25077-196439-4-1" parentid="195667" userid="13701">
+                    <claim>Eso tambien les calidad de vida</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>como le digo ni es la principal causa de contaminacion , sino los protocolos se darian en verano tambien y no solo en invierno -LRB- Que curioso -RRB- y son medidas clasistas y discriminatorias que solo favorecen a ricos que pueden vivir en el centro y perjudican a los trabajadores</premise>
+                </argument>
             </aspect>
             <aspect quantity="2" value="proyecto">
                 <argument commentid="34806" id="1419-34806-5-1" parentid="-1" userid="26075">
@@ -1048,13 +1115,6 @@
                     <claim>A mi me encantaria que no tuvieramos que recurrir a medidas como esta</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>desgraciadamente , todavia no estamos tan educados como creemos</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="1" value="ademas">
-                <argument commentid="176529" id="23219-176529-2-1" parentid="-1" userid="519803">
-                    <claim>Yo no practico remo</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>me parece fenomenal que se de la oportunidad en Madrid de practicar un deporte alternativo y sano , y ademas en Madrid capital , que yo sepa no hay instalaciones aptas para ello</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="bolsas">
@@ -1100,6 +1160,13 @@
                     <premise>si pueda interesarle a algun vecino : http://www.elconfidencial.com/vivienda/2017-03-10/valdebebas-sentencias-tribunales-coste-financiero-jose-ignacio-hernandez-obelart_1331923/</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="pena">
+                <argument commentid="181128" id="23219-181128-15-1" parentid="-1" userid="9005">
+                    <claim>Pues tendria mucha pena por ellos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien nadan bien Todo eso y la vista desordenada hay que dar por el disfrute de unos pocos dice</premise>
+                </argument>
+            </aspect>
             <aspect quantity="1" value="infraestructuras">
                 <argument commentid="62405" id="50-62405-5-1" parentid="62360" userid="7897">
                     <claim>no buscar infraestructuras segregacionistas</claim>
@@ -1114,7 +1181,7 @@
                     <premise>sus tubos de escape</premise>
                 </argument>
             </aspect>
-            <aspect quantity="15" value="cosas">
+            <aspect quantity="18" value="cosas">
                 <argument commentid="160725" id="72-160725-1-1" parentid="20122" userid="521380">
                     <claim>Siento decirte yo mi opinion</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -1130,10 +1197,20 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si me leo las cosas antes de firmarlas</premise>
                 </argument>
+                <argument commentid="24207" id="1085-24207-1-1" parentid="21657" userid="25534">
+                    <claim>perdona</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>con tus impuestos pagas las bolsitas de las cacas y muchas cosas mas como todo hijo de vecino , seguro que yo tambien pago cosas que no me gustan y me aguanto</premise>
+                </argument>
                 <argument commentid="22465" id="1419-22465-2-1" parentid="22340" userid="4877">
                     <claim>No se trata de entrar en disputas con nadie</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
                     <premise>de facilitar las cosas tanto a los ciclistas como a los peatones , que , como he dicho anteriormente , somos todos</premise>
+                </argument>
+                <argument commentid="30657" id="1419-30657-2-1" parentid="30631" userid="4877">
+                    <claim>En esta web hay varias cosas que no funcionan debidamente</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>supongo que quienes la han planteado tambien se iran encontrando sorpresas y tendran que ir corrigiendo sobre la marcha</premise>
                 </argument>
                 <argument commentid="50941" id="3044-50941-1-1" parentid="49050" userid="9068">
                     <claim>Suelo comprobar las cosas</claim>
@@ -1144,6 +1221,11 @@
                     <claim>Simplificaria las cosas</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>al que no es civico con su perro que no se le permita tener mas</premise>
+                </argument>
+                <argument commentid="54136" id="7488-54136-1-1" parentid="54105" userid="13701">
+                    <claim>Que puedan ser complementarias no lo dudo</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>que dicen cosas distintas creo que tambien</premise>
                 </argument>
                 <argument commentid="76834" id="10195-76834-1-1" parentid="76833" userid="140271">
                     <claim>Solo pongo esto</claim>
@@ -1274,7 +1356,14 @@
                     <premise>albergar un negocio que en realidad deberia hacer un Hotel u Hostal</premise>
                 </argument>
             </aspect>
-            <aspect quantity="13" value="calle">
+            <aspect quantity="1" value="semana">
+                <argument commentid="62880" id="50-62880-1-1" parentid="62611" userid="69149">
+                    <claim>Pues si , la utilizo , no a diario</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>si 2/3 veces por semana</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="14" value="calle">
                 <argument commentid="46761" id="7-46761-4-1" parentid="46736" userid="3170">
                     <claim>A diferencia de ti , me gustaria que me contestaras</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -1310,6 +1399,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si que hay una estacion con ese nombre</premise>
                 </argument>
+                <argument commentid="54241" id="7482-54241-6-1" parentid="54123" userid="64055">
+                    <claim>Metropolitano dices que tiene su historia por el Estadio del Atletico entiendo -LRB- que estaba justo ahi -RRB-</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>es que la zona se llamaba asi tambien ... Y Tribunal es porque esta en la puerta del Tribunal de Cuentas ... No se va a llamar Fuencarral cuando hay 4 o 5 paradas diferentes de Metro en esa calle y encima ya hay una que se llama Fuencarral -LRB- en el Distrito de Fuencarral , eso si -RRB-</premise>
+                </argument>
                 <argument commentid="140987" id="19024-140987-1-1" parentid="-1" userid="54298">
                     <claim>Cuando me entere de la medida me xxxx bastante</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -1341,11 +1435,16 @@
                     <premise>calles de Madrid</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="familias">
+            <aspect quantity="4" value="familias">
                 <argument commentid="115224" id="965-115224-8-1" parentid="85468" userid="59917">
                     <claim>El nacimiento no determina nada</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>hay montones de familias que lo pierden todo</premise>
+                </argument>
+                <argument commentid="60842" id="2121-60842-2-1" parentid="26321" userid="15130">
+                    <claim>Claro que a todos nos vendria bien una bajada de impuestos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>ya puestos a pedir , tambien en lugar de que hubiera una casilla en la declaracion de la renta que financia la iglesia , que hubiera otra que quien quiera pueda poner una x en apoyo a los animales sin hogar , que desaparezcan las perreras y estos animales vayan a albergues donde esten bien controlados , cuidados hasta que encuentren familias que los quieran</premise>
                 </argument>
                 <argument commentid="32230" id="2944-32230-1-1" parentid="-1" userid="32942">
                     <claim>a mi opinion 800 mil euros daria de comer a muchas familias y a crear algun puesto de trabajo ya sea funcionarios o privados , se que el ejercito cumple su funcion</claim>
@@ -1416,7 +1515,7 @@
                     <premise>de posesion</premise>
                 </argument>
             </aspect>
-            <aspect quantity="8" value="impuestos">
+            <aspect quantity="9" value="impuestos">
                 <argument commentid="84992" id="965-84992-1-1" parentid="-1" userid="155737">
                     <claim>pagar impuestos</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
@@ -1441,6 +1540,11 @@
                     <claim>Por que le molesta que esos impuestos se destinen a educacion</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>le parece bien eso ?</premise>
+                </argument>
+                <argument commentid="108676" id="10996-108676-7-1" parentid="102235" userid="183658">
+                    <claim>Claro que recibir ayuda de otros impuestos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no deberian soportarse unicamente a base de estos , pues tambien sirven para Sanidad , Educacion o Seguridad</premise>
                 </argument>
                 <argument commentid="87485" id="12131-87485-2-1" parentid="-1" userid="8943">
                     <claim>Un poco de seriedad , me molesta el humo del tabaco</claim>
@@ -1516,6 +1620,13 @@
                     <claim>Distrito13 , Claro que intenta confundir</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>solo lo intenta</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="carretera">
+                <argument commentid="35864" id="3587-35864-5-1" parentid="-1" userid="36676">
+                    <claim>3 ir</claim>
+                    <connector category="consequence" function="support" subcategory="goal">por</connector>
+                    <premise>la carretera con los demas vehiculos a motor</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="mensaje">
@@ -1651,18 +1762,6 @@
                     <premise>si creo que han hecho un feudo para ricos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="demas">
-                <argument commentid="35864" id="3587-35864-5-1" parentid="-1" userid="36676">
-                    <claim>3 ir</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>la carretera con los demas vehiculos a motor</premise>
-                </argument>
-                <argument commentid="124825" id="15711-124825-3-1" parentid="124819" userid="135805">
-                    <claim>Asi es</claim>
-                    <connector category="elaboration" function="support" subcategory="similarity">como</connector>
-                    <premise>confiesas lo que , por lo demas , ya quedaba sumamente claro desde el principio : no eres mas que un cobarde que ni siquiera tiene el valor suficiente como para comentar con su nombre y sus apellidos autenticos</premise>
-                </argument>
-            </aspect>
             <aspect quantity="1" value="gastos">
                 <argument commentid="85039" id="965-85039-1-1" parentid="-1" userid="15304">
                     <claim>No estoy en contra de las religiones</claim>
@@ -1720,6 +1819,13 @@
                     <premise>el cambio dno fue retroactivo</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="par">
+                <argument commentid="32544" id="1419-32544-1-1" parentid="32531" userid="4877">
+                    <claim>De eso doy fe</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>paso por alli un par de veces por semana</premise>
+                </argument>
+            </aspect>
             <aspect quantity="1" value="distrito">
                 <argument commentid="17178" id="7-17178-2-1" parentid="17166" userid="9884">
                     <claim>fue el distrito que mas voto a este nuevo gobierno municipal</claim>
@@ -1737,6 +1843,13 @@
                     <claim>las asuma la publica</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>te gusta costeatela de tu bolsillo y no quites alos ninos qu eno pueden costearsela</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="pintadas">
+                <argument commentid="75865" id="494-75865-1-1" parentid="38888" userid="137989">
+                    <claim>muchos negocios pagan</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que les decoren sus cierres y asi evitar los asquerosas pintadas y a los pcos dias aparecen tambien</premise>
                 </argument>
             </aspect>
             <aspect quantity="7" value="dinero">
@@ -1840,7 +1953,12 @@
                     <premise>el bien de todos los ciudadanos para evitar problemas de salud y conflictos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="bicis">
+            <aspect quantity="3" value="bicis">
+                <argument commentid="28807" id="1419-28807-2-1" parentid="28718" userid="4877">
+                    <claim>No se si sera cosa mia</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>cada dia veo mas bicis por todos lados , lo cual me alegra y me indica que algo esta despertando en Madrid</premise>
+                </argument>
                 <argument commentid="30857" id="1419-30857-7-1" parentid="-1" userid="26075">
                     <claim>Hay muchas comentarios de peatones que se sienten amenazados por las bicis</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
@@ -2036,7 +2154,7 @@
                     <premise>si se informa con los que lo padecen pues se llevara una sorpresa de la cantidad de racismo institucional de facto que existe en Espana</premise>
                 </argument>
             </aspect>
-            <aspect quantity="7" value="carril">
+            <aspect quantity="8" value="carril">
                 <argument commentid="61333" id="50-61333-5-1" parentid="60815" userid="69149">
                     <claim>te metes</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -2051,6 +2169,11 @@
                     <claim>las bicis tienen que ir</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>la calzada y por el medio del carril por mucho que te fastidie</premise>
+                </argument>
+                <argument commentid="30962" id="615-30962-1-1" parentid="26022" userid="2459">
+                    <claim>Hombre , descerebrados hay en todos los colectivos , entre los ciclistas tambien</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>un ciclista descerebrado siempre es menos peligrosos que un automovilista descerebrado , que tambien hacen muchas barbaridades , como cerrar a ciclistas , tocarnos el claxon cuando vamos correctamente por nuestro carril , etc , etc , etc.</premise>
                 </argument>
                 <argument commentid="25791" id="1419-25791-3-1" parentid="25778" userid="26075">
                     <claim>Los autobuses urbanos son mas voluminosos y necesitan mas espacio</claim>
@@ -2124,11 +2247,16 @@
                     <premise>se vuelve a equivocar , no soy catolico , no voy a misa ni creo en Dios pero si en el sentido comun</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="peatones">
+            <aspect quantity="3" value="peatones">
                 <argument commentid="29210" id="2445-29210-5-1" parentid="28713" userid="5517">
                     <claim>No lo pongo en duda</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>aun siendo lo segundo la culpa no seria suya sino de quien no sabe circular unos metros por una acera sin violentar a los peatones</premise>
+                </argument>
+                <argument commentid="29621" id="2445-29621-7-1" parentid="29512" userid="5517">
+                    <claim>En cuanto a lo ultimo , a usted no se le ocurrira</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no sabe cuantos peatones si cruzan calzadas fuera de los pasos de peatones -LRB- yo tambien lo hago -RRB-</premise>
                 </argument>
                 <argument commentid="200120" id="23131-200120-3-1" parentid="182825" userid="183169">
                     <claim>Cuando no se pasan el semaforo en rojo se suben a la acera y por el paso de peatones cruzan al otro lado</claim>
@@ -2167,7 +2295,7 @@
                     <premise>taxis y vtc</premise>
                 </argument>
             </aspect>
-            <aspect quantity="35" value="bici">
+            <aspect quantity="39" value="bici">
                 <argument commentid="32474" id="50-32474-1-1" parentid="-1" userid="6351">
                     <claim>Tambien carriles bici</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
@@ -2273,10 +2401,20 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>con una red de carriles bici en condiciones se acabaria el problema</premise>
                 </argument>
+                <argument commentid="25983" id="1419-25983-2-1" parentid="-1" userid="29195">
+                    <claim>hay que crear un carril separado</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que lo puedan coger tambien los menores de 16 anos para ir al cole como pasa en muchos sitios como Cambridge , y poner estaciones de bici cerca de los coles y Universidades</premise>
+                </argument>
                 <argument commentid="26198" id="1419-26198-1-1" parentid="-1" userid="29078">
                     <claim>No soy tan ambicioso</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si al menos : - Se hiciese una campana de informacion en colegios , centros de la tercera edad etc , de que andar por un carril bici es tan peligroso como andar por un carril bus</premise>
+                </argument>
+                <argument commentid="31178" id="1419-31178-3-1" parentid="31168" userid="4877">
+                    <claim>Los que defienden que la bici debe compartir espacio con los coches pese a ser mucho mas lenta que los coches , pueden explicarme</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>los peatones no pueden compartir tambien la calzada con coches y bicis , junto con los patinetes y demas</premise>
                 </argument>
                 <argument commentid="32544" id="1419-32544-5-1" parentid="32531" userid="4877">
                     <claim>Te invito a ver este video https://www.youtube.com/watch?v=g-Vq9zXHuzw donde la responsable de movilidad de Copenhague dice claramente que para que la bici tenga exito como transporte tuvieron que separar las bicis del resto del trafico y hacer grandes inversiones en infraestructura adecuada</claim>
@@ -2287,6 +2425,11 @@
                     <claim>Por cierto , esos datos que aporta no se de donde salen</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>en Copenhague usa bici en el 50 de los trayectos y muy por encima del coche</premise>
+                </argument>
+                <argument commentid="33423" id="1419-33423-2-1" parentid="33386" userid="4877">
+                    <claim>No pido que se hagan las cosas para joder a los coches</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
+                    <premise>que se hagan del modo mas suave posible , de forma que si hay que quitar un carril de una calzada a los coches para hacerlo ciclista se haga promocionando y favoreciendo tanto el uso de la bici en esa zona que los automovilistas vean tambien como mejora la fluidez del trafico gracias a la reduccion del numero de vehiculos a motor en favor de la bici</premise>
                 </argument>
                 <argument commentid="39047" id="1419-39047-4-1" parentid="38784" userid="4877">
                     <claim>Sabemos el dano que hace el coche</claim>
@@ -2343,6 +2486,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>a mi parecer Madrid aun no esta preparado para eso</premise>
                 </argument>
+                <argument commentid="178695" id="23131-178695-3-1" parentid="-1" userid="23775">
+                    <claim>Al menos el Ayuntamiento ha dado algunos pasos para fomentar la bici</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>por ejemplo bicimad que se vendio como que iba a ser una tarjeta unica finalmente si quieres usar una bicicleta tambien tienes que darte de alta y no se cuantas historias con lo cual no es tan sencillo Tarjeta Unica de bicimad significaria que con el mismo abono transporte puedes ir pasar tu tarjeta por un totem y coger una bicicleta asi de sencillo y la bicicleta desde luego ha cambiado bastante la imagen de la ciudad aunque muy timidamente</premise>
+                </argument>
             </aspect>
             <aspect quantity="2" value="voto">
                 <argument commentid="70625" id="109-70625-2-1" parentid="-1" userid="117407">
@@ -2363,7 +2511,7 @@
                     <premise>una ORDEN que hay</premise>
                 </argument>
             </aspect>
-            <aspect quantity="10" value="idea">
+            <aspect quantity="11" value="idea">
                 <argument commentid="49275" id="19-49275-2-1" parentid="49076" userid="158">
                     <claim>Si pudiera hacerse segun su idea , problemas 0 ;</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -2373,6 +2521,11 @@
                     <claim>Mira que la idea es buena</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el tema de subvencionar para favorecerlo , no lo veo tal como explico en mi anterior post</premise>
+                </argument>
+                <argument commentid="28736" id="507-28736-1-1" parentid="25558" userid="312">
+                    <claim>Esas zonas tambien podrian valorarse</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>esta idea : -RRB-</premise>
                 </argument>
                 <argument commentid="18662" id="615-18662-1-1" parentid="-1" userid="8414">
                     <claim>Hoy por hoy no creo que sea buena idea priorizar el acoso al ciclista</claim>
@@ -2429,11 +2582,16 @@
                     <premise>los oidos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="barrios">
+            <aspect quantity="2" value="barrios">
                 <argument commentid="180774" id="20657-180774-6-1" parentid="180748" userid="98985">
                     <claim>Al final los Vecinxs no podran hacer alquileres temporales</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>estaremos llenos de hoteles en los barrios</premise>
+                </argument>
+                <argument commentid="180875" id="20657-180875-7-1" parentid="152198" userid="22367">
+                    <claim>El precio de los pisos en los barrios tambien ha subido</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>se ve afectado por esta situacion , como el de venta etc.</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="hacerlo">
@@ -2448,6 +2606,13 @@
                     <claim>Argumentan que lo que tiene que cambiar es mi mentalidad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>creo que con este video se despejan todas las dudas</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="gasto">
+                <argument commentid="45448" id="152-45448-2-1" parentid="-1" userid="2038">
+                    <claim>No se trata solo de buscar fuentes de energia alternativas renovables</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
+                    <premise>de ahorrar tambien en el gasto energetico</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="linea">
@@ -2474,303 +2639,6 @@
                     <claim>Bicimad fue un buen comienzo para la implantacion de la movilidad urbana en bicicleta</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no es suficiente</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="59" value="tambien">
-                <argument commentid="85676" id="7-85676-1-1" parentid="83302" userid="5739">
-                    <claim>Lo mismo que mi barrio , Arganzuela tambien esta muy sucio</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no porque no limpien que limpian sino porque hay unos cuantos guarros que les encanta esparcir basura por todos los lados , por lo que recomiendo educacion ya que parece que los cartelitos no son utiles a base de multazo a los guarros</premise>
-                </argument>
-                <argument commentid="25606" id="7-25606-2-1" parentid="-1" userid="8097">
-                    <claim>Por favor , hay que limpiar , si</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien hay que concienciar</premise>
-                </argument>
-                <argument commentid="51540" id="19-51540-3-1" parentid="49749" userid="35402">
-                    <claim>Se deberia hacer un estudio serio sobre las alternativas</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>lo mejor serian los aparcamientos disuasorios y pensar que cualquier reduccion de carriles afectaria tambien a los buses de la EMT , como pasa en O'Donnell</premise>
-                </argument>
-                <argument commentid="18483" id="89-18483-1-1" parentid="17834" userid="13200">
-                    <claim>Puedes solicitarlo tambien</claim>
-                    <connector category="cause" function="support" subcategory="reason">a traves de</connector>
-                    <premise>la web del ayuntamiento y en las oficinas gratis</premise>
-                </argument>
-                <argument commentid="78101" id="109-78101-1-1" parentid="-1" userid="101636">
-                    <claim>Estoy de acuerdo con vosotros</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tenemos que tener en cuenta que toda la labor no es del Ayuntamiento , tambien con concierne a nosotros el educar en el respeto a los demas y a la ciudadania y concienciar a las personas que la calle no es del Ayuntamiento sino de todos nosotros y por ese motivo debemos cuidarla y respetarla</premise>
-                </argument>
-                <argument commentid="26112" id="152-26112-1-1" parentid="18926" userid="29377">
-                    <claim>Coincido en que siempre hay que informarse antes de votar</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien antes de expresar opiniones con tanta contundencia y tan poco fundamentadas</premise>
-                </argument>
-                <argument commentid="45448" id="152-45448-2-1" parentid="-1" userid="2038">
-                    <claim>No se trata solo de buscar fuentes de energia alternativas renovables</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
-                    <premise>de ahorrar tambien en el gasto energetico</premise>
-                </argument>
-                <argument commentid="85807" id="417-85807-2-1" parentid="-1" userid="29755">
-                    <claim>MI madre tiene mas de 80 anos y no lee vuestra valiosa informacion</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien tiene derecho</premise>
-                </argument>
-                <argument commentid="33130" id="417-33130-1-1" parentid="-1" userid="34418">
-                    <claim>No se si lo han dicho ya</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>el servicio 010 de Madrid tambien funciona llamando al 915 298 210</premise>
-                </argument>
-                <argument commentid="75865" id="494-75865-1-1" parentid="38888" userid="137989">
-                    <claim>muchos negocios pagan</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que les decoren sus cierres y asi evitar los asquerosas pintadas y a los pcos dias aparecen tambien</premise>
-                </argument>
-                <argument commentid="28736" id="507-28736-1-1" parentid="25558" userid="312">
-                    <claim>Esas zonas tambien podrian valorarse</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>esta idea : -RRB-</premise>
-                </argument>
-                <argument commentid="35406" id="507-35406-2-1" parentid="34789" userid="312">
-                    <claim>Esta claro que si la zona mejora el nivel de vida subira pegado a esa zona</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien se mejorara el nivel economico de la gente , mejorando la prosperidad de los negocios de la zona y se mejorara la cantidad de trabajo</premise>
-                </argument>
-                <argument commentid="75067" id="615-75067-2-1" parentid="-1" userid="24331">
-                    <claim>Es Posible que haya algo mas de permisividad</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>es dificil tambien que haya un policia detras de cada uno</premise>
-                </argument>
-                <argument commentid="30959" id="615-30959-1-1" parentid="-1" userid="2459">
-                    <claim>Por supuesto que si</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>para empezar a multar a ciclistas primero habra que crear infraestructuras para que no incumplan las normas de circulacion , entre tanto multaria severamente la doble fila que tampoco esta permitido , tambien multaria severamente a automovilistas que no respetan la distancia de seguridad , a automovilistas que tocan el claxon injustificadamente -LRB- prohibiria que los coches tuvieran claxon -RRB- , entre otras medidas</premise>
-                </argument>
-                <argument commentid="30962" id="615-30962-1-1" parentid="26022" userid="2459">
-                    <claim>Hombre , descerebrados hay en todos los colectivos , entre los ciclistas tambien</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>un ciclista descerebrado siempre es menos peligrosos que un automovilista descerebrado , que tambien hacen muchas barbaridades , como cerrar a ciclistas , tocarnos el claxon cuando vamos correctamente por nuestro carril , etc , etc , etc.</premise>
-                </argument>
-                <argument commentid="74853" id="629-74853-1-1" parentid="55734" userid="5739">
-                    <claim>Coincido basicamente con tu comentario</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>hay que entender que hay profesionales del coche como los taxistas que no tienen donde hacer sus necesidades o la gente que tiene una edad y la prostata a reventar tambien tiene derecho a salir de casa y un urinario publico facilitaria las cosas y tambien para los indigentes que no estan en la calle por gusto , en cuanto al trato pues habria que vigilarlo muy de cerca para que este en condiciones</premise>
-                </argument>
-                <argument commentid="19379" id="629-19379-1-1" parentid="-1" userid="14892">
-                    <claim>Estoy de acuerdo con sancionar a los incivicos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien creo que toda la gente que recibe una ayuda social , deberia contribuir y colaborar para mantener las ciudades limpias</premise>
-                </argument>
-                <argument commentid="30384" id="629-30384-1-1" parentid="-1" userid="32976">
-                    <claim>Estoy de acuerdo</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien habria que ver que educacion tenemos , vivo en Vallecas y compruebo que se ha aumentado el servicio , sin embargo es imposible , los vecino dejan la basura fuera de los contenedores , tiran todo por el suelo e incluso ya se orina en cualquier sitio</premise>
-                </argument>
-                <argument commentid="87989" id="965-87989-1-1" parentid="87732" userid="9068">
-                    <claim>Salvo que haya acuerdo Iglesia Estado para que no , tambien lo dice la ley</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>si se puede cambiar esa ley , por que solo una parte ?</premise>
-                </argument>
-                <argument commentid="35332" id="965-35332-4-1" parentid="-1" userid="35975">
-                    <claim>NO APOYAR o VOTO EN CONTRA</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que tambien se contabilice que hay gente que no esta de acuerdo con las mociones presentadas</premise>
-                </argument>
-                <argument commentid="85238" id="1085-85238-4-1" parentid="83924" userid="156739">
-                    <claim>Los duenos de perros tambien los pagamos , tantos o mas como los millones de parados que si pagan algun IVA de algo que puedan permitirse comprar es , en muchos casos , gracias a las ayudas que reciben de mis impuestos que pago cada vez que le compro algo a mi perrilla , por ejemplo , impuestos de los cuales sale , ya que lo mencionas , la atencion medica para todas esas personas y servicios tales como bomberos , policia , limpieza , y bueno , en general todos los servicios de los que disponemos los ciudadanos o incluso los ilegales o como se les llame ahora , y eso cuando no hay que darles ropa y comida -LRB- y hasta cobijo tambien ... -RRB- y y ojo , que no estoy diciendo que se quiten dichas ayudas ni nada de eso</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>lo que sobran en el mundo son humanos y cada vez van a sobrar mas , asi que la mayoria de esos crios lo unico que seran cuando crezcan seran una carga para la</premise>
-                </argument>
-                <argument commentid="24207" id="1085-24207-1-1" parentid="21657" userid="25534">
-                    <claim>perdona</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>con tus impuestos pagas las bolsitas de las cacas y muchas cosas mas como todo hijo de vecino , seguro que yo tambien pago cosas que no me gustan y me aguanto</premise>
-                </argument>
-                <argument commentid="38166" id="1085-38166-1-1" parentid="-1" userid="40881">
-                    <claim>Empiezo por decir que no tengo perro</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>los respeto porque algunos en verdad te pueden procesar mas carino que algunos humanos , pero tambien reconozco que no es lo mismo la suciedad de una colilla en el suelo , o un papel , que tampoco es justificable a las cacas o pises de un animal , esto es mucho mas insalubre y puede ocasionar enfermedades</premise>
-                </argument>
-                <argument commentid="38166" id="1085-38166-1-2" parentid="-1" userid="40881">
-                    <claim>algunos en verdad te pueden procesar mas carino que algunos humanos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien reconozco que no es lo mismo la suciedad de una colilla en el suelo , o un papel , que tampoco es justificable a las cacas o pises de un animal , esto es mucho mas insalubre y puede ocasionar enfermedades</premise>
-                </argument>
-                <argument commentid="22467" id="1419-22467-3-1" parentid="-1" userid="14361">
-                    <claim>El centro deberia ser</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>una buena red de transporte publico y tambien el uso de bicicletas</premise>
-                </argument>
-                <argument commentid="23613" id="1419-23613-2-1" parentid="23293" userid="6607">
-                    <claim>Muchos tenemos coche</claim>
-                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
-                    <premise>usemos tambien la bicicleta</premise>
-                </argument>
-                <argument commentid="25983" id="1419-25983-2-1" parentid="-1" userid="29195">
-                    <claim>hay que crear un carril separado</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que lo puedan coger tambien los menores de 16 anos para ir al cole como pasa en muchos sitios como Cambridge , y poner estaciones de bici cerca de los coles y Universidades</premise>
-                </argument>
-                <argument commentid="30657" id="1419-30657-2-1" parentid="30631" userid="4877">
-                    <claim>En esta web hay varias cosas que no funcionan debidamente</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>supongo que quienes la han planteado tambien se iran encontrando sorpresas y tendran que ir corrigiendo sobre la marcha</premise>
-                </argument>
-                <argument commentid="31178" id="1419-31178-3-1" parentid="31168" userid="4877">
-                    <claim>Los que defienden que la bici debe compartir espacio con los coches pese a ser mucho mas lenta que los coches , pueden explicarme</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>los peatones no pueden compartir tambien la calzada con coches y bicis , junto con los patinetes y demas</premise>
-                </argument>
-                <argument commentid="33149" id="1419-33149-3-1" parentid="33000" userid="2499">
-                    <claim>Siempre habra energumenos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>estos tambien los encontraras en el Carril-bici donde son potencialmente mas peligrosos</premise>
-                </argument>
-                <argument commentid="33423" id="1419-33423-2-1" parentid="33386" userid="4877">
-                    <claim>No pido que se hagan las cosas para joder a los coches</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
-                    <premise>que se hagan del modo mas suave posible , de forma que si hay que quitar un carril de una calzada a los coches para hacerlo ciclista se haga promocionando y favoreciendo tanto el uso de la bici en esa zona que los automovilistas vean tambien como mejora la fluidez del trafico gracias a la reduccion del numero de vehiculos a motor en favor de la bici</premise>
-                </argument>
-                <argument commentid="25377" id="1824-25377-2-1" parentid="-1" userid="19083">
-                    <claim>Deberia haber un registro de propuestas para ver si hay propuestas que se parecen y no hacer mil propuestas sobre un tema especifico</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>` mientras tanto , he votado la tuya tambien ... a ver si sale ... saludos</premise>
-                </argument>
-                <argument commentid="44096" id="1863-44096-3-1" parentid="42367" userid="11937">
-                    <claim>Aceptamos compartirlo con otras culturas</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>ellos tienen que respetar tambien nuestras costumbres entre las que no entran los tambores junto al estanque</premise>
-                </argument>
-                <argument commentid="60842" id="2121-60842-2-1" parentid="26321" userid="15130">
-                    <claim>Claro que a todos nos vendria bien una bajada de impuestos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>ya puestos a pedir , tambien en lugar de que hubiera una casilla en la declaracion de la renta que financia la iglesia , que hubiera otra que quien quiera pueda poner una x en apoyo a los animales sin hogar , que desaparezcan las perreras y estos animales vayan a albergues donde esten bien controlados , cuidados hasta que encuentren familias que los quieran</premise>
-                </argument>
-                <argument commentid="28930" id="2412-28930-4-1" parentid="28664" userid="31101">
-                    <claim>Ya informe tambien a la Comunidad</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>mucho me temo que no interesa a la Administracion arreglar este problema , entonces que no nos pidan que utilicemos el metro</premise>
-                </argument>
-                <argument commentid="29621" id="2445-29621-7-1" parentid="29512" userid="5517">
-                    <claim>En cuanto a lo ultimo , a usted no se le ocurrira</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no sabe cuantos peatones si cruzan calzadas fuera de los pasos de peatones -LRB- yo tambien lo hago -RRB-</premise>
-                </argument>
-                <argument commentid="54241" id="7482-54241-6-1" parentid="54123" userid="64055">
-                    <claim>Metropolitano dices que tiene su historia por el Estadio del Atletico entiendo -LRB- que estaba justo ahi -RRB-</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>es que la zona se llamaba asi tambien ... Y Tribunal es porque esta en la puerta del Tribunal de Cuentas ... No se va a llamar Fuencarral cuando hay 4 o 5 paradas diferentes de Metro en esa calle y encima ya hay una que se llama Fuencarral -LRB- en el Distrito de Fuencarral , eso si -RRB-</premise>
-                </argument>
-                <argument commentid="101532" id="7488-101532-3-1" parentid="57425" userid="186509">
-                    <claim>Disculpen el lenguaje grueso</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>las imagenes tambien lo son</premise>
-                </argument>
-                <argument commentid="54136" id="7488-54136-1-1" parentid="54105" userid="13701">
-                    <claim>Que puedan ser complementarias no lo dudo</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>que dicen cosas distintas creo que tambien</premise>
-                </argument>
-                <argument commentid="56297" id="7488-56297-1-1" parentid="54065" userid="75434">
-                    <claim>Continuacion del comentario anterior : Lo que no se puede pretender es matar la vida nocturna de una capital que genera tantos ingresos y que ademas tambien atrae al turismo ... una discoteca con menos de 100 db es una discoteca muerta porque se oiria mas el murmullo de la gente que la musica , las discotecas necesitan un volumen para funcionar ... eso si , estoy de acuerdo en que esten correctamente insonorizadas</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>me preocupa la gente que pone denuncias al mas minimo ruido ... senores , para el silencio y tranquilidad total por las noches existe el campo , no creo que una capital sea el lugar adecuado para eso</premise>
-                </argument>
-                <argument commentid="112164" id="8188-112164-1-1" parentid="-1" userid="201437">
-                    <claim>No es una buena decision , en mi opinion</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>la demanda es baja , la frecuencia tambien habria de serlo , la inseguridad aumenta por esos motivos , y el incremento de gasto es muy importante -LRB- efectos en el control de accesos , trenes y mantenimiento de la red -RRB- ; seria mucho mas barata una red equivalente de autobuses en superficie ademas de proporcionar mayor calidad ya que la velocidad de circulacion a esas horas es similar o superior a la del Metro , las unidades de transporte son menores y la oferta seria con mayor frecuencia , se ahorraria tiempo en bajar y subir al / de las estaciones de Metro , y la inseguridad en superficie seria menor que en los tuneles de la red subterranea</premise>
-                </argument>
-                <argument commentid="108676" id="10996-108676-7-1" parentid="102235" userid="183658">
-                    <claim>Claro que recibir ayuda de otros impuestos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no deberian soportarse unicamente a base de estos , pues tambien sirven para Sanidad , Educacion o Seguridad</premise>
-                </argument>
-                <argument commentid="150889" id="15711-150889-1-1" parentid="-1" userid="9038">
-                    <claim>Esto de dejarte una pasta inmensa en un barrio pintado como de vivienda social</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>de hecho mas caro que Hortaleza y no tener ni guarderia a mi tambien me cabrearia</premise>
-                </argument>
-                <argument commentid="116873" id="15711-116873-1-1" parentid="115636" userid="5349">
-                    <claim>Votemos tambien</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>tener un unico distrito para los PAUs del Norte , quizas gestionados por gente con nuestros mismos problemas nos vaya mejor</premise>
-                </argument>
-                <argument commentid="120666" id="15711-120666-4-1" parentid="-1" userid="182428">
-                    <claim>Si quereis tambien os puedo comentar que ideas en el aire rondan para mi barrio</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>aun no hay proyectos como tal</premise>
-                </argument>
-                <argument commentid="141559" id="19024-141559-1-1" parentid="-1" userid="149224">
-                    <claim>Yo tambien estoy</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">en contra de</connector>
-                    <premise>esta medida del Ayuntamiento</premise>
-                </argument>
-                <argument commentid="141881" id="19170-141881-1-1" parentid="141845" userid="315455">
-                    <claim>Si</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>creo que el tema de las operaciones debe ser accesible y gratuito , mire , no puede ser que tengan que esperar hasta los 50 anos para operarse , y yo propongo lo de las operaciones cuanto antes por que creo que es mejor , esta claro que puede haber muchos condicionantes , como medicos -LRB- no se le puede poner un trabuco a un nino de 6 anos , ni unas tetas de Yola a una nina -RRB- , pudiera ser que los medicos indicasen que deben cumplir una cierta edad para operarse , tambien estan los padres , muchos se opondran a que los ninos se operen ... en fin , muchos impedimentos , pero yo pienso que debe ser algo accesible y que cuanto antes se haga mejor para que las personas se desarrollen correctamente</premise>
-                </argument>
-                <argument commentid="142029" id="19170-142029-1-1" parentid="141845" userid="224252">
-                    <claim>Claro , eso por supuesto</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien estan las soluciones pragmaticas , creo que para ellos son las mas importantes</premise>
-                </argument>
-                <argument commentid="142105" id="19170-142105-1-1" parentid="142079" userid="315455">
-                    <claim>Eso es verdad , como tener y mantener unos dientes para comer</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>la prioridad de esas personas es ser lo que tienen que ser , por tanto es una prioridad tambien , no se , creo que lo es , ya se que hay que priorizar , pero es que hay tantos desconchones ... y bueno creo que si naces transexual , pues SI es una prioridad</premise>
-                </argument>
-                <argument commentid="180799" id="20389-180799-1-1" parentid="-1" userid="487242">
-                    <claim>Estoy muy de acuerdo con la reforestacion</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien hay que cuidar y podar a su debido tiempo los que hay plantados y no dejarlos que nazcan desde el alcorque como se ven muchos , en la avda. de la Ilustraccion por ejemplo</premise>
-                </argument>
-                <argument commentid="181087" id="20389-181087-15-1" parentid="180939" userid="492261">
-                    <claim>Han recibido ordenes</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>callarse porque esto es dirigido por los cuerpos aereas militares de la NASA y tambien usan drones , pajaros drones</premise>
-                </argument>
-                <argument commentid="181110" id="20389-181110-2-1" parentid="-1" userid="178288">
-                    <claim>En mi barrio tambien se cayo un arbol y por suerte no paso nada</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>considero oportuno comentar aqui tambien , que hace falta cuidar mas lo plantado tanto de arboleda como plantas ya que a veces dan pena del poco cuidado que se les da. Por favor sigan trabajando en ello y conseguiremos un Madrid verde</premise>
-                </argument>
-                <argument commentid="181293" id="20389-181293-1-1" parentid="-1" userid="228585">
-                    <claim>estoy de acuerdo con arborizar mas Madrid</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien hay que cuidar los que ya tenemos porque hay una dejadez absoluta con ellos</premise>
-                </argument>
-                <argument commentid="180875" id="20657-180875-7-1" parentid="152198" userid="22367">
-                    <claim>El precio de los pisos en los barrios tambien ha subido</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>se ve afectado por esta situacion , como el de venta etc.</premise>
-                </argument>
-                <argument commentid="178695" id="23131-178695-3-1" parentid="-1" userid="23775">
-                    <claim>Al menos el Ayuntamiento ha dado algunos pasos para fomentar la bici</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>por ejemplo bicimad que se vendio como que iba a ser una tarjeta unica finalmente si quieres usar una bicicleta tambien tienes que darte de alta y no se cuantas historias con lo cual no es tan sencillo Tarjeta Unica de bicimad significaria que con el mismo abono transporte puedes ir pasar tu tarjeta por un totem y coger una bicicleta asi de sencillo y la bicicleta desde luego ha cambiado bastante la imagen de la ciudad aunque muy timidamente</premise>
-                </argument>
-                <argument commentid="175896" id="23219-175896-1-1" parentid="175854" userid="97792">
-                    <claim>A mi tambien me gustaria que hubiera una pista de esqui en el centro de Madrid</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>asumo que no todos los deportes se pueden practicar en la puerta de casa</premise>
-                </argument>
-                <argument commentid="181128" id="23219-181128-15-1" parentid="-1" userid="9005">
-                    <claim>Pues tendria mucha pena por ellos</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>tambien nadan bien Todo eso y la vista desordenada hay que dar por el disfrute de unos pocos dice</premise>
-                </argument>
-                <argument commentid="199526" id="25077-199526-2-1" parentid="199439" userid="11378">
-                    <claim>Estoy de acuerdo con la contaminacion que genera la calefaccion de carbon</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>decir que como hay otras cosas que tambien contaminan no se debe atajar el problema de la contaminacion de tanto coche , no tiene sentido ninguno</premise>
-                </argument>
-                <argument commentid="196439" id="25077-196439-4-1" parentid="195667" userid="13701">
-                    <claim>Eso tambien les calidad de vida</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>como le digo ni es la principal causa de contaminacion , sino los protocolos se darian en verano tambien y no solo en invierno -LRB- Que curioso -RRB- y son medidas clasistas y discriminatorias que solo favorecen a ricos que pueden vivir en el centro y perjudican a los trabajadores</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="cuidado">
@@ -2860,11 +2728,16 @@
                     <premise>dispones de efectivo o un billete inferior a 10 euros , es necesario que se permita el pago con tarjeta</premise>
                 </argument>
             </aspect>
-            <aspect quantity="24" value="barrio">
+            <aspect quantity="28" value="barrio">
                 <argument commentid="18024" id="7-18024-2-1" parentid="-1" userid="12361">
                     <claim>Ejemplos muchos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>aqui va uno muy significativo : El barrio de Salamanca , barrio del Retiro , Puerta del Sol , y alrededores solo 100 metros a la redonda de la Asamblea de Madrid , estan impolutos de limpios , pero una calle como es Garcia Miranda , con solo cincuenta metros de longitus , tres papeleras , dos colegios especiales y seis portales de vecinos esta abandonada , papeleras llenas , toda clase de basura debajo de los coches , arboles que se estan secando , alcantarillas que no nos dejan dormir por la noche , solares ocupados por camiones de muy dudosa identidad y todo esto a tan solo 300 metros de la puerta principal de La Asamblea de Madrid , y cosa curiosa , por mi calle pasan todos los coches oficiales de los diputados de La Asamblea de Madrid , pero claro como van con cristales tintados</premise>
+                </argument>
+                <argument commentid="85676" id="7-85676-1-1" parentid="83302" userid="5739">
+                    <claim>Lo mismo que mi barrio , Arganzuela tambien esta muy sucio</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no porque no limpien que limpian sino porque hay unos cuantos guarros que les encanta esparcir basura por todos los lados , por lo que recomiendo educacion ya que parece que los cartelitos no son utiles a base de multazo a los guarros</premise>
                 </argument>
                 <argument commentid="91655" id="86-91655-1-1" parentid="90289" userid="150506">
                     <claim>Yo solo se de uno en mi barrio</claim>
@@ -2916,6 +2789,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>los demas estaban hechos una porqueria</premise>
                 </argument>
+                <argument commentid="150889" id="15711-150889-1-1" parentid="-1" userid="9038">
+                    <claim>Esto de dejarte una pasta inmensa en un barrio pintado como de vivienda social</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>de hecho mas caro que Hortaleza y no tener ni guarderia a mi tambien me cabrearia</premise>
+                </argument>
                 <argument commentid="115687" id="15711-115687-1-1" parentid="-1" userid="224913">
                     <claim>Nos consultan para votar el cambio del nombre del parque Felipe VI</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -2930,6 +2808,11 @@
                     <claim>Aqui teneis</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>votar la de nuestro barrio https://decide.madrid.es/proposals/15996-stop-artefacto-san-blas#_=_</premise>
+                </argument>
+                <argument commentid="120666" id="15711-120666-4-1" parentid="-1" userid="182428">
+                    <claim>Si quereis tambien os puedo comentar que ideas en el aire rondan para mi barrio</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>aun no hay proyectos como tal</premise>
                 </argument>
                 <argument commentid="120892" id="15711-120892-3-1" parentid="-1" userid="136837">
                     <claim>Valdebebas necesita que se invierta en el barrio</claim>
@@ -2971,6 +2854,11 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no solo para el barrio de Salamanca que esta muy cuidado y bonito</premise>
                 </argument>
+                <argument commentid="181110" id="20389-181110-2-1" parentid="-1" userid="178288">
+                    <claim>En mi barrio tambien se cayo un arbol y por suerte no paso nada</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>considero oportuno comentar aqui tambien , que hace falta cuidar mas lo plantado tanto de arboleda como plantas ya que a veces dan pena del poco cuidado que se les da. Por favor sigan trabajando en ello y conseguiremos un Madrid verde</premise>
+                </argument>
                 <argument commentid="181702" id="20657-181702-1-1" parentid="181543" userid="32552">
                     <claim>El derecho a una vivienda digna , y el derecho a no verse exiliado del barrio donde uno ha vivido siempre , deberian estar</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -2982,11 +2870,16 @@
                     <premise>no sirve de nada porque los ninos no pueden jugar debido a que las zonas verdes las utilizan los perros para hacer sus necesidades o para que los jovenes jueguen al futbol dejando la zona sin hierba</premise>
                 </argument>
             </aspect>
-            <aspect quantity="4" value="servicio">
+            <aspect quantity="5" value="servicio">
                 <argument commentid="84244" id="417-84244-1-1" parentid="-1" userid="125384">
                     <claim>Yo no he hecho uso del 010</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>siendo un servicio municipal o de la comunidad debiera ser gratuito</premise>
+                </argument>
+                <argument commentid="33130" id="417-33130-1-1" parentid="-1" userid="34418">
+                    <claim>No se si lo han dicho ya</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>el servicio 010 de Madrid tambien funciona llamando al 915 298 210</premise>
                 </argument>
                 <argument commentid="60103" id="8253-60103-2-1" parentid="-1" userid="91260">
                     <claim>24 horas no</claim>
@@ -3004,11 +2897,16 @@
                     <premise>ralentizara mas el servicio</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="medida">
+            <aspect quantity="3" value="medida">
                 <argument commentid="36392" id="2135-36392-2-1" parentid="-1" userid="158">
                     <claim>Los residentes seguro que sufren la medida</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>digo yo que algun beneficio tendra no ?</premise>
+                </argument>
+                <argument commentid="141559" id="19024-141559-1-1" parentid="-1" userid="149224">
+                    <claim>Yo tambien estoy</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">en contra de</connector>
+                    <premise>esta medida del Ayuntamiento</premise>
                 </argument>
                 <argument commentid="181015" id="20657-181015-4-1" parentid="-1" userid="457559">
                     <claim>es una medida disuasoria para los especualdores tanto privados</claim>
@@ -3042,7 +2940,7 @@
                     <premise>todos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="instalaciones">
+            <aspect quantity="4" value="instalaciones">
                 <argument commentid="20329" id="152-20329-2-1" parentid="-1" userid="10696">
                     <claim>Hay que hacer instalaciones de generacion con renovables</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3057,6 +2955,11 @@
                     <claim>No quiere instalaciones municipales deportivas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
                     <premise>un O2 wellness</premise>
+                </argument>
+                <argument commentid="176529" id="23219-176529-2-1" parentid="-1" userid="519803">
+                    <claim>Yo no practico remo</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>me parece fenomenal que se de la oportunidad en Madrid de practicar un deporte alternativo y sano , y ademas en Madrid capital , que yo sepa no hay instalaciones aptas para ello</premise>
                 </argument>
             </aspect>
             <aspect quantity="5" value="aqui">
@@ -3174,11 +3077,16 @@
                     <premise>seria ya insignificante</premise>
                 </argument>
             </aspect>
-            <aspect quantity="8" value="anos">
+            <aspect quantity="9" value="anos">
                 <argument commentid="19055" id="152-19055-1-1" parentid="18926" userid="572">
                     <claim>INFORMATE TU , pq los paneles duran mas de 25 anos , tienen una garantia de que a los 25 anos te dan un 90 de la energia nominal</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>un panel de 40 anos a lo mejor te da el ... 60-70 no se , pq todavia no hay paneles de 40 anos , y lo mismo los deshechos , cuando empiece a haber deshechos en cantidad se hara un plan de reciclaje , de hecho ya se hace en pequena escala</premise>
+                </argument>
+                <argument commentid="85807" id="417-85807-2-1" parentid="-1" userid="29755">
+                    <claim>MI madre tiene mas de 80 anos y no lee vuestra valiosa informacion</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien tiene derecho</premise>
                 </argument>
                 <argument commentid="84386" id="1419-84386-2-1" parentid="84126" userid="4877">
                     <claim>Hay un comentario</claim>
@@ -3242,7 +3150,7 @@
                     <premise>la oferta y demanda</premise>
                 </argument>
             </aspect>
-            <aspect quantity="12" value="casa">
+            <aspect quantity="13" value="casa">
                 <argument commentid="18315" id="494-18315-2-1" parentid="-1" userid="7746">
                     <claim>Las pintadas NO so arte , si saben pintar , que pinten cuadros , o las paredes de su casa</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3298,6 +3206,11 @@
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>apesta</premise>
                 </argument>
+                <argument commentid="175896" id="23219-175896-1-1" parentid="175854" userid="97792">
+                    <claim>A mi tambien me gustaria que hubiera una pista de esqui en el centro de Madrid</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>asumo que no todos los deportes se pueden practicar en la puerta de casa</premise>
+                </argument>
                 <argument commentid="204034" id="26787-204034-2-1" parentid="203848" userid="238034">
                     <claim>Y vale abrimos Madrid central</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3318,7 +3231,7 @@
                     <premise>no es asi</premise>
                 </argument>
             </aspect>
-            <aspect quantity="20" value="coches">
+            <aspect quantity="21" value="coches">
                 <argument commentid="32772" id="50-32772-1-1" parentid="32490" userid="158">
                     <claim>Ya se que no estas persiguiendo a nadie</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3348,6 +3261,11 @@
                     <claim>Los ciclistas -LRB- y mas aun los coches -RRB- deben respetar las normas de circulacion</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>estas deben ser diferentes</premise>
+                </argument>
+                <argument commentid="30959" id="615-30959-1-1" parentid="-1" userid="2459">
+                    <claim>Por supuesto que si</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>para empezar a multar a ciclistas primero habra que crear infraestructuras para que no incumplan las normas de circulacion , entre tanto multaria severamente la doble fila que tampoco esta permitido , tambien multaria severamente a automovilistas que no respetan la distancia de seguridad , a automovilistas que tocan el claxon injustificadamente -LRB- prohibiria que los coches tuvieran claxon -RRB- , entre otras medidas</premise>
                 </argument>
                 <argument commentid="74864" id="1266-74864-10-1" parentid="23351" userid="23330">
                     <claim>Si efectivamente en las zonas APR circulan menos coches</claim>
@@ -3490,7 +3408,7 @@
                     <premise>agradezco que alguno se encienda un cigarrillo para que llegue antes el autobus</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="supuesto">
+            <aspect quantity="4" value="supuesto">
                 <argument commentid="84464" id="965-84464-1-1" parentid="66574" userid="36097">
                     <claim>Ningun Estado paga IBI por sus embajadas , por supuesto</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3506,8 +3424,13 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>los efectos no tienen que ser solo por ionizacion : estan los cambios causados por induccion , resonancia , etc.</premise>
                 </argument>
+                <argument commentid="142029" id="19170-142029-1-1" parentid="141845" userid="224252">
+                    <claim>Claro , eso por supuesto</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien estan las soluciones pragmaticas , creo que para ellos son las mas importantes</premise>
+                </argument>
             </aspect>
-            <aspect quantity="8" value="coche">
+            <aspect quantity="9" value="coche">
                 <argument commentid="75867" id="109-75867-1-1" parentid="52744" userid="137989">
                     <claim>si te gustan que los hagan en tu casa en tu portal y en tu coche</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3522,6 +3445,11 @@
                     <claim>un perro es</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>un coche que contamina y tiene que estar sujeto a una tasa municipal para la limpieza de las calles que ensucian</premise>
+                </argument>
+                <argument commentid="23613" id="1419-23613-2-1" parentid="23293" userid="6607">
+                    <claim>Muchos tenemos coche</claim>
+                    <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
+                    <premise>usemos tambien la bicicleta</premise>
                 </argument>
                 <argument commentid="25005" id="1419-25005-2-1" parentid="24686" userid="26075">
                     <claim>Puede haber multitud de razones</claim>
@@ -3685,11 +3613,30 @@
                     <premise>no en automovil</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="cara">
+            <aspect quantity="1" value="cuerpos">
+                <argument commentid="181087" id="20389-181087-15-1" parentid="180939" userid="492261">
+                    <claim>Han recibido ordenes</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>callarse porque esto es dirigido por los cuerpos aereas militares de la NASA y tambien usan drones , pajaros drones</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="van">
+                <argument commentid="33565" id="3044-33565-2-1" parentid="33041" userid="3170">
+                    <claim>, perfecto</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>ahi se va a quedar la cosa ... seguira habiendo moviles , y demas dispositivos que las van a producir , por eso es INEVITABLE</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="2" value="cara">
                 <argument commentid="140118" id="1085-140118-1-1" parentid="76483" userid="400240">
                     <claim>Hay que tener cara dura</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>pedir bolsas gratuitas</premise>
+                </argument>
+                <argument commentid="142523" id="19024-142523-5-1" parentid="140940" userid="32719">
+                    <claim>Piensa mal y acertaras dice el refran</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>no puedo pensar otra cosa de quienes no van de cara</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="ahi">
@@ -3807,7 +3754,12 @@
                     <premise>un matricula</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="policia">
+            <aspect quantity="2" value="policia">
+                <argument commentid="75067" id="615-75067-2-1" parentid="-1" userid="24331">
+                    <claim>Es Posible que haya algo mas de permisividad</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>es dificil tambien que haya un policia detras de cada uno</premise>
+                </argument>
                 <argument commentid="180964" id="22742-180964-2-1" parentid="-1" userid="81669">
                     <claim>La policia municipal lo ve , igual que cualquier vecino</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3989,7 +3941,12 @@
                     <premise>no creo que sea ninguna moda pues ya en tiempos de mis padres se iba a Bibliotecas / salas de estudios a estudiar</premise>
                 </argument>
             </aspect>
-            <aspect quantity="5" value="web">
+            <aspect quantity="6" value="web">
+                <argument commentid="18483" id="89-18483-1-1" parentid="17834" userid="13200">
+                    <claim>Puedes solicitarlo tambien</claim>
+                    <connector category="cause" function="support" subcategory="reason">a traves de</connector>
+                    <premise>la web del ayuntamiento y en las oficinas gratis</premise>
+                </argument>
                 <argument commentid="69037" id="1419-69037-3-1" parentid="69017" userid="4877">
                     <claim>Si la proporcion de visitas de esta web fuera la deseada ya tendriamos los apoyos suficientes</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -4183,6 +4140,13 @@
                     <premise>luego no sube tanto , como si pasa en el resto de los paises</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="estanque">
+                <argument commentid="44096" id="1863-44096-3-1" parentid="42367" userid="11937">
+                    <claim>Aceptamos compartirlo con otras culturas</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>ellos tienen que respetar tambien nuestras costumbres entre las que no entran los tambores junto al estanque</premise>
+                </argument>
+            </aspect>
             <aspect quantity="1" value="esparcirse">
                 <argument commentid="83229" id="1085-83229-2-1" parentid="58777" userid="156739">
                     <claim>lo que necesite</claim>
@@ -4190,7 +4154,12 @@
                     <premise>crecer , esparcirse</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="ciclista">
+            <aspect quantity="3" value="ciclista">
+                <argument commentid="22793" id="615-22793-5-1" parentid="20706" userid="4877">
+                    <claim>Otra cosa distinta es</claim>
+                    <connector category="consequence" function="support" subcategory="goal">por</connector>
+                    <premise>carretera interurbana , donde el ciclista si tiene que ir por el arcen</premise>
+                </argument>
                 <argument commentid="25411" id="1419-25411-2-1" parentid="25289" userid="26075">
                     <claim>Un ciclista no deberia circular</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -4427,6 +4396,13 @@
                     <premise>unirlo peatonal mente con Madrid Rio</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="carriles">
+                <argument commentid="51540" id="19-51540-3-1" parentid="49749" userid="35402">
+                    <claim>Se deberia hacer un estudio serio sobre las alternativas</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>lo mejor serian los aparcamientos disuasorios y pensar que cualquier reduccion de carriles afectaria tambien a los buses de la EMT , como pasa en O'Donnell</premise>
+                </argument>
+            </aspect>
             <aspect quantity="1" value="instituciones">
                 <argument commentid="69050" id="965-69050-1-1" parentid="69031" userid="106589">
                     <claim>He leido otras respuestas</claim>
@@ -4497,11 +4473,16 @@
                     <premise>son autorizaciones no locales</premise>
                 </argument>
             </aspect>
-            <aspect quantity="5" value="suelo">
+            <aspect quantity="6" value="suelo">
                 <argument commentid="30384" id="629-30384-1-2" parentid="-1" userid="32976">
                     <claim>tiran todo</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>el suelo e incluso ya se orina en cualquier sitio</premise>
+                </argument>
+                <argument commentid="38166" id="1085-38166-1-2" parentid="-1" userid="40881">
+                    <claim>algunos en verdad te pueden procesar mas carino que algunos humanos</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien reconozco que no es lo mismo la suciedad de una colilla en el suelo , o un papel , que tampoco es justificable a las cacas o pises de un animal , esto es mucho mas insalubre y puede ocasionar enfermedades</premise>
                 </argument>
                 <argument commentid="47711" id="1121-47711-8-1" parentid="-1" userid="48695">
                     <claim>No hay suelo suficiente en Madrid</claim>
@@ -4593,53 +4574,6 @@
                     <premise>el uso y disfrute de unos pocos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="9" value="cosa">
-                <argument commentid="22793" id="615-22793-5-1" parentid="20706" userid="4877">
-                    <claim>Otra cosa distinta es</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>carretera interurbana , donde el ciclista si tiene que ir por el arcen</premise>
-                </argument>
-                <argument commentid="50887" id="1121-50887-4-1" parentid="-1" userid="64589">
-                    <claim>Un pelotazo de una empresa privada se puede camuflar de muchas formas</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>creer en ello ya es otra cosa</premise>
-                </argument>
-                <argument commentid="23776" id="1266-23776-4-1" parentid="23729" userid="16318">
-                    <claim>Esperemos que con Ahora Madrid la cosa cambie</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>de momento no estan muy dispuestos a ello , siguen dando largas ... Ya te comento</premise>
-                </argument>
-                <argument commentid="21721" id="1284-21721-6-1" parentid="21720" userid="5024">
-                    <claim>Muchas fiestas populares tienen un componente religioso que ya es mas simbolico que otra cosa</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>pienso que si el politico quiere estar cerca del pueblo le viene bien asistir</premise>
-                </argument>
-                <argument commentid="25437" id="1419-25437-6-1" parentid="25385" userid="4877">
-                    <claim>Cada cosa esta</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>lo que esta</premise>
-                </argument>
-                <argument commentid="28807" id="1419-28807-2-1" parentid="28718" userid="4877">
-                    <claim>No se si sera cosa mia</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>cada dia veo mas bicis por todos lados , lo cual me alegra y me indica que algo esta despertando en Madrid</premise>
-                </argument>
-                <argument commentid="74910" id="2121-74910-3-1" parentid="34475" userid="48123">
-                    <claim>Es probable que a ti te moleste el que los demas tengan perro</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>yo cuando hago la declaracion de la renta pongo la X , cosa que como dice el dicho haz el bien y no mires a quien</premise>
-                </argument>
-                <argument commentid="33565" id="3044-33565-2-1" parentid="33041" userid="3170">
-                    <claim>, perfecto</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>ahi se va a quedar la cosa ... seguira habiendo moviles , y demas dispositivos que las van a producir , por eso es INEVITABLE</premise>
-                </argument>
-                <argument commentid="142523" id="19024-142523-5-1" parentid="140940" userid="32719">
-                    <claim>Piensa mal y acertaras dice el refran</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no puedo pensar otra cosa de quienes no van de cara</premise>
-                </argument>
-            </aspect>
             <aspect quantity="1" value="hogar">
                 <argument commentid="138780" id="15711-138780-1-1" parentid="123266" userid="76791">
                     <claim>te expresas</claim>
@@ -4692,7 +4626,7 @@
                     <premise>va contrario al atasco , que es en la otra direccion</premise>
                 </argument>
             </aspect>
-            <aspect quantity="18" value="problema">
+            <aspect quantity="19" value="problema">
                 <argument commentid="21908" id="7-21908-4-1" parentid="19445" userid="9905">
                     <claim>En agosto presentaron el plan de refuerzo de la limpieza</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -4732,6 +4666,11 @@
                     <claim>Algunos teneis miedo a los carriles bici por si os obligan a ir por ellos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>eso ya no es mi problema</premise>
+                </argument>
+                <argument commentid="28930" id="2412-28930-4-1" parentid="28664" userid="31101">
+                    <claim>Ya informe tambien a la Comunidad</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>mucho me temo que no interesa a la Administracion arreglar este problema , entonces que no nos pidan que utilicemos el metro</premise>
                 </argument>
                 <argument commentid="83669" id="2538-83669-3-1" parentid="-1" userid="158159">
                     <claim>La caca de perro se puede recoger sin problema</claim>
@@ -4782,6 +4721,13 @@
                     <claim>Yo no veo el problema</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>, como ademas ha hecho el ayuntamiento , han implementado una escala para peces</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="formas">
+                <argument commentid="50887" id="1121-50887-4-1" parentid="-1" userid="64589">
+                    <claim>Un pelotazo de una empresa privada se puede camuflar de muchas formas</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>creer en ello ya es otra cosa</premise>
                 </argument>
             </aspect>
             <aspect quantity="9" value="vez">
@@ -5647,7 +5593,7 @@
                     <premise>no veo normal que haya tanto detractor</premise>
                 </argument>
             </aspect>
-            <aspect quantity="27" value="acuerdo">
+            <aspect quantity="33" value="acuerdo">
                 <argument commentid="17486" id="19-17486-1-1" parentid="-1" userid="10937">
                     <claim>totalmente de acuerdo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -5662,6 +5608,11 @@
                     <claim>Conozco la zona y estoy de acuerdo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>estoy mas de acuerdo con poner una tasa para las mascotas , con el pago de la misma entregaria un plano con las zonas reservadas a los perros , un extracto de la normativa , cursos , cuidados basicos , etc.</premise>
+                </argument>
+                <argument commentid="78101" id="109-78101-1-1" parentid="-1" userid="101636">
+                    <claim>Estoy de acuerdo con vosotros</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tenemos que tener en cuenta que toda la labor no es del Ayuntamiento , tambien con concierne a nosotros el educar en el respeto a los demas y a la ciudadania y concienciar a las personas que la calle no es del Ayuntamiento sino de todos nosotros y por ese motivo debemos cuidarla y respetarla</premise>
                 </argument>
                 <argument commentid="57689" id="152-57689-2-1" parentid="-1" userid="57326">
                     <claim>A traves de un acuerdo con el Inem desarrollaria equipos de instaladores , dandoles la formacion necesaria y el impulso economico inicial</claim>
@@ -5683,6 +5634,11 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>la carretera es jugarse la vida</premise>
                 </argument>
+                <argument commentid="30384" id="629-30384-1-1" parentid="-1" userid="32976">
+                    <claim>Estoy de acuerdo</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien habria que ver que educacion tenemos , vivo en Vallecas y compruebo que se ha aumentado el servicio , sin embargo es imposible , los vecino dejan la basura fuera de los contenedores , tiran todo por el suelo e incluso ya se orina en cualquier sitio</premise>
+                </argument>
                 <argument commentid="34987" id="879-34987-1-1" parentid="-1" userid="35565">
                     <claim>Etoy de acuerdo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -5702,6 +5658,11 @@
                     <claim>Completamente de acuerdo , no hay razon</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mantener privilegios que sustraen dinero de las arcas publicas por parte de organizaciones con un inmenso patrimonio</premise>
+                </argument>
+                <argument commentid="87989" id="965-87989-1-1" parentid="87732" userid="9068">
+                    <claim>Salvo que haya acuerdo Iglesia Estado para que no , tambien lo dice la ley</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>si se puede cambiar esa ley , por que solo una parte ?</premise>
                 </argument>
                 <argument commentid="57141" id="965-57141-1-1" parentid="-1" userid="76882">
                     <claim>Estoy de acuerdo con las propiedades privadas de la iglesia</claim>
@@ -5768,15 +5729,30 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>esas personas mas que cirugia estetica necesitan sesiones psiquiatricas , al igual que los anorexicos o bulimicos , ya que cuando se esta demasiado acomplejado por una cuestion fisica , que a veces es mera percepcion del enfermo en cuestion , el problema es mental , en el caso que yo planteo el problema es que efectivamente hay hombres en cuerpos de mujeres y viceversa , entonces debemos poner a los avances tecnologicos a disposicion de esas personas para que se desarrollen de acuerdo a su verdadera naturaleza psiquica , por supuesto las operaciones deben hacerse bajo previo examen psiquiatrico , y que el medico en cuestion dictamine que efectivamente es un hombre en cuerpo de mujer o viceversa -LRB- ni mas ni menos que lo que se esta haciendo ahora pasando por caja -RRB-</premise>
                 </argument>
+                <argument commentid="180799" id="20389-180799-1-1" parentid="-1" userid="487242">
+                    <claim>Estoy muy de acuerdo con la reforestacion</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien hay que cuidar y podar a su debido tiempo los que hay plantados y no dejarlos que nazcan desde el alcorque como se ven muchos , en la avda. de la Ilustraccion por ejemplo</premise>
+                </argument>
                 <argument commentid="180860" id="20389-180860-1-1" parentid="-1" userid="38609">
                     <claim>Estoy de acuerdo con que se planten arboles</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>despues hay que mantenerlos y los que ya estan plantados no se podan ni se riegan ni se cuidan</premise>
                 </argument>
+                <argument commentid="181293" id="20389-181293-1-1" parentid="-1" userid="228585">
+                    <claim>estoy de acuerdo con arborizar mas Madrid</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien hay que cuidar los que ya tenemos porque hay una dejadez absoluta con ellos</premise>
+                </argument>
                 <argument commentid="197542" id="25077-197542-2-1" parentid="197046" userid="13701">
                     <claim>Nunca habia insultado a nadie por aqui</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>se lo ha ganado a pulso y mas diciendo que digo tonterias y diciendo gilipolleces que yo no he dicho como que de los tubos de escape salga oxigeno puro , o no queriendo o no pudiendo entender el razonamiento expuesto , que se puede no estar de acuerdo , pero otra cosa es mofarse de las opiniones de los demas</premise>
+                </argument>
+                <argument commentid="199526" id="25077-199526-2-1" parentid="199439" userid="11378">
+                    <claim>Estoy de acuerdo con la contaminacion que genera la calefaccion de carbon</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>decir que como hay otras cosas que tambien contaminan no se debe atajar el problema de la contaminacion de tanto coche , no tiene sentido ninguno</premise>
                 </argument>
                 <argument commentid="205328" id="26277-205328-11-1" parentid="-1" userid="655194">
                     <claim>No estoy de acuerdo con la especulacion</claim>
@@ -5784,11 +5760,16 @@
                     <premise>menos con la devaluacion</premise>
                 </argument>
             </aspect>
-            <aspect quantity="13" value="transporte">
+            <aspect quantity="15" value="transporte">
                 <argument commentid="37567" id="615-37567-1-1" parentid="19648" userid="39465">
                     <claim>Estoy totalmente a favor del uso de la bicicleta como medio de transporte para Madrid</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>considero que deberia regularse minimamente para evitar / prevenir accidentes</premise>
+                </argument>
+                <argument commentid="22467" id="1419-22467-3-1" parentid="-1" userid="14361">
+                    <claim>El centro deberia ser</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>una buena red de transporte publico y tambien el uso de bicicletas</premise>
                 </argument>
                 <argument commentid="25869" id="1419-25869-5-1" parentid="25864" userid="4877">
                     <claim>Puedes anadir el burro</claim>
@@ -5819,6 +5800,11 @@
                     <claim>tiene opcion</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>para llegar a las 8 al trabajo no hay transporte publico a donde tiene que ir o tendria que despertarse a las 5:00 para llegar a las 8:00 en transporte publico a determinados sitios</premise>
+                </argument>
+                <argument commentid="112164" id="8188-112164-1-1" parentid="-1" userid="201437">
+                    <claim>No es una buena decision , en mi opinion</claim>
+                    <connector category="cause" function="support" subcategory="reason">porque</connector>
+                    <premise>la demanda es baja , la frecuencia tambien habria de serlo , la inseguridad aumenta por esos motivos , y el incremento de gasto es muy importante -LRB- efectos en el control de accesos , trenes y mantenimiento de la red -RRB- ; seria mucho mas barata una red equivalente de autobuses en superficie ademas de proporcionar mayor calidad ya que la velocidad de circulacion a esas horas es similar o superior a la del Metro , las unidades de transporte son menores y la oferta seria con mayor frecuencia , se ahorraria tiempo en bajar y subir al / de las estaciones de Metro , y la inseguridad en superficie seria menor que en los tuneles de la red subterranea</premise>
                 </argument>
                 <argument commentid="75490" id="10687-75490-2-1" parentid="-1" userid="13701">
                     <claim>No pertenezco ni defiendo el mundo del taxi</claim>
@@ -5912,7 +5898,7 @@
                     <premise>cualquier forma de contaminacion que se pueda evitar</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="nombre">
+            <aspect quantity="3" value="nombre">
                 <argument commentid="87754" id="965-87754-2-1" parentid="84603" userid="177">
                     <claim>los partidos politicos pagan</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -5922,6 +5908,11 @@
                     <claim>olvidar los nombre</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>memorizar numeros , y que le quita toda la belleza a la direccion</premise>
+                </argument>
+                <argument commentid="124825" id="15711-124825-3-1" parentid="124819" userid="135805">
+                    <claim>Asi es</claim>
+                    <connector category="elaboration" function="support" subcategory="similarity">como</connector>
+                    <premise>confiesas lo que , por lo demas , ya quedaba sumamente claro desde el principio : no eres mas que un cobarde que ni siquiera tiene el valor suficiente como para comentar con su nombre y sus apellidos autenticos</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="parcela">
@@ -5958,7 +5949,12 @@
                     <premise>hay que proponer algo y actuar todos conjuntamente en la solucion</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="momento">
+            <aspect quantity="3" value="momento">
+                <argument commentid="23776" id="1266-23776-4-1" parentid="23729" userid="16318">
+                    <claim>Esperemos que con Ahora Madrid la cosa cambie</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>de momento no estan muy dispuestos a ello , siguen dando largas ... Ya te comento</premise>
+                </argument>
                 <argument commentid="41759" id="2135-41759-4-1" parentid="41475" userid="158">
                     <claim>Aqui parece ser que se establecera en ese momento</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -5970,11 +5966,16 @@
                     <premise>tuvieran saldo lo cargarian en el momento de tenerlo</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="lenguaje">
+            <aspect quantity="2" value="lenguaje">
                 <argument commentid="107505" id="1918-107505-1-1" parentid="107497" userid="33634">
                     <claim>Perdona</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>me pierdo con tu lenguaje tecnico</premise>
+                </argument>
+                <argument commentid="101532" id="7488-101532-3-1" parentid="57425" userid="186509">
+                    <claim>Disculpen el lenguaje grueso</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>las imagenes tambien lo son</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="ejemplos">
@@ -6114,18 +6115,6 @@
                     <premise>si es lo que se reivindica practicamente</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="veces">
-                <argument commentid="62880" id="50-62880-1-1" parentid="62611" userid="69149">
-                    <claim>Pues si , la utilizo , no a diario</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>si 2/3 veces por semana</premise>
-                </argument>
-                <argument commentid="32544" id="1419-32544-1-1" parentid="32531" userid="4877">
-                    <claim>De eso doy fe</claim>
-                    <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>paso por alli un par de veces por semana</premise>
-                </argument>
-            </aspect>
             <aspect quantity="2" value="comentario">
                 <argument commentid="54202" id="7482-54202-1-1" parentid="54198" userid="23797">
                     <claim>Mi comentario iba</claim>
@@ -6164,11 +6153,16 @@
                     <premise>sustituir todas las maquinas validadoras de la flota de autobuses</premise>
                 </argument>
             </aspect>
-            <aspect quantity="4" value="tema">
+            <aspect quantity="5" value="tema">
                 <argument commentid="77514" id="1085-77514-1-1" parentid="77406" userid="482">
                     <claim>Cada uno es</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>es , que vamos a hacer , de todas formas no estaria mal que , ademas , mostraras algo de tu creatividad sobre el tema , para aprender , claro</premise>
+                </argument>
+                <argument commentid="25377" id="1824-25377-2-1" parentid="-1" userid="19083">
+                    <claim>Deberia haber un registro de propuestas para ver si hay propuestas que se parecen y no hacer mil propuestas sobre un tema especifico</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>` mientras tanto , he votado la tuya tambien ... a ver si sale ... saludos</premise>
                 </argument>
                 <argument commentid="37302" id="1824-37302-2-1" parentid="-1" userid="32634">
                     <claim>Sobre este tema no existen datos por el momento</claim>
@@ -6238,7 +6232,12 @@
                     <premise>el resto de madrilenos vemos coartados nuestros derechos a una libre circulacion ... Y no vendan la moto de la contaminacion que los atascos y por ende esta , se han trasladado un poco mas a la periferia</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="favor">
+            <aspect quantity="4" value="favor">
+                <argument commentid="25606" id="7-25606-2-1" parentid="-1" userid="8097">
+                    <claim>Por favor , hay que limpiar , si</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien hay que concienciar</premise>
+                </argument>
                 <argument commentid="26676" id="1863-26676-3-1" parentid="25052" userid="22330">
                     <claim>Usted habla</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -6347,6 +6346,20 @@
                     <claim>Las criticas a las actuaciones previas -LRB- de esta y de anteriores corporaciones -RRB- deben ser bienvenidas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar cometer los mismos errores</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="politico">
+                <argument commentid="21721" id="1284-21721-6-1" parentid="21720" userid="5024">
+                    <claim>Muchas fiestas populares tienen un componente religioso que ya es mas simbolico que otra cosa</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>pienso que si el politico quiere estar cerca del pueblo le viene bien asistir</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="opiniones">
+                <argument commentid="26112" id="152-26112-1-1" parentid="18926" userid="29377">
+                    <claim>Coincido en que siempre hay que informarse antes de votar</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>tambien antes de expresar opiniones con tanta contundencia y tan poco fundamentadas</premise>
                 </argument>
             </aspect>
         </topic>
