@@ -14,6 +14,7 @@ import es.uam.irg.nlp.am.arguments.Argument;
 import static es.uam.irg.recsys.RecSys.NO_TOPIC;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -35,6 +36,8 @@ import org.w3c.dom.DOMException;
  * @author ansegura
  */
 public class ArguRecSys {
+
+    private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
 
     // Class members
     private Map<String, Object> mdbSetup;
@@ -139,9 +142,14 @@ public class ArguRecSys {
             System.out.println(argument.getId() + ": " + nouns.toString());
         }
 
-        for (String value : listAspects) {
-            count = aspects.getOrDefault(value, 0);
-            aspects.put(value, count + 1);
+        System.out.println("Invalid aspects:");
+        for (String aspect : listAspects) {
+            if (aspect.length() > 2 && !INVALID_ASPECTS.contains(aspect)) {
+                count = aspects.getOrDefault(aspect, 0);
+                aspects.put(aspect, count + 1);
+            } else {
+                System.out.println("- " + aspect);
+            }
         }
 
         return FunctionUtils.sortMapByValue(aspects);
@@ -186,9 +194,9 @@ public class ArguRecSys {
      */
     private Map<String, List<Argument>> getRecommendations(List<Argument> arguments, Map<String, Integer> aspects, int minAspectOccur) {
         Map<String, List<Argument>> result = new HashMap<>();
-        Map<String, List<Argument>> recommendations = new HashMap<>();
 
         // Local variables
+        Map<String, List<Argument>> recommendations = new HashMap<>();
         String aspect;
         Set<String> argUsed = new HashSet<>();
 
@@ -209,23 +217,29 @@ public class ArguRecSys {
             }
         }
 
-        System.out.println(argUsed);
+        // Final filtering
+        int total = 0;
         for (Map.Entry<String, List<Argument>> recommendation : recommendations.entrySet()) {
-            if (recommendation.getValue().size() >= minAspectOccur) {
+            int totalAspect = recommendation.getValue().size();
+            if (totalAspect >= minAspectOccur) {
                 result.put(recommendation.getKey(), recommendation.getValue());
-                System.out.println(recommendation.getKey() + ", " + recommendation.getValue().size());
+                System.out.println(recommendation.getKey() + ", " + totalAspect);
+                total += totalAspect;
             }
         }
+
+        System.out.println(argUsed);
+        System.out.println("Total arguments extracted: " + total);
 
         return result;
     }
 
     /**
-     * 
+     *
      * @param topic
      * @param proposals
      * @param recommendations
-     * @return 
+     * @return
      */
     private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
