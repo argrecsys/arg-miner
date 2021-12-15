@@ -395,6 +395,7 @@ public class ArgumentEngine implements Constants {
                             Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                             Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
                             arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
+
                         } else {
 
                             System.out.println(" - Error extracting claim and/or premise!");

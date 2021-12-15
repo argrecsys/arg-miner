@@ -38,6 +38,7 @@ import org.w3c.dom.DOMException;
 public class ArguRecSys {
 
     private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
+    private static final int MAX_TREE_LEVEL = 3;
 
     // Class members
     private Map<String, Object> mdbSetup;
@@ -119,7 +120,10 @@ public class ArguRecSys {
         List<Document> docs = dbManager.getDocumentsByFilter(topic, customProposalIds);
 
         docs.forEach(doc -> {
-            arguments.add(new Argument(doc));
+            Argument arg = new Argument(doc);
+            if (arg.getTreeLevel() <= MAX_TREE_LEVEL) {
+                arguments.add(arg);
+            }
         });
 
         return arguments;
