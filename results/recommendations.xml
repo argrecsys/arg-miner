@@ -83,7 +83,7 @@
         <proposal categories="derechos sociales,economia,educacion" date="2016-04-30" districts="ciudad" id="11134" topics="actividad economica,colegios,derechos humanos">COLEGIOS PUBLICOS Y CONCERTADOS ABIERTOS EN JULIO Y SEPTIEMBRE ACT.LUDICAS</proposal>
     </proposals>
     <topics quantity="1">
-        <topic quantity="284" value="-">
+        <topic quantity="281" value="-">
             <aspect quantity="1" value="sitio">
                 <argument commentid="186456" id="24954-186456-2-2" parentid="-1" userid="601766">
                     <claim>habria sitio</claim>
@@ -213,7 +213,7 @@
                     <premise>buscar mas apoyos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="60" value="gente">
+            <aspect quantity="59" value="gente">
                 <argument commentid="83301" id="7-83301-1-1" parentid="-1" userid="2182">
                     <claim>Si limpiar limpian al menos en mi barrio Usera</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -273,11 +273,6 @@
                     <claim>Una multinacional panadera no puede comprar todo el pan de Espana y venderlo a dos o tres euros la barra , cosa que le saldria muy rentable</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>fastidiaria a bastante gente</premise>
-                </argument>
-                <argument commentid="35332" id="965-35332-4-1" parentid="-1" userid="35975">
-                    <claim>NO APOYAR o VOTO EN CONTRA</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que tambien se contabilice que hay gente que no esta de acuerdo con las mociones presentadas</premise>
                 </argument>
                 <argument commentid="36351" id="965-36351-5-1" parentid="34979" userid="21223">
                     <claim>usen sus inmuebles</claim>
@@ -1016,7 +1011,7 @@
                     <premise>veo q son como todos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="15" value="vida">
+            <aspect quantity="14" value="vida">
                 <argument commentid="84661" id="417-84661-1-1" parentid="-1" userid="18234">
                     <claim>Me pregunto cada dia mas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
@@ -1071,11 +1066,6 @@
                     <claim>Madrid no va ser</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>era , con sus patios de vecinos de toda la vida</premise>
-                </argument>
-                <argument commentid="175943" id="23219-175943-1-1" parentid="-1" userid="578819">
-                    <claim>en Accion exige la apertura inmediata de la presa 9</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>recuperar la vida del rio Manzanares porque #EsUnRioNoUnCanal</premise>
                 </argument>
                 <argument commentid="181258" id="23704-181258-2-1" parentid="180922" userid="13701">
                     <claim>Es parte de la vida y se lo dice alguien que detesta las peliculas de terror</claim>
@@ -1172,13 +1162,6 @@
                     <claim>no buscar infraestructuras segregacionistas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>buscar confianza</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="1" value="escape">
-                <argument commentid="197046" id="25077-197046-2-1" parentid="196439" userid="11378">
-                    <claim>lo que sale</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>sus tubos de escape</premise>
                 </argument>
             </aspect>
             <aspect quantity="18" value="cosas">
@@ -1579,16 +1562,11 @@
                     <premise>solucionar problemas legales , etc</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="acera">
+            <aspect quantity="1" value="acera">
                 <argument commentid="67971" id="615-67971-4-2" parentid="57405" userid="32777">
                     <claim>Los accidentes no son</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>saltarse semaforos o por ir por la acera</premise>
-                </argument>
-                <argument commentid="24769" id="615-24769-2-2" parentid="-1" userid="585">
-                    <claim>Yo voy</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>la acera</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="chusma">
@@ -1776,7 +1754,7 @@
                     <premise>que en la publica su moisma educacion nos cuesta 6.100 Pregunta por ahi sobre costes ?</premise>
                 </argument>
             </aspect>
-            <aspect quantity="4" value="viviendas">
+            <aspect quantity="3" value="viviendas">
                 <argument commentid="34979" id="965-34979-2-1" parentid="-1" userid="35565">
                     <claim>Deberia cobrarse</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
@@ -1791,11 +1769,6 @@
                     <claim>Nos hablan de solidaridad quien van de solidarios</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>evitan que las viviendas se construyan donde estaba previsto ?</premise>
-                </argument>
-                <argument commentid="140970" id="19024-140970-3-1" parentid="-1" userid="426323">
-                    <claim>con el que cargan nuestras viviendas</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>esos metros cuadrados construidos por exigencia</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="av.">
@@ -1833,16 +1806,11 @@
                     <premise>que ahora este tan olvidado</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="bolsillo">
+            <aspect quantity="1" value="bolsillo">
                 <argument commentid="87987" id="965-87987-1-1" parentid="87683" userid="9068">
                     <claim>Si a usted le apetece pagar mariscadas a los sindicalistas , por mi perfecto</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>que eso no salga de MI bolsillo y menos obligandome a ello</premise>
-                </argument>
-                <argument commentid="61180" id="8640-61180-3-1" parentid="61178" userid="7769">
-                    <claim>las asuma la publica</claim>
-                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>te gusta costeatela de tu bolsillo y no quites alos ninos qu eno pueden costearsela</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="pintadas">
@@ -2264,23 +2232,18 @@
                     <premise>no les para nada</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="motivo">
-                <argument commentid="79955" id="900-79955-2-1" parentid="29327" userid="9273">
-                    <claim>no veo el motivo</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>el que un banco quiera no vender</premise>
-                </argument>
-                <argument commentid="72346" id="965-72346-1-1" parentid="26608" userid="87868">
-                    <claim>no habria motivo</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>sentir aversion contra ella</premise>
-                </argument>
-            </aspect>
             <aspect quantity="1" value="trabajadores">
                 <argument commentid="62039" id="965-62039-2-1" parentid="61951" userid="4639">
                     <claim>Podemos suponer que intereses y grupos de presion estan detras y cuales son sus objetivos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>, desde luego , no son la defensa de los intereses de los trabajadores</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="motivo">
+                <argument commentid="79955" id="900-79955-2-1" parentid="29327" userid="9273">
+                    <claim>no veo el motivo</claim>
+                    <connector category="consequence" function="support" subcategory="goal">por</connector>
+                    <premise>el que un banco quiera no vender</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="reglas">
@@ -2492,16 +2455,11 @@
                     <premise>por ejemplo bicimad que se vendio como que iba a ser una tarjeta unica finalmente si quieres usar una bicicleta tambien tienes que darte de alta y no se cuantas historias con lo cual no es tan sencillo Tarjeta Unica de bicimad significaria que con el mismo abono transporte puedes ir pasar tu tarjeta por un totem y coger una bicicleta asi de sencillo y la bicicleta desde luego ha cambiado bastante la imagen de la ciudad aunque muy timidamente</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="voto">
+            <aspect quantity="1" value="voto">
                 <argument commentid="70625" id="109-70625-2-1" parentid="-1" userid="117407">
                     <claim>Dejo mi voto</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>si sirve de ayuda</premise>
-                </argument>
-                <argument commentid="29534" id="2551-29534-1-1" parentid="-1" userid="24698">
-                    <claim>Yo voto</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que no se celebre nunca mas ninguna victoria deportiva dentro de la capital</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="cuota">
@@ -2639,13 +2597,6 @@
                     <claim>Bicimad fue un buen comienzo para la implantacion de la movilidad urbana en bicicleta</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no es suficiente</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="1" value="cuidado">
-                <argument commentid="181192" id="20389-181192-1-2" parentid="-1" userid="103527">
-                    <claim>no haberles dado un cuidado minimo y un seguimiento</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que arraiguen con fuerza</premise>
                 </argument>
             </aspect>
             <aspect quantity="2" value="respecto">
@@ -3051,18 +3002,6 @@
                     <premise>su comprension lectora le traiciona</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="falta">
-                <argument commentid="116032" id="15711-116032-3-1" parentid="-1" userid="226564">
-                    <claim>lo que haga falta</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>impedir estas obras</premise>
-                </argument>
-                <argument commentid="175954" id="23219-175954-1-1" parentid="175927" userid="84361">
-                    <claim>en el que no haga falta represar nada</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>poder practicar ese deporte</premise>
-                </argument>
-            </aspect>
             <aspect quantity="1" value="sanciones">
                 <argument commentid="181249" id="19914-181249-1-1" parentid="181241" userid="151309">
                     <claim>esas sanciones no son</claim>
@@ -3131,12 +3070,7 @@
                     <premise>no se en base a que , eso es lo que no entiendo</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="vivienda">
-                <argument commentid="133263" id="15996-133263-3-1" parentid="121964" userid="449380">
-                    <claim>no es la vivienda</claim>
-                    <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>no el diseno</premise>
-                </argument>
+            <aspect quantity="1" value="vivienda">
                 <argument commentid="205376" id="26277-205376-1-1" parentid="-1" userid="655194">
                     <claim>Yo no soy de matematicas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3231,7 +3165,7 @@
                     <premise>no es asi</premise>
                 </argument>
             </aspect>
-            <aspect quantity="21" value="coches">
+            <aspect quantity="20" value="coches">
                 <argument commentid="32772" id="50-32772-1-1" parentid="32490" userid="158">
                     <claim>Ya se que no estas persiguiendo a nadie</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3251,11 +3185,6 @@
                     <claim>Muchas calles son de sentido unico porque en Espana toda la senalizacion esta pensada para el coche</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>en muchas calles donde dos coches no pueden cruzarse , pueden hacerlo un coche y un ciclo con seguridad</premise>
-                </argument>
-                <argument commentid="24769" id="615-24769-2-1" parentid="-1" userid="585">
-                    <claim>Los coches van</claim>
-                    <connector category="elaboration" function="support" subcategory="similarity">como</connector>
-                    <premise>locos</premise>
                 </argument>
                 <argument commentid="25476" id="615-25476-4-1" parentid="-1" userid="7897">
                     <claim>Los ciclistas -LRB- y mas aun los coches -RRB- deben respetar las normas de circulacion</claim>
@@ -3430,7 +3359,7 @@
                     <premise>tambien estan las soluciones pragmaticas , creo que para ellos son las mas importantes</premise>
                 </argument>
             </aspect>
-            <aspect quantity="9" value="coche">
+            <aspect quantity="6" value="coche">
                 <argument commentid="75867" id="109-75867-1-1" parentid="52744" userid="137989">
                     <claim>si te gustan que los hagan en tu casa en tu portal y en tu coche</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -3460,21 +3389,6 @@
                     <claim>Si te dan un incentivo seria maravilloso</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ya por dejar el coche te ahorras mucho dinero : combustible , gastos de mantenimiento por km , aparcamiento , posibles multas , etc</premise>
-                </argument>
-                <argument commentid="41475" id="2135-41475-4-1" parentid="41073" userid="3170">
-                    <claim>En otras capitales europeas , tanto que nos fijamos en ellas para lo que queremos , un dia como hoy , el transporte publico seria gratuito , para incentivar su uso y reducir la contaminacion</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>en Madrid desde tiempos inmemorables , hemos sido asi de chulos , y hoy , como no , el transporte pagando , entonces a usar el coche , total , estamos a mediados de Noviembre , y yo -LRB- continua -RRB-</premise>
-                </argument>
-                <argument commentid="38349" id="4293-38349-2-1" parentid="-1" userid="35023">
-                    <claim>Entiendo vuestra postura</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>para mi implicaria dejar de usar el transporte publico y ser un coche mas contaminando y haciendo atasco</premise>
-                </argument>
-                <argument commentid="172319" id="21171-172319-2-1" parentid="-1" userid="530679">
-                    <claim>Es un nuevo medio de transporte</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>ir a trabajar sin contaminar y dejar el coche en casa</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="numeros">
@@ -3973,6 +3887,13 @@
                     <premise>por otro lado prohiben su uso</premise>
                 </argument>
             </aspect>
+            <aspect quantity="1" value="millones">
+                <argument commentid="117022" id="15711-117022-8-1" parentid="116940" userid="15329">
+                    <claim>O sea , que esta que tiene el doble de superficie -LRB- y digamos que tiene la misma edificabilidad que la otra : 3 metros m2 / m2 -RRB- , se vendera por unos 12 millones ;</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>nunca por 40 millones</premise>
+                </argument>
+            </aspect>
             <aspect quantity="7" value="centro">
                 <argument commentid="-1" id="19-1-1" parentid="-1" userid="2780">
                     <claim>El centro turistico y comercial de Madrid esta solo a 700 metros de la Casa de Campo y de Madrid Rio</claim>
@@ -4145,13 +4066,6 @@
                     <claim>Aceptamos compartirlo con otras culturas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ellos tienen que respetar tambien nuestras costumbres entre las que no entran los tambores junto al estanque</premise>
-                </argument>
-            </aspect>
-            <aspect quantity="1" value="esparcirse">
-                <argument commentid="83229" id="1085-83229-2-1" parentid="58777" userid="156739">
-                    <claim>lo que necesite</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>crecer , esparcirse</premise>
                 </argument>
             </aspect>
             <aspect quantity="3" value="ciclista">
@@ -4401,6 +4315,13 @@
                     <claim>Se deberia hacer un estudio serio sobre las alternativas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>lo mejor serian los aparcamientos disuasorios y pensar que cualquier reduccion de carriles afectaria tambien a los buses de la EMT , como pasa en O'Donnell</premise>
+                </argument>
+            </aspect>
+            <aspect quantity="1" value="capital">
+                <argument commentid="29534" id="2551-29534-1-1" parentid="-1" userid="24698">
+                    <claim>Yo voto</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>que no se celebre nunca mas ninguna victoria deportiva dentro de la capital</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="instituciones">
@@ -4856,18 +4777,6 @@
                     <premise>en otros paises avanzados lo de la tarjeta de ciudadano ejemplar para mascotas</premise>
                 </argument>
             </aspect>
-            <aspect quantity="2" value="metros">
-                <argument commentid="116816" id="15711-116816-1-1" parentid="116801" userid="119748">
-                    <claim>Son 8.200 metros de parcela</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>se habla de superficie edificable que serian mas de 20.000 metros -LRB- en torno a 30.000 si no recuerdo mal -RRB-</premise>
-                </argument>
-                <argument commentid="117022" id="15711-117022-8-1" parentid="116940" userid="15329">
-                    <claim>O sea , que esta que tiene el doble de superficie -LRB- y digamos que tiene la misma edificabilidad que la otra : 3 metros m2 / m2 -RRB- , se vendera por unos 12 millones ;</claim>
-                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>nunca por 40 millones</premise>
-                </argument>
-            </aspect>
             <aspect quantity="3" value="multas">
                 <argument commentid="22113" id="7-22113-1-1" parentid="-1" userid="21108">
                     <claim>tb multas</claim>
@@ -4892,7 +4801,7 @@
                     <premise>lo conseguiremos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="137" value="propuesta">
+            <aspect quantity="136" value="propuesta">
                 <argument commentid="78230" id="7-78230-1-1" parentid="-1" userid="52741">
                     <claim>La propuesta es interesante</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -5358,11 +5267,6 @@
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>existe una forma de remitir a los creadores de las nuevas propuestas o los nuevos apoyos a la propuesta original</premise>
                 </argument>
-                <argument commentid="114353" id="1419-114353-3-1" parentid="114331" userid="4877">
-                    <claim>lo rebajaron</claim>
-                    <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>que entrasen las dos propuestas mas apoyadas</premise>
-                </argument>
                 <argument commentid="60474" id="1419-60474-6-1" parentid="60308" userid="4877">
                     <claim>Algunos critican esta propuesta</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
@@ -5760,7 +5664,7 @@
                     <premise>menos con la devaluacion</premise>
                 </argument>
             </aspect>
-            <aspect quantity="15" value="transporte">
+            <aspect quantity="18" value="transporte">
                 <argument commentid="37567" id="615-37567-1-1" parentid="19648" userid="39465">
                     <claim>Estoy totalmente a favor del uso de la bicicleta como medio de transporte para Madrid</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
@@ -5786,6 +5690,11 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder hacer de ella nuestro medio de transporte habitual</premise>
                 </argument>
+                <argument commentid="41475" id="2135-41475-4-1" parentid="41073" userid="3170">
+                    <claim>En otras capitales europeas , tanto que nos fijamos en ellas para lo que queremos , un dia como hoy , el transporte publico seria gratuito , para incentivar su uso y reducir la contaminacion</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>en Madrid desde tiempos inmemorables , hemos sido asi de chulos , y hoy , como no , el transporte pagando , entonces a usar el coche , total , estamos a mediados de Noviembre , y yo -LRB- continua -RRB-</premise>
+                </argument>
                 <argument commentid="29473" id="2412-29473-12-1" parentid="29282" userid="31101">
                     <claim>para eso utilizo el vehiculo privado</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
@@ -5800,6 +5709,11 @@
                     <claim>tiene opcion</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>para llegar a las 8 al trabajo no hay transporte publico a donde tiene que ir o tendria que despertarse a las 5:00 para llegar a las 8:00 en transporte publico a determinados sitios</premise>
+                </argument>
+                <argument commentid="38349" id="4293-38349-2-1" parentid="-1" userid="35023">
+                    <claim>Entiendo vuestra postura</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>para mi implicaria dejar de usar el transporte publico y ser un coche mas contaminando y haciendo atasco</premise>
                 </argument>
                 <argument commentid="112164" id="8188-112164-1-1" parentid="-1" userid="201437">
                     <claim>No es una buena decision , en mi opinion</claim>
@@ -5830,6 +5744,11 @@
                     <claim>Utilizo mi monopatin</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>medio de transporte sostenible</premise>
+                </argument>
+                <argument commentid="172319" id="21171-172319-2-1" parentid="-1" userid="530679">
+                    <claim>Es un nuevo medio de transporte</claim>
+                    <connector category="consequence" function="support" subcategory="goal">para</connector>
+                    <premise>ir a trabajar sin contaminar y dejar el coche en casa</premise>
                 </argument>
                 <argument commentid="181945" id="23219-181945-1-1" parentid="-1" userid="26752">
                     <claim>No se chicas / os</claim>
@@ -5898,12 +5817,7 @@
                     <premise>cualquier forma de contaminacion que se pueda evitar</premise>
                 </argument>
             </aspect>
-            <aspect quantity="3" value="nombre">
-                <argument commentid="87754" id="965-87754-2-1" parentid="84603" userid="177">
-                    <claim>los partidos politicos pagan</claim>
-                    <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>todos los inmuebles a su nombre</premise>
-                </argument>
+            <aspect quantity="2" value="nombre">
                 <argument commentid="53459" id="7382-53459-1-1" parentid="53204" userid="13701">
                     <claim>olvidar los nombre</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
@@ -5915,7 +5829,12 @@
                     <premise>confiesas lo que , por lo demas , ya quedaba sumamente claro desde el principio : no eres mas que un cobarde que ni siquiera tiene el valor suficiente como para comentar con su nombre y sus apellidos autenticos</premise>
                 </argument>
             </aspect>
-            <aspect quantity="1" value="parcela">
+            <aspect quantity="2" value="parcela">
+                <argument commentid="116816" id="15711-116816-1-1" parentid="116801" userid="119748">
+                    <claim>Son 8.200 metros de parcela</claim>
+                    <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
+                    <premise>se habla de superficie edificable que serian mas de 20.000 metros -LRB- en torno a 30.000 si no recuerdo mal -RRB-</premise>
+                </argument>
                 <argument commentid="117198" id="15711-117198-1-1" parentid="117022" userid="119748">
                     <claim>No se vende por tamano de parcela</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
