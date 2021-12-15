@@ -36,26 +36,11 @@ public class Argument {
     private boolean isValid;
     private int proposalID;
     private String syntacticTree;
-
-    /**
-     * Empty constructor.
-     *
-     * @param argumentID
-     * @param userID
-     * @param commentID
-     * @param parentID
-     * @param sentenceText
-     */
-    public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText) {
-        this(argumentID, userID, commentID, parentID, sentenceText, new Sentence(), new Sentence(), "", new ArgumentLinker(), "NONE", "");
-        this.proposalID = -1;
-
-        this.isValid = false;
-    }
+    private int treeLevel;
 
     /**
      * Regular constructor.
-     *
+     * 
      * @param argumentID
      * @param userID
      * @param commentID
@@ -66,7 +51,7 @@ public class Argument {
      * @param mainVerb
      * @param linker
      * @param approach
-     * @param syntacticTree
+     * @param syntacticTree 
      */
     public Argument(String argumentID, int userID, int commentID, int parentID,
             String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
@@ -82,16 +67,13 @@ public class Argument {
         this.approach = approach;
         this.syntacticTree = syntacticTree;
 
-        if (!StringUtils.isEmpty(this.argumentID)) {
-            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
-        }
-
-        this.isValid = true;
+        completeArgument();
     }
 
     /**
-     *
-     * @param doc
+     * Alternative constructor.
+     * 
+     * @param doc 
      */
     public Argument(Document doc) {
         this.argumentID = doc.getString("argumentID");
@@ -107,11 +89,7 @@ public class Argument {
         this.approach = doc.getString("approach");
         this.syntacticTree = doc.getString("syntacticTree");
 
-        if (!StringUtils.isEmpty(this.argumentID)) {
-            this.proposalID = Integer.parseInt(StringUtils.getFirstToken(this.argumentID, "-"));
-        }
-
-        this.isValid = true;
+        completeArgument();
     }
 
     /**
@@ -230,10 +208,42 @@ public class Argument {
      *
      * @return
      */
+    public int getTreeLevel() {
+        return this.treeLevel;
+    }
+
+    /**
+     *
+     * @return
+     */
     public boolean isValid() {
         return this.isValid;
     }
 
+    /**
+     * Is it a valid argument?
+     */
+    private void completeArgument() {
+
+        if (!StringUtils.isEmpty(this.approach) && !StringUtils.isEmpty(this.argumentID)) {
+            var token = StringUtils.getFirstToken(this.approach, "-").replace("[", "").replace("]", "");
+            this.treeLevel = Integer.parseInt(token);
+            token = StringUtils.getFirstToken(this.argumentID, "-");
+            this.proposalID = Integer.parseInt(token);
+            this.isValid = true;
+
+        } else {
+            this.treeLevel = -1;
+            this.proposalID = -1;
+            this.isValid = false;
+        }
+    }
+
+    /**
+     *
+     * @param nouns
+     * @return
+     */
     private List<String> processNouns(List<String> nouns) {
         List<String> newList = new ArrayList<>();
         String noun;
