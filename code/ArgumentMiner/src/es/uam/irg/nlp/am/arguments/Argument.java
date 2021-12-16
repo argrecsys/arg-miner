@@ -188,12 +188,13 @@ public class Argument {
     }
 
     /**
-     *
-     * @return
+     * 
+     * @return 
      */
-    public String getString() {
+    @Override
+    public String toString() {
         return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
-                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.getString());
+                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.toString());
     }
 
     /**

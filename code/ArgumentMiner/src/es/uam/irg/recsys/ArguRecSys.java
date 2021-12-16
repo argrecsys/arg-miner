@@ -37,8 +37,9 @@ import org.w3c.dom.DOMException;
  */
 public class ArguRecSys {
 
+    // Class constants
     private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
-    private static final int MAX_TREE_LEVEL = 3;
+    private static final int MAX_TREE_LEVEL = 2;
 
     // Class members
     private Map<String, Object> mdbSetup;
@@ -79,6 +80,7 @@ public class ArguRecSys {
 
         if (!arguments.isEmpty() && !proposals.isEmpty()) {
             Map<String, Integer> aspects = getFreqAspects(arguments);
+            System.out.println(">> Aspects:");
             System.out.println(aspects);
 
             // Save arguments
@@ -201,27 +203,28 @@ public class ArguRecSys {
 
         // Local variables
         Map<String, List<Argument>> recommendations = new HashMap<>();
-        String aspect;
-        Set<String> argUsed = new HashSet<>();
+        List<String> aspectList = new ArrayList(aspects.keySet());
 
-        for (Map.Entry<String, Integer> entry : aspects.entrySet()) {
-            aspect = entry.getKey();
+        // Select arguments
+        arguments.forEach(argument -> {
+            String aspect = "";
+            Set<String> nouns = argument.getNounsSet();
 
-            if (!aspect.equals(this.topic)) {
-                for (Argument argument : arguments) {
-                    if (!argUsed.contains(argument.getId())) {
-                        if (argument.getNounsSet().contains(aspect)) {
-                            List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
-                            arguList.add(argument);
-                            recommendations.put(aspect, arguList);
-                            argUsed.add(argument.getId());
-                        }
-                    }
+            for (int i = 0; i < aspectList.size() && "".equals(aspect); i++) {
+                if (nouns.contains(aspectList.get(i))) {
+                    aspect = aspectList.get(i);
                 }
             }
-        }
 
-        // Final filtering
+            if ("".equals(aspect)) {
+                aspect = "otros"; // others
+            }
+            List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
+            arguList.add(argument);
+            recommendations.put(aspect, arguList);
+        });
+
+        // Filtering arguments
         int total = 0;
         for (Map.Entry<String, List<Argument>> recommendation : recommendations.entrySet()) {
             int totalAspect = recommendation.getValue().size();
@@ -232,7 +235,6 @@ public class ArguRecSys {
             }
         }
 
-        System.out.println(argUsed);
         System.out.println("Total arguments extracted: " + total);
 
         return result;

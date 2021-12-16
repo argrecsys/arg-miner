@@ -101,7 +101,8 @@ public class ArgumentLinker {
      *
      * @return
      */
-    public String getString() {
+    @Override
+    public String toString() {
         return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
     }
 
