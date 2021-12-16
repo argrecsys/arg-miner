@@ -145,7 +145,7 @@ public class ArgumentEngine implements Constants {
                 arguments.forEach(arg -> {
                     arg.setMajorClaim(majorClaim);
                     result.add(arg);
-                    System.out.println(arg.getString());
+                    System.out.println(arg.toString());
                 });
 
             } else {
@@ -350,7 +350,7 @@ public class ArgumentEngine implements Constants {
 
                 if (linker != null) {
                     parent = SyntacticAnalysisManager.getLinkerParentNode(analyzedTree, currNode);
-                    System.out.println(" - Linker: " + linker.getString());
+                    System.out.println(" - Linker: " + linker.toString());
                     System.out.println("   " + currNode.toString());
                     System.out.println(" - Parent: " + parent.toString());
 

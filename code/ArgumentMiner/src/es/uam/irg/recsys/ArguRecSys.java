@@ -37,8 +37,9 @@ import org.w3c.dom.DOMException;
  */
 public class ArguRecSys {
 
+    // Class constants
     private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
-    private static final int MAX_TREE_LEVEL = 3;
+    private static final int MAX_TREE_LEVEL = 2;
 
     // Class members
     private Map<String, Object> mdbSetup;

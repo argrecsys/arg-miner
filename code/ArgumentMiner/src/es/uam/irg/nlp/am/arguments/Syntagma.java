@@ -33,7 +33,8 @@ public class Syntagma {
      * 
      * @return 
      */
-    public String getString() {
+    @Override
+    public String toString() {
         return String.format("%s > %s [%s]", this.text, this.function, this.depth);
     }
 }

@@ -103,7 +103,7 @@ public class IOManager implements Constants {
             List<ArgumentLinker> lexicon = linkers.getLexicon(true);
             System.out.println(">> Lexicon: " + lexicon.size());
             for (int i = 0; i < lexicon.size(); i++) {
-                System.out.format("Linker -> %s \n", lexicon.get(i).getString());
+                System.out.format("Linker -> %s \n", lexicon.get(i).toString());
             }
         }
 
