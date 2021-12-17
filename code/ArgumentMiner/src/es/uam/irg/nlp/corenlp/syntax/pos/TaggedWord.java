@@ -12,7 +12,7 @@
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along with 
+ * You should have received a copy of the GNU General Public License along with
  * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.corenlp.syntax.pos;
@@ -37,8 +37,8 @@ public class TaggedWord {
         if (tag == null || tag.isEmpty()) {
             throw new IllegalArgumentException("Null or empty tag");
         }
-        
-        if( !POSTags.isValidTag(tag) ) {
+
+        if (!POSTags.isValidTag(tag)) {
             throw new IllegalArgumentException("Non valid tag");
         }
 

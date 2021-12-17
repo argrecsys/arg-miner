@@ -40,7 +40,7 @@ public class Argument {
 
     /**
      * Regular constructor.
-     * 
+     *
      * @param argumentID
      * @param userID
      * @param commentID
@@ -51,7 +51,7 @@ public class Argument {
      * @param mainVerb
      * @param linker
      * @param approach
-     * @param syntacticTree 
+     * @param syntacticTree
      */
     public Argument(String argumentID, int userID, int commentID, int parentID,
             String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
@@ -72,8 +72,8 @@ public class Argument {
 
     /**
      * Alternative constructor.
-     * 
-     * @param doc 
+     *
+     * @param doc
      */
     public Argument(Document doc) {
         this.argumentID = doc.getString("argumentID");
@@ -188,8 +188,8 @@ public class Argument {
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     @Override
     public String toString() {

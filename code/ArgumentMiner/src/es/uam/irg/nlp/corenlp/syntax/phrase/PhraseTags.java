@@ -12,7 +12,7 @@
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along with 
+ * You should have received a copy of the GNU General Public License along with
  * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.corenlp.syntax.phrase;
@@ -34,6 +34,7 @@ import java.util.Map;
  * @version 1.0 - 16/03/2017
  */
 public abstract class PhraseTags {
+
     // Clause Level
     public static final String S = "S";             // Simple declarative clause, i.e. one that is not introduced by a (possible empty) subordinating conjunction or a wh-word and that does not exhibit subject-verb inversion.
     public static final String SBAR = "SBAR";       // Clause introduced by a (possibly empty) subordinating conjunction.
