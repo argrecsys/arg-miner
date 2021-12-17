@@ -12,7 +12,7 @@
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along with 
+ * You should have received a copy of the GNU General Public License along with
  * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.corenlp.syntax;
@@ -27,7 +27,8 @@ import java.util.Map;
 /**
  * SyntacticAnalysisData
  *
- * Stores nouns and its complements and dependences, obtained in the syntactic analysis of certain sentence.
+ * Stores nouns and its complements and dependences, obtained in the syntactic
+ * analysis of certain sentence.
  *
  * @author Ivan Cantador, ivan.cantador@uam.es
  * @version 1.0 - 16/03/2017

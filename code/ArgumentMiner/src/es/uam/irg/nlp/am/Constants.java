@@ -10,7 +10,7 @@ package es.uam.irg.nlp.am;
  * @author ansegura
  */
 public interface Constants {
-    
+
     // Public system constants
     public static final String LANG_EN = "en";
     public static final String LANG_ES = "es";
@@ -25,5 +25,5 @@ public interface Constants {
     public static final String RECOMMENDATIONS_FILEPATH = OUTPUT_FOLDER + "recommendations_{}.xml";
     public static final String SPANISH_PROPERTIES = "Resources/config/StanfordCoreNLP-spanish.properties";
     public static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
-    
+
 }

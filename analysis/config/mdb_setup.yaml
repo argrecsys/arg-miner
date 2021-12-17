@@ -1,4 +1,4 @@
-db_server: ****
-db_name: ****
-db_port: ****
-db_collection: ****
+db_server: localhost
+db_name: decide_madrid_2019_09
+db_port: 27017
+db_collection: annotations6

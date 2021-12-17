@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class RecSys {
 
     public static final String NO_TOPIC = "-";
-    
+
     /**
      * @param args the command line arguments
      */

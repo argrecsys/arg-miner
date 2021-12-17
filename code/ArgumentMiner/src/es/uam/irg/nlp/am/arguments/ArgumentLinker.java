@@ -68,10 +68,10 @@ public class ArgumentLinker {
     public boolean equals(ArgumentLinker lnk) {
         return this.linker.equals(lnk.linker);
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Document getDocument() {
         Document doc = new Document();
@@ -82,10 +82,10 @@ public class ArgumentLinker {
 
         return doc;
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public JSONObject getJSON() {
         JSONObject json = new JSONObject();

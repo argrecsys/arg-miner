@@ -19,7 +19,7 @@ import java.util.Map;
  * @author ansegura
  */
 public class FunctionUtils {
-    
+
     /**
      *
      * @param <T>
@@ -29,20 +29,20 @@ public class FunctionUtils {
      */
     public static <T> String arrayToString(T[] array, String delimiter) {
         String result = "";
-        
+
         if (array != null && array.length > 0) {
             StringBuilder sb = new StringBuilder();
-            
+
             for (T item : array) {
                 sb.append(item.toString()).append(delimiter);
             }
-            
+
             result = sb.deleteCharAt(sb.length() - 1).toString();
         }
-        
+
         return result;
     }
-    
+
     /**
      *
      * @param array
@@ -52,25 +52,24 @@ public class FunctionUtils {
         array = array.replace("[", "").replace("]", "");
         return new ArrayList<>(Arrays.asList(array.split(",")));
     }
-    
+
     /**
-     * 
+     *
      * @param dbType
-     * @return 
+     * @return
      */
     public static Map<String, Object> getDatabaseConfiguration(String dbType) {
         Map<String, Object> setup = null;
-        
+
         if (dbType.equals(Constants.MYSQL_DB)) {
             setup = IOManager.readYamlFile(Constants.MSQL_SETUP_FILEPATH);
-        }
-        else if (dbType.equals(Constants.MONGO_DB)) {
+        } else if (dbType.equals(Constants.MONGO_DB)) {
             setup = IOManager.readYamlFile(Constants.MDB_SETUP_FILEPATH);
         }
-        
+
         return setup;
     }
-    
+
     /**
      *
      * @param <T>
@@ -82,14 +81,14 @@ public class FunctionUtils {
      */
     public static <T> T[] getSubArray(T[] array, int startIx, int endIndex) throws Exception {
         T[] newArray = null;
-        
+
         if (startIx >= 0 && endIndex <= array.length) {
             newArray = Arrays.copyOfRange(array, startIx, endIndex);
         }
-        
+
         return newArray;
     }
-    
+
     /**
      *
      * @param map
@@ -103,8 +102,8 @@ public class FunctionUtils {
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
-        
+
         return reverseSortedMap;
     }
-    
+
 }

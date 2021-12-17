@@ -12,7 +12,7 @@
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along with 
+ * You should have received a copy of the GNU General Public License along with
  * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.corenlp.syntax;
@@ -28,8 +28,8 @@ import java.util.List;
 /**
  * SyntacticallyAnalyzedSentence
  *
- * Performs a syntactic analysis on a given sentence, storing its syntactic treebank, 
- * and its nouns and their complements and dependences.
+ * Performs a syntactic analysis on a given sentence, storing its syntactic
+ * treebank, and its nouns and their complements and dependences.
  *
  * @author Ivan Cantador, ivan.cantador@uam.es
  * @version 1.0 - 16/03/2017
