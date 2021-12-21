@@ -27,16 +27,20 @@ public class SyntacticAnalysisManager {
             "[grup.verb]-[sn]-[sp_LNK]",
             "[neg]-[grup.verb]-[sn]-[sp_LNK]",
             "[S]-[conj_LNK]-[S]",
+            "[S]-[conj]-[S_LNK]-[S]",
             "[sn]-[grup.verb]-[S_LNK]",
             "[sn]-[neg]-[grup.verb]-[S_LNK]",
             "[sn]-[grup.verb]-[sp_LNK]",
             "[sn]-[neg]-[grup.verb]-[sp_LNK]",
             "[sn]-[grup.verb]-[sn]-[S_LNK]",
             "[sn]-[neg]-[grup.verb]-[sn]-[S_LNK]",
+            "[sn]-[grup.verb]-[sn]-[sp_LNK]",
+            "[sn]-[neg]-[grup.verb]-[sn]-[sp_LNK]",
             "[sp]-[grup.verb]-[sn]-[S_LNK]",
             "[sp]-[neg]-[grup.verb]-[sn]-[S_LNK]",
             "[sp]-[grup.verb]-[sn]-[sp_LNK]",
-            "[sp]-[neg]-[grup.verb]-[sn]-[sp_LNK]"
+            "[sp]-[neg]-[grup.verb]-[sn]-[sp_LNK]",
+            "[S]-[PUNCT]-[S_LNK]"
     ));
 
     /**
