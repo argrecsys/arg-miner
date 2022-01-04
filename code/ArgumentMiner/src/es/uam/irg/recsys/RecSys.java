@@ -13,8 +13,6 @@ import java.util.Arrays;
  */
 public class RecSys {
 
-    public static final String NO_TOPIC = "-";
-
     /**
      * @param args the command line arguments
      */
@@ -23,8 +21,9 @@ public class RecSys {
         System.out.println(">> RECSYS BEGINS");
 
         // Program hyperparameters with default values
+        String language = Constants.LANG_ES;
         int minAspectOccur = 1;
-        String topic = NO_TOPIC;
+        String topic = Constants.NO_TOPIC;
         Integer[] customProposalID = new Integer[0];
 
         // Read input parameters
@@ -34,7 +33,7 @@ public class RecSys {
                 case 0 ->
                     minAspectOccur = Integer.parseInt(args[i]);
                 case 1 -> {
-                    if (!args[i].equals(NO_TOPIC)) {
+                    if (!args[i].equals(Constants.NO_TOPIC)) {
                         topic = args[i].toLowerCase();
                     }
                 }
@@ -50,7 +49,7 @@ public class RecSys {
         System.out.format("   Minimum occurrences per aspect: %s, topic selected: %s, customized proposals: %s\n", minAspectOccur, topic, Arrays.toString(customProposalID));
 
         // Run program
-        ArguRecSys recSys = new ArguRecSys(minAspectOccur, topic, customProposalID);
+        ArguRecSys recSys = new ArguRecSys(language, minAspectOccur, topic, customProposalID);
         boolean result = recSys.runRecSys();
 
         if (result) {

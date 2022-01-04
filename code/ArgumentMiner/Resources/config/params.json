@@ -1,0 +1,24 @@
+{
+    "customProposalID": [7,19,50,61,72,86,89,109,152,417,494,507,615,629,878,879,900,965,1085,1114,1121,1266,1284,1419,1824,1863,1918,1937,2121,2135,2412,2445,2513,2524,2538,2551,2576,2944,3044,3078,3165,3481,3587,3905,4293,4541,6931,7382,7482,7488,7633,8188,8253,8640,10195,10675,10687,10996,11134,12131,15711,15970,15978,15996,19024,19170,19853,19914,20389,20657,21171,21567,22742,23131,23219,23704,24954,25077,26277,26787],
+    "extraction": {
+        "annotateComments": true
+    },
+    "language": "es",
+    "linkers": {
+        "en": {
+            "invalidAspects": ["also", "thing", "mine", "sometimes", "too", "other"],
+            "invalidLinkers": ["and", "or"],
+            "validLinkers": []
+        },
+        "es": {
+            "invalidAspects": ["tambien", "cosa", "mia", "veces", "ademas", "demas"],
+            "invalidLinkers": ["o", "y"],
+            "validLinkers": []
+        }
+    },
+    "recommendation": {
+        "maxTreeLevel": 2,
+        "minAspectOccur": 1,
+        "topic": "-"
+    }
+}

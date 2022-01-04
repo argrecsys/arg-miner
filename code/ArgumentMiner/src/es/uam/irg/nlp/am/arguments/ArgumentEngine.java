@@ -171,6 +171,7 @@ public class ArgumentEngine implements Constants {
             newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_RIGHT);
             latestToken = StringUtils.getLastToken(newStatement, " ");
 
+            // TODO: use invalid linkers...
             if (latestToken.equals("y") || latestToken.equals("o")) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
                 newStatement = StringUtils.cleanText(newStatement, StringUtils.CLEAN_RIGHT);
