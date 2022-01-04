@@ -9,9 +9,7 @@ import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.decidemadrid.db.MongoDbManager;
 import es.uam.irg.decidemadrid.entities.DMProposalSummary;
 import es.uam.irg.io.IOManager;
-import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.am.arguments.Argument;
-import static es.uam.irg.recsys.RecSys.NO_TOPIC;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,20 +40,23 @@ public class ArguRecSys {
     private static final int MAX_TREE_LEVEL = 2;
 
     // Class members
+    private Integer[] customProposalIds;
+    private String language;
     private Map<String, Object> mdbSetup;
     private int minAspectOccur;
     private Map<String, Object> msqlSetup;
     private String topic;
-    private Integer[] customProposalIds;
 
     /**
      * Class constructor.
      *
+     * @param language
      * @param minAspectOccur
      * @param topic
      * @param customProposalIds
      */
-    public ArguRecSys(int minAspectOccur, String topic, Integer[] customProposalIds) {
+    public ArguRecSys(String language, int minAspectOccur, String topic, Integer[] customProposalIds) {
+        this.language = language;
         this.minAspectOccur = minAspectOccur;
         this.topic = topic;
         this.customProposalIds = customProposalIds;
@@ -96,6 +97,56 @@ public class ArguRecSys {
         }
 
         return result;
+    }
+    /**
+     * Creates and argument element and its properties.
+     *
+     * @param doc
+     * @param argument
+     * @return
+     */
+    private Element createRecommendationElement(org.w3c.dom.Document doc, Argument argument) {
+        Element nArgu = doc.createElement("argument");
+        
+        // Argument element and its properties
+        Attr attr = doc.createAttribute("id");
+        attr.setValue(argument.getId());
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("userid");
+        attr.setValue("" + argument.userID);
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("parentid");
+        attr.setValue("" + argument.parentID);
+        nArgu.setAttributeNode(attr);
+        attr = doc.createAttribute("commentid");
+        attr.setValue("" + argument.commentID);
+        nArgu.setAttributeNode(attr);
+        
+        Element nClaim = doc.createElement("claim");
+        nClaim.appendChild(doc.createTextNode(argument.claim.text));
+        nArgu.appendChild(nClaim);
+        
+        Element nLinker = doc.createElement("connector");
+        nLinker.appendChild(doc.createTextNode(argument.linker.linker));
+        nArgu.appendChild(nLinker);
+        
+        attr = doc.createAttribute("category");
+        attr.setValue(argument.linker.category.toLowerCase());
+        nLinker.setAttributeNode(attr);
+        
+        attr = doc.createAttribute("subcategory");
+        attr.setValue(argument.linker.subCategory.toLowerCase());
+        nLinker.setAttributeNode(attr);
+        
+        attr = doc.createAttribute("function");
+        attr.setValue(argument.linker.relationType);
+        nLinker.setAttributeNode(attr);
+        
+        Element nPremise = doc.createElement("premise");
+        nPremise.appendChild(doc.createTextNode(argument.premise.text));
+        nArgu.appendChild(nPremise);
+        
+        return nArgu;
     }
 
     /**
@@ -217,7 +268,7 @@ public class ArguRecSys {
             }
 
             if ("".equals(aspect)) {
-                aspect = "otros"; // others
+                aspect = (language.equals(Constants.LANG_ES) ? "otros": "others");
             }
             List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
             arguList.add(argument);
@@ -249,7 +300,7 @@ public class ArguRecSys {
      */
     private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
-        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("_{}", (topic.equals(NO_TOPIC) ? "" : "_" + topic));
+        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("_{}", (topic.equals(Constants.NO_TOPIC) ? "" : "_" + topic));
         Attr attr;
 
         try {
@@ -347,54 +398,4 @@ public class ArguRecSys {
         return result;
     }
 
-    /**
-     * Creates and argument element and its properties.
-     *
-     * @param doc
-     * @param argument
-     * @return
-     */
-    private Element createRecommendationElement(org.w3c.dom.Document doc, Argument argument) {
-        Element nArgu = doc.createElement("argument");
-
-        // Argument element and its properties
-        Attr attr = doc.createAttribute("id");
-        attr.setValue(argument.getId());
-        nArgu.setAttributeNode(attr);
-        attr = doc.createAttribute("userid");
-        attr.setValue("" + argument.userID);
-        nArgu.setAttributeNode(attr);
-        attr = doc.createAttribute("parentid");
-        attr.setValue("" + argument.parentID);
-        nArgu.setAttributeNode(attr);
-        attr = doc.createAttribute("commentid");
-        attr.setValue("" + argument.commentID);
-        nArgu.setAttributeNode(attr);
-
-        Element nClaim = doc.createElement("claim");
-        nClaim.appendChild(doc.createTextNode(argument.claim.text));
-        nArgu.appendChild(nClaim);
-
-        Element nLinker = doc.createElement("connector");
-        nLinker.appendChild(doc.createTextNode(argument.linker.linker));
-        nArgu.appendChild(nLinker);
-
-        attr = doc.createAttribute("category");
-        attr.setValue(argument.linker.category.toLowerCase());
-        nLinker.setAttributeNode(attr);
-
-        attr = doc.createAttribute("subcategory");
-        attr.setValue(argument.linker.subCategory.toLowerCase());
-        nLinker.setAttributeNode(attr);
-
-        attr = doc.createAttribute("function");
-        attr.setValue(argument.linker.relationType);
-        nLinker.setAttributeNode(attr);
-
-        Element nPremise = doc.createElement("premise");
-        nPremise.appendChild(doc.createTextNode(argument.premise.text));
-        nArgu.appendChild(nPremise);
-
-        return nArgu;
-    }
 }

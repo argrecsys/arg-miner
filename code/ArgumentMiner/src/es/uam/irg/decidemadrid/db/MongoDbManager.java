@@ -11,7 +11,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.UpdateOptions;
-import static es.uam.irg.recsys.RecSys.NO_TOPIC;
+import es.uam.irg.recsys.Constants;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -80,7 +80,7 @@ public class MongoDbManager {
             // Query documents
             MongoCollection<Document> collection = db.getCollection(collName);
             FindIterable<Document> cursor = null;
-            if (!topic.equals(NO_TOPIC)) {
+            if (!topic.equals(Constants.NO_TOPIC)) {
                 cursor = collection.find(Filters.text(topic));
             } else {
                 cursor = collection.find();
