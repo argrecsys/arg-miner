@@ -1,7 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.io;
 
@@ -33,7 +45,7 @@ import org.yaml.snakeyaml.Yaml;
  *
  * @author ansegura
  */
-public class IOManager implements Constants {
+public class IOManager {
 
     private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
     private static final HashSet<String> VALID_LINKERS = new HashSet();
@@ -46,7 +58,7 @@ public class IOManager implements Constants {
      */
     public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();
-        String lexiconFilepath = LEXICON_FILEPATH.replace("{}", lang);
+        String lexiconFilepath = Constants.LEXICON_FILEPATH.replace("{}", lang);
 
         try {
             // Get the file
@@ -118,8 +130,8 @@ public class IOManager implements Constants {
      */
     public static HashSet<String> readStopwordList(String lang, boolean verbose) {
         HashSet<String> stopwords = new HashSet<>();
-        String language = (lang.equals(LANG_EN) ? "english" : "spanish");
-        String stopwordsFilepath = STOPWORDS_FILEPATH.replace("{}", language);
+        String language = (lang.equals(Constants.LANG_EN) ? "english" : "spanish");
+        String stopwordsFilepath = Constants.STOPWORDS_FILEPATH.replace("{}", language);
 
         try {
             // Get the file
