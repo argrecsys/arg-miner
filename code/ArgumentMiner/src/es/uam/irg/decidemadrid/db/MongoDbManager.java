@@ -89,11 +89,11 @@ public class MongoDbManager {
             for (Iterator<Document> it = cursor.iterator(); it.hasNext();) {
                 Document doc = it.next();
                 proposalID = (int) doc.get("proposalID");
-                if (setIds.contains(proposalID)) {
+                if (setIds.isEmpty() || setIds.contains(proposalID)) {
                     docs.add(doc);
                 }
             }
-            
+
         } catch (Exception ex) {
             System.err.println("MongoDB error: " + ex.getMessage());
         }
