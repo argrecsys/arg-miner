@@ -31,7 +31,10 @@ import java.util.Map;
  */
 public class ArgumentLinkerManager {
 
+    // Class constants
     private final static boolean DUPLICATE_CLEAN_LINKER = true;
+    
+    // Class members
     private Map<String, Map<String, List<ArgumentLinker>>> taxonomy;
 
     /**

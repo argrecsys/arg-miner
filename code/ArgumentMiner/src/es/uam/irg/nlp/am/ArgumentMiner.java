@@ -46,6 +46,10 @@ import org.json.JSONObject;
  */
 public class ArgumentMiner {
 
+    // Class constants
+    private static final String ARGUMENTS_FILEPATH = "../../results/arguments.json";
+    private static final boolean VERBOSE = true;
+    
     // Class members
     private String language;
     private ArgumentLinkerManager lnkManager;
@@ -54,7 +58,6 @@ public class ArgumentMiner {
     private Map<Integer, DMComment> proposalComments;
     private Map<Integer, DMProposal> proposals;
     private HashSet<String> stopwords;
-    private boolean verbose = true;
 
     /**
      * Class constructor.
@@ -65,8 +68,8 @@ public class ArgumentMiner {
      */
     public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalIds) {
         this.language = language;
-        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
-        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
+        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
+        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
         this.stopwords = getStopwordList(language);
 
@@ -167,7 +170,7 @@ public class ArgumentMiner {
      * @return
      */
     private ArgumentLinkerManager createLinkerManager(String lang) {
-        return IOManager.readLinkerTaxonomy(lang, this.verbose);
+        return IOManager.readLinkerTaxonomy(lang, VERBOSE);
     }
 
     /**
@@ -214,7 +217,7 @@ public class ArgumentMiner {
             }
 
             // Show results
-            if (this.verbose) {
+            if (VERBOSE) {
                 System.out.println(">> Number of proposals: " + proposals.size());
                 System.out.println("   Number of comments: " + proposalComments.size());
             }
@@ -229,7 +232,7 @@ public class ArgumentMiner {
      * @return
      */
     private HashSet<String> getStopwordList(String lang) {
-        return IOManager.readStopwordList(lang, this.verbose);
+        return IOManager.readStopwordList(lang, VERBOSE);
     }
 
     /**
@@ -252,7 +255,7 @@ public class ArgumentMiner {
             });
 
             // Save JSON files
-            result = IOManager.saveStringToJson(argList.toString(4), Constants.ARGUMENTS_FILEPATH);
+            result = IOManager.saveStringToJson(argList.toString(4), ARGUMENTS_FILEPATH);
         }
 
         return result;

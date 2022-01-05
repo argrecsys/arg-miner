@@ -17,7 +17,6 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.List;
@@ -30,6 +29,10 @@ import java.util.logging.Logger;
  */
 public class TreeAnalyzer {
 
+    // Class constants
+    public static final String NGRAMS_DELIMITER = "-";
+
+    // Class variables
     private final List<ArgumentLinker> linkers;
     private final int nLinkers;
 
@@ -86,7 +89,7 @@ public class TreeAnalyzer {
         try {
             if (tokens.length > 0) {
                 String[] subList = FunctionUtils.getSubArray(tokens, init, init + nTokens);
-                nGram = FunctionUtils.arrayToString(subList, Constants.NGRAMS_DELIMITER);
+                nGram = FunctionUtils.arrayToString(subList, NGRAMS_DELIMITER);
             }
         } catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);

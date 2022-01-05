@@ -24,7 +24,7 @@ import java.util.Arrays;
  * @author ansegura
  */
 public class Program {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -33,7 +33,7 @@ public class Program {
         System.out.println(">> ARGMINER BEGINS");
 
         // Program hyperparameters with default values
-        String language = Constants.LANG_ES;
+        String language = "es";
         boolean annotateComments = true;
         Integer[] customProposalID = new Integer[0];
 

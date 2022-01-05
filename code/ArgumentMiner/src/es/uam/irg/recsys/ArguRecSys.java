@@ -32,14 +32,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.bson.Document;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.dom.DOMSource;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Element;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.dom.DOMSource;
+import org.bson.Document;
+import org.w3c.dom.Attr;
 import org.w3c.dom.DOMException;
+import org.w3c.dom.Element;
 
 /**
  *
@@ -48,8 +48,12 @@ import org.w3c.dom.DOMException;
 public class ArguRecSys {
 
     // Class constants
+    public static final String NO_TOPIC = "-";
     private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
+    private static final String LANG_EN = "en";
+    private static final String LANG_ES = "es";
     private static final int MAX_TREE_LEVEL = 2;
+    private static final String RECOMMENDATIONS_FILEPATH = "../../results/recommendations_{}.xml";
 
     // Class members
     private Integer[] customProposalIds;
@@ -72,8 +76,8 @@ public class ArguRecSys {
         this.minAspectOccur = minAspectOccur;
         this.topic = topic;
         this.customProposalIds = customProposalIds;
-        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
-        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
+        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
+        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);
     }
 
     /**
@@ -110,6 +114,7 @@ public class ArguRecSys {
 
         return result;
     }
+
     /**
      * Creates and argument element and its properties.
      *
@@ -119,7 +124,7 @@ public class ArguRecSys {
      */
     private Element createRecommendationElement(org.w3c.dom.Document doc, Argument argument) {
         Element nArgu = doc.createElement("argument");
-        
+
         // Argument element and its properties
         Attr attr = doc.createAttribute("id");
         attr.setValue(argument.getId());
@@ -133,31 +138,31 @@ public class ArguRecSys {
         attr = doc.createAttribute("commentid");
         attr.setValue("" + argument.commentID);
         nArgu.setAttributeNode(attr);
-        
+
         Element nClaim = doc.createElement("claim");
         nClaim.appendChild(doc.createTextNode(argument.claim.text));
         nArgu.appendChild(nClaim);
-        
+
         Element nLinker = doc.createElement("connector");
         nLinker.appendChild(doc.createTextNode(argument.linker.linker));
         nArgu.appendChild(nLinker);
-        
+
         attr = doc.createAttribute("category");
         attr.setValue(argument.linker.category.toLowerCase());
         nLinker.setAttributeNode(attr);
-        
+
         attr = doc.createAttribute("subcategory");
         attr.setValue(argument.linker.subCategory.toLowerCase());
         nLinker.setAttributeNode(attr);
-        
+
         attr = doc.createAttribute("function");
         attr.setValue(argument.linker.relationType);
         nLinker.setAttributeNode(attr);
-        
+
         Element nPremise = doc.createElement("premise");
         nPremise.appendChild(doc.createTextNode(argument.premise.text));
         nArgu.appendChild(nPremise);
-        
+
         return nArgu;
     }
 
@@ -280,7 +285,7 @@ public class ArguRecSys {
             }
 
             if ("".equals(aspect)) {
-                aspect = (language.equals(Constants.LANG_ES) ? "otros": "others");
+                aspect = (language.equals(LANG_ES) ? "otros" : "others");
             }
             List<Argument> arguList = recommendations.getOrDefault(aspect, new ArrayList<>());
             arguList.add(argument);
@@ -312,7 +317,7 @@ public class ArguRecSys {
      */
     private boolean saveRecommendations(String topic, Map<Integer, DMProposalSummary> proposals, Map<String, List<Argument>> recommendations) {
         boolean result = false;
-        String filename = Constants.RECOMMENDATIONS_FILEPATH.replace("_{}", (topic.equals(Constants.NO_TOPIC) ? "" : "_" + topic));
+        String filename = RECOMMENDATIONS_FILEPATH.replace("_{}", (topic.equals(NO_TOPIC) ? "" : "_" + topic));
         Attr attr;
 
         try {

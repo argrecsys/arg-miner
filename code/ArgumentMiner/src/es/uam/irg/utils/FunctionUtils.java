@@ -18,7 +18,6 @@
 package es.uam.irg.utils;
 
 import es.uam.irg.io.IOManager;
-import es.uam.irg.nlp.am.Constants;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -31,6 +30,12 @@ import java.util.Map;
  * @author ansegura
  */
 public class FunctionUtils {
+
+    // Class constants
+    public static final String MONGO_DB = "MONGO_DB";
+    public static final String MYSQL_DB = "MYSQL_DB";
+    private static final String MSQL_SETUP_FILEPATH = "Resources/config/msql_setup.yaml";
+    private static final String MDB_SETUP_FILEPATH = "Resources/config/mdb_setup.yaml";
 
     /**
      *
@@ -73,10 +78,10 @@ public class FunctionUtils {
     public static Map<String, Object> getDatabaseConfiguration(String dbType) {
         Map<String, Object> setup = null;
 
-        if (dbType.equals(Constants.MYSQL_DB)) {
-            setup = IOManager.readYamlFile(Constants.MSQL_SETUP_FILEPATH);
-        } else if (dbType.equals(Constants.MONGO_DB)) {
-            setup = IOManager.readYamlFile(Constants.MDB_SETUP_FILEPATH);
+        if (dbType.equals(MYSQL_DB)) {
+            setup = IOManager.readYamlFile(MSQL_SETUP_FILEPATH);
+        } else if (dbType.equals(MONGO_DB)) {
+            setup = IOManager.readYamlFile(MDB_SETUP_FILEPATH);
         }
 
         return setup;

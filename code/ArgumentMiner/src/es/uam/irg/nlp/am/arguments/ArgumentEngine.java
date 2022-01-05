@@ -24,7 +24,6 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.ArraySet;
 import edu.stanford.nlp.util.CoreMap;
-import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticAnalysisManager;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticallyAnalyzedSentence;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
@@ -42,10 +41,13 @@ import java.util.logging.Logger;
 public class ArgumentEngine {
 
     // Class constants
+    public static final String LANG_EN = "en";
+    public static final String LANG_ES = "es";
     private static final String CLAIM = "claim";
     private static final HashSet<String> ENTITY_TYPE = new HashSet(
             Arrays.asList("PERSON", "LOCATION", "ORGANIZATION", "MISC", "CITY", "STATE_OR_PROVINCE", "COUNTRY", "TITLE"));
     private static final String PREMISE = "premise";
+    private static final String SPANISH_PROPERTIES = "Resources/config/StanfordCoreNLP-spanish.properties";
 
     // Class members
     private final String language;
@@ -440,10 +442,10 @@ public class ArgumentEngine {
         this.props = new Properties();
 
         try {
-            if (language.equals(Constants.LANG_EN)) {
+            if (language.equals(LANG_EN)) {
                 this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
-            } else if (language.equals(Constants.LANG_ES)) {
-                this.props.load(new FileInputStream(Constants.SPANISH_PROPERTIES));
+            } else if (language.equals(LANG_ES)) {
+                this.props.load(new FileInputStream(SPANISH_PROPERTIES));
             }
 
         } catch (FileNotFoundException ex) {

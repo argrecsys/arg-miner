@@ -17,9 +17,9 @@
  */
 package es.uam.irg.io;
 
-import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
-import es.uam.irg.nlp.am.Constants;
+import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -47,7 +47,10 @@ import org.yaml.snakeyaml.Yaml;
  */
 public class IOManager {
 
+    // Class constants
     private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
+    private static final String LEXICON_FILEPATH = "Resources/dataset/argument_lexicon_{}.csv";
+    private static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
     private static final HashSet<String> VALID_LINKERS = new HashSet();
 
     /**
@@ -58,7 +61,7 @@ public class IOManager {
      */
     public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();
-        String lexiconFilepath = Constants.LEXICON_FILEPATH.replace("{}", lang);
+        String lexiconFilepath = LEXICON_FILEPATH.replace("{}", lang);
 
         try {
             // Get the file
@@ -130,8 +133,8 @@ public class IOManager {
      */
     public static HashSet<String> readStopwordList(String lang, boolean verbose) {
         HashSet<String> stopwords = new HashSet<>();
-        String language = (lang.equals(Constants.LANG_EN) ? "english" : "spanish");
-        String stopwordsFilepath = Constants.STOPWORDS_FILEPATH.replace("{}", language);
+        String language = (lang.equals(ArgumentEngine.LANG_EN) ? "english" : "spanish");
+        String stopwordsFilepath = STOPWORDS_FILEPATH.replace("{}", language);
 
         try {
             // Get the file

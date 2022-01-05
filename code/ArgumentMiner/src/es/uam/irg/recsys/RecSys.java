@@ -33,9 +33,9 @@ public class RecSys {
         System.out.println(">> RECSYS BEGINS");
 
         // Program hyperparameters with default values
-        String language = Constants.LANG_ES;
+        String language = "es";
         int minAspectOccur = 1;
-        String topic = Constants.NO_TOPIC;
+        String topic = "-";
         Integer[] customProposalID = new Integer[0];
 
         // Read input parameters
@@ -45,9 +45,7 @@ public class RecSys {
                 case 0 ->
                     minAspectOccur = Integer.parseInt(args[i]);
                 case 1 -> {
-                    if (!args[i].equals(Constants.NO_TOPIC)) {
-                        topic = args[i].toLowerCase();
-                    }
+                    topic = args[i].toLowerCase();
                 }
                 case 2 -> {
                     String[] ids = args[i].split(",");

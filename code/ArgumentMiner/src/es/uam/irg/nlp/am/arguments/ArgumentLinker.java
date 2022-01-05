@@ -17,7 +17,6 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
-import es.uam.irg.nlp.am.Constants;
 import org.bson.Document;
 import org.json.JSONObject;
 
@@ -56,7 +55,7 @@ public class ArgumentLinker {
         this.relationType = relationType;
         this.linker = linker;
         this.nTokens = linker.split(" ").length;
-        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+        this.spLinker = linker.replace(" ", TreeAnalyzer.NGRAMS_DELIMITER);
     }
 
     /**
@@ -69,7 +68,7 @@ public class ArgumentLinker {
         this.relationType = doc.getString("relationType");
         this.linker = doc.getString("linker");
         this.nTokens = linker.split(" ").length;
-        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+        this.spLinker = linker.replace(" ", TreeAnalyzer.NGRAMS_DELIMITER);
     }
 
     /**
@@ -111,20 +110,20 @@ public class ArgumentLinker {
 
     /**
      *
-     * @return
-     */
-    @Override
-    public String toString() {
-        return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
-    }
-
-    /**
-     *
      * @param nGram
      * @return
      */
     public boolean isEquals(String nGram) {
         return this.spLinker.equals(nGram);
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
     }
 
 }

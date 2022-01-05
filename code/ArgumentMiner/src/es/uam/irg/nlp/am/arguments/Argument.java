@@ -203,16 +203,6 @@ public class Argument {
      *
      * @return
      */
-    @Override
-    public String toString() {
-        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
-                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.toString());
-    }
-
-    /**
-     *
-     * @return
-     */
     public String getSyntacticTree() {
         return this.syntacticTree;
     }
@@ -231,6 +221,16 @@ public class Argument {
      */
     public boolean isValid() {
         return this.isValid;
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
+                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.toString());
     }
 
     /**
