@@ -1,7 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.am.arguments;
 
@@ -12,7 +24,6 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.ArraySet;
 import edu.stanford.nlp.util.CoreMap;
-import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticAnalysisManager;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticallyAnalyzedSentence;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
@@ -27,13 +38,16 @@ import java.util.logging.Logger;
  *
  * @author ansegura
  */
-public class ArgumentEngine implements Constants {
+public class ArgumentEngine {
 
     // Class constants
+    public static final String LANG_EN = "en";
+    public static final String LANG_ES = "es";
     private static final String CLAIM = "claim";
     private static final HashSet<String> ENTITY_TYPE = new HashSet(
             Arrays.asList("PERSON", "LOCATION", "ORGANIZATION", "MISC", "CITY", "STATE_OR_PROVINCE", "COUNTRY", "TITLE"));
     private static final String PREMISE = "premise";
+    private static final String SPANISH_PROPERTIES = "Resources/config/StanfordCoreNLP-spanish.properties";
 
     // Class members
     private final String language;
@@ -431,7 +445,7 @@ public class ArgumentEngine implements Constants {
             if (language.equals(LANG_EN)) {
                 this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
             } else if (language.equals(LANG_ES)) {
-                this.props.load(new FileInputStream(Constants.SPANISH_PROPERTIES));
+                this.props.load(new FileInputStream(SPANISH_PROPERTIES));
             }
 
         } catch (FileNotFoundException ex) {

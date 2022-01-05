@@ -1,13 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.io;
 
-import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
-import es.uam.irg.nlp.am.Constants;
+import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
+import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,9 +45,12 @@ import org.yaml.snakeyaml.Yaml;
  *
  * @author ansegura
  */
-public class IOManager implements Constants {
+public class IOManager {
 
+    // Class constants
     private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
+    private static final String LEXICON_FILEPATH = "Resources/dataset/argument_lexicon_{}.csv";
+    private static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
     private static final HashSet<String> VALID_LINKERS = new HashSet();
 
     /**
@@ -118,7 +133,7 @@ public class IOManager implements Constants {
      */
     public static HashSet<String> readStopwordList(String lang, boolean verbose) {
         HashSet<String> stopwords = new HashSet<>();
-        String language = (lang.equals(LANG_EN) ? "english" : "spanish");
+        String language = (lang.equals(ArgumentEngine.LANG_EN) ? "english" : "spanish");
         String stopwordsFilepath = STOPWORDS_FILEPATH.replace("{}", language);
 
         try {

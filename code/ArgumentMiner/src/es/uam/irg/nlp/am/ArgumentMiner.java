@@ -1,7 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.am;
 
@@ -34,6 +46,10 @@ import org.json.JSONObject;
  */
 public class ArgumentMiner {
 
+    // Class constants
+    private static final String ARGUMENTS_FILEPATH = "../../results/arguments.json";
+    private static final boolean VERBOSE = true;
+    
     // Class members
     private String language;
     private ArgumentLinkerManager lnkManager;
@@ -42,7 +58,6 @@ public class ArgumentMiner {
     private Map<Integer, DMComment> proposalComments;
     private Map<Integer, DMProposal> proposals;
     private HashSet<String> stopwords;
-    private boolean verbose = true;
 
     /**
      * Class constructor.
@@ -53,8 +68,8 @@ public class ArgumentMiner {
      */
     public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalIds) {
         this.language = language;
-        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(Constants.MONGO_DB);
-        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(Constants.MYSQL_DB);
+        this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
+        this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);
         this.lnkManager = createLinkerManager(language);
         this.stopwords = getStopwordList(language);
 
@@ -155,7 +170,7 @@ public class ArgumentMiner {
      * @return
      */
     private ArgumentLinkerManager createLinkerManager(String lang) {
-        return IOManager.readLinkerTaxonomy(lang, this.verbose);
+        return IOManager.readLinkerTaxonomy(lang, VERBOSE);
     }
 
     /**
@@ -202,7 +217,7 @@ public class ArgumentMiner {
             }
 
             // Show results
-            if (this.verbose) {
+            if (VERBOSE) {
                 System.out.println(">> Number of proposals: " + proposals.size());
                 System.out.println("   Number of comments: " + proposalComments.size());
             }
@@ -217,7 +232,7 @@ public class ArgumentMiner {
      * @return
      */
     private HashSet<String> getStopwordList(String lang) {
-        return IOManager.readStopwordList(lang, this.verbose);
+        return IOManager.readStopwordList(lang, VERBOSE);
     }
 
     /**
@@ -240,7 +255,7 @@ public class ArgumentMiner {
             });
 
             // Save JSON files
-            result = IOManager.saveStringToJson(argList.toString(4), Constants.ARGUMENTS_FILEPATH);
+            result = IOManager.saveStringToJson(argList.toString(4), ARGUMENTS_FILEPATH);
         }
 
         return result;

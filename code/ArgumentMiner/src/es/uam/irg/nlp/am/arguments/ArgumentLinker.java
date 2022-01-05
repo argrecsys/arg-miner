@@ -1,11 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.am.arguments;
 
-import es.uam.irg.nlp.am.Constants;
 import org.bson.Document;
 import org.json.JSONObject;
 
@@ -44,7 +55,7 @@ public class ArgumentLinker {
         this.relationType = relationType;
         this.linker = linker;
         this.nTokens = linker.split(" ").length;
-        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+        this.spLinker = linker.replace(" ", TreeAnalyzer.NGRAMS_DELIMITER);
     }
 
     /**
@@ -57,7 +68,7 @@ public class ArgumentLinker {
         this.relationType = doc.getString("relationType");
         this.linker = doc.getString("linker");
         this.nTokens = linker.split(" ").length;
-        this.spLinker = linker.replace(" ", Constants.NGRAMS_DELIMITER);
+        this.spLinker = linker.replace(" ", TreeAnalyzer.NGRAMS_DELIMITER);
     }
 
     /**
@@ -99,20 +110,20 @@ public class ArgumentLinker {
 
     /**
      *
-     * @return
-     */
-    @Override
-    public String toString() {
-        return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
-    }
-
-    /**
-     *
      * @param nGram
      * @return
      */
     public boolean isEquals(String nGram) {
         return this.spLinker.equals(nGram);
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        return String.format("%s > %s > [%s] %s (%s)", this.category, this.subCategory, this.nTokens, this.linker, this.relationType);
     }
 
 }

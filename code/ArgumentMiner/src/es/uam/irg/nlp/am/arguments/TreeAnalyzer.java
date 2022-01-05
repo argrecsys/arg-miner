@@ -1,11 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.nlp.am.arguments;
 
-import es.uam.irg.nlp.am.Constants;
 import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.List;
@@ -18,6 +29,10 @@ import java.util.logging.Logger;
  */
 public class TreeAnalyzer {
 
+    // Class constants
+    public static final String NGRAMS_DELIMITER = "-";
+
+    // Class variables
     private final List<ArgumentLinker> linkers;
     private final int nLinkers;
 
@@ -74,7 +89,7 @@ public class TreeAnalyzer {
         try {
             if (tokens.length > 0) {
                 String[] subList = FunctionUtils.getSubArray(tokens, init, init + nTokens);
-                nGram = FunctionUtils.arrayToString(subList, Constants.NGRAMS_DELIMITER);
+                nGram = FunctionUtils.arrayToString(subList, NGRAMS_DELIMITER);
             }
         } catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);

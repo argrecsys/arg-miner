@@ -11,7 +11,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.UpdateOptions;
-import es.uam.irg.recsys.Constants;
+import es.uam.irg.recsys.ArguRecSys;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -80,7 +80,7 @@ public class MongoDbManager {
             // Query documents
             MongoCollection<Document> collection = db.getCollection(collName);
             FindIterable<Document> cursor = null;
-            if (!topic.equals(Constants.NO_TOPIC)) {
+            if (!topic.equals(ArguRecSys.NO_TOPIC)) {
                 cursor = collection.find(Filters.text(topic));
             } else {
                 cursor = collection.find();
@@ -89,11 +89,11 @@ public class MongoDbManager {
             for (Iterator<Document> it = cursor.iterator(); it.hasNext();) {
                 Document doc = it.next();
                 proposalID = (int) doc.get("proposalID");
-                if (setIds.contains(proposalID)) {
+                if (setIds.isEmpty() || setIds.contains(proposalID)) {
                     docs.add(doc);
                 }
             }
-            
+
         } catch (Exception ex) {
             System.err.println("MongoDB error: " + ex.getMessage());
         }

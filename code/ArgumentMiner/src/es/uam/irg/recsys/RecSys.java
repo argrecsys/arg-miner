@@ -1,7 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Copyright 2021
+ * Andrés Segura-Tinoco
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
  */
 package es.uam.irg.recsys;
 
@@ -21,9 +33,9 @@ public class RecSys {
         System.out.println(">> RECSYS BEGINS");
 
         // Program hyperparameters with default values
-        String language = Constants.LANG_ES;
+        String language = "es";
         int minAspectOccur = 1;
-        String topic = Constants.NO_TOPIC;
+        String topic = "-";
         Integer[] customProposalID = new Integer[0];
 
         // Read input parameters
@@ -33,9 +45,7 @@ public class RecSys {
                 case 0 ->
                     minAspectOccur = Integer.parseInt(args[i]);
                 case 1 -> {
-                    if (!args[i].equals(Constants.NO_TOPIC)) {
-                        topic = args[i].toLowerCase();
-                    }
+                    topic = args[i].toLowerCase();
                 }
                 case 2 -> {
                     String[] ids = args[i].split(",");
