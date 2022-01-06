@@ -17,7 +17,9 @@
  */
 package es.uam.irg.recsys;
 
-import java.util.Arrays;
+import es.uam.irg.utils.InitParams;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -32,34 +34,19 @@ public class RecSys {
         // TODO code application logic here
         System.out.println(">> RECSYS BEGINS");
 
-        // Program hyperparameters with default values
-        String language = "es";
-        int minAspectOccur = 1;
-        String topic = "-";
-        Integer[] customProposalID = new Integer[0];
-
-        // Read input parameters
-        System.out.println(">> N params: " + args.length);
-        for (int i = 0; i < args.length; i++) {
-            switch (i) {
-                case 0 ->
-                    minAspectOccur = Integer.parseInt(args[i]);
-                case 1 -> {
-                    topic = args[i].toLowerCase();
-                }
-                case 2 -> {
-                    String[] ids = args[i].split(",");
-                    customProposalID = new Integer[ids.length];
-                    for (int j = 0; j < ids.length; j++) {
-                        customProposalID[j] = Integer.parseInt(ids[j]);
-                    }
-                }
-            }
-        }
-        System.out.format("   Minimum occurrences per aspect: %s, topic selected: %s, customized proposals: %s\n", minAspectOccur, topic, Arrays.toString(customProposalID));
+        // Program hyperparameters from JSON config file
+        Map<String, Object> params = InitParams.readInitParams();
+        String language = (String) params.get("language");
+        Integer[] customProposalIds = (Integer[]) params.get("customProposals");
+        Map<String, Object> recommendation = (Map<String, Object>) params.get("recommendation");
+        int maxTreeLevel = (int) recommendation.get("maxTreeLevel");
+        int minAspectOccur = (int) recommendation.get("minAspectOccur");
+        String topic = (String) recommendation.get("topic");
+        System.out.format(">> Analysis language: %s, Maximum level of the syntactic tree: %s, Minimum occurrences per aspect: %s, Selected topic: %s, Ids of customized proposals: %s\n",
+                language, maxTreeLevel, minAspectOccur, topic, customProposalIds);
 
         // Run program
-        ArguRecSys recSys = new ArguRecSys(language, minAspectOccur, topic, customProposalID);
+        ArguRecSys recSys = new ArguRecSys(language, maxTreeLevel, minAspectOccur, topic, customProposalIds);
         boolean result = recSys.runRecSys();
 
         if (result) {

@@ -49,7 +49,7 @@ public class ArgumentMiner {
     // Class constants
     private static final String ARGUMENTS_FILEPATH = "../../results/arguments.json";
     private static final boolean VERBOSE = true;
-    
+
     // Class members
     private String language;
     private ArgumentLinkerManager lnkManager;
@@ -61,12 +61,12 @@ public class ArgumentMiner {
 
     /**
      * Class constructor.
-     *
+     * 
      * @param language
-     * @param annotateComments
      * @param customProposalIds
+     * @param annotateComments 
      */
-    public ArgumentMiner(String language, boolean annotateComments, Integer[] customProposalIds) {
+    public ArgumentMiner(String language, Integer[] customProposalIds, boolean annotateComments) {
         this.language = language;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);

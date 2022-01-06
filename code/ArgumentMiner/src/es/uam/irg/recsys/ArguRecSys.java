@@ -52,12 +52,12 @@ public class ArguRecSys {
     private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
     private static final String LANG_EN = "en";
     private static final String LANG_ES = "es";
-    private static final int MAX_TREE_LEVEL = 2;
     private static final String RECOMMENDATIONS_FILEPATH = "../../results/recommendations_{}.xml";
 
     // Class members
     private Integer[] customProposalIds;
     private String language;
+    private int maxTreeLevel;
     private Map<String, Object> mdbSetup;
     private int minAspectOccur;
     private Map<String, Object> msqlSetup;
@@ -67,12 +67,14 @@ public class ArguRecSys {
      * Class constructor.
      *
      * @param language
+     * @param maxTreeLevel
      * @param minAspectOccur
      * @param topic
      * @param customProposalIds
      */
-    public ArguRecSys(String language, int minAspectOccur, String topic, Integer[] customProposalIds) {
+    public ArguRecSys(String language, int maxTreeLevel, int minAspectOccur, String topic, Integer[] customProposalIds) {
         this.language = language;
+        this.maxTreeLevel = maxTreeLevel;
         this.minAspectOccur = minAspectOccur;
         this.topic = topic;
         this.customProposalIds = customProposalIds;
@@ -191,7 +193,7 @@ public class ArguRecSys {
 
         docs.forEach(doc -> {
             Argument arg = new Argument(doc);
-            if (arg.getTreeLevel() <= MAX_TREE_LEVEL) {
+            if (arg.getTreeLevel() <= this.maxTreeLevel) {
                 arguments.add(arg);
             }
         });
