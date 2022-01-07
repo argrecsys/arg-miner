@@ -18,7 +18,7 @@
 package es.uam.irg.recsys;
 
 import es.uam.irg.utils.InitParams;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -43,7 +43,7 @@ public class RecSys {
         int minAspectOccur = (int) recommendation.get("minAspectOccur");
         String topic = (String) recommendation.get("topic");
         System.out.format(">> Analysis language: %s, Maximum level of the syntactic tree: %s, Minimum occurrences per aspect: %s, Selected topic: %s, Ids of customized proposals: %s\n",
-                language, maxTreeLevel, minAspectOccur, topic, customProposalIds);
+                language, maxTreeLevel, minAspectOccur, topic, Arrays.toString(customProposalIds));
 
         // Run program
         ArguRecSys recSys = new ArguRecSys(language, maxTreeLevel, minAspectOccur, topic, customProposalIds);

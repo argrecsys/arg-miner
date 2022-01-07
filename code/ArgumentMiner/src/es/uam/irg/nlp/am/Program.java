@@ -19,6 +19,7 @@ package es.uam.irg.nlp.am;
 
 import es.uam.irg.utils.InitParams;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -40,10 +41,14 @@ public class Program {
         Integer[] customProposalIds = (Integer[]) params.get("customProposals");
         Map<String, Object> extraction = (Map<String, Object>) params.get("extraction");
         boolean annotateComments = (boolean) extraction.get("annotateComments");
-        System.out.format(">> Selected language: %s, annotate comments? %s, customized proposals: %s\n", language, annotateComments, Arrays.toString(customProposalIds));
+        Map<String, HashSet<String>> linkers = (Map<String, HashSet<String>>) ((Map<String, Object>) params.get("linkers")).get(language);
+        HashSet<String> validLinkers = linkers.get("validLinkers");
+        HashSet<String> invalidLinkers = linkers.get("invalidLinkers");
+        System.out.format(">> Analysis language: %s, Annotate comments? %s, Valid linkers: %s, Invalid linkers: %s, Ids of customized proposals: %s\n",
+                language, annotateComments, validLinkers, invalidLinkers, Arrays.toString(customProposalIds));
 
         // Run program
-        ArgumentMiner miner = new ArgumentMiner(language, customProposalIds, annotateComments);
+        ArgumentMiner miner = new ArgumentMiner(language, customProposalIds, annotateComments, validLinkers, invalidLinkers);
         boolean result = miner.runProgram();
 
         if (result) {

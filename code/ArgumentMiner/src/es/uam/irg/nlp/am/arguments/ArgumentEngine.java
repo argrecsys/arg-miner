@@ -50,23 +50,26 @@ public class ArgumentEngine {
     private static final String SPANISH_PROPERTIES = "Resources/config/StanfordCoreNLP-spanish.properties";
 
     // Class members
+    private final HashSet<String> invalidLinkers;
     private final String language;
     private final List<ArgumentLinker> lexicon;
-    private PrintWriter out;
+    private final PrintWriter out;
     private Properties props;
     private final HashSet<String> stopwords;
     private final TreeAnalyzer ta;
 
     /**
      * Class constructor.
-     *
+     * 
      * @param lang
      * @param lnkManager
-     * @param stopwords
+     * @param invalidLinkers
+     * @param stopwords 
      */
-    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager, HashSet<String> stopwords) {
+    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
         this.language = lang;
         this.lexicon = lnkManager.getLexicon(false);
+        this.invalidLinkers = invalidLinkers;
         this.stopwords = stopwords;
         this.ta = new TreeAnalyzer(this.lexicon);
         this.out = new PrintWriter(System.out);
@@ -172,8 +175,8 @@ public class ArgumentEngine {
 
     /**
      *
-     * @param premise
-     * @param premise0
+     * @param statType
+     * @param statement
      * @param linker
      * @return
      */
@@ -186,7 +189,7 @@ public class ArgumentEngine {
             latestToken = StringUtils.getLastToken(newStatement, " ");
 
             // TODO: use invalid linkers...
-            if (latestToken.equals("y") || latestToken.equals("o")) {
+            if (invalidLinkers.contains(latestToken)) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
                 newStatement = StringUtils.cleanText(newStatement, StringUtils.CLEAN_RIGHT);
             }
