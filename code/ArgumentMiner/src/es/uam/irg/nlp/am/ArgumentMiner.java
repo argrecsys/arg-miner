@@ -49,9 +49,10 @@ public class ArgumentMiner {
     // Class constants
     private static final String ARGUMENTS_FILEPATH = "../../results/arguments.json";
     private static final boolean VERBOSE = true;
+    private HashSet<String> invalidLinkers;
 
     // Class members
-    private String language;
+    private final String language;
     private ArgumentLinkerManager lnkManager;
     private Map<String, Object> mdbSetup;
     private Map<String, Object> msqlSetup;
@@ -61,16 +62,19 @@ public class ArgumentMiner {
 
     /**
      * Class constructor.
-     * 
+     *
      * @param language
      * @param customProposalIds
-     * @param annotateComments 
+     * @param annotateComments
+     * @param validLinkers
+     * @param invalidLinkers
      */
-    public ArgumentMiner(String language, Integer[] customProposalIds, boolean annotateComments) {
+    public ArgumentMiner(String language, Integer[] customProposalIds, boolean annotateComments, HashSet<String> validLinkers, HashSet<String> invalidLinkers) {
         this.language = language;
+        this.invalidLinkers = invalidLinkers;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);
-        this.lnkManager = createLinkerManager(language);
+        this.lnkManager = createLinkerManager(language, validLinkers, invalidLinkers);
         this.stopwords = getStopwordList(language);
 
         // Read argumentative proposals and their comments
@@ -87,7 +91,7 @@ public class ArgumentMiner {
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
 
             // Bulk annotation of proposals
-            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager, stopwords);
+            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager, invalidLinkers, stopwords);
 
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
@@ -121,13 +125,15 @@ public class ArgumentMiner {
      * @param language
      * @param proposals
      * @param lnkManager
+     * @param invalidLinkers
+     * @param stopwords
      * @return
      */
-    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager, HashSet<String> stopwords) {
+    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
 
         // Temporary vars
-        ArgumentEngine engine = new ArgumentEngine(language, lnkManager, stopwords);
+        ArgumentEngine engine = new ArgumentEngine(language, lnkManager, invalidLinkers, stopwords);
         int proposalID;
         int commentID;
         DMProposal proposal;
@@ -167,10 +173,12 @@ public class ArgumentMiner {
      * Create the linker manager object.
      *
      * @param lang
+     * @param validLinkers
+     * @param invalidLinkers
      * @return
      */
-    private ArgumentLinkerManager createLinkerManager(String lang) {
-        return IOManager.readLinkerTaxonomy(lang, VERBOSE);
+    private ArgumentLinkerManager createLinkerManager(String lang, HashSet<String> validLinkers, HashSet<String> invalidLinkers) {
+        return IOManager.readLinkerTaxonomy(lang, validLinkers, invalidLinkers, VERBOSE);
     }
 
     /**

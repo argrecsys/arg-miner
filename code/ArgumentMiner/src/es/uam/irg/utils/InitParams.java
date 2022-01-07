@@ -22,7 +22,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -69,16 +71,16 @@ public class InitParams {
 
                 // Linkers parameters
                 Map<String, Object> linkers = new HashMap<>();
-                Map<String, Object> en = new HashMap<>();
-                en.put("invalidAspects", new String[]{"also", "thing", "mine", "sometimes", "too", "other"});
-                en.put("invalidLinkers", new String[]{"and", "or"});
-                en.put("validLinkers", new String[]{});
+                Map<String, HashSet<String>> en = new HashMap<>();
+                en.put("invalidAspects", new HashSet(Arrays.asList("also", "thing", "mine", "sometimes", "too", "other")));
+                en.put("invalidLinkers", new HashSet(Arrays.asList("and", "or")));
+                en.put("validLinkers", new HashSet());
                 linkers.put("en", en);
-                Map<String, Object> es = new HashMap<>();
-                es.put("invalidAspects", new String[]{"tambien", "cosa", "mia", "veces", "ademas", "demas"});
-                es.put("invalidLinkers", new String[]{"o", "y"});
-                es.put("validLinkers", new String[]{});
-                linkers.put("en", es);
+                Map<String, HashSet<String>> es = new HashMap<>();
+                es.put("invalidAspects", new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas")));
+                es.put("invalidLinkers", new HashSet(Arrays.asList("o", "y")));
+                es.put("validLinkers", new HashSet());
+                linkers.put("es", es);
                 params.put("linkers", linkers);
             }
         }

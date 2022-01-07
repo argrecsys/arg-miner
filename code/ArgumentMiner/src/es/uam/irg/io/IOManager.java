@@ -27,7 +27,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -48,18 +47,18 @@ import org.yaml.snakeyaml.Yaml;
 public class IOManager {
 
     // Class constants
-    private static final HashSet<String> INVALID_LINKERS = new HashSet(Arrays.asList("e", "ni", "o", "y"));
     private static final String LEXICON_FILEPATH = "Resources/dataset/argument_lexicon_{}.csv";
     private static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
-    private static final HashSet<String> VALID_LINKERS = new HashSet();
 
     /**
-     *
+     * 
      * @param lang
+     * @param validLinkers
+     * @param invalidLinkers
      * @param verbose
-     * @return
+     * @return 
      */
-    public static ArgumentLinkerManager readLinkerTaxonomy(String lang, boolean verbose) {
+    public static ArgumentLinkerManager readLinkerTaxonomy(String lang, HashSet<String> validLinkers, HashSet<String> invalidLinkers, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();
         String lexiconFilepath = LEXICON_FILEPATH.replace("{}", lang);
 
@@ -87,7 +86,7 @@ public class IOManager {
                         linker = data[5];
 
                         // If the linker is a valid one and also not invalid... then add it
-                        if ((VALID_LINKERS.isEmpty() || VALID_LINKERS.contains(linker)) && (!INVALID_LINKERS.contains(linker))) {
+                        if ((validLinkers.isEmpty() || validLinkers.contains(linker)) && (!invalidLinkers.contains(linker))) {
                             linkers.addLinker(category, subCategory, relationType, linker);
                         }
                     }
