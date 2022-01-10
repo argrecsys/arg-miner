@@ -60,11 +60,11 @@ public class ArgumentEngine {
 
     /**
      * Class constructor.
-     * 
+     *
      * @param lang
      * @param lnkManager
      * @param invalidLinkers
-     * @param stopwords 
+     * @param stopwords
      */
     public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
         this.language = lang;
@@ -188,7 +188,6 @@ public class ArgumentEngine {
             newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_RIGHT);
             latestToken = StringUtils.getLastToken(newStatement, " ");
 
-            // TODO: use invalid linkers...
             if (invalidLinkers.contains(latestToken)) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
                 newStatement = StringUtils.cleanText(newStatement, StringUtils.CLEAN_RIGHT);
@@ -379,7 +378,6 @@ public class ArgumentEngine {
                     System.out.println(" - Pattern: " + sentPattern);
                     if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern) && !patterns.contains(sentPattern)) {
                         System.out.println(" + Valid pattern!");
-                        patterns.add(sentPattern);
 
                         // Reconstructing sentences (claim and premise)
                         String claim = "";
@@ -390,7 +388,7 @@ public class ArgumentEngine {
                             System.out.println("   " + child.toString());
 
                             String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
-                            if (!"".equals(premise) || currText.startsWith(linker.linker)) {
+                            if (!"".equals(premise) || StringUtils.cleanText(currText, StringUtils.CLEAN_BOTH).startsWith(linker.linker)) {
                                 premise += currText + " ";
                             } else {
                                 claim += currText + " ";
@@ -399,6 +397,7 @@ public class ArgumentEngine {
 
                         // Creating new argument
                         if (!StringUtils.isEmpty(claim) && !StringUtils.isEmpty(premise)) {
+                            patterns.add(sentPattern);
                             claim = cleanStatement(CLAIM, claim, null);
                             premise = cleanStatement(PREMISE, premise, linker);
 
