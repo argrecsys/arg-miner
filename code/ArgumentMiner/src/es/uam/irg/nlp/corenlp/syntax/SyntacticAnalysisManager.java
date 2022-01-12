@@ -43,6 +43,8 @@ public class SyntacticAnalysisManager {
             "[sn]-[grup.verb]-[S_LNK]",
             "[sn]-[neg]-[grup.verb]-[S_LNK]",
             "[sn]-[grup.verb]-[sp_LNK]",
+            "[sn]-[grup.verb]-[S]-[S_LNK]",
+            "[sn]-[neg]-[grup.verb]-[S]-[S_LNK]",
             "[sn]-[neg]-[grup.verb]-[sp_LNK]",
             "[sn]-[grup.verb]-[sn]-[S_LNK]",
             "[sn]-[neg]-[grup.verb]-[sn]-[S_LNK]",

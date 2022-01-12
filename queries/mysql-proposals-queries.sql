@@ -4,13 +4,13 @@ USE `decide.madrid_2019_09`;
 SELECT id, userId, date, LENGTH(summary) AS 'length', title, summary, text, numComments, numSupports
   FROM proposals
  WHERE summary LIKE '% dado que %'
- ORDER BY LENGTH(summary)
+ ORDER BY id
  LIMIT 10;
 
 -- Search proposals by ID
-SELECT id, title, summary, numComments
+SELECT * -- id, title, summary, numComments
   FROM proposals
- WHERE id IN (50)
+ WHERE id IN (5717, 20389)
  ORDER BY id;
 
 -- Search proposals by topic and linker
