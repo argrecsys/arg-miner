@@ -35,31 +35,35 @@ Example in JSON format of an argument extracted from a citizen proposal about pu
 
 ```json
 {
-    "5717-1": {
+    "5717-1-1": {
         "proposalID": 5717,
-        "sentence": "The use of public transport in the city is almost forced but in EMT pets are not allowed",
-        "mainVerb": "is forced",
-        "connector": {
-            "value": "but", "intent": "attack",
-            "category": "CONTRAST", "subCategory": "OPPOSITION"
-        },
-        "premise": {
-            "entities": "[EMT]",
-            "text": "in EMT pets are not allowed",
-            "nouns": "[pets]"
-        },
-        "claim": {
-            "entities": "[]",
-            "text": "The use of public transport in the city is almost forced",
-            "nouns": "[use, transport, city]"
-        },
+        "sentence": "We are almost forced to use public transport in the city but pets are not allowed in EMT",
         "majorClaim": {
             "entities": "[]",
             "text": "Allowing pets on public transport",
             "nouns": "[pets, transport]"
         },
-        "pattern": "P1 -> CLAIM + CONNECTOR + PREMISE"
-    }
+        "claim": {
+            "entities": "[]",
+            "text": "We are almost forced to use public transport in the city",
+            "nouns": "[use, transport, city]"
+        },
+        "premise": {
+            "entities": "[EMT]",
+            "text": "pets are not allowed in EMT",
+            "nouns": "[pets]"
+        },
+        "connector": {
+            "value": "but", "intent": "attack",
+            "category": "CONTRAST", "subCategory": "OPPOSITION"
+        },
+        "mainVerb": "forced",
+            "pattern": {
+            "value": "[S]-[conj_LNK]-[S]-[PUNCT]",
+            "level": 1
+        },
+        "syntacticTree": "(sentences (S (... )))"
+   }
 }
 ```
 
