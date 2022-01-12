@@ -397,7 +397,6 @@ public class ArgumentEngine {
 
                         // Creating new argument
                         if (!StringUtils.isEmpty(claim) && !StringUtils.isEmpty(premise)) {
-                            patterns.add(sentPattern);
                             claim = cleanStatement(CLAIM, claim, null);
                             premise = cleanStatement(PREMISE, premise, linker);
 
@@ -412,6 +411,7 @@ public class ArgumentEngine {
                             Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                             Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
                             arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
+                            patterns.add(sentPattern);
 
                         } else {
 
