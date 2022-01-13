@@ -19,6 +19,7 @@ package es.uam.irg.recsys;
 
 import es.uam.irg.utils.InitParams;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -42,11 +43,13 @@ public class RecSys {
         int maxTreeLevel = (int) recommendation.get("maxTreeLevel");
         int minAspectOccur = (int) recommendation.get("minAspectOccur");
         String topic = (String) recommendation.get("topic");
-        System.out.format(">> Analysis language: %s, Maximum level of the syntactic tree: %s, Minimum occurrences per aspect: %s, Selected topic: %s, Ids of customized proposals: %s\n",
-                language, maxTreeLevel, minAspectOccur, topic, Arrays.toString(customProposalIds));
+        Map<String, HashSet<String>> linkers = (Map<String, HashSet<String>>) params.get("linkers");
+        HashSet<String> invalidAspects = linkers.get("invalidAspects");
+        System.out.format(">> Analysis language: %s, Syntactic tree max depth: %s, Minimum occurrences per aspect: %s, Selected topic: %s, Invalid aspect: %s, Ids of customized proposals: %s\n",
+                language, maxTreeLevel, minAspectOccur, topic, invalidAspects, Arrays.toString(customProposalIds));
 
         // Run program
-        ArguRecSys recSys = new ArguRecSys(language, maxTreeLevel, minAspectOccur, topic, customProposalIds);
+        ArguRecSys recSys = new ArguRecSys(language, customProposalIds, maxTreeLevel, minAspectOccur, topic, invalidAspects);
         boolean result = recSys.runRecSys();
 
         if (result) {

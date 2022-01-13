@@ -1,13 +1,11 @@
 # Extraction and use of arguments in Recommender Systems
-![version](https://img.shields.io/badge/version-1.8.0-blue)
-![last-update](https://img.shields.io/badge/last_update-1/12/2021-orange)
+![version](https://img.shields.io/badge/version-2.0.0-blue)
+![last-update](https://img.shields.io/badge/last_update-1/13/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 
 
-This work was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021.
-
-Paper and presentation slides <a href="https://github.com/argrecsys/arg-miner/tree/main/paper">here</a>.
+This work was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
 
 ## Solution
 This system is composed of 2 main modules, which are:
@@ -37,32 +35,36 @@ Example in JSON format of an argument extracted from a citizen proposal about pu
 {
     "5717-1-1": {
         "proposalID": 5717,
-        "sentence": "We are almost forced to use public transport in the city but pets are not allowed in EMT",
         "majorClaim": {
             "entities": "[]",
             "text": "Allowing pets on public transport",
             "nouns": "[pets, transport]"
         },
+        "sentence": "We are almost forced to use public transport in the city but pets are not allowed in EMT",
         "claim": {
             "entities": "[]",
             "text": "We are almost forced to use public transport in the city",
             "nouns": "[use, transport, city]"
+        },
+        "linker": {
+            "value": "but", "intent": "attack",
+            "category": "CONTRAST", "subCategory": "OPPOSITION"
         },
         "premise": {
             "entities": "[EMT]",
             "text": "pets are not allowed in EMT",
             "nouns": "[pets]"
         },
-        "connector": {
-            "value": "but", "intent": "attack",
-            "category": "CONTRAST", "subCategory": "OPPOSITION"
-        },
         "mainVerb": "forced",
-            "pattern": {
+        "pattern": {
             "value": "[S]-[conj_LNK]-[S]-[PUNCT]",
             "level": 1
         },
-        "syntacticTree": "(sentences (S (... )))"
+        "syntacticTree": "(sentences 
+                            (S (sn (PRP We)) (group.verb (VBP are) ... ))
+                            (conj but)
+                            (S (sn (NNS pets)) (group.verb (VBP are) (RB not) ... ))
+                            (PUNCT .))"
    }
 }
 ```

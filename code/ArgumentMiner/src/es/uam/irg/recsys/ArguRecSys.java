@@ -24,7 +24,6 @@ import es.uam.irg.io.IOManager;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,13 +48,13 @@ public class ArguRecSys {
 
     // Class constants
     public static final String NO_TOPIC = "-";
-    private static final HashSet<String> INVALID_ASPECTS = new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas"));
     private static final String LANG_EN = "en";
     private static final String LANG_ES = "es";
     private static final String RECOMMENDATIONS_FILEPATH = "../../results/recommendations_{}.xml";
 
     // Class members
     private Integer[] customProposalIds;
+    private HashSet<String> invalidAspect;
     private String language;
     private int maxTreeLevel;
     private Map<String, Object> mdbSetup;
@@ -67,17 +66,19 @@ public class ArguRecSys {
      * Class constructor.
      *
      * @param language
+     * @param customProposalIds
      * @param maxTreeLevel
      * @param minAspectOccur
      * @param topic
-     * @param customProposalIds
+     * @param invalidAspect
      */
-    public ArguRecSys(String language, int maxTreeLevel, int minAspectOccur, String topic, Integer[] customProposalIds) {
+    public ArguRecSys(String language, Integer[] customProposalIds, int maxTreeLevel, int minAspectOccur, String topic, HashSet<String> invalidAspect) {
         this.language = language;
+        this.customProposalIds = customProposalIds;
         this.maxTreeLevel = maxTreeLevel;
         this.minAspectOccur = minAspectOccur;
         this.topic = topic;
-        this.customProposalIds = customProposalIds;
+        this.invalidAspect = invalidAspect;
         this.mdbSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MONGO_DB);
         this.msqlSetup = FunctionUtils.getDatabaseConfiguration(FunctionUtils.MYSQL_DB);
     }
@@ -220,7 +221,7 @@ public class ArguRecSys {
 
         System.out.println("Invalid aspects:");
         for (String aspect : listAspects) {
-            if (aspect.length() > 2 && !INVALID_ASPECTS.contains(aspect)) {
+            if (aspect.length() > 2 && !invalidAspect.contains(aspect)) {
                 count = aspects.getOrDefault(aspect, 0);
                 aspects.put(aspect, count + 1);
             } else {
