@@ -41,7 +41,7 @@ public class Program {
         Integer[] customProposalIds = (Integer[]) params.get("customProposals");
         Map<String, Object> extraction = (Map<String, Object>) params.get("extraction");
         boolean annotateComments = (boolean) extraction.get("annotateComments");
-        Map<String, HashSet<String>> linkers = (Map<String, HashSet<String>>) ((Map<String, Object>) params.get("linkers")).get(language);
+        Map<String, HashSet<String>> linkers = (Map<String, HashSet<String>>) params.get("linkers");
         HashSet<String> validLinkers = linkers.get("validLinkers");
         HashSet<String> invalidLinkers = linkers.get("invalidLinkers");
         System.out.format(">> Analysis language: %s, Annotate comments? %s, Valid linkers: %s, Invalid linkers: %s, Ids of customized proposals: %s\n",

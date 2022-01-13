@@ -22,19 +22,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
  *
- * @author Usuario
+ * @author ansegura
  */
 public class InitParams {
 
@@ -48,39 +46,38 @@ public class InitParams {
             JSONObject json = new JSONObject(jsonText);
 
             if (!json.isEmpty()) {
+                JSONObject data;
+
                 // General parameters
-                List<Object> ids = ((JSONArray) json.get("customProposalID")).toList();
+                String lang = json.getString("language");
+                List<Object> ids = json.getJSONArray("customProposalID").toList();
                 Integer[] customProposals = new Integer[ids.size()];
                 for (int i = 0; i < ids.size(); i++) {
                     customProposals[i] = Integer.parseInt(ids.get(i).toString());
                 }
+                params.put("language", lang);
                 params.put("customProposals", customProposals);
-                params.put("language", json.getString("language"));
 
-                // Extraction process parameters
+                // Extraction module parameters
+                data = json.getJSONObject("extraction");
                 Map<String, Object> extraction = new HashMap<>();
-                extraction.put("annotateComments", true);
+                extraction.put("annotateComments", data.getBoolean("annotateComments"));
                 params.put("extraction", extraction);
 
-                // Recommendation process parameters
+                // Recommendation module parameters
+                data = json.getJSONObject("recommendation");
                 Map<String, Object> recommendation = new HashMap<>();
-                recommendation.put("maxTreeLevel", 2);
-                recommendation.put("minAspectOccur", 1);
-                recommendation.put("topic", "-");
+                recommendation.put("maxTreeLevel", data.getNumber("maxTreeLevel"));
+                recommendation.put("minAspectOccur", data.getNumber("minAspectOccur"));
+                recommendation.put("topic", data.getString("topic"));
                 params.put("recommendation", recommendation);
 
                 // Linkers parameters
+                data = json.getJSONObject("linkers").getJSONObject(lang);
                 Map<String, Object> linkers = new HashMap<>();
-                Map<String, HashSet<String>> en = new HashMap<>();
-                en.put("invalidAspects", new HashSet(Arrays.asList("also", "thing", "mine", "sometimes", "too", "other")));
-                en.put("invalidLinkers", new HashSet(Arrays.asList("and", "or")));
-                en.put("validLinkers", new HashSet());
-                linkers.put("en", en);
-                Map<String, HashSet<String>> es = new HashMap<>();
-                es.put("invalidAspects", new HashSet(Arrays.asList("tambien", "cosa", "mia", "veces", "ademas", "demas")));
-                es.put("invalidLinkers", new HashSet(Arrays.asList("o", "y")));
-                es.put("validLinkers", new HashSet());
-                linkers.put("es", es);
+                linkers.put("invalidAspects", new HashSet(data.getJSONArray("invalidAspects").toList()));
+                linkers.put("invalidLinkers", new HashSet(data.getJSONArray("invalidLinkers").toList()));
+                linkers.put("validLinkers", new HashSet(data.getJSONArray("validLinkers").toList()));
                 params.put("linkers", linkers);
             }
         }
