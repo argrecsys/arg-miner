@@ -126,6 +126,8 @@ Example in XML format of recommendations of citizen proposals and arguments abou
 </recommendations>
 ```
 
+The other results (in file form) of the argument extractor and recommender system can be viewed <a href="https://github.com/argrecsys/arg-miner/tree/main/results">here</a>.
+
 ## Dependencies
 The implemented solutions depend on or make use of the following libraries and .jar files:
 - JDK 16
