@@ -1,16 +1,16 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-2.0.0-blue)
-![last-update](https://img.shields.io/badge/last_update-1/13/2021-orange)
+![last-update](https://img.shields.io/badge/last_update-1/14/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
-This repository contains a simple but efficient implementation of an argument-based recommender system, that makes use of the built taxonomy and lexicon to extract argument graphs from citizen proposals and debates of an e-participation platform. 
+This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
 
-This work was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
+This work was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides are <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
 
 ## Solution
 This system is composed of 2 main modules, which are:
 - Argument Miner: automatic argument extractor based on NLP techniques and a lexicon of connectors.
-- Argument-based Recommender System: makes recommendations of arguments based on topics and aspects of interest to the user.
+- Argument-based Recommender System: It makes recommendations of proposals and arguments based on topics and aspects of interest to the user.
 
 ## Resources
 This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="https://github.com/argrecsys/connectors" target="_blank">argrecsys/connectors</a> repository.
@@ -125,6 +125,8 @@ Example in XML format of recommendations of citizen proposals and arguments abou
     </topics>
 </recommendations>
 ```
+
+The other results (in file form) of the argument extractor and recommender system can be viewed <a href="https://github.com/argrecsys/arg-miner/tree/main/results">here</a>.
 
 ## Dependencies
 The implemented solutions depend on or make use of the following libraries and .jar files:
