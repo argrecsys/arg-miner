@@ -1,5 +1,5 @@
 {"proposalID": {$in: [735, 15347, 20575]}}
 {$and: [{"proposalID": 20575}, {"commentID": -1}]}
-{$and: [{"proposalID": 23219}, {"commentID": {$gt: -1}}]}
+{$and: [{"proposalID": 20389}, {"commentID": {$gt: -1}}]}
 {$or: [{$and: [{"proposalID": 965}, {"commentID": -1}]}, {"commentID": {$in: [22235, 84225]}}]}
 {"approach": { $regex: /[morfema.verbal]-[grup.verb]-[S_LNK]/}}
