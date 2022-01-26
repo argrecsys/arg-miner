@@ -1,5 +1,5 @@
 # Extraction and use of arguments in Recommender Systems
-![version](https://img.shields.io/badge/version-2.0.1-blue)
+![version](https://img.shields.io/badge/version-2.0.2-blue)
 ![last-update](https://img.shields.io/badge/last_update-1/26/2021-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
