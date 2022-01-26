@@ -121,7 +121,7 @@ public class ArgumentEngine {
 
         // 4. For each item..
         for (int i = 0; i < sentences.size(); i++) {
-            String sentenceID = docKey + (commentID > -1 ? "-" + commentID : "") + "-" + (i + 1);
+            String sentenceID = docKey + "-" + (commentID > -1 ? commentID : 0) + "-" + (i + 1);
 
             // 5. Get current sentence
             CoreMap sentence = sentences.get(i);
@@ -133,7 +133,8 @@ public class ArgumentEngine {
             List<String> entityList = new ArrayList<>(entities.keySet());
 
             // 7. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText, Arrays.asList("NOUN", "VERB"));
+            Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN", "VERB"));
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText, validPOS);
             List<String> nounList = new ArrayList<>();
             List<String> verbList = new ArrayList<>();
 
@@ -244,7 +245,8 @@ public class ArgumentEngine {
         if (text.length() > 0) {
 
             // Get nouns (from POS) in document title
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, Arrays.asList("NOUN"));
+            Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN"));
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, validPOS);
             tokens.forEach(token -> {
                 nounList.add(token.word());
             });
@@ -285,19 +287,14 @@ public class ArgumentEngine {
      * @param sentenceText
      * @return
      */
-    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText, List<String> labels) {
-        List<CoreLabel> tokens;
+    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText, Set<String> labels) {
+        List<CoreLabel> tokens = new ArrayList<>();
         CoreDocument document = pipeline.processToCoreDocument(sentenceText);
 
-        if (labels != null) {
-            tokens = new ArrayList<>();
-            for (CoreLabel token : document.tokens()) {
-                if (labels.contains(token.tag())) {
-                    tokens.add(token);
-                }
+        for (CoreLabel token : document.tokens()) {
+            if (labels.isEmpty() || labels.contains(token.tag())) {
+                tokens.add(token);
             }
-        } else {
-            tokens = new ArrayList<>(document.tokens());
         }
 
         return tokens;
@@ -311,12 +308,10 @@ public class ArgumentEngine {
      * @return
      */
     private String identifyMainVerb(String sentence, List<String> verbList) {
-        String mainVerb = null;
 
-        for (int i = 0; i < verbList.size(); i++) {
-            mainVerb = verbList.get(i);
-            if (sentence.contains(mainVerb)) {
-                return mainVerb;
+        for (String verb : verbList) {
+            if (sentence.contains(verb)) {
+                return verb;
             }
         }
 
