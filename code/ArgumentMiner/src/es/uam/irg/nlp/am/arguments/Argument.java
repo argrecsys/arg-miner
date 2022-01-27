@@ -185,9 +185,9 @@ public class Argument {
      */
     public Set<String> getNounsSet() {
         Set<String> nouns = new HashSet<>();
-        nouns.addAll(processNouns(this.majorClaim.nouns));
-        nouns.addAll(processNouns(this.claim.nouns));
-        nouns.addAll(processNouns(this.premise.nouns));
+        nouns.addAll(processNouns(this.majorClaim.getNouns()));
+        nouns.addAll(processNouns(this.claim.getNouns()));
+        nouns.addAll(processNouns(this.premise.getNouns()));
         return nouns;
     }
 
@@ -230,7 +230,7 @@ public class Argument {
     @Override
     public String toString() {
         return String.format("[%s] - %s > %s [vrb: %s, lnk: %s]",
-                this.argumentID, this.claim.text, this.premise.text, this.mainVerb, this.linker.toString());
+                this.argumentID, this.claim.getText(), this.premise.getText(), this.mainVerb, this.linker.toString());
     }
 
     /**

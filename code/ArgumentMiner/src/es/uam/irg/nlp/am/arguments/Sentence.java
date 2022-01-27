@@ -29,9 +29,9 @@ import org.json.JSONObject;
  */
 public class Sentence {
 
-    public List<String> entities;
-    public List<String> nouns;
-    public String text;
+    private List<String> entities;
+    private List<String> nouns;
+    private String text;
 
     public Sentence() {
         this("", new ArrayList<>(), new ArrayList<>());
@@ -65,6 +65,14 @@ public class Sentence {
         json.put("entities", this.entities.toString());
 
         return json;
+    }
+
+    public List<String> getNouns() {
+        return this.nouns;
+    }
+    
+    public String getText() {
+        return this.text;
     }
 
 }

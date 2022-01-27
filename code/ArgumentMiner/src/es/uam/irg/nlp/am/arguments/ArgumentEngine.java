@@ -54,7 +54,7 @@ public class ArgumentEngine {
     private final String language;
     private final List<ArgumentLinker> lexicon;
     private final PrintWriter out;
-    private Properties props;
+    private StanfordCoreNLP pipeline;
     private final HashSet<String> stopwords;
     private final TreeAnalyzer ta;
 
@@ -73,7 +73,7 @@ public class ArgumentEngine {
         this.stopwords = stopwords;
         this.ta = new TreeAnalyzer(this.lexicon);
         this.out = new PrintWriter(System.out);
-        setProperties();
+        createPipeline();
     }
 
     /**
@@ -85,7 +85,6 @@ public class ArgumentEngine {
         System.out.format("Task Analyze - Id: %s, Proposal: %s\n", docKey, docText);
 
         // Annotate entire document with Stanford CoreNLP
-        StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
         Annotation annotation = new Annotation(docText);
         pipeline.annotate(annotation);
 
@@ -107,34 +106,28 @@ public class ArgumentEngine {
         System.out.format("Task Annotate - Id: %s, Comment Id: %s, Proposal: %s\n", docKey, commentID, docText);
         List<Argument> result = new ArrayList<>();
 
-        // 1. Annotate entire document with Stanford CoreNLP
-        StanfordCoreNLP pipeline = new StanfordCoreNLP(this.props);
-        Annotation annotation = new Annotation(docText);
-        pipeline.annotate(annotation);
+        // 1. Create major claim object
+        Sentence majorClaim = createMajorClaim(docTitle);
 
-        // 2. Get sentences from the document
-        List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
-        System.out.println("N sentences: " + sentences.size());
+        // 2. Get candidate sentences from the document
+        List<String> sentences = getCandidateSentences(docText);
+        System.out.println("N candidate sentences: " + sentences.size());
 
-        // 3. Create major claim object
-        Sentence majorClaim = createMajorClaim(pipeline, docTitle);
-
-        // 4. For each item..
+        // 3. For each item..
         for (int i = 0; i < sentences.size(); i++) {
             String sentenceID = docKey + "-" + (commentID > -1 ? commentID : 0) + "-" + (i + 1);
 
-            // 5. Get current sentence
-            CoreMap sentence = sentences.get(i);
-            String sentenceText = sentence.toString();
+            // 4. Get current sentence
+            String sentenceText = sentences.get(i);
             System.out.format("[%s]: %s\n", sentenceID, sentenceText);
 
-            // 6. Get named entity recognition (NER) in document
-            Map<String, String> entities = getNamedEntities(pipeline, sentenceText);
+            // 5. Get named entity recognition (NER) in document
+            Map<String, String> entities = getNamedEntities(sentenceText);
             List<String> entityList = new ArrayList<>(entities.keySet());
 
-            // 7. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
+            // 6. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
             Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN", "VERB"));
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, sentenceText, validPOS);
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(sentenceText, validPOS);
             List<String> nounList = new ArrayList<>();
             List<String> verbList = new ArrayList<>();
 
@@ -150,15 +143,15 @@ public class ArgumentEngine {
             System.out.println("Noun list: " + nounList.toString());
             System.out.println("Verb list: " + verbList.toString());
 
-            // 8. Get constituency tree
+            // 7. Get constituency tree
             System.out.println("Calculate constituency tree:");
-            Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
+            Tree tree = getConstituencyTree(sentenceText);
             tree.pennPrint(out);
 
-            // 9. Apply arguments mining (AM)
+            // 8. Apply arguments mining (AM)
             List<Argument> arguments = mineArguments(sentenceID, userID, commentID, parentID, sentenceText, tree, entityList, nounList, verbList);
 
-            // 10. Save arguments
+            // 9. Save arguments
             if (arguments.size() > 0) {
                 arguments.forEach(arg -> {
                     arg.setMajorClaim(majorClaim);
@@ -172,6 +165,20 @@ public class ArgumentEngine {
         }
 
         return result;
+    }
+
+    /**
+     * Creates the constituency parse tree of a sentence.
+     *
+     * @param text
+     * @return
+     */
+    public Tree getConstituencyTree(String text) {
+        Annotation annotation = new Annotation(text);
+        pipeline.annotate(annotation);
+        CoreMap sentence = annotation.get(CoreAnnotations.SentencesAnnotation.class).get(0);
+        Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
+        return tree;
     }
 
     /**
@@ -237,7 +244,7 @@ public class ArgumentEngine {
      * @param text
      * @return
      */
-    private Sentence createMajorClaim(StanfordCoreNLP pipeline, String text) {
+    private Sentence createMajorClaim(String text) {
         text = StringUtils.cleanText(text, StringUtils.CLEAN_RIGHT);
         List<String> nounList = new ArrayList<>();
         List<String> entityList = new ArrayList<>();
@@ -246,13 +253,13 @@ public class ArgumentEngine {
 
             // Get nouns (from POS) in document title
             Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN"));
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(pipeline, text, validPOS);
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(text, validPOS);
             tokens.forEach(token -> {
                 nounList.add(token.word());
             });
 
             // Get named entity recognition (NER) in document title
-            Map<String, String> entities = getNamedEntities(pipeline, text);
+            Map<String, String> entities = getNamedEntities(text);
             entityList.addAll(entities.keySet());
         }
 
@@ -260,13 +267,55 @@ public class ArgumentEngine {
     }
 
     /**
-     * Apply Named Entity Recognition task.
+     * Creates the Stanford CoreNLP pipeline according to the specified
+     * language.
+     */
+    private void createPipeline() {
+        Properties props = new Properties();
+
+        try {
+            if (language.equals(LANG_EN)) {
+                props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
+            } else if (language.equals(LANG_ES)) {
+                props.load(new FileInputStream(SPANISH_PROPERTIES));
+            }
+            this.pipeline = new StanfordCoreNLP(props);
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    /**
+     * Returns a list of candidate sentences.
      *
-     * @param pipeline
      * @param text
      * @return
      */
-    private Map<String, String> getNamedEntities(StanfordCoreNLP pipeline, String text) {
+    private List<String> getCandidateSentences(String text) {
+        List<String> candSentences = new ArrayList<>();
+
+        Annotation annotation = new Annotation(text);
+        pipeline.annotate(annotation);
+
+        List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+        for (CoreMap sentence : sentences) {
+            candSentences.add(sentence.toString());
+        }
+
+        return candSentences;
+    }
+
+    /**
+     * Apply Named Entity Recognition task.
+     *
+     * @param text
+     * @return
+     */
+    private Map<String, String> getNamedEntities(String text) {
         Map<String, String> entities = new HashMap<>();
         CoreDocument document = pipeline.processToCoreDocument(text);
 
@@ -283,13 +332,13 @@ public class ArgumentEngine {
 
     /**
      *
-     * @param pipeline
-     * @param sentenceText
+     * @param text
+     * @param labels
      * @return
      */
-    private List<CoreLabel> getPartsOfSpeechTokens(StanfordCoreNLP pipeline, String sentenceText, Set<String> labels) {
+    private List<CoreLabel> getPartsOfSpeechTokens(String text, Set<String> labels) {
         List<CoreLabel> tokens = new ArrayList<>();
-        CoreDocument document = pipeline.processToCoreDocument(sentenceText);
+        CoreDocument document = pipeline.processToCoreDocument(text);
 
         for (CoreLabel token : document.tokens()) {
             if (labels.isEmpty() || labels.contains(token.tag())) {
@@ -430,26 +479,6 @@ public class ArgumentEngine {
 
         // System.out.println("Arguments number: " + arguments.size());
         return arguments;
-    }
-
-    /**
-     *
-     */
-    private void setProperties() {
-        this.props = new Properties();
-
-        try {
-            if (language.equals(LANG_EN)) {
-                this.props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref, sentiment");
-            } else if (language.equals(LANG_ES)) {
-                this.props.load(new FileInputStream(SPANISH_PROPERTIES));
-            }
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
 }

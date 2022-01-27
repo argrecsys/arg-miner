@@ -143,7 +143,7 @@ public class ArguRecSys {
         nArgu.setAttributeNode(attr);
 
         Element nClaim = doc.createElement("claim");
-        nClaim.appendChild(doc.createTextNode(argument.claim.text));
+        nClaim.appendChild(doc.createTextNode(argument.claim.getText()));
         nArgu.appendChild(nClaim);
 
         Element nLinker = doc.createElement("connector");
@@ -163,7 +163,7 @@ public class ArguRecSys {
         nLinker.setAttributeNode(attr);
 
         Element nPremise = doc.createElement("premise");
-        nPremise.appendChild(doc.createTextNode(argument.premise.text));
+        nPremise.appendChild(doc.createTextNode(argument.premise.getText()));
         nArgu.appendChild(nPremise);
 
         return nArgu;
