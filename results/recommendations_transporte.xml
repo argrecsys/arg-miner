@@ -264,17 +264,17 @@
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>usas dos transportes o bien haces mas de dos viajes por dia</premise>
                 </argument>
-                <argument commentid="-1" id="15269-1-1" parentid="-1" userid="204870">
+                <argument commentid="-1" id="15269-0-1-1" parentid="-1" userid="204870">
                     <claim>Es una zona con mucha poblacion infantil y adolescente</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>queremos evitar mas transporte privado hay que facilitarles el transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="26047-1-1" parentid="-1" userid="162662">
+                <argument commentid="-1" id="26047-0-1-1" parentid="-1" userid="162662">
                     <claim>Restablecer la accesibilidad a la Puerta del Sol</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>el autobus 50 ahora que se quiere reducir el transporte privado y fomentar el transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="19141-1-1" parentid="-1" userid="183196">
+                <argument commentid="-1" id="19141-0-1-1" parentid="-1" userid="183196">
                     <claim>Esta app permitiria ver informacion</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>estado de las lineas de transporte de la ciudad -LRB- horarios , retrasos etc. -RRB- , ademas de recargar la trajeta de transporte publico</premise>
@@ -284,7 +284,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>tambien tienes que tener en cuenta que la gente se desplaza en transporte publico porque es mejor alternativa que desplazarse en transporte privado</premise>
                 </argument>
-                <argument commentid="-1" id="10698-1-1" parentid="-1" userid="30">
+                <argument commentid="-1" id="10698-0-1-1" parentid="-1" userid="30">
                     <claim>anadiendo nuevos modos y modalidades de transporte</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>tranvia y buses de alta capacidad</premise>
@@ -334,7 +334,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no parece coger mucho impulso la propuesta , entre que estamos pelaos de dinero en Espana y que el uso de capital para inversion a futuro , e innovar y mejorar la calidad de vida -LRB- ya sea con mejores conexiones de transporte , como intentar solventar el problema de la contaminacion ya que la M30 y M40 estan siempre llenas en horas punta de gente que va o viene de trabajar -RRB- no es algo que parezca que le importe al gobierno , el metro de Madrid es una de las mejores cosas que han echo en su vida ya que es rapido , y es una buena red de transporte</premise>
                 </argument>
-                <argument commentid="-1" id="7494-2-1" parentid="-1" userid="1202">
+                <argument commentid="-1" id="7494-0-2-1" parentid="-1" userid="1202">
                     <claim>Impulsa uso transporte publico</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ir a trabajar</premise>
@@ -349,7 +349,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos</premise>
                 </argument>
-                <argument commentid="-1" id="17604-2-1" parentid="-1" userid="17205">
+                <argument commentid="-1" id="17604-0-2-1" parentid="-1" userid="17205">
                     <claim>Ampliar lineas de buses</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el transporte publico</premise>
@@ -359,7 +359,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>solo para Ambulancias , transporte publico , bicicletas , etc.</premise>
                 </argument>
-                <argument commentid="-1" id="912-1-1" parentid="-1" userid="15318">
+                <argument commentid="-1" id="912-0-1-1" parentid="-1" userid="15318">
                     <claim>Los ninos no deben pagar</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>montar en transporte publico</premise>
@@ -369,27 +369,27 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>solo para Ambulancias , transporte publico , bicicletas , etc.</premise>
                 </argument>
-                <argument commentid="-1" id="4671-1-1" parentid="-1" userid="42229">
+                <argument commentid="-1" id="4671-0-1-1" parentid="-1" userid="42229">
                     <claim>Que vaje el precio del transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>es muy caro</premise>
                 </argument>
-                <argument commentid="-1" id="1287-1-1" parentid="-1" userid="11444">
+                <argument commentid="-1" id="1287-0-1-1" parentid="-1" userid="11444">
                     <claim>El transporte en Madrid es bueno</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>tiene sus defectos</premise>
                 </argument>
-                <argument commentid="-1" id="20014-1-1" parentid="-1" userid="484431">
+                <argument commentid="-1" id="20014-0-1-1" parentid="-1" userid="484431">
                     <claim>Crear medida disuasoria</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que el transporte privado no acceda a la capital</premise>
                 </argument>
-                <argument commentid="-1" id="13413-3-1" parentid="-1" userid="179286">
+                <argument commentid="-1" id="13413-0-3-1" parentid="-1" userid="179286">
                     <claim>Crear un medio de transporte en esta zona</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar el desplazamiento</premise>
                 </argument>
-                <argument commentid="-1" id="4095-2-1" parentid="-1" userid="38994">
+                <argument commentid="-1" id="4095-0-2-1" parentid="-1" userid="38994">
                     <claim>Se encuentran relativamente cerca</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>su conexion es nefasta en transporte publico</premise>
@@ -404,7 +404,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ver la naturaleza cerca de tanto transporte y tantos</premise>
                 </argument>
-                <argument commentid="-1" id="22923-1-1" parentid="-1" userid="472369">
+                <argument commentid="-1" id="22923-0-1-1" parentid="-1" userid="472369">
                     <claim>El transporte publico deberia fomentarse</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que las familias con ninos puedan utilizarlo</premise>
@@ -434,7 +434,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>un poco de decoro tampoco vendria mal</premise>
                 </argument>
-                <argument commentid="-1" id="6600-1-1" parentid="-1" userid="59884">
+                <argument commentid="-1" id="6600-0-1-1" parentid="-1" userid="59884">
                     <claim>Saconia esta muy cerca de Plaza de Castilla</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no existe transporte publico entre ambas</premise>
@@ -454,7 +454,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no se si siempre podre serlo</premise>
                 </argument>
-                <argument commentid="-1" id="17872-1-1" parentid="-1" userid="104925">
+                <argument commentid="-1" id="17872-0-1-1" parentid="-1" userid="104925">
                     <claim>Hacer campana de concienciacion</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>no ocupar los asientos reservados del transporte publico si no los necesitas</premise>
@@ -464,7 +464,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay veces que no hay mas remedio</premise>
                 </argument>
-                <argument commentid="-1" id="4531-1-1" parentid="-1" userid="40907">
+                <argument commentid="-1" id="4531-0-1-1" parentid="-1" userid="40907">
                     <claim>Los parados deberian tener transporte reducido</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ayudar a su movilidad en su busqueda de trabajo</premise>
@@ -504,12 +504,12 @@
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>queremos que los desplazamientos sean breves</premise>
                 </argument>
-                <argument commentid="-1" id="18002-1-1" parentid="-1" userid="137940">
+                <argument commentid="-1" id="18002-0-1-1" parentid="-1" userid="137940">
                     <claim>Utilizar la tarjeta de transporte recargable -LRB- tipo la Barik de Bilbao -RRB-</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la tercera edad a precio reducido</premise>
                 </argument>
-                <argument commentid="-1" id="14398-1-1" parentid="-1" userid="168959">
+                <argument commentid="-1" id="14398-0-1-1" parentid="-1" userid="168959">
                     <claim>Eliminar el transporte ferroviario de mercancias por la proximidad de las viviendas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar ruido a los vecinos</premise>
@@ -524,7 +524,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>una buena red de transporte publico y tambien el uso de bicicletas</premise>
                 </argument>
-                <argument commentid="-1" id="624-1-1" parentid="-1" userid="13265">
+                <argument commentid="-1" id="624-0-1-1" parentid="-1" userid="13265">
                     <claim>Los desempleados sin ningun tipo de prestacion necesitariamos un abono transporte</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>lo tienen los jovenes a 20</premise>
@@ -534,7 +534,7 @@
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>el coche es uno de los medios de transporte que en ocasiones es necesario</premise>
                 </argument>
-                <argument commentid="-1" id="8152-1-1" parentid="-1" userid="89069">
+                <argument commentid="-1" id="8152-0-1-1" parentid="-1" userid="89069">
                     <claim>Adecuar un porcentaje de las bicis de bicimad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>el transporte de menores con sillas adaptadas para ellos</premise>
@@ -549,7 +549,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todas las edades , a lo mejor fomentaban mas el transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="3078-1-1" parentid="-1" userid="34353">
+                <argument commentid="-1" id="3078-0-1-1" parentid="-1" userid="34353">
                     <claim>Hay atascos monumentales en Madrid , de toda la vida</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>no se adapta el transporte publico a la realidad actual</premise>
@@ -559,12 +559,12 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar el transporte publico en la Universidad y en la</premise>
                 </argument>
-                <argument commentid="-1" id="16301-1-1" parentid="-1" userid="269941">
+                <argument commentid="-1" id="16301-0-1-1" parentid="-1" userid="269941">
                     <claim>Crear distintos tipos de Abono transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">segun</connector>
                     <premise>las rentas de cada persona</premise>
                 </argument>
-                <argument commentid="-1" id="9051-1-1" parentid="-1" userid="37498">
+                <argument commentid="-1" id="9051-0-1-1" parentid="-1" userid="37498">
                     <claim>El parking disuasorio de aviacion espanola debe ser asfaltado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>facilitar el acceso a Madrid en medio de transporte publico</premise>
@@ -574,7 +574,7 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>el que debemos pagarle el transporte a los estudiantes de mas de 26</premise>
                 </argument>
-                <argument commentid="-1" id="6212-1-1" parentid="-1" userid="2890">
+                <argument commentid="-1" id="6212-0-1-1" parentid="-1" userid="2890">
                     <claim>Incentivar el uso del transporte publico en los episodios de alta contaminacion</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>una reduccion del precio del mismo</premise>
@@ -584,7 +584,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que no hacer eternos los viajes al centro de Madrid en tte</premise>
                 </argument>
-                <argument commentid="-1" id="4099-1-1" parentid="-1" userid="10454">
+                <argument commentid="-1" id="4099-0-1-1" parentid="-1" userid="10454">
                     <claim>Cada vez que uso el transporte publico en Madrid observo</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>sistematicamente se incumplen normas elementales de su uso</premise>
@@ -619,7 +619,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>se me olvidaba , el grabar transporte publico obligaria tambien a que fueran los modelos mas modernos , limpios , no saturados , sin demoras , ... ?</premise>
                 </argument>
-                <argument commentid="-1" id="6890-1-1" parentid="-1" userid="63380">
+                <argument commentid="-1" id="6890-0-1-1" parentid="-1" userid="63380">
                     <claim>reforzar el transporte publico de las noches del 24 y 31 de diciembre</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar contaminacion y accidentes</premise>
@@ -629,7 +629,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no me atrevo a hacerlo compartiendo el carril con coches</premise>
                 </argument>
-                <argument commentid="-1" id="23366-1-1" parentid="-1" userid="14887">
+                <argument commentid="-1" id="23366-0-1-1" parentid="-1" userid="14887">
                     <claim>Permitir la posibilidad de adquirir abono transporte por quincenas o semanas</claim>
                     <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
                     <premise>proporcionalmente sea algo mas caro que el abono mensual</premise>
@@ -639,7 +639,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay buena oferta de transporte publico en el barrio</premise>
                 </argument>
-                <argument commentid="-1" id="17562-1-1" parentid="-1" userid="9533">
+                <argument commentid="-1" id="17562-0-1-1" parentid="-1" userid="9533">
                     <claim>El barrio de Saconia -LRB- Valdezarza -RRB- esta relativamente cerca a la estacion de Chamartin</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no hay transporte publico que una directamente estos lugares</premise>
@@ -654,7 +654,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el salto tenia que ser mucho menor para fomentar de verdad el transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="6563-1-1" parentid="-1" userid="59763">
+                <argument commentid="-1" id="6563-0-1-1" parentid="-1" userid="59763">
                     <claim>Promocionar el uso del transporte publico en periodo de elevada contaminacion</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>la aplicacion de una tarifa gratuita durante esos dias</premise>
@@ -664,12 +664,12 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los ciudadanos utilicemos el transporte publico en lugar del vehiculo particular</premise>
                 </argument>
-                <argument commentid="-1" id="5717-1-1" parentid="-1" userid="54843">
+                <argument commentid="-1" id="5717-0-1-1" parentid="-1" userid="54843">
                     <claim>Se esta casi obligando al uso del transporte publico en la ciudad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>en EMT no esta permitido la entrada de mascotas</premise>
                 </argument>
-                <argument commentid="-1" id="5014-1-1" parentid="-1" userid="38848">
+                <argument commentid="-1" id="5014-0-1-1" parentid="-1" userid="38848">
                     <claim>Impulsar el uso del transporte publico</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>la mejora y creacion de nuevas lineas de autobuses en el Ensanche de Vallecas</premise>
@@ -694,12 +694,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>en Madrid se pasa mas tiempo en transporte que en casa</premise>
                 </argument>
-                <argument commentid="-1" id="22859-2-1" parentid="-1" userid="214099">
+                <argument commentid="-1" id="22859-0-2-1" parentid="-1" userid="214099">
                     <claim>Esta a menos de 10 minutos en coche</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no hay medio de transporte publico lo que causa un gran atasco por las mananas</premise>
                 </argument>
-                <argument commentid="-1" id="18013-1-1" parentid="-1" userid="439500">
+                <argument commentid="-1" id="18013-0-1-1" parentid="-1" userid="439500">
                     <claim>Son 2 zonas que estan cerca</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no estan unidas por ningun tipo de transporte publico a lo largo de la Avenida de Arroyofresno</premise>
@@ -719,7 +719,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>para mi implicaria dejar de usar el transporte publico y ser un coche mas contaminando y haciendo atasco</premise>
                 </argument>
-                <argument commentid="-1" id="2769-1-1" parentid="-1" userid="10218">
+                <argument commentid="-1" id="2769-0-1-1" parentid="-1" userid="10218">
                     <claim>El Abono de transportes de Madrid dura 30 dias</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no todos los meses tienen 30 dias , hay varios meses que tienen 31</premise>
@@ -739,12 +739,12 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>lo que son adecuados para zonas de alta demanda como la Castellana</premise>
                 </argument>
-                <argument commentid="-1" id="22554-1-1" parentid="-1" userid="27149">
+                <argument commentid="-1" id="22554-0-1-1" parentid="-1" userid="27149">
                     <claim>Seria necesario ampliar el servicio de coches de electricos de alquiler</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>Car2Go , Zity , etc. a Valdebebas dado el escaso transporte existente en el barrio</premise>
                 </argument>
-                <argument commentid="-1" id="9976-1-1" parentid="-1" userid="39741">
+                <argument commentid="-1" id="9976-0-1-1" parentid="-1" userid="39741">
                     <claim>Formar una buena red de transporte escolar</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los padres no tuvieran que ir en coche todos los dias a todos los colegios de Madrid</premise>
@@ -764,17 +764,17 @@
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>se quiere reducir la entrada de coches a Madrid-centro y fomentar el uso del transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="23312-1-1" parentid="-1" userid="178549">
+                <argument commentid="-1" id="23312-0-1-1" parentid="-1" userid="178549">
                     <claim>Promover el transporte sostenible entre la comunidad estudiantil</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>la subvencion de motores electricos para bicicletas con vistas a reducir el trafico general de la ciudad</premise>
                 </argument>
-                <argument commentid="-1" id="13176-1-1" parentid="-1" userid="178510">
+                <argument commentid="-1" id="13176-0-1-1" parentid="-1" userid="178510">
                     <claim>Elaborar un plan de carga y descarga nocturno</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>abastecer a mercados y grandes almacenes con horario regulado -LRB- hora de entrega y salida -RRB- para cada transporte</premise>
                 </argument>
-                <argument commentid="-1" id="1692-2-1" parentid="-1" userid="24511">
+                <argument commentid="-1" id="1692-0-2-1" parentid="-1" userid="24511">
                     <claim>Muy a menudo los transportes publicos han de combinarse</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>no hacer como en otras ciudades donde si tomas un medio a continuacion de otro solo pagas uno ?</premise>
@@ -784,7 +784,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el transporte lo pagamos todos y tenemos todo el derecho del mundo a hacer uso de todas las instalaciones , cmo por ejemplo el ascensor</premise>
                 </argument>
-                <argument commentid="-1" id="255-2-1" parentid="-1" userid="10901">
+                <argument commentid="-1" id="255-0-2-1" parentid="-1" userid="10901">
                     <claim>Entre los 7 y 12 anos siguen usando este transporte acompanados de adultos</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>lo que a una familia le sale mas rentable desplazarse en coche</premise>
@@ -804,7 +804,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ir al trabajo 5 km ya que en transporte publico esta muy mal combinado y en coche tardo 15 minutos solamente</premise>
                 </argument>
-                <argument commentid="-1" id="4065-1-1" parentid="-1" userid="38890">
+                <argument commentid="-1" id="4065-0-1-1" parentid="-1" userid="38890">
                     <claim>Mejorar los accesos y el transporte publico de esta zona</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>esta creciendo el volumen de personas que viene a trabajar y los medios son insuficientes</premise>
@@ -819,7 +819,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no como consecuencia de la construccion de un barrio entero que sale de la nada</premise>
                 </argument>
-                <argument commentid="-1" id="4107-1-1" parentid="-1" userid="38799">
+                <argument commentid="-1" id="4107-0-1-1" parentid="-1" userid="38799">
                     <claim>Existen numerosas discapacidades hoy en dia</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>solo hay 2 opciones para el transporte publico , y para ambas has de tener mas de un 65 de discapacidad reconocida</premise>
@@ -829,7 +829,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>desde que esta medida empezo el transporte sigue siendo igual de malo por lo que va lleno y tarda mucho</premise>
                 </argument>
-                <argument commentid="-1" id="23945-1-1" parentid="-1" userid="592432">
+                <argument commentid="-1" id="23945-0-1-1" parentid="-1" userid="592432">
                     <claim>Ampliar la red de transporte de cercanias con lineas circulares</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>descargar el trafico de las carreteras que rodean Madrid -LRB- M30 , M40 , M45 y M50 -RRB- y contaminar menos</premise>
@@ -849,7 +849,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>me importa mas mi derecho a respirar aire y no veneno que tu derecho a ir en coche</premise>
                 </argument>
-                <argument commentid="-1" id="3843-1-1" parentid="-1" userid="37925">
+                <argument commentid="-1" id="3843-0-1-1" parentid="-1" userid="37925">
                     <claim>Serian necesarios autobuses publicos que fueran del ambulatorio al hospital</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>el transporte privado es muy costoso y muchos ciudadanos no se lo pueden permitir con sus pensiones</premise>
@@ -859,12 +859,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si puede hablar por los ciudadanos y solicitar mejoras en el transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="1432-1-1" parentid="-1" userid="13328">
+                <argument commentid="-1" id="1432-0-1-1" parentid="-1" userid="13328">
                     <claim>El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>es falso , metro de Legazpi queda lejos y los autobuses son nulos</premise>
                 </argument>
-                <argument commentid="-1" id="26115-1-1" parentid="-1" userid="578401">
+                <argument commentid="-1" id="26115-0-1-1" parentid="-1" userid="578401">
                     <claim>Queria proponer un transporte publico rapido y eficaz del Ensanche de Vallecas hasta Vicalvaro o Valdebernardo</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>comunicar con linea 9 y poder tener mas opciones a la linea 1</premise>
@@ -874,32 +874,32 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>luego ir a pie o en transporte publico al interior de la ciudad como bien dices , sobre todo cuando hay dias de alta contaminacion</premise>
                 </argument>
-                <argument commentid="-1" id="17995-1-1" parentid="-1" userid="10222">
+                <argument commentid="-1" id="17995-0-1-1" parentid="-1" userid="10222">
                     <claim>Crear una tasa</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que quienes no estan empadronados en Madrid y quieran acceder con su vehiculo a fin de que utilicen el transporte publico igual que ya hacen los madrilenos</premise>
                 </argument>
-                <argument commentid="-1" id="16040-1-1" parentid="-1" userid="243662">
+                <argument commentid="-1" id="16040-0-1-1" parentid="-1" userid="243662">
                     <claim>Ya hay disponibles lineas que conectan las distintas facultades de la UCM con barrios</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay muchos que no tienen este servicio , dejando a alumnos y profesores sin un transporte eficiente</premise>
                 </argument>
-                <argument commentid="-1" id="12487-5-1" parentid="-1" userid="8775">
+                <argument commentid="-1" id="12487-0-5-1" parentid="-1" userid="8775">
                     <claim>Lo digo</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>que el pasado dia 6 de Julio , deje a mis padres mayores en la puerta L del hospital -LRB- no estan nada agiles para que vayan en transporte publico -RRB-</premise>
                 </argument>
-                <argument commentid="-1" id="7588-1-1" parentid="-1" userid="73069">
+                <argument commentid="-1" id="7588-0-1-1" parentid="-1" userid="73069">
                     <claim>La gente que vive en municipios fuera de Madrid y trabaja en el centro puede tener dificultades para llegar sin el coche</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>tener mal acceso al transporte publico</premise>
                 </argument>
-                <argument commentid="-1" id="7221-1-1" parentid="-1" userid="9247">
+                <argument commentid="-1" id="7221-0-1-1" parentid="-1" userid="9247">
                     <claim>Para que no haya excusas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>utilizar el transporte publico los dias de mayor contaminacion atmosferica</premise>
                 </argument>
-                <argument commentid="-1" id="5334-1-1" parentid="-1" userid="52150">
+                <argument commentid="-1" id="5334-0-1-1" parentid="-1" userid="52150">
                     <claim>Alargar el recorrido de las lineas de autobus de la EMT de Sanchinarro a los nuevos desarrollos Valdebebas-Carcacavas</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>son dos barrios contiguos sin conexion por transporte publico</premise>
@@ -909,12 +909,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>tambien muchos otros que usan la bici como medio de transporte sostenible , reivindicando una ciudad mas limpia y respetuosa con el medio ambiente</premise>
                 </argument>
-                <argument commentid="-1" id="168-1-2" parentid="-1" userid="10449">
+                <argument commentid="-1" id="168-0-1-2" parentid="-1" userid="10449">
                     <claim>Todos los jubilados madrilenos deberian</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>ellos ser gratuito el transporte , bastante han contribuido cuando trabajaban</premise>
                 </argument>
-                <argument commentid="-1" id="168-1-1" parentid="-1" userid="10449">
+                <argument commentid="-1" id="168-0-1-1" parentid="-1" userid="10449">
                     <claim>Todos los jubilados madrilenos deberian para ellos ser gratuito el transporte , bastante han contribuido cuando trabajaban</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si no puede ser asi al menos los que tienen una pension baja</premise>
@@ -949,17 +949,17 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>debe hacerse con orden y planificacion , ya que por desgracia muchos no tenemos otra opcion que usar el transporte privado</premise>
                 </argument>
-                <argument commentid="-1" id="24693-1-1" parentid="-1" userid="598419">
+                <argument commentid="-1" id="24693-0-1-1" parentid="-1" userid="598419">
                     <claim>Es genial mirar por la mejora del medio ambiente y fomentar el uso del transporte publico</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>para ello seria bueno empezar por una bajada de precios y del tiempo de espera</premise>
                 </argument>
-                <argument commentid="-1" id="8065-1-1" parentid="-1" userid="88085">
+                <argument commentid="-1" id="8065-0-1-1" parentid="-1" userid="88085">
                     <claim>La empresa de Metro debera realizar las medidas tecnicas necesarias</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que el tren entre las estaciones de Tres Olivos y las Tablas pueda circular a una velocidad adecuada del medio de transporte</premise>
                 </argument>
-                <argument commentid="-1" id="6804-1-1" parentid="-1" userid="62461">
+                <argument commentid="-1" id="6804-0-1-1" parentid="-1" userid="62461">
                     <claim>Necesidad de carril bici en Barajas dada la distancia que existe entre los barrios y los parques Juan Carlos I y El Capricho</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que mayores y pequenos no tengan necesidad de transporte motorizado</premise>
@@ -979,7 +979,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay vagos que no lo cogen ni aunque les paguen por ello</premise>
                 </argument>
-                <argument commentid="-1" id="15942-1-1" parentid="-1" userid="236085">
+                <argument commentid="-1" id="15942-0-1-1" parentid="-1" userid="236085">
                     <claim>necesita transporte publico directo -LRB- metro / bus -RRB-</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>unir las dos zonas ya que es una pena que estando tan cerca se tarde una hora entre ambas , teniendo que coger dos autobuses actualmente</premise>
@@ -989,7 +989,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>respeto sus competencias y su trabajo profesional y honrado , hablo del taxi por centrarnos en Madrid , pero es extrapolable al resto de trabajadores del transporte</premise>
                 </argument>
-                <argument commentid="-1" id="9335-1-1" parentid="-1" userid="9478">
+                <argument commentid="-1" id="9335-0-1-1" parentid="-1" userid="9478">
                     <claim>Ampliar algunas de las lineas de autobuses de la EMT ya existentes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que crucen la ciudad de este a oeste pasando por el centro de Madrid para facilitar la movilidad en transporte publico</premise>
@@ -999,7 +999,7 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>lo que es mas eficiente</premise>
                 </argument>
-                <argument commentid="-1" id="797-1-1" parentid="-1" userid="14595">
+                <argument commentid="-1" id="797-0-1-1" parentid="-1" userid="14595">
                     <claim>Hasta ahora existe un abono transporte para jovenes</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>yo propongo que se cree un abono todavia mas economico o bien que se extienda el infantil hasta terminar la ensenanza obligatoria -LRB- 16 anos -RRB-</premise>
@@ -1024,12 +1024,12 @@
                     <connector category="cause" function="support" subcategory="reason">segun</connector>
                     <premise>la renta de la unidad familiar</premise>
                 </argument>
-                <argument commentid="-1" id="2367-1-1" parentid="-1" userid="11353">
+                <argument commentid="-1" id="2367-0-1-1" parentid="-1" userid="11353">
                     <claim>Soterrar el Paseo del Prado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>disponer de un verdadero paseo de los Museos dejando unicamente 2 carriles para el transporte publico -LRB- buses , taxis y motos -RRB- y creacion de un carril bici en condicio</premise>
                 </argument>
-                <argument commentid="-1" id="1988-1-1" parentid="-1" userid="12078">
+                <argument commentid="-1" id="1988-0-1-1" parentid="-1" userid="12078">
                     <claim>Hola , se tenemos la opcion de la tarjeta azul</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>solo vale para la zona A , por que pagando lo mismo que los de la tercera edad no podemos disfrutar de todas las zonas de transporte ?</premise>
@@ -1054,7 +1054,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el transporte publico nos sale el abono infantil y el mio de adulto por 74,60 euros y la gasolina no llega ni a 40 euros</premise>
                 </argument>
-                <argument commentid="-1" id="2847-1-1" parentid="-1" userid="33483">
+                <argument commentid="-1" id="2847-0-1-1" parentid="-1" userid="33483">
                     <claim>La tarjeta azul de transporte , tendria que ser valida</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>cercanias Renfe y para las zonas B1 , B2 y B3 , no como hasta ahora que solo se puede utilizar en la zona A , en metro y autobus de EMT</premise>
@@ -1084,7 +1084,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>se tienen que mejorar las alternativas de transporte publico para acceder al centro y a otras zonas de la ciudad</premise>
                 </argument>
-                <argument commentid="-1" id="5737-1-1" parentid="-1" userid="55068">
+                <argument commentid="-1" id="5737-0-1-1" parentid="-1" userid="55068">
                     <claim>Que vuelvan los Metro-buho</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que la gente que sale los fin de semana por la noche tengan mas medios de transporte para llegar a casa y no tengan que esperar mas de 20 min en la parada por el Buho</premise>
@@ -1263,7 +1263,7 @@
                 </argument>
             </aspect>
             <aspect quantity="1" value="autobus">
-                <argument commentid="-1" id="7633-1-1" parentid="-1" userid="16900">
+                <argument commentid="-1" id="7633-0-1-1" parentid="-1" userid="16900">
                     <claim>Todos los usuarios de Transporte Publico hemos viajado en un vagon , autobus o asiento , cerca de personas con recursos para un telefono inteligente</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no para los auriculares</premise>
@@ -1291,7 +1291,7 @@
                 </argument>
             </aspect>
             <aspect quantity="1" value="red">
-                <argument commentid="-1" id="11530-1-1" parentid="-1" userid="79781">
+                <argument commentid="-1" id="11530-0-1-1" parentid="-1" userid="79781">
                     <claim>Crear Tarjeta de Abono Metro Bus con un funcionamiento similar al Abono Transporte</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>limitando su utilizacion a la red de Metro y Autobus</premise>
@@ -1315,7 +1315,7 @@
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>el poder tener billetes simultaneamente de mas transportes como metro ligero , interurbanos , etc.</premise>
                 </argument>
-                <argument commentid="-1" id="14710-1-1" parentid="-1" userid="188835">
+                <argument commentid="-1" id="14710-0-1-1" parentid="-1" userid="188835">
                     <claim>Habilitar un espacio de silencio en los trenes</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder leer o trabajar</premise>
@@ -1354,12 +1354,12 @@
                     <connector category="consequence" function="support" subcategory="result">asi</connector>
                     <premise>que no me vengas con tonterias de que quiero la privatizacion ni de intereses partidistas</premise>
                 </argument>
-                <argument commentid="-1" id="917-1-1" parentid="-1" userid="15331">
+                <argument commentid="-1" id="917-0-1-1" parentid="-1" userid="15331">
                     <claim>Los descuentos en el Abono Transportes son</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>EDAD , sin mirar la capacidad economica del beneficiario , ejemplo : ABONO tercera edad , 13 , gane el jubilado 500 o gane 2000 , esto es INADMISIBLE</premise>
                 </argument>
-                <argument commentid="-1" id="24064-1-1" parentid="-1" userid="593373">
+                <argument commentid="-1" id="24064-0-1-1" parentid="-1" userid="593373">
                     <claim>Rampas mecanicas o ascensor para ir en silla de ruedas o a pie por Metro y Cercanias por toda la red de ambos transportes o , al menos , empezando</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>las estaciones de mayor afluencia o pendiente</premise>
@@ -1387,7 +1387,7 @@
                 </argument>
             </aspect>
             <aspect quantity="1" value="ciudades">
-                <argument commentid="-1" id="9013-1-1" parentid="-1" userid="98636">
+                <argument commentid="-1" id="9013-0-1-1" parentid="-1" userid="98636">
                     <claim>Tener un Abono Transporte Anual</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>en otras ciudades Europeas</premise>

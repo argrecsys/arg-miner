@@ -52,26 +52,24 @@ public class ArgumentEngine {
     // Class members
     private final HashSet<String> invalidLinkers;
     private final String language;
-    private final List<ArgumentLinker> lexicon;
     private final PrintWriter out;
     private StanfordCoreNLP pipeline;
     private final HashSet<String> stopwords;
-    private final TreeAnalyzer ta;
+    private final TreeAnalyzer parser;
 
     /**
      * Class constructor.
      *
      * @param lang
-     * @param lnkManager
+     * @param lexicon
      * @param invalidLinkers
      * @param stopwords
      */
-    public ArgumentEngine(String lang, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
+    public ArgumentEngine(String lang, List<ArgumentLinker> lexicon, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
         this.language = lang;
-        this.lexicon = lnkManager.getLexicon(false);
         this.invalidLinkers = invalidLinkers;
         this.stopwords = stopwords;
-        this.ta = new TreeAnalyzer(this.lexicon);
+        this.parser = new TreeAnalyzer(lexicon);
         this.out = new PrintWriter(System.out);
         createPipeline();
     }
@@ -407,7 +405,7 @@ public class ArgumentEngine {
 
                 // Checking if the text has or starts with a linker
                 lnkText = SyntacticAnalysisManager.getLinkerNodeText(treebank, currNode);
-                ArgumentLinker linker = ta.textHasLinker(lnkText);
+                ArgumentLinker linker = parser.textHasLinker(lnkText);
 
                 if (linker != null) {
                     parent = SyntacticAnalysisManager.getLinkerParentNode(analyzedTree, currNode);

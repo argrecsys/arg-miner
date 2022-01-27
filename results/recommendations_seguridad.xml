@@ -74,7 +74,7 @@
     <topics quantity="1">
         <topic quantity="7" value="seguridad">
             <aspect quantity="1" value="reciclaje">
-                <argument commentid="-1" id="9842-1-1" parentid="-1" userid="107762">
+                <argument commentid="-1" id="9842-0-1-1" parentid="-1" userid="107762">
                     <claim>extraen el contenido</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>aprovecharse economicamente de ello</premise>
@@ -86,12 +86,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no seguridad real</premise>
                 </argument>
-                <argument commentid="-1" id="2786-1-2" parentid="-1" userid="8584">
+                <argument commentid="-1" id="2786-0-1-2" parentid="-1" userid="8584">
                     <claim>tambien aparcamientos</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder dejar la bici con seguridad y comodidad</premise>
                 </argument>
-                <argument commentid="-1" id="2786-1-1" parentid="-1" userid="8584">
+                <argument commentid="-1" id="2786-0-1-1" parentid="-1" userid="8584">
                     <claim>Los ciclistas necesitamos carriles bici por donde poder circular con seguridad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>tambien aparcamientos para poder dejar la bici con seguridad y comodidad</premise>
@@ -111,7 +111,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>garantizar la seguridad vial</premise>
                 </argument>
-                <argument commentid="-1" id="19714-1-1" parentid="-1" userid="48974">
+                <argument commentid="-1" id="19714-0-1-1" parentid="-1" userid="48974">
                     <claim>tapar los huecos</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>motivos de seguridad e higiene</premise>
@@ -121,17 +121,17 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay que dotarlo de seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="3106-2-1" parentid="-1" userid="8775">
+                <argument commentid="-1" id="3106-0-2-1" parentid="-1" userid="8775">
                     <claim>Los recintos privados deben de ser vigilados</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>seguridad privada</premise>
                 </argument>
-                <argument commentid="-1" id="24640-1-1" parentid="-1" userid="599120">
+                <argument commentid="-1" id="24640-0-1-1" parentid="-1" userid="599120">
                     <claim>Modernizar este espacio ya existente</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>mejoras de accesibilidad y seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="24279-2-1" parentid="-1" userid="593706">
+                <argument commentid="-1" id="24279-0-2-1" parentid="-1" userid="593706">
                     <claim>El Ayuntamiento pondria menos multas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ganariamos en seguridad , peatones y conduc</premise>
@@ -151,7 +151,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>actualmente ya los hay en polideportivos y no transmiten ninguna seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="11626-1-1" parentid="-1" userid="26409">
+                <argument commentid="-1" id="11626-0-1-1" parentid="-1" userid="26409">
                     <claim>Area canina</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la seguridad de vuestros hijos y para la recreacion de vuestras mascotas</premise>
@@ -166,7 +166,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si podemos pedir que haya mayor seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="24707-1-1" parentid="-1" userid="588975">
+                <argument commentid="-1" id="24707-0-1-1" parentid="-1" userid="588975">
                     <claim>Recaudar una tasa municipal a los grandes eventos de empresas privadas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>costear dispositivos de emergencias , seguridad y limpieza</premise>
@@ -196,7 +196,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>aqui esta en cualquier caso la propuesta</premise>
                 </argument>
-                <argument commentid="-1" id="12176-1-1" parentid="-1" userid="9476">
+                <argument commentid="-1" id="12176-0-1-1" parentid="-1" userid="9476">
                     <claim>Entendiendo que los controles de velocidad son por nuestra seguridad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>nos gustaria que los senalizaran para evitarnos a todos sorpresas inesperadas</premise>
@@ -206,22 +206,22 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>se cerraron para euso interno de los dependientes , personal de seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="23243-1-1" parentid="-1" userid="120508">
+                <argument commentid="-1" id="23243-0-1-1" parentid="-1" userid="120508">
                     <claim>Crear alguna normativa y senalizacion</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los ciclistas guarden una distancia minima de seguridad con los peatones , sobre todo en Madrid Rio</premise>
                 </argument>
-                <argument commentid="-1" id="10801-1-1" parentid="-1" userid="8671">
+                <argument commentid="-1" id="10801-0-1-1" parentid="-1" userid="8671">
                     <claim>Resolvamos la indefension juridica y de seguridad personal</claim>
                     <connector category="cause" function="support" subcategory="reason">mediante</connector>
                     <premise>un servicio municipal de asistencia gratuita que acuda al domicilio de quien lo necesita</premise>
                 </argument>
-                <argument commentid="-1" id="341-1-1" parentid="-1" userid="10455">
+                <argument commentid="-1" id="341-0-1-1" parentid="-1" userid="10455">
                     <claim>Realizar una auditoria</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>identificar todos los problemas seguridad vial en colegios e institutos y elaborar soluciones para trayectos y entornos escolares seguros</premise>
                 </argument>
-                <argument commentid="-1" id="22466-1-1" parentid="-1" userid="10219">
+                <argument commentid="-1" id="22466-0-1-1" parentid="-1" userid="10219">
                     <claim>crear infraestructuras</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>garantizar su movilidad y seguridad en convivencia con el resto de actores que utilizan la via publica</premise>
@@ -231,17 +231,17 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si es en la fiesta homosexual es homofobia</premise>
                 </argument>
-                <argument commentid="-1" id="20891-1-1" parentid="-1" userid="309008">
+                <argument commentid="-1" id="20891-0-1-1" parentid="-1" userid="309008">
                     <claim>Renovacion de las zonas de juegos para los ninos poniendo columpios de seguridad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>los ninos mas pequenos que no hay ninguno en todo el parque</premise>
                 </argument>
-                <argument commentid="-1" id="3605-1-1" parentid="-1" userid="36620">
+                <argument commentid="-1" id="3605-0-1-1" parentid="-1" userid="36620">
                     <claim>Regularizar el sector</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>venimos hace mucho tiempo luchando con la Asociacion para brindar unas garantias y seguridad a los usuarios y por defectos a nosotros</premise>
                 </argument>
-                <argument commentid="-1" id="667-1-1" parentid="-1" userid="13589">
+                <argument commentid="-1" id="667-0-1-1" parentid="-1" userid="13589">
                     <claim>La ley de seguridad ciudadana impone multas</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>patinar en la calle donde el unico criterio de aplicacion es el del agente que la impone</premise>
@@ -261,7 +261,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>los recursos si lo son y si podemos hacer un analisis suficientemente bueno de lo que si da seguridad y de lo que no</premise>
                 </argument>
-                <argument commentid="-1" id="4843-1-1" parentid="-1" userid="38499">
+                <argument commentid="-1" id="4843-0-1-1" parentid="-1" userid="38499">
                     <claim>Cualquier colegio de Madrid deberia contarcon las condiciones minimas de seguridad</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>poder recoger</premise>
@@ -276,7 +276,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>sin ellos , muy probablemente hoy no tendrias ni seguridad social , ni vacaciones pagadas , ni dos dias de descanso cada semana , etc.</premise>
                 </argument>
-                <argument commentid="-1" id="7102-1-1" parentid="-1" userid="64677">
+                <argument commentid="-1" id="7102-0-1-1" parentid="-1" userid="64677">
                     <claim>Esta propuesta tiene</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>objeto la implementacion de medidas que mejoren las condiciones de seguridad en los alrededores de la Biblioteca Ana M Matute y Tanatorio de San Isidro</premise>
@@ -291,12 +291,12 @@
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>al ir cansados sus conductores ponen en peligro la seguridad de los demas conductores y tambien de los viandantes</premise>
                 </argument>
-                <argument commentid="-1" id="17161-1-1" parentid="-1" userid="108250">
+                <argument commentid="-1" id="17161-0-1-1" parentid="-1" userid="108250">
                     <claim>Hay acceso en bicicleta o andando desde la Avenida de Logrono hasta el aparcamiento de taxis de la T4</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>desde este punto no se puede continuar con seguridad hasta la entrada</premise>
                 </argument>
-                <argument commentid="-1" id="11143-1-1" parentid="-1" userid="15044">
+                <argument commentid="-1" id="11143-0-1-1" parentid="-1" userid="15044">
                     <claim>Los Vigilantes de Seguridad de Madrid , en el desarrollo de su actividad profesional , no tienen ningun tipo de autoridad</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>lo que su trabajo se ve limitado a la hora de desarrollar con</premise>
@@ -306,12 +306,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si da mas libertad para introducir y desarrollar parches de seguridad y que el parque de equipos este mas controlado</premise>
                 </argument>
-                <argument commentid="-1" id="15332-1-1" parentid="-1" userid="201259">
+                <argument commentid="-1" id="15332-0-1-1" parentid="-1" userid="201259">
                     <claim>Reubicar los estadios de futbol a las afueras de las ciudades</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar un ingente gasto en seguridad , que corten las calles y que los usuarios aparquen en aceras y pasos de cebra</premise>
                 </argument>
-                <argument commentid="-1" id="5819-1-1" parentid="-1" userid="55451">
+                <argument commentid="-1" id="5819-0-1-1" parentid="-1" userid="55451">
                     <claim>Mejorar la seguridad en los hospitales publicos de Madrid</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>evitar que se cuelen indeseables que puedan causar danos a los enfermos como ya ha sucedido en alguna ocasion en el Hospital Clinico</premise>
@@ -341,12 +341,12 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>hay mucha gente que si los necesita y los quiere para evitar accidentes porque hay demasiados conductores que no respetan la velocidad o la distancia de seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="21462-1-1" parentid="-1" userid="467357">
+                <argument commentid="-1" id="21462-0-1-1" parentid="-1" userid="467357">
                     <claim>Ensanche de la acera correspondiente a la fachada del CP NTRA SRA ALMUDENA asi</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>una mejora del espacio para garantizar la seguridad y bienestar de los alumn@s y las familias que acuden al centro</premise>
                 </argument>
-                <argument commentid="-1" id="1140-1-1" parentid="-1" userid="17718">
+                <argument commentid="-1" id="1140-0-1-1" parentid="-1" userid="17718">
                     <claim>el unico motivo , es</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>que pagan menos al trabajador y a la seguridad social estoy de acuerdo con la integracion , pero si una persona puede trabajar , que sea igual que todos en todos los aspectos</premise>
@@ -356,7 +356,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>en muchas calles donde dos coches no pueden cruzarse , pueden hacerlo un coche y un ciclo con seguridad</premise>
                 </argument>
-                <argument commentid="-1" id="25997-1-1" parentid="-1" userid="62222">
+                <argument commentid="-1" id="25997-0-1-1" parentid="-1" userid="62222">
                     <claim>Propongo la habilitacion de la parada de autobus n 950 -LRB- utilizada por el 28 y el 71 -RRB-</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que pueda utilizarla el autobus nocturno N6 y que asi aumente nuestra tranquilidad y seguridad por la noche</premise>

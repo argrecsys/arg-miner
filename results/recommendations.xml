@@ -678,7 +678,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>aunque hubiera coches pasarian si o si</premise>
                 </argument>
-                <argument commentid="-1" id="2524-1-1" parentid="-1" userid="21498">
+                <argument commentid="-1" id="2524-0-1-1" parentid="-1" userid="21498">
                     <claim>Propiciar un espacio comun autogestionado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mujeres mayores de 50 anos que quieren convivir con personas con inquietudes ecologicas , creativas y culturales</premise>
@@ -708,7 +708,7 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>tuneles y las mercancias por la superficie en camiones</premise>
                 </argument>
-                <argument commentid="-1" id="6931-1-1" parentid="-1" userid="482">
+                <argument commentid="-1" id="6931-0-1-1" parentid="-1" userid="482">
                     <claim>Tenemos registro de huellas dactilares</claim>
                     <connector category="consequence" function="support" subcategory="result">asi</connector>
                     <premise>que se puede identificar a muchas personas que tiran colillas</premise>
@@ -718,7 +718,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>si a que haya prohibiciones de todo tipo , asi que no hacemos caso , y para esto y para ciertas personas olvidadizas hay que animarlas a animarse al grupo de los buenos ciudadanos cumplidores con un poco de tocarles el bolsillo , que es efectivo</premise>
                 </argument>
-                <argument commentid="-1" id="7633-1-1" parentid="-1" userid="16900">
+                <argument commentid="-1" id="7633-0-1-1" parentid="-1" userid="16900">
                     <claim>Todos los usuarios de Transporte Publico hemos viajado en un vagon , autobus o asiento , cerca de personas con recursos para un telefono inteligente</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no para los auriculares</premise>
@@ -1069,7 +1069,7 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>que quiere</premise>
                 </argument>
-                <argument commentid="-1" id="2538-2-1" parentid="-1" userid="31949">
+                <argument commentid="-1" id="2538-0-2-1" parentid="-1" userid="31949">
                     <claim>Ruego planteen</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>chip y perro una tasa municipal</premise>
@@ -1116,7 +1116,7 @@
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>creo que tu no eres mujer ni tienes esa edad ni has sufrido las humillaciones , ninguneos y vejaciones que sufrimos algunas , en todos y cada uno de los ciclos de nuestra vida</premise>
                 </argument>
-                <argument commentid="-1" id="3078-1-1" parentid="-1" userid="34353">
+                <argument commentid="-1" id="3078-0-1-1" parentid="-1" userid="34353">
                     <claim>Hay atascos monumentales en Madrid , de toda la vida</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
                     <premise>no se adapta el transporte publico a la realidad actual</premise>
@@ -1141,7 +1141,7 @@
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>nos la quitan la vida deja de tener calidad , os lo dice una victima ya envenenada por el Sindrome Toxico</premise>
                 </argument>
-                <argument commentid="-1" id="20389-1-1" parentid="-1" userid="472126">
+                <argument commentid="-1" id="20389-0-1-1" parentid="-1" userid="472126">
                     <claim>Sembrar arboles nativos de la region de Madrid</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>mejorar la calidad del aire , mantener un estilo de vida natural y mejorar la estetica urbana con seres vivos</premise>
@@ -2912,7 +2912,7 @@
                 </argument>
             </aspect>
             <aspect quantity="11" value="euros">
-                <argument commentid="-1" id="1824-1-1" parentid="-1" userid="25449">
+                <argument commentid="-1" id="1824-0-1-1" parentid="-1" userid="25449">
                     <claim>En cada supermercado existiria una maquina</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>reciclar y por cada lata o envase que lleves al supermercado te daran 0,25 euros que podras canjear en las cajas de cualquier supermercado</premise>
@@ -2962,7 +2962,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>la venta de la parcela no daria al Ayuntamiento 40 millones de euros</premise>
                 </argument>
-                <argument commentid="-1" id="15978-1-1" parentid="-1" userid="132523">
+                <argument commentid="-1" id="15978-0-1-1" parentid="-1" userid="132523">
                     <claim>En pleno siglo XXI solo puedes comprar un billete sencillo de autobus urbano</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>dispones de efectivo o un billete inferior a 10 euros , es necesario que se permita el pago con tarjeta</premise>
@@ -3745,7 +3745,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>me parece un atentado contra la libertad individual y de eleccion que se convenza a los ninos de algo que no son capaces de entender</premise>
                 </argument>
-                <argument commentid="-1" id="2576-1-1" parentid="-1" userid="28630">
+                <argument commentid="-1" id="2576-0-1-1" parentid="-1" userid="28630">
                     <claim>Contratar personal de limpieza</claim>
                     <connector category="contrast" function="support/attack" subcategory="alternative">en lugar de</connector>
                     <premise>pedir a universitarios o madres de ninos escolarizados limpiar</premise>
@@ -4177,7 +4177,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">sino</connector>
                     <premise>todo lo contrario</premise>
                 </argument>
-                <argument commentid="-1" id="2412-1-1" parentid="-1" userid="31101">
+                <argument commentid="-1" id="2412-0-1-1" parentid="-1" userid="31101">
                     <claim>Muchas estaciones son utilizadas</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>viajeros con destino a estaciones de tren y al aeropuerto</premise>
@@ -4628,7 +4628,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>todos ... peatones , conductores y ciclistas</premise>
                 </argument>
-                <argument commentid="-1" id="21171-1-1" parentid="-1" userid="203753">
+                <argument commentid="-1" id="21171-0-1-1" parentid="-1" userid="203753">
                     <claim>Es inaudito</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el primer borrador de la Ordenanza de Movilidad Sostenible de Madrid prohibe circular en monopatin por calzadas , aceras , zonas peatonales y vias ciclistas</premise>
@@ -4874,7 +4874,7 @@
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que los perros puedan estar libres y pipi-can , VOTAD : https://decide.madrid.es/proposals/117</premise>
                 </argument>
-                <argument commentid="-1" id="1937-1-1" parentid="-1" userid="26860">
+                <argument commentid="-1" id="1937-0-1-1" parentid="-1" userid="26860">
                     <claim>Creo ya existe Ordenanza</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>los duenos llevan impunemente los perros sueltos y / o sin bozal , ya que no se aplica habitualmente el castigo</premise>
@@ -5215,7 +5215,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>algo hay que hacer , la zona que hablas por ejemplo es una cardada , las calles de la zona de embajadores-casco es asqueroso como estan todos los bolardos y paredes llenas de meadas de perro</premise>
                 </argument>
-                <argument commentid="-1" id="507-1-1" parentid="-1" userid="312">
+                <argument commentid="-1" id="507-0-1-1" parentid="-1" userid="312">
                     <claim>Crear zonas de grandes edificios</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
                     <premise>ocurre en la Castellana norte -LRB- y con su ampliacion ya propuesta -RRB- , pero en la zona Sur de Madrid para equilibrar economicamente los barrios ricos del norte</premise>
@@ -5470,7 +5470,7 @@
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ojala no se salgan con la suya tampoco esta vez</premise>
                 </argument>
-                <argument commentid="-1" id="2513-1-1" parentid="-1" userid="31798">
+                <argument commentid="-1" id="2513-0-1-1" parentid="-1" userid="31798">
                     <claim>Cada vez circulan mas bicicletas</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>las aceras</premise>
@@ -6251,7 +6251,7 @@
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
                     <premise>si te interesa https://decide.madrid.es/proposals/12488-remodelacion-nudo-manoteras-acceso-peatonal</premise>
                 </argument>
-                <argument commentid="-1" id="3481-1-1" parentid="-1" userid="27594">
+                <argument commentid="-1" id="3481-0-1-1" parentid="-1" userid="27594">
                     <claim>Esta propuesta es</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>fomentar el alquiler de las viviendas vacias</premise>
@@ -6730,7 +6730,7 @@
                 </argument>
             </aspect>
             <aspect quantity="9" value="forma">
-                <argument commentid="-1" id="19-1-1" parentid="-1" userid="2780">
+                <argument commentid="-1" id="19-0-1-1" parentid="-1" userid="2780">
                     <claim>El centro turistico y comercial de Madrid esta solo a 700 metros de la Casa de Campo y de Madrid Rio</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>las conexiones a el son terribles</premise>

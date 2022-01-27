@@ -133,7 +133,8 @@ public class ArgumentMiner {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
 
         // Temporary vars
-        ArgumentEngine engine = new ArgumentEngine(language, lnkManager, invalidLinkers, stopwords);
+        List<ArgumentLinker> lexicon = lnkManager.getLexicon(false);
+        ArgumentEngine engine = new ArgumentEngine(language, lexicon, invalidLinkers, stopwords);
         int proposalID;
         int commentID;
         DMProposal proposal;
