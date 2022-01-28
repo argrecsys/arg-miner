@@ -108,24 +108,26 @@ public class ArgumentEngine {
         Sentence majorClaim = createMajorClaim(docTitle);
 
         // 2. Get candidate sentences from the document
-        List<String> sentences = getCandidateSentences(docText);
+        List<CandSentence> sentences = getCandidateSentences(docText, false);
         System.out.println("N candidate sentences: " + sentences.size());
 
         // 3. For each item..
         for (int i = 0; i < sentences.size(); i++) {
-            String sentenceID = docKey + "-" + (commentID > -1 ? commentID : 0) + "-" + (i + 1);
+            String sentID = docKey + "-" + (commentID > -1 ? commentID : 0) + "-" + (i + 1);
 
-            // 4. Get current sentence
-            String sentenceText = sentences.get(i);
-            System.out.format("[%s]: %s\n", sentenceID, sentenceText);
+            // 4. Get candidate sentence
+            CandSentence candidate = sentences.get(i);
+            String sentText = candidate.getText();
+            boolean sentSimple = candidate.isSimple();
+            System.out.format("[%s]: %s\n", sentID, sentText);
 
             // 5. Get named entity recognition (NER) in document
-            Map<String, String> entities = getNamedEntities(sentenceText);
+            Map<String, String> entities = getNamedEntities(sentText);
             List<String> entityList = new ArrayList<>(entities.keySet());
 
             // 6. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
             Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN", "VERB"));
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(sentenceText, validPOS);
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(sentText, validPOS);
             List<String> nounList = new ArrayList<>();
             List<String> verbList = new ArrayList<>();
 
@@ -143,11 +145,11 @@ public class ArgumentEngine {
 
             // 7. Get constituency tree
             System.out.println("Calculate constituency tree:");
-            Tree tree = getConstituencyTree(sentenceText);
+            Tree tree = getConstituencyTree(sentText);
             tree.pennPrint(out);
 
             // 8. Apply arguments mining (AM)
-            List<Argument> arguments = mineArguments(sentenceID, userID, commentID, parentID, sentenceText, tree, entityList, nounList, verbList);
+            List<Argument> arguments = mineArguments(sentID, userID, commentID, parentID, sentText, sentSimple, tree, entityList, nounList, verbList);
 
             // 9. Save arguments
             if (arguments.size() > 0) {
@@ -291,17 +293,42 @@ public class ArgumentEngine {
      * Returns a list of candidate sentences.
      *
      * @param text
+     * @param onlySimpleSent
      * @return
      */
-    private List<String> getCandidateSentences(String text) {
-        List<String> candSentences = new ArrayList<>();
+    private List<CandSentence> getCandidateSentences(String text, boolean onlySimpleSent) {
+        List<CandSentence> candSentences = new ArrayList<>();
 
         Annotation annotation = new Annotation(text);
         pipeline.annotate(annotation);
-
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+        CandSentence candidate;
+
+        // Storing simple sentences
         for (CoreMap sentence : sentences) {
-            candSentences.add(sentence.toString());
+            candidate = new CandSentence(sentence.toString(), true);
+            candSentences.add(candidate);
+        }
+
+        // Storing complex sentences
+        if (!onlySimpleSent) {
+            String sentenceText;
+            String prevSentenceText;
+            String currSentenceText;
+            ArgumentLinker linker;
+
+            for (int i = 1; i < sentences.size(); i++) {
+                currSentenceText = StringUtils.cleanText(sentences.get(i).toString(), StringUtils.CLEAN_BOTH);
+                linker = parser.textHasLinker(currSentenceText);
+
+                if (linker != null) {
+                    prevSentenceText = StringUtils.cleanText(sentences.get(i - 1).toString(), StringUtils.CLEAN_RIGHT);
+                    currSentenceText = StringUtils.firstChartToLowerCase(currSentenceText);
+                    sentenceText = prevSentenceText + ", " + currSentenceText + ".";
+                    candidate = new CandSentence(sentenceText, false);
+                    candSentences.add(candidate);
+                }
+            }
         }
 
         return candSentences;
@@ -374,6 +401,7 @@ public class ArgumentEngine {
      * @param commentID
      * @param parentID
      * @param sentenceText
+     * @param sentenceSimple
      * @param tree
      * @param entityList
      * @param nounList
@@ -381,7 +409,7 @@ public class ArgumentEngine {
      * @return
      */
     private List<Argument> mineArguments(String sentenceID, int userID, int commentID, int parentID, String sentenceText,
-            Tree tree, List<String> entityList, List<String> nounList, List<String> verbList) {
+            boolean sentenceSimple, Tree tree, List<String> entityList, List<String> nounList, List<String> verbList) {
         List<Argument> arguments = new ArrayList<>();
         Set<String> patterns = new ArraySet<>();
 
@@ -452,7 +480,7 @@ public class ArgumentEngine {
                             String argumentID = sentenceID + "-" + (arguments.size() + 1);
                             Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                             Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
-                            arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
+                            arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentenceSimple, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
                             patterns.add(sentPattern);
 
                         } else {

@@ -24,8 +24,7 @@ import org.bson.Document;
 import org.json.JSONObject;
 
 /**
- *
- * @author ansegura
+ * Argumentative sentence container class.
  */
 public class Sentence {
 
@@ -70,7 +69,7 @@ public class Sentence {
     public List<String> getNouns() {
         return this.nouns;
     }
-    
+
     public String getText() {
         return this.text;
     }

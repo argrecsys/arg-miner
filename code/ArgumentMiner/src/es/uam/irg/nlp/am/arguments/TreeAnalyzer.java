@@ -51,9 +51,12 @@ public class TreeAnalyzer {
         ArgumentLinker linker = null;
 
         if (!StringUtils.isEmpty(text)) {
+            String newText = StringUtils.cleanText(text.toLowerCase(), StringUtils.CLEAN_BOTH);
+            String[] tokens = newText.split(" ");
+
             for (int i = 0; i < this.nLinkers && linker == null; i++) {
                 ArgumentLinker cand = this.linkers.get(i);
-                String nGram = getNGram(text.toLowerCase(), cand.nTokens);
+                String nGram = getNGram(tokens, 0, cand.nTokens);
 
                 if (cand.isEquals(nGram)) {
                     linker = cand;
@@ -62,18 +65,6 @@ public class TreeAnalyzer {
         }
 
         return linker;
-    }
-
-    /**
-     *
-     * @param text
-     * @param nTokens
-     * @return
-     */
-    private String getNGram(String text, int nTokens) {
-        String newText = StringUtils.cleanText(text, StringUtils.CLEAN_BOTH);
-        String[] tokens = newText.split(" ");
-        return getNGram(tokens, 0, nTokens);
     }
 
     /**

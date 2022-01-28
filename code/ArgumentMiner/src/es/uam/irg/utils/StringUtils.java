@@ -1,6 +1,6 @@
 /**
  * Copyright 2021
- * Andrés Segura-Tinoco
+ * Ivan Cantador and Andrés Segura-Tinoco
  * Information Retrieval Group at Universidad Autonoma de Madrid
  *
  * This is free software: you can redistribute it and/or modify it under the
@@ -25,7 +25,6 @@ public class StringUtils {
 
     // Class contants
     public static final String CLEAN_BOTH = "both";
-    public static final String CLEAN_LEFT = "left";
     public static final String CLEAN_RIGHT = "right";
     private static final String EMPTY = "";
     private static final String PLAIN_ASCII
@@ -59,6 +58,17 @@ public class StringUtils {
             newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
         }
         return newText.trim();
+    }
+
+    /**
+     *
+     * @param text
+     * @return
+     */
+    public static String firstChartToLowerCase(String text) {
+        char c[] = text.toCharArray();
+        c[0] = Character.toLowerCase(c[0]);
+        return new String(c);
     }
 
     /**
@@ -194,17 +204,6 @@ public class StringUtils {
     }
 
     /**
-     *
-     * @param s
-     * @return
-     */
-    public static String unaccent(String s) {
-        return Normalizer
-                .normalize(s, Normalizer.Form.NFD)
-                .replaceAll("[^\\p{ASCII}]", "");
-    }
-
-    /**
      * Returns padding using the specified delimiter repeated to a given length.
      *
      * @param ch character to repeat
@@ -269,6 +268,17 @@ public class StringUtils {
             }
         }
         return sb.toString();
+    }
+
+    /**
+     *
+     * @param s
+     * @return
+     */
+    public static String unaccent(String s) {
+        return Normalizer
+                .normalize(s, Normalizer.Form.NFD)
+                .replaceAll("[^\\p{ASCII}]", "");
     }
 
     /**
