@@ -28,50 +28,51 @@ import org.json.JSONObject;
 /**
  * Argument class. The premise justifies, gives reasons for or supports the
  * conclusion (claim).
- *
- * @author ansegura
  */
 public class Argument {
 
     // Class members
-    public String approach;
     public Sentence claim;
     public int commentID;
     public ArgumentLinker linker;
-    public String mainVerb;
-    public Sentence majorClaim;
     public int parentID;
     public Sentence premise;
-    public String sentenceText;
     public int userID;
+    private String approach;
     private String argumentID;
     private boolean isValid;
+    private String mainVerb;
+    private Sentence majorClaim;
     private int proposalID;
+    private boolean sentenceSimple;
+    private String sentenceText;
     private String syntacticTree;
     private int treeLevel;
 
     /**
      * Regular constructor.
-     *
+     * 
      * @param argumentID
      * @param userID
      * @param commentID
      * @param parentID
      * @param sentenceText
+     * @param sentenceSimple
      * @param claim
      * @param premise
      * @param mainVerb
      * @param linker
      * @param approach
-     * @param syntacticTree
+     * @param syntacticTree 
      */
-    public Argument(String argumentID, int userID, int commentID, int parentID,
-            String sentenceText, Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
+    public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText, boolean sentenceSimple,
+            Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
         this.argumentID = argumentID;
         this.userID = userID;
         this.commentID = commentID;
         this.parentID = parentID;
         this.sentenceText = sentenceText;
+        this.sentenceSimple = sentenceSimple;
         this.claim = claim;
         this.premise = premise;
         this.mainVerb = mainVerb;
@@ -93,6 +94,7 @@ public class Argument {
         this.commentID = (int) doc.get("commentID");
         this.parentID = (int) doc.get("parentID");
         this.sentenceText = doc.getString("argumentID");
+        this.sentenceSimple = doc.getBoolean("sentenceSimple");
         this.majorClaim = new Sentence(doc.get("majorClaim", Document.class));
         this.claim = new Sentence(doc.get("claim", Document.class));
         this.premise = new Sentence(doc.get("premise", Document.class));
@@ -110,7 +112,7 @@ public class Argument {
      * @return
      */
     public boolean equals(Argument arg) {
-        return (this.claim.equals(arg.claim) && this.premise.equals(arg.premise) && this.linker.equals(arg.linker));
+        return (this.claim.equals(arg.claim) && this.premise.equals(arg.premise) && this.linker.equals(arg.linker) && this.approach.equals(arg.approach));
     }
 
     /**
@@ -126,6 +128,7 @@ public class Argument {
                 .append("commentID", this.commentID)
                 .append("parentID", this.parentID)
                 .append("sentence", this.sentenceText)
+                .append("sentenceSimple", this.sentenceSimple)
                 .append("majorClaim", this.majorClaim.getDocument())
                 .append("claim", this.claim.getDocument())
                 .append("premise", this.premise.getDocument())
@@ -158,6 +161,7 @@ public class Argument {
         json.put("commentID", this.commentID);
         json.put("parentID", this.parentID);
         json.put("sentence", this.sentenceText);
+        json.put("sentenceSimple", this.sentenceSimple);
         json.put("majorClaim", this.majorClaim.getJSON());
         json.put("claim", this.claim.getJSON());
         json.put("premise", this.premise.getJSON());

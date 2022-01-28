@@ -23,8 +23,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 /**
- *
- * @author ansegura
+ * Starting point of the argument mining module.
  */
 public class Program {
 
