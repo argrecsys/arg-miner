@@ -185,7 +185,7 @@ public class SyntacticAnalysisManager {
         String text = "";
 
         if (node.getType() == SyntacticTreebankNode.NODE_WORD) {
-            text = node.getWord() + " ";
+            text = (node.getTag().equals("PUNCT") ? "" : " ") + node.getWord();
         } else {
             for (int nodeId : tree.getChildrenIdsOf(node)) {
                 text += getTreeInnerText(tree, tree.getNode(nodeId));

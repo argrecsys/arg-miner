@@ -108,7 +108,7 @@ public class ArgumentEngine {
         Sentence majorClaim = createMajorClaim(docTitle);
 
         // 2. Get candidate sentences from the document
-        List<String> sentences = getCandidateSentences(docText);
+        List<String> sentences = getCandidateSentences(docText, true);
         System.out.println("N candidate sentences: " + sentences.size());
 
         // 3. For each item..
@@ -291,17 +291,40 @@ public class ArgumentEngine {
      * Returns a list of candidate sentences.
      *
      * @param text
+     * @param onlySimpleSent
      * @return
      */
-    private List<String> getCandidateSentences(String text) {
+    private List<String> getCandidateSentences(String text, boolean onlySimpleSent) {
         List<String> candSentences = new ArrayList<>();
 
         Annotation annotation = new Annotation(text);
         pipeline.annotate(annotation);
-
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+
+        // Storing simple sentences
         for (CoreMap sentence : sentences) {
             candSentences.add(sentence.toString());
+        }
+
+        // Storing complex sentences
+        if (!onlySimpleSent) {
+            String sentenceText;
+            String prevSentenceText;
+            String currSentenceText;
+            ArgumentLinker linker;
+
+            for (int i = 1; i < sentences.size(); i++) {
+                currSentenceText = StringUtils.cleanText(sentences.get(i).toString(), StringUtils.CLEAN_BOTH);
+                linker = parser.textHasLinker(currSentenceText);
+
+                if (linker != null) {
+                    System.out.println(" - Linker: " + linker.toString());
+                    prevSentenceText = StringUtils.cleanText(sentences.get(i - 1).toString(), StringUtils.CLEAN_RIGHT);
+                    currSentenceText = StringUtils.firstChartToLowerCase(currSentenceText);
+                    sentenceText = prevSentenceText + ", " + currSentenceText + ".";
+                    candSentences.add(sentenceText);
+                }
+            }
         }
 
         return candSentences;
