@@ -108,7 +108,7 @@ public class ArgumentEngine {
         Sentence majorClaim = createMajorClaim(docTitle);
 
         // 2. Get candidate sentences from the document
-        List<CandSentence> sentences = getCandidateSentences(docText, true);
+        List<CandSentence> sentences = getCandidateSentences(docText, false);
         System.out.println("N candidate sentences: " + sentences.size());
 
         // 3. For each item..
@@ -322,7 +322,6 @@ public class ArgumentEngine {
                 linker = parser.textHasLinker(currSentenceText);
 
                 if (linker != null) {
-                    System.out.println(" - Linker: " + linker.toString());
                     prevSentenceText = StringUtils.cleanText(sentences.get(i - 1).toString(), StringUtils.CLEAN_RIGHT);
                     currSentenceText = StringUtils.firstChartToLowerCase(currSentenceText);
                     sentenceText = prevSentenceText + ", " + currSentenceText + ".";
