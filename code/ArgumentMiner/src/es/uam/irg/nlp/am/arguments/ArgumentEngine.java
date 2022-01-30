@@ -107,7 +107,7 @@ public class ArgumentEngine {
         // 1. Create major claim object
         Sentence majorClaim = createMajorClaim(docTitle);
 
-        // 2. Get candidate sentences from the document
+        // 2. Get candidate (simple and compound) sentences from the document
         List<CandSentence> sentences = getCandidateSentences(docText, false);
         System.out.println("N candidate sentences: " + sentences.size());
 
