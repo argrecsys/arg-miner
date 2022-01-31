@@ -21,7 +21,6 @@ import es.uam.irg.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import org.bson.Document;
 import org.json.JSONObject;
 
@@ -38,7 +37,7 @@ public class Argument {
     public int parentID;
     public Sentence premise;
     public int userID;
-    private String approach;
+    private String pattern;
     private String argumentID;
     private boolean isValid;
     private String mainVerb;
@@ -62,11 +61,11 @@ public class Argument {
      * @param premise
      * @param mainVerb
      * @param linker
-     * @param approach
+     * @param pattern
      * @param syntacticTree
      */
     public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText, boolean sentenceSimple,
-            Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
+            Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String pattern, String syntacticTree) {
         this.argumentID = argumentID;
         this.userID = userID;
         this.commentID = commentID;
@@ -77,7 +76,7 @@ public class Argument {
         this.premise = premise;
         this.mainVerb = mainVerb;
         this.linker = linker;
-        this.approach = approach;
+        this.pattern = pattern;
         this.syntacticTree = syntacticTree;
 
         completeArgument();
@@ -100,7 +99,7 @@ public class Argument {
         this.premise = new Sentence(doc.get("premise", Document.class));
         this.mainVerb = doc.getString("mainVerb");
         this.linker = new ArgumentLinker(doc.get("linker", Document.class));
-        this.approach = doc.getString("approach");
+        this.pattern = doc.getString("pattern");
         this.syntacticTree = doc.getString("syntacticTree");
 
         completeArgument();
@@ -112,7 +111,7 @@ public class Argument {
      * @return
      */
     public boolean equals(Argument arg) {
-        return (this.claim.equals(arg.claim) && this.premise.equals(arg.premise) && this.linker.equals(arg.linker) && this.approach.equals(arg.approach));
+        return (this.claim.equals(arg.claim) && this.premise.equals(arg.premise) && this.linker.equals(arg.linker) && this.pattern.equals(arg.pattern));
     }
 
     /**
@@ -134,7 +133,7 @@ public class Argument {
                 .append("premise", this.premise.getDocument())
                 .append("mainVerb", this.mainVerb)
                 .append("linker", this.linker.getDocument())
-                .append("approach", this.approach)
+                .append("pattern", this.pattern)
                 .append("syntacticTree", this.syntacticTree);
 
         return doc;
@@ -167,7 +166,7 @@ public class Argument {
         json.put("premise", this.premise.getJSON());
         json.put("mainVerb", this.mainVerb);
         json.put("linker", this.linker.getJSON());
-        json.put("approach", this.approach);
+        json.put("pattern", this.pattern);
         if (withSyntTree) {
             json.put("syntacticTree", this.syntacticTree);
         }
@@ -242,8 +241,8 @@ public class Argument {
      */
     private void completeArgument() {
 
-        if (!StringUtils.isEmpty(this.approach) && !StringUtils.isEmpty(this.argumentID)) {
-            var token = StringUtils.getFirstToken(this.approach, "-").replace("[", "").replace("]", "");
+        if (!StringUtils.isEmpty(this.pattern) && !StringUtils.isEmpty(this.argumentID)) {
+            var token = StringUtils.getFirstToken(this.pattern, "-").replace("[", "").replace("]", "");
             this.treeLevel = Integer.parseInt(token);
             token = StringUtils.getFirstToken(this.argumentID, "-");
             this.proposalID = Integer.parseInt(token);
