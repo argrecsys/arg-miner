@@ -5,7 +5,6 @@ import es.uam.irg.decidemadrid.entities.*;
 import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.utils.FunctionUtils;
-import es.uam.irg.utils.StringUtils;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.HashSet;

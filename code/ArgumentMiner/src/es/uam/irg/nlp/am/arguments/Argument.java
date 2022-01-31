@@ -51,7 +51,7 @@ public class Argument {
 
     /**
      * Regular constructor.
-     * 
+     *
      * @param argumentID
      * @param userID
      * @param commentID
@@ -63,7 +63,7 @@ public class Argument {
      * @param mainVerb
      * @param linker
      * @param approach
-     * @param syntacticTree 
+     * @param syntacticTree
      */
     public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText, boolean sentenceSimple,
             Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String approach, String syntacticTree) {
@@ -187,8 +187,8 @@ public class Argument {
      *
      * @return
      */
-    public Set<String> getNounsSet() {
-        Set<String> nouns = new HashSet<>();
+    public HashSet<String> getNounsSet() {
+        HashSet<String> nouns = new HashSet<>();
         nouns.addAll(processNouns(this.majorClaim.getNouns()));
         nouns.addAll(processNouns(this.claim.getNouns()));
         nouns.addAll(processNouns(this.premise.getNouns()));
