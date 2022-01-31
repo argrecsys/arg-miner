@@ -41,8 +41,7 @@ import org.bson.conversions.Bson;
 import org.json.JSONObject;
 
 /**
- *
- * @author ansegura
+ * Argument miner class.
  */
 public class ArgumentMiner {
 

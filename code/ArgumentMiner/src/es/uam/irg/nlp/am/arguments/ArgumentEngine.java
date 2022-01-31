@@ -22,7 +22,6 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
-import edu.stanford.nlp.util.ArraySet;
 import edu.stanford.nlp.util.CoreMap;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticAnalysisManager;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticallyAnalyzedSentence;
@@ -35,8 +34,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author ansegura
+ * Class of the argument extractor engine.
  */
 public class ArgumentEngine {
 
@@ -53,9 +51,9 @@ public class ArgumentEngine {
     private final HashSet<String> invalidLinkers;
     private final String language;
     private final PrintWriter out;
+    private final TreeAnalyzer parser;
     private StanfordCoreNLP pipeline;
     private final HashSet<String> stopwords;
-    private final TreeAnalyzer parser;
 
     /**
      * Class constructor.
@@ -123,13 +121,13 @@ public class ArgumentEngine {
 
             // 5. Get named entity recognition (NER) in document
             Map<String, String> entities = getNamedEntities(sentText);
-            List<String> entityList = new ArrayList<>(entities.keySet());
+            HashSet<String> entityList = new HashSet<>(entities.keySet());
 
             // 6. Apply parts of speech (POS) to identify list of NOUNs and VERBs in document
-            Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN", "VERB"));
+            HashSet<String> validPOS = new HashSet<>(Arrays.asList("NOUN", "VERB"));
             List<CoreLabel> tokens = getPartsOfSpeechTokens(sentText, validPOS);
-            List<String> nounList = new ArrayList<>();
-            List<String> verbList = new ArrayList<>();
+            HashSet<String> nounList = new HashSet<>();
+            HashSet<String> verbList = new HashSet<>();
 
             tokens.forEach(token -> {
                 if (token.tag().equals("NOUN")) {
@@ -218,17 +216,18 @@ public class ArgumentEngine {
      * @param entities
      * @return
      */
-    private Sentence createArgumentativeSentence(String text, List<String> nouns, List<String> entities) {
+    private Sentence createArgumentativeSentence(String text, HashSet<String> nouns, HashSet<String> entities) {
         text = text.trim();
-
         List<String> sentNouns = new ArrayList<>();
+        List<String> sentEntities = new ArrayList<>();
+
+        HashSet<String> words = new HashSet<>(Arrays.asList(text.split("\\W")));
         for (String noun : nouns) {
-            if (text.contains(noun)) {
+            if (words.contains(noun)) {
                 sentNouns.add(noun);
             }
         }
 
-        List<String> sentEntities = new ArrayList<>();
         for (String entity : entities) {
             if (text.contains(entity)) {
                 sentEntities.add(entity);
@@ -252,7 +251,7 @@ public class ArgumentEngine {
         if (text.length() > 0) {
 
             // Get nouns (from POS) in document title
-            Set<String> validPOS = new HashSet<>(Arrays.asList("NOUN"));
+            HashSet<String> validPOS = new HashSet<>(Arrays.asList("NOUN"));
             List<CoreLabel> tokens = getPartsOfSpeechTokens(text, validPOS);
             tokens.forEach(token -> {
                 nounList.add(token.word());
@@ -361,7 +360,7 @@ public class ArgumentEngine {
      * @param labels
      * @return
      */
-    private List<CoreLabel> getPartsOfSpeechTokens(String text, Set<String> labels) {
+    private List<CoreLabel> getPartsOfSpeechTokens(String text, HashSet<String> labels) {
         List<CoreLabel> tokens = new ArrayList<>();
         CoreDocument document = pipeline.processToCoreDocument(text);
 
@@ -381,10 +380,11 @@ public class ArgumentEngine {
      * @param verbList
      * @return
      */
-    private String identifyMainVerb(String sentence, List<String> verbList) {
+    private String identifyMainVerb(String sentence, HashSet<String> verbList) {
+        HashSet<String> words = new HashSet<>(Arrays.asList(sentence.split("\\W")));
 
         for (String verb : verbList) {
-            if (sentence.contains(verb)) {
+            if (words.contains(verb)) {
                 return verb;
             }
         }
@@ -409,9 +409,9 @@ public class ArgumentEngine {
      * @return
      */
     private List<Argument> mineArguments(String sentenceID, int userID, int commentID, int parentID, String sentenceText,
-            boolean sentenceSimple, Tree tree, List<String> entityList, List<String> nounList, List<String> verbList) {
+            boolean sentenceSimple, Tree tree, HashSet<String> entityList, HashSet<String> nounList, HashSet<String> verbList) {
         List<Argument> arguments = new ArrayList<>();
-        Set<String> patterns = new ArraySet<>();
+        HashSet<String> patterns = new HashSet<>();
 
         try {
             // Creating syntactic treebank

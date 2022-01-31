@@ -210,7 +210,7 @@ public class ArguRecSys {
     private Map<String, Integer> getFreqAspects(List<Argument> arguments) {
         Map<String, Integer> aspects = new HashMap<>();
         List<String> listAspects = new ArrayList<>();
-        Set<String> nouns;
+        HashSet<String> nouns;
         int count;
 
         for (Argument argument : arguments) {
@@ -279,7 +279,7 @@ public class ArguRecSys {
         // Select arguments
         arguments.forEach(argument -> {
             String aspect = "";
-            Set<String> nouns = argument.getNounsSet();
+            HashSet<String> nouns = argument.getNounsSet();
 
             for (int i = 0; i < aspectList.size() && "".equals(aspect); i++) {
                 if (nouns.contains(aspectList.get(i))) {
