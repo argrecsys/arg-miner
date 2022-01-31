@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-2.2.0-blue)
-![last-update](https://img.shields.io/badge/last_update-1/28/2022-orange)
+![last-update](https://img.shields.io/badge/last_update-1/31/2022-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
@@ -16,11 +16,11 @@ This system is composed of 2 main modules, which are:
 This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="https://github.com/argrecsys/connectors" target="_blank">argrecsys/connectors</a> repository.
 
 ## Preliminary Results
-We present some statistics from a preliminary offline test (with a subset of lexicon connectors) on the automatic identification and extraction of arguments from the citizen proposals available in the Decide Madrid database:
-- From a reduced list of 10 connectors (belonging to the CAUSE and CONTRAST categories), 1,744 proposals with possible arguments were identified out of the 21,744 proposals available.
-- Arguments were automatically extracted in 1,362 of the 1,744 proposals identified, entailing a coverage of 78.0%.
-- Of the 1,379 arguments extracted (some proposals had more than one argument), 1,034 were identified with connectors from the CAUSE category and 345 from the CONTRAST category.
-- An accuracy of 78.8% was achieved in a manual evaluation of 47 arguments about public transportation.
+We present some statistics from a preliminary offline test on the automatic identification and extraction of arguments from the citizen proposals available in the Decide Madrid database:
+- From the full list of 318 connectors in Spanish, 11,645 arguments are identified and extracted (9,676 from simple sentences and 1,969 from compound sentences).
+- Arguments were automatically extracted as follows: 2025 in the proposals and 9620 in the proposal comments.
+- Of the 11,645 arguments extracted (some proposals had more than one argument), 5,136 (44.1 %) were identified with connectors from the CONTRAST category, 4,669 (40.1 %) from the CONSEQUENCE category, 1,316 (11.3 %) from the CAUSE category, 505 (4.3 %) from the ELABORATION category, 
+and 19 (0.2 %) from the CLARIFICATION category.
 
 ## Descriptive and Network Analysis
 - The descriptive analysis of the result of the automatic annotation can be seen in the following <a href="https://argrecsys.github.io/arg-miner/analysis/DataAnalysis.html" target="_blank">report</a>.
