@@ -30,23 +30,24 @@ import org.json.JSONObject;
  */
 public class Argument {
 
-    // Class members
+    // Public class members
     public Sentence claim;
     public int commentID;
     public ArgumentLinker linker;
     public int parentID;
     public Sentence premise;
     public int userID;
-    private String pattern;
+
+    // Private class members
     private String argumentID;
     private boolean isValid;
     private String mainVerb;
     private Sentence majorClaim;
+    private ArgumentPattern pattern;
     private int proposalID;
     private boolean sentenceSimple;
     private String sentenceText;
     private String syntacticTree;
-    private int treeLevel;
 
     /**
      * Regular constructor.
@@ -65,13 +66,14 @@ public class Argument {
      * @param syntacticTree
      */
     public Argument(String argumentID, int userID, int commentID, int parentID, String sentenceText, boolean sentenceSimple,
-            Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, String pattern, String syntacticTree) {
+            Sentence claim, Sentence premise, String mainVerb, ArgumentLinker linker, ArgumentPattern pattern, String syntacticTree) {
         this.argumentID = argumentID;
         this.userID = userID;
         this.commentID = commentID;
         this.parentID = parentID;
         this.sentenceText = sentenceText;
         this.sentenceSimple = sentenceSimple;
+        this.majorClaim = null;
         this.claim = claim;
         this.premise = premise;
         this.mainVerb = mainVerb;
@@ -99,7 +101,7 @@ public class Argument {
         this.premise = new Sentence(doc.get("premise", Document.class));
         this.mainVerb = doc.getString("mainVerb");
         this.linker = new ArgumentLinker(doc.get("linker", Document.class));
-        this.pattern = doc.getString("pattern");
+        this.pattern = new ArgumentPattern(doc.get("pattern", Document.class));
         this.syntacticTree = doc.getString("syntacticTree");
 
         completeArgument();
@@ -133,7 +135,7 @@ public class Argument {
                 .append("premise", this.premise.getDocument())
                 .append("mainVerb", this.mainVerb)
                 .append("linker", this.linker.getDocument())
-                .append("pattern", this.pattern)
+                .append("pattern", this.pattern.getDocument())
                 .append("syntacticTree", this.syntacticTree);
 
         return doc;
@@ -166,7 +168,7 @@ public class Argument {
         json.put("premise", this.premise.getJSON());
         json.put("mainVerb", this.mainVerb);
         json.put("linker", this.linker.getJSON());
-        json.put("pattern", this.pattern);
+        json.put("pattern", this.pattern.getJSON());
         if (withSyntTree) {
             json.put("syntacticTree", this.syntacticTree);
         }
@@ -215,7 +217,7 @@ public class Argument {
      * @return
      */
     public int getTreeLevel() {
-        return this.treeLevel;
+        return this.pattern.getDepth();
     }
 
     /**
@@ -241,15 +243,12 @@ public class Argument {
      */
     private void completeArgument() {
 
-        if (!StringUtils.isEmpty(this.pattern) && !StringUtils.isEmpty(this.argumentID)) {
-            var token = StringUtils.getFirstToken(this.pattern, "-").replace("[", "").replace("]", "");
-            this.treeLevel = Integer.parseInt(token);
-            token = StringUtils.getFirstToken(this.argumentID, "-");
+        if (!StringUtils.isEmpty(this.argumentID)) {
+            var token = StringUtils.getFirstToken(this.argumentID, "-");
             this.proposalID = Integer.parseInt(token);
             this.isValid = true;
 
         } else {
-            this.treeLevel = -1;
             this.proposalID = -1;
             this.isValid = false;
         }
