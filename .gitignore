@@ -41,5 +41,4 @@ manifest.mf
 ##############################
 ## Python
 ##############################
-db_config.yml
 analysis/.ipynb_checkpoints/*

@@ -442,11 +442,11 @@ public class ArgumentEngine {
                     System.out.println(" - Parent: " + parent.toString());
 
                     // Create sentence pattern
-                    String sentPattern = SyntacticAnalysisManager.createSentencePattern(analyzedTree, parent, currNode);
+                    ArgumentPattern sentPattern = SyntacticAnalysisManager.createSentencePattern(analyzedTree, parent, currNode);
 
                     // If the argument pattern is valid...
-                    System.out.println(" - Pattern: " + sentPattern);
-                    if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern) && !patterns.contains(sentPattern)) {
+                    System.out.println(" - Pattern: " + sentPattern.getFullPattern());
+                    if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern.getPattern()) && !patterns.contains(sentPattern.getFullPattern())) {
                         System.out.println(" + Valid pattern!");
 
                         // Reconstructing sentences (claim and premise)
@@ -481,7 +481,7 @@ public class ArgumentEngine {
                             Sentence sentClaim = createArgumentativeSentence(claim, nounList, entityList);
                             Sentence sentPremise = createArgumentativeSentence(premise, nounList, entityList);
                             arguments.add(new Argument(argumentID, userID, commentID, parentID, sentenceText, sentenceSimple, sentClaim, sentPremise, mainVerb, linker, sentPattern, treeDescription));
-                            patterns.add(sentPattern);
+                            patterns.add(sentPattern.getFullPattern());
 
                         } else {
 

@@ -18,8 +18,10 @@
 package es.uam.irg.nlp.corenlp.syntax;
 
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
+import es.uam.irg.nlp.am.arguments.ArgumentPattern;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebankNode;
+import es.uam.irg.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,11 +65,12 @@ public class SyntacticAnalysisManager {
      * @return
      */
     public static boolean checkArgumentPattern(String pattern) {
-        String sentPattern = pattern.substring(pattern.indexOf('-') + 1);
 
-        for (String argPattern : argPatterns) {
-            if (sentPattern.startsWith(argPattern)) {
-                return true;
+        if (!StringUtils.isEmpty(pattern)) {
+            for (String argPattern : argPatterns) {
+                if (pattern.startsWith(argPattern)) {
+                    return true;
+                }
             }
         }
 
@@ -81,11 +84,13 @@ public class SyntacticAnalysisManager {
      * @param currNode
      * @return
      */
-    public static String createSentencePattern(SyntacticTreebank tree, SyntacticTreebankNode parent, SyntacticTreebankNode currNode) {
-        String sentPattern = "[" + (parent.getLevel() + 1) + "]";
-        String lnkTag;
+    public static ArgumentPattern createSentencePattern(SyntacticTreebank tree, SyntacticTreebankNode parent, SyntacticTreebankNode currNode) {
+        ArgumentPattern sentPattern = new ArgumentPattern();
 
         try {
+            String pattern = "";
+            String lnkTag;
+
             for (Integer childId : tree.getChildrenIdsOf(parent)) {
                 SyntacticTreebankNode child = tree.getNode(childId);
                 if (child.getId() == currNode.getId() || child.getId() == tree.getParentIdOf(currNode.getId())) {
@@ -93,8 +98,11 @@ public class SyntacticAnalysisManager {
                 } else {
                     lnkTag = "";
                 }
-                sentPattern += "-[" + child.getTag() + lnkTag + "]";
+                pattern += "[" + child.getTag() + lnkTag + "]-";
             }
+            pattern = pattern.substring(0, pattern.length() - 1);
+            sentPattern = new ArgumentPattern(pattern, (parent.getLevel() + 1));
+
         } catch (Exception ex) {
             Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
         }
