@@ -28,13 +28,13 @@ public class ArgumentPattern {
     // Class members
     private final int depth;
     private final String fullPattern;
-    private final String pattern;
+    private final String value;
 
     /**
      * Empty constructor.
      */
     public ArgumentPattern() {
-        this.pattern = "";
+        this.value = "";
         this.depth = 0;
         this.fullPattern = "";
     }
@@ -42,13 +42,13 @@ public class ArgumentPattern {
     /**
      * Regular constructor.
      *
-     * @param pattern
+     * @param value
      * @param depth
      */
-    public ArgumentPattern(String pattern, int depth) {
-        this.pattern = pattern;
+    public ArgumentPattern(String value, int depth) {
+        this.value = value;
         this.depth = depth;
-        this.fullPattern = "[" + depth + "]-" + pattern;
+        this.fullPattern = "[" + depth + "]-" + value;
     }
 
     /**
@@ -57,9 +57,9 @@ public class ArgumentPattern {
      * @param doc
      */
     public ArgumentPattern(Document doc) {
-        this.pattern = doc.getString("pattern");
+        this.value = doc.getString("value");
         this.depth = doc.getInteger("depth");
-        this.fullPattern = "[" + depth + "]-" + pattern;
+        this.fullPattern = "[" + depth + "]-" + value;
     }
 
     /**
@@ -85,7 +85,7 @@ public class ArgumentPattern {
      */
     public Document getDocument() {
         Document doc = new Document();
-        doc.append("pattern", this.pattern)
+        doc.append("value", this.value)
                 .append("depth", this.depth);
 
         return doc;
@@ -105,7 +105,7 @@ public class ArgumentPattern {
      */
     public JSONObject getJSON() {
         JSONObject json = new JSONObject();
-        json.put("pattern", this.pattern);
+        json.put("value", this.value);
         json.put("depth", this.depth);
 
         return json;
@@ -115,8 +115,8 @@ public class ArgumentPattern {
      *
      * @return
      */
-    public String getPattern() {
-        return this.pattern;
+    public String getValue() {
+        return this.value;
     }
 
     /**

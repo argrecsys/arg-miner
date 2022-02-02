@@ -446,7 +446,7 @@ public class ArgumentEngine {
 
                     // If the argument pattern is valid...
                     System.out.println(" - Pattern: " + sentPattern.getFullPattern());
-                    if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern.getPattern()) && !patterns.contains(sentPattern.getFullPattern())) {
+                    if (SyntacticAnalysisManager.checkArgumentPattern(sentPattern.getValue()) && !patterns.contains(sentPattern.getFullPattern())) {
                         System.out.println(" + Valid pattern!");
 
                         // Reconstructing sentences (claim and premise)
