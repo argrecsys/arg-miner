@@ -142,11 +142,27 @@ public class SyntacticAnalysisManager {
     /**
      *
      * @param tree
+     * @param node
+     * @return
+     */
+    public static String getTreeText(SyntacticTreebank tree, SyntacticTreebankNode node) {
+        String text = "";
+        try {
+            text = getTreeInnerText(tree, node);
+        } catch (Exception ex) {
+            Logger.getLogger(SyntacticAnalysisManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return text.trim();
+    }
+    
+    /**
+     *
+     * @param tree
      * @param lnkNode
      * @param level
      * @return
      */
-    public static SyntacticTreebankNode getLinkerParentNode(SyntacticTreebank tree, SyntacticTreebankNode lnkNode, int level) {
+    private static SyntacticTreebankNode getLinkerParentNode(SyntacticTreebank tree, SyntacticTreebankNode lnkNode, int level) {
         SyntacticTreebankNode parent = null;
 
         try {
@@ -164,22 +180,6 @@ public class SyntacticAnalysisManager {
         }
 
         return parent;
-    }
-
-    /**
-     *
-     * @param tree
-     * @param node
-     * @return
-     */
-    public static String getTreeText(SyntacticTreebank tree, SyntacticTreebankNode node) {
-        String text = "";
-        try {
-            text = getTreeInnerText(tree, node);
-        } catch (Exception ex) {
-            Logger.getLogger(SyntacticAnalysisManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return text.trim();
     }
 
     /**

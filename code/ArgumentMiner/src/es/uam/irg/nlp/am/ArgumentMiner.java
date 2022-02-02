@@ -48,9 +48,9 @@ public class ArgumentMiner {
     // Class constants
     private static final String ARGUMENTS_FILEPATH = "../../results/arguments.json";
     private static final boolean VERBOSE = true;
-    private HashSet<String> invalidLinkers;
 
     // Class members
+    private HashSet<String> invalidLinkers;
     private final String language;
     private ArgumentLinkerManager lnkManager;
     private Map<String, Object> mdbSetup;
@@ -90,7 +90,7 @@ public class ArgumentMiner {
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
 
             // Bulk annotation of proposals
-            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, lnkManager, invalidLinkers, stopwords);
+            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, proposalComments, lnkManager, invalidLinkers, stopwords);
 
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
@@ -120,15 +120,18 @@ public class ArgumentMiner {
     }
 
     /**
+     * Automatically annotates (identifies and extracts arguments) from
+     * proposals and comments.
      *
      * @param language
      * @param proposals
+     * @param proposalComments
      * @param lnkManager
      * @param invalidLinkers
      * @param stopwords
      * @return
      */
-    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
+    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, Map<Integer, DMComment> proposalComments, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
 
         // Temporary vars

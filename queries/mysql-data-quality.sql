@@ -4,6 +4,11 @@ SELECT id, url, code, title, userId, date, summary, text, numComments, status, n
   FROM proposals
  WHERE id IN (1432, 4696, 7700, 15004, 15707, 23248);
 
+-- summary: Me gustaria q alguien del.Ayuntamiento me diga, donde van los impuestos que pagamos los vecinos del Ensanche d Vallecas, esta todo sucio y lleno de escombros y ademas las zonas 'verdes' estan secas
+UPDATE proposals
+   SET summary = 'Me gustaria que alguien del Ayuntamiento me diga, donde van los impuestos que pagamos los vecinos del Ensanche de Vallecas, esta todo sucio y lleno de escombros y ademas las zonas ''verdes'' estan secas'
+ WHERE id = 372;
+
 -- summary: El parque de madrid rio se creo prometiendo que el transporte publico llearia hasta alli, pero es falso, metro de legazpi queda lejos y los autobuses son nulos.
 UPDATE proposals
    SET summary = 'El parque de Madrid Río se creó prometiendo que el transporte público llegaría hasta allí, pero es falso, metro de Legazpi queda lejos y los autobuses son nulos.'
