@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -65,15 +66,25 @@ public class MongoDbManager {
      * @param collection
      */
     public MongoDbManager(String client, int port, String database, String collection) {
-        try {
-            this.mongoClient = new MongoClient(client, port);
-            this.db = mongoClient.getDatabase(database);
-            this.collName = collection;
-        } catch (Exception ex) {
-            this.mongoClient = null;
-            this.db = null;
-            this.collName = null;
-        }
+        this.mongoClient = new MongoClient(client, port);
+        this.db = mongoClient.getDatabase(database);
+        this.collName = collection;
+    }
+
+    /**
+     * 
+     * @param setup 
+     */
+    public MongoDbManager(Map<String, Object> setup) {
+        String client = setup.get("db_server").toString();
+        int port = Integer.parseInt(setup.get("db_port").toString());
+        String database = setup.get("db_name").toString();
+        String collection = setup.get("db_collection").toString();
+        
+        this.mongoClient = new MongoClient(client, port);
+        this.db = mongoClient.getDatabase(database);
+        this.collName = collection;
+
     }
 
     /**

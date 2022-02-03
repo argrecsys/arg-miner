@@ -180,12 +180,7 @@ public class ArguRecSys {
 
         MongoDbManager dbManager = null;
         if (mdbSetup != null && mdbSetup.size() == 4) {
-            String dbServer = mdbSetup.get("db_server").toString();
-            int dbPort = Integer.parseInt(mdbSetup.get("db_port").toString());
-            String dbName = mdbSetup.get("db_name").toString();
-            String collName = mdbSetup.get("db_collection").toString();
-
-            dbManager = new MongoDbManager(dbServer, dbPort, dbName, collName);
+            dbManager = new MongoDbManager(mdbSetup);
         } else {
             dbManager = new MongoDbManager();
         }
@@ -243,12 +238,7 @@ public class ArguRecSys {
         try {
             DMDBManager dbManager = null;
             if (msqlSetup != null && msqlSetup.size() == 4) {
-                String dbServer = msqlSetup.get("db_server").toString();
-                String dbName = msqlSetup.get("db_name").toString();
-                String dbUserName = msqlSetup.get("db_user_name").toString();
-                String dbUserPwd = msqlSetup.get("db_user_pw").toString();
-
-                dbManager = new DMDBManager(dbServer, dbName, dbUserName, dbUserPwd);
+                dbManager = new DMDBManager(msqlSetup);
             } else {
                 dbManager = new DMDBManager();
             }

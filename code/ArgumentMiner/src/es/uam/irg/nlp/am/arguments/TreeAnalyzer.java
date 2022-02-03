@@ -83,7 +83,7 @@ public class TreeAnalyzer {
                 nGram = FunctionUtils.arrayToString(subList, NGRAMS_DELIMITER);
             }
         } catch (Exception ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TreeAnalyzer.class.getName()).log(Level.SEVERE, null, ex);
         }
         return nGram;
     }

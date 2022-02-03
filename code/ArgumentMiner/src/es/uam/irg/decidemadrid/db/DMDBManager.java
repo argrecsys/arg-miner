@@ -32,6 +32,15 @@ public class DMDBManager {
         this.db.connect(dbServer, dbName, dbUserName, dbUserPassword);
     }
 
+    public DMDBManager(Map<String, Object> setup) throws Exception {
+        String dbServer = setup.get("db_server").toString();
+        String dbName = setup.get("db_name").toString();
+        String dbUserName = setup.get("db_user_name").toString();
+        String dbUserPassword = setup.get("db_user_pw").toString();
+        this.db = new MySQLDBConnector();
+        this.db.connect(dbServer, dbName, dbUserName, dbUserPassword);
+    }
+
     @Override
     public void finalize() {
         this.db.disconnect();
