@@ -104,7 +104,7 @@ public class SyntacticAnalysisManager {
             sentPattern = new ArgumentPattern(pattern, (parent.getLevel() + 1));
 
         } catch (Exception ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SyntacticAnalysisManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return sentPattern;
@@ -176,7 +176,7 @@ public class SyntacticAnalysisManager {
                 } while (l < level && parent.getLevel() > 0);
             }
         } catch (Exception ex) {
-            Logger.getLogger(ArgumentEngine.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SyntacticAnalysisManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return parent;
