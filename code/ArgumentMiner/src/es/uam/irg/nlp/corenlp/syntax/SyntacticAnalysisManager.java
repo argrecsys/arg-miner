@@ -17,7 +17,6 @@
  */
 package es.uam.irg.nlp.corenlp.syntax;
 
-import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentPattern;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebankNode;
@@ -33,6 +32,8 @@ import java.util.logging.Logger;
  * @author Usuario
  */
 public class SyntacticAnalysisManager {
+
+    public static final String PUNCT_MARKS = ",...!?)/:;";
 
     // List of valid argument patterns
     private final static List<String> argPatterns = new ArrayList<>(Arrays.asList(
@@ -91,7 +92,7 @@ public class SyntacticAnalysisManager {
             String pattern = "";
             String lnkTag;
 
-            for (Integer childId : tree.getChildrenIdsOf(parent)) {
+            for (int childId : tree.getChildrenIdsOf(parent)) {
                 SyntacticTreebankNode child = tree.getNode(childId);
                 if (child.getId() == currNode.getId() || child.getId() == tree.getParentIdOf(currNode.getId())) {
                     lnkTag = "_LNK";
@@ -154,7 +155,7 @@ public class SyntacticAnalysisManager {
         }
         return text.trim();
     }
-    
+
     /**
      *
      * @param tree
@@ -193,10 +194,56 @@ public class SyntacticAnalysisManager {
         String text = "";
 
         if (node.getType() == SyntacticTreebankNode.NODE_WORD) {
-            text = (node.getTag().equals("PUNCT") ? "" : " ") + node.getWord();
+            if (node.getTag().equals("PUNCT")) {
+                text = translatePunctuationMark(node.getWord());
+            } else {
+                text = node.getWord();
+            }
         } else {
-            for (int nodeId : tree.getChildrenIdsOf(node)) {
-                text += getTreeInnerText(tree, tree.getNode(nodeId));
+            String token = "";
+            String lastToken = "";
+            for (int childId : tree.getChildrenIdsOf(node.getId())) {
+                token = getTreeInnerText(tree, tree.getNode(childId));
+                text += translateTextSpaces(token, lastToken);
+                lastToken = token;
+            }
+        }
+
+        return text;
+    }
+
+    /**
+     *
+     * @param mark
+     * @return
+     */
+    private static String translatePunctuationMark(String mark) {
+        String newMark;
+        newMark = switch (mark) {
+            case "-LRB-" ->
+                "(";
+            case "-RRB-" ->
+                ")";
+            default ->
+                mark;
+        };
+        return newMark;
+    }
+
+    /**
+     *
+     * @param currToken
+     * @param lastToken
+     * @return
+     */
+    private static String translateTextSpaces(String currToken, String lastToken) {
+        String text = "";
+
+        if (!StringUtils.isEmpty(currToken)) {
+            if (StringUtils.isEmpty(lastToken) || lastToken.charAt(0) == '(' || lastToken.charAt(0) == '/' || PUNCT_MARKS.contains("" + currToken.charAt(0))) {
+                text = currToken;
+            } else {
+                text = " " + currToken;
             }
         }
 
