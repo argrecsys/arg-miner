@@ -50,14 +50,14 @@ public class ArgumentMiner {
     private static final boolean VERBOSE = true;
 
     // Class members
-    private HashSet<String> invalidLinkers;
+    private final HashSet<String> invalidLinkers;
     private final String language;
-    private ArgumentLinkerManager lnkManager;
-    private Map<String, Object> mdbSetup;
-    private Map<String, Object> msqlSetup;
+    private final ArgumentLinkerManager lnkManager;
+    private final Map<String, Object> mdbSetup;
+    private final Map<String, Object> msqlSetup;
     private Map<Integer, DMComment> proposalComments;
     private Map<Integer, DMProposal> proposals;
-    private HashSet<String> stopwords;
+    private final HashSet<String> stopwords;
 
     /**
      * Class constructor.

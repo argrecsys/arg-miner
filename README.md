@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
-![version](https://img.shields.io/badge/version-2.3.0-blue)
-![last-update](https://img.shields.io/badge/last_update-2/3/2022-orange)
+![version](https://img.shields.io/badge/version-2.4.0-blue)
+![last-update](https://img.shields.io/badge/last_update-2/10/2022-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
@@ -131,9 +131,9 @@ The other results (in file form) of the argument extractor and recommender syste
 ## Dependencies
 The implemented solutions depend on or make use of the following libraries and .jar files:
 - JDK 16
-- <a href="https://stanfordnlp.github.io/CoreNLP/" target="_blank">Stanford CoreNLP 4.2.2</a>
+- <a href="https://stanfordnlp.github.io/CoreNLP/" target="_blank">Stanford CoreNLP</a> 4.3.1
 - MySQL Connector 8.0.22
-- MongoDB Java Driver 3.4.3
+- <a href="https://mongodb.github.io/mongo-java-driver/" target="_blank">MongoDB Java Driver</a> 3.12.10
 - Snake YAML 1.9
 - JSON Java 20210307
 
