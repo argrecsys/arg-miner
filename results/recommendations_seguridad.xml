@@ -158,7 +158,7 @@
                 <argument commentid="59430" id="7305-59430-5-1" parentid="58714" userid="66503">
                     <claim>Cambiemos seguridad</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>rapidez y comodidad-LRB- entre comillas pues me parecen relativas-RRB-</premise>
+                    <premise>rapidez y comodidad (entre comillas pues me parecen relativas)</premise>
                 </argument>
                 <argument commentid="62181" id="50-62181-4-1" parentid="62061" userid="7897">
                     <claim>Puede parecer mas seguro</claim>
@@ -193,10 +193,10 @@
                 <argument commentid="59430" id="7305-59430-15-2" parentid="58714" userid="66503">
                     <claim>Cambiemos seguridad</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>rapidez y comodidad-LRB- entre comillas pues me parecen relativas-RRB-</premise>
+                    <premise>rapidez y comodidad (entre comillas pues me parecen relativas)</premise>
                 </argument>
                 <argument commentid="59430" id="7305-59430-15-1" parentid="58714" userid="66503">
-                    <claim>Cambiemos seguridad por rapidez y comodidad-LRB- entre comillas pues me parecen relativas-RRB-</claim>
+                    <claim>Cambiemos seguridad por rapidez y comodidad (entre comillas pues me parecen relativas)</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>el argumento es el mismo</premise>
                 </argument>
@@ -363,17 +363,17 @@
                 <argument commentid="196860" id="25589-196860-1-2" parentid="-1" userid="621425">
                     <claim>es el futuro</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>hacer la ciudad mas habitable y evitar accidentes por querer introducir la bici sin seguridad al poner carriles virtuales-LRB- pintados solamente-RRB-</premise>
+                    <premise>hacer la ciudad mas habitable y evitar accidentes por querer introducir la bici sin seguridad al poner carriles virtuales (pintados solamente)</premise>
                 </argument>
                 <argument commentid="196860" id="25589-196860-1-1" parentid="-1" userid="621425">
                     <claim>Es costoso y no exento de cierta polemica</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>es el futuro para hacer la ciudad mas habitable y evitar accidentes por querer introducir la bici sin seguridad al poner carriles virtuales-LRB- pintados solamente-RRB-</premise>
+                    <premise>es el futuro para hacer la ciudad mas habitable y evitar accidentes por querer introducir la bici sin seguridad al poner carriles virtuales (pintados solamente)</premise>
                 </argument>
                 <argument commentid="29616" id="2596-29616-3-1" parentid="-1" userid="5517">
                     <claim>Los ciclistas necesitan sus propias vias especificas</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>circular con seguridad -LRB- la de todos-RRB- y estas solo se pueden obtener reduciendo el espacio actual de la calzada-LRB- esto tambien ocurre-RRB- y la acera</premise>
+                    <premise>circular con seguridad (la de todos) y estas solose pueden obtener reduciendo el espacio actual de la calzada (esto tambien ocurre) y la acera</premise>
                 </argument>
                 <argument commentid="47641" id="1419-47641-3-1" parentid="47639" userid="4877">
                     <claim>Si nos fijamos, Madrid cuenta ahora con bastantes kilometros de Carril para la bici</claim>
@@ -401,14 +401,14 @@
                     <premise>en muchas calles donde dos coches no pueden cruzarse, pueden hacerlo un coche y un ciclo con seguridad</premise>
                 </argument>
                 <argument commentid="-1" id="25997-0-1-1" parentid="-1" userid="62222">
-                    <claim>Propongo la habilitacion de la parada de autobus n 950-LRB- utilizada por el 28 y el 71-RRB-</claim>
+                    <claim>Propongo la habilitacion de la parada de autobus n 950 (utilizada por el 28 y el 71)</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>que pueda utilizarla el autobus nocturno N6 y que asi aumente nuestra tranquilidad y seguridad por la noche</premise>
                 </argument>
                 <argument commentid="24161" id="1803-24161-3-1" parentid="-1" userid="26250">
                     <claim>Puede parecer que al segregarlo se le da mayor seguridad a todos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>yo percibo que en el fondo lo que se haria es darle-LRB- otra vez-RRB- muchisima mas importancia al trafico a motor que al trafico ciclista</premise>
+                    <premise>yo percibo que en el fondo lo que se haria es darle (otra vez)muchisima mas importancia al trafico a motor que al trafico ciclista</premise>
                 </argument>
                 <argument commentid="79220" id="4228-79220-1-1" parentid="78944" userid="39457">
                     <claim>Gracias por tu comentario</claim>
@@ -421,7 +421,7 @@
                     <premise>yo creo que el tanatorio ya actua como crematorio a altas horas de la noche, y si esto es asi lo esta haciendo de manera totalmente ilegal por no tener la licencia</premise>
                 </argument>
                 <argument commentid="30900" id="2786-30900-5-1" parentid="-1" userid="33264">
-                    <claim>Es una pena porque en vez de desplazarme en bici lo hago en coche-LRB- con lo que esto supone-RRB- o en metro-LRB- llenanandolo aun mas-RRB-</claim>
+                    <claim>Es una pena porque en vez de desplazarme en bici lo hago en coche (con lo que esto supone)o en metro (llenanandolo aun mas)</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>existiesen sitios acondicionados para aparcar la bici con seguridad aumentaria el uso de esta</premise>
                 </argument>
@@ -448,7 +448,7 @@
                 <argument commentid="28634" id="2004-28634-5-1" parentid="-1" userid="5879">
                     <claim>Como usuaria la mayoria de las ocasiones utilizo la calzada</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>en rotondas de muchos carriles en los que pongo en peligro mi seguridad paso a utilizar la acera-LRB- muy despacio y dejando siempre prioridad al peaton-RRB-, si hubiera una alternativa segura para todos, no habria este problema</premise>
+                    <premise>en rotondas de muchos carriles en los que pongo en peligro mi seguridad paso a utilizar la acera (muy despacio y dejando siempre prioridad al peaton), si hubiera una alternativa segura para todos, no habria este problema</premise>
                 </argument>
                 <argument commentid="22690" id="615-22690-6-1" parentid="20731" userid="4877">
                     <claim>Esto se hace por seguridad, tanto para evitar los accidentes por apertura de puertas de vehiculos aparcados, como para evitar los adelantamientos que no guardan la distancia de 1,5 metros</claim>
@@ -458,12 +458,12 @@
                 <argument commentid="181803" id="20389-181803-1-1" parentid="181636" userid="472126">
                     <claim>Perdona Mauricio</claim>
                     <connector category="cause" function="support" subcategory="reason">segun</connector>
-                    <premise>Treepedia, un proyecto nacido en el Instituto de Tecnologia de Massachusetts-LRB- MIT-RRB-, Madrid infortunadamente no se encuentra entre las primeras diez, ni veinte, recuerda , estas propuestas no son prioridad social , como la salud, la educacion, la seguridad, entre otras, estas prpuestas son lo que a los politicos no alcanzan a determinar</premise>
+                    <premise>Treepedia, un proyecto nacido en el Instituto de Tecnologia de Massachusetts (MIT), Madrid infortunadamente no se encuentra entre las primeras diez, ni veinte, recuerda , estas propuestas no son prioridad social , como la salud, la educacion, la seguridad, entre otras, estas prpuestas son lo que a los politicos no alcanzan a determinar</premise>
                 </argument>
                 <argument commentid="28634" id="2004-28634-4-1" parentid="-1" userid="5879">
                     <claim>Me parece bien</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>para ello se tendrian que habilitar carriles seguros para bicicletas, como usuaria la mayoria de las ocasiones utilizo la calzada, pero en rotondas de muchos carriles en los que pongo en peligro mi seguridad paso a utilizar la acera-LRB- muy despacio y dejando siempre prioridad al peaton-RRB-</premise>
+                    <premise>para ello se tendrian que habilitar carriles seguros para bicicletas, como usuaria la mayoria de las ocasiones utilizo la calzada, pero en rotondas de muchos carriles en los que pongo en peligro mi seguridad paso a utilizar la acera (muy despacio y dejando siempre prioridad al peaton)</premise>
                 </argument>
                 <argument commentid="143118" id="19361-143118-2-1" parentid="-1" userid="136383">
                     <claim>El ruido y las molestias solo es la punta del iceber</claim>
@@ -488,12 +488,12 @@
                 <argument commentid="204336" id="26826-204336-3-1" parentid="-1" userid="13701">
                     <claim>Repetido</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>le digo lo mismo Apoyo la idea pero no el medio de transporte , para este fin utilizaria el autobus en vez del tranvia , que no existe en Madrid y desde mi opinion tiene mas inconvenientes que ventajas en las ciudades con respecto al autobus-LRB- Limpiez visual, seguridad electrica, coste de pavimentado y cuidado de calles...-RRB-</premise>
+                    <premise>le digo lo mismo Apoyo la idea pero no el medio de transporte , para este fin utilizaria el autobus en vez del tranvia , que no existe en Madrid y desde mi opinion tiene mas inconvenientes que ventajas en las ciudades con respecto al autobus (Limpiez visual, seguridad electrica, coste de pavimentado y cuidado de calles...)</premise>
                 </argument>
                 <argument commentid="30959" id="615-30959-1-1" parentid="-1" userid="2459">
                     <claim>Por supuesto que si</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>para empezar a multar a ciclistas primero habra que crear infraestructuras para que no incumplan las normas de circulacion, entre tanto multaria severamente la doble fila que tampoco esta permitido, tambien multaria severamente a automovilistas que no respetan la distancia de seguridad, a automovilistas que tocan el claxon injustificadamente-LRB- prohibiria que los coches tuvieran claxon-RRB-, entre otras medidas</premise>
+                    <premise>para empezar a multar a ciclistas primero habra que crear infraestructuras para que no incumplan las normas de circulacion, entre tanto multaria severamente la doble fila que tampoco esta permitido, tambien multaria severamente a automovilistas que no respetan la distancia de seguridad, a automovilistas que tocan el claxon injustificadamente (prohibiria que los coches tuvieran claxon), entre otras medidas</premise>
                 </argument>
                 <argument commentid="71264" id="10085-71264-3-1" parentid="71203" userid="106685">
                     <claim>me parece una verguenza</claim>
@@ -513,20 +513,20 @@
                 <argument commentid="32063" id="1882-32063-2-1" parentid="24753" userid="26518">
                     <claim>dijeron algo asi como los famosos 3 escalones</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>lo que deduzco que no es la primera persona que no puede abrir su negocio por esta clase de requisitos sin sentido-LRB- despues de haber invertido un dinero en extintores, medidas de seguridad, aislantes, canerias...-RRB-</premise>
+                    <premise>lo que deduzco que no es la primera persona que no puede abrir su negocio por esta clase de requisitos sin sentido (despues de haber invertido un dinero en extintores, medidas de seguridad, aislantes, canerias...)</premise>
                 </argument>
                 <argument commentid="32063" id="1882-32063-4-1" parentid="24753" userid="26518">
                     <claim>dijeron algo asi como los famosos 3 escalones</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>lo que deduzco que no es la primera persona que no puede abrir su negocio por esta clase de requisitos sin sentido-LRB- despues de haber invertido un dinero en extintores, medidas de seguridad, aislantes, canerias...-RRB-</premise>
+                    <premise>lo que deduzco que no es la primera persona que no puede abrir su negocio por esta clase de requisitos sin sentido (despues de haber invertido un dinero en extintores, medidas de seguridad, aislantes, canerias...)</premise>
                 </argument>
                 <argument commentid="29504" id="2363-29504-1-1" parentid="29139" userid="13805">
                     <claim>Parece que hemos llegado al motivo de la propuesta, no se, no se</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>bueno a ver si lo entiendo: INFRINGIR A SABIENDAS UNA LEY que protege la seguridad de una gran mayoria que incluye a personas con movilidad disminuida e incluso a la minoria que la critica, ES LICITO porque se ha hecho con cuidado-LRB- que no es la generalidad-RRB-, por la posible solicitud de derogacion de dicha Ley y en aras de una pretendida modernidad ?</premise>
+                    <premise>bueno a ver si lo entiendo: INFRINGIR A SABIENDAS UNA LEY que protege la seguridad de una gran mayoria que incluye a personas con movilidad disminuida e incluso a la minoria que la critica, ES LICITO porque se ha hecho con cuidado (que no es la generalidad), por la posible solicitud de derogacion de dicha Ley y en aras de una pretendida modernidad ?</premise>
                 </argument>
                 <argument commentid="173895" id="10162-173895-3-1" parentid="151154" userid="259379">
-                    <claim>Asi es , ya se paga por el registro del animal en el censo, su identificacion, las vacunas para que puedan circular por la calles con seguridad de que no transmiten enfermedades, ademas de que todos las mascotas deben estar cubiertas por un seguro de responsabilidad civil, que parece que esa obligacion queda limitada a los propietarios de ppp y no es cierto-LRB- los duenos de estos tambien pagan ya sus extras por la correspondiente licencia-RRB-</claim>
+                    <claim>Asi es , ya se paga por el registro del animal en el censo, su identificacion, las vacunas para que puedan circular por la calles con seguridad de que no transmiten enfermedades, ademas de que todos las mascotas deben estar cubiertas por un seguro de responsabilidad civil, que parece que esa obligacion queda limitada a los propietarios de ppp y no es cierto (los duenos de estos tambien pagan ya sus extras por la correspondiente licencia)</claim>
                     <connector category="consequence" function="support" subcategory="result">asi</connector>
                     <premise>que senores, ya se pagan tasas por tener mascotas , son propuestas de gente que no tiene animales parece ser</premise>
                 </argument>
@@ -548,7 +548,7 @@
                 <argument commentid="143028" id="19170-143028-1-1" parentid="142880" userid="315455">
                     <claim>No creo que este haciendo una comparacion adecuada de las cosas, esta claro que hay operaciones esteticas para que nos sintamos mas guapos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>de lo que estoy hablando es de otra cosa totalmente diferente , creo que no nos entendemos , hablo de dar normalidad a unas personas que lo necesitan, y que sea accesible, no estoy diciendo que se les ponga como una top model, los embellecimientos los tendran que pagar como todos, pero lo basico pues si, es como el tema de los dientes, me parece vergonzoso que actualmente el sistema nacional de la seguridad social no ponga unos dientes para comer-LRB- vera es una necesidad basica-RRB- y que cada vez que tengas que ir al dentista tengas que pasar por caja, y que cada vez haya mas cadenas dentales blanqueando dinero negro por este metodo, ya que tener unos dientes sanos es una necesidad</premise>
+                    <premise>de lo que estoy hablando es de otra cosa totalmente diferente , creo que no nos entendemos , hablo de dar normalidad a unas personas que lo necesitan, y que sea accesible, no estoy diciendo que se les ponga como una top model, los embellecimientos los tendran que pagar como todos, pero lo basico pues si, es como el tema de los dientes, me parece vergonzoso que actualmente el sistema nacional de la seguridad social no ponga unos dientes para comer (vera es una necesidad basica) y que cada vez que tengas que ir al dentista tengas que pasar por caja, y que cada vez haya mas cadenas dentales blanqueando dinero negro por este metodo, ya que tener unos dientes sanos es una necesidad</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="impuestos">
@@ -562,7 +562,7 @@
                 <argument commentid="80422" id="4776-80422-3-1" parentid="-1" userid="152649">
                     <claim>Fue una guerra civil, personas de ambos bandos murieron</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>considero que hay cosas mas importantes para la ciudad en las que se podria invertir el dinero que en cambiar los nombres de calles, paradas de metro, domicilios de personas-LRB- que afecta a contratos de trabajo, nuevos DNIs y pasaportes, Seguridad Social-RRB-, reescrituraciones de viviendas... Me parece tirar el dinero, y no es que andemos sobrados, creo yo</premise>
+                    <premise>considero que hay cosas mas importantes para la ciudad en las que se podria invertir el dinero que en cambiar los nombres de calles, paradas de metro, domicilios de personas (que afecta a contratos de trabajo, nuevos DNIs y pasaportes, Seguridad Social), reescrituraciones de viviendas... Me parece tirar el dinero, y no es que andemos sobrados, creo yo</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="accidentes">
