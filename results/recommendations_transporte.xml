@@ -276,7 +276,7 @@
                 <argument commentid="27284" id="2286-27284-5-1" parentid="27166" userid="30412">
                     <claim>las vias van</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>dentro de la carretera y no sobresalen de esta y la catenaria y los tubos para llevar la electricidad apenas se notan, por no decir que es posible tener tranvias que obtienen la electricidad de las vias directamente, sin catenaria, de todas maneras no se trata de sustituir un modo de transporte por otro si no de aumentar las opciones de transporte publico disponibles y de combinar medios de transporte para poder disfrutar de un transporte publico mas eficiente y ecologico :-RRB-</premise>
+                    <premise>dentro de la carretera y no sobresalen de esta y la catenaria y los tubos para llevar la electricidad apenas se notan, por no decir que es posible tener tranvias que obtienen la electricidad de las vias directamente, sin catenaria, de todas maneras no se trata de sustituir un modo de transporte por otro si no de aumentar las opciones de transporte publico disponibles y de combinar medios de transporte para poder disfrutar de un transporte publico mas eficiente y ecologico :)</premise>
                 </argument>
                 <argument commentid="84462" id="2847-84462-5-1" parentid="-1" userid="13479">
                     <claim>Supone una vulneracion de los derechos de uso del transporte publico</claim>
@@ -311,7 +311,7 @@
                 <argument commentid="-1" id="19141-0-1-1" parentid="-1" userid="183196">
                     <claim>Esta app permitiria ver informacion</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
-                    <premise>estado de las lineas de transporte de la ciudad-LRB- horarios, retrasos etc.-RRB-, ademas de recargar la trajeta de transporte publico</premise>
+                    <premise>estado de las lineas de transporte de la ciudad (horarios, retrasos etc.), ademas de recargar la trajeta de transporte publico</premise>
                 </argument>
                 <argument commentid="79228" id="11161-79228-1-1" parentid="79037" userid="158">
                     <claim>Razon no te falta</claim>
@@ -326,7 +326,7 @@
                 <argument commentid="47374" id="6609-47374-2-1" parentid="47335" userid="158">
                     <claim>La activacion de los protocolos de restriccion son puntuales</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>pueden ir ayudando a concienciar a la gente para usar el transporte publico-LRB- y a las administraciones para que aumenten su inversion en transporte publico-RRB-</premise>
+                    <premise>pueden ir ayudando a concienciar a la gente para usar el transporte publico (y a las administraciones para que aumenten su inversion en transporte publico)</premise>
                 </argument>
                 <argument commentid="190546" id="24534-190546-1-1" parentid="-1" userid="508768">
                     <claim>Se daria la paradoja de que ese dia el transporte seria gratis para el que contamina habitualmente</claim>
@@ -369,7 +369,7 @@
                     <premise>hay vagos que no lo cogen ni aunque les paguen por ello , tambien hay otras personas que para llegar a determinados lugares tienen muy mala combinacion de transporte publico</premise>
                 </argument>
                 <argument commentid="132934" id="15996-132934-4-1" parentid="131723" userid="70407">
-                    <claim>no deberia considerar la existencia de los medios-LRB- carril bici, asistencia a los usuarios, transporte que no fomente el vehiculo privado-RRB-</claim>
+                    <claim>no deberia considerar la existencia de los medios (carril bici, asistencia a los usuarios, transporte que no fomente el vehiculo privado)</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>lograr su completo desarrollo</premise>
                 </argument>
@@ -386,7 +386,7 @@
                 <argument commentid="41475" id="2135-41475-4-1" parentid="41073" userid="3170">
                     <claim>En otras capitales europeas, tanto que nos fijamos en ellas para lo que queremos, un dia como hoy, el transporte publico seria gratuito, para incentivar su uso y reducir la contaminacion</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>en Madrid desde tiempos inmemorables, hemos sido asi de chulos, y hoy, como no, el transporte pagando, entonces a usar el coche, total, estamos a mediados de Noviembre, y yo -LRB- continua-RRB-</premise>
+                    <premise>en Madrid desde tiempos inmemorables, hemos sido asi de chulos, y hoy, como no, el transporte pagando, entonces a usar el coche, total, estamos a mediados de Noviembre, y yo (continua)</premise>
                 </argument>
                 <argument commentid="117717" id="10996-117717-7-1" parentid="-1" userid="238034">
                     <claim>De los cuales me parece que el descuento para jovenes y jubilados actual esta perfecto, jovenes 20 y jubilados me parece que son 12,5</claim>
@@ -396,12 +396,12 @@
                 <argument commentid="124257" id="4330-124257-1-1" parentid="-1" userid="238034">
                     <claim>Estoy totalmente de acuerdo con la realizacion de una linea que conecte todas estas zonas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no parece coger mucho impulso la propuesta, entre que estamos pelaos de dinero en Espana y que el uso de capital para inversion a futuro, e innovar y mejorar la calidad de vida-LRB- ya sea con mejores conexiones de transporte, como intentar solventar el problema de la contaminacion ya que la M30 y M40 estan siempre llenas en horas punta de gente que va o viene de trabajar-RRB- no es algo que parezca que le importe al gobierno, el metro de Madrid es una de las mejores cosas que han echo en su vida ya que es rapido, y es una buena red de transporte</premise>
+                    <premise>no parece coger mucho impulso la propuesta, entre que estamos pelaos de dinero en Espana y que el uso de capital para inversion a futuro, e innovar y mejorar la calidad de vida (ya sea con mejores conexiones de transporte, como intentar solventar el problema de la contaminacion ya que la M30 y M40 estan siempre llenas en horas punta de gente que va o viene de trabajar) no es algo que parezca que le importe al gobierno, el metro de Madrid es una de las mejores cosas que han echo en su vida ya que es rapido, y es una buena red de transporte</premise>
                 </argument>
                 <argument commentid="124257" id="4330-124257-3-1" parentid="-1" userid="238034">
                     <claim>Estoy totalmente de acuerdo con la realizacion de una linea que conecte todas estas zonas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no parece coger mucho impulso la propuesta, entre que estamos pelaos de dinero en Espana y que el uso de capital para inversion a futuro, e innovar y mejorar la calidad de vida-LRB- ya sea con mejores conexiones de transporte, como intentar solventar el problema de la contaminacion ya que la M30 y M40 estan siempre llenas en horas punta de gente que va o viene de trabajar-RRB- no es algo que parezca que le importe al gobierno, el metro de Madrid es una de las mejores cosas que han echo en su vida ya que es rapido, y es una buena red de transporte , para mi el cercanias cubre muchas zonas importantes pero le falta este proyecto para ya ser lo mas de lo mas, el cercanias es comodo , no contamina, es rapido, y te ahorra atascos</premise>
+                    <premise>no parece coger mucho impulso la propuesta, entre que estamos pelaos de dinero en Espana y que el uso de capital para inversion a futuro, e innovar y mejorar la calidad de vida (ya sea con mejores conexiones de transporte, como intentar solventar el problema de la contaminacion ya que la M30 y M40 estan siempre llenas en horas punta de gente que va o viene de trabajar) no es algo que parezca que le importe al gobierno, el metro de Madrid es una de las mejores cosas que han echo en su vida ya que es rapido, y es una buena red de transporte , para mi el cercanias cubre muchas zonas importantes pero le falta este proyecto para ya ser lo mas de lo mas, el cercanias es comodo , no contamina, es rapido, y te ahorra atascos</premise>
                 </argument>
                 <argument commentid="-1" id="7494-0-2-1" parentid="-1" userid="1202">
                     <claim>Impulsa uso transporte publico</claim>
@@ -469,7 +469,7 @@
                     <premise>somos muy comodos</premise>
                 </argument>
                 <argument commentid="181945" id="23219-181945-1-1" parentid="-1" userid="26752">
-                    <claim>No se chicas/ os</claim>
+                    <claim>No se chicas/os</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>ver la naturaleza cerca de tanto transporte y tantos</premise>
                 </argument>
@@ -584,7 +584,7 @@
                     <premise>queremos que los desplazamientos sean breves</premise>
                 </argument>
                 <argument commentid="-1" id="18002-0-1-1" parentid="-1" userid="137940">
-                    <claim>Utilizar la tarjeta de transporte recargable-LRB- tipo la Barik de Bilbao-RRB-</claim>
+                    <claim>Utilizar la tarjeta de transporte recargable (tipo la Barik de Bilbao)</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>la tercera edad a precio reducido</premise>
                 </argument>
@@ -684,7 +684,7 @@
                     <premise>nadie, cualquier conductor que realice transporte de viajeros de debe pasar unas pruebas de capacitacion obligatoriamente</premise>
                 </argument>
                 <argument commentid="-1" id="22029-0-4-1" parentid="-1" userid="470702">
-                    <claim>#asfaltarla la C/ Velazquez #cuidar laimagen</claim>
+                    <claim>#asfaltarla la C/Velazquez #cuidar laimagen</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>#turistas #madrilenos y #visitantes , por un transporte limpio y sin baches, irregularidades, hoyos</premise>
                 </argument>
@@ -729,14 +729,14 @@
                     <premise>hay buena oferta de transporte publico en el barrio</premise>
                 </argument>
                 <argument commentid="-1" id="17562-0-1-1" parentid="-1" userid="9533">
-                    <claim>El barrio de Saconia-LRB- Valdezarza-RRB- esta relativamente cerca a la estacion de Chamartin</claim>
+                    <claim>El barrio de Saconia (Valdezarza) esta relativamente cerca a la estacion de Chamartin</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no hay transporte publico que una directamente estos lugares</premise>
                 </argument>
                 <argument commentid="93034" id="12975-93034-5-1" parentid="93023" userid="158">
                     <claim>Exacto</claim>
                     <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
-                    <premise>si mal no recuerdo , creo que se usa igualmente para transporte de viajeros-LRB- el C2 que va de Guadalajara a Chamartin? -RRB-</premise>
+                    <premise>si mal no recuerdo , creo que se usa igualmente para transporte de viajeros (el C2 que va de Guadalajara a Chamartin? )</premise>
                 </argument>
                 <argument commentid="63169" id="9014-63169-2-2" parentid="-1" userid="69149">
                     <claim>el salto tenia que ser mucho menor</claim>
@@ -866,7 +866,7 @@
                 <argument commentid="37567" id="615-37567-1-1" parentid="19648" userid="39465">
                     <claim>Estoy totalmente a favor del uso de la bicicleta como medio de transporte para Madrid</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>considero que deberia regularse minimamente para evitar/ prevenir accidentes</premise>
+                    <premise>considero que deberia regularse minimamente para evitar/prevenir accidentes</premise>
                 </argument>
                 <argument commentid="64483" id="480-64483-1-1" parentid="25978" userid="11990">
                     <claim>Es una propuesta razonable, logica y necesaria</claim>
@@ -886,7 +886,7 @@
                 <argument commentid="-1" id="13176-0-1-1" parentid="-1" userid="178510">
                     <claim>Elaborar un plan de carga y descarga nocturno</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>abastecer a mercados y grandes almacenes con horario regulado-LRB- hora de entrega y salida-RRB- para cada transporte</premise>
+                    <premise>abastecer a mercados y grandes almacenes con horario regulado (hora de entrega y salida)para cada transporte</premise>
                 </argument>
                 <argument commentid="-1" id="1692-0-2-1" parentid="-1" userid="24511">
                     <claim>Muy a menudo los transportes publicos han de combinarse</claim>
@@ -906,7 +906,7 @@
                 <argument commentid="199486" id="25851-199486-1-1" parentid="-1" userid="155895">
                     <claim>Ciertamente compete a la Comunidad</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>seguro que el ayuntamiento puede influir-LRB- por ejemplo, si da ayudas para la mejora de accesibilidad en locales de transporte publico-RRB-</premise>
+                    <premise>seguro que el ayuntamiento puede influir (por ejemplo,si da ayudas para la mejora de accesibilidad en locales de transporte publico)</premise>
                 </argument>
                 <argument commentid="204276" id="24890-204276-2-1" parentid="-1" userid="597334">
                     <claim>No entiendo competencias</claim>
@@ -936,7 +936,7 @@
                 <argument commentid="28610" id="2269-28610-1-1" parentid="-1" userid="31441">
                     <claim>estoy de acuerdo</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>hay otra opcion que es la de pagar el coste del transporte publico-LRB- dos euros-RRB- de peaje a los que cojan el coche</premise>
+                    <premise>hay otra opcion que es la de pagar el coste del transporte publico (dos euros)de peaje a los que cojan el coche</premise>
                 </argument>
                 <argument commentid="171157" id="19200-171157-4-1" parentid="-1" userid="543722">
                     <claim>Los carriles bici son</claim>
@@ -944,7 +944,7 @@
                     <premise>todos , bicicleta es un medio de transporte sostenible, ecologico y economico, ademas en los centros de ciudades no hay espacio para mas coches</premise>
                 </argument>
                 <argument commentid="40386" id="4817-40386-6-1" parentid="39376" userid="158">
-                    <claim>Si realmente crees que es necesario invertir en transporte, invirtamos-LRB- beneficiara a todos-RRB-</claim>
+                    <claim>Si realmente crees que es necesario invertir en transporte, invirtamos (beneficiara a todos)</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no como consecuencia de la construccion de un barrio entero que sale de la nada</premise>
                 </argument>
@@ -961,7 +961,7 @@
                 <argument commentid="-1" id="23945-0-1-1" parentid="-1" userid="592432">
                     <claim>Ampliar la red de transporte de cercanias con lineas circulares</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>descargar el trafico de las carreteras que rodean Madrid-LRB- M30, M40, M45 y M50-RRB- y contaminar menos</premise>
+                    <premise>descargar el trafico de las carreteras que rodean Madrid (M30, M40, M45 y M50) y contaminar menos</premise>
                 </argument>
                 <argument commentid="159035" id="21171-159035-1-1" parentid="-1" userid="520262">
                     <claim>Utilizo mi monopatin</claim>
@@ -1016,7 +1016,7 @@
                 <argument commentid="-1" id="12487-0-5-1" parentid="-1" userid="8775">
                     <claim>Lo digo</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>que el pasado dia 6 de Julio, deje a mis padres mayores en la puerta L del hospital-LRB- no estan nada agiles para que vayan en transporte publico-RRB-</premise>
+                    <premise>que el pasado dia 6 de Julio, deje a mis padres mayores en la puerta L del hospital (no estan nada agiles para que vayan en transporte publico)</premise>
                 </argument>
                 <argument commentid="62670" id="8885-62670-10-1" parentid="62647" userid="74863">
                     <claim>usan su bici como medio de transporte</claim>
@@ -1116,7 +1116,7 @@
                 <argument commentid="178318" id="19992-178318-1-1" parentid="-1" userid="10929">
                     <claim>PErdona</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>el distrito de Arganzuela tiene cuatro estaciones de cercanias-LRB- Mendez Alvaro, Piramides, Principe Pio y Embajadores-RRB- cuando otros barrios no tienen ni una estacion de Cercanias y transporte publico deficiente en general</premise>
+                    <premise>el distrito de Arganzuela tiene cuatro estaciones de cercanias (Mendez Alvaro, Piramides, Principe Pio y Embajadores) cuando otros barrios no tienen ni una estacion de Cercanias y transporte publico deficiente en general</premise>
                 </argument>
                 <argument commentid="167843" id="19778-167843-3-1" parentid="-1" userid="52663">
                     <claim>Entiendo que no es facil de entender</claim>
@@ -1129,7 +1129,7 @@
                     <premise>hay vagos que no lo cogen ni aunque les paguen por ello</premise>
                 </argument>
                 <argument commentid="-1" id="15942-0-1-1" parentid="-1" userid="236085">
-                    <claim>necesita transporte publico directo-LRB- metro/ bus-RRB-</claim>
+                    <claim>necesita transporte publico directo (metro/bus)</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
                     <premise>unir las dos zonas ya que es una pena que estando tan cerca se tarde una hora entre ambas, teniendo que coger dos autobuses actualmente</premise>
                 </argument>
@@ -1156,7 +1156,7 @@
                 <argument commentid="-1" id="797-0-1-1" parentid="-1" userid="14595">
                     <claim>Hasta ahora existe un abono transporte para jovenes</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>yo propongo que se cree un abono todavia mas economico o bien que se extienda el infantil hasta terminar la ensenanza obligatoria-LRB- 16 anos-RRB-</premise>
+                    <premise>yo propongo que se cree un abono todavia mas economico o bien que se extienda el infantil hasta terminar la ensenanza obligatoria (16 anos)</premise>
                 </argument>
                 <argument commentid="179914" id="23641-179914-2-2" parentid="-1" userid="19301">
                     <claim>Yo tengo que coger 2 medios de transporte</claim>
@@ -1181,7 +1181,7 @@
                 <argument commentid="-1" id="2367-0-1-1" parentid="-1" userid="11353">
                     <claim>Soterrar el Paseo del Prado</claim>
                     <connector category="consequence" function="support" subcategory="goal">para</connector>
-                    <premise>disponer de un verdadero paseo de los Museos dejando unicamente 2 carriles para el transporte publico-LRB- buses, taxis y motos-RRB- y creacion de un carril bici en condicio</premise>
+                    <premise>disponer de un verdadero paseo de los Museos dejando unicamente 2 carriles para el transporte publico (buses, taxis y motos) y creacion de un carril bici en condicio</premise>
                 </argument>
                 <argument commentid="-1" id="1988-0-1-1" parentid="-1" userid="12078">
                     <claim>Hola, se tenemos la opcion de la tarjeta azul</claim>
@@ -1189,7 +1189,7 @@
                     <premise>solo vale para la zona A, por que pagando lo mismo que los de la tercera edad no podemos disfrutar de todas las zonas de transporte ?</premise>
                 </argument>
                 <argument commentid="132454" id="12371-132454-1-1" parentid="-1" userid="55072">
-                    <claim>Los vecinos de Corralejos- Los Coronales vivimos muy cerca del aeropuerto</claim>
+                    <claim>Los vecinos de Corralejos - Los Coronales vivimos muy cerca del aeropuerto</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
                     <premise>no tenemos transporte publico que nos lleve a ninguna de las terminales, y nuestra conexion con el centro de Madrid termina en Avenida de America</premise>
                 </argument>
@@ -1231,7 +1231,7 @@
                 <argument commentid="84782" id="11589-84782-1-1" parentid="-1" userid="152649">
                     <claim>estoy de acuerdo en la propuesta</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>la duracion deberia ser de 90 minutos-LRB- como ocurre con el transporte en Roma por ejemplo-RRB- ya que en Madrid, es muy facil que un trayecto dure mas de 1 hora</premise>
+                    <premise>la duracion deberia ser de 90 minutos (como ocurre con el transporte en Roma por ejemplo) ya que en Madrid, es muy facil que un trayecto dure mas de 1 hora</premise>
                 </argument>
                 <argument commentid="82659" id="11437-82659-1-1" parentid="82148" userid="153617">
                     <claim>Lo de los servicios lo entiendo y es ciertamente injusto que los empadronados paguen via impuestos un servicio del que posteriormente se aprovechan otras personas;</claim>
@@ -1311,12 +1311,12 @@
                 <argument commentid="112088" id="10996-112088-3-1" parentid="-1" userid="201058">
                     <claim>La medida de 20 euros para los jovenes esta bastante bien</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>es una incoherencia que una persona en paro o que cobre subsidio de 426 euros tenga que destinar casi 56-LRB- si vives en zona A, si no, puede llegar casi a los 100-RRB- solo para transporte publico</premise>
+                    <premise>es una incoherencia que una persona en paro o que cobre subsidio de 426 euros tenga que destinar casi 56 (si vives en zona A, si no, puede llegar casi a los 100) solo para transporte publico</premise>
                 </argument>
                 <argument commentid="95257" id="10033-95257-4-1" parentid="72418" userid="178731">
                     <claim>Si piensas, sabes que con tus impuestos ya pagas el reciclaje del envase, por lo tanto</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>tu haces una parte del reciclaje-LRB- recogida selectiva, transporte hasta la tienda y algo mas-RRB-, deben indemnizarte y descontarte la parte proporcional de lo que has ahorrado al estado espanol</premise>
+                    <premise>tu haces una parte del reciclaje (recogida selectiva, transporte hasta la tienda y algo mas), deben indemnizarte y descontarte la parte proporcional de lo que has ahorrado al estado espanol</premise>
                 </argument>
                 <argument commentid="20608" id="705-20608-7-1" parentid="20269" userid="14004">
                     <claim>El unico problema que encuentran es que la mayoria de las bicicletas se acumulan en la zona baja de la ciudad ya que la gente las usa para bajar y cogen el transporte publico para subir</claim>
@@ -1376,17 +1376,17 @@
                 <argument commentid="204336" id="26826-204336-3-1" parentid="-1" userid="13701">
                     <claim>Repetido</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>le digo lo mismo Apoyo la idea pero no el medio de transporte , para este fin utilizaria el autobus en vez del tranvia , que no existe en Madrid y desde mi opinion tiene mas inconvenientes que ventajas en las ciudades con respecto al autobus-LRB- Limpiez visual, seguridad electrica, coste de pavimentado y cuidado de calles...-RRB-</premise>
+                    <premise>le digo lo mismo Apoyo la idea pero no el medio de transporte , para este fin utilizaria el autobus en vez del tranvia , que no existe en Madrid y desde mi opinion tiene mas inconvenientes que ventajas en las ciudades con respecto al autobus (Limpiez visual, seguridad electrica, coste de pavimentado y cuidado de calles...)</premise>
                 </argument>
                 <argument commentid="138323" id="18732-138323-3-1" parentid="138300" userid="257684">
-                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas,etc</claim>
+                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas, etc</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar-LRB- porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer-RRB-</premise>
+                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar (porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer)</premise>
                 </argument>
                 <argument commentid="95257" id="10033-95257-6-1" parentid="72418" userid="178731">
                     <claim>El sistema educativo no ensena a pensar, por desgracia, tan solo a repetir como cotorras, si piensas, sabes que con tus impuestos ya pagas el reciclaje del envase, por lo tanto</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>tu haces una parte del reciclaje-LRB- recogida selectiva, transporte hasta la tienda y algo mas-RRB-, deben indemnizarte y descontarte la parte proporcional de lo que has ahorrado al estado espanol</premise>
+                    <premise>tu haces una parte del reciclaje (recogida selectiva, transporte hasta la tienda y algo mas), deben indemnizarte y descontarte la parte proporcional de lo que has ahorrado al estado espanol</premise>
                 </argument>
                 <argument commentid="26473" id="2161-26473-1-1" parentid="26303" userid="29326">
                     <claim>Si, requiere un estudio de que zonas son las que cuenta con menos transporte publico alternativo, donde situar esas paradas, con que frecuencia pasarian</claim>
@@ -1401,12 +1401,12 @@
                 <argument commentid="42188" id="4666-42188-1-1" parentid="38903" userid="1756">
                     <claim>Las zonas azules fomentan el uso del vehiculo privado en la ciudad</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>es una forma de reservar plazas de aparcamiento para los no residentes... Si se eliminaren las zonas azules, y todas fueran verdes-LRB- para residentes-RRB-... apenas quedarian plazas libres para no residentes... hecho que disuadiria muchisimo mas a los no residentes para utilizar el transporte publico, en lugar del vehiculo privado</premise>
+                    <premise>es una forma de reservar plazas de aparcamiento para los no residentes... Si se eliminaren las zonas azules, y todas fueran verdes (para residentes)... apenas quedarian plazas libres para no residentes... hecho que disuadiria muchisimo mas a los no residentes para utilizar el transporte publico, en lugar del vehiculo privado</premise>
                 </argument>
                 <argument commentid="131458" id="11989-131458-5-1" parentid="-1" userid="443770">
                     <claim>Alguno preferis que un atasco se multiplique por 3 antes que aceptar que la moto es el mejor medio de transporte para ciudades como Madrid</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>te da envidia/ rabia o lo que sea que te produzca la solucion es muy facil: te compras una moto y te juegas la vida entre conductores igual de envidiosos... veras que experiencia tan apasionante</premise>
+                    <premise>te da envidia/rabia o lo que sea que te produzca la solucion es muy facil: te compras una moto y te juegas la vida entre conductores igual de envidiosos... veras que experiencia tan apasionante</premise>
                 </argument>
                 <argument commentid="36540" id="1266-36540-8-1" parentid="-1" userid="37349">
                     <claim>Entiendo que la Gran Via no se pueda establecer zona APR para entre semana</claim>
@@ -1421,7 +1421,7 @@
                 <argument commentid="84348" id="10495-84348-7-1" parentid="-1" userid="159910">
                     <claim>Yo estoy a FAVOR de que mi abono mensual cuesta 54,60 para todo un mes, que vale, el precio es muy logico y muy bueno y no nos podemos quejar de el transporte publico de Madrid</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>porque no para las personas que demuestren que cogen a menudo el bus/ metro/ cercanias, no se les pone un abono mensual o quincenal como lo que tienen los jovenes ????</premise>
+                    <premise>porque no para las personas que demuestren que cogen a menudo el bus/metro/cercanias, no se les pone un abono mensual o quincenal como lo que tienen los jovenes ????</premise>
                 </argument>
                 <argument commentid="66644" id="4622-66644-6-1" parentid="66595" userid="41666">
                     <claim>Por lo cual tengo que llevarlo a al colegio a las 8:15 de camino a mi trabajo, al cual no puedo ir en transporte publico, ojala pudiera llevar a mi hijo andando al colegio e ir en metro a trabajar</claim>
@@ -1456,27 +1456,27 @@
                 <argument commentid="109145" id="12058-109145-5-1" parentid="-1" userid="189754">
                     <claim>La gente que no tiene coche y ya posee abono transporte no necesita que le incentiven su uso ya que no le queda otra</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>para los que no tenemos abono es bastante caro, por otra parte todos los impedimentos al trafico, como peatonalizar zonasetc solo consiguen que gente del extrarradio de Madrid dejemos de visitar el centro y zonas comerciales ya que cada vez es mas caro y complicado</premise>
+                    <premise>para los que no tenemos abono es bastante caro, por otra parte todos los impedimentos al trafico, como peatonalizar zonas etc solo consiguen que gente del extrarradio de Madrid dejemos de visitar el centro y zonas comerciales ya que cada vez es mas caro y complicado</premise>
                 </argument>
                 <argument commentid="66540" id="211-66540-5-1" parentid="19188" userid="7660">
                     <claim>Seria ampliar lo que comente unos anos mas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>sinceramente, actualmente en http://www.ventex20.es/#item8 el billete mensual de tus hijos cuesta 20, un precio bastante economico-LRB- contando con que los 3 ninos es lo mismo que 1 adulto en zona B-RRB-, aunque se puede mejorar, pero si que apoyaria que se redujera un 50 la tarifa del transporte para familias numerosas, como es tu caso</premise>
+                    <premise>sinceramente, actualmente en http://www.ventex20.es/#item8 el billete mensual de tus hijos cuesta 20, un precio bastante economico (contando con que los 3 ninos es lo mismo que 1 adulto en zona B), aunque se puede mejorar, pero si que apoyaria que se redujera un 50 la tarifa del transporte para familias numerosas, como es tu caso</premise>
                 </argument>
                 <argument commentid="40817" id="5139-40817-3-1" parentid="40443" userid="10873">
-                    <claim>No por talibanismo si no por algo mas logico, si al ayuntamiento le consta que hay 4 millones de habitantes y que tiene 1 millon de turistas diarios prepara la ciudad-LRB- medios de transporte, acaltarillado, trafico, servicios,...-RRB- para 5 millones</claim>
+                    <claim>No por talibanismo si no por algo mas logico, si al ayuntamiento le consta que hay 4 millones de habitantes y que tiene 1 millon de turistas diarios prepara la ciudad (medios de transporte, acaltarillado, trafico, servicios,...)para 5 millones</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
                     <premise>hay 2 millones que hacen vida aqui y no estan inscritos hacen que el sistema se colapse pues algo que esta preparado para 5 millones tiene que dar servicio a 7 millones</premise>
                 </argument>
                 <argument commentid="138323" id="18732-138323-5-2" parentid="138300" userid="257684">
-                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas,etc</claim>
+                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas, etc</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar-LRB- porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer-RRB- , por cierto Esas jovencitas despatarradas en plan malotas son las que imitan el comportamiento masculino, no ?</premise>
+                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar (porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer) , por cierto Esas jovencitas despatarradas en plan malotas son las que imitan el comportamiento masculino, no ?</premise>
                 </argument>
                 <argument commentid="138323" id="18732-138323-5-1" parentid="138300" userid="257684">
-                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas,etc</claim>
+                    <claim>En el transporte publico hay estudiantes con mochilas, musicos con instrumentos, gente que viaja con maletas, etc</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar-LRB- porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer-RRB- , por cierto Esas jovencitas despatarradas en plan malotas son las que imitan el comportamiento masculino, no ?</premise>
+                    <premise>no se a vosotros pero yo prefiero estar en contacto directo con algo inerte que pierna a pierna de un hombre que no conozco y no quiero tocar (porque seamos francos, en lo de las aperturas de piernas la excepcion es la mujer) , por cierto Esas jovencitas despatarradas en plan malotas son las que imitan el comportamiento masculino, no ?</premise>
                 </argument>
                 <argument commentid="77286" id="11029-77286-1-1" parentid="77219" userid="143535">
                     <claim>hay cosas</claim>
@@ -1486,7 +1486,7 @@
                 <argument commentid="45512" id="6248-45512-1-1" parentid="-1" userid="57350">
                     <claim>Es una verguenza</claim>
                     <connector category="cause" function="qualifier" subcategory="condition">si</connector>
-                    <premise>vergonzoso que este barrio no tenga ni comisaria ni centro de especialidades-LRB- que para hacerte una radiografia te manden a una hora di a una hora en metro una para ir y otra para volver-RRB- ni un polideportivo y el transporte de pena no hay enlaces con ningun barrio eso si como no existe el transbordo a pagar doble nos toca porque el que invento el ml a ese le tenian que dar un premio pero el de los torpes</premise>
+                    <premise>vergonzoso que este barrio no tenga ni comisaria ni centro de especialidades (que para hacerte una radiografia te manden a una hora di a una hora en metro una para ir y otra para volver) ni un polideportivo y el transporte de pena no hay enlaces con ningun barrio eso si como no existe el transbordo a pagar doble nos toca porque el que invento el ml a ese le tenian que dar un premio pero el de los torpes</premise>
                 </argument>
                 <argument commentid="30002" id="2412-30002-5-1" parentid="29473" userid="13701">
                     <claim>otro bien distinto es la promocion que se haga por parte de las administraciones publicas del uso del tranporte publico</claim>
@@ -1509,7 +1509,7 @@
                     <premise>era gratuito y todo el mundo a esa hora lo podia coger si tener que pagar es otra opcion para el transporte en Madrid, aunque yo me muevo por mi trabajo en coche no tengo otro remedio, pero mi mujer y mi hijo si lo utilizan bastante aunque a esas horas solo mi hijo lo usaria, pero ademas un hijo sin dinero pues le vendria fenomenal y a mi mas que lo tengo que pagar todo</premise>
                 </argument>
                 <argument commentid="33738" id="3028-33738-8-1" parentid="33648" userid="3170">
-                    <claim>, porque lo aportado, es una noticia de un dirigible militar ruso, que tiene unas dimensiones como el estadio Santiago Bernabeu, otro que sirve para las telecomunicaciones via satelite, y luego 5 posibles estaciones/ paradas, que no solucionan nada el transporte en Madrid; si ese es tu proyecto, apaga y vamonos... en lugar de tanto defenderte conmigo, arregla tu propuesta, que pierde aire por todos los lados, y no esperes que la arregle yo, que para eso es tuya ;</claim>
+                    <claim>, porque lo aportado, es una noticia de un dirigible militar ruso, que tiene unas dimensiones como el estadio Santiago Bernabeu, otro que sirve para las telecomunicaciones via satelite, y luego 5 posibles estaciones/paradas, que no solucionan nada el transporte en Madrid; si ese es tu proyecto, apaga y vamonos... en lugar de tanto defenderte conmigo, arregla tu propuesta, que pierde aire por todos los lados, y no esperes que la arregle yo, que para eso es tuya ;</claim>
                     <connector category="contrast" function="attack" subcategory="concession">aunque</connector>
                     <premise>bueno, con los 4 votitos que llevas, ni te molestes</premise>
                 </argument>
@@ -1521,7 +1521,7 @@
                 <argument commentid="30074" id="2146-30074-1-1" parentid="26690" userid="1528">
                     <claim>lo logico es implementar el trasbordo gratutio durante 90 minutos entre medios de transporte</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
-                    <premise>no pueden llegar lineas directas a todos los sitios desde cualquier punto y hay que trasbordar, Mendez Alvaro actualmente no tiene mala conexion con el centro, tiene 148 a Plaza Espana/ Callao, 152 a Felipe II, 156 a Manuel Becerra y 102 a Delicias-Atocha, quiza habria que buscar otras alternativas posibles y mas economicas pero bueno todo esto es fabular hasta que la CAM no asuma la financiaciond e la EMT ya que desde 2011 no la asume y la EMT no puede comprar ni autobuses y el Ayto</premise>
+                    <premise>no pueden llegar lineas directas a todos los sitios desde cualquier punto y hay que trasbordar, Mendez Alvaro actualmente no tiene mala conexion con el centro, tiene 148 a Plaza Espana/Callao, 152 a Felipe II, 156 a Manuel Becerra y 102 a Delicias-Atocha, quiza habria que buscar otras alternativas posibles y mas economicas pero bueno todo esto es fabular hasta que la CAM no asuma la financiaciond e la EMT ya que desde 2011 no la asume y la EMT no puede comprar ni autobuses y el Ayto</premise>
                 </argument>
                 <argument commentid="184599" id="24089-184599-1-1" parentid="184597" userid="588975">
                     <claim>Tambien sabemos lo que le gustan a ud</claim>
@@ -1531,7 +1531,7 @@
                 <argument commentid="77582" id="899-77582-6-1" parentid="-1" userid="145802">
                     <claim>Se puede consultar en temas claves especificos</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>preguntar sobre cualquier decision no es para lo que estan ahi, ademas que es una forma de eludir responsabilidades si las cosas salen mal, y al mismo tiempo cargarnos esa responsabilidad a los ciudadanos... Actuen de forma que se mejore la gestion de los recursos del Ayto y sobre todo que pueda reducir su deuda y consulten si quieren acometer una inversion que nos endeude mas, por ejemplo, o si quieren apoyar algun plan de trafico o transporte a largo plazo-LRB- mayor que la legislatura-RRB-, que pocos hacen pues los resultados no se ven en un periodo electoral</premise>
+                    <premise>preguntar sobre cualquier decision no es para lo que estan ahi, ademas que es una forma de eludir responsabilidades si las cosas salen mal, y al mismo tiempo cargarnos esa responsabilidad a los ciudadanos... Actuen de forma que se mejore la gestion de los recursos del Ayto y sobre todo que pueda reducir su deuda y consulten si quieren acometer una inversion que nos endeude mas, por ejemplo, o si quieren apoyar algun plan de trafico o transporte a largo plazo (mayor que la legislatura), que pocos hacen pues los resultados no se ven en un periodo electoral</premise>
                 </argument>
                 <argument commentid="83229" id="1085-83229-4-1" parentid="58777" userid="156739">
                     <claim>Ah, y cuando quiera coger el transporte publico que lo deje en casa con la ninera</claim>
@@ -1541,12 +1541,12 @@
                 <argument commentid="132936" id="15996-132936-1-1" parentid="123584" userid="70407">
                     <claim>Desgraciadamente Av. de Machupichu queda fuera de San Blas</claim>
                     <connector category="contrast" function="attack" subcategory="opposition">pero</connector>
-                    <premise>junto a la Junta de Distrito existen espacios edificables disponibles, proximos al Metro, junto al anillo ciclista-LRB- que es coherente con el espacio lanzadera de uso de la bicicleta que se propone en el dossier http://www.madrid.es/UnidadesDescentralizadas/UDCMedios/noticias/2017/02Febrero/07Martes/Notasprensa/ARTEfactos/ficheros/Arte%20factos.pdf-RRB-, contando lineas de transporte publico-LRB- metro y autobus de la EMT, fomentando las funciones de uso comedor comunitario-RRB- y cerca de la policia municipal-LRB- factor de gran importancia en caso de personas beneficiarias de las viviendas pertenecientes a grupos especialmente vulnerables como es el caso de la violencia de genero-RRB-</premise>
+                    <premise>junto a la Junta de Distrito existen espacios edificables disponibles, proximos al Metro, junto al anillo ciclista (que es coherente con el espacio lanzadera de uso de la bicicleta que se propone en el dossier http://www.madrid.es/UnidadesDescentralizadas/UDCMedios/noticias/2017/02Febrero/07Martes/Notasprensa/ARTEfactos/ficheros/Arte%20factos.pdf), contando lineas de transporte publico (metro y autobus de la EMT, fomentando las funciones de uso comedor comunitario) y cerca de la policia municipal (factor de gran importancia en caso de personas beneficiarias de las viviendas pertenecientes a grupos especialmente vulnerables como es el caso de la violencia de genero)</premise>
                 </argument>
                 <argument commentid="112164" id="8188-112164-1-1" parentid="-1" userid="201437">
                     <claim>No es una buena decision, en mi opinion</claim>
                     <connector category="cause" function="support" subcategory="reason">porque</connector>
-                    <premise>la demanda es baja, la frecuencia tambien habria de serlo, la inseguridad aumenta por esos motivos, y el incremento de gasto es muy importante-LRB- efectos en el control de accesos, trenes y mantenimiento de la red-RRB-; seria mucho mas barata una red equivalente de autobuses en superficie ademas de proporcionar mayor calidad ya que la velocidad de circulacion a esas horas es similar o superior a la del Metro, las unidades de transporte son menores y la oferta seria con mayor frecuencia, se ahorraria tiempo en bajar y subir al/ de las estaciones de Metro, y la inseguridad en superficie seria menor que en los tuneles de la red subterranea</premise>
+                    <premise>la demanda es baja, la frecuencia tambien habria de serlo, la inseguridad aumenta por esos motivos, y el incremento de gasto es muy importante (efectos en el control de accesos, trenes y mantenimiento de la red); seria mucho mas barata una red equivalente de autobuses en superficie ademas de proporcionar mayor calidad ya que la velocidad de circulacion a esas horas es similar o superior a la del Metro, las unidades de transporte son menores y la oferta seria con mayor frecuencia,se ahorraria tiempo en bajar y subir al/de las estaciones de Metro, y la inseguridad en superficie seria menor que en los tuneles de la red subterranea</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="acuerdo">
@@ -1633,7 +1633,7 @@
                 <argument commentid="140581" id="18578-140581-3-1" parentid="-1" userid="14782">
                     <claim>Yo propuse</claim>
                     <connector category="consequence" function="support" subcategory="goal">por</connector>
-                    <premise>aqui hace tiempo ampliar el recorrido de la linea 602-LRB- la que viene de El Pardo-RRB- desde la Paz hasta Chamartin , con un aumento de frecuencia claro, asi mismo mande una sugerencia al consorcio de transportes y la respuesta fue que no existia demanda suficiente que justificara dicha actuacion ; a eso mismo les respondi que era logico que hubiera pocos viajeros porque poca gente esta dispuesta a esperar una hora a que venga un autobus... no obtuve mas contestaciones</premise>
+                    <premise>aqui hace tiempo ampliar el recorrido de la linea 602 (la que viene de El Pardo) desde la Paz hasta Chamartin , con un aumento de frecuencia claro, asi mismo mande una sugerencia al consorcio de transportes y la respuesta fue que no existia demanda suficiente que justificara dicha actuacion ; a eso mismo les respondi que era logico que hubiera pocos viajeros porque poca gente esta dispuesta a esperar una hora a que venga un autobus... no obtuve mas contestaciones</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="ciudades">
@@ -1704,7 +1704,7 @@
             </aspect>
             <aspect quantity="8" value="transportes">
                 <argument commentid="28734" id="2022-28734-1-1" parentid="26753" userid="31450">
-                    <claim>Siguiendo estos criterios que cierren los transportes publicos los fines de semana, los hospitalesetc</claim>
+                    <claim>Siguiendo estos criterios que cierren los transportes publicos los fines de semana, los hospitales etc</claim>
                     <connector category="cause" function="support" subcategory="reason">ya que</connector>
                     <premise>sus trabajadores tambien tienen familia</premise>
                 </argument>
@@ -1739,7 +1739,7 @@
                     <premise>no debemos exigir que se multe menos en esa zona, si aparcas en una zona prohibida, acarrea con las consecuencias vecin @</premise>
                 </argument>
                 <argument commentid="81503" id="8624-81503-6-1" parentid="81419" userid="10141">
-                    <claim>Yo diria que hay alguna mas, como por ejemplo que en un autobus caben 50 personas-LRB- o mas-RRB- y en un taxi 4, si quieres tambien podemos hablar del precio de los dos transportes a ver si hay mas diferencias</claim>
+                    <claim>Yo diria que hay alguna mas, como por ejemplo que en un autobus caben 50 personas (o mas) y en un taxi 4, si quieres tambien podemos hablar del precio de los dos transportes a ver si hay mas diferencias</claim>
                     <connector category="consequence" function="support" subcategory="result">asi</connector>
                     <premise>que no me vengas con tonterias de que quiero la privatizacion ni de intereses partidistas</premise>
                 </argument>
@@ -1763,7 +1763,7 @@
                 <argument commentid="151777" id="20569-151777-7-1" parentid="-1" userid="33588">
                     <claim>El sistema de la Multi puede mejorar , esta claro</claim>
                     <connector category="elaboration" function="support" subcategory="similarity">como</connector>
-                    <premise>el poder tener billetes simultaneamente de mas transportes como metro ligero, interurbanos,etc, pero el objetivo es reducir el coste de papel y billetes</premise>
+                    <premise>el poder tener billetes simultaneamente de mas transportes como metro ligero, interurbanos, etc, pero el objetivo es reducir el coste de papel y billetes</premise>
                 </argument>
             </aspect>
             <aspect quantity="1" value="carretera">
