@@ -11,6 +11,7 @@ SELECT id, userId, date, LENGTH(summary) AS 'length', title, summary, text, numC
 SELECT * -- id, title, summary, numComments
   FROM proposals
  WHERE id IN (5717, 20389)
+-- WHERE code = 'MAD-2015-09-1419'
  ORDER BY id;
 
 -- Search proposals by topic and linker

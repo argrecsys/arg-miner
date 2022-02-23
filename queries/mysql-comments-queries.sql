@@ -8,7 +8,7 @@ SELECT proposalId, COUNT(*) AS "count"
  ORDER BY count DESC, proposalId;
 
 -- Search comments by proposalsId
-SELECT id, proposalId, parentId, userId, text
+SELECT * -- id, proposalId, parentId, userId, text
   FROM proposal_comments
  WHERE id IN (151201, 181174, 181259)
  ORDER BY proposalId, parentId;
