@@ -36,6 +36,10 @@ public class Sentence {
         this("", new ArrayList<>(), new ArrayList<>());
     }
 
+    public Sentence(String text) {
+        this(text, new ArrayList<>(), new ArrayList<>());
+    }
+
     public Sentence(String text, List<String> nouns, List<String> entities) {
         this.text = text;
         this.nouns = nouns;
@@ -55,6 +59,10 @@ public class Sentence {
                 .append("entities", this.entities.toString());
 
         return doc;
+    }
+
+    public List<String> getEntities() {
+        return this.entities;
     }
 
     public JSONObject getJSON() {

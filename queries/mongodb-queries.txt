@@ -2,4 +2,5 @@
 {$and: [{"proposalID": 20575}, {"commentID": -1}]}
 {$and: [{"proposalID": 20389}, {"commentID": {$gt: -1}}]}
 {$or: [{$and: [{"proposalID": 965}, {"commentID": -1}]}, {"commentID": {$in: [22235, 84225]}}]}
-{"pattern.pattern": { $regex: /[morfema.verbal]-[grup.verb]-[S_LNK]/}}
+{"pattern.value": "[manual]"}
+{"pattern.value": { $regex: /[morfema.verbal]-[grup.verb]-[S_LNK]/}}
