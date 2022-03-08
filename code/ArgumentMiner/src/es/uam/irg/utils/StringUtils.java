@@ -275,6 +275,34 @@ public class StringUtils {
      * @param s
      * @return
      */
+    public static String toTitleCase(String s) {
+        if (StringUtils.isEmpty(s)) {
+            return "";
+        }
+
+        StringBuilder converted = new StringBuilder();
+
+        boolean convertNext = true;
+        for (char ch : s.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            converted.append(ch);
+        }
+
+        return converted.toString().trim();
+    }
+
+    /**
+     *
+     * @param s
+     * @return
+     */
     public static String unaccent(String s) {
         return Normalizer
                 .normalize(s, Normalizer.Form.NFD)
