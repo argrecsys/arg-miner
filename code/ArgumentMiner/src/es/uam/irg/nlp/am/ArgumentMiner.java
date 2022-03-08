@@ -211,6 +211,7 @@ public class ArgumentMiner {
                 proposals = dbManager.selectProposals(customProposalIds);
             } else {
                 proposals = dbManager.selectProposals(lexicon);
+                //proposals = dbManager.selectProposals2();
             }
 
             // Get proposal comments with linkers
@@ -219,6 +220,7 @@ public class ArgumentMiner {
                     proposalComments = dbManager.selectComments(customProposalIds);
                 } else {
                     proposalComments = dbManager.selectComments(lexicon);
+                    //proposalComments = dbManager.selectComments2();
                 }
             }
 
@@ -227,6 +229,7 @@ public class ArgumentMiner {
                 System.out.println(">> Number of proposals: " + proposals.size());
                 System.out.println("   Number of comments: " + proposalComments.size());
             }
+
         } catch (Exception ex) {
             Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
         }

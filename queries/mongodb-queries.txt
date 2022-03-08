@@ -4,3 +4,4 @@
 {$or: [{$and: [{"proposalID": 965}, {"commentID": -1}]}, {"commentID": {$in: [22235, 84225]}}]}
 {"pattern.value": "[manual]"}
 {"pattern.value": { $regex: /[morfema.verbal]-[grup.verb]-[S_LNK]/}}
+{$and: [{"linker.category": "CAUSE"}, {"commentID": -1}]}
