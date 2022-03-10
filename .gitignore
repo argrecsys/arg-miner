@@ -5,7 +5,6 @@
 *.class
 *.log
 *.ctxt
-*.jar
 *.war
 *.nar
 *.ear
