@@ -47,7 +47,7 @@ import org.yaml.snakeyaml.Yaml;
 public class IOManager {
 
     // Class constants
-    private static final String LEXICON_FILEPATH = "Resources/dataset/argument_lexicon_{}.csv";
+    private static final String LEXICON_FILEPATH = "Resources/data/argument_lexicon_{}.csv";
     private static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
 
     /**
