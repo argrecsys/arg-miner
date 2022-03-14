@@ -27,6 +27,7 @@ import es.uam.irg.nlp.corenlp.syntax.SyntacticAnalysisManager;
 import es.uam.irg.nlp.corenlp.syntax.SyntacticallyAnalyzedSentence;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebank;
 import es.uam.irg.nlp.corenlp.syntax.treebank.SyntacticTreebankNode;
+import es.uam.irg.nlp.textproc.TextProcessor;
 import es.uam.irg.utils.StringUtils;
 import java.io.*;
 import java.util.*;
@@ -191,15 +192,15 @@ public class ArgumentEngine {
         String latestToken;
 
         if (statType.equals(CLAIM)) {
-            newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_RIGHT);
+            newStatement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
             latestToken = StringUtils.getLastToken(newStatement, " ");
 
             if (invalidLinkers.contains(latestToken)) {
                 newStatement = newStatement.substring(0, newStatement.length() - 1);
-                newStatement = StringUtils.cleanText(newStatement, StringUtils.CLEAN_RIGHT);
+                newStatement = TextProcessor.cleanText(newStatement, TextProcessor.CLEAN_RIGHT);
             }
         } else if (statType.equals(PREMISE)) {
-            newStatement = StringUtils.cleanText(statement, StringUtils.CLEAN_BOTH);
+            newStatement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_BOTH);
 
             if (linker != null) {
                 newStatement = newStatement.replaceFirst(linker.linker, "").trim();
@@ -244,7 +245,7 @@ public class ArgumentEngine {
      * @return
      */
     private Sentence createMajorClaim(String text) {
-        text = StringUtils.cleanText(text, StringUtils.CLEAN_RIGHT);
+        text = TextProcessor.cleanText(text, TextProcessor.CLEAN_RIGHT);
         List<String> nounList = new ArrayList<>();
         List<String> entityList = new ArrayList<>();
 
@@ -317,11 +318,11 @@ public class ArgumentEngine {
             ArgumentLinker linker;
 
             for (int i = 1; i < sentences.size(); i++) {
-                currSentenceText = StringUtils.cleanText(sentences.get(i).toString(), StringUtils.CLEAN_BOTH);
+                currSentenceText = TextProcessor.cleanText(sentences.get(i).toString(), TextProcessor.CLEAN_BOTH);
                 linker = parser.textHasLinker(currSentenceText);
 
                 if (linker != null) {
-                    prevSentenceText = StringUtils.cleanText(sentences.get(i - 1).toString(), StringUtils.CLEAN_RIGHT);
+                    prevSentenceText = TextProcessor.cleanText(sentences.get(i - 1).toString(), TextProcessor.CLEAN_RIGHT);
                     currSentenceText = StringUtils.firstChartToLowerCase(currSentenceText);
                     sentenceText = prevSentenceText + ", " + currSentenceText + ".";
                     candidate = new CandSentence(sentenceText, false);
@@ -458,7 +459,7 @@ public class ArgumentEngine {
                             System.out.println("   " + child.toString());
 
                             String currText = SyntacticAnalysisManager.getTreeText(treebank, child);
-                            if (!"".equals(premise) || StringUtils.cleanText(currText, StringUtils.CLEAN_BOTH).startsWith(linker.linker)) {
+                            if (!"".equals(premise) || TextProcessor.cleanText(currText, TextProcessor.CLEAN_BOTH).startsWith(linker.linker)) {
                                 premise += currText + " ";
                             } else {
                                 claim += currText + " ";

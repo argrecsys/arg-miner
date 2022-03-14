@@ -24,8 +24,6 @@ import java.util.LinkedList;
 public class StringUtils {
 
     // Class contants
-    public static final String CLEAN_BOTH = "both";
-    public static final String CLEAN_RIGHT = "right";
     private static final String EMPTY = "";
     private static final String PLAIN_ASCII
             = "AaEeIiOoUu" // grave
@@ -48,16 +46,17 @@ public class StringUtils {
 
     /**
      *
-     * @param text
-     * @param direction
+     * @param word
      * @return
      */
-    public static String cleanText(String text, String direction) {
-        String newText = rightCleanText(text);
-        if (direction.equals(CLEAN_BOTH)) {
-            newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
+    public static boolean isAllInUppercase(String word) {
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (Character.isAlphabetic(c) && !Character.isUpperCase(c)) {
+                return false;
+            }
         }
-        return newText.trim();
+        return true;
     }
 
     /**
@@ -254,7 +253,7 @@ public class StringUtils {
      * @return a string which all its characters are ASCII
      */
     public static String toASCII(String s) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int n = s.length();
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
@@ -342,19 +341,6 @@ public class StringUtils {
         }
 
         return mi;
-    }
-
-    /**
-     *
-     * @param text
-     * @return
-     */
-    private static String rightCleanText(String text) {
-        String newText = text.trim();
-        newText = newText.replaceAll("\\.+$", "");
-        newText = newText.replaceAll("\\,+$", "");
-        newText = newText.replaceAll("\\!+$", "");
-        return newText;
     }
 
 }
