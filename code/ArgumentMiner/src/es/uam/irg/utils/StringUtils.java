@@ -46,6 +46,21 @@ public class StringUtils {
 
     /**
      *
+     * @param word
+     * @return
+     */
+    public static boolean isAllInUppercase(String word) {
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (Character.isAlphabetic(c) && !Character.isUpperCase(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     *
      * @param text
      * @return
      */
@@ -238,7 +253,7 @@ public class StringUtils {
      * @return a string which all its characters are ASCII
      */
     public static String toASCII(String s) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int n = s.length();
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);

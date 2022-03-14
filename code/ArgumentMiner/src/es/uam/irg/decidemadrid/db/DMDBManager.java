@@ -171,7 +171,7 @@ public class DMDBManager {
     public List<String> selectDistrictsNeighborhoods() throws Exception {
         List<String> locations = new ArrayList<>();
 
-        String query = "SELECT name FROM geo_districts";
+        String query = "SELECT name FROM geo_districts;";
         ResultSet rs = this.db.executeSelect(query);
         while (rs != null && rs.next()) {
             String name = rs.getString("name");
@@ -179,7 +179,7 @@ public class DMDBManager {
         }
         rs.close();
 
-        query = "SELECT name FROM geo_neighborhoods";
+        query = "SELECT name FROM geo_neighborhoods;";
         rs = this.db.executeSelect(query);
         while (rs != null && rs.next()) {
             String name = rs.getString("name");
