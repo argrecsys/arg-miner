@@ -24,8 +24,6 @@ import java.util.LinkedList;
 public class StringUtils {
 
     // Class contants
-    public static final String CLEAN_BOTH = "both";
-    public static final String CLEAN_RIGHT = "right";
     private static final String EMPTY = "";
     private static final String PLAIN_ASCII
             = "AaEeIiOoUu" // grave
@@ -45,20 +43,6 @@ public class StringUtils {
             + "\u00C5\u00E5" // ring
             + "\u00C7\u00E7" // cedilla
             ;
-
-    /**
-     *
-     * @param text
-     * @param direction
-     * @return
-     */
-    public static String cleanText(String text, String direction) {
-        String newText = rightCleanText(text);
-        if (direction.equals(CLEAN_BOTH)) {
-            newText = StringUtils.reverse(StringUtils.rightCleanText(StringUtils.reverse(newText)));
-        }
-        return newText.trim();
-    }
 
     /**
      *
@@ -342,19 +326,6 @@ public class StringUtils {
         }
 
         return mi;
-    }
-
-    /**
-     *
-     * @param text
-     * @return
-     */
-    private static String rightCleanText(String text) {
-        String newText = text.trim();
-        newText = newText.replaceAll("\\.+$", "");
-        newText = newText.replaceAll("\\,+$", "");
-        newText = newText.replaceAll("\\!+$", "");
-        return newText;
     }
 
 }

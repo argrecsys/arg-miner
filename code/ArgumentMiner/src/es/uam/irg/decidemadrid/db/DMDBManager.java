@@ -6,6 +6,7 @@ import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.utils.FunctionUtils;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -163,6 +164,36 @@ public class DMDBManager {
         return comments;
     }
 
+    /**
+     *
+     * @return
+     */
+    public List<String> selectDistrictsNeighborhoods() throws Exception {
+        List<String> locations = new ArrayList<>();
+
+        String query = "SELECT name FROM geo_districts";
+        ResultSet rs = this.db.executeSelect(query);
+        while (rs != null && rs.next()) {
+            String name = rs.getString("name");
+            locations.add(name);
+        }
+        rs.close();
+
+        query = "SELECT name FROM geo_neighborhoods";
+        rs = this.db.executeSelect(query);
+        while (rs != null && rs.next()) {
+            String name = rs.getString("name");
+            locations.add(name);
+        }
+        rs.close();
+
+        return locations;
+    }
+
+    /**
+     *
+     * @return @throws Exception
+     */
     public Map<Integer, DMProposal> selectProposals() throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
 

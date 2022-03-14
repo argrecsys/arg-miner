@@ -17,6 +17,7 @@
  */
 package es.uam.irg.nlp.am.arguments;
 
+import es.uam.irg.nlp.textproc.TextProcessor;
 import es.uam.irg.utils.FunctionUtils;
 import es.uam.irg.utils.StringUtils;
 import java.util.List;
@@ -51,7 +52,7 @@ public class TreeAnalyzer {
         ArgumentLinker linker = null;
 
         if (!StringUtils.isEmpty(text)) {
-            String newText = StringUtils.cleanText(text.toLowerCase(), StringUtils.CLEAN_BOTH);
+            String newText = TextProcessor.cleanText(text.toLowerCase(), TextProcessor.CLEAN_BOTH);
             String[] tokens = newText.split(" ");
 
             for (int i = 0; i < this.nLinkers && linker == null; i++) {
