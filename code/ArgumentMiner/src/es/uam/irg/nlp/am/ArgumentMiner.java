@@ -28,7 +28,6 @@ import es.uam.irg.nlp.am.arguments.Argument;
 import es.uam.irg.nlp.am.arguments.ArgumentEngine;
 import es.uam.irg.nlp.am.arguments.ArgumentLinker;
 import es.uam.irg.nlp.am.arguments.ArgumentLinkerManager;
-import es.uam.irg.nlp.textproc.TextProcessor;
 import es.uam.irg.utils.FunctionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -93,8 +92,8 @@ public class ArgumentMiner {
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
 
             // Bulk annotation of proposals
-            ArgumentEngine engine = new ArgumentEngine(language, lnkManager.getLexicon(false), invalidLinkers, stopwords);
-            Map<Integer, List<Argument>> arguments = autoAnnotation(engine, proposals, proposalComments, locations);
+            ArgumentEngine engine = new ArgumentEngine(language, lnkManager.getLexicon(false), invalidLinkers, stopwords, locations);
+            Map<Integer, List<Argument>> arguments = autoAnnotation(engine, proposals, proposalComments);
             int totalArgs = 0;
 
             // Show results
@@ -136,7 +135,7 @@ public class ArgumentMiner {
      * @param locations
      * @return
      */
-    private Map<Integer, List<Argument>> autoAnnotation(ArgumentEngine engine, Map<Integer, DMProposal> proposals, Map<Integer, DMComment> proposalComments, List<String> locations) {
+    private Map<Integer, List<Argument>> autoAnnotation(ArgumentEngine engine, Map<Integer, DMProposal> proposals, Map<Integer, DMComment> proposalComments) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
 
         // Temporary vars
@@ -157,8 +156,8 @@ public class ArgumentMiner {
             userId = proposal.getUserId();
             commentId = -1;
             parentId = -1;
-            title = TextProcessor.process(proposal.getTitle(), locations);
-            text = TextProcessor.process(proposal.getSummary(), locations);
+            title = proposal.getTitle();
+            text = proposal.getSummary();
 
             List<Argument> argList = engine.extract(proposalId, userId, commentId, parentId, title, text);
             arguments.put(proposalId, argList);
@@ -173,7 +172,7 @@ public class ArgumentMiner {
             userId = comment.getUserId();
             parentId = comment.getParentId();
             title = "";
-            text = TextProcessor.process(comment.getText(), locations);
+            text = comment.getText();
 
             List<Argument> argList = engine.extract(proposalId, userId, commentId, parentId, title, text);
             if (arguments.containsKey(proposalId)) {

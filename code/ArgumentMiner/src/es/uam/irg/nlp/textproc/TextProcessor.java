@@ -1,6 +1,6 @@
 /**
  * Copyright 2022
- * Andrés Segura-Tinoco
+ * Iván Cantador
  * Information Retrieval Group at Universidad Autonoma de Madrid
  *
  * This is free software: you can redistribute it and/or modify it under the
