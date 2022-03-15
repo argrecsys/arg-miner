@@ -17,15 +17,12 @@
  */
 package es.uam.irg.nlp.textproc;
 
-import es.uam.irg.decidemadrid.db.DMDBManager;
 import es.uam.irg.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Natural language processing class.
@@ -37,9 +34,6 @@ public class TextProcessor {
     public static final String CLEAN_RIGHT = "right";
     private static final List<String> SYMBOLS = new ArrayList<>(List.of(".", ",", ":", ";", "'", "_", "/", "\\", "|", "¿", "?", "¡", "!", "(", ")", "[", "]", "{", "}", "<", ">", "+", "*", "#", "@", "%", "&", "º", "·", "~", "»", "“", "”"));
     private static final List<String> UPPERCASE_ALLOWED = new ArrayList<>(List.of("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "PP", "PSOE", "PODEMOS", "IU", "VPPB", "LGTB", "DVD", "CD", "CIF", "DDHH", "PAU", "3G", "4G", "5G", "3G4G", "GEA21", "LPH", "PAS", "PDI", "NPI", "CVP", "UBER", "INE", "PAUS", "AZCA", "NASA", "VPPL", "ABG", "IBI", "ZP", "IVA", "REE", "IC", "EB4CTV", "OCDE", "VTCS", "CSIF", "EQUO", "BCN", "EMV", "EMVS", "LRHL", "CCEE", "RRHH", "AEAT", "BOE", "BOCM", "WC", "GEA", "CSIC", "CVP", "CNMV", "MIT", "LAU", "URM", "VALDECAM", "VSC", "JMD", "CRTM", "PGOU", "SDDR", "ESO", "LOU", "PGE", "CNT", "IRPF", "IIVTNU", "ONO", "IES", "CO2", "VMP", "EU", "ONU", "OTAN", "BIC", "CEOE", "COPE", "DNI", "MM", "CES", "UAM", "UPM", "UCM", "URJC", "UC3M", "UAH", "OMS", "EMF", "TSJ", "WIFI", "RAE", "CNT", "FB", "POU", "APA", "O2", "AAVV", "ERTE", "ERTES", "CEM", "XXX", "UGT", "SIDA", "CCOO", "TV", "BBVA", "BANKIA", "BICIMADRID", "BICIMAD", "CCAA", "CAM", "UK", "VOX", "ONG", "RTVE", "A1", "A2", "A3", "A4", "A5", "A6", "M607", "A-1", "A-2", "A-3", "A-4", "A-5", "A-6", "M-607", "USA", "EEUU", "EE.UU", "SOS", "AM", "FM", "SER", "DGT", "APR", "PMR", "PVP", "ICADE", "UME", "IFEMA", "ADIF", "RENFE", "VTC", "EMT", "ITV", "ADN", "AIRBNB", "M30", "M40", "M50", "M-30", "M-40", "M-50"));
-    
-    // Class variables
-    private static List<String> locations;
 
     /**
      *
@@ -61,19 +55,29 @@ public class TextProcessor {
      * @return
      */
     public static String process(String text) {
-        return processForSpanish(text);
+        return processForSpanish(text, new ArrayList<>());
+    }
+
+    /**
+     *
+     * @param text
+     * @param locations
+     * @return
+     */
+    public static String process(String text, List<String> locations) {
+        return processForSpanish(text, locations);
     }
 
     /**
      * Processes the text (data quality) for Spanish.
      *
      * @param text
+     * @param locations
      * @return
      */
-    private static String processForSpanish(String text) {
+    private static String processForSpanish(String text, List<String> locations) {
         String t = "";
 
-        readLocations();
         StringTokenizer tokenizer = new StringTokenizer(text.trim(), " ()");
 
         while (tokenizer.hasMoreTokens()) {
@@ -81,7 +85,7 @@ public class TextProcessor {
 
             if (!token.startsWith("http") && !token.startsWith("www")) {
                 if (StringUtils.isAllInUppercase(token)) {
-                    token = toLowerCase2(token);
+                    token = toLowerCase2(token, locations);
                 }
                 t += token + " ";
             } else {
@@ -490,40 +494,6 @@ public class TextProcessor {
     }
 
     /**
-     * Reads in a static variable all available locations.
-     */
-    private static void readLocations() {
-        if (locations == null) {
-            try {
-                DMDBManager db = new DMDBManager();
-                locations = db.selectDistrictsNeighborhoods();
-                locations.remove("Centro");
-                locations.remove("Ciudad");
-                locations.remove("Universidad");
-                locations.remove("Sol");
-                locations.remove("Justicia");
-                locations.remove("Estrella");
-                locations.remove("Lista");
-                locations.remove("Pilar");
-                locations.remove("La Paz");
-                locations.remove("Ventas");
-                locations.remove("Concepción");
-                locations.remove("Colina");
-                locations.remove("Palomas");
-                locations.remove("Arcos");
-                locations.remove("Rosas");
-                locations.remove("Rejas");
-                locations.remove("Aeropuerto");
-                locations.remove("Campamento");
-                System.out.println(">> All locations were loaded: " + locations.size());
-
-            } catch (Exception ex) {
-                Logger.getLogger(TextProcessor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
-
-    /**
      *
      * @param text
      * @return
@@ -541,7 +511,7 @@ public class TextProcessor {
      * @param word
      * @return
      */
-    private static String toLowerCase2(String word) {
+    private static String toLowerCase2(String word, List<String> locations) {
 
         word = word.trim();
 
