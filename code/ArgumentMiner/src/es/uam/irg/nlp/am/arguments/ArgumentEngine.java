@@ -51,6 +51,7 @@ public class ArgumentEngine {
     // Class members
     private final HashSet<String> invalidLinkers;
     private final String language;
+    private final List<String> locations;
     private final PrintWriter out;
     private final TreeAnalyzer parser;
     private StanfordCoreNLP pipeline;
@@ -63,11 +64,13 @@ public class ArgumentEngine {
      * @param lexicon
      * @param invalidLinkers
      * @param stopwords
+     * @param locations
      */
-    public ArgumentEngine(String lang, List<ArgumentLinker> lexicon, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
+    public ArgumentEngine(String lang, List<ArgumentLinker> lexicon, HashSet<String> invalidLinkers, HashSet<String> stopwords, List<String> locations) {
         this.language = lang;
         this.invalidLinkers = invalidLinkers;
         this.stopwords = stopwords;
+        this.locations = locations;
         this.parser = new TreeAnalyzer(lexicon);
         this.out = new PrintWriter(System.out);
         createPipeline();
@@ -183,31 +186,30 @@ public class ArgumentEngine {
     /**
      *
      * @param statType
-     * @param statement
+     * @param text
      * @param linker
      * @return
      */
-    private String cleanStatement(String statType, String statement, ArgumentLinker linker) {
-        String newStatement = "";
-        String latestToken;
+    private String cleanStatement(String statType, String text, ArgumentLinker linker) {
+        String statement = text; // TextProcessor.process(text, locations);
 
         if (statType.equals(CLAIM)) {
-            newStatement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
-            latestToken = StringUtils.getLastToken(newStatement, " ");
+            statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
+            String latestToken = StringUtils.getLastToken(statement, " ");
 
             if (invalidLinkers.contains(latestToken)) {
-                newStatement = newStatement.substring(0, newStatement.length() - 1);
-                newStatement = TextProcessor.cleanText(newStatement, TextProcessor.CLEAN_RIGHT);
+                statement = statement.substring(0, statement.length() - 1);
+                statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
             }
         } else if (statType.equals(PREMISE)) {
-            newStatement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_BOTH);
+            statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_BOTH);
 
             if (linker != null) {
-                newStatement = newStatement.replaceFirst(linker.linker, "").trim();
+                statement = statement.replaceFirst(linker.linker, "").trim();
             }
         }
 
-        return newStatement;
+        return statement;
     }
 
     /**
@@ -240,30 +242,30 @@ public class ArgumentEngine {
 
     /**
      *
-     * @param pipeline
      * @param text
      * @return
      */
     private Sentence createMajorClaim(String text) {
-        text = TextProcessor.cleanText(text, TextProcessor.CLEAN_RIGHT);
+        String mcText = TextProcessor.process(text, locations);
+        mcText = TextProcessor.cleanText(mcText, TextProcessor.CLEAN_RIGHT);
         List<String> nounList = new ArrayList<>();
         List<String> entityList = new ArrayList<>();
 
-        if (text.length() > 0) {
+        if (mcText.length() > 0) {
 
             // Get nouns (from POS) in document title
             HashSet<String> validPOS = new HashSet<>(Arrays.asList("NOUN"));
-            List<CoreLabel> tokens = getPartsOfSpeechTokens(text, validPOS);
+            List<CoreLabel> tokens = getPartsOfSpeechTokens(mcText, validPOS);
             tokens.forEach(token -> {
                 nounList.add(token.word());
             });
 
             // Get named entity recognition (NER) in document title
-            Map<String, String> entities = getNamedEntities(text);
+            Map<String, String> entities = getNamedEntities(mcText);
             entityList.addAll(entities.keySet());
         }
 
-        return new Sentence(text, nounList, entityList);
+        return new Sentence(mcText, nounList, entityList);
     }
 
     /**
@@ -299,7 +301,7 @@ public class ArgumentEngine {
     private List<CandSentence> getCandidateSentences(String text, boolean onlySimpleSent) {
         List<CandSentence> candSentences = new ArrayList<>();
 
-        Annotation annotation = new Annotation(text);
+        Annotation annotation = new Annotation(TextProcessor.process(text, locations));
         pipeline.annotate(annotation);
         List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
         CandSentence candidate;

@@ -53,6 +53,7 @@ public class ArgumentMiner {
     private final HashSet<String> invalidLinkers;
     private final String language;
     private final ArgumentLinkerManager lnkManager;
+    private List<String> locations;
     private final Map<String, Object> mdbSetup;
     private final Map<String, Object> msqlSetup;
     private Map<Integer, DMComment> proposalComments;
@@ -77,7 +78,8 @@ public class ArgumentMiner {
         this.stopwords = getStopwordList(language);
 
         // Read argumentative proposals and their comments
-        getArgumentativeProposals(customProposalIds, annotateComments);
+        readArgumentativeProposals(customProposalIds, annotateComments);
+        readLocations();
     }
 
     /**
@@ -90,14 +92,18 @@ public class ArgumentMiner {
         if (!proposals.isEmpty() && !lnkManager.isEmpty()) {
 
             // Bulk annotation of proposals
-            Map<Integer, List<Argument>> arguments = bulkAnnotation(language, proposals, proposalComments, lnkManager, invalidLinkers, stopwords);
+            ArgumentEngine engine = new ArgumentEngine(language, lnkManager.getLexicon(false), invalidLinkers, stopwords, locations);
+            Map<Integer, List<Argument>> arguments = autoAnnotation(engine, proposals, proposalComments);
+            int totalArgs = 0;
 
             // Show results
             System.out.println(">> Total proposals: " + proposals.size());
-            System.out.println(">> Total arguments in the proposals:");
-            proposals.keySet().forEach(key -> {
+            System.out.println(">> Arguments in the proposals:");
+            for (int key : proposals.keySet()) {
                 System.out.format("   Proposal %s has %s arguments\n", key, arguments.get(key).size());
-            });
+                totalArgs += arguments.get(key).size();
+            }
+            System.out.println(">> Total arguments in the proposals: " + totalArgs);
 
             // Save arguments
             result = storeArguments(arguments);
@@ -120,49 +126,58 @@ public class ArgumentMiner {
     }
 
     /**
-     * Automatically annotates (identifies and extracts arguments) from
+     * Automatically annotates (identifies and extracts) arguments from
      * proposals and comments.
      *
-     * @param language
+     * @param engine
      * @param proposals
      * @param proposalComments
-     * @param lnkManager
-     * @param invalidLinkers
-     * @param stopwords
+     * @param locations
      * @return
      */
-    private Map<Integer, List<Argument>> bulkAnnotation(String language, Map<Integer, DMProposal> proposals, Map<Integer, DMComment> proposalComments, ArgumentLinkerManager lnkManager, HashSet<String> invalidLinkers, HashSet<String> stopwords) {
+    private Map<Integer, List<Argument>> autoAnnotation(ArgumentEngine engine, Map<Integer, DMProposal> proposals, Map<Integer, DMComment> proposalComments) {
         Map<Integer, List<Argument>> arguments = new HashMap<>();
 
         // Temporary vars
-        List<ArgumentLinker> lexicon = lnkManager.getLexicon(false);
-        ArgumentEngine engine = new ArgumentEngine(language, lexicon, invalidLinkers, stopwords);
-        int proposalID;
-        int commentID;
+        int proposalId;
+        int userId;
+        int commentId;
+        int parentId;
         DMProposal proposal;
         DMComment comment;
+        String title;
+        String text;
 
-        // 1. Analize argumentative proposals
+        // 1. Process argumentative proposals
         System.out.println("Proposals annotation");
         for (Map.Entry<Integer, DMProposal> entry : proposals.entrySet()) {
-            proposalID = entry.getKey();
+            proposalId = entry.getKey();
             proposal = entry.getValue();
+            userId = proposal.getUserId();
+            commentId = -1;
+            parentId = -1;
+            title = proposal.getTitle();
+            text = proposal.getSummary();
 
-            List<Argument> argList = engine.extract(proposalID, proposal.getUserId(), -1, -1, proposal.getTitle(), proposal.getSummary());
-            arguments.put(proposalID, argList);
+            List<Argument> argList = engine.extract(proposalId, userId, commentId, parentId, title, text);
+            arguments.put(proposalId, argList);
         }
 
-        // 2. Analize argumentative comments
+        // 2. Process argumentative comments
         System.out.println("Comments annotation");
         for (Map.Entry<Integer, DMComment> entry : proposalComments.entrySet()) {
-            commentID = entry.getKey();
+            commentId = entry.getKey();
             comment = entry.getValue();
-            proposalID = comment.getProposalId();
+            proposalId = comment.getProposalId();
+            userId = comment.getUserId();
+            parentId = comment.getParentId();
+            title = "";
+            text = comment.getText();
 
-            List<Argument> argList = engine.extract(proposalID, comment.getUserId(), commentID, comment.getParentId(), "", comment.getText());
-            if (arguments.containsKey(proposalID)) {
+            List<Argument> argList = engine.extract(proposalId, userId, commentId, parentId, title, text);
+            if (arguments.containsKey(proposalId)) {
                 if (argList.size() > 0) {
-                    arguments.get(proposalID).addAll(argList);
+                    arguments.get(proposalId).addAll(argList);
                 }
             } else {
                 System.err.println(">> Error: Comments should always be associated with a proposal.");
@@ -185,12 +200,21 @@ public class ArgumentMiner {
     }
 
     /**
+     *
+     * @param language
+     * @return
+     */
+    private HashSet<String> getStopwordList(String lang) {
+        return IOManager.readStopwordList(lang, VERBOSE);
+    }
+
+    /**
      * Read argumentative proposals and their comments.
      *
      * @param topN
      * @return
      */
-    private void getArgumentativeProposals(Integer[] customProposalIds, boolean annotateComments) {
+    private void readArgumentativeProposals(Integer[] customProposalIds, boolean annotateComments) {
         proposals = new HashMap<>();
         proposalComments = new HashMap<>();
 
@@ -236,12 +260,43 @@ public class ArgumentMiner {
     }
 
     /**
-     *
-     * @param language
-     * @return
+     * Reads in a static variable all available locations.
      */
-    private HashSet<String> getStopwordList(String lang) {
-        return IOManager.readStopwordList(lang, VERBOSE);
+    private void readLocations() {
+        try {
+            // Connecting to databse
+            DMDBManager dbManager = null;
+            if (msqlSetup != null && msqlSetup.size() == 4) {
+                dbManager = new DMDBManager(msqlSetup);
+            } else {
+                dbManager = new DMDBManager();
+            }
+
+            // Load locations
+            locations = dbManager.selectDistrictsNeighborhoods();
+            locations.remove("Centro");
+            locations.remove("Ciudad");
+            locations.remove("Universidad");
+            locations.remove("Sol");
+            locations.remove("Justicia");
+            locations.remove("Estrella");
+            locations.remove("Lista");
+            locations.remove("Pilar");
+            locations.remove("La Paz");
+            locations.remove("Ventas");
+            locations.remove("Concepción");
+            locations.remove("Colina");
+            locations.remove("Palomas");
+            locations.remove("Arcos");
+            locations.remove("Rosas");
+            locations.remove("Rejas");
+            locations.remove("Aeropuerto");
+            locations.remove("Campamento");
+
+        } catch (Exception ex) {
+            Logger.getLogger(ArgumentMiner.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println(">> All locations were loaded: " + locations.size());
     }
 
     /**
