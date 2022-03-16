@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-2.6.0-blue)
-![last-update](https://img.shields.io/badge/last_update-3/15/2022-orange)
+![last-update](https://img.shields.io/badge/last_update-3/16/2022-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
@@ -14,6 +14,11 @@ This system is composed of 2 main modules, which are:
 
 ## Resources
 This project uses the two-level taxonomy of argument relations and the set of linguistic connectors (in English and Spanish) published in the <a href="https://github.com/argrecsys/connectors" target="_blank">argrecsys/connectors</a> repository.
+
+## Algorithm
+We propose an heuristic method aimed to automatically identify and extract arguments from textual content, which is evaluated on citizen proposals and comments from the Decide Madrid e-participatory platform. The method follows a simple but effective algorithm to address the three basic tasks of argument mining, namely argument detection, argument constituent identification, and argument relation recognition using the two-level taxonomy.
+
+![arg-algorithm](https://raw.githubusercontent.com/argrecsys/arg-miner/main/images/algorithm.png)
 
 ## Preliminary Results
 We present some statistics from a preliminary offline test on the automatic identification and extraction of arguments from the citizen proposals available in the Decide Madrid database:

@@ -184,6 +184,7 @@ public class ArgumentEngine {
     }
 
     /**
+     * Creates a sentence after applying data quality to the argument component.
      *
      * @param statType
      * @param text
@@ -191,16 +192,17 @@ public class ArgumentEngine {
      * @return
      */
     private String cleanStatement(String statType, String text, ArgumentLinker linker) {
-        String statement = text; // TextProcessor.process(text, locations);
+        String statement = text; //TextProcessor.process(text, locations);
 
         if (statType.equals(CLAIM)) {
             statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
             String latestToken = StringUtils.getLastToken(statement, " ");
 
             if (invalidLinkers.contains(latestToken)) {
-                statement = statement.substring(0, statement.length() - 1);
+                statement = statement.substring(0, statement.length() - latestToken.length());
                 statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_RIGHT);
             }
+
         } else if (statType.equals(PREMISE)) {
             statement = TextProcessor.cleanText(statement, TextProcessor.CLEAN_BOTH);
 
