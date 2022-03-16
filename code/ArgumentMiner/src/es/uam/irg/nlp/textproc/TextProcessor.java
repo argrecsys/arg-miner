@@ -214,10 +214,8 @@ public class TextProcessor {
         replacements.put("}", "} ");
 
         for (String key : replacements.keySet()) {
-            while (t.contains(key)) {
-                String value = replacements.get(key);
-                t = t.replace(key, value);
-            }
+            String value = replacements.get(key);
+            t = t.replace(key, value);
         }
 
         String t2 = "";
