@@ -208,6 +208,12 @@ public class ArgumentEngine {
 
             if (linker != null) {
                 statement = statement.replaceFirst(linker.linker, "").trim();
+                //String linkerTitle = StringUtils.toTitleCase(linker.linker);
+                //if (statement.startsWith(linkerTitle)) {
+                //    statement = statement.replaceFirst(linkerTitle, "").trim();
+                //} else if (statement.startsWith(linker.linker)) {
+                //    statement = statement.replaceFirst(linker.linker, "").trim();
+                //}
             }
         }
 

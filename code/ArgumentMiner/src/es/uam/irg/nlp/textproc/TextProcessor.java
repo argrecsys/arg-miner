@@ -135,6 +135,7 @@ public class TextProcessor {
         t = t.replace(" k ", " que ");
         t = t.replace(" xa ", " para ");
         t = t.replace(" xq ", " porque ");
+        t = t.replace(" xk ", " porque ");
         t = t.replace(" pq ", " porque ");
         t = t.replace(" porq ", " porque ");
         t = t.replace(" yq eu ", " y que ");
