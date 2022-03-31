@@ -1,3 +1,20 @@
+/**
+ * Copyright 2021
+ * Ivan Cantador
+ * Information Retrieval Group at Universidad Autonoma de Madrid
+ *
+ * This is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * the current software. If not, see <http://www.gnu.org/licenses/>.
+ */
 package es.uam.irg.decidemadrid.db;
 
 import es.uam.irg.db.MySQLDBConnector;
@@ -34,12 +51,18 @@ public class DMDBManager {
     }
 
     public DMDBManager(Map<String, Object> setup) throws Exception {
-        String dbServer = setup.get("db_server").toString();
-        String dbName = setup.get("db_name").toString();
-        String dbUserName = setup.get("db_user_name").toString();
-        String dbUserPassword = setup.get("db_user_pw").toString();
-        this.db = new MySQLDBConnector();
-        this.db.connect(dbServer, dbName, dbUserName, dbUserPassword);
+        if (setup != null && setup.size() == 4) {
+            String dbServer = setup.get("db_server").toString();
+            String dbName = setup.get("db_name").toString();
+            String dbUserName = setup.get("db_user_name").toString();
+            String dbUserPassword = setup.get("db_user_pw").toString();
+
+            this.db = new MySQLDBConnector();
+            this.db.connect(dbServer, dbName, dbUserName, dbUserPassword);
+        } else {
+            this.db = new MySQLDBConnector();
+            this.db.connect(DB_SERVER, DB_NAME, DB_USERNAME, DB_USERPASSWORD);
+        }
     }
 
     @Override
@@ -164,10 +187,6 @@ public class DMDBManager {
         return comments;
     }
 
-    /**
-     *
-     * @return
-     */
     public List<String> selectDistrictsNeighborhoods() throws Exception {
         List<String> locations = new ArrayList<>();
 
@@ -190,10 +209,6 @@ public class DMDBManager {
         return locations;
     }
 
-    /**
-     *
-     * @return @throws Exception
-     */
     public Map<Integer, DMProposal> selectProposals() throws Exception {
         Map<Integer, DMProposal> proposals = new HashMap<>();
 

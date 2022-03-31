@@ -51,12 +51,13 @@ public class IOManager {
     private static final String STOPWORDS_FILEPATH = "Resources/stopwords/{}.txt";
 
     /**
-     * 
+     * Loads the taxonomy and lexicon of argumentative linkers.
+     *
      * @param lang
      * @param validLinkers
      * @param invalidLinkers
      * @param verbose
-     * @return 
+     * @return
      */
     public static ArgumentLinkerManager readLinkerTaxonomy(String lang, HashSet<String> validLinkers, HashSet<String> invalidLinkers, boolean verbose) {
         ArgumentLinkerManager linkers = new ArgumentLinkerManager();

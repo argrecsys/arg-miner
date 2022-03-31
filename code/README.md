@@ -1,5 +1,5 @@
-# Solutions
-The 2 main system solutions were implemented in Java in the ArgumentMiner project.
+# Solution
+The two main modules of the solution were implemented in Java within the ArgumentMiner project.
 
 ### Argument Miner
 Java solution that using NLP techniques and a lexicon of connectors, automatically identifies and extracts arguments from textual content.

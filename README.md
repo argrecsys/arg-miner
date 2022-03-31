@@ -1,11 +1,14 @@
 # Extraction and use of arguments in Recommender Systems
-![version](https://img.shields.io/badge/version-2.6.2-blue)
-![last-update](https://img.shields.io/badge/last_update-3/28/2022-orange)
+![version](https://img.shields.io/badge/version-2.6.3-blue)
+![last-update](https://img.shields.io/badge/last_update-3/31/2022-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
 
-This work was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides are <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
+## Papers
+This work (v1.0) was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides are <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
+
+This work (v2.0) will be presented as a paper at <a hreg="https://dgsociety.org/dgo-2022/">23st Annual International Conference on Digital Government Research</a>. Virtual Event, Seoul National University, South-Korea, June 15, 2022.
 
 ## Solution
 This system is composed of 2 main modules, which are:
