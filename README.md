@@ -8,7 +8,7 @@ This repository contains a simple but efficient implementation of an argument-ba
 ## Papers
 This work (v1.0) was presented as a paper at <a href="http://ceur-ws.org/Vol-2960/">Joint Workshop of the 3rd Edition of Knowledge-aware and Conversational Recommender Systems (KaRS) and the 5th Edition of Recommendation in Complex Environments (ComplexRec)</a> co-located with 15th ACM Conference on Recommender Systems (RecSys 2021). Virtual Event, Amsterdam, The Netherlands, September 25, 2021. Paper and presentation slides are <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/recsys21">here</a>.
 
-This work (v2.0) will be presented as a paper at <a hreg="https://dgsociety.org/dgo-2022/">23st Annual International Conference on Digital Government Research</a>. Virtual Event, Seoul National University, South-Korea, June 15, 2022.
+This work (v2.0) will be presented as a paper at <a href="https://dgsociety.org/dgo-2022/">23st Annual International Conference on Digital Government Research</a>. Virtual Event, Seoul National University, South-Korea, June 15, 2022. A draft of the paper can be found <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/dgo22">here</a>.
 
 ## Solution
 This system is composed of 2 main modules, which are:
