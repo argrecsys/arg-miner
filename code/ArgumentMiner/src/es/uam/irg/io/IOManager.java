@@ -41,8 +41,8 @@ import javax.xml.transform.stream.StreamResult;
 import org.yaml.snakeyaml.Yaml;
 
 /**
- *
- * @author ansegura
+ * Support class containing static methods that allow reading and writing files
+ * from a directory.
  */
 public class IOManager {
 

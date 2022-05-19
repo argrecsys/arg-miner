@@ -31,8 +31,7 @@ import java.util.logging.Logger;
 import org.json.JSONObject;
 
 /**
- *
- * @author ansegura
+ * Helper for loading application input parameters.
  */
 public class InitParams {
 

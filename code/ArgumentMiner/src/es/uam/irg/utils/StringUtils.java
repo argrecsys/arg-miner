@@ -17,7 +17,10 @@
  */
 package es.uam.irg.utils;
 
+import java.text.DateFormat;
 import java.text.Normalizer;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -46,17 +49,15 @@ public class StringUtils {
 
     /**
      *
-     * @param word
+     * @param punctMark
      * @return
      */
-    public static boolean isAllInUppercase(String word) {
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
-            if (Character.isAlphabetic(c) && !Character.isUpperCase(c)) {
-                return false;
-            }
+    public static String cleanPuntuationMark(String punctMark) {
+        String newPunctMark = punctMark;
+        if (punctMark.length() > 1 && punctMark.charAt(0) == punctMark.charAt(1)) {
+            newPunctMark = punctMark.charAt(0) + "+";
         }
-        return true;
+        return newPunctMark;
     }
 
     /**
@@ -102,12 +103,79 @@ public class StringUtils {
 
     /**
      *
+     * @param word
+     * @return
+     */
+    public static boolean isAllInUppercase(String word) {
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (Character.isAlphabetic(c) && !Character.isUpperCase(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     *
+     * @param str
+     * @param dateFormat
+     * @return
+     */
+    public static boolean isDateTime(String str, String dateFormat) {
+        DateFormat sdf = new SimpleDateFormat(dateFormat);
+        sdf.setLenient(false);
+
+        try {
+            sdf.parse(str);
+        } catch (ParseException e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     *
      * @param str
      * @return
      */
     public static boolean isEmpty(String str) {
-        boolean isEmpty = (str == null || str.trim().length() == 0);
-        return isEmpty;
+        return (str == null || str.trim().length() == 0);
+    }
+
+    /**
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isNumeric(String str) {
+
+        if (isEmpty(str)) {
+            return false;
+        }
+
+        try {
+            Double.parseDouble(str);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isValidToken(String str) {
+
+        if (isEmpty(str)) {
+            return false;
+        }
+
+        return (Character.isLetter(str.charAt(0)) || (str.charAt(0) == '$' && str.charAt(str.length() - 1) == '$'));
     }
 
     /**
