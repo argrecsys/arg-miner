@@ -24,6 +24,8 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -104,6 +106,39 @@ public class FunctionUtils {
         }
 
         return newArray;
+    }
+
+    /**
+     *
+     * @param <T>
+     * @param map
+     * @return
+     */
+    public static <T> List<T> listFromMapKeys(Map<T, ?> map) {
+        List<T> list = new ArrayList<>(map.keySet());
+        return list;
+    }
+
+    /**
+     *
+     * @param <T>
+     * @param set
+     * @return
+     */
+    public static <T> List<T> listFromSet(Set<T> set) {
+        List<T> list = new ArrayList<>();
+        list.addAll(set);
+        return list;
+    }
+
+    /**
+     *
+     * @param list
+     * @param sep
+     * @return
+     */
+    public static String listToString(List<String> list, String sep) {
+        return list.stream().collect(Collectors.joining(sep + "," + sep, sep, sep));
     }
 
     /**
