@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-2.6.4-blue)
-![last-update](https://img.shields.io/badge/last_update-5/19/2022-orange)
+![last-update](https://img.shields.io/badge/last_update-10/11/2023-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
