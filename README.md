@@ -1,6 +1,6 @@
 # Extraction and use of arguments in Recommender Systems
 ![version](https://img.shields.io/badge/version-2.6.4-blue)
-![last-update](https://img.shields.io/badge/last_update-10/11/2023-orange)
+![last-update](https://img.shields.io/badge/last_update-10/12/2023-orange)
 ![license](https://img.shields.io/badge/license-Apache_2.0-brightgreen)
 
 This repository contains a simple but efficient implementation of an argument-based recommender system, which makes use of NLP techniques and a taxonomy and lexicon of connectors to extract argument graphs from the proposals and citizen debates available in the <a href="https://decide.madrid.es/" target="_blank">Decide Madrid</a> e-participation platform.
@@ -144,6 +144,9 @@ The implemented solutions depend on or make use of the following libraries and .
 - <a href="https://mongodb.github.io/mongo-java-driver/" target="_blank">MongoDB Java Driver</a> 3.12.10
 - Snake YAML 1.9
 - JSON Java 20210307
+
+## Documentation
+Please read the [contributing](https://github.com/argrecsys/arg-miner/blob/main/docs/CONTRIBUTING.md) and [code of conduct](https://github.com/argrecsys/arg-miner/blob/main/docs/CODE_OF_CONDUCT.md) documentation.
 
 ## Authors
 Created on Apr 10, 2021  
