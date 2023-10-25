@@ -10,7 +10,7 @@ This work (v1.0) was presented as a paper at <a href="http://ceur-ws.org/Vol-296
 
 This work (v2.0) was presented as a paper at <a href="https://dgsociety.org/dgo-2022/">23st Annual International Conference on Digital Government Research</a>. Virtual Event, Seoul National University, South-Korea, June 15, 2022. Paper and presentation slides can be found <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/dgo22">here</a>.
 
-Part of this work (v2.6.4) has been submitted as a paper to Government Information Quarterly. A draft of the paper can be found <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/giq2023">here</a>.
+Part of this work (v2.6.4) has been submitted as a paper to Government Information Quarterly. A draft of the paper can be found <a href="https://github.com/argrecsys/arg-miner/tree/main/papers/giq23">here</a>.
 
 ## Solution
 This system is composed of 2 main modules, which are:
